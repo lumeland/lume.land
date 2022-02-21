@@ -1,0 +1,74 @@
+/** Header */
+.landing-header {
+  & h1 {
+    font: var(--text-display);
+    letter-spacing: var(--text-display-spacing);
+    max-width: 8em;
+    margin: 0 auto;
+  }
+}
+.landing-header-description {
+  font: var(--text-body);
+  max-width: 30em;
+  margin: 0 auto;
+}
+
+/** Usage */
+.landing-usage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.landing-usage-text {
+  grid-column: 1;
+  font: var(--text-caption);
+
+  & h2 {
+    font: var(--text-title);
+    letter-spacing: var(--text-title-spacing);
+    margin: 0;
+  }
+}
+.landing-usage-code {
+  grid-column: 2;
+}
+
+/** Points */
+.landing-points {
+  & h2 {
+    font: var(--text-display);
+    letter-spacing: var(--text-display-spacing);
+    margin: 0 auto;
+  }
+
+  & ul {
+    display: grid;
+    grid-template-columns: repeat(2, 275px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font: var(--text-caption);
+  }
+
+  & h3 {
+    font: var(--text-title);
+    letter-spacing: var(--text-title-spacing);
+    margin: 0;
+  }
+}
+
+/** Examples */
+.landing-examples {
+  & h2 {
+    font: var(--text-title);
+    letter-spacing: var(--text-title-spacing);
+    text-align: center;
+  }
+}
+
+/** Suppport */
+.landing-suppport {
+  & h2 {
+    font: var(--text-title);
+    letter-spacing: var(--text-title-spacing);
+  }
+}

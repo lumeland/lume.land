@@ -1,0 +1,84 @@
+layout: layouts/landing.njk
+header:
+  title: A simple & elegant static site generator for Deno
+  description: |
+    Lume is the [Galician](https://en.wikipedia.org/wiki/Galician_language) word for fire but also a (yet another) static site generator for Deno.
+
+    It’s inspired by other general-purpose static site generators, such as Jekyll and Eleventy, but it’s more flexible and easier to use and configure.
+
+install:
+  title: "Run the following to install:"
+  code: deno run -A https://deno.land/x/lume/install.ts
+  footer: Make sure you have Deno installed.
+
+usage:
+  - title: Supports any template engine
+    description: |
+      Markdown, Nunjucks, Liquid, JSX, TSX, Javascript, Typescript, Pug, Eta… and it's really easy to add more.
+
+  - title: Store the data in your favorite format
+    description: |
+      JSON, YAML, Javascript & Typescript modules, you name it.
+  
+  - title: Process HTML pages and assets
+    description: |
+      Run processors to compile and optimize assets like PostCSS, Parcel CSS, SASS, Terser, esbuild, SVGO… You can also transform HTML code using the DOM API.
+  
+  - title: Run your scripts and listen events
+    description: |
+      You can create custom scripts like in NPM and execute them when you like.
+  
+  - title: And everything with a clean and intuitive API
+    description: |
+      Configure everything in a single _config.ts or _config.js file with plugins and a simple and clean API.
+
+points:
+  title: Less magic, more freedom
+  features:
+    - title: It's Deno!
+      description: Forget about managing thousands of packages in node_modules or complex bundlers. Lume only installs what you need. Clean, fast and secure.
+
+    - title: Zero runtime overhead
+      description: Some SSG ships their own client javascript to load and hydrate pages.
+
+    - title: Deploy anywhere
+      description: Build your site in any CI like Github/Gitlab Pages, Deno deploy, Vercel, Netflify… and host it anywhere.
+
+    - title: Easy to extend
+      description: You need to implement a different template engine or a specific processor? Lume allows to use whatever you want.
+
+examples:
+  title: Who is using Lume?
+  more:
+    text: See more examples
+    href: /showcase
+  sites:
+    - title: Oak Studio
+      url: https://oakstudio.co/
+
+support:
+  title: Lume is supported by
+  sponsors:
+    - name: Androw Nash
+      url: https://audrow.github.io/
+      image: /img/avatars/audrow.jpg
+      amount: 5
+      recurrent: true
+    - name: Yuto Oguchi
+      url: https://aiotter.com/
+      image: /img/avatars/aiotter.jpg
+      amount: 1
+      recurrent: true
+    - name: Tobias Schmidt
+      url: https://tobiasschmidt.me/
+      image: /img/avatars/tobias.png
+      amount: 20
+
+  contribute:
+    title: How to contribute?
+    description: |
+      - Star the [repo in GitHub](https://github.com/lumeland/lume).
+      - Support this project on [Open collective](https://opencollective.com/lume).
+      - Fork the repo and [work on an issue](https://github.com/lumeland/lume/issues).
+      - Help to [improve the docs](https://github.com/lumeland/lumeland.github.io).
+      - Propose ideas [at Discord](https://discord.gg/YbTmpACHWB).

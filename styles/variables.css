@@ -1,0 +1,25 @@
+@import "./fonts.css";
+
+:root {
+  /* Fonts */
+  --font-display: 'Cormorant Garamond';
+  --font-ui: 'Inter';
+
+  /* Text styles */
+  --text-display: 100px/0.9 var(--font-display);
+  --text-display-spacing: -0.035em;
+  --text-heading: 600 50px/1 var(--font-ui);
+  --text-heading-spacing: -0.015em;
+  --text-title: 500 30px/1.25 var(--font-ui);
+  --text-title-spacing: -0.01em;
+  --text-body: 20px/1.4 var(--font-ui);
+  --text-caption: 15px/1.5 var(--font-ui);
+
+  /* Colors */
+  --color-primary: #C84F46;
+  --color-foreground: #444;
+  --color-dim: #666;
+  --color-background: #fff;
+  --color-shadow: #F3F5F7;
+  --color-highlight: #EAEDF0;
+}

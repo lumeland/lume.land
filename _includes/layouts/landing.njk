@@ -1,0 +1,76 @@
+---
+layout: ./base.njk
+page_css: landing.css
+---
+<div class="landing">
+  <header class="ly-container landing-header">
+    <h1>{{ header.title }}</h1>
+
+    <div class="landing-header-description">
+      {{ header.description | md | safe }}
+    </div>
+  </header>
+
+  <div class="ly-container">
+    <p>{{ install.title }}</p>
+    <pre><code>{{ install.code }}</code></pre>
+    <p>{{ install.footer }}</p>
+  </div>
+
+  <section class="ly-container landing-usage">
+  {% for block in usage %}
+    <div class="landing-usage-text">
+      <h2>{{ block.title }}</h2>
+      {{ block.description | md | safe }}
+    </div>
+    <div class="landing-usage-code">
+      <pre><code>Code</code></pre>
+    </div>
+  {% endfor %}
+  </section>
+
+  <section class="ly-container landing-points">
+    <h2>{{ points.title }}</h2>
+    <ul>
+      {% for feature in points.features %}
+      <li>
+        <h3>{{ feature.title }}</h3>
+        {{ feature.description | md | safe }}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="ly-container landing-examples">
+    <h2>{{ examples.title }}</h2>
+    <ul>
+      {% for site in examples.sites %}
+      <li>
+        <a href="{{ site.url }}">{{ site.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <footer>
+      <a href="{{ examples.more.href }}">{{ examples.more.text }}</a>
+    </footer>
+  </section>
+
+  <section class="ly-container landing-suppport">
+    <h2>{{ support.title }}</h2>
+
+    <ul>
+      {% for sponsor in support.sponsors %}
+      <li>
+        <a href="{{ sponsor.url }}">
+          {{ sponsor.name }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h3>{{ support.contribute.title }}</h3>
+
+    {{ support.contribute.description | md | safe }}
+  </section>
+</div>
