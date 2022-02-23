@@ -1,0 +1,43 @@
+@import "https://highlightjs.org/static/demo/styles/github.css";
+
+lume-code {
+  & .hljs {
+    display: block;
+    color: var(--color-black);
+    background: var(--color-shadow);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+  }
+
+  & > ul {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background: var(--color-shadow-1);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    column-gap: 10px;
+  }
+
+  & button {
+    background: transparent;
+    border: 0;
+    height: 35px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    font: var(--text-caption-bold);
+    border-radius: var(--border-radius-small);
+    color: inherit;
+    cursor: pointer;
+    transition: background var(--animation-duration);
+
+    &:hover {
+      background: var(--color-shadow-2);
+      color: inherit;
+    }
+    &.is-active {
+      background: var(--color-primary);
+      color: var(--color-background);
+    }
+  }
+}

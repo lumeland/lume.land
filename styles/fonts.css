@@ -12,3 +12,9 @@
   font-style: oblique 0deg 10deg;
   src: url("./fonts/inter.woff2") format("woff2");
 }
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-weight: normal;
+  font-display: swap;
+  src: url("./fonts/jetbrains-mono.woff2") format("woff2");
+}

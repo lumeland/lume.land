@@ -1,29 +1,85 @@
+/** Main */
+.landing {
+  display: grid;
+  row-gap: 50px;
+  column-gap: 25px;
+  grid-template-columns: 0 minmax(320px, 1200px) 0;
+  justify-content: space-around;
+
+  & > * {
+    grid-column: 2;
+  }
+}
+
 /** Header */
 .landing-header {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  row-gap: 50px;
+  margin-top: 100px;
+
   & h1 {
     font: var(--text-display);
     letter-spacing: var(--text-display-spacing);
-    max-width: 8em;
-    margin: 0 auto;
+    max-width: 800px;
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin: 0;
   }
 }
 .landing-header-description {
   font: var(--text-body);
-  max-width: 30em;
+  grid-column: 2 / -1;
+  border-left: solid var(--color-primary) 1px;
+  padding-left: 30px;
+  max-width: 25em;
+
+  & p {
+    margin: 0;
+
+    & + p {
+      margin-top: 1em;
+    }
+  }
+}
+
+/** Install */
+.landing-install {
+  width: 800px;
+  max-width: 100%;
   margin: 0 auto;
+  font: var(--text-caption);
+  color: var(--color-dim);
+
+  & p {
+    margin: 0;
+  }
+}
+.landing-install-code {
+  background: var(--color-foreground);
+  color: var(--color-background);
+  padding: 20px 25px;
+  border-radius: var(--border-radius);
+  margin: 5px 0;
+  font: var(--text-code);
 }
 
 /** Usage */
 .landing-usage {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 275px 1fr;
+  margin-top: 100px;
+  column-gap: 150px;
+  row-gap: 100px;
 }
 .landing-usage-text {
   grid-column: 1;
   font: var(--text-caption);
+  color: var(--color-dim);
 
   & h2 {
     font: var(--text-title);
+    color: var(--color-foreground);
     letter-spacing: var(--text-title-spacing);
     margin: 0;
   }
@@ -34,6 +90,10 @@
 
 /** Points */
 .landing-points {
+  margin-top: 100px;
+  display: grid;
+  row-gap: 25px;
+
   & h2 {
     font: var(--text-display);
     letter-spacing: var(--text-display-spacing);
@@ -47,12 +107,14 @@
     margin: 0;
     padding: 0;
     font: var(--text-caption);
+    color: var(--color-dim);
   }
 
   & h3 {
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
     margin: 0;
+    color: var(--color-foreground);
   }
 }
 

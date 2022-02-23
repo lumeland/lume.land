@@ -2,4 +2,18 @@ body {
   font-family: var(--font-ui);
   color: var(--color-foreground);
   background-color: var(--color-background);
+  margin: 0;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+pre, code {
+  font: var(--text-code);
+  margin: 0;
+}
+pre {
+  overflow-x: auto;
+
 }

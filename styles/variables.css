@@ -4,6 +4,7 @@
   /* Fonts */
   --font-display: 'Cormorant Garamond';
   --font-ui: 'Inter';
+  --font-code: 'JetBrains Mono';
 
   /* Text styles */
   --text-display: 100px/0.9 var(--font-display);
@@ -14,6 +15,8 @@
   --text-title-spacing: -0.01em;
   --text-body: 20px/1.4 var(--font-ui);
   --text-caption: 15px/1.5 var(--font-ui);
+  --text-caption-bold: bold 15px/1.5 var(--font-ui);
+  --text-code: 16px/1.6 var(--font-code);
 
   /* Colors */
   --color-primary: #C84F46;
@@ -21,5 +24,13 @@
   --color-dim: #666;
   --color-background: #fff;
   --color-shadow: #F3F5F7;
-  --color-highlight: #EAEDF0;
+  --color-shadow-1: #EAEDF0;
+  --color-shadow-2: #D8DEE3;
+
+  /* Borders */
+  --border-radius-small: 5px;
+  --border-radius: 10px;
+
+  /* Animation */
+  --animation-duration: 0.2s;
 }

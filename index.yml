@@ -9,31 +9,112 @@ header:
 install:
   title: "Run the following to install:"
   code: deno run -A https://deno.land/x/lume/install.ts
-  footer: Make sure you have Deno installed.
+  footer: Make sure [you have Deno installed](https://deno.land/manual/getting_started/installation).
 
 usage:
   - title: Supports any template engine
     description: |
       Markdown, Nunjucks, Liquid, JSX, TSX, Javascript, Typescript, Pug, Eta… and it's really easy to add more.
+    code: |
+      <lume-code>
+
+      ```html { title="Nunjucks" }
+      <h1>{{ title }}</h1>
+
+      <ul>
+        {% for person in people %}
+        <li>{{ person.name }}</li>
+        {% endfor %}
+      </ul>
+      ```
+      ```jsx { title="JSX" }
+      <h1>{ title }</h1>
+
+      <ul>
+        { people.map((person) => <li>{ person.name }</li>)}
+      </ul>
+      ```
+
+      </lume-code>
 
   - title: Store the data in your favorite format
     description: |
       JSON, YAML, Javascript & Typescript modules, you name it.
+    code: |
+      <lume-code>
+
+      ```yaml { title="YAML" }
+      title: The team
+      people:
+        - name: Laura Rubio
+        - name: Óscar Otero
+      ```
+      ```json { title="JSON" }
+      {
+        "title": "The team",
+        "people": [
+          { "name": "Laura Rubio" },
+          { "name": "Óscar Otero" }
+        ]
+      }
+      ```
+
+      </lume-code>
   
   - title: Process HTML pages and assets
     description: |
       Run processors to compile and optimize assets like PostCSS, Parcel CSS, SASS, Terser, esbuild, SVGO… You can also transform HTML code using the DOM API.
-  
+    code: |
+      <lume-code>
+
+      ```js { title="Process CSS" }
+      site.process([".css"], (file) => {
+        const content = file.content;
+        file.content = minify(content);
+      })
+      ```
+
+      </lume-code>
+
   - title: Run your scripts and listen events
     description: |
       You can create custom scripts like in NPM and execute them when you like.
-  
+    code: |
+      <lume-code>
+
+      ```js { title="Script creation" }
+      site.script("deploy", "rsync -r _site/ user@host.com:/site");
+      ```
+
+      </lume-code>
+
   - title: And everything with a clean and intuitive API
     description: |
       Configure everything in a single _config.ts or _config.js file with plugins and a simple and clean API.
+    code: |
+      <lume-code>
+
+      ```ts { title="_config.ts" }
+      import lume from "lume/mod.ts";
+      import postcss from "lume/plugins/postcss.ts";
+      import esbuild from "lume/plugins/postcss.ts";
+
+      const site = lume();
+
+      site.copy("./statics", ".")
+        .use(postcss())
+        .use(esbuild());
+
+      export site;
+      ```
+
+      </lume-code>
 
 points:
   title: Less magic, more freedom
+  img:
+    src: /img/gradient.png
+    alt: Color gradient emulating fire
   features:
     - title: It's Deno!
       description: Forget about managing thousands of packages in node_modules or complex bundlers. Lume only installs what you need. Clean, fast and secure.
