@@ -4,7 +4,7 @@ lume-code {
   & .hljs {
     display: block;
     color: var(--color-black);
-    background: var(--color-shadow);
+    background: var(--color-background-1);
     border-radius: 0 0 var(--border-radius) var(--border-radius);
   }
 
@@ -13,7 +13,7 @@ lume-code {
     list-style: none;
     padding: 10px;
     margin: 0;
-    background: var(--color-shadow-1);
+    background: var(--color-background-2);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     column-gap: 10px;
   }
@@ -32,7 +32,7 @@ lume-code {
     transition: background var(--animation-duration);
 
     &:hover {
-      background: var(--color-shadow-2);
+      background: var(--color-background-3);
       color: inherit;
     }
     &.is-active {

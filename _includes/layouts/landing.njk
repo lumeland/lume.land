@@ -6,16 +6,22 @@ page_css: landing.css
   <header class="landing-header">
     <h1>{{ header.title }}</h1>
 
-    <div class="landing-header-description">
-      {{ header.description | md | safe }}
+    <figure class="landing-header-fire">
+      {{ comp.fire() | safe }}
+    </figure>
+
+    <div class="landing-install">
+      {{ install.title | md | safe }}
+
+      <div class="landing-install-code">
+        <pre><code>{{ install.code }}</code></pre>
+        <a class="landing-install-cta" href="#">Next</a>
+      </div>
+
+      {{ install.footer | md | safe }}
     </div>
   </header>
 
-  <div class="landing-install">
-    {{ install.title | md | safe }}
-    <pre class="landing-install-code"><code>{{ install.code }}</code></pre>
-    {{ install.footer | md | safe }}
-  </div>
 
   <section class="landing-usage">
   {% for block in usage %}
@@ -40,42 +46,44 @@ page_css: landing.css
       </li>
       {% endfor %}
     </ul>
-
-    <figure class="landing-points-image">
-      <img src="{{ points.img.src }}" alt="{{ points.img.alt }}">
-    </figure>
   </section>
 
-  <section class="ly-container landing-examples">
-    <h2>{{ examples.title }}</h2>
-    <ul>
+  <section class="landing-examples">
+    <header>
+      <h2>{{ examples.title }}</h2>
+    </header>
+
+    <ul class="landing-examples-sites">
       {% for site in examples.sites %}
       <li>
-        <a href="{{ site.url }}">{{ site.title }}</a>
+        <a href="{{ site.url }}" title="{{ site.title }}">
+          <img src="{{ site.img }}" alt="{{ site.title }}" width="300" height="200">
+        </a>
       </li>
       {% endfor %}
+      <li>
+        <a href="{{ examples.more.href }}" class="landing-examples-cta">{{ examples.more.text }}</a>
+      </li>
     </ul>
-
-    <footer>
-      <a href="{{ examples.more.href }}">{{ examples.more.text }}</a>
-    </footer>
   </section>
 
-  <section class="ly-container landing-suppport">
+  <section class="landing-suppport">
     <h2>{{ support.title }}</h2>
 
-    <ul>
+    <ul class="landing-support-sponsors">
       {% for sponsor in support.sponsors %}
       <li>
-        <a href="{{ sponsor.url }}">
-          {{ sponsor.name }}
+        <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
+          <img src="{{ sponsor.img }}" height="100" width="100">
         </a>
       </li>
       {% endfor %}
     </ul>
 
-    <h3>{{ support.contribute.title }}</h3>
+    <div class="landing-support-contribute">
+      <h3>{{ support.contribute.title }}</h3>
 
-    {{ support.contribute.description | md | safe }}
+      {{ support.contribute.description | md | safe }}
+    </div>
   </section>
 </div>

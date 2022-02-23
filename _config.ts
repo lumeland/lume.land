@@ -10,12 +10,6 @@ site
   .copy("scripts")
   .copy("img")
   .use(codeHighlight())
-  .use(parcelCSS({
-    options: {
-      targets: {
-        firefox: 97,
-      },
-    },
-  }));
+  .use(parcelCSS());
 
 export default site;

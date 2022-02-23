@@ -1,15 +1,11 @@
 layout: layouts/landing.njk
 header:
   title: A simple & elegant static site generator for Deno
-  description: |
-    Lume is the [Galician](https://en.wikipedia.org/wiki/Galician_language) word for fire but also a (yet another) static site generator for Deno.
-
-    It’s inspired by other general-purpose static site generators, such as Jekyll and Eleventy, but it’s more flexible and easier to use and configure.
 
 install:
   title: "Run the following to install:"
   code: deno run -A https://deno.land/x/lume/install.ts
-  footer: Make sure [you have Deno installed](https://deno.land/manual/getting_started/installation).
+  footer: Make sure [you have Deno 1.18.1 or newer installed](https://deno.land/manual/getting_started/installation).
 
 usage:
   - title: Supports any template engine
@@ -112,9 +108,7 @@ usage:
 
 points:
   title: Less magic, more freedom
-  img:
-    src: /img/gradient.png
-    alt: Color gradient emulating fire
+
   features:
     - title: It's Deno!
       description: Forget about managing thousands of packages in node_modules or complex bundlers. Lume only installs what you need. Clean, fast and secure.
@@ -136,23 +130,52 @@ examples:
   sites:
     - title: Oak Studio
       url: https://oakstudio.co/
+      img: /img/examples/oak.png
+    - title: Johan's website & blog
+      url: https://johan.im/
+      img: /img/examples/johan.png
+    - title: Jurnal Kusaeni
+      url: https://kusaeni.com/
+      img: /img/examples/kusaeni.png
+    - title: Notion Enhancer documentation
+      url: https://notion-enhancer.github.io/
+      img: /img/examples/notion-enhancer.png
+    - title: OAK Studio
+      url: https://oakstudio.co/
+      img: /img/examples/oak.png
+    - title: Tarugo21
+      url: https://www.tarugoconf.com/
+      img: /img/examples/tarugo21.png
+    - title: Tobias Schmidt
+      url: https://tobiasschmidt.me/
+      img: /img/examples/tobias.png
+    - title: Velociraptor documentation
+      url: https://velociraptor.run/
+      img: /img/examples/velociraptor.png
 
 support:
   title: Lume is supported by
   sponsors:
+    - name: Óscar Otero (creator & maintainer)
+      url: https://oscarotero.com/
+      img: /img/avatars/oscar.jpg
     - name: Androw Nash
       url: https://audrow.github.io/
-      image: /img/avatars/audrow.jpg
+      img: /img/avatars/audrow.jpg
       amount: 5
       recurrent: true
     - name: Yuto Oguchi
       url: https://aiotter.com/
-      image: /img/avatars/aiotter.jpg
+      img: /img/avatars/aiotter.jpg
       amount: 1
       recurrent: true
     - name: Tobias Schmidt
       url: https://tobiasschmidt.me/
-      image: /img/avatars/tobias.png
+      img: /img/avatars/tobias.png
+      amount: 20
+    - name: Yohan Brook
+      url: https://johan.im/
+      img: /img/avatars/johan.jpg
       amount: 20
 
   contribute:

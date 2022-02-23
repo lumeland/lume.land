@@ -3,4 +3,6 @@
 @import "./styles/utils.css";
 @import "./styles/layouts.css";
 
+@import "./styles/components/navbar.css";
+@import "./styles/components/footer.css";
 @import "./styles/components/code.css";

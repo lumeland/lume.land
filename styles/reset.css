@@ -3,16 +3,23 @@ body {
   color: var(--color-foreground);
   background-color: var(--color-background);
   margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
   color: var(--color-primary);
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 pre, code {
   font: var(--text-code);
   margin: 0;
 }
+
 pre {
   overflow-x: auto;
 

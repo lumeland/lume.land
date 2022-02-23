@@ -3,29 +3,33 @@
 :root {
   /* Fonts */
   --font-display: 'Cormorant Garamond';
-  --font-ui: 'Inter';
+  --font-ui: -apple-system, system-ui, Inter, sans-serif;
   --font-code: 'JetBrains Mono';
 
   /* Text styles */
-  --text-display: 100px/0.9 var(--font-display);
+  --text-display-size: clamp(50px, 15vw, 100px);
+  --text-display-height: 0.95;
+  --text-display: var(--text-display-size)/var(--text-display-height) var(--font-display);
   --text-display-spacing: -0.035em;
   --text-heading: 600 50px/1 var(--font-ui);
   --text-heading-spacing: -0.015em;
   --text-title: 500 30px/1.25 var(--font-ui);
   --text-title-spacing: -0.01em;
   --text-body: 20px/1.4 var(--font-ui);
+  --text-body-bold: 600 20px/1.4 var(--font-ui);
   --text-caption: 15px/1.5 var(--font-ui);
-  --text-caption-bold: bold 15px/1.5 var(--font-ui);
-  --text-code: 16px/1.6 var(--font-code);
+  --text-caption-bold: 700 15px/1.5 var(--font-ui);
+  --text-code: 17px/1.6 var(--font-code);
 
   /* Colors */
-  --color-primary: #C84F46;
-  --color-foreground: #444;
-  --color-dim: #666;
-  --color-background: #fff;
-  --color-shadow: #F3F5F7;
-  --color-shadow-1: #EAEDF0;
-  --color-shadow-2: #D8DEE3;
+  --color-primary: hsl(0deg, 50%, 50%);
+  --color-primary-1: hsl(0deg, 50%, 40%);
+  --color-foreground: hsl(0deg, 0%, 20%);
+  --color-foreground-1: hsl(0deg, 0%, 40%);
+  --color-background: hsl(0deg, 0%, 100%);
+  --color-background-1: hsl(200deg, 20%, 96%);
+  --color-background-2: hsl(200deg, 20%, 92%);
+  --color-background-3: hsl(200deg, 20%, 86%);
 
   /* Borders */
   --border-radius-small: 5px;
@@ -33,4 +37,17 @@
 
   /* Animation */
   --animation-duration: 0.2s;
+
+  /* Spaces */
+  --margin: max(25px, 5vw);
+  --max-width: 1200px;
+  --column-gap-0: 10px;
+  --column-gap-1: 25px;
+  --column-gap-2: 50px;
+  --column-gap-3: 100px;
+  --row-gap-0: 25px;
+  --row-gap-1: 50px;
+  --row-gap-2: 100px;
+  --row-gap-3: 150px;
+  --row-gap-4: 200px;
 }

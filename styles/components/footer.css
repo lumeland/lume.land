@@ -1,0 +1,18 @@
+.footer-container {
+  background: var(--color-background-1);
+}
+.footer {
+  font: var(--text-caption);
+  color: var(--color-foreground-1);
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--row-gap-0) var(--margin);
+  
+  & p {
+    margin: 0;
+  }
+}
