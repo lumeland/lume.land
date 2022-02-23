@@ -3,7 +3,7 @@
   display: grid;
   row-gap: var(--row-gap-2);
   column-gap: var(--margin);
-  grid-template-columns: 0 minmax(320px, var(--max-width)) 0;
+  grid-template-columns: 0 minmax(300px, var(--max-width)) 0;
   justify-content: space-between;
   padding: var(--row-gap-2) 0;
 
@@ -67,17 +67,13 @@
 
 /** Usage */
 .landing-usage {
-  display: grid;
-  
-  
   margin-top: var(--row-gap-2);
-  column-gap: var(--column-gap-2);
-  row-gap: var(--row-gap-2);
 }
 .landing-usage-text {
   font: var(--text-caption);
   color: var(--color-foreground-1);
   align-self: center;
+  max-width: 30em;
 
   & h2 {
     font: var(--text-title);
@@ -86,11 +82,19 @@
     margin: 0;
   }
 }
+@media (max-width: 799px) {
+  .landing-usage-code + .landing-usage-text {
+    margin-top: var(--row-gap-2);
+  }
+}
 
 @media (min-width: 800px) {
   .landing-usage {
+    display: grid;
     grid-template-columns: 275px minmax(0, 800px);
     justify-content: space-between;
+    row-gap: var(--row-gap-2);
+    column-gap: var(--column-gap-2);
   }
 
   .landing-usage-text {
@@ -119,7 +123,6 @@
 
   & ul {
     display: grid;
-    grid-template-columns: repeat(2, 275px);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -127,6 +130,15 @@
     color: var(--color-foreground-1);
     row-gap: var(--row-gap-1);
     column-gap: var(--column-gap-1);
+    mix-blend-mode: multiply;
+
+    @media (max-width: 649px) {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    @media (min-width: 650px) {
+      grid-template-columns: repeat(2, 275px);
+    }
   }
 
   & h3 {
@@ -191,24 +203,28 @@
 
 /** Suppport */
 .landing-suppport {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: var(--column-gap-1);
-
   & h2 {
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
     grid-column: 1 / -1;
   }
+
+  @media (min-width: 650px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: var(--column-gap-1);
+  }
 }
 .landing-support-sponsors {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  column-gap: var(--column-gap-0);
+  gap: var(--column-gap-0);
 
   & img {
     border-radius: 50%;
+    display: block;
   }
 }
 .landing-support-contribute {
