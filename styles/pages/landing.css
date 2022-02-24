@@ -151,28 +151,38 @@
 
 /** Examples */
 .landing-examples {
-  background: var(--color-background-1);
   grid-column: 1 / -1;
-  padding-top: var(--row-gap-1);
-  padding-bottom: var(--row-gap-1);
 
   & h2 {
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
-    text-align: center;
-    margin-top: 0;
+    margin: 0;
   }
 }
+.landing-examples-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: var(--column-gap-0);
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding-left: var(--margin);
+  padding-right: var(--margin);
+}
 .landing-examples-sites {
-  list-style: none;
   margin: 0;
-  padding: 10px 15px;
+  padding: var(--row-gap-0) var(--margin);
   display: flex;
   column-gap: 10px;
   overflow-x: auto;
   scrollbar-width: none;
 
+  & > a {
+    flex: 0 0 auto;
+  }
+
   & img {
+    transition: transform var(--animation-duration);
     border-radius: var(--border-radius);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
                 0 1px 4px rgba(0, 0, 0, 0.05),
@@ -180,6 +190,13 @@
                 0 1px 10px rgba(0, 0, 0, 0.05),
                 0 1px 12px rgba(0, 0, 0, 0.05),
                 0 1px 14px rgba(0, 0, 0, 0.05);
+  }
+  & > a:hover {
+    z-index: 1;
+
+    & img {
+      transform: scale(1.1);
+    }
   }
 }
 .landing-examples-cta {
@@ -190,14 +207,14 @@
   justify-content: center;
   text-align: center;
   font: var(--text-body-bold);
-  background: var(--color-background-2);
+  background: var(--color-background-1);
   border-radius: var(--border-radius);
   text-decoration: none;
   color: var(--color-foreground-1);
   transition: background var(--animation-duration);
 
   &:hover {
-    background: var(--color-background-3);
+    background: var(--color-background-2);
   }
 }
 

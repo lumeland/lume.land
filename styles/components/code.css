@@ -16,28 +16,10 @@ lume-code {
     background: var(--color-background-2);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     column-gap: 10px;
-  }
 
-  & button {
-    background: transparent;
-    border: 0;
-    height: 35px;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    font: var(--text-caption-bold);
-    border-radius: var(--border-radius-small);
-    color: inherit;
-    cursor: pointer;
-    transition: background var(--animation-duration);
-
-    &:hover {
-      background: var(--color-background-3);
-      color: inherit;
-    }
-    &.is-active {
-      background: var(--color-primary);
-      color: var(--color-background);
+    & .button.is-secondary {
+      --background: var(--color-background-2);
+      --background-hover: var(--color-background-3);
     }
   }
 }

@@ -1,0 +1,60 @@
+.button {
+  background: var(--background, none);
+  color: var(--color, currentColor);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 0;
+  height: 2em;
+  padding: 0 .6em;
+  font: var(--text-caption-bold);
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: var(--animation-duration);
+  box-sizing: border-box;
+  vertical-align: middle;
+  flex: 0 0 auto;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &.is-secondary {
+    --color: var(--color-foreground-1);
+    --color-hover: var(--color-foreground-1);
+    --background: var(--color-background-1);
+    --background-hover: var(--color-background-2);
+
+    &.is-active {
+      background: var(--color-primary);
+      color: var(--color-background);
+    }
+  }
+
+  &:hover {
+    background: var(--background-hover, none);
+    color: var(--color-hover, currentColor);
+  }
+  &:disabled {
+    cursor: default;
+    background: none;
+    opacity: .1;
+  }
+
+  &.has-icon {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+
+    & svg {
+      width: 30px;
+      height: 30px;
+      fill: currentColor;
+    }
+    & path {
+      fill: currentColor;
+    }
+  }
+}

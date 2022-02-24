@@ -49,22 +49,27 @@ page_css: landing.css
   </section>
 
   <section class="landing-examples">
-    <header>
+    <header class="landing-examples-header">
       <h2>{{ examples.title }}</h2>
+
+      <lume-carousel-controls target="#examples" class="lume-carousel-buttons">
+        <button value="prev" class="button is-secondary has-icon">
+          <img src="/icons/arrow-left.svg" inline>
+        </button>
+        <button value="next" class="button is-secondary has-icon">
+          <img src="/icons/arrow-right.svg" inline>
+        </button>
+      </lume-carousel-controls>
     </header>
 
-    <ul class="landing-examples-sites">
+    <lume-carousel class="landing-examples-sites" id="examples">
       {% for site in examples.sites %}
-      <li>
-        <a href="{{ site.url }}" title="{{ site.title }}">
-          <img src="{{ site.img }}" alt="{{ site.title }}" width="300" height="200">
-        </a>
-      </li>
+      <a href="{{ site.url }}" title="{{ site.title }}">
+        <img src="{{ site.img }}" alt="{{ site.title }}" width="300" height="200">
+      </a>
       {% endfor %}
-      <li>
-        <a href="{{ examples.more.href }}" class="landing-examples-cta">{{ examples.more.text }}</a>
-      </li>
-    </ul>
+      <a href="{{ examples.more.href }}" class="landing-examples-cta">{{ examples.more.text }}</a>
+    </lume-carousel>
   </section>
 
   <section class="landing-suppport">
