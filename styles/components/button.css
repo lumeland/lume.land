@@ -16,9 +16,15 @@
   box-sizing: border-box;
   vertical-align: middle;
   flex: 0 0 auto;
+  text-decoration: none;
 
   &::-moz-focus-inner {
     border: 0;
+  }
+
+  &.is-small {
+    font: var(--text-caption-mini-bold);
+    text-transform: uppercase;
   }
 
   &.is-secondary {

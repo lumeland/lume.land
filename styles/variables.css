@@ -22,6 +22,8 @@
   --text-body-spacing: -0.02em;
   --text-caption: 15px/1.6 var(--font-ui);
   --text-caption-bold: 600 15px/1.5 var(--font-ui);
+  --text-caption-mini: 12px/1.6 var(--font-ui);
+  --text-caption-mini-bold: 600 12px/1.5 var(--font-ui);
   --text-code: 16px/1.6 var(--font-code);
 
   /* Colors */
@@ -49,8 +51,8 @@
   --column-gap-2: 50px;
   --column-gap-3: 100px;
   --row-gap-0: 25px;
-  --row-gap-1: clamp(25px, 5vh, 50px);
-  --row-gap-2: clamp(50px, 10vh, 100px);
-  --row-gap-3: clamp(35px, 7vh, 150px);
-  --row-gap-4: clamp(100px, 20vh, 200px);
+  --row-gap-1: clamp(20px, 5vh, 50px);
+  --row-gap-2: clamp(40px, 10vh, 100px);
+  --row-gap-3: clamp(60px, 7vh, 150px);
+  --row-gap-4: clamp(80px, 20vh, 200px);
 }

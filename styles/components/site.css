@@ -29,18 +29,22 @@
 }
 
 .site-description {
+  color: var(--color-foreground-1);
+
   & p {
-    margin: 0;
+    margin: .3em 0;
   }
+}
+.site-image + .site-description {
+  margin-top: 1em;
 }
 
 .site-name {
-  display: block;
   font: var(--text-caption-bold);
-  margin: 0;
+  color: var(--color-foreground);
+  text-decoration: none;
   
-  & a {
-    color: var(--color-foreground);
-    text-decoration: none;
+  &:hover {
+    text-decoration: underline;
   }
 }

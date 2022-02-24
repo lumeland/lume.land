@@ -3,7 +3,7 @@
   display: grid;
   row-gap: var(--row-gap-2);
   column-gap: var(--margin);
-  grid-template-columns: 0 minmax(300px, var(--max-width)) 0;
+  grid-template-columns: 0 minmax(0, var(--max-width)) 0;
   justify-content: space-between;
   padding: var(--row-gap-2) 0;
 

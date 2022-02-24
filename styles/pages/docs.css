@@ -6,10 +6,16 @@ body {
   margin: var(--row-gap-1) auto 0;
   padding: 0 var(--margin);
   display: grid;
-  grid-template-columns: 275px minmax(0, 1fr);
-  grid-template-areas: "sidebar content";
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "content" "sidebar";
   column-gap: var(--column-gap-1);
+  row-gap: var(--row-gap-1);
   justify-content: space-between;
+  
+  @media (min-width: 900px) {
+    grid-template-columns: 275px minmax(0, 1fr);
+    grid-template-areas: "sidebar content";
+  }
 }
 .doc-navbar {
   grid-area: sidebar;
@@ -95,8 +101,12 @@ body {
 .doc-content {
   grid-area: content;
   background-color: var(--color-background);
-  padding: var(--row-gap-1) var(--column-gap-2);
+  padding: var(--row-gap-1) var(--column-gap-1);
   border-radius: var(--border-radius);
+
+  @media (min-width: 500px) {
+    padding: var(--row-gap-1) var(--column-gap-2);
+  }
 }
 .doc-header {
   border-bottom: solid 1px var(--color-background-2);

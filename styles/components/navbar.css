@@ -35,10 +35,14 @@
   display: flex;
   font: var(--text-body-bold);
   letter-spacing: var(--text-body-spacing);
-  column-gap: 20px;
+  column-gap: var(--column-gap-1);
 
   & a {
     color: var(--color-foreground);
     text-decoration: none;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
   }
 }

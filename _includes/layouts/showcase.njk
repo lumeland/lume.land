@@ -18,21 +18,44 @@ page_css: showcase.css
           <img src="{{ site.img }}" alt="Screenshot of the site" width="300" height="200">
         </a>
         <figcaption class="site-description">
-          <p class="site-name">
-            <a href="{{ site.url }}">
+          <p>
+            {% if site.code %}
+              <a class="button is-secondary is-small" href="{{ site.code }}">View code</a>
+            {% endif %}
+
+            <a href="{{ site.url }}" class="site-name">
               {{ site.title }}
             </a>
           </p>
 
           {{ site.description | md | safe }}
-          
-          {% if site.code %}
-            <a href="{{ site.code }}">View code</a>
-          {% endif %}
         </figcaption>
       </figure>
     </li>
     {% endif %}
     {% endfor %}
   </ul>
+
+  <section class="showcase-more">
+    <h2>More examples</h2>
+
+    <ul>
+      {% for site in sites %}
+      {% if not site.img %}
+      <li class="site-description">
+        <p>
+          <a href="{{ site.url }}" class="site-name">
+            {{ site.title }}
+          </a>
+          {% if site.code %}
+            <a class="button is-secondary is-small" href="{{ site.code }}">View code</a>
+          {% endif %}
+        </p>
+
+        {{ site.description | md | safe }}
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
 </main>
