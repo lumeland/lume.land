@@ -33,6 +33,7 @@
   padding: 0;
   display: flex;
   font: var(--text-body-bold);
+  letter-spacing: var(--text-body-spacing);
   column-gap: 20px;
 
   & a {

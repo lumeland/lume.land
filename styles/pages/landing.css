@@ -55,6 +55,7 @@
   color: var(--color-background);
   padding: 0 20px;
   font: var(--text-body-bold);
+  letter-spacing: var(--text-body-spacing);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -207,6 +208,7 @@
   justify-content: center;
   text-align: center;
   font: var(--text-body-bold);
+  letter-spacing: var(--text-body-spacing);
   background: var(--color-background-1);
   border-radius: var(--border-radius);
   text-decoration: none;
@@ -247,6 +249,7 @@
 .landing-support-contribute {
   & h3 {
     font: var(--text-body-bold);
+    letter-spacing: var(--text-body-spacing);
     margin: 0;
   }
   & ul {

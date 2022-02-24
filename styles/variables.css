@@ -2,24 +2,24 @@
 
 :root {
   /* Fonts */
-  --font-display: 'Cormorant Garamond';
-  --font-ui: -apple-system, system-ui, Inter, sans-serif;
+  --font-ui: Inter, -apple-system, system-ui, Inter, sans-serif;
   --font-code: 'JetBrains Mono';
 
   /* Text styles */
-  --text-display-size: clamp(50px, 15vw, 100px);
+  --text-display-size: clamp(50px, 15vw, 80px);
   --text-display-height: 0.95;
-  --text-display: var(--text-display-size)/var(--text-display-height) var(--font-display);
-  --text-display-spacing: -0.035em;
+  --text-display: 700 var(--text-display-size)/var(--text-display-height) var(--font-ui);
+  --text-display-spacing: -0.03em;
   --text-heading: 600 50px/1 var(--font-ui);
   --text-heading-spacing: -0.015em;
-  --text-title: 500 30px/1.25 var(--font-ui);
-  --text-title-spacing: -0.01em;
+  --text-title: 550 30px/1.2 var(--font-ui);
+  --text-title-spacing: -0.03em;
   --text-body: 20px/1.4 var(--font-ui);
   --text-body-bold: 600 20px/1.4 var(--font-ui);
-  --text-caption: 15px/1.5 var(--font-ui);
-  --text-caption-bold: 700 15px/1.5 var(--font-ui);
-  --text-code: 17px/1.6 var(--font-code);
+  --text-body-spacing: -0.02em;
+  --text-caption: 15px/1.6 var(--font-ui);
+  --text-caption-bold: 600 15px/1.5 var(--font-ui);
+  --text-code: 16px/1.6 var(--font-code);
 
   /* Colors */
   --color-primary: hsl(0deg, 50%, 50%);
