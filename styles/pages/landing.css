@@ -120,6 +120,7 @@
     font: var(--text-display);
     letter-spacing: var(--text-display-spacing);
     margin: 0;
+    max-width: 8em;
   }
 
   & ul {

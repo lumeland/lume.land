@@ -10,8 +10,8 @@
   --text-display-height: 0.95;
   --text-display: 700 var(--text-display-size)/var(--text-display-height) var(--font-ui);
   --text-display-spacing: -0.03em;
-  --text-heading: 600 50px/1 var(--font-ui);
-  --text-heading-spacing: -0.015em;
+  --text-heading: 700 50px/1.1 var(--font-ui);
+  --text-heading-spacing: -0.03em;
   --text-title: 550 30px/1.2 var(--font-ui);
   --text-title-spacing: -0.03em;
   --text-body: 20px/1.4 var(--font-ui);

@@ -4,6 +4,7 @@
   top: 0;
   padding: 0 var(--margin);
   z-index: 10;
+  border-bottom: solid 1px var(--color-background-2);
 }
 .navbar {
   max-width: var(--max-width);
@@ -11,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 90px;
+  height: 80px;
   overflow-x: auto;
 }
 .navbar-logo {
