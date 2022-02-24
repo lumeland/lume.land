@@ -1,0 +1,19 @@
+---
+layout: ./base.njk
+page_css: docs.css
+---
+
+<div class="doc">
+  {% include "templates/doc-navbar.njk" %}
+
+  <main class="doc-content">
+    <header class="doc-header">
+      <h1>{{ title }}</h1>
+      {{ description | md | safe }}
+    </header>
+
+    <div class="doc-body">
+      {{ content | safe }}
+    </div>
+  </main>
+</div>

@@ -1,0 +1,11 @@
+layout: layouts/docs.njk
+
+docs_menu:
+  - title: Getting started
+    id: getting-started
+  - title: Creating pages
+    id: creating-pages
+  - title: Core
+    id: core
+  - title: Advanced
+    id: advanced

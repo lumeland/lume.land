@@ -5,6 +5,9 @@ body {
   margin: 0;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 a {

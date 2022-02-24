@@ -130,28 +130,28 @@ examples:
   sites:
     - title: Oak Studio
       url: https://oakstudio.co/
-      img: /img/examples/oak.png
+      img: /img/showcase/oak.png
     - title: Johan's website & blog
       url: https://johan.im/
-      img: /img/examples/johan.png
+      img: /img/showcase/johan.png
     - title: Jurnal Kusaeni
       url: https://kusaeni.com/
-      img: /img/examples/kusaeni.png
+      img: /img/showcase/kusaeni.png
     - title: Notion Enhancer documentation
       url: https://notion-enhancer.github.io/
-      img: /img/examples/notion-enhancer.png
+      img: /img/showcase/notion-enhancer.png
     - title: OAK Studio
       url: https://oakstudio.co/
-      img: /img/examples/oak.png
+      img: /img/showcase/oak.png
     - title: Tarugo21
       url: https://www.tarugoconf.com/
-      img: /img/examples/tarugo21.png
+      img: /img/showcase/tarugo21.png
     - title: Tobias Schmidt
       url: https://tobiasschmidt.me/
-      img: /img/examples/tobias.png
+      img: /img/showcase/tobias.png
     - title: Velociraptor documentation
       url: https://velociraptor.run/
-      img: /img/examples/velociraptor.png
+      img: /img/showcase/velociraptor.png
 
 support:
   title: Lume is supported by

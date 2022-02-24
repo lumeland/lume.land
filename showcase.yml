@@ -1,0 +1,110 @@
+---
+layout: layouts/showcase.njk
+title: Showcase
+description: |
+  This is a list of sites built with Lume that have the source code publicly
+  visible. If you want to include your project in this list, please
+  [edit this page](https://github.com/lumeland/lumeland.github.io/edit/master/getting-started/examples.md)
+  and send me a pull request.
+
+sites:
+  - title: Base Blog
+    url: https://lumeland.github.io/base-blog/
+    description: The official starter to build a blog
+    code: https://github.com/lumeland/base-blog
+
+  - title: Muse Blog
+    url: https://lume-blog-muse.pages.dev/
+    description: A starter template to build a blog for musicians
+    code: https://github.com/NeroBlackstone/lume-blog-muse
+
+  - title: Todo App
+    url: https://lumeland.github.io/react-todo/
+    description: Example of a React app with bundled and minified `tsx` code
+    code: https://github.com/lumeland/react-todo
+
+  - title: Lume documentation
+    url: https://lumeland.github.io/
+    description: This web site
+    code: https://github.com/lumeland/lumeland.github.io
+
+  - title: Tarugo 21
+    img: /img/showcase/tarugo21.png
+    url: https://tarugo21.netlify.app/
+    description: An event about technology and business in Madrid, Spain -
+    code: https://github.com/tarugoconf/tarugo21
+
+  - title: OAK Studio
+    img: /img/showcase/oak.png
+    url: https://oakstudio.co/
+    description: A creative agency based in Bartlesville, Oklahoma
+    code: https://github.com/bradeneast/oakstudio.co
+
+  - title: Exact Report Generator
+    url: https://exact-report-generator.vercel.app/
+    description: A tool to create financial reports
+    code: https://github.com/WilcoKruijer/ExactReportGenerator
+
+  - title: Macadam Grinding
+    url: https://macadamgrinding.com/
+    description: A blog about cycling by Isaac Tait
+    code: https://github.com/Isaac-Tait/macadamGrinding_denoStyle
+
+  - title: Ensino
+    url: https://laurarubio.net/
+    description: A collection of resources for Galego teachers by Laura Rubio
+    code: https://github.com/laura-rubio/ensino
+
+  - title: Tobias Schmidt
+    img: /img/showcase/tobias.png
+    url: https://tobiasschmidt.me/
+    description: The personal blog of Tobias Schmidt
+    code: https://github.com/tobiasschmidt89/tobiasschmidt.me
+
+  - title: Kusaeni
+    img: /img/showcase/kusaeni.png
+    url: https://kusaeni.com/
+    description: The personal blog of Kusaeni
+    code: https://notabug.org/kuspoes/kusaicom
+
+  - title: Fabon
+    url: https://www.fabon.info/
+    description: The personal website of Fabon
+    code: https://github.com/fabon-f/website
+
+  - title: Better Know Canvas
+    url: https://canvas.rocks/
+    description: A collection of advanced web graphics tutorials by Fernando Serboncini
+    code: https://github.com/fserb/bkc
+
+  - title: DenissB
+    url: https://denissb.github.io/
+    description: A personal website of a web developer
+    code: https://github.com/denissb/denissb.github.io
+
+  - title: notion-enhancer documentation
+    img: /img/showcase/notion-enhancer.png
+    url: https://notion-enhancer.github.io/
+    description: An enhancer/customiser for the all-in-one productivity workspace notion.so
+    code: https://github.com/notion-enhancer/notion-enhancer.github.io
+
+  - title: Johan Brook
+    img: /img/showcase/johan.png
+    url: https://johanbrook.com
+    description: The personal website and blog of Johan
+    code: https://github.com/johanbrook/johanbrook.com
+
+  - title: scarf@127.0.0.1
+    url: https://www.maribel.dev/
+    description: The personal blog of scarf
+    code: https://github.com/scarf005/scarf005.github.com
+
+  - title: aiotter
+    url: https://aiotter.com/
+    description: The technical blog of Yuto Oguchi
+    code: https://github.com/aiotter/blog
+
+  - title: Velociraptor
+    url: https://velociraptor.run/
+    description: The documentation of Velociraptor script runner for Deno
+    code: https://github.com/jurassiscripts/velociraptor-dot-run

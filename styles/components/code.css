@@ -1,10 +1,15 @@
 @import "https://highlightjs.org/static/demo/styles/github.css";
 
+.hljs {
+  display: block;
+  color: var(--color-black);
+  background: var(--color-background-1);
+  border-radius: var(--border-radius);
+  border: solid 1px var(--color-background-2);
+}
+
 lume-code {
   & .hljs {
-    display: block;
-    color: var(--color-black);
-    background: var(--color-background-1);
     border-radius: 0 0 var(--border-radius) var(--border-radius);
   }
 

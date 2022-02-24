@@ -1,21 +1,19 @@
 <div class="fire">
-  <div class="fire-flame">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="fire-effect" width="0" height="0">
@@ -35,102 +33,97 @@
     height: 200px;
     overflow: hidden;
     border-radius: 100%;
-  }
-  .fire-flame {
     filter: url(#fire-blur);
-    position: absolute;
-    width: 100%;
-    height: 100%;
   }
-  .fire-flame > div {
+  .fire > div {
     position: absolute;
     margin: 0 0 -15px;
     left: calc(50% - 70px);
     bottom: 0;
     width: 70px;
     height: 70px;
-    background: #fff;
+    background: none;
     border-radius: 100%;
+    animation-fill-mode: backwards;
+    animation-name: firecircle;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0.5, 0.07, 0.64, 1);
+    animation-iteration-count: infinite;
   }
-  .fire-flame > div:nth-child(1) {
-    animation: firecircle 1.2s 0.14s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(1) {
+    animation-delay: 0.14s;
     margin-left: 13px;
     margin-bottom: -16px;
   }
-  .fire-flame > div:nth-child(2) {
-    animation: firecircle 1.2s 0.28s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(2) {
+    animation-delay: 0.28s;
     margin-left: 17px;
     margin-bottom: -28px;
   }
-  .fire-flame > div:nth-child(3) {
-    animation: firecircle 1.2s 0.42s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(3) {
+    animation-delay: 0.42s;
     margin-left: 61px;
     margin-bottom: -26px;
   }
-  .fire-flame > div:nth-child(4) {
-    animation: firecircle 1.2s 0.56s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(4) {
+    animation-delay: 0.56s;
     margin-left: 28px;
     margin-bottom: -35px;
   }
-  .fire-flame > div:nth-child(5) {
-    animation: firecircle 1.2s 0.7s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(5) {
+    animation-delay: 0.7s;
     margin-left: 62px;
     margin-bottom: -35px;
   }
-  .fire-flame > div:nth-child(6) {
-    animation: firecircle 1.2s 0.84s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(6) {
+    animation-delay: 0.84s;
     margin-left: 53px;
     margin-bottom: -16px;
   }
-  .fire-flame > div:nth-child(7) {
-    animation: firecircle 1.2s 0.98s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(7) {
+    animation-delay: 0.98s;
     margin-left: 62px;
     margin-bottom: -37px;
   }
-  .fire-flame > div:nth-child(8) {
-    animation: firecircle 1.2s 1.12s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(8) {
+    animation-delay: 1.12s;
     margin-left: 1px;
     margin-bottom: -24px;
   }
-  .fire-flame > div:nth-child(9) {
-    animation: firecircle 1.2s 1.26s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(9) {
+    animation-delay: 1.26s;
     margin-left: 67px;
     margin-bottom: -33px;
   }
-  .fire-flame > div:nth-child(10) {
-    animation: firecircle 1.2s 1.4s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(10) {
+    animation-delay: 1.4s;
     margin-left: 13px;
     margin-bottom: -37px;
   }
-  .fire-flame > div:nth-child(11) {
-    animation: firecircle 1.2s 1.54s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(11) {
+    animation-delay: 1.54s;
     margin-left: 54px;
     margin-bottom: -34px;
   }
-  .fire-flame > div:nth-child(12) {
-    animation: firecircle 1.2s 1.68s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(12) {
+    animation-delay: 1.68s;
     margin-left: 4px;
     margin-bottom: -34px;
   }
-  .fire-flame > div:nth-child(13) {
-    animation: firecircle 1.2s 1.82s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(13) {
+    animation-delay: 1.82s;
     margin-left: 1px;
     margin-bottom: -34px;
   }
-  .fire-flame > div:nth-child(14) {
-    animation: firecircle 1.2s 1.96s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(14) {
+    animation-delay: 1.96s;
     margin-left: 36px;
     margin-bottom: -35px;
   }
-  .fire-flame > div:nth-child(15) {
-    animation: firecircle 1.2s 2.1s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
+  .fire > div:nth-child(15) {
+    animation-delay: 2.1s;
     margin-left: 65px;
     margin-bottom: -28px;
-  }
-  .fire-flame > div:nth-child(16) {
-    animation: firecircle 1.2s 2.24s cubic-bezier(0.5, 0.07, 0.64, 1) infinite;
-    margin-left: 28px;
-    margin-bottom: -38px;
   }
 
   @keyframes firecircle {

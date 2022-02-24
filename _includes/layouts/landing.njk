@@ -64,7 +64,7 @@ page_css: landing.css
 
     <lume-carousel class="landing-examples-sites" id="examples">
       {% for site in examples.sites %}
-      <a href="{{ site.url }}" title="{{ site.title }}">
+      <a href="{{ site.url }}" title="{{ site.title }}" class="site-image">
         <img src="{{ site.img }}" alt="{{ site.title }}" width="300" height="200">
       </a>
       {% endfor %}

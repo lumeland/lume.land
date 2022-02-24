@@ -182,24 +182,6 @@
   & > a {
     flex: 0 0 auto;
   }
-
-  & img {
-    transition: transform var(--animation-duration);
-    border-radius: var(--border-radius);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
-                0 1px 4px rgba(0, 0, 0, 0.05),
-                0 1px 8px rgba(0, 0, 0, 0.05),
-                0 1px 10px rgba(0, 0, 0, 0.05),
-                0 1px 12px rgba(0, 0, 0, 0.05),
-                0 1px 14px rgba(0, 0, 0, 0.05);
-  }
-  & > a:hover {
-    z-index: 1;
-
-    & img {
-      transform: scale(1.1);
-    }
-  }
 }
 .landing-examples-cta {
   width: 300px;
