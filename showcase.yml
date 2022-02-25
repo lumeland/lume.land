@@ -1,6 +1,7 @@
 ---
 layout: layouts/showcase.njk
 title: Showcase
+main_menu: showcase
 description: |
   This is a list of sites built with Lume that have the source code publicly
   visible. If you want to include your project in this list, please

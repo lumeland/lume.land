@@ -10,13 +10,13 @@
   max-width: var(--max-width);
   margin: auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   height: 80px;
   overflow-x: auto;
 }
 .navbar-logo {
   display: flex;
+  align-self: center;
   align-items: center;
   color: var(--color-foreground);
   column-gap: 10px;
@@ -35,11 +35,29 @@
   display: flex;
   font: var(--text-body-bold);
   letter-spacing: var(--text-body-spacing);
-  column-gap: var(--column-gap-1);
+
+  & li {
+    display: flex;
+  }
 
   & a {
     color: var(--color-foreground);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+
+    &:hover {
+      background-image: linear-gradient(var(--color-foreground), var(--color-foreground));
+      background-repeat: no-repeat;
+      background-size: calc(100% - 2em) 1px;
+      background-position: center bottom;
+    }
+
+    &.is-selected {
+      color: var(--color-foreground-1);
+      background: var(--color-background-1);
+    }
   }
 
   @media (max-width: 700px) {

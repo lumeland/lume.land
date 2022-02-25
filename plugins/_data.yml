@@ -1,0 +1,25 @@
+layout: layouts/plugin.njk
+main_menu: plugins
+
+tags_info:
+  html:
+    name: HTML
+    background: tomato
+  images:
+    name: Images
+    background: violet
+  javascript:
+    name: Javascript
+    background: gold
+  styles:
+    name: Styles
+    background: LightSkyBlue
+  template_engine:
+    name: Template engines
+    background: lightgreen
+  urls:
+    name: URLs
+    background: pink
+  utils:
+    name: Utils
+    background: lightgray

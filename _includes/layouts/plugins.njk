@@ -1,0 +1,41 @@
+---
+layout: ./base.njk
+page_css: plugins.css
+---
+
+<main class="plugins">
+  <header class="plugins-header">
+    <h1>{{ title }}</h1>
+    {{ description | md | safe }}
+  </header>
+
+  <lume-filter>
+    <form class="plugins-filter">
+      {% for id, info in tags_info %}
+      <label class="button is-secondary" style="--background-active:{{ info.background }};--accent:{{ info.background }};--color-active:black">
+        <input type="checkbox" name="{{ id }}"> {{ info.name }}
+      </label>
+      {% endfor %}
+    </form>
+
+    <ul class="plugins-list">
+      {% for page in search.pages("url^=/plugins/ url!=/plugins/") %}
+      <li class="plugin" data-tags="{{ page.data.tags }}">
+        <a href="{{ page.data.url }}" class="plugin-info">
+          <strong class="plugin-name">{{ page.data.title }}</strong>
+
+          {{ page.data.description | md | safe }}
+        </a>
+
+        <nav class="plugin-tags">
+          {% for tag in page.data.tags %}
+          <a href="?{{ tag }}=on" class="button is-secondary is-small" style="--background:{{ tags_info[tag].background }};--color:black">
+            {{ tags_info[tag].name }}
+          </a>
+          {% endfor %}
+        </nav>
+      </li>
+      {% endfor %}
+    </ul>
+  </lume-filter>
+</main>

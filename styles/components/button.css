@@ -30,18 +30,23 @@
   &.is-secondary {
     --color: var(--color-foreground-1);
     --color-hover: var(--color-foreground-1);
+    --color-active: var(--color-background);
     --background: var(--color-background-1);
     --background-hover: var(--color-background-2);
+    --background-active: var(--color-primary);
 
     &.is-active {
-      background: var(--color-primary);
-      color: var(--color-background);
+      color: var(--color-active);
+      background: var(--background-active);
     }
+  }
+  & input {
+    accent-color: var(--accent);
   }
 
   &:hover {
-    background: var(--background-hover, none);
     color: var(--color-hover, currentColor);
+    background: var(--background-hover, none);
   }
   &:disabled {
     cursor: default;
