@@ -10,11 +10,12 @@
     <ul class="doc-navbar-section-links">
       {% for page in search.pages(id, "title") %}
         <li>
-          {% if page.data.url == url %}
-          <a href="{{ page.data.url }}" aria-current="page" title="{{ page.data.description }}">{{ page.data.title }}</a>
-          {% else %}
-          <a href="{{ page.data.url }}" title="{{ page.data.description }}">{{ page.data.title }}</a>
-          {% endif %}
+          <a href="{{ page.data.url }}" {% if page.data.url == url %}aria-current="page"{% endif %} title="{{ page.data.description }}">
+            {{ page.data.title }}
+            {% if page.data.enabled %}
+            <span class="tag is-small">Enabled</span>
+            {% endif %}
+          </a>
         </li>
       {% endfor %}
     </ul>

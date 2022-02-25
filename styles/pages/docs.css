@@ -92,6 +92,9 @@
       color: var(--color-foreground);
       font: var(--text-caption-bold);
     }
+    & .tag {
+      float: right;
+    }
   }
 }
 

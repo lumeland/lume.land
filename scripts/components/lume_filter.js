@@ -32,26 +32,46 @@ export default class LumeFilter extends HTMLElement {
 
       const data = new FormData(form);
       filter(data);
-      const permalink = new URLSearchParams(data);
-      history.pushState({}, null, `?${permalink}`);
+      const permalink = new URLSearchParams(data).toString();
+
+      if (permalink !== document.location.search) {
+        const newUrl = permalink ? `?${permalink}` : document.location.pathname;
+        history.pushState({}, null, newUrl);
+      }
     }
 
     function filter(data) {
       const tags = [];
+      let status;
 
-      for (const name of data.keys()) {
+      for (const [name, value] of data.entries()) {
+        if (name === "status") {
+          status = value;
+          continue;
+        }
+
         tags.push(name);
       }
 
-      if (!tags.length) {
-        return items.forEach((item) => item.hidden = false);
-      }
+      items.forEach((item) => {
+        switch (status) {
+          case "enabled":
+            if (!item.classList.contains("is-enabled")) {
+              item.hidden = true;
+              return;
+            }
+            break;
+          case "disabled":
+            if (item.classList.contains("is-enabled")) {
+              item.hidden = true;
+              return;
+            }
+            break;
+        }
 
-      items.forEach((item) =>
-        item.hidden = tags.every((tag) =>
-          !item.dataset.tags.split(" ").includes(tag)
-        )
-      );
+        item.hidden = tags.length &&
+          tags.every((tag) => !item.dataset.tags.split(",").includes(tag));
+      });
     }
   }
 }

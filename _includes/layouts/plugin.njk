@@ -10,6 +10,15 @@ page_css: docs.css
     <header class="doc-header">
       <h1>{{ title }}</h1>
       {{ description | md | safe }}
+
+      {% if docs %}
+    <nav class="article-nav">
+      <a href="https://doc.deno.land/https/deno.land/x/lume@{{ lastVersion }}/{{ docs }}">
+        <img src="/deno.svg" alt="Deno logo" width="20" height="20" />
+        See Options documentation
+      </a>
+    </nav>
+    {% endif %}
     </header>
 
     <div class="doc-body">

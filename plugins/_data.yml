@@ -2,6 +2,9 @@ layout: layouts/plugin.njk
 main_menu: plugins
 
 tags_info:
+  data_format:
+    name: Data format
+    background: LemonChiffon
   html:
     name: HTML
     background: tomato
@@ -15,7 +18,7 @@ tags_info:
     name: Styles
     background: LightSkyBlue
   template_engine:
-    name: Template engines
+    name: Template engine
     background: lightgreen
   urls:
     name: URLs

@@ -60,6 +60,9 @@
   &[hidden] {
     display: none;
   }
+  &.is-enabled {
+    background-color: var(--color-background-1);
+  }
 }
 .plugin-info {
   font: var(--text-caption);

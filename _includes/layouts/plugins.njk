@@ -11,6 +11,12 @@ page_css: plugins.css
 
   <lume-filter>
     <form class="plugins-filter">
+      <select name="status" class="selector">
+        <option value="all">All plugins {{ all_total }}</option>
+        <option value="enabled">Enabled by default</option>
+        <option value="disabled">Disabled by default</option>
+      </select>
+
       {% for id, info in tags_info %}
       <label class="button is-secondary" style="--background-active:{{ info.background }};--accent:{{ info.background }};--color-active:black">
         <input type="checkbox" name="{{ id }}"> {{ info.name }}
@@ -19,10 +25,15 @@ page_css: plugins.css
     </form>
 
     <ul class="plugins-list">
-      {% for page in search.pages("url^=/plugins/ url!=/plugins/") %}
-      <li class="plugin" data-tags="{{ page.data.tags }}">
+      {% for page in search.pages("url^=/plugins/ url!=/plugins/", "title") %}
+      <li class="plugin {% if page.data.enabled %} is-enabled{% endif %}" data-tags="{{ page.data.tags }}">
         <a href="{{ page.data.url }}" class="plugin-info">
-          <strong class="plugin-name">{{ page.data.title }}</strong>
+          <strong class="plugin-name">
+            {{ page.data.title }}
+            {% if page.data.enabled %}
+            <span class="tag is-small">(Enabled)</span>
+            {% endif %}
+          </strong>
 
           {{ page.data.description | md | safe }}
         </a>

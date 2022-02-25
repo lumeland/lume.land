@@ -14,7 +14,9 @@
 </head>
 <body>
   {% include "templates/navbar.njk" %}
-  {{ content | safe }}
+  <div>
+    {{ content | safe }}
+  </div>
   {% include "templates/footer.njk" %}
 </body>
 </html>

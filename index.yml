@@ -14,21 +14,64 @@ usage:
     code: |
       <lume-code>
 
+      ```md { title="Markdown" }
+      # Galician music groups
+
+      - Tanxugueiras
+      - Mercedes Peón
+      - Baiuca
+      - Terbutalina
+      ```
       ```html { title="Nunjucks" }
       <h1>{{ title }}</h1>
 
       <ul>
-        {% for person in people %}
-        <li>{{ person.name }}</li>
+        {% for item in items %}
+        <li>{{ item.name }}</li>
         {% endfor %}
       </ul>
       ```
       ```jsx { title="JSX" }
-      <h1>{ title }</h1>
+      export default function ({ title, items }) {
+        return <>
+          <h1>{ title }</h1>
 
-      <ul>
-        { people.map((person) => <li>{ person.name }</li>)}
-      </ul>
+          <ul>
+            { items.map((item) => <li>{ item.name }</li>)}
+          </ul>
+        </>;
+      }
+      ```
+      ```js { title="Javascript" }
+      export default function ({ title, items }) {
+        return `
+        <h1>${ title }</h1>
+
+        <ul>
+          ${ items.map((item) => `<li>${ item.name }</li>`)}
+        </ul>
+        `;
+      }
+      ```
+      ```ts { title="Typescript" }
+      interface Item {
+        name: string;
+      }
+
+      interface Data {
+        title: string;
+        items: Item[];
+      }
+
+      export default function (data: Data): string {
+        return `
+        <h1>${ data.title }</h1>
+
+        <ul>
+          ${ data.items.map((item) => `<li>${ item.name }</li>`)}
+        </ul>
+        `;
+      }
       ```
 
       </lume-code>
