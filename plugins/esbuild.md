@@ -6,16 +6,29 @@ tags:
   - javascript
 ---
 
-The plugin `esbuild` **is disabled by default** so to enable it you have to
-import and use it in the `_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 
-site.use(esbuild());
+const site = lume();
+
+site.use(esbuild({/* your config here */}));
+
+export default site;
 ```
 
-It process your Javascript and Typescript files using
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+
+## Description
+
+The plugin `esbuild` process your Javascript and Typescript files using
 [esbuild bundler](https://esbuild.github.io/).
 
 The available options are:

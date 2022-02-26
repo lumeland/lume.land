@@ -4,11 +4,16 @@ description: Small guide on adding custom loaders to Lume
 order: 14
 ---
 
+${toc}
+
 Loaders are functions that read and return the content of files. There are
 different loaders for different formats, like `json`, `yaml`, JavaScript modules
-or plain text. Creating a custom loader is really easy, you only have to create
-a function that reads the content of a file and return an object with that
-content.
+or plain text.
+
+## Creating a loader
+
+Creating a custom loader is really easy, you only have to create a function that
+reads the content of a file and return an object with that content.
 
 Let's say you want to add support for `toml` format, using the
 [encoding/toml](https://deno.land/std/encoding#toml) Deno std module:
@@ -22,8 +27,10 @@ async function tomlLoader(path) {
 }
 ```
 
-If you want to use this loader to build your site, just register it in the
-`_config.js` file, specifying the file extensions to apply:
+## Register a data loader
+
+If you want to use the TOML loader to load data files, use the `site.loadData()`
+method in the `_config.ts` file:
 
 ```js
 site.loadData([".toml"], tomlLoader);
@@ -32,20 +39,24 @@ site.loadData([".toml"], tomlLoader);
 Now you can use the TOML format to save data files (`_data.toml` or
 `_data/*.toml`).
 
-To use this format to generate pages, use the `loadPages` function:
+## Register a page loader
+
+To generate pages using TOML format, use the `loadPages` function:
 
 ```js
 site.loadPages([".toml"], tomlLoader);
 ```
 
 Now, any `*.toml` file in your site will be loaded and used to render a page.
-For example, the file `/about-us.toml` will be loaded and saved as
-`/about-us/index.html` (unless you configure a different name using the `url`
-value.
+For example, the file `/about-us.toml` would be loaded and saved as
+`/about-us/index.html`.
 
-Instead of HTML pages, you may want to use this loader to load TOML files,
-process them and save with the same extension (like `filename.toml` instead of
-`filename/index.html`). To do that, you must register it with `loadAssets`:
+You could have realized that `loadPage()` is intended to generate `.html` pages.
+So the `.toml` extension is removed and replaced by `.html` (or `/index.html`
+for pretty urls).
+
+You may want to load TOML files, process them and export as `.toml` files, not
+`.html` files. To do that, you can use `loadAssets()`:
 
 ```js
 site.loadAssets([".toml"], tomlLoader);
@@ -71,25 +82,15 @@ site.loadAssets([".toml"], tomlLoader);
 This is the same strategy used for JavaScript/TypeScript modules (`*.tmpl.js`
 for pages and `*.js` for JavaScript assets).
 
-## Loading plain text
-
-To load text files but without parsing the content, you don't need to pass any
-loader because the text loader is used by default:
-
-```js
-// Load html pages
-site.loadPages([".html"]);
-
-// Load js and css files
-site.loadAssets([".css", ".js"]);
-```
+The `textLoader` is used by default if you don't pass any loader. For example:
+`site.loadPages([".html"])` or `site.loadAssets([".css", ".js"])`. {.tip}
 
 ## Template engines
 
 Lume supports several template engines to render your pages, like Nunjucks, Pug
 or Eta. It's easy to extend this support for more template engines: you only
 need to create a class extending the
-[`Engine` interface](https://doc.deno.land/https/deno.land/x/lume/core.ts#Engine).
+[`Engine` interface](https://doc.deno.land/https://deno.land/x/lume/core.ts/~/Engine).
 Let's see an example using
 [handlebars](https://github.com/handlebars-lang/handlebars.js):
 
@@ -98,7 +99,11 @@ import HandlebarsJS from "https://dev.jspm.io/handlebars@4.7.6";
 import { Data, Engine } from "lume/core.ts";
 
 export default class HandlebarsEngine implements Engine {
-  /** Render the content */
+  /** Render the content (sync or async) */
+  render(content: string, data: Data): string {
+    return this.renderSync(content, data, filename);
+  }
+  /** Render async */
   render(content: string, data: Data): string {
     const template = HandlebarsJS.compile(content);
     return template(data);
@@ -106,10 +111,13 @@ export default class HandlebarsEngine implements Engine {
 
   /** Register helpers */
   addHelper() {}
+
+  /** Delete cache */
+  deleteCache() {}
 }
 ```
 
-To use this template engine you have to set as third argument of the `loadPages`
+To use this template engine pass it as third argument of the `loadPages`
 function:
 
 ```ts
@@ -122,5 +130,5 @@ site.loadPages([".hbs"], textLoader, new HandlebarsEngine(site));
 Now, all files with the `.hbs` extension will be loaded using the `textLoader`
 and rendered using the Handlebars engine.
 
-**Note:** this is a very basic implementation only as a example. You can see the
-code of the available template engines in Lume for real examples.
+This is a very basic implementation only for example. You can see the code of
+the available template engines in Lume for real examples. {.tip}

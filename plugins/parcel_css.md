@@ -6,16 +6,30 @@ tags:
   - styles
 ---
 
-The `ParcelCSS` plugin load and transform your CSS files using
-[ParcelCSS](https://github.com/parcel-bundler/parcel-css) processor. This plugin
-**is disabled by default** so to enable it you have to import and use it in the
-`_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import parcelCSS from "lume/plugins/parcel_css.ts";
+import lume from "lume/mod.ts";
+import parcelCss from "lume/plugins/parcel_css.ts";
 
-site.use(parcelCSS());
+const site = lume();
+
+site.use(parcelCss({/* your config here */}));
+
+export default site;
 ```
+
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+
+## Description
+
+The `ParcelCSS` plugin load and transform your CSS files using
+[ParcelCSS](https://github.com/parcel-bundler/parcel-css) processor.
 
 ## Configuration
 
@@ -31,7 +45,12 @@ This plugin accepts a configuration object. The available options are:
 Example with the default configuration:
 
 ```js
-site.use(parcelCSS({
+import lume from "lume/mod.ts";
+import parcelCss, { version } from "lume/plugins/parcel_css.ts";
+
+const site = lume();
+
+site.use(parcelCss({
   extensions: [".css"],
   sourceMap: false,
   options: {
@@ -41,15 +60,21 @@ site.use(parcelCSS({
       customMedia: true,
     },
     targets: {
-      android: 98,
-      chrome: 98,
-      edge: 98,
-      firefox: 97,
-      ios_saf: 15,
-      safari: 15,
-      opera: 83,
-      samsung: 16,
+      android: version(98),
+      chrome: version(98),
+      edge: version(98),
+      firefox: version(97),
+      ios_saf: version(15),
+      safari: version(15),
+      opera: version(83),
+      samsung: version(16),
     },
   },
 }));
+
+export default site;
 ```
+
+The `version()` function is provided to convert semver version to single 24-bit
+number, used by parcel_css.
+[More info](https://github.com/parcel-bundler/parcel-css#from-node) {.tip}

@@ -3,6 +3,7 @@ title: Migrate from Eleventy
 description: How to migrate from Eleventy project to Lume
 ---
 <!-- deno-fmt-ignore-file -->
+${toc}
 
 [Eleventy](https://www.11ty.dev/) is a great SSG with a big community. Lume was
 inspired in it, so if you have a Eleventy project and want to migrate to Lume
@@ -51,14 +52,13 @@ Serverless
 radar).
 
 Image
-: There isn't yet a plugin to manipulate images, because I didn't find any
-good image library for Deno.
+: Working on it.
 
 Cache assets
 : There isn't any plugin for that.
 
 RSS
-: You don't need a plugin to generate a RSS files in Lume.
+: No plugin needed to generate a RSS files in Lume.
 [See this example](https://github.com/lumeland/base-blog/blob/master/feed.xml.njk)
 
 Syntax Highlighting

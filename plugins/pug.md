@@ -6,15 +6,30 @@ tags:
   - template_engine
 ---
 
-[Pug](https://pugjs.org/) is a template engine heavily influenced by Haml. This
-format is **disabled by default**, so you have to enable it in the `_config.js`
-file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import pug from "lume/plugins/pug.ts";
 
-site.use(pug());
+const site = lume();
+
+site.use(pug({/* your config here */}));
+
+export default site;
 ```
+
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+
+## Description
+
+[Pug](https://pugjs.org/) is a template engine heavily influenced by Haml. This
+plugin allows to use it to create pages and layouts.
 
 ## Creating layouts
 

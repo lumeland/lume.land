@@ -6,16 +6,30 @@ tags:
   - styles
 ---
 
-The `PostCSS` plugin load and transform your CSS files using
-[PostCSS](https://postcss.org/) processor. This plugin **is disabled by
-default** so to enable it you have to import and use it in the `_config.js`
-file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import postcss from "lume/plugins/postcss.ts";
 
-site.use(postcss());
+const site = lume();
+
+site.use(postcss({/* your config here */}));
+
+export default site;
 ```
+
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+
+## Description
+
+The `PostCSS` plugin load and transform your CSS files using
+[PostCSS](https://postcss.org/) processor.
 
 ## Configuration
 

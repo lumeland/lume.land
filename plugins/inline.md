@@ -6,38 +6,51 @@ tags:
   - html
 ---
 
-This plugin allows to inline some sources, like CSS, images or JavaScript, in
-the HTML automatically. It is **disabled by default**, so you have to enable it
-in the `_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import inline from "lume/plugins/inline.ts";
 
-site.use(inline());
+const site = lume();
+
+site.use(inline({/* your config here */}));
+
+export default site;
 ```
 
-Now, any HTML tag with the `inline` attribute will be included in the HTML. For
-example:
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
 
-```html
-<link rel="stylesheet" href="css/my-styles.css" inline>
+## Description
 
-<script src="js/my-scripts.js" inline></script>
+This plugin allows to inline some sources, like CSS, images or JavaScript, in
+the HTML automatically. Any HTML tag with the `inline` attribute will be
+included in the HTML. For example:
 
-<img src="img/avatar.png" inline>
+<lume-code>
 
-<img src="img/logo.svg" inline>
+```html {title="Input"}
+<link rel="stylesheet" href="/css/my-styles.css" inline>
+
+<script src="/js/my-scripts.js" inline></script>
+
+<img src="/img/avatar.png" inline>
+
+<img src="/img/logo.svg" inline>
 ```
 
-It's converted to:
-
-```html
+```html {title="Output"}
 <style>
-  /* Content of the CSS file */
+  /* Content of /css/my-styles.css */
 </style>
 
 <script>
-  // Content of the js file
+  // Content of /js/my-scripts.js
 </script>
 
 <img src="data:image/png;base64,...">
@@ -45,6 +58,10 @@ It's converted to:
 <svg>...</svg>
 ```
 
+</lume-code>
+
 Note that bitmap images will be inlined as base64 data but svg images are
-replaced by the `<svg>` elements itself. The source file must be in the `dest`
-directory (usually `_site`), there's no support for external URLs yet.
+replaced by the `<svg>` element. {.tip}
+
+The source file must be exported to the `dest` directory, there's no support for
+external URLs. {.tip}

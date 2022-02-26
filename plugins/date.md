@@ -6,14 +6,27 @@ tags:
   - utils
 ---
 
-The Date plugin **is disabled by default** so you need to enable it in
-`_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import date from "lume/plugins/date.ts";
 
-site.use(date());
+const site = lume();
+
+site.use(date({/* your config here */}));
+
+export default site;
 ```
+
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+
+## Description
 
 This plugin register the `date` filter, that allows to manipulate and format a
 datetime value in different locales. It uses [date-fns](https://date-fns.org/)
@@ -51,12 +64,12 @@ There are some predefined formats that you can use:
 </time>
 ```
 
-On register the value you can edit or add more formats under a name, so it's
+On install the plugin you can edit or add more formats under a name, so it's
 more easy to apply them in the templates:
 
-```js
-import date from "lume/plugins/date.ts";
+<lume-code>
 
+```js {title="Configuration"}
 site.use(date({
   formats: {
     "MY_FORMAT": "MM-dd-yyyy",
@@ -64,11 +77,11 @@ site.use(date({
 }));
 ```
 
-Now you can use this format by its name:
-
-```html
+```html {title="Nunjucks"}
 <time>{{ createdAt | date('MY_FORMAT') }}</time>
 ```
+
+</lume-code>
 
 ## Locales
 
@@ -94,5 +107,5 @@ Use the second argument to set the locale:
 </time>
 ```
 
-**Note:** The first locale set in the `_config.js` will be used also as the
-default locale.
+The first locale set in the `_config.js` is used also as the default locale.
+{.tip}

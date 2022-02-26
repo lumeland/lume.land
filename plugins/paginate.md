@@ -6,3 +6,73 @@ enabled: true
 tags:
   - utils
 ---
+
+${toc}
+
+## Installation
+
+This plugin is installed by default. 🎉
+
+## Description
+
+This plugin register the `paginate` helper to create pages using an array of
+results. This is useful combined with the `search` helper to create paginated
+results. For example:
+
+```js
+export const layout = "layouts/post-list.njk";
+
+export default function* ({ search, paginate }) {
+  const posts = search.pages("posts");
+  const options = {
+    url: (n) => `posts/page/${n}/`,
+    size: 10
+  };
+
+  for (const page of paginate(posts, options))) {
+    yield page;
+  }
+}
+```
+
+As you can see, the `paginate` helper accepts two arguments: an iterable and an
+object with the options. The available options are:
+
+| Name   | Default            | Description                                                                             |
+| ------ | ------------------ | --------------------------------------------------------------------------------------- |
+| `size` | `10`               | Number of elements per page                                                             |
+| `url`  | `(n) => page-${n}` | The function to generate the URL of each page. It receives the page number as argument. |
+
+This helper returns a generator. Each item has the following values:
+
+```js
+for (const page of paginate(posts, options)) {
+  page.url;        // URL of the page, for example "post/page/1"
+  page.results;    // Array with the results of this page
+
+  // Pagination info:
+  page.pagination.page;         // The current page
+  page.pagination.totalPages;   // Total pages
+  page.pagination.totalResults; // Total results
+  page.pagination.previous;     // The URL of the previous page
+  page.pagination.next;         // The URL of the next page
+
+  yield page;
+}
+```
+
+## Configuration
+
+If you want to change the default configuration, use the second argument of
+`lume()` function in your `_config.ts` file. See all configuration options by
+clicking in the "See available Options in Deno Doc" button above.
+
+```ts
+import lume from "lume/mod.ts";
+
+// Paginate plugin configuration
+const paginate = {/* your config here */};
+
+// Apply the plugin config
+const site = lume({}, { paginate });
+```

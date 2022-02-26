@@ -52,18 +52,20 @@ layouts are relative to `_includes` directory).
 The template can use any variable from the page, for example `title` to render
 the title, and `content` with the rendered Markdown content of the page.
 
-## Layout front matter
+## Layout data
 
-Layouts can have also front matters with variables that will be merged with the
-variables from the page. Note that variables defined in the pages have
-precedence over the variables in the layouts. This means that you can set
-default values in the layouts and override them within the pages.
+Layouts can have also data with variables that will be merged with the variables
+from the page. Note that variables defined in the pages have precedence over the
+variables in the layouts. This means that you can set default values in the
+layouts and override them within the pages.
 
 A layout can be wrapped around another layout. Just set a `layout` variable in
-front matter. In this example, the following layout uses the `layouts/main.njk`
+front matter. In the following examples, the layout uses the `layouts/main.njk`
 layout as a wrapper.
 
-```html
+<lume-code>
+
+```html { title="Nunjucks" }
 ---
 title: Default title
 language: en
@@ -78,3 +80,22 @@ layout: layouts/main.njk
   {{ content | safe }}
 </article>
 ```
+
+```js { title="Javascript" }
+export const title = "Default title";
+export const language = "en";
+export const layout = "layouts/main.njk";
+
+export default function ({ language, title, content }) {
+  return `
+  <article lang="${language}">
+    <header>
+      <h1>${title}</h1>
+    </header>
+  
+    ${content}
+  </article>`;
+}
+```
+
+</lume-code>

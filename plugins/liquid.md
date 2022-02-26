@@ -6,15 +6,32 @@ tags:
   - template_engine
 ---
 
-[Liquid](https://liquidjs.com/) is a simple, expressive and safe template
-engine. This format is **disabled by default**, so you have to enable it in the
-`_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import liquid from "lume/plugins/liquid.ts";
 
-site.use(liquid());
+const site = lume();
+
+site.use(liquid({/* your config here */}));
+
+export default site;
 ```
+
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+[Go to liquid options page](https://liquidjs.com/api/interfaces/liquid_options_.liquidoptions.html)
+for more info about specific Liquid settings.
+
+## Description
+
+[Liquid](https://liquidjs.com/) is a simple, expressive and safe template
+engine. This plugins allows to use it to create pages and layouts.
 
 ## Creating layouts
 
@@ -58,15 +75,3 @@ text: "Hello {{ username }}"
 <!-- Render a string -->
 <div>{{ text | liquid: data }}<div>
 ```
-
-## Configuration
-
-This plugin accepts a configuration object. The available options are:
-
-- `extensions`: Array with the extensions of the files that this plugin will
-  load. By default is `[".liquid"]`.
-- `includes`: To configure a different directory to search for the layouts and
-  templates. By default is `_includes`.
-- `options`: A object with options to configure Liquid. See
-  [LiquidOptions](https://liquidjs.com/api/interfaces/liquid_options_.liquidoptions.html)
-  for more info.

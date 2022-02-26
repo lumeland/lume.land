@@ -4,6 +4,8 @@ description: A guide on using Lume as a script runner
 order: 11
 ---
 
+${toc}
+
 Lume includes a simple script runner that you can use to execute commands or
 custom functions. To create a new script, use the function `script()` in your
 `_config.js` file:

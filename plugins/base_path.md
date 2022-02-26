@@ -5,14 +5,38 @@ tags:
   - urls
 ---
 
-The `base_path` plugin fixes all URLs in your HTML documents by prepending the
-path of the [location setting](../getting-started/config-file.md#location). It's
-useful if your site is hosted in a subdirectory and you don't want to use the
-[`url` filter](../core/url.md) everywhere.
+${toc}
 
-This plugin **is disabled by default** so to enable it you have to import and
-use it in the `_config.js`. After that, any element with the attribute `href`,
-`src`, `srcset` and `imagesrcset` will be automatically fixed.
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "lume/mod.ts";
+import basePath from "lume/plugins/base_path.ts";
+
+const site = lume();
+
+site.use(basePath());
+
+export default site;
+```
+
+## Description
+
+The `base_path` plugin fixes all URLs in your HTML documents by prepending the
+path of the [location setting](../docs/configuration/config-file.md#location).
+It's useful if your site is hosted in a subdirectory.
+
+It will search for any element with the attribute `href`, `src`, `srcset` and
+`imagesrcset` in your html pages and fix automatically the urls. Note that the
+plugin only works with html pages, it won't fix css or javascript files.
+
+## Example
+
+Let's say we have configured the location of the website to
+`https://my-site.com/blog/`. This means that all path urls should be inside
+`/blog/` directory.
 
 ```js
 import lume from "lume/mod.ts";
@@ -25,13 +49,13 @@ const site = lume({
 site.use(basePath());
 ```
 
-All **absolute** URLs of your site will be fixed. For example:
+This plugin will fix all absolute paths like this:
 
 ```html
 <a href="/articles/my-second-article/">Go to the second article</a>
 ```
 
-The `base_path` plugin will convert this HTML code to:
+Prepending the `/blog/` prefix:
 
 ```html
 <a href="/blog/articles/my-second-article/">Go to the second article</a>

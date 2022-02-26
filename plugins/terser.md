@@ -6,15 +6,30 @@ tags:
   - javascript
 ---
 
-The Terser plugin minifies `.js` files using the
-[Terser minifier](https://terser.org/). It **is disabled by default** so to
-enable it you have to import and use it in the `_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import terser from "lume/plugins/terser.ts";
 
-site.use(terser());
+const site = lume();
+
+site.use(terser({/* your config here */}));
+
+export default site;
 ```
+
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+
+## Description
+
+The Terser plugin minifies `.js` files using the
+[Terser minifier](https://terser.org/).
 
 To get around compatibility issues of using NodeJS software in Deno, it uses the
 browser version.

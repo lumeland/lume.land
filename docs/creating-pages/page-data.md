@@ -1,14 +1,17 @@
 ---
 title: Page data
-description: Page data with Lume
+description: How to assign custom data to pages
 order: 2
 ---
 
 Pages can contain arbitrary data. In Markdown files, the data is defined in the
 **front matter** block, a block delimited by two triple-dashed lines containing
-[YAML](https://yaml.org/) code. Let's see an example:
+[YAML](https://yaml.org/) code. There are other formats that can have front
+matters or store the data in different ways. Let's see some examples:
 
-```yaml
+<lume-code>
+
+```yaml { title="Markdown" }
 ---
 title: This is the front matter
 url: custom-url.html
@@ -18,14 +21,58 @@ url: custom-url.html
 Here you can write Markdown content
 ```
 
-In this example, the frontmatter contains two variables: `title`, that can be
-used as the page title, and `url`, a variable to customize the output file name
-of the page. Below the front matter you can write the Markdown with the page
-content.
+```yaml { title="YAML" }
+title: This is the front matter
+url: custom-url.html
+content: This is the page content
+```
+
+```yaml { title="Nunjucks" }
+---
+title: This is the front matter
+url: custom-url.html
+---
+
+<h1>{{ title }}</h1>
+This is the content of the page {{ url }}
+```
+
+```json { title="JSON" }
+{
+  "title": "This is the title",
+  "url": "custom-url.html",
+  "content": "This is the page content"
+}
+```
+
+```js { title="Javascript" }
+export const title = "This is the title";
+export const url = "custom-url.html";
+
+export default () => "<p>This is the page content</p>";
+```
+
+```jsx { title="JSX" }
+export const title = "This is the title";
+export const url = "custom-url.html";
+
+export default () => <p>This is the page content</p>;
+```
+
+</lume-code>
+
+In the examples above, all pages contains at least two variables: `title`, that
+can be used as the page title, and `url`, a variable to customize the output
+file name of the page.
+
+The formats that contain a front matter (like Markdown and Nunjucks), the
+content is defined below the front matter. Formats that don't use front matter
+can export the content as the `content` variable (`YAML` and `JSON`) or as a
+default export (Javascript `JSX`).
 
 ## Standard variables
 
-There are some special variables that **lume** can understand:
+There are some special variables that **Lume** can understand:
 
 - `url`: Contains the public URL of the page, useful to create links and
   configure the output filename. If it doesn't exist, it's generated
@@ -41,7 +88,9 @@ There are some special variables that **lume** can understand:
 - `templateEngine`: To override the template engine used to render the page. See
   [Template engines](../core/loaders.md#template-engines)
 
-```yaml
+<lume-code>
+
+```yaml { title="Front matter" }
 ---
 url: /welcome.html
 date: 2021-01-01
@@ -50,3 +99,25 @@ draft: true
 tags: post
 ---
 ```
+
+```js { title="Javascript" }
+export const url = "/welcome.html";
+export const date = new Date('2021-01-01T03:24:00');
+export const layout = "layouts/post.njk";
+export const draft = true;
+export const tags = ["post"];
+```
+
+```js { title="Javascript (alternative)" }
+const data = {
+  url: "/welcome.html",
+  date: new Date('2021-01-01T03:24:00'),
+  layout: "layouts/post.njk",
+  draft: true,
+  tags: ["post"],
+}
+
+export default data;
+```
+
+</lume-code>

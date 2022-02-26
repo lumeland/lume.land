@@ -9,11 +9,13 @@
 }
 
 lume-code {
+  display: block;
+  
   & .hljs {
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
   }
 
-  & > ul {
+  & .lume-code-menu {
     display: flex;
     list-style: none;
     padding: 10px;
@@ -21,8 +23,14 @@ lume-code {
     background: var(--color-background-2);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     column-gap: 10px;
+    overflow-x: auto;
+
+    & li {
+      margin: 0;
+    }
 
     & .button.is-secondary {
+      display: block;
       --background: var(--color-background-2);
       --background-hover: var(--color-background-3);
     }

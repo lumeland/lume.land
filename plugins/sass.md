@@ -6,18 +6,32 @@ tags:
   - styles
 ---
 
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "lume/mod.ts";
+import sass from "lume/plugins/sass.ts";
+
+const site = lume();
+
+site.use(sass({/* your config here */}));
+
+export default site;
+```
+
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+
+## Description
+
 The `SASS` plugin load and transform your `.scss` files using
 [DenoSASS](https://github.com/hironichu/denosass) library. Only `.scss` files
 will be processed (`.sass` files
-[are not supported yet](https://github.com/hironichu/denosass/issues/3)). This
-plugin **is disabled by default** so to enable it you have to import and use it
-in the `_config.js` file:
-
-```js
-import sass from "lume/plugins/sass.ts";
-
-site.use(sass());
-```
+[are not supported yet](https://github.com/hironichu/denosass/issues/3)).
 
 ## Configuration
 

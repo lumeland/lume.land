@@ -5,30 +5,44 @@ tags:
   - urls
 ---
 
-The `relative_urls` plugin converts all URLs in your HTML documents to relative,
-so you can publish the site under different domains and even subdirectories and
-all links will continue working. This plugin **is disabled by default** so to
-enable it you have to import and use it in the `_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import relativeUrls from "lume/plugins/relative_urls.ts";
 
+const site = lume();
+
 site.use(relativeUrls());
+
+export default site;
 ```
 
-All internal URLs of your site will be relative. For example:
+## Description
 
-```html
+The `relative_urls` plugin converts all URLs in your HTML documents to relative,
+so you can publish the same site under different domains or subdirectories or
+protocols like opening the site from the filesystem under `file://`.
+
+The plugin convert all internal URLs of your site will be relative. For example:
+
+<lume-code>
+
+```html {title="Input"}
 <!-- /articles/my-first-article/ -->
 <a href="/articles/my-second-article/">Go to the second article</a>
 ```
 
-The `relative_urls` plugin will convert this HTML code to:
-
-```html
+```html {title="Output"}
 <!-- /articles/my-first-article/ -->
 <a href="../my-second-article/">Go to the second article</a>
 ```
+
+</lume-code>
 
 This plugin doesn't change only the `<a>` elements, but any element with the
 `href` attribute (`link`, `area`) or `src` (`img`, `video`, `audio`, etc).

@@ -4,7 +4,10 @@ description: Using Lume on the command line
 order: 2
 ---
 
-These examples assume that you have installed Lume as the `lume` executable:
+${toc}
+
+The following examples assume that you have installed Lume as the `lume`
+executable:
 
 ## Build the site
 
@@ -33,8 +36,7 @@ automatically your browser with the new changes. The local server use the port
 lume --serve --port=8000
 ```
 
-If you don't want to start a local server but want to watch the changes, use the
-`--watch` (or `-w`) argument:
+To watch changes without starting a local server, use the `--watch` argument:
 
 ```sh
 lume --watch
@@ -42,10 +44,10 @@ lume --watch
 
 ## Create a config file
 
-Lume don't need a config file to work, but is required to change the default
-behavior like adding plugins, ignore files, etc. The
-[config file](config-file.md) is very simple and you can create it by yourself,
-but for convenience you can use the following command.
+Lume don't need a config file to work, but it's useful to change the default
+behavior, adding plugins, ignore files, etc. The [config file](config-file.md)
+is very simple and you can create it by yourself, but for convenience you can
+use the following command.
 
 ```sh
 lume init
@@ -62,14 +64,16 @@ There are other useful commands like:
 
 - `lume -V`: to show the current version.
 - `lume upgrade`: to upgrade Lume to the latest version.
-- `lume run`: to run a custom script.
+- `lume run <SCRIPT>`: to run a custom script.
+- `lume import-map`: to create a
+  [import_map.json](https://deno.land/manual/linking_to_external_code/import_maps)
+  file.
 
 To see all available commands and arguments, run `lume --help`.
 
 ## Passing arguments to Deno
 
-Deno CLI has some options that can be interesting for your site build. For
-example,
+Deno CLI has some useful options that can be interesting for you, like
 [Node.js compatiblity mode](https://deno.land/manual/npm_nodejs/compatibility_mode)
 with `--compat` flag,
 [a configuration file](https://deno.land/manual/getting_started/configuration_file)
@@ -81,6 +85,6 @@ Lume CLI runs Deno CLI with some arguments predefined, but you can customize
 them including the Deno arguments after `--`. For example, if you want to run
 Lume with a custom import map and Node compatibility:
 
-```
+```sh
 lume -- --import-map=import_map.json --compat
 ```

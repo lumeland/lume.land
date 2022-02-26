@@ -1,12 +1,14 @@
 ---
 title: Installation
-description: Installing Lume
+description: How to install and update Lume
 order: 1
 ---
 
-**Lume** requires Deno (v1.18.1 or newer) being installed on your computer. Read
-the [Deno installation](https://deno.land/#installation) instructions if you
-don't have it yet.
+${toc}
+
+**Lume** requires Deno. Read the
+[Deno installation](https://deno.land/#installation) instructions if you don't
+have it yet.
 
 ## Install Lume on your computer
 
@@ -16,15 +18,18 @@ The easiest way to install Lume is by executing the following command:
 deno run -A https://deno.land/x/lume/install.ts
 ```
 
-Now you have the `lume` command.\
-Once installed, you can update Lume to the latest version by running:
+Once installed, you will have the `lume` command.
+
+## Upgrade to the latest version
+
+To update Lume to the latest version, use the command:
 
 ```sh
 lume upgrade
 ```
 
-Note: If you get an error upgrading from an old versions of Lume, just install
-it again.
+If you get an error upgrading from an old versions of Lume, just install it
+again. { .tip }
 
 Use the command `lume upgrade --dev` to install the latest development version
 (the last commit in the [Github repository](https://github.com/lumeland/lume)).

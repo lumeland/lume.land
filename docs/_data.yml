@@ -3,6 +3,8 @@ main_menu: docs
 docs_menu:
   - title: Getting started
     id: getting-started
+  - title: Configuration
+    id: configuration
   - title: Creating pages
     id: creating-pages
   - title: Core

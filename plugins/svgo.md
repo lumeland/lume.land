@@ -6,14 +6,27 @@ tags:
   - images
 ---
 
-The plugin SVG **is disabled by default** so to enable it you have to import and
-use it in the `_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import svgo from "lume/plugins/svgo.ts";
 
-site.use(svgo());
+const site = lume();
+
+site.use(svgo({/* your config here */}));
+
+export default site;
 ```
 
-This plugin load `.svg` files and optimize them using
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+
+## Description
+
+This plugin load all `.svg` files and optimize them using
 [SVGO](https://github.com/svg/svgo)

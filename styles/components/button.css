@@ -26,6 +26,17 @@
     font: var(--text-caption-mini-bold);
     text-transform: uppercase;
   }
+  &.is-big {
+    height: 3em;
+    padding: 0 1em;
+  }
+
+  &.is-primary {
+    --color: var(--color-background-1);
+    --color-hover: var(--color-background-1);
+    --background: var(--color-primary);
+    --background-hover: var(--color-primary-1);
+  }
 
   &.is-secondary {
     --color: var(--color-foreground-1);

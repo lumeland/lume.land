@@ -26,52 +26,65 @@ usage:
       <h1>{{ title }}</h1>
 
       <ul>
-        {% for item in items %}
-        <li>{{ item.name }}</li>
+        {% for group in groups %}
+        <li>{{ group }}</li>
         {% endfor %}
       </ul>
       ```
       ```jsx { title="JSX" }
-      export default function ({ title, items }) {
+      export default function ({ title, groups }) {
         return <>
           <h1>{ title }</h1>
 
           <ul>
-            { items.map((item) => <li>{ item.name }</li>)}
+            { groups.map((group) => <li>{ group }</li>)}
           </ul>
         </>;
       }
       ```
       ```js { title="Javascript" }
-      export default function ({ title, items }) {
+      export default function ({ title, groups }) {
         return `
         <h1>${ title }</h1>
 
         <ul>
-          ${ items.map((item) => `<li>${ item.name }</li>`)}
+          ${ groups.map((item) => `<li>${ group }</li>`)}
         </ul>
         `;
       }
       ```
       ```ts { title="Typescript" }
-      interface Item {
-        name: string;
-      }
-
       interface Data {
         title: string;
-        items: Item[];
+        groups: string[];
       }
 
-      export default function (data: Data): string {
+      export default function ({ title, groups}: Data): string {
         return `
-        <h1>${ data.title }</h1>
+        <h1>${ title }</h1>
 
         <ul>
-          ${ data.items.map((item) => `<li>${ item.name }</li>`)}
+          ${ groups.map((group) => `<li>${ group }</li>`)}
         </ul>
         `;
       }
+      ```
+
+      ```yml { title="Pug" }
+      h1= title
+      ul
+        each group in groups
+          li= group
+      ```
+
+      ```html { title="Eta" }
+      <h1><%= title %></h1>
+
+      <ul>
+      <% for (const group of groups) { %>
+        <li><%= group %></li>
+      <% }) %>
+      </ul>
       ```
 
       </lume-code>
@@ -83,19 +96,39 @@ usage:
       <lume-code>
 
       ```yaml { title="YAML" }
-      title: The team
-      people:
-        - name: Laura Rubio
-        - name: Óscar Otero
+      title: Galician music groups
+      groups:
+        - Tanxugueiras
+        - Mercedes Peón
+        - Baiuca
+        - Terbutalina
       ```
       ```json { title="JSON" }
       {
-        "title": "The team",
-        "people": [
-          { "name": "Laura Rubio" },
-          { "name": "Óscar Otero" }
+        "title": "Galician music groups",
+        "groups": [
+          "Tanxugueiras",
+          "Mercedes Peón",
+          "Baiuca",
+          "Terbutalina"
         ]
       }
+      ```
+      ```js { title="Javascript" }
+      export const title = "Galician music groups";
+      export const groups = [
+        "Tanxugueiras",
+        "Mercedes Peón",
+        "Baiuca",
+        "Terbutalina"
+      ];
+      ```
+      ```ts { title="Typescript + API" }
+      const title = "Galician music groups";
+
+      const response = await fetch("https://example.com/galician-groups.json");
+      const groups = (await response.json()) as string[];
+      export { title, groups };
       ```
 
       </lume-code>
@@ -106,10 +139,20 @@ usage:
     code: |
       <lume-code>
 
-      ```js { title="Process CSS" }
+      ```js { title="Process assets" }
       site.process([".css"], (file) => {
-        const content = file.content;
+        const { content } = file;
+
         file.content = minify(content);
+      })
+      ```
+      ```js { title="Process HTML" }
+      site.process([".html"], (file) => {
+        const { document } = file;
+
+        document.querySelectorAll("h1", (title) => {
+          title.innerText = title.innerText.toUpperCase();
+        })
       })
       ```
 
@@ -124,6 +167,13 @@ usage:
       ```js { title="Script creation" }
       site.script("deploy", "rsync -r _site/ user@host.com:/site");
       ```
+      ```js { title="Events" }
+      site.addEventListener("afterBuild", "deploy");
+      site.addEventListener("afterBuild", () => console.log("site build"));
+      ```
+      ```sh { title="Script execution" }
+      lume run deploy
+      ```
 
       </lume-code>
 
@@ -133,16 +183,28 @@ usage:
     code: |
       <lume-code>
 
-      ```ts { title="_config.ts" }
+      ```ts { title="Default _config.ts file" }
       import lume from "lume/mod.ts";
-      import postcss from "lume/plugins/postcss.ts";
-      import esbuild from "lume/plugins/postcss.ts";
 
       const site = lume();
 
-      site.copy("./statics", ".")
-        .use(postcss())
-        .use(esbuild());
+      export site;
+      ```
+      ```ts { title="With plugins" }
+      import lume from "lume/mod.ts";
+      import parcelCSS from "lume/plugins/parcel_css.ts";
+      import esbuild from "lume/plugins/esbuild.ts";
+      import svgo from "lume/plugins/svgo.ts";
+      import jsx from "lume/plugins/jsx.ts";
+      import date from "lume/plugins/date.ts";
+
+      const site = lume();
+
+      site.use(parcelCSS())
+          .use(esbuild())
+          .use(svgo())
+          .use(jsx())
+          .use(date());
 
       export site;
       ```

@@ -4,10 +4,51 @@ description: Creating shared data that can be used between different pages
 order: 5
 ---
 
-In addition to the variables defined in the front matter of the pages and
-layouts, you can store other data accessible by some or all pages and layouts.
-Shared data must be saved in the `_data` directory or `_data.*` files with
-extensions like `.json`, `.yaml`, `.js` or `.ts`.
+${toc}
+
+In addition to the variables defined in the pages and layouts, you can store
+data accessible by some or all pages and layouts. Shared data must be saved in
+the `_data` directory or `_data.*` files with extensions like `.json`, `.yaml`,
+`.js` or `.ts`.
+
+The formats `.json` and `.yaml` are useful for static data. `.js` and `.ts` fit
+better for dynamic data (for example, data fetch from a API or a database):
+
+<lume-code>
+
+```json { title=JSON }
+{
+  "people": [
+    {
+      "name": "Oscar Otero",
+      "color": "black",
+    },
+    {
+      "name": "Laura Rubio",
+      "color": "blue",
+    },
+  ]
+}
+```
+
+```yml { title=YAML }
+people:
+  - name: Oscar Otero
+    color: black
+
+  - name: Laura Rubio
+    color: blue
+```
+
+```ts { title=Typescript }
+import { db } from "./database.ts";
+
+const people = db.query("select name, color from people");
+
+export { people };
+```
+
+</lume-code>
 
 ## The `_data.*` files
 
@@ -51,7 +92,9 @@ In this example, the data stored in the file `_/data/users.json` can be accessed
 via `users` variable and documents via `documents.one`, `documents.two` and
 `documents.three`. To use this data in your templates:
 
-```html
+<lume-code>
+
+```html {title="Nunjucks"}
 <h2>Documents</h2>
 
 <ul>
@@ -62,6 +105,20 @@ via `users` variable and documents via `documents.one`, `documents.two` and
 {% endfor %}
 </ul>
 ```
+
+```jsx {title="JSX"}
+export default function ({ documents }) {
+  return <>
+    <h2>Documents</h2>
+
+    <ul>
+    { documents.map((doc) => <li>{ doc.title }</li>) }
+    </ul>
+  </>;
+}
+```
+
+</lume-code>
 
 Like `_data.*` files, you can have `_data` directories in different directories
 so they are shared only with all pages in the same directory or subdirectories.

@@ -2,6 +2,7 @@ export default class LumeCode extends HTMLElement {
   connectedCallback() {
     const blocks = this.querySelectorAll(":scope > pre");
     const menu = document.createElement("ul");
+    menu.classList.add("lume-code-menu");
 
     for (const block of blocks) {
       const title = block.querySelector("code").title;

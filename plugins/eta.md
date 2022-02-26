@@ -6,21 +6,37 @@ tags:
   - template_engine
 ---
 
-[Eta](https://eta.js.org/) is a JavaScript template engine with a syntax very
-similar to EJS but with
-[some differences](https://eta.js.org/docs/about/eta-vs-ejs). This format is
-**disabled by default**, so you have to enable it in the `_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import eta from "lume/plugins/eta.ts";
 
-site.use(eta());
+const site = lume();
+
+site.use(eta({/* your config here */}));
+
+export default site;
 ```
+
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+
+## Description
+
+[Eta](https://eta.js.org/) is a JavaScript template engine with a syntax very
+similar to EJS but with
+[some differences](https://eta.js.org/docs/about/eta-vs-ejs). This plugin allows
+to use this template engine to create pages and layouts.
 
 ## Creating layouts
 
-Add a file with `.eta` extension in the `_includes` directory. Use the _front
-matter_ to set data to the template.
+Add a file with `.eta` extension in the `_includes` directory. Use the `layout`
+page variable to use this layout.
 
 ```html
 ---

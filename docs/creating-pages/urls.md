@@ -4,6 +4,8 @@ description: How define the output filename
 order: 8
 ---
 
+${toc}
+
 As said in [Page files](../creating-pages/page-files.md), the output filename is
 generated using the original source file path:
 

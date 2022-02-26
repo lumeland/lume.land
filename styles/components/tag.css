@@ -12,6 +12,7 @@
   height: 2em;
   padding: 0 .6em;
   font: var(--text-caption-mini-bold);
+  letter-spacing: 0;
   border-radius: var(--border-radius-small);
   box-sizing: border-box;
   vertical-align: middle;

@@ -6,20 +6,32 @@ tags:
   - javascript
 ---
 
-The plugin Bundler **is disabled by default** so to enable it you have to import
-and use it in the `_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import bundler from "lume/plugins/bundler.ts";
 
-site.use(bundler());
+const site = lume();
+
+site.use(bundler({/* your config here */}));
+
+export default site;
 ```
 
-It process your Javascript and Typescript files using the
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+
+## Description
+
+This plugin process your Javascript and Typescript files using the
 [bundler provided by Deno](https://deno.land/manual/tools/bundler).
 
-This plugin works differently depending on the configuration. The available
-options are:
+It works differently depending on the configuration. The available options are:
 
 - **extensions**: Array with the extensions of the files that this plugin will
   handle. By default is `[".js", ".ts"]`.
@@ -27,7 +39,9 @@ options are:
   the same place but with the `.map` extension appended. For example, the file
   `my/script.js` will generate the sourcemap file `my/script.js.map`.
 - **options**: The options available in
-  [`Deno.EmitOptions`](https://doc.deno.land/builtin/unstable#Deno.EmitOptions)
+  [`Deno.EmitOptions`](https://doc.deno.land/deno/unstable/~/Deno.EmitOptions)
+
+### Transpile
 
 By default it loads all `.js` and `.ts` files and transpile the Typescript to
 Javascript. To use TSX or JSX, change the file extensions:
@@ -38,22 +52,22 @@ site.use(bundler({
 }));
 ```
 
+### Bundle
+
 If you want to bundle the code and generate only one file, you must do the
 following:
 
 1. Load only the main files that you want to bundle. These files must be visible
    by Lume but not their imports. You can use `site.ignore()` to ignore the
-   other files or save them in a subfolder starting with `_` (for example:
-   `_components`).
-2. Configure the plugin to bundle the code:
+   other files or save them in a subfolder starting with `_`.
+2. Set the `bundle` emit option to "module" or "classic":
 
 ```js
-site.use(bundler({
-  extensions: [".tsx", ".ts"], // Transpile all .tsx and .ts files to typescript
-  options: {
-    bundle: "module", // Include all dependencies in the files
-  },
-}));
+site
+  .ignore("./my_modules") // Ignore the imported files
+  .use(bundler({
+    options: { bundle: "module" },
+  }));
 ```
 
 ## Typescript for the browser

@@ -105,6 +105,7 @@
   border-bottom: solid 1px var(--color-background-2);
   padding-bottom: var(--row-gap-0);
   margin-bottom: var(--row-gap-1);
+  position: relative;
 
   & h1 {
     font: var(--text-heading);
@@ -118,6 +119,13 @@
     color: var(--color-foreground-1);
     margin: .3em 0 0;
   }
+  & .doc-cta {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(50%);
+  }
 }
 .doc-body {
   font: var(--text-body);
@@ -126,7 +134,7 @@
   & h2 {
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
-    margin-top: 1.5em;
+    margin-top: 2.5em;
     margin-bottom: .5em;
 
     &:first-child {
@@ -136,12 +144,16 @@
   & h3 {
     font: var(--text-body-bold);
     letter-spacing: var(--text-body-spacing);
-    margin-top: 1.5em;
+    margin-top: 2.5em;
     margin-bottom: .5em;
 
     &:first-child {
       margin-top: 0;
     }
+  }
+  & .header-anchor {
+    color: inherit;
+    text-decoration: none;
   }
 
   & strong {
@@ -150,10 +162,14 @@
 
   & code {
     background: var(--color-background-1);
-    padding: .1em .5em;
+    padding: 0 .3em;
     border-radius: var(--border-radius-small);
     border: solid 1px var(--color-background-2);
     margin: 0 .2em;
+  }
+
+  & pre code {
+    margin: 0;
   }
 
   & p,
@@ -165,5 +181,9 @@
   & > pre {
     margin-top: 2em;
     margin-bottom: 2em;
+  }
+
+  & dt {
+    font-weight: 600;
   }
 }

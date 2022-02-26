@@ -26,6 +26,7 @@
 
   & svg {
     fill: currentColor;
+    margin-bottom: 15px;
   }
 }
 .navbar-menu {

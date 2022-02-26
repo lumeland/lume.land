@@ -4,8 +4,10 @@ description: A guide on extending Lume with custom processors
 order: 15
 ---
 
-A processor is a function to transform the content of pages and assets. Let's
-see an example of a processor to minify HTML pages:
+${toc}
+
+A processor is a function to transform the content of pages. Let's see an
+example of a processor to minify HTML pages:
 
 ```js
 function minifyHTML(page) {
@@ -22,7 +24,7 @@ site.process([".html"], minifyHTML);
 
 Now, all HTML pages with be minified.
 
-## Access to page data
+## The page data
 
 As you can see in the previous example, the function receives an object with the
 page (or asset). This means that you can access not only to the page content but
@@ -34,6 +36,8 @@ function process(page) {
   page.document; // The parsed HTML code, to use the DOM API
   page.src; // The info about the source file of this page
   page.dest; // The info about the destination of the page
+  page.path; // The path of the output file (without the extension)
+  page.ext; // The extension of the output file
   page.data; // All data available for this page (frontmatter merged with _data)
 }
 ```
@@ -48,6 +52,8 @@ site.process([".html"], (page) => {
   }
 });
 ```
+
+## Using the DOM API
 
 You can use the **DOM API** (provided by
 [deno-dom](https://github.com/b-fuze/deno-dom)) with methods like
@@ -64,32 +70,27 @@ site.process([".html"], (page) => {
 });
 ```
 
-Note: processors are executed just after render the page (with a template
-engine).
+Processors are executed just after render the page (with a template engine).
+{.tip}
 
 ## Process assets
 
-Processors only can transform pages or assets that are previously loaded. So if
-you want to process some assets (like CSS or JavaScript files), make sure that
-they are loaded before. See [Loaders](loaders.md) for more information about how
-to register a new loader. Let's see an example of how to load and transform
-JavaScript files:
+For non-HTML pages (like CSS or JavaScript files), you can use the processors to
+compile css, minify javascript code or minify images.
 
 ```js
-import lume from "lume/mod.ts";
-
-const site = lume();
-
-// Load JavaScript files as plain text:
-site.loadAssets([".js"]);
-
-// Process the JavaScript files
 site.process([".js"], function (page) {
   page.content = myBundler(page.content);
 
-  page.dest.path += ".min"; // Append .min to the filename, so it will be saved as example.min.js
+  // Append .min to the filename
+  // so it will be saved as example.min.js
+  page.path += ".min";
 });
 ```
+
+Make sure the file extension that you want to process is previously loaded. See
+[Loaders](loaders.md) for more information about how to register a new loader.
+{.tip}
 
 ## Preprocess
 
@@ -107,13 +108,17 @@ site.preprocess(
 );
 ```
 
-## Extensions
+## How processors and preprocessors work
 
 Both processors and preprocessors are tied to file extensions (`.html`, `.js`
 etc). To decide if a page must use a registered processor or preprocessor, Lume
 search this extension in the input file (like `.md` or `.njk`) or the output
-file (like `.html` or `.css`). This means that you can create processors to
-modify a page based in the extension of the input file, not only the output.
+file (like `.html` or `.css`).
+
+Another interesting thing is they are executed in the same order they are
+defined. This allows to chain different processors to the same file extension.
+For example: two processors to the `.css` extension, one to compile the code and
+other to minify.
 
 ## Global (pre)processors
 

@@ -6,18 +6,27 @@ tags:
   - urls
 ---
 
-The `slugify_urls` plugin converts all URLs in your HTML documents removing or
-replacing conflictive characteres like accents, spaces, etc. This plugin **is
-disabled by default** so to enable it you have to import and use it in the
-`_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
+
+const site = lume();
 
 site.use(slugifyUrls());
 
 export default site;
 ```
+
+## Description
+
+The `slugify_urls` plugin converts all URLs in your HTML documents removing or
+replacing conflictive characteres like accents, spaces, etc.
 
 Once enabled, all output paths are **automatically slugified:** the spaces are
 replaced with `-`, characters like `ñ` or `á` are replaced by ASCII equivalents
@@ -31,7 +40,10 @@ You can configure the slugifier in your `_config.js` file with the following
 options:
 
 ```js
+import lume from "lume/mod.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
+
+const site = lume();
 
 site.use(slugifyUrls({
   lowercase: true, // Converts all characters to lowercase
@@ -47,4 +59,6 @@ site.use(slugifyUrls({
     "æ": "ae",
     "œ": "oe",
 }));
+
+export default site;
 ```

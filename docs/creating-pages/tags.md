@@ -18,9 +18,9 @@ tags:
 ---
 ```
 
-This post has two tags, one to identify the type of page (post) and other with
-the topic (ssg). To collect all pages tagged as `post` in the layouts, use the
-`search` object:
+This post has two tags, one used to identify the type of page (post) and other
+with the topic (ssg). To collect all pages tagged as `post` in the layouts, use
+the `search` object:
 
 ```html
 <ul>
@@ -44,9 +44,8 @@ with a space:
 ## Tags in `_data`
 
 Unlikely other values, when you define `tags` in a `_data.*` file and in the
-front matter of the pages, the value is not overrided, but aggregated. In other
-words: the page will have all tags defined in `_data.*` **and** in the front
-matter. In the previous example, instead of assigning the "post" tag to all
-pages manually, you could define it in a `_data.*` file in the directory where
-all posts are stored and use the front matter to assign the other tags
-individually.
+pages, the value is not overrided, but aggregated. In other words: the page will
+have all tags defined in `_data.*` **and** in the page. In the previous example,
+instead of assigning the "post" tag to all pages manually, you could define it
+in a `_data.*` file in the directory where all posts are stored and use the
+front matter to assign the other tags individually.

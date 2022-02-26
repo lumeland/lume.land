@@ -6,16 +6,32 @@ tags:
   - template_engine
 ---
 
-[JSX](https://facebook.github.io/jsx/) (or the equivalent TSX for TypeScript) is
-a template language to create and render HTML code, very popular in some
-frameworks, like React. This format **is disabled by default** so you have to
-enable it by using the JSX plugin in the `_config.js` file:
+${toc}
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
+import lume from "lume/mod.ts";
 import jsx from "lume/plugins/jsx.ts";
 
-site.use(jsx());
+const site = lume();
+
+site.use(jsx({/* your config here */}));
+
+export default site;
 ```
+
+To see all configuration options, click in the "See available Options in Deno
+Doc" button above.
+
+## Description
+
+[JSX](https://facebook.github.io/jsx/) (or the equivalent TSX for TypeScript) is
+a template language to create and render HTML code, very popular in some
+frameworks, like React. This plugin add support for `JSX / TSX` to create pages
+and layouts and use `React` for rendering.
 
 ## Creating pages
 
