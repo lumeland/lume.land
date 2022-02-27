@@ -6,7 +6,7 @@ order: 2
 
 Static files are files that don't have to be processed, like images, PDFs,
 videos or audios. So it's better (and faster) to copy these files directly to
-dest directory with the `copy` method:
+the `dest` directory with the `copy()` method:
 
 ```js
 // Copy the "img" directory to _site/img
@@ -18,7 +18,7 @@ site.copy("favicon.ico");
 
 The path is relative to the source directory of your site (configured in `src`)
 and the files and directories are copied as is, maintaining the same directory
-structure. If you want to change the output directory, use the second parameter:
+structure. Use the second argument to change the output directory:
 
 ```js
 // Copy the "img" directory to _site/images

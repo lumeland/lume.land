@@ -1,6 +1,6 @@
 ---
 title: Layouts
-description: Using layouts in Lume
+description: Set the layouts to render the pages
 order: 3
 ---
 

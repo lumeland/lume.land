@@ -1,6 +1,6 @@
 ---
 title: Loaders and engines
-description: Small guide on adding custom loaders to Lume
+description: How to add custom loaders and template engines to Lume.
 order: 14
 ---
 

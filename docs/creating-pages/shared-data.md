@@ -1,6 +1,6 @@
 ---
 title: Shared data
-description: Creating shared data that can be used between different pages
+description: Add custom data that can be shared by all pages in a directory
 order: 5
 ---
 
@@ -59,11 +59,11 @@ in the same directory or subdirectory.
 ├── _data.yaml      # Data shared with all pages
 ├── index.md
 └── documentation
-    └── _data.json  # Shared with pages in this directory or subdirectories
+    └── _data.json  # Shared with pages in this directory and subdirectories
     └── doc1.md
     └── doc2.md
     └── examples
-        └── _data.json  # Shared with pages in this directory or subdirectories
+        └── _data.json  # Shared with pages in this directory and subdirectories
         └── example1.md
         └── example2.md
 ```

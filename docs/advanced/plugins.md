@@ -1,6 +1,6 @@
 ---
 title: Creating plugins
-description: Creating plugins to extend Lume
+description: Guide to create your own plugins to extend Lume
 ---
 
 Lume is an static site generator that can be extended easily adding more

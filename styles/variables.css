@@ -22,9 +22,9 @@
   --text-body-bold: 600 var(--text-body-size)/1.6 var(--font-ui);
   --text-body-spacing: -0.02em;
   --text-caption: 15px/1.6 var(--font-ui);
-  --text-caption-bold: 600 15px/1.5 var(--font-ui);
+  --text-caption-bold: 600 15px/1.6 var(--font-ui);
   --text-caption-mini: 12px/1.6 var(--font-ui);
-  --text-caption-mini-bold: 600 12px/1.5 var(--font-ui);
+  --text-caption-mini-bold: 600 12px/1.6 var(--font-ui);
   --text-code: 16px/1.6 var(--font-code);
 
   /* Colors */

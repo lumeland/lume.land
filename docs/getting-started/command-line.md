@@ -1,6 +1,6 @@
 ---
 title: Command line usage
-description: Using Lume on the command line
+description: Using the command line interface of Lume
 order: 2
 ---
 
@@ -19,6 +19,8 @@ lume
 
 This command will compile your documents to HTML and save them into the dest
 directory (usually `_site`).
+
+### Start a local server
 
 Typically you will want to see the site in your browser so to start a local
 server with your site, add the `--serve` (or `-s`) argument:

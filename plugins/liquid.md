@@ -23,8 +23,8 @@ site.use(liquid({/* your config here */}));
 export default site;
 ```
 
-To see all configuration options, click in the "See available Options in Deno
-Doc" button above.
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume@/plugins/liquid.ts/~/Options).
 [Go to liquid options page](https://liquidjs.com/api/interfaces/liquid_options_.liquidoptions.html)
 for more info about specific Liquid settings.
 

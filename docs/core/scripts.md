@@ -1,6 +1,6 @@
 ---
 title: Scripts
-description: A guide on using Lume as a script runner
+description: A guide to use Lume as a script runner
 order: 11
 ---
 

@@ -228,8 +228,8 @@ directory. For example:
 ## Configuration
 
 If you want to change the default configuration, use the second argument of
-`lume()` function in your `_config.ts` file. See all configuration options by
-clicking in the "See available Options in Deno Doc" button above.
+`lume()` function in your `_config.ts` file. See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume@/plugins/search.ts/~/Options).
 
 ```ts
 import lume from "lume/mod.ts";

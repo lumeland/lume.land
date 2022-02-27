@@ -1,6 +1,6 @@
 ---
 title: Order of operations
-description: How Lume works internally
+description: What does Lume do to build your site?
 ---
 
 This is a high level description of how Lume build your site. When you run

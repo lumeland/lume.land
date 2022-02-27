@@ -68,8 +68,8 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 300px));
-    column-gap: var(--column-gap-2);
+    grid-template-columns: repeat(auto-fill, 280px);
+    column-gap: var(--column-gap-1);
     row-gap: var(--row-gap-0);
     justify-content: center;
   }

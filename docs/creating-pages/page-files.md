@@ -1,6 +1,6 @@
 ---
 title: Page files
-description: How Lume will output files based on the sites file structure
+description: How Lume generate your site based on the source file structure
 order: 1
 ---
 

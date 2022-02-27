@@ -1,6 +1,6 @@
 ---
 title: Update optimization
-description: Techniques to optimize the update
+description: How to optimize the update process in the watch mode.
 ---
 
 As you can see in [the order of operations](./order-of-operations.md) section,

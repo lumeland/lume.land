@@ -1,6 +1,6 @@
 ---
 title: URLs
-description: How define the output filename
+description: Set custom urls to the pages using the `url` variable.
 order: 8
 ---
 

@@ -13,10 +13,8 @@ or **processors**. Some extensions are enabled by default, for example
 `*.njk` files will be loaded, processed and saved as `*.html` files.
 
 You can customize this by adding a `_config.ts` or `_config.js` file, which adds
-to or overrides the default options; for example, to use a different template
-engine or to process different file types with other extensions. Although you
-can code this in the config file, for convenience, **Lume** includes **plugins**
-for common transformations, such as Markdown and Nunjucks.
+to or overrides the default options; for example, to process more file
+extensions.
 
 The config file must be placed in the site's root directory, which you can
 create yourself or with the following command:
@@ -38,8 +36,6 @@ export default site;
 
 ## Basic options
 
-The basic options allows to configure the paths of your site:
-
 ### src
 
 This is the directory of the sources of your site. All files needed to build
@@ -59,8 +55,8 @@ different sites in the same directory. For example: `lume --src=./src` {.tip}
 
 ### dest
 
-This is the folder where generated site will be exported. It's relative to `cwd`
-and by default is `_site`.
+This is the folder to export the generated site. It's relative to `cwd` and by
+default is `_site`.
 
 ```ts
 const site = lume({
@@ -74,8 +70,8 @@ generate the site without override the previous one. For example:
 
 ### location
 
-This is the URL where the site will be published. Useful to generate absolute
-URLs or if your site is published in a subdirectory, for example:
+This is the public URL where the site will be published. Useful to generate
+absolute URLs or if your site is published in a subdirectory, for example:
 `https://username.github.io/project-name/`. The value must be an
 [URL object](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL), for
 example:
@@ -86,11 +82,11 @@ const site = lume({
 });
 ```
 
-This value will be ignored by the local server (started with `lume --serve`),
-that always use `http://localhost:3000` (or the defined port if you change it).
+This value is ignored by the local server (started with `lume --serve`), that
+always use `http://localhost:3000` (or the defined port if you change it).
 
-You can override the value from the CLI with `--location`, very useful if you
-want to build and deploy the site to different locations. For example:
+You can override the value from the CLI with `--location`, useful if you want to
+build and deploy the site to different locations. For example:
 `lume --location=https://my-site.com/blog/` { .tip }
 
 ### dev
@@ -98,23 +94,25 @@ want to build and deploy the site to different locations. For example:
 Set `true` to build the site in development mode (by default is `false`). The
 only difference is that pages with the value `draft: true` will be included in
 the build (otherwise, they would be ignored). This value can be used also to
-load or configure plugins differently according to the environment. For example:
-minify the Javascript code only in production mode.
+load or configure plugins depending on the environment. For example: minify the
+Javascript code only in production mode.
 
 ```ts
 const site = lume({
   dev: true,
 });
+
+if (site.options.dev) {
+  // Custom dev configuration
+}
 ```
 
 You can override the value from the CLI, with `lume --dev` {.tip}
 
 ### prettyUrls
 
-To generate pretty URLs, for example `/about-us/` instead of `/about-us.html`.
-It only has effect on pages without `url` variable
-([see URLs documentation](../creating-pages/urls.md)). It's enabled by default,
-set `false` to disable it.
+By default it's enabled and generate pretty URLs, for example `/about-us/`
+instead of `/about-us.html`. Set `false` to disable it.
 
 ```ts
 const site = lume({
@@ -124,8 +122,8 @@ const site = lume({
 
 ## Server options
 
-The `server` key allows configure the local server. It has the following
-options:
+The `server` key contains the configuration for the local server. It has the
+following options:
 
 ### port
 
@@ -176,7 +174,7 @@ This value can be set from CLI with `--open` or `-o`. For example:
 ## Watcher options
 
 The `watcher` key contains an object to configure the file watcher, used to
-watch file changes after `lume --serve` or `lume --watch`.
+watch file changes with `lume --serve` and `lume --watch`.
 
 - **debounce:** The debounce interval (in milliseconds). By default is `100`.
 - **ignore:** An array of paths that the watcher will ignore.

@@ -23,8 +23,8 @@ site.use(modifyUrls({/* your config here */}));
 export default site;
 ```
 
-To see all configuration options, click in the "See available Options in Deno
-Doc" button above.
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume@/plugins/modify_urls.ts/~/Options).
 
 ## Description
 

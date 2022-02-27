@@ -4,9 +4,8 @@ description: Adding global data to be used anywhere in your site
 order: 4
 ---
 
-You can assign data to your site tht will be available in your pages, layouts
-and components. This is useful to define variables and functions from your
-config file. For example:
+You can assign custom data to your site that will be available in your pages,
+layouts and components from your `_config.ts` file. For example:
 
 ```js
 // Set a variable
@@ -36,3 +35,6 @@ export default function ({ myNumber, randomNumber }) {
 ```
 
 </lume-code>
+
+Note that page data have priority over global data. If a page has a variable
+with the same name as a global variable, the page variable will be used. {.tip}

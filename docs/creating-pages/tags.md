@@ -1,6 +1,6 @@
 ---
 title: Tags
-description: Grouping pages with tags
+description: Use tags to group and organize pages
 order: 7
 ---
 

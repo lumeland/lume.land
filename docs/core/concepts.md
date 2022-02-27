@@ -1,6 +1,6 @@
 ---
 title: General concepts
-description: How Lume works?
+description: About different types of files, plugins and extensions.
 order: 1
 ---
 

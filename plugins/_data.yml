@@ -1,6 +1,5 @@
 layout: layouts/plugin.njk
 main_menu: plugins
-
 tags_info:
   data_format:
     name: Data format
