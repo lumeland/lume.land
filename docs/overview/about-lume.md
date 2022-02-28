@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: About Lume
 description: Welcome to Lume, the static site generator for Deno.
 order: 0
 ---

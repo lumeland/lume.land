@@ -97,6 +97,9 @@
     }
   }
 }
+.doc-navbar > .doc-navbar-section-links a {
+  padding-left: 1em;
+}
 
 .doc-content {
   grid-area: content;

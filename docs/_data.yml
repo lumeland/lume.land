@@ -1,8 +1,8 @@
 layout: layouts/docs.njk
 main_menu: docs
 docs_menu:
-  - title: Getting started
-    id: getting-started
+  - title: Overview
+    id: overview
   - title: Configuration
     id: configuration
   - title: Creating pages

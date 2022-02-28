@@ -28,6 +28,12 @@
     fill: currentColor;
     margin-bottom: 15px;
   }
+
+  & span {
+    @media (max-width: 820px) {
+      display: none;
+    }
+  }
 }
 .navbar-menu {
   list-style: none;
@@ -36,9 +42,21 @@
   display: flex;
   font: var(--text-body-bold);
   letter-spacing: var(--text-body-spacing);
+  overflow-x: auto;
+  flex: 1 1 auto;
+  width: 0;
+
+  @media (max-width: 750px) {
+    font: var(--text-caption-bold);
+    letter-spacing: var(--text-caption-spacing);
+  }
 
   & li {
     display: flex;
+
+    &:first-child {
+      margin-left: auto;
+    }
   }
 
   & a {
@@ -47,6 +65,7 @@
     display: flex;
     align-items: center;
     padding: 0 1em;
+    white-space: nowrap;
 
     &:hover {
       background-image: linear-gradient(var(--color-foreground), var(--color-foreground));
@@ -59,9 +78,5 @@
       color: var(--color-foreground-1);
       background: var(--color-background-1);
     }
-  }
-
-  @media (max-width: 700px) {
-    display: none;
   }
 }
