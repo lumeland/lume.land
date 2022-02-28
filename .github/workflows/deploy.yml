@@ -26,4 +26,4 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "lume"
-          entrypoint: "./main.ts"
+          entrypoint: "./serve.ts"
