@@ -22,4 +22,4 @@ export default site;
 ```
 
 [Go to Plugins](/plugins/) to explore the available plugins and read the
-specific documentation.
+specific documentation. {.tip}

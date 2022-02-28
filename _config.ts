@@ -1,5 +1,5 @@
 import lume from "lume/mod.ts";
-import parcelCSS from "lume/plugins/parcel_css.ts";
+import postcss from "lume/plugins/postcss.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 import inline from "lume/plugins/inline.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
@@ -22,12 +22,12 @@ const site = lume(
 
 site
   .ignore("README.md")
-  .copy("styles/fonts")
   .copy("scripts")
   .copy("img")
+  .copy("fonts")
   .use(codeHighlight())
   .use(inline())
-  .use(parcelCSS())
+  .use(postcss())
   .use(resolveUrls())
   .process([".html"], (page) => {
     const doc = page.document!;

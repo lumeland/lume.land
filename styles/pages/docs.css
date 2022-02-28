@@ -58,10 +58,11 @@
   &::before {
     content: "";
     display: block;
-    opacity: 0.2;
+    opacity: 0.5;
     width: 30px;
     height: 30px;
-    background: url('data:image/svg+xml;charset=UTF-8,<svg width="31" height="31" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg"><path d="M10.337 4.793a1 1 0 0 1 1.32-.083l.094.083 10 10a1 1 0 0 1 .083 1.32l-.083.094-10 10a1 1 0 0 1-1.497-1.32l.083-.094L19.63 15.5l-9.292-9.293a1 1 0 0 1-.083-1.32l.083-.094Z" fill="%23000"/></svg>') no-repeat center center;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg width="31" height="31" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg"><path d="M10.337 4.793a1 1 0 0 1 1.32-.083l.094.083 10 10a1 1 0 0 1 .083 1.32l-.083.094-10 10a1 1 0 0 1-1.497-1.32l.083-.094L19.63 15.5l-9.292-9.293a1 1 0 0 1-.083-1.32l.083-.094Z" fill="%23999"/></svg>') no-repeat center center;
+    background-size: 20px 20px;
     transition: transform var(--animation-duration);
   }
 }
@@ -133,8 +134,10 @@
 .doc-body {
   font: var(--text-body);
   letter-spacing: var(--text-body-spacing);
+  color: var(--color-foreground-1);
 
   & h2 {
+    color: var(--color-foreground);
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
     margin-top: 2.5em;
@@ -145,6 +148,7 @@
     }
   }
   & h3 {
+    color: var(--color-foreground);
     font: var(--text-body-bold);
     letter-spacing: var(--text-body-spacing);
     margin-top: 2.5em;
@@ -191,5 +195,34 @@
 
   & dt {
     font-weight: 600;
+  }
+}
+.doc-footer {
+  padding: var(--row-gap-0) 0;
+  border-top: solid 1px var(--color-background-2);
+  margin-top: var(--row-gap-1);
+}
+.doc-pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: var(--column-gap);
+  font: var(--text-caption);
+  color: var(--color-foreground-1);
+
+  & > li.is-next {
+    margin-left: auto;
+    text-align: right;
+  }
+
+  & a {
+    text-decoration: none;
+    display: block;
+    font: var(--text-body-bold);
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

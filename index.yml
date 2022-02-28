@@ -1,6 +1,6 @@
 layout: layouts/landing.njk
 header:
-  title: A simple & elegant static site generator for Deno
+  title: Lume is a friendly <br>& elegant static site generator for Deno
 
 install:
   title: "Run the following to install:"
@@ -11,7 +11,7 @@ install:
 usage:
   - title: Supports any template engine
     description: |
-      Markdown, Nunjucks, Liquid, JSX, TSX, Javascript, Typescript, Pug, Eta… and it's really easy to add more.
+      Create pages using Markdown, Nunjucks, Liquid, JSX, TSX, Javascript, Typescript, Pug, Eta… or add your own engine easily.
     code: |
       <lume-code>
 
@@ -92,7 +92,7 @@ usage:
 
   - title: Store the data in your favorite format
     description: |
-      JSON, YAML, Javascript & Typescript modules, you name it.
+      Store your data using static formats like JSON or YAML. Use Javascript or Typescript to get the data from a Database or API.
     code: |
       <lume-code>
 
@@ -136,13 +136,13 @@ usage:
   
   - title: Process HTML pages and assets
     description: |
-      Run processors to compile and optimize assets like PostCSS, Parcel CSS, SASS, Terser, esbuild, SVGO… You can also transform HTML code using the DOM API.
+      Processors can compile and optimize assets like CSS or Javascript. They can also transform the HTML code using the DOM API.
     code: |
       <lume-code>
 
       ```js { title="Process assets" }
       site.process([".css"], (file) => {
-        file.content = minify(file.content);
+        file.content = customTransform(file.content);
       })
       ```
       ```js { title="DOM API" }
@@ -157,7 +157,7 @@ usage:
 
   - title: Run your scripts and listen events
     description: |
-      You can create custom scripts like in NPM and execute them when you like.
+      You can create custom scripts like in NPM and execute them from the CLI or after any event.
     code: |
       <lume-code>
 
@@ -176,7 +176,7 @@ usage:
 
   - title: And everything with a clean and intuitive API
     description: |
-      Configure everything in a single _config.ts or _config.js file with plugins and a simple and clean API.
+      Configure your site build in a single _config.ts or _config.js file with plugins and a simple and clean API.
     code: |
       <lume-code>
 
@@ -222,7 +222,7 @@ points:
       description: Build your site in any CI like Github/Gitlab Pages, Deno deploy, Vercel, Netflify… and host it anywhere.
 
     - title: Easy to extend
-      description: You need to implement a different template engine or a specific processor? Lume allows to use whatever you want.
+      description: Want to use a new template engine or use a new javascript compiler? Lume allows to use whatever you want.
 
 examples:
   title: Who is using Lume?

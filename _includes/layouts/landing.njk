@@ -4,7 +4,7 @@ page_css: landing.css
 ---
 <div class="landing">
   <header class="landing-header">
-    <h1>{{ header.title }}</h1>
+    <h1>{{ header.title | safe }}</h1>
 
     <figure class="landing-header-fire">
       {{ comp.fire() | safe }}
@@ -15,7 +15,9 @@ page_css: landing.css
 
       <div class="landing-install-code">
         <pre><code>{{ install.code }}</code></pre>
-        <a class="landing-install-cta" href="{{ install.url }}">Next</a>
+        <a class="landing-install-cta" href="{{ install.url }}">
+          <img src="/icons/arrow-right.svg" inline>
+        </a>
       </div>
 
       {{ install.footer | md | safe }}

@@ -1,4 +1,5 @@
-@import "https://highlightjs.org/static/demo/styles/github.css";
+@import "https://highlightjs.org/static/demo/styles/github.css" (prefers-color-scheme: light);
+@import "https://highlightjs.org/static/demo/styles/github-dark.css" (prefers-color-scheme: dark);
 
 .hljs {
   display: block;

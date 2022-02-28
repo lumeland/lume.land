@@ -1,7 +1,7 @@
 /** Main */
 .landing {
   display: grid;
-  row-gap: var(--row-gap-2);
+  row-gap: var(--row-gap-4);
   column-gap: var(--margin);
   grid-template-columns: 0 minmax(0, var(--max-width)) 0;
   justify-content: space-between;
@@ -14,13 +14,13 @@
 
 /** Header */
 .landing-header {
-  width: min(800px, 100%);
-  justify-self: center;
+  /* width: min(800px, 100%); */
 
   & h1 {
     font: var(--text-display);
     letter-spacing: var(--text-display-spacing);
     margin: 0;
+    max-width: 11em;
   }
 }
 .landing-header-fire {
@@ -61,15 +61,17 @@
   align-items: center;
   transition: background var(--animation-duration);
 
+  & svg,
+  & path {
+    fill: currentColor
+  }
+
   &:hover {
     background: var(--color-primary-1);
   }
 }
 
 /** Usage */
-.landing-usage {
-  margin-top: var(--row-gap-2);
-}
 .landing-usage-text {
   font: var(--text-caption);
   color: var(--color-foreground-1);
@@ -108,13 +110,9 @@
 
 /** Points */
 .landing-points {
+  max-width: var(--max-width);
   display: grid;
-  row-gap: var(--row-gap-2);
-  background-image: url("/img/gradient.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom right;
-  padding: var(--row-gap-2) 0;
+  row-gap: var(--row-gap-1);
 
   & h2 {
     font: var(--text-display);
@@ -131,16 +129,8 @@
     font: var(--text-caption);
     color: var(--color-foreground-1);
     row-gap: var(--row-gap-1);
-    column-gap: var(--column-gap-1);
-    mix-blend-mode: multiply;
-
-    @media (max-width: 649px) {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    @media (min-width: 650px) {
-      grid-template-columns: repeat(2, 275px);
-    }
+    column-gap: var(--column-gap-2);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   & h3 {

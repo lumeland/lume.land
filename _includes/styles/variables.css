@@ -32,12 +32,11 @@
   --color-primary-1: hsl(0deg, 50%, 40%);
   --color-foreground: hsl(0deg, 0%, 20%);
   --color-foreground-1: hsl(0deg, 0%, 40%);
-  --color-background: hsl(0deg, 0%, 100%);
+  --color-background: hsl(200deg, 20%, 100%);
+  --color-background-a: hsla(200deg, 20%, 100%, 0.9);
   --color-background-1: hsl(200deg, 20%, 96%);
   --color-background-2: hsl(200deg, 20%, 92%);
   --color-background-3: hsl(200deg, 20%, 86%);
-  --color-tip: hsl(50deg, 80%, 80%);
-  --color-tip-1: hsl(50deg, 80%, 75%);
 
   /* Borders */
   --border-radius-small: 5px;
@@ -56,6 +55,20 @@
   --row-gap-0: 25px;
   --row-gap-1: clamp(20px, 5vh, 50px);
   --row-gap-2: clamp(40px, 10vh, 100px);
-  --row-gap-3: clamp(60px, 7vh, 150px);
+  --row-gap-3: clamp(60px, 15vh, 150px);
   --row-gap-4: clamp(80px, 20vh, 200px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: hsl(0deg, 70%, 60%);
+    --color-primary-1: hsl(0deg, 50%, 40%);
+    --color-foreground: hsl(0deg, 0%, 100%);
+    --color-foreground-1: hsl(0deg, 0%, 60%);
+    --color-background: hsl(200deg, 20%, 10%);
+    --color-background-a: hsla(200deg, 20%, 10%, 0.9);
+    --color-background-1: hsl(200deg, 20%, 14%);
+    --color-background-2: hsl(200deg, 20%, 18%);
+    --color-background-3: hsl(200deg, 20%, 24%);
+  }
 }

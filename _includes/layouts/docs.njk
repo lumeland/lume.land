@@ -15,5 +15,23 @@ page_css: docs.css
     <div class="doc-body">
       {{ content | safe }}
     </div>
+
+    <footer class="doc-footer">
+      <ul class="doc-pagination">
+        {%- set previousPost = search.previousPage(url, "url^=/docs/", "section_order order title") %}
+        {%- if previousPost %}
+        <li class="is-prev">
+          ← Previous <a href="{{ previousPost.data.url }}" rel="prev">{{ previousPost.data.title }}</a>
+        </li>
+        {% endif %}
+
+        {%- set nextPost = search.nextPage(url, "url^=/docs/", "section_order order title") %}
+        {%- if nextPost %}
+        <li class="is-next">
+          Next → <a href="{{ nextPost.data.url }}" rel="next">{{ nextPost.data.title }}</a>
+        </li>
+        {% endif %}
+      </ul>
+    </footer>
   </main>
 </div>

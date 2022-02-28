@@ -3,11 +3,9 @@ step: 3
 title: Add more data to your page
 ---
 
-In the previous step we have created a layout and use the front matter of the
-markdown page to assign the layout to the page.
-
-This front matter can contain more values. For example, let's define a variable
-named `title`:
+We just defined the variable `layout` in the front matter to assign a layout to
+the page. The front matter can contain all variables you want. For example,
+let's define a variable with the name `title`:
 
 <lume-code>
 
@@ -45,8 +43,8 @@ We can use this variable in the layout to insert its value in the html code:
 
 </lume-code>
 
-The `<title>` tag contain the `{{ title }}` keyword that will be replaced by the
-value of the variable `title` (in our example _"This is my website"_).
+The `<title>` tag contain the `{{ title }}` placeholder that will be replaced by
+the value of the variable `title` (in our example _"This is my website"_).
 
 [Go to Page data documentation](/docs/creating-pages/page-data.md) for more info
 about page data. {.tip}

@@ -3,7 +3,7 @@ step: 1
 title: Create your first page
 ---
 
-## Create the content
+## The page file
 
 Create the file `index.md` and add some content in
 [markdown](https://en.wikipedia.org/wiki/Markdown) format, for example:
@@ -29,10 +29,9 @@ Run `lume --serve` in your terminal. This command does two things:
   as `index.html` in the folder `_site`.
 - The argument `--serve` starts a local web server, so you can see the generated
   site in your browser. Open the url `http://localhost:3000/` in your browser to
-  see your first page.
+  see the page.
 
-The web server includes also a live-reload. This means after any change in the
-markdown file (for example, edit the title), the browser will reload the page to
-see the new updates.
+The web server includes also a live-reload. If you edit the `index.md` file, the
+browser is reloaded automatically to see the new changes. {.tip}
 
 **Congratulations, you have created your first page with Lume! 🎉**

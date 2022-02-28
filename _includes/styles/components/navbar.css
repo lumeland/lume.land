@@ -1,5 +1,5 @@
 .navbar-container {
-  background-color: #fffe;
+  background-color: var(--color-background-a);
   position: sticky;
   top: 0;
   padding: 0 var(--margin);
@@ -11,7 +11,7 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 70px;
   overflow-x: auto;
 }
 .navbar-logo {
@@ -21,12 +21,11 @@
   color: var(--color-foreground);
   column-gap: 10px;
   text-decoration: none;
-  font: var(--text-title);
+  font: var(--text-body-bold);
   letter-spacing: var(--text-title-spacing);
 
   & svg {
-    fill: currentColor;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   & span {
@@ -40,16 +39,11 @@
   margin: 0;
   padding: 0;
   display: flex;
-  font: var(--text-body-bold);
-  letter-spacing: var(--text-body-spacing);
+  font: var(--text-caption-bold);
+  letter-spacing: var(--text-caption-spacing);
   overflow-x: auto;
   flex: 1 1 auto;
   width: 0;
-
-  @media (max-width: 750px) {
-    font: var(--text-caption-bold);
-    letter-spacing: var(--text-caption-spacing);
-  }
 
   & li {
     display: flex;
