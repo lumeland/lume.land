@@ -15,7 +15,7 @@ page_css: landing.css
 
       <div class="landing-install-code">
         <pre><code>{{ install.code }}</code></pre>
-        <a class="landing-install-cta" href="#">Next</a>
+        <a class="landing-install-cta" href="{{ install.url }}">Next</a>
       </div>
 
       {{ install.footer | md | safe }}
