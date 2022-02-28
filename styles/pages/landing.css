@@ -14,7 +14,8 @@
 
 /** Header */
 .landing-header {
-  /* width: min(800px, 100%); */
+  width: min(800px, 100%);
+  margin: auto;
 
   & h1 {
     font: var(--text-display);

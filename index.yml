@@ -1,4 +1,5 @@
 layout: layouts/landing.njk
+title: Lume, the static site generator for Deno
 header:
   title: Lume is a friendly <br>& elegant static site generator for Deno
 
@@ -176,7 +177,7 @@ usage:
 
   - title: And everything with a clean and intuitive API
     description: |
-      Configure your site build in a single _config.ts or _config.js file with plugins and a simple and clean API.
+      Configure your site build in a single _config.ts or _config.js file [with plugins](/plugins/) and a simple and clean API.
     code: |
       <lume-code>
 
@@ -232,52 +233,52 @@ examples:
   sites:
     - title: Oak Studio
       url: https://oakstudio.co/
-      img: /img/showcase/oak.png
+      img: /img/showcase/oak.webp
     - title: Johan's website & blog
       url: https://johan.im/
-      img: /img/showcase/johan.png
+      img: /img/showcase/johan.webp
     - title: Jurnal Kusaeni
       url: https://kusaeni.com/
-      img: /img/showcase/kusaeni.png
+      img: /img/showcase/kusaeni.webp
     - title: Notion Enhancer documentation
       url: https://notion-enhancer.github.io/
-      img: /img/showcase/notion-enhancer.png
+      img: /img/showcase/notion-enhancer.webp
     - title: OAK Studio
       url: https://oakstudio.co/
-      img: /img/showcase/oak.png
+      img: /img/showcase/oak.webp
     - title: Tarugo21
       url: https://www.tarugoconf.com/
-      img: /img/showcase/tarugo21.png
+      img: /img/showcase/tarugo21.webp
     - title: Tobias Schmidt
       url: https://tobiasschmidt.me/
-      img: /img/showcase/tobias.png
+      img: /img/showcase/tobias.webp
     - title: Velociraptor documentation
       url: https://velociraptor.run/
-      img: /img/showcase/velociraptor.png
+      img: /img/showcase/velociraptor.webp
 
 support:
   title: Lume is supported by
   sponsors:
     - name: Óscar Otero (creator & maintainer)
       url: https://oscarotero.com/
-      img: /img/avatars/oscar.jpg
+      img: /img/avatars/oscar.webp
     - name: Androw Nash
       url: https://audrow.github.io/
-      img: /img/avatars/audrow.jpg
+      img: /img/avatars/audrow.webp
       amount: 5
       recurrent: true
     - name: Yuto Oguchi
       url: https://aiotter.com/
-      img: /img/avatars/aiotter.jpg
+      img: /img/avatars/aiotter.webp
       amount: 1
       recurrent: true
     - name: Tobias Schmidt
       url: https://tobiasschmidt.me/
-      img: /img/avatars/tobias.png
+      img: /img/avatars/tobias.webp
       amount: 20
     - name: Yohan Brook
       url: https://johan.im/
-      img: /img/avatars/johan.jpg
+      img: /img/avatars/johan.webp
       amount: 20
 
   contribute:

@@ -25,24 +25,24 @@ sites:
     code: https://github.com/lumeland/react-todo
 
   - title: Lume
-    img: /img/showcase/lume.png
+    img: /img/showcase/lume.webp
     url: https://lume.land/
     description: This web site
     code: https://github.com/lumeland/lume.land
 
   - title: NM type
-    img: /img/showcase/nmtype.png
+    img: /img/showcase/nmtype.webp
     url: https://nmtype.com/
     description: A type foundry based in Sweden and Spain.
 
   - title: Tarugo 21
-    img: /img/showcase/tarugo21.png
+    img: /img/showcase/tarugo21.webp
     url: https://tarugo21.netlify.app/
     description: An event about technology and business in Madrid, Spain -
     code: https://github.com/tarugoconf/tarugo21
 
   - title: OAK Studio
-    img: /img/showcase/oak.png
+    img: /img/showcase/oak.webp
     url: https://oakstudio.co/
     description: A creative agency based in Bartlesville, Oklahoma
     code: https://github.com/bradeneast/oakstudio.co
@@ -63,13 +63,13 @@ sites:
     code: https://github.com/laura-rubio/ensino
 
   - title: Tobias Schmidt
-    img: /img/showcase/tobias.png
+    img: /img/showcase/tobias.webp
     url: https://tobiasschmidt.me/
     description: The personal blog of Tobias Schmidt
     code: https://github.com/tobiasschmidt89/tobiasschmidt.me
 
   - title: Kusaeni
-    img: /img/showcase/kusaeni.png
+    img: /img/showcase/kusaeni.webp
     url: https://kusaeni.com/
     description: The personal blog of Kusaeni
     code: https://notabug.org/kuspoes/kusaicom
@@ -85,19 +85,19 @@ sites:
     code: https://github.com/fserb/bkc
 
   - title: DenissB
-    img: /img/showcase/denissb.png
+    img: /img/showcase/denissb.webp
     url: https://denissb.github.io/
     description: A personal website of a web developer
     code: https://github.com/denissb/denissb.github.io
 
   - title: Notion enhancer
-    img: /img/showcase/notion-enhancer.png
+    img: /img/showcase/notion-enhancer.webp
     url: https://notion-enhancer.github.io/
     description: An enhancer/customiser for the all-in-one productivity workspace notion.so
     code: https://github.com/notion-enhancer/notion-enhancer.github.io
 
   - title: Johan Brook
-    img: /img/showcase/johan.png
+    img: /img/showcase/johan.webp
     url: https://johanbrook.com
     description: The personal website and blog of Johan
     code: https://github.com/johanbrook/johanbrook.com
@@ -108,13 +108,13 @@ sites:
     code: https://github.com/scarf005/scarf005.github.com
 
   - title: aiotter
-    img: /img/showcase/aiotter.png
+    img: /img/showcase/aiotter.webp
     url: https://aiotter.com/
     description: The technical blog of Yuto Oguchi
     code: https://github.com/aiotter/blog
 
   - title: Velociraptor
-    img: /img/showcase/velociraptor.png
+    img: /img/showcase/velociraptor.webp
     url: https://velociraptor.run/
     description: The documentation of Velociraptor script runner for Deno
     code: https://github.com/jurassiscripts/velociraptor-dot-run

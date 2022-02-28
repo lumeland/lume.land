@@ -3,8 +3,10 @@ import postcss from "lume/plugins/postcss.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 import inline from "lume/plugins/inline.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
+import esbuild from "lume/plugins/esbuild.ts";
 import anchor from "https://jspm.dev/markdown-it-anchor@8.0.0";
 import toc from "https://jspm.dev/markdown-it-toc-done-right@4.2.0";
+import imagick from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/imagick/imagick.ts";
 
 const markdown = {
   plugins: [
@@ -22,13 +24,16 @@ const site = lume(
 
 site
   .ignore("README.md")
-  .copy("scripts")
-  .copy("img")
-  .copy("fonts")
+  .ignore("scripts")
+  .copy("static", ".")
   .use(codeHighlight())
   .use(inline())
   .use(postcss())
+  .use(esbuild({
+    extensions: [".js"],
+  }))
   .use(resolveUrls())
+  .use(imagick())
   .process([".html"], (page) => {
     const doc = page.document!;
     const toc = doc.querySelector(".toc");
