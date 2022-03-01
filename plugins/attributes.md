@@ -48,7 +48,7 @@ link:
 <a {{ link | attr | safe }}>Hello</a>
 ```
 
-```js { title="Javascript" }
+```js { title="JavaScript" }
 const link = {
   title: "Go to GitHub"
   href: "https://github.com"
@@ -80,7 +80,7 @@ styles:
 <a class="{{ styles | class }}">Hello</a>
 ```
 
-```js { title="Javascript" }
+```js { title="JavaScript" }
 const styles = [
   "btn",
   "btn-primary",

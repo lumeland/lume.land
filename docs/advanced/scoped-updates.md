@@ -23,8 +23,8 @@ increase the duration of the update process. There's a way to customize this
 behavior using **Scoped Updates**. It's a way to define different "scopes"
 (collections of independent files whose changes won't affect to other pages).
 
-For example, let's say that you're building a website that has some javascript
-and css files, and these files are totally independent, meaning that:
+For example, let's say that you're building a website that has some JavaScript
+and CSS files, and these files are totally independent, meaning that:
 
 - Changes in any CSS file only affects to other CSS files.
 - Changes in any JS/TS file only affects to other JS/TS files.

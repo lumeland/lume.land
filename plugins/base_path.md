@@ -30,7 +30,7 @@ It's useful if your site is hosted in a subdirectory.
 
 It will search for any element with the attribute `href`, `src`, `srcset` and
 `imagesrcset` in your html pages and fix automatically the urls. Note that the
-plugin only works with html pages, it won't fix css or javascript files.
+plugin only works with html pages, it won't fix css or JavaScript files.
 
 ## Example
 

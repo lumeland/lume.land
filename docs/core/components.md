@@ -11,8 +11,8 @@ template engines like Nunjucks, Pug or Liquid have ways to reuse codes (like
 includes, macros, etc). The Lume components have the following advantages:
 
 - They are template engine agnostic. For example, you can create your components
-  in JSX or Javascript and use them in Nunjucks.
-- They generate not only the HTML code but also CSS and Javascript code needed.
+  in JSX or JavaScript and use them in Nunjucks.
+- They generate not only the HTML code but also CSS and JavaScript code needed.
 - They are available everywhere, no need to import them manually.
 
 ## Create your own components
@@ -39,7 +39,7 @@ example, we can render the button component with the `comp.button()` function:
 
 Note that the component accepts an object with the properties that we want to
 pass to the component. This component is available in any other template engine.
-For example Javascript:
+For example JavaScript:
 
 ```js
 export default function ({ comp }) {
@@ -78,7 +78,7 @@ css: |
 <button class="button">{{ text }}</button>
 ```
 
-This css code will be exported in your `dest` folder in the `/components.css`
+This CSS code will be exported in your `dest` folder in the `/components.css`
 file together with the CSS code of other used components. Note that if the
 component is not used, the CSS code won't be exported. This is an interesting
 feature that allows to have a library of many components and only export the CSS

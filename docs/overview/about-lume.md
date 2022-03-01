@@ -12,7 +12,7 @@ It's inspired by other static site generators, such as
 [Eleventy](https://www.11ty.dev/), but it's easier to use and configure, besides
 being super flexible.
 
-- Supports **multiple file formats**, like `markdown`, `yaml`, `javascript`,
+- Supports **multiple file formats**, like `markdown`, `yaml`, `JavaScript`,
   `typescript`, `jsx` and `nunjucks`, and it's easy to extend with more.
 - You can hook **processors** to manipulate `html` and assets, like `css` or
   `js`.

@@ -95,7 +95,7 @@ Set `true` to build the site in development mode (by default is `false`). The
 only difference is that pages with the value `draft: true` will be included in
 the build (otherwise, they would be ignored). This value can be used also to
 load or configure plugins depending on the environment. For example: minify the
-Javascript code only in production mode.
+JavaScript code only in production mode.
 
 ```ts
 const site = lume({

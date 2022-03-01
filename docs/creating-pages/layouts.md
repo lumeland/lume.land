@@ -81,7 +81,7 @@ layout: layouts/main.njk
 </article>
 ```
 
-```js { title="Javascript" }
+```js { title="JavaScript" }
 export const title = "Default title";
 export const language = "en";
 export const layout = "layouts/main.njk";

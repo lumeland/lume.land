@@ -26,7 +26,7 @@ Now, this data is available in your pages, layouts and components:
 <p>Random number: {{ randomNumber() }}</p>
 ```
 
-```js { title="Javascript" }
+```js { title="JavaScript" }
 export default function ({ myNumber, randomNumber }) {
   return `
   <p>My number: ${ myNumber }</p>

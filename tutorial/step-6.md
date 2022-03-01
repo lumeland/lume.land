@@ -14,10 +14,10 @@ the `lume init` command that will create a config file in a interactive way.
 
 After running `lume init`, Lume will ask you some questions:
 
-### Use Typescript for the configuration file
+### Use TypeScript for the configuration file
 
-Type `y` (yes) to create the configuration file in Typescript (it will create
-the file `config.ts`), or `n` (no, by default) to create it in Javascript.
+Type `y` (yes) to create the configuration file in TypeScript (it will create
+the file `config.ts`), or `n` (no, by default) to create it in JavaScript.
 
 ### Import style
 
@@ -57,7 +57,7 @@ Make sure you have the
 [Deno extension installed](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).
 
 After complete all steps, Lume will create the `_config.ts` (or `_config.js` if
-you choose Javascript) file in your project folder. Depending on your choices,
+you choose JavaScript) file in your project folder. Depending on your choices,
 the content can vary, but with the default options it should looks like this:
 
 <lume-code>

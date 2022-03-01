@@ -76,7 +76,7 @@ Processors are executed just after render the page (with a template engine).
 ## Process assets
 
 For non-HTML pages (like CSS or JavaScript files), you can use the processors to
-compile css, minify javascript code or minify images.
+compile CSS, minify JavaScript code or minify images.
 
 ```js
 site.process([".js"], function (page) {

@@ -60,8 +60,8 @@ appended to the file name.
 
 ## The `terser` filter
 
-In addition to the javascript loader and processor, this plugin register also
-the `terser` filter so you can transform javascript code in the template
+In addition to the JavaScript loader and processor, this plugin register also
+the `terser` filter so you can transform JavaScript code in the template
 engines. For example:
 
 ```html

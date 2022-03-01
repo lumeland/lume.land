@@ -17,7 +17,7 @@ This plugin is installed by default. 🎉
 ## Description
 
 Lume is built on top of Deno so it has native support for JavaScript and
-TypeScript modules. This plugin allows to use Javascript and Typescript to
+TypeScript modules. This plugin allows to use JavaScript and TypeScript to
 create pages, layouts and data files.
 
 ## Configuration
@@ -63,7 +63,7 @@ export const users = [
 
 To create pages using JavaScript or TypeScript, create a file with the extension
 `.tmpl.js` or `.tmpl.ts` (the `.tmpl` subextension is required to differentiate
-Javascript/Typescript files that generate HTML pages from other JavaScript files
+JavaScript/TypeScript files that generate HTML pages from other JavaScript files
 to be executed in the browser). To export the variables, use named exports and
 to export the main content you can use the default export.
 

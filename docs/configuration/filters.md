@@ -26,7 +26,7 @@ Now, use it in your templates:
 <h1>{{ title | uppercase }}</h1>
 ```
 
-```js{title=Javascript}
+```js{title=JavaScript}
 export default function (data, filters) {
   const text = filters.uppercase(data.title);
 

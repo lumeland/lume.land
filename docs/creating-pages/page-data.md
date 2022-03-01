@@ -45,7 +45,7 @@ This is the content of the page {{ url }}
 }
 ```
 
-```js { title="Javascript" }
+```js { title="JavaScript" }
 export const title = "This is the title";
 export const url = "custom-url.html";
 
@@ -68,7 +68,7 @@ file name of the page.
 The formats that contain a front matter (like Markdown and Nunjucks), the
 content is defined below the front matter. Formats that don't use front matter
 can export the content as the `content` variable (`YAML` and `JSON`) or as a
-default export (Javascript `JSX`).
+default export (JavaScript `JSX`).
 
 ## Standard variables
 
@@ -100,7 +100,7 @@ tags: post
 ---
 ```
 
-```js { title="Javascript" }
+```js { title="JavaScript" }
 export const url = "/welcome.html";
 export const date = new Date('2021-01-01T03:24:00');
 export const layout = "layouts/post.njk";
@@ -108,7 +108,7 @@ export const draft = true;
 export const tags = ["post"];
 ```
 
-```js { title="Javascript (alternative)" }
+```js { title="JavaScript (alternative)" }
 const data = {
   url: "/welcome.html",
   date: new Date('2021-01-01T03:24:00'),

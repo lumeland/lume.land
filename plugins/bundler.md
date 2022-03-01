@@ -28,7 +28,7 @@ See
 
 ## Description
 
-This plugin process your Javascript and Typescript files using the
+This plugin process your JavaScript and TypeScript files using the
 [bundler provided by Deno](https://deno.land/manual/tools/bundler).
 
 It works differently depending on the configuration. The available options are:
@@ -43,8 +43,8 @@ It works differently depending on the configuration. The available options are:
 
 ### Transpile
 
-By default it loads all `.js` and `.ts` files and transpile the Typescript to
-Javascript. To use TSX or JSX, change the file extensions:
+By default it loads all `.js` and `.ts` files and transpile the TypeScript to
+JavaScript. To use TSX or JSX, change the file extensions:
 
 ```js
 site.use(bundler({
@@ -70,7 +70,7 @@ site
   }));
 ```
 
-## Typescript for the browser
+## TypeScript for the browser
 
 When bundling `.ts` files to run in the browser, use a triple slash reference to
 include helpful libraries, like `dom` in your scripts. For example,

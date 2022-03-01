@@ -40,7 +40,7 @@ people:
     color: blue
 ```
 
-```ts { title=Typescript }
+```ts { title=TypeScript }
 import { db } from "./database.ts";
 
 const people = db.query("select name, color from people");

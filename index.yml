@@ -12,7 +12,7 @@ install:
 usage:
   - title: Supports any template engine
     description: |
-      Create pages using Markdown, Nunjucks, Liquid, JSX, TSX, Javascript, Typescript, Pug, Eta… or add your own engine easily.
+      Create pages using Markdown, Nunjucks, Liquid, JSX, TSX, JavaScript, TypeScript, Pug, Eta… or add your own engine easily.
     code: |
       <lume-code>
 
@@ -44,7 +44,7 @@ usage:
         </>;
       }
       ```
-      ```js { title="Javascript" }
+      ```js { title="JavaScript" }
       export default function ({ title, items }) {
         return `
         <h1>${ title }</h1>
@@ -55,7 +55,7 @@ usage:
         `;
       }
       ```
-      ```ts { title="Typescript" }
+      ```ts { title="TypeScript" }
       interface Data {
         title: string;
         items: string[];
@@ -93,7 +93,7 @@ usage:
 
   - title: Store the data in your favorite format
     description: |
-      Store your data using static formats like JSON or YAML. Use Javascript or Typescript to get the data from a Database or API.
+      Store your data using static formats like JSON or YAML. Use JavaScript or TypeScript to get the data from a Database or API.
     code: |
       <lume-code>
 
@@ -116,7 +116,7 @@ usage:
         ]
       }
       ```
-      ```js { title="Javascript" }
+      ```js { title="JavaScript" }
       export const title = "Galician municipalities";
       export const items = [
         "O Pino",
@@ -125,7 +125,7 @@ usage:
         "Cedeira"
       ];
       ```
-      ```ts { title="Typescript + API" }
+      ```ts { title="TypeScript + API" }
       const title = "Galician municipalities";
 
       const response = await fetch("https://example.com/galician-minicipalities.json");
@@ -137,7 +137,7 @@ usage:
   
   - title: Process HTML pages and assets
     description: |
-      Processors can compile and optimize assets like CSS or Javascript. They can also transform the HTML code using the DOM API.
+      Processors can compile and optimize assets like CSS or JavaScript. They can also transform the HTML code using the DOM API.
     code: |
       <lume-code>
 
@@ -156,7 +156,7 @@ usage:
 
       </lume-code>
 
-  - title: Run your scripts and listen events
+  - title: Run your scripts and listen for events
     description: |
       You can create custom scripts like in NPM and execute them from the CLI or after any event.
     code: |
@@ -217,13 +217,13 @@ points:
       description: Forget about managing thousands of packages in node_modules or complex bundlers. Lume only installs what you need. Clean, fast and secure.
 
     - title: Zero runtime overhead
-      description: Some SSG ships their own client javascript to load and hydrate pages.
+      description: Some SSG ships their own client JavaScript to load and hydrate pages.
 
     - title: Deploy anywhere
       description: Build your site in any CI like Github/Gitlab Pages, Deno deploy, Vercel, Netflify… and host it anywhere.
 
     - title: Easy to extend
-      description: Want to use a new template engine or use a new javascript compiler? Lume allows to use whatever you want.
+      description: Want to use a new template engine or use a new JavaScript compiler? Lume allows to use whatever you want.
 
 examples:
   title: Who is using Lume?

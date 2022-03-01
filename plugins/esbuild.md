@@ -28,7 +28,7 @@ See
 
 ## Description
 
-The plugin `esbuild` process your Javascript and Typescript files using
+The plugin `esbuild` process your JavaScript and TypeScript files using
 [esbuild bundler](https://esbuild.github.io/).
 
 The available options are:
