@@ -21,7 +21,7 @@
     font: var(--text-display);
     letter-spacing: var(--text-display-spacing);
     margin: 0;
-    max-width: 11em;
+    max-width: 8em;
   }
 }
 .landing-header-fire {
@@ -37,6 +37,7 @@
 
   & p {
     margin: 0;
+    display: inline-block;
   }
   & img {
     vertical-align: middle;

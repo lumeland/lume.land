@@ -7,7 +7,7 @@
   --font-code: 'JetBrains Mono';
 
   /* Text styles */
-  --text-display-size: clamp(30px, 12vw, 75px);
+  --text-display-size: clamp(30px, 10vw, 75px);
   --text-display-height: 0.95;
   --text-display: 700 var(--text-display-size)/var(--text-display-height) var(--font-display);
   --text-display-spacing: -0.025em;
