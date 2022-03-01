@@ -65,7 +65,7 @@ layout as a wrapper.
 
 <lume-code>
 
-```html { title="Nunjucks" }
+```html { title=".njk" }
 ---
 title: Default title
 language: en
@@ -81,7 +81,7 @@ layout: layouts/main.njk
 </article>
 ```
 
-```js { title="JavaScript" }
+```js { title=".js" }
 export const title = "Default title";
 export const language = "en";
 export const layout = "layouts/main.njk";

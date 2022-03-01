@@ -11,7 +11,7 @@ matters or store the data in different ways. Let's see some examples:
 
 <lume-code>
 
-```yaml { title="Markdown" }
+```yaml { title=".md" }
 ---
 title: This is the front matter
 url: custom-url.html
@@ -21,13 +21,13 @@ url: custom-url.html
 Here you can write Markdown content
 ```
 
-```yaml { title="YAML" }
+```yaml { title=".yml" }
 title: This is the front matter
 url: custom-url.html
 content: This is the page content
 ```
 
-```yaml { title="Nunjucks" }
+```yaml { title=".njk" }
 ---
 title: This is the front matter
 url: custom-url.html
@@ -37,7 +37,7 @@ url: custom-url.html
 This is the content of the page {{ url }}
 ```
 
-```json { title="JSON" }
+```json { title=".json" }
 {
   "title": "This is the title",
   "url": "custom-url.html",
@@ -45,14 +45,14 @@ This is the content of the page {{ url }}
 }
 ```
 
-```js { title="JavaScript" }
+```js { title=".tmpl.js" }
 export const title = "This is the title";
 export const url = "custom-url.html";
 
 export default () => "<p>This is the page content</p>";
 ```
 
-```jsx { title="JSX" }
+```jsx { title=".jsx" }
 export const title = "This is the title";
 export const url = "custom-url.html";
 

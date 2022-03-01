@@ -69,7 +69,7 @@ more easy to apply them in the templates:
 
 <lume-code>
 
-```js {title="Configuration"}
+```js {title="_config.ts"}
 site.use(date({
   formats: {
     "MY_FORMAT": "MM-dd-yyyy",
@@ -77,7 +77,7 @@ site.use(date({
 }));
 ```
 
-```html {title="Nunjucks"}
+```html {title=".njk"}
 <time>{{ createdAt | date('MY_FORMAT') }}</time>
 ```
 

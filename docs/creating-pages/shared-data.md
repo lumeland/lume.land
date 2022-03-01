@@ -16,7 +16,7 @@ better for dynamic data (for example, data fetch from a API or a database):
 
 <lume-code>
 
-```json { title=JSON }
+```json { title=.json }
 {
   "people": [
     {
@@ -31,7 +31,7 @@ better for dynamic data (for example, data fetch from a API or a database):
 }
 ```
 
-```yml { title=YAML }
+```yml { title=.yml }
 people:
   - name: Oscar Otero
     color: black
@@ -40,7 +40,7 @@ people:
     color: blue
 ```
 
-```ts { title=TypeScript }
+```ts { title=.ts }
 import { db } from "./database.ts";
 
 const people = db.query("select name, color from people");
@@ -94,7 +94,7 @@ via `users` variable and documents via `documents.one`, `documents.two` and
 
 <lume-code>
 
-```html {title="Nunjucks"}
+```html {title=".njk"}
 <h2>Documents</h2>
 
 <ul>
@@ -106,7 +106,7 @@ via `users` variable and documents via `documents.one`, `documents.two` and
 </ul>
 ```
 
-```jsx {title="JSX"}
+```jsx {title=".jsx"}
 export default function ({ documents }) {
   return <>
     <h2>Documents</h2>

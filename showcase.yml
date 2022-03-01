@@ -5,7 +5,7 @@ main_menu: showcase
 description: |
   This is a list of sites built with Lume that have the source code publicly
   visible. If you want to include your project in this list, please
-  [edit this page](https://github.com/lumeland/lumeland.github.io/edit/master/getting-started/examples.md)
+  [edit this page](https://github.com/lumeland/lume.land/edit/main/showcase.yml)
   and send me a pull request.
 
 sites:
