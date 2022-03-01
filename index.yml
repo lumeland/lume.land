@@ -29,6 +29,15 @@ usage:
 
       <ul>
         {% for item in items %}
+        <li>{{ item | safe }}</li>
+        {% endfor %}
+      </ul>
+      ```
+      ```html { title=".liquid" }
+      <h1>{{ title }}</h1>
+
+      <ul>
+        {% for item in items %}
         <li>{{ item }}</li>
         {% endfor %}
       </ul>
@@ -44,7 +53,7 @@ usage:
         </>;
       }
       ```
-      ```js { title=".js" }
+      ```js { title=".tmpl.js" }
       export default function ({ title, items }) {
         return `
         <h1>${ title }</h1>
@@ -55,7 +64,7 @@ usage:
         `;
       }
       ```
-      ```ts { title=".ts" }
+      ```ts { title=".tmpl.ts" }
       interface Data {
         title: string;
         items: string[];
@@ -285,6 +294,7 @@ support:
     title: How to contribute?
     description: |
       - Star the [repo in GitHub](https://github.com/lumeland/lume).
+      - Vote [in Product Hunt](https://www.producthunt.com/posts/lume-2).
       - Support this project on [Open collective](https://opencollective.com/lume).
       - Fork the repo and [work on an issue](https://github.com/lumeland/lume/issues).
       - Help to [improve the docs](https://github.com/lumeland/lumeland.github.io).

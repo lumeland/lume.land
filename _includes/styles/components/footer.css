@@ -22,7 +22,8 @@
   list-style: none;
   padding: 10px 0;
   display: flex;
-  column-gap: var(--column-gap-0);
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
   border-bottom: solid 1px var(--color-background-3);
 

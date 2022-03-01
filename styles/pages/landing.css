@@ -200,6 +200,7 @@
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
     grid-column: 1 / -1;
+    grid-row: 1;
   }
 
   @media (min-width: 650px) {
@@ -214,6 +215,9 @@
   list-style: none;
   padding: 0;
   gap: var(--column-gap-0);
+  grid-row: 2;
+  margin-top: 0;
+  margin-bottom: var(--row-gap-1);
 
   & img {
     border-radius: 50%;
@@ -221,6 +225,12 @@
   }
 }
 .landing-support-contribute {
+  @media (min-width: 650px) {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: center;
+  }
+
   & h3 {
     font: var(--text-body-bold);
     letter-spacing: var(--text-body-spacing);
