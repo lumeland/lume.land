@@ -241,31 +241,6 @@ examples:
   more:
     text: See more examples
     href: /showcase/
-  sites:
-    - title: Oak Studio
-      url: https://oakstudio.co/
-      img: /img/showcase/oak.webp
-    - title: Johan's website & blog
-      url: https://johan.im/
-      img: /img/showcase/johan.webp
-    - title: Jurnal Kusaeni
-      url: https://kusaeni.com/
-      img: /img/showcase/kusaeni.webp
-    - title: Notion Enhancer documentation
-      url: https://notion-enhancer.github.io/
-      img: /img/showcase/notion-enhancer.webp
-    - title: OAK Studio
-      url: https://oakstudio.co/
-      img: /img/showcase/oak.webp
-    - title: Tarugo21
-      url: https://www.tarugoconf.com/
-      img: /img/showcase/tarugo21.webp
-    - title: Tobias Schmidt
-      url: https://tobiasschmidt.me/
-      img: /img/showcase/tobias.webp
-    - title: Velociraptor documentation
-      url: https://velociraptor.run/
-      img: /img/showcase/velociraptor.webp
 
 support:
   title: Lume is supported by

@@ -34,6 +34,7 @@ site
   }))
   .use(resolveUrls())
   .use(imagick())
+  .filter("slice", (arr, length) => arr.slice(0, length))
   .process([".html"], (page) => {
     const doc = page.document!;
     const toc = doc.querySelector(".toc");
