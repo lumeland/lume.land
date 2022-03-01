@@ -38,8 +38,8 @@ extension). This means that, instead of `/about-us.html`, the URL is
 directories as needed.
 
 If you want to disable it, set `prettyUrls` to `false` in
-[config file](../getting-started/config-file.md), so you will have something
-like this:
+[config file](../configuration/config-file.md), so you will have something like
+this:
 
 ```txt
 .

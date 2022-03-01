@@ -53,10 +53,10 @@ Not all template engines support async filters. {.tip}
 Lume includes the following convenient preinstalled filters:
 
 - **md**: Allows to render Markdown content to HTML.
-  [More info](../core/markdown.md)
+  [More info](../../plugins/markdown.md#md-filter)
 - **njk**: Allows to render Nunjucks content to HTML.
-  [More info](../core/nunjucks.md)
-- **url / htmlUrl**: Allows to normalize URLs. [More info](../core/url.md)
+  [More info](../../plugins/nunjucks.md#njk-filter)
+- **url / htmlUrl**: Allows to normalize URLs. [More info](../../plugins/url.md)
 
 ## Helpers
 

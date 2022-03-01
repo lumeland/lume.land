@@ -43,13 +43,13 @@ export default function* ({ search, paginate }) {
 }
 ```
 
-In this script, we are using the [search](searching.md) helper to search all
-pages tagged as `api-item` (we have added this tag to the previous pages
-generated automatically) and paginate them with the [paginate](pagination.md)
-helper. But we have a problem: due all pages are executed at the same time, it's
-possible that the `api-item` pages didn't exist before paginate them, so the
-pagination won't work. What we really need is create all dynamic pages
-**before** paginate them.
+In this script, we are using the [search](../../plugins/search.md) helper to
+search all pages tagged as `api-item` (we have added this tag to the previous
+pages generated automatically) and paginate them with the
+[paginate](../../plugins/paginate.md) helper. But we have a problem: due all
+pages are executed at the same time, it's possible that the `api-item` pages
+didn't exist before paginate them, so the pagination won't work. What we really
+need is create all dynamic pages **before** paginate them.
 
 To control this, lume has the `renderOrder` variable, to configure the order in
 which every page will be rendered. By default this value is `0`, so if you

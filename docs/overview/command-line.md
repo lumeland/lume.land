@@ -47,9 +47,9 @@ lume --watch
 ## Create a config file
 
 Lume don't need a config file to work, but it's useful to change the default
-behavior, adding plugins, ignore files, etc. The [config file](config-file.md)
-is very simple and you can create it by yourself, but for convenience you can
-use the following command.
+behavior, adding plugins, ignore files, etc. The
+[config file](../configuration/config-file.md) is very simple and you can create
+it by yourself, but for convenience you can use the following command.
 
 ```sh
 lume init
@@ -80,7 +80,7 @@ Deno CLI has some useful options that can be interesting for you, like
 with `--compat` flag,
 [a configuration file](https://deno.land/manual/getting_started/configuration_file)
 with `--config=<FILE>` or a
-[import map file](https://deno.land/manual@v1.16.1/linking_to_external_code/import_maps)
+[import map file](https://deno.land/manual/linking_to_external_code/import_maps)
 with `--import-map=<FILE>`.
 
 Lume CLI runs Deno CLI with some arguments predefined, but you can customize

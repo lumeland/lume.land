@@ -9,8 +9,7 @@ This is a high level description of how Lume build your site. When you run
 1. Dispatch the [event](../core/events.md) `beforeBuild`.
 2. Ensure the `dest` folder is empty.
 3. Copy all files and folders configured with
-   [`site.copy()`](../getting-started/config-file.md#copy-static-files) to the
-   `dest` folder.
+   [`site.copy()`](../configuration/copy-static-files.md) to the `dest` folder.
 4. Walk the `src` folder recursively and load all files matching with a valid
    file extension, like `.md`, `.njk`, etc.
    - Skip files and folders starting with `_`, `.`, ignored with `site.ignore()`
@@ -21,9 +20,9 @@ This is a high level description of how Lume build your site. When you run
 5. Group all pages by [`renderOrder` value](../core/render-order.md) and sort
    them.
 6. For each group of pages with the same `renderOrder`:
-   - If the [page content is a generator](../core/pagination.md), generate all
-     the sub-pages.
-   - Calculate the [final url](../core/url.md).
+   - If the [page content is a generator](../core/searching.md#pagination),
+     generate all the sub-pages.
+   - Calculate the [final url](../creating-pages/urls.md).
    - Run the [preprocessors](../core/processors.md#preprocess) registered.
    - Render the page using the assigned
      [template engine](../core/multiple-template-engines.md) and

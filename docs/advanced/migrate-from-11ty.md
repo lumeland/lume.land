@@ -41,7 +41,7 @@ differences can help.
   [there are different ways to place data](https://www.11ty.dev/docs/data-template-dir/),
   and `_data/*` is only used for global data.
 - To paginate in Lume, you have to create a `.tmpl.js` or `.tmpl.ts` file
-  exporting a generator ([more info](../core/pagination.md)). There's no way to
+  exporting a generator ([more info](../core/searching.md#pagination)). There's no way to
   do it using the front matter, like in Eleventy.
 - The event `beforeWatch` in Eleventy is named `beforeUpdate` in Lume.
 
@@ -63,11 +63,11 @@ RSS
 
 Syntax Highlighting
 : There's the
-[code highlight plugin](../plugins/code_highlight.md) for that.
+[code highlight plugin](../../plugins/code_highlight.md) for that.
 
 Navigation
 : There isn't a plugin for that. But you can (partially) emulate it
-using the [search helper](../core/searching.md).
+using the [search helper](../../plugins/search.md).
 
 Inclusive Language
 : There isn't a plugin for that (I'd love it).

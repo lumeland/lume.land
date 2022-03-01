@@ -10,9 +10,9 @@ know in advance which pages will be affected by a change in any file. For
 example:
 
 - A change in a CSS file can affect to other CSS files that `@import` it (if you
-  use [postcss plugin](../plugins/postcss.md)).
-- If you also use the [inline plugin](../plugins/inline.md), to insert the CSS
-  code in the HTML, this change will affect to all HTML pages.
+  use [postcss plugin](../../plugins/postcss.md)).
+- If you also use the [inline plugin](../../plugins/inline.md), to insert the
+  CSS code in the HTML, this change will affect to all HTML pages.
 
 Lume is conservative about the updating process, to make sure that any change in
 any file will be correctly applied to all pages. This is why the entire site is

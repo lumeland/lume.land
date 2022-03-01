@@ -18,7 +18,7 @@ includes, macros, etc). The Lume components have the following advantages:
 ## Create your own components
 
 Components are stored in the `_components` directory. You can change it in the
-[configuration file](../getting-started/config-file.md). To create a new
+[configuration file](../configuration/config-file.md). To create a new
 component, just create a file in this directory with the name of your component
 and the extension of the template engine that you want to use. For example a
 component in Nunjucks that renders a button could be stored in
@@ -129,7 +129,7 @@ code.
 
 ## JSX and TSX components
 
-If the [JSX plugin](../plugins/jsx.md) is enabled, you can use it to generate
+If the [JSX plugin](../../plugins/jsx.md) is enabled, you can use it to generate
 components:
 
 ```jsx
