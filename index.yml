@@ -6,7 +6,8 @@ header:
 install:
   title: "Run the following to install:"
   code: deno run -A https://deno.land/x/lume/install.ts
-  footer: Make sure [you have Deno 1.18.1 or newer installed](https://deno.land/manual/getting_started/installation).
+  footer: |
+    [![deno module](https://shield.deno.dev/x/lume)](https://deno.land/x/lume) Make sure [you have Deno installed](https://deno.land/manual/getting_started/installation).
   url: /tutorial/step-1/
 
 usage:
