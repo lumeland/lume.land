@@ -30,8 +30,8 @@
   /* Colors */
   --color-primary: hsl(0deg, 50%, 50%);
   --color-primary-1: hsl(0deg, 50%, 40%);
-  --color-foreground: hsl(0deg, 0%, 20%);
-  --color-foreground-1: hsl(0deg, 0%, 40%);
+  --color-foreground: hsl(200deg, 20%, 10%);
+  --color-foreground-1: hsl(200deg, 20%, 30%);
   --color-background: hsl(200deg, 20%, 100%);
   --color-background-a: hsla(200deg, 20%, 100%, 0.9);
   --color-background-1: hsl(200deg, 20%, 96%);

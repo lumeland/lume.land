@@ -209,7 +209,6 @@
   display: flex;
   column-gap: var(--column-gap);
   font: var(--text-caption);
-  color: var(--color-foreground-1);
 
   & > li.is-next {
     margin-left: auto;
@@ -217,11 +216,17 @@
   }
 
   & a {
+    color: var(--color-foreground-1);
     text-decoration: none;
     display: block;
-    font: var(--text-body-bold);
 
-    &:hover {
+    & strong {
+      color: var(--color-primary);
+      font: var(--text-body-bold);
+      display: block;
+    }
+
+    &:hover strong {
       text-decoration: underline;
     }
   }

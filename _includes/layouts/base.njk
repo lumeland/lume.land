@@ -14,13 +14,13 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:url" content="{{ url | url(true) }}">
-  <meta property="og:description" content="{{ description }}">
-  <meta property="og:image" content="{{ "/logo.png" | url(true) }}">
+  <meta property="og:description" content="{{ description | md(true) | striptags }}">
+  <meta property="og:image" content="{{ "/avatar.jpg" | url(true) }}">
   <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:description" content="{{ description | md(true) | striptags }}">
   <meta name="twitter:site" content="@misteroom">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="{{ "/logo.png" | url(true) }}">
+  <meta name="twitter:image" content="{{ "/avatar.jpg" | url(true) }}">
 
   {% if page_css %}
   <link rel="stylesheet" href="/styles/pages/{{ page_css }}">

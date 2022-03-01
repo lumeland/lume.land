@@ -34,6 +34,10 @@ site
   }))
   .use(resolveUrls())
   .use(imagick())
+  .scopedUpdates(
+    (path) => path.endsWith(".css"),
+    (path) => path.endsWith(".png") || path.endsWith(".png"),
+  )
   .filter("slice", (arr, length) => arr.slice(0, length))
   .process([".html"], (page) => {
     const doc = page.document!;
