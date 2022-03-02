@@ -231,10 +231,10 @@ points:
       description: Some SSG ships their own client JavaScript to load and hydrate pages.
 
     - title: Deploy anywhere
-      description: Build your site in any CI like Github/Gitlab Pages, Deno deploy, Vercel, Netflify… and host it anywhere.
+      description: Build your site in any CI like Github/Gitlab Pages, Deno deploy, Vercel, Netflify… and host it anywhere. [More info](/docs/advanced/deployment.md)
 
     - title: Easy to extend
-      description: Want to use a new template engine or use a new JavaScript compiler? Lume allows to use whatever you want.
+      description: Want to use a new template engine or use a new JavaScript compiler? Lume allows to use whatever you want. [Explore the official plugins](/plugins/)
 
 examples:
   title: Who is using Lume?
