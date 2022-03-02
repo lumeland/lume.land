@@ -45,7 +45,9 @@ page. If you want to use a layout to generate the page content, you have to
 export the `layout` keyword with the layout name and the data that will be used
 in the layouts:
 
-```js
+<lume-code>
+
+```js {title="pages.tmpl.js"}
 export default function ()* {
   yield {
     url: "/page-1/",
@@ -68,10 +70,27 @@ export default function ()* {
 }
 ```
 
+```html {title=_includes/layouts/article.njk}
+---
+layout: layouts/base.njk
+---
+
+<article>
+  <h1>{{ title }}</h1>
+  <div>
+    {{ body | md | safe}}
+  </div>
+</article>
+```
+
+</lume-code>
+
 Due the layout is the same for all pages, we can use a named export to define it
 once, instead of duplicating it in every yielded page:
 
-```js
+<lume-code>
+
+```js {title="pages.tmpl.js"}
 export const layout = "layouts/article.njk";
 
 export default function ()* {
@@ -92,6 +111,21 @@ export default function ()* {
   };
 }
 ```
+
+```html {title=_includes/layouts/article.njk}
+---
+layout: layouts/base.njk
+---
+
+<article>
+  <h1>{{ title }}</h1>
+  <div>
+    {{ body | md | safe}}
+  </div>
+</article>
+```
+
+</lume-code>
 
 ## Generate pages from other sources
 
