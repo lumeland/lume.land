@@ -21,14 +21,15 @@ to all CSS pages:
 
 import lume from "lume/mod.ts";
 
+const site = lume();
+
 function addBanner(content: string): string {
   const banner = "/* © This code belongs to ACME inc. */";
   return $banner + "\n" + content;
 }
 
 site.process([".css"], (page) => {
-  const content = page.content as string;
-  page.content = addBanner(content);
+  page.content = addBanner(page.content as string);
 });
 
 export default site;
@@ -52,8 +53,7 @@ export default function (options: Options) {
 
   return (site: Site) => {
     site.process([".css"], (page) => {
-      const content = page.content as string;
-      page.content = addBanner(content);
+      page.content = addBanner(page.content as string);
     });
   };
 }

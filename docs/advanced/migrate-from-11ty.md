@@ -22,7 +22,7 @@ differences can help.
 - To copy a file/folder in Lume: `site.copy("img")` (in Eleventy is
   `config.addPassthroughCopy("img")`)
 - To add a filter in Lume: `site.filter("name", filterFn)` (in Eleventy is
-  `config.addFilter("name", "filterFn)`).
+  `config.addFilter("name", filterFn)`).
 - To add a [custom tag](https://www.11ty.dev/docs/custom-tags/) in Lume, use
   `site.helper("name", helperFn, {type: "tag"})`.
 
