@@ -9,7 +9,7 @@ install:
   code: deno run -A https://deno.land/x/lume/install.ts
   footer: |
     Make sure [you have Deno installed](https://deno.land/manual/getting_started/installation).
-  url: /tutorial/step-1/
+  url: /tutorial/your-first-page/
 
 usage:
   - title: Supports any template engine
