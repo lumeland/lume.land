@@ -1,6 +1,6 @@
 ---
 title: SVGO
-description: Using the SVGO plugin to optimize SVG files
+description: Optimize SVG files with SVGO
 docs: plugins/svgo.ts/~/Options
 tags:
   - images

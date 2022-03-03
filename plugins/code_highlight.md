@@ -1,6 +1,6 @@
 ---
 title: Code Highlight
-description: Syntax highlighting
+description: Code syntax highlighting using highlight.js
 docs: plugins/code_highlight.ts/~/Options
 tags:
   - html

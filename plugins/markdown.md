@@ -1,6 +1,6 @@
 ---
 title: Markdown
-description: Enabling the Markdown data format
+description: Create pages in Markdown format
 docs: plugins/markdown.ts/~/Options
 enabled: true
 tags:

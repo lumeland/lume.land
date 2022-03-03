@@ -1,6 +1,6 @@
 ---
 title: Bundler
-description: Enabling the bundler plugin
+description: Bundle the JavaScript, TypeScript and JSX files using the bundler provided by `Deno.emit()`.
 docs: plugins/bundler.ts/~/Options
 tags:
   - javascript

@@ -1,6 +1,6 @@
 ---
 title: Inline
-description: Using the inline plugin to inline sources
+description: Inline CSS, JavaScript, SVG and images in the HTML.
 docs: plugins/inline.ts/~/Options
 tags:
   - html

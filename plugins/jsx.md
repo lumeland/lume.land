@@ -1,6 +1,6 @@
 ---
 title: JSX
-description: Using JSX for templates
+description: Create pages and layouts with JSX (React).
 docs: plugins/jsx.ts/~/Options
 tags:
   - template_engine

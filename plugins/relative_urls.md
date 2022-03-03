@@ -1,6 +1,6 @@
 ---
 title: Relative URLs
-description: Convert all URLs to relative
+description: Convert all URLs to relative.
 tags:
   - urls
 ---

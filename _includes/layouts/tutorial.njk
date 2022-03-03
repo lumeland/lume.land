@@ -21,14 +21,20 @@ page_css: docs.css
         {%- set previousPost = search.previousPage(url, "url^=/tutorial/", "step") %}
         {%- if previousPost %}
         <li class="is-prev">
-          ← Previous <a href="{{ previousPost.data.url }}" rel="prev">{{ previousPost.data.title }}</a>
+          <a href="{{ previousPost.data.url }}" rel="prev">
+            ← Previous 
+            <strong>{{ previousPost.data.title }}</strong>
+          </a>
         </li>
         {% endif %}
 
         {%- set nextPost = search.nextPage(url, "url^=/tutorial/", "step") %}
         {%- if nextPost %}
         <li class="is-next">
-          Next → <a href="{{ nextPost.data.url }}" rel="next">{{ nextPost.data.title }}</a>
+          <a href="{{ nextPost.data.url }}" rel="next">
+            Next → 
+            <strong>{{ nextPost.data.title }}</strong>
+          </a>
         </li>
         {% endif %}
       </ul>

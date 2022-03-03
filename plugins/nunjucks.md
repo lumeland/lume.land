@@ -1,6 +1,6 @@
 ---
 title: Nunjucks
-description: Enabling the Modules
+description: Use the template engine Nunjucks to create pages and layouts.
 docs: plugins/nunjucks.ts/~/Options
 enabled: true
 tags:

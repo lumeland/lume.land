@@ -1,6 +1,6 @@
 ---
 title: Modify URLs
-description: Modify all URLs of HTML files
+description: Modify all URLs of HTML files with a custom function.
 docs: plugins/modify_urls.ts/~/Options
 tags:
   - urls

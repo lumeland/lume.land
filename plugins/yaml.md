@@ -1,6 +1,6 @@
 ---
 title: YAML
-description: Enabling the Modules
+description: Add suppport for YAML to store data and create pages.
 docs: plugins/yaml.ts/~/Options
 enabled: true
 tags:

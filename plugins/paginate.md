@@ -1,6 +1,6 @@
 ---
 title: Paginate
-description: Enabling the Modules
+description: Provide a helper to paginate results.
 docs: plugins/paginate.ts/~/Options
 enabled: true
 tags:

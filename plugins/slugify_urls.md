@@ -1,6 +1,6 @@
 ---
 title: Slugify URLs
-description: Slugify all page urls to remove conflict characters
+description: Slugify all page urls to remove conflictive characters
 docs: plugins/slugify_urls.ts/~/Options
 tags:
   - urls

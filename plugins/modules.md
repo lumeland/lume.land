@@ -1,6 +1,6 @@
 ---
 title: Modules
-description: Enabling the Modules
+description: Use ESM and TypeScript modules to create pages, layouts and store data.
 docs: plugins/modules.ts/~/Options
 enabled: true
 tags:

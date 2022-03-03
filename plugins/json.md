@@ -1,6 +1,6 @@
 ---
 title: JSON
-description: Enabling the JSON data format
+description: Add support for JSON to store data and create pages.
 docs: plugins/json.ts/~/Options
 enabled: true
 tags:

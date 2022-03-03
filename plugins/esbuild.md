@@ -1,6 +1,6 @@
 ---
 title: ESbuild
-description: Enabling the esbuild plugin
+description: Bundle JavaScript, TypeScript and JSX files using esbuild library.
 docs: plugins/esbuild.ts/~/Options
 tags:
   - javascript

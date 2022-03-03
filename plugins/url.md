@@ -1,6 +1,6 @@
 ---
 title: URL
-description: Enabling the Modules
+description: Provide the `url` filter to fix and resolve urls.
 docs: plugins/url.ts/~/Options
 enabled: true
 tags:

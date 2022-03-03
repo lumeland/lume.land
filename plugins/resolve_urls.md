@@ -1,6 +1,6 @@
 ---
 title: Resolve URLs
-description: Resolve all URLs pointing to source files
+description: Resolve all URLs pointing to source files.
 tags:
   - urls
 ---

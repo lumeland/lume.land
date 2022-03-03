@@ -1,6 +1,6 @@
 ---
 title: ParcelCSS
-description: Using the ParcelCSS plugin to transform and minify CSS
+description: Transform and minify your CSS files with ParcelCSS.
 docs: plugins/parcel_css.ts/~/Options
 tags:
   - styles

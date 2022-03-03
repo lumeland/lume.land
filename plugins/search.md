@@ -1,6 +1,6 @@
 ---
 title: Search
-description: Enabling the Modules
+description: Provide a helper to search pages from other pages.
 docs: plugins/search.ts/~/Options
 enabled: true
 tags:

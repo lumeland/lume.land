@@ -1,6 +1,6 @@
 ---
 title: Eta
-description: Enabling the Eta template engine
+description: Use the template engine Eta to build pages.
 docs: plugins/eta.ts/~/Options
 tags:
   - template_engine

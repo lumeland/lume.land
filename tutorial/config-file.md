@@ -1,5 +1,5 @@
 ---
-step: 6
+step: 7
 title: Create a config file
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: SASS
-description: Using the SASS plugin to transform scss files
+description: Compile SCSS files to CSS.
 docs: plugins/sass.ts/~/Options
 tags:
   - styles
