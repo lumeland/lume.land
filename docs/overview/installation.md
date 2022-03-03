@@ -43,3 +43,9 @@ It's useful for CI environments:
 ```sh
 deno run -A https://deno.land/x/lume/ci.ts
 ```
+
+## Docker image
+
+There's a docker image at
+[oscarotero/lume](https://hub.docker.com/r/oscarotero/lume) that you can use for
+some CI environments.

@@ -133,7 +133,9 @@ possible to install and use it in the build script.
 The most easy way is by creating a `netlify.toml` file in your repository with
 the following code:
 
-```toml
+<lume-code>
+
+```toml {title="netlify.toml"}
 [build]
   publish = "_site"
   command = """
@@ -141,6 +143,8 @@ the following code:
     /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.ts \
   """
 ```
+
+</lume-code>
 
 The command download and install deno and then run lume to build the site.
 
@@ -155,3 +159,26 @@ curl -fsSL https://deno.land/x/install/install.sh | sh && /vercel/.deno/bin/deno
 ```
 
 Remember also to configure the output directory to `_site`.
+
+## Deploy in Fleek
+
+[Fleek](https://fleek.co/) allows to build websites and apps in the open web:
+permissionless, trustless, censorship resitant and free of centralized
+gatekeepers. To deploy your site with Fleek, create a `.fleek.json` file in your
+repository with the following code:
+
+<lume-code>
+
+```json {title=".fleek.json"}
+{
+  "build": {
+    "image": "oscarotero/lume",
+    "command": "lume",
+    "publicDir": "_site"
+  }
+}
+```
+
+</lume-code>
+
+This configuration use the Lume Docker image to build the site.
