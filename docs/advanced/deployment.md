@@ -64,6 +64,36 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+## GitLab Pages
+
+To deploy a Lume site using
+[GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/), set a CI/CD
+configuration with the following code:
+
+<lume-code>
+
+```yml {title=".gitlab-ci.yml"}
+image: oscarotero/lume
+
+stages:
+  - pages
+
+pages:
+  stage: pages
+  script: lume --dest=public
+
+  artifacts:
+    paths:
+      - public
+```
+
+The `--dest=public` argument in the build command set the destination folder as
+`./public`. This is the folder that GitLab use to publish the site. This
+argument is not needed if you have defined the
+[dest folder in the config file](/docs/configuration/config-file.md#dest).
+
+</lume-code>
+
 ## Deno Deploy
 
 [Deno Deploy](https://deno.com/deploy) is a distributed deploy system provided
@@ -124,7 +154,7 @@ jobs:
           entrypoint: server.ts
 ```
 
-## Deploy in Netlify
+## Netlify
 
 [Netlify](https://www.netlify.com/) is one of the most popular build & deploy
 systems for Jamstack. It doesn't include Deno installed by default but it's
@@ -148,7 +178,7 @@ the following code:
 
 The command download and install deno and then run lume to build the site.
 
-## Deploy in Vercel
+## Vercel
 
 [Vercel](https://vercel.com/) is another popular service to build and deploy
 Jamstack site. Like Netlify, it doesn't have Deno available by default so the
@@ -160,7 +190,7 @@ curl -fsSL https://deno.land/x/install/install.sh | sh && /vercel/.deno/bin/deno
 
 Remember also to configure the output directory to `_site`.
 
-## Deploy in Fleek
+## Fleek
 
 [Fleek](https://fleek.co/) allows to build websites and apps in the open web:
 permissionless, trustless, censorship resitant and free of centralized
