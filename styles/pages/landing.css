@@ -241,10 +241,12 @@
     margin: 0;
   }
   & ul {
-    list-style: none;
     margin: .5em 0;
     font: var(--text-caption);
-    padding: 0;
+    padding: 0 0 0 1em;
     color: var(--color-foreground-1);
+  }
+  & a {
+    display: inline-block;
   }
 }

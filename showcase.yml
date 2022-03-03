@@ -3,7 +3,7 @@ layout: layouts/showcase.njk
 title: Showcase
 main_menu: showcase
 description: |
-  This is a list of sites built with Lume that have the source code publicly
+  This is a list of sites built with Lume. Some of them have the source code publicly
   visible. If you want to include your project in this list, please
   [edit this page](https://github.com/lumeland/lume.land/edit/main/showcase.yml)
   and send me a pull request.
@@ -32,7 +32,7 @@ sites:
 
   - title: NM type
     img: /img/showcase/nmtype.webp
-    url: https://nmtype.com/
+    url: https://nmtype.netlify.app/
     description: A type foundry based in Sweden and Spain.
 
   - title: Tarugo 21
