@@ -20,7 +20,7 @@ jobs:
 
       - name: Build site
         run: |
-          deno run -A https://deno.land/x/lume/ci.ts --location=https://lume.deno.dev
+          deno run -A https://deno.land/x/lume/ci.ts
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
