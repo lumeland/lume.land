@@ -10,7 +10,7 @@
   --text-display-size: clamp(30px, 10vw, 75px);
   --text-display-height: 0.95;
   --text-display: 700 var(--text-display-size)/var(--text-display-height) var(--font-display);
-  --text-display-spacing: -0.025em;
+  --text-display-spacing: -0.035em;
   --text-heading-size: clamp(20px, 8vw, 50px);
   --text-heading: 700 var(--text-heading-size)/1.1 var(--font-display);
   --text-heading-spacing: -0.03em;
@@ -31,11 +31,11 @@
   --color-primary: hsl(0deg, 50%, 50%);
   --color-primary-1: hsl(0deg, 50%, 40%);
   --color-foreground: hsl(200deg, 20%, 10%);
-  --color-foreground-1: hsl(200deg, 20%, 30%);
+  --color-foreground-1: hsl(200deg, 20%, 35%);
   --color-background: hsl(200deg, 20%, 100%);
   --color-background-a: hsla(200deg, 20%, 100%, 0.9);
-  --color-background-1: hsl(200deg, 20%, 96%);
-  --color-background-2: hsl(200deg, 20%, 92%);
+  --color-background-1: hsl(200deg, 20%, 97%);
+  --color-background-2: hsl(200deg, 20%, 93%);
   --color-background-3: hsl(200deg, 20%, 86%);
 
   /* Borders */
