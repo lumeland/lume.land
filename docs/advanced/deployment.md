@@ -156,12 +156,10 @@ jobs:
 
 ## Netlify
 
-[Netlify](https://www.netlify.com/) is one of the most popular build & deploy
-systems for Jamstack. It doesn't include Deno installed by default but it's
-possible to install and use it in the build script.
+[Netlify](https://www.netlify.com/) doesn't include Deno installed by default
+but it's possible to install and use it in the build command.
 
-The most easy way is by creating a `netlify.toml` file in your repository with
-the following code:
+Create `netlify.toml` file in your repository with the following code:
 
 <lume-code>
 
@@ -176,12 +174,9 @@ the following code:
 
 </lume-code>
 
-The command download and install deno and then run lume to build the site.
-
 ## Vercel
 
-[Vercel](https://vercel.com/) is another popular service to build and deploy
-Jamstack site. Like Netlify, it doesn't have Deno available by default so the
+[Vercel](https://vercel.com/), doesn't have Deno available by default so the
 build command must install it.
 
 ```sh
@@ -192,10 +187,8 @@ Remember also to configure the output directory to `_site`.
 
 ## Fleek
 
-[Fleek](https://fleek.co/) allows to build websites and apps in the open web:
-permissionless, trustless, censorship resitant and free of centralized
-gatekeepers. To deploy your site with Fleek, create a `.fleek.json` file in your
-repository with the following code:
+To deploy your Lume site with [Fleek](https://fleek.co/), create a `.fleek.json`
+file in your repository with the following code:
 
 <lume-code>
 
@@ -211,4 +204,42 @@ repository with the following code:
 
 </lume-code>
 
-This configuration use the Lume Docker image to build the site.
+## Cloudflare Pages
+
+To deploy your Lume site with [Cloudflare Pages](https://pages.cloudflare.com/),
+configure the build command as follow:
+
+```sh
+curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.ts
+```
+
+Remember to configure the output directory to `_site`.
+
+## AWS Amplify
+
+To deploy your Lume site with [AWS Amplify](https://aws.amazon.com/amplify/)
+create a `amplify.yml` file with the following code:
+
+<lume-code>
+
+```yaml {title="amplify.yml"}
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - curl -fsSL https://deno.land/x/install/install.sh | sh
+        - /root/.deno/bin/deno run -A https://deno.land/x/lume/ci.ts
+  artifacts:
+    baseDirectory: /_site
+    files:
+      - '**/*'
+  cache:
+    paths: []
+```
+
+</lume-code>
+
+Remember to ignore `amplify.yml` file in the Lume `_config.ts` file. If you
+don't want to create this file in your repository, you can configure it in the
+AWS control panel.
