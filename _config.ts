@@ -36,7 +36,7 @@ site
   .use(imagick())
   .scopedUpdates(
     (path) => path.endsWith(".css"),
-    (path) => path.endsWith(".png") || path.endsWith(".png"),
+    (path) => path.endsWith(".png") || path.endsWith(".jpg"),
   )
   .filter("slice", (arr, length) => arr.slice(0, length))
   .process([".html"], (page) => {
