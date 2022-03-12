@@ -61,7 +61,7 @@ cannot be easily used in JSX because it's escaped, and `children` is the JSX
 object un-rendered.
 
 ```jsx
-export default ({ children }) => (
+export default ({ title, children }) => (
   <html>
     <head>
       <title>{title}</title>
