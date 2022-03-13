@@ -1,5 +1,6 @@
 ---
 title: Netlify CMS
+docs: plugins/netlify_cms.ts/~/Options
 description: Run Netlify CMS to update the site content
 tags:
   - utils
@@ -21,6 +22,9 @@ site.use(netlifyCMS());
 
 export default site;
 ```
+
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/netlify_cms.ts/~/Options).
 
 ## Description
 

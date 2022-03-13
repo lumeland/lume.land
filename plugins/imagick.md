@@ -1,5 +1,6 @@
 ---
 title: Imagick
+docs: plugins/imagick.ts/~/Options
 description: Image manipulation using Imagick
 tags:
   - images
@@ -21,6 +22,9 @@ site.use(imagick());
 
 export default site;
 ```
+
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/imagick.ts/~/Options).
 
 ## Description
 

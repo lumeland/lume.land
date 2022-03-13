@@ -24,7 +24,7 @@ create pages, layouts and data files.
 
 If you want to change the default configuration, use the second argument of
 `lume()` function in your `_config.ts` file. See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume@/plugins/modules.ts/~/Options).
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/modules.ts/~/Options).
 
 For example, to use a different extension than `.tmpl.js` and `.tmpl.ts` to
 generate pages, edit the `pageExtensions` property:

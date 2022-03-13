@@ -23,7 +23,7 @@ create pages and layouts.
 
 If you want to change the default configuration, use the second argument of
 `lume()` function in your `_config.ts` file. See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume@/plugins/nunjucks.ts/~/Options).
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/nunjucks.ts/~/Options).
 
 For example, let's
 [configure nunjucks](https://mozilla.github.io/nunjucks/api.html#configure) and

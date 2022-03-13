@@ -24,7 +24,7 @@ export default site;
 ```
 
 See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume@/plugins/pug.ts/~/Options).
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/pug.ts/~/Options).
 
 ## Description
 

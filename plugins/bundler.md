@@ -24,7 +24,7 @@ export default site;
 ```
 
 See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume@/plugins/bundler.ts/~/Options).
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/bundler.ts/~/Options).
 
 ## Description
 

@@ -65,7 +65,7 @@ for (const page of paginate(posts, options)) {
 
 If you want to change the default configuration, use the second argument of
 `lume()` function in your `_config.ts` file. See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume@/plugins/paginate.ts/~/Options).
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/paginate.ts/~/Options).
 
 ```ts
 import lume from "lume/mod.ts";

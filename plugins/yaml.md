@@ -17,7 +17,7 @@ This plugin is installed by default. 🎉
 
 If you want to change the default configuration, use the second argument of
 `lume()` function in your `_config.ts` file. See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume@/plugins/yaml.ts/~/Options).
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/yaml.ts/~/Options).
 
 ```js
 import lume from "lume/mod.ts";
