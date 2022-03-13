@@ -1,6 +1,6 @@
 ---
 title: Imagick
-description: Image manipulation using Imagick library
+description: Image manipulation using Imagick
 tags:
   - images
 ---
