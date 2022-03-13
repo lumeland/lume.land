@@ -60,8 +60,25 @@ included in the HTML. For example:
 
 </lume-code>
 
-Note that bitmap images will be inlined as base64 data but svg images are
-replaced by the `<svg>` element. {.tip}
-
 The source file must be exported to the `dest` directory, there's no support for
 external URLs. {.tip}
+
+## SVG inline
+
+Bitmap images (like `.png` or `.jpeg`) are inlined as base64 data but SVG images
+are replaced by the `<svg>` element. The new `<svg>` elements will keep the same
+`class` and `id` attributes as the replaced `<img>`.
+
+For example, this image:
+
+```html
+<img src="icon.svg" class="icon" id="icon-1" inline>
+```
+
+Will become to:
+
+```html
+<svg width="180px" height="180px" xmlns="http://www.w3.org/2000/svg" class="icon" id="icon-1">
+...
+</svg>
+```
