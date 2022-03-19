@@ -220,21 +220,22 @@ usage:
 
       </lume-code>
 
-points:
-  title: Less magic, more freedom
+features:
+  - title: It's Deno!
+    img: /icons/deno.svg
+    description: Forget about managing thousands of packages in node_modules or complex bundlers. Lume only installs what you need. Clean, fast and secure.
 
-  features:
-    - title: It's Deno!
-      description: Forget about managing thousands of packages in node_modules or complex bundlers. Lume only installs what you need. Clean, fast and secure.
+  - title: Zero runtime overhead
+    img: /icons/stack.svg
+    description: Some SSG ships their own client JavaScript to load and hydrate pages. Not Lume.
 
-    - title: Zero runtime overhead
-      description: Some SSG ships their own client JavaScript to load and hydrate pages.
+  - title: Deploy anywhere
+    img: /icons/deploy.svg
+    description: Build your site in any CI like GitHub/GitLab Pages, Deno Deploy, Vercel, Netlify… and host it anywhere. [More info](/docs/advanced/deployment.md)
 
-    - title: Deploy anywhere
-      description: Build your site in any CI like GitHub/GitLab Pages, Deno Deploy, Vercel, Netlify… and host it anywhere. [More info](/docs/advanced/deployment.md)
-
-    - title: Easy to extend
-      description: Want to use a new template engine or use a new JavaScript compiler? Lume allows to use whatever you want. [Explore the official plugins](/plugins/)
+  - title: Easy to extend
+    img: /icons/extend.svg
+    description: Want to use a new template engine or use a new JavaScript compiler? Lume allows to use whatever you want. [Explore the official plugins](/plugins/)
 
 examples:
   title: Who is using Lume?

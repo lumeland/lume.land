@@ -129,35 +129,26 @@
 }
 
 /** Points */
-.landing-points {
-  max-width: var(--max-width);
+.landing-features {
   display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font: var(--text-caption);
+  color: var(--color-foreground-1);
   row-gap: var(--row-gap-1);
-
-  & h2 {
-    font: var(--text-display);
-    letter-spacing: var(--text-display-spacing);
-    margin: 0;
-    max-width: 8em;
-  }
-
-  & ul {
-    display: grid;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font: var(--text-caption);
-    color: var(--color-foreground-1);
-    row-gap: var(--row-gap-1);
-    column-gap: var(--column-gap-2);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+  column-gap: var(--column-gap-2);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
   & h3 {
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
     margin: 0;
     color: var(--color-foreground);
+  }
+  & svg {
+    display: block;
+    margin: 0 0 1em;
   }
 }
 

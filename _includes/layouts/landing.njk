@@ -39,18 +39,15 @@ page_css: landing.css
   {% endfor %}
   </section>
 
-  <section class="landing-points">
-    <h2>{{ points.title }}</h2>
-
-    <ul class="landing-points-features">
-      {% for feature in points.features %}
-      <li>
-        <h3>{{ feature.title }}</h3>
-        {{ feature.description | md | safe }}
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
+  <ul class="landing-features">
+    {% for feature in features %}
+    <li>
+      <img src="{{ feature.img }}" inline>
+      <h3>{{ feature.title }}</h3>
+      {{ feature.description | md | safe }}
+    </li>
+    {% endfor %}
+  </ul>
 
   <section class="landing-examples">
     <header class="landing-examples-header">
