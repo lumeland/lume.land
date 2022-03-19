@@ -149,6 +149,9 @@
   & svg {
     display: block;
     margin: 0 0 1em;
+    background: white;
+    border-radius: var(--border-radius);
+    padding: .5em;
   }
 }
 
