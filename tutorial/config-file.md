@@ -47,18 +47,13 @@ by pressing `Enter`.
 ### Import map
 
 Then Lume will ask you to create a import map file. This can be useful to
-configure some IDEs like VS Code but it's not required.
+configure some IDEs like VS Code but it's not required. See
+[Import map configuration](../docs/configuration/import-map.md) for more info.
 
-### Configure VS Code
-
-If you are using the VS Code code editor, Lume can configure it for you,
-creating the `.vscode` folder and including some configuration files inside.
-Make sure you have the
-[Deno extension installed](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).
-
-After complete all steps, Lume will create the `_config.ts` (or `_config.js` if
-you choose JavaScript) file in your project folder. Depending on your choices,
-the content can vary, but with the default options it should looks like this:
+After completing all steps, Lume will create the `_config.ts` (or `_config.js`
+if you choose JavaScript) file in your project folder. Depending on your
+choices, the content can vary, but with the default options it should looks like
+this:
 
 <lume-code>
 
