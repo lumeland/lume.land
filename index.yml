@@ -227,11 +227,11 @@ features:
 
   - title: Zero runtime overhead
     img: /icons/stack.svg
-    description: Some SSG ships their own client JavaScript to load and hydrate pages. Not Lume.
+    description: Lume only exports your own code. No extra JavaScript for the client to load content or hydratation magically.
 
   - title: Deploy anywhere
     img: /icons/deploy.svg
-    description: Build your site in any CI like GitHub/GitLab Pages, Deno Deploy, Vercel, Netlify… and host it anywhere. [More info](/docs/advanced/deployment.md)
+    description: Static sites can be hosted (for free) anywhere GitHub/GitLab Pages, Deno Deploy, Vercel, Netlify… [More info](/docs/advanced/deployment.md)
 
   - title: Easy to extend
     img: /icons/extend.svg
