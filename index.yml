@@ -227,7 +227,7 @@ features:
 
   - title: Zero runtime overhead
     img: /icons/stack.svg
-    description: Lume only exports your own code. No extra JavaScript for the client to load content or hydratation magically.
+    description: Lume only exports your code. No extra JavaScript for the client to load content or hydratation generated magically.
 
   - title: Deploy anywhere
     img: /icons/deploy.svg
@@ -235,7 +235,7 @@ features:
 
   - title: Easy to extend
     img: /icons/extend.svg
-    description: Want to use a new template engine or use a new JavaScript compiler? Lume allows to use whatever you want. [Explore the official plugins](/plugins/)
+    description: Want to use a new template engine or use a new JavaScript compiler? Lume allows you to use whatever you want. [Explore the official plugins](/plugins/)
 
 examples:
   title: Who is using Lume?

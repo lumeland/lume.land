@@ -29,6 +29,7 @@
 }
 
 .site-description {
+  font: var(--text-caption);
   color: var(--color-foreground-1);
 
   & p {

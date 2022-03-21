@@ -35,17 +35,35 @@ sites:
     url: https://nmtype.com/
     description: A type foundry based in Sweden and Spain.
 
-  - title: Tarugo 21
-    img: /img/showcase/tarugo21.webp
-    url: https://tarugo21.netlify.app/
-    description: An event about technology and business in Madrid, Spain -
-    code: https://github.com/tarugoconf/tarugo21
-
   - title: OAK Studio
     img: /img/showcase/oak.webp
     url: https://oakstudio.co/
     description: A creative agency based in Bartlesville, Oklahoma
     code: https://github.com/bradeneast/oakstudio.co
+
+  - title: Tarugo 21
+    img: /img/showcase/tarugo21.webp
+    url: https://tarugo21.netlify.app/
+    description: An online event about technology and business.
+    code: https://github.com/tarugoconf/tarugo21
+  
+  - title: Tobias Schmidt
+    img: /img/showcase/tobias.webp
+    url: https://tobiasschmidt.me/
+    description: The personal blog of Tobias Schmidt
+    code: https://github.com/tobiasschmidt89/tobiasschmidt.me
+
+  - title: Tarugo5
+    img: /img/showcase/tarugo5.webp
+    url: https://tarugoconf.github.io/tarugo5/
+    description: An event about technology and business in Madrid, Spain.
+    code: https://github.com/tarugoconf/tarugo5
+
+  - title: Notion enhancer
+    img: /img/showcase/notion-enhancer.webp
+    url: https://notion-enhancer.github.io/
+    description: An enhancer/customiser for the all-in-one productivity workspace notion.so
+    code: https://github.com/notion-enhancer/notion-enhancer.github.io
 
   - title: Exact Report Generator
     url: https://exact-report-generator.vercel.app/
@@ -61,12 +79,6 @@ sites:
     url: https://laurarubio.net/
     description: A collection of resources for Galego teachers by Laura Rubio
     code: https://github.com/laura-rubio/ensino
-
-  - title: Tobias Schmidt
-    img: /img/showcase/tobias.webp
-    url: https://tobiasschmidt.me/
-    description: The personal blog of Tobias Schmidt
-    code: https://github.com/tobiasschmidt89/tobiasschmidt.me
 
   - title: Kusaeni
     img: /img/showcase/kusaeni.webp
@@ -89,12 +101,6 @@ sites:
     url: https://denissb.github.io/
     description: A personal website of a web developer
     code: https://github.com/denissb/denissb.github.io
-
-  - title: Notion enhancer
-    img: /img/showcase/notion-enhancer.webp
-    url: https://notion-enhancer.github.io/
-    description: An enhancer/customiser for the all-in-one productivity workspace notion.so
-    code: https://github.com/notion-enhancer/notion-enhancer.github.io
 
   - title: Johan Brook
     img: /img/showcase/johan.webp
