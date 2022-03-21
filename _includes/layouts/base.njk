@@ -7,6 +7,9 @@
   <title>{{ title }} - Lume</title>
   <link rel="stylesheet" href="/{{ cache_busting }}/styles/main.css">
   <script src="/{{ cache_busting }}/main.js" type="module"></script>
+  <script>
+    document.documentElement.className = localStorage.getItem("theme") || document.documentElement.className;
+  </script>
 
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">

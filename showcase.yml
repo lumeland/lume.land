@@ -3,10 +3,9 @@ layout: layouts/showcase.njk
 title: Showcase
 main_menu: showcase
 description: |
-  This is a list of sites built with Lume. Some of them have the source code publicly
-  visible. If you want to include your project in this list, please
+  This is a list of sites built with Lume. If you want to include your project in this list, please
   [edit this page](https://github.com/lumeland/lume.land/edit/main/showcase.yml)
-  and send me a pull request.
+  and send a pull request.
 
 sites:
   - title: Base Blog
@@ -53,6 +52,12 @@ sites:
     description: The personal blog of Tobias Schmidt
     code: https://github.com/tobiasschmidt89/tobiasschmidt.me
 
+  - title: Braden East
+    img: /img/showcase/bradeneast.webp
+    url: https://bradeneast.com/
+    description: The personal site of Branden East
+    code: https://github.com/bradeneast/bradeneast.com
+
   - title: Tarugo5
     img: /img/showcase/tarugo5.webp
     url: https://tarugoconf.github.io/tarugo5/
@@ -81,7 +86,7 @@ sites:
     code: https://github.com/laura-rubio/ensino
 
   - title: Kusaeni
-    img: /img/showcase/kusaeni.webp
+    #img: /img/showcase/kusaeni.webp
     url: https://kusaeni.com/
     description: The personal blog of Kusaeni
     code: https://notabug.org/kuspoes/kusaicom

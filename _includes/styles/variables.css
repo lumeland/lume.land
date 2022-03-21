@@ -59,6 +59,23 @@
   --row-gap-4: clamp(80px, 20vh, 200px);
 }
 
+:root.no-motion {
+  --animation-duration: 0s;
+}
+
+/* Theme dark in light mode */
+:root.is-reverse {
+  --color-primary: hsl(0deg, 70%, 60%);
+  --color-primary-1: hsl(0deg, 50%, 40%);
+  --color-foreground: hsl(0deg, 0%, 100%);
+  --color-foreground-1: hsl(0deg, 0%, 60%);
+  --color-background: hsl(200deg, 20%, 10%);
+  --color-background-a: hsla(200deg, 20%, 10%, 0.9);
+  --color-background-1: hsl(200deg, 20%, 14%);
+  --color-background-2: hsl(200deg, 20%, 18%);
+  --color-background-3: hsl(200deg, 20%, 24%);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: hsl(0deg, 70%, 60%);
@@ -70,5 +87,23 @@
     --color-background-1: hsl(200deg, 20%, 14%);
     --color-background-2: hsl(200deg, 20%, 18%);
     --color-background-3: hsl(200deg, 20%, 24%);
+  }
+  /* Theme light in dark mode */
+  :root.is-reverse {
+    --color-primary: hsl(0deg, 50%, 50%);
+    --color-primary-1: hsl(0deg, 50%, 40%);
+    --color-foreground: hsl(200deg, 20%, 10%);
+    --color-foreground-1: hsl(200deg, 20%, 35%);
+    --color-background: hsl(200deg, 20%, 100%);
+    --color-background-a: hsla(200deg, 20%, 100%, 0.9);
+    --color-background-1: hsl(200deg, 20%, 97%);
+    --color-background-2: hsl(200deg, 20%, 93%);
+    --color-background-3: hsl(200deg, 20%, 86%);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  :root {
+    --animation-duration: 0s;
   }
 }

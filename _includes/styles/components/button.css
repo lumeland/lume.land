@@ -80,3 +80,54 @@
     }
   }
 }
+
+.button-theme {
+  background: none;
+  color: currentColor;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: solid 1px var(--color-background-3);
+  padding: 0 .6em;
+  font: var(--text-callout);
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  vertical-align: middle;
+
+  &:hover {
+    background: var(--color-background-2);
+  }
+
+  & .is-light {
+    display: block;
+  }
+  & .is-dark {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    & .is-light {
+      display: none;
+    }
+    & .is-dark {
+      display: block;
+    }
+  }
+}
+:root.is-reverse .button-theme {
+  & .is-light {
+    display: none;
+  }
+  & .is-dark {
+    display: block;
+  }
+  @media (prefers-color-scheme: dark) {
+    & .is-light {
+      display: block;
+    }
+    & .is-dark {
+      display: none;
+    }
+  }
+}
