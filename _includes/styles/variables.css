@@ -28,15 +28,39 @@
   --text-code: 16px/1.6 var(--font-code);
 
   /* Colors */
-  --color-primary: hsl(0deg, 50%, 50%);
-  --color-primary-1: hsl(0deg, 50%, 40%);
-  --color-foreground: hsl(200deg, 20%, 10%);
-  --color-foreground-1: hsl(200deg, 20%, 35%);
-  --color-background: hsl(200deg, 20%, 100%);
-  --color-background-a: hsla(200deg, 20%, 100%, 0.9);
-  --color-background-1: hsl(200deg, 20%, 97%);
-  --color-background-2: hsl(200deg, 20%, 93%);
-  --color-background-3: hsl(200deg, 20%, 86%);
+  /* Tokens */
+  --color-red-400: hsl(0deg, 50%, 40%);
+  --color-red-500: hsl(0deg, 50%, 50%);
+  --color-red-600: hsl(0deg, 70%, 60%);
+  --color-white: hsl(200deg, 20%, 100%);
+  --color-white-alpha: hsla(200deg, 20%, 100%, 0.9);
+  --color-black-970: hsl(200deg, 20%, 97%);
+  --color-black-930: hsl(200deg, 20%, 93%);
+  --color-black-860: hsl(200deg, 20%, 86%);
+  --color-black-600: hsl(200deg, 20%, 60%);
+  --color-black-350: hsl(200deg, 20%, 35%);
+  --color-black-240: hsl(200deg, 20%, 24%);
+  --color-black-180: hsl(200deg, 20%, 18%);
+  --color-black-140: hsl(200deg, 20%, 14%);
+  --color-black-100: hsl(200deg, 20%, 10%);
+  --color-black-100-alpha: hsla(200deg, 20%, 10%, 0.9);
+  --color-yellow-800: hsl(50deg, 80%, 80%);
+  --color-yellow-750: hsl(50deg, 80%, 75%);
+  --color-yellow-200: hsl(50deg, 80%, 20%);
+  --color-brown-600: hsl(50deg, 10%, 60%);
+  --color-brown-160: hsl(50deg, 10%, 16%);
+  --color-brown-200: hsl(50deg, 10%, 20%);
+
+  /* Theme light in light mode */
+  --color-primary: var(--color-red-500);
+  --color-primary-1: var(--color-red-400);
+  --color-foreground: var(--color-black-100);
+  --color-foreground-1: var(--color-black-350);
+  --color-background: var(--color-white);
+  --color-background-a: var(--color-white-alpha);
+  --color-background-1: var(--color-black-970);
+  --color-background-2: var(--color-black-930);
+  --color-background-3: var(--color-black-860);
 
   /* Borders */
   --border-radius-small: 5px;
@@ -65,40 +89,41 @@
 
 /* Theme dark in light mode */
 :root.is-reverse {
-  --color-primary: hsl(0deg, 70%, 60%);
-  --color-primary-1: hsl(0deg, 50%, 40%);
-  --color-foreground: hsl(0deg, 0%, 100%);
-  --color-foreground-1: hsl(0deg, 0%, 60%);
-  --color-background: hsl(200deg, 20%, 10%);
-  --color-background-a: hsla(200deg, 20%, 10%, 0.9);
-  --color-background-1: hsl(200deg, 20%, 14%);
-  --color-background-2: hsl(200deg, 20%, 18%);
-  --color-background-3: hsl(200deg, 20%, 24%);
+  --color-primary: var(--color-red-600);
+  --color-primary-1: var(--color-red-400);
+  --color-foreground: var(--color-white);
+  --color-foreground-1: var(--color-black-600);
+  --color-background: var(--color-black-100);
+  --color-background-a: var(--color-black-100-alpha);
+  --color-background-1: var(--color-black-140);
+  --color-background-2: var(--color-black-180);
+  --color-background-3: var(--color-black-240);
 }
 
 @media (prefers-color-scheme: dark) {
+  /* Theme dark in dark mode */
   :root {
-    --color-primary: hsl(0deg, 70%, 60%);
-    --color-primary-1: hsl(0deg, 50%, 40%);
-    --color-foreground: hsl(0deg, 0%, 100%);
-    --color-foreground-1: hsl(0deg, 0%, 60%);
-    --color-background: hsl(200deg, 20%, 10%);
-    --color-background-a: hsla(200deg, 20%, 10%, 0.9);
-    --color-background-1: hsl(200deg, 20%, 14%);
-    --color-background-2: hsl(200deg, 20%, 18%);
-    --color-background-3: hsl(200deg, 20%, 24%);
+    --color-primary: var(--color-red-600);
+    --color-primary-1: var(--color-red-400);
+    --color-foreground: var(--color-white);
+    --color-foreground-1: var(--color-black-600);
+    --color-background: var(--color-black-100);
+    --color-background-a: var(--color-black-100-alpha);
+    --color-background-1: var(--color-black-140);
+    --color-background-2: var(--color-black-180);
+    --color-background-3: var(--color-black-240);
   }
   /* Theme light in dark mode */
   :root.is-reverse {
-    --color-primary: hsl(0deg, 50%, 50%);
-    --color-primary-1: hsl(0deg, 50%, 40%);
-    --color-foreground: hsl(200deg, 20%, 10%);
-    --color-foreground-1: hsl(200deg, 20%, 35%);
-    --color-background: hsl(200deg, 20%, 100%);
-    --color-background-a: hsla(200deg, 20%, 100%, 0.9);
-    --color-background-1: hsl(200deg, 20%, 97%);
-    --color-background-2: hsl(200deg, 20%, 93%);
-    --color-background-3: hsl(200deg, 20%, 86%);
+    --color-primary: var(--color-red-500);
+    --color-primary-1: var(--color-red-400);
+    --color-foreground: var(--color-black-100);
+    --color-foreground-1: var(--color-black-350);
+    --color-background: var(--color-white);
+    --color-background-a: var(--color-white-alpha);
+    --color-background-1: var(--color-black-970);
+    --color-background-2: var(--color-black-930);
+    --color-background-3: var(--color-black-860);
   }
 }
 

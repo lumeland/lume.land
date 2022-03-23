@@ -1,7 +1,7 @@
 .tip {
-  --color-tip: hsl(50deg, 80%, 80%);
-  --color-tip-foreground: hsl(50deg, 80%, 20%);
-  --color-tip-1: hsl(50deg, 80%, 75%);
+  --color-tip: var(--color-yellow-800);
+  --color-tip-foreground: var(--color-yellow-200);
+  --color-tip-1: var(--color-yellow-750);
 
   font: var(--text-caption);
   letter-spacing: 0;
@@ -21,9 +21,23 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    --color-tip-foreground: hsl(50deg, 10%, 60%);
-    --color-tip: hsl(50deg, 10%, 16%);
-    --color-tip-1: hsl(50deg, 10%, 20%);
+    --color-tip-foreground: var(--color-brown-600);
+    --color-tip: var(--color-brown-160);
+    --color-tip-1: var(--color-brown-200);
     background-blend-mode: screen;
+  }
+}
+:root.is-reverse .tip {
+  --color-tip-foreground: var(--color-brown-600);
+  --color-tip: var(--color-brown-160);
+  --color-tip-1: var(--color-brown-200);
+  background-blend-mode: screen;
+}
+@media (prefers-color-scheme: dark) {
+  :root.is-reverse .tip {
+    --color-tip: var(--color-yellow-800);
+    --color-tip-foreground: var(--color-yellow-200);
+    --color-tip-1: var(--color-yellow-750);
+    background-blend-mode: initial;
   }
 }

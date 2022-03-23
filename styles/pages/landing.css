@@ -64,10 +64,11 @@
   margin: 5px 0;
 
   & pre {
-    background: var(--color-foreground);
-    color: var(--color-background);
+    background: var(--color-black-140);
+    color: var(--color-white);
     padding: 20px 25px;
     border-radius: var(--border-radius) 0 0 var(--border-radius);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .1);
   }
 }
 .landing-install-cta {
