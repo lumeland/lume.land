@@ -70,6 +70,12 @@ sites:
     description: An enhancer/customiser for the all-in-one productivity workspace notion.so
     code: https://github.com/notion-enhancer/notion-enhancer.github.io
 
+  - title: Deniz Akşimşek
+    # img: /img/showcase/denizaksimsek.webp
+    url: https://denizaksimsek.com/
+    description: Personal website with webmentions, intl, backlinks and post timestamps pulled from git
+    code: https://github.com/dz4k/denizaksimsek.com
+
   - title: Exact Report Generator
     url: https://exact-report-generator.vercel.app/
     description: A tool to create financial reports

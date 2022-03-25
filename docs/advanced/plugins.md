@@ -35,7 +35,7 @@ site.process([".css"], (page) => {
 export default site;
 ```
 
-We can encapsulate this code inside a banner, and even include some
+We can encapsulate this code inside a plugin, and even include some
 configuration:
 
 ```ts
