@@ -5,10 +5,8 @@ header:
   title: Lume is a simple & elegant static site generator for Deno
 
 install:
-  title: "Run the following to install:"
+  title: "Run the following to [install](./docs/overview/about-lume.md):"
   code: deno run -A https://deno.land/x/lume/install.ts
-  footer: |
-    Make sure [you have Deno installed](https://deno.land/manual/getting_started/installation).
   url: /tutorial/your-first-page/
 
 usage:
