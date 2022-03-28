@@ -86,16 +86,13 @@ site.use(date({
 ## Locales
 
 `date-fns` has support for
-[multiple locales](https://deno.land/x/date_fns/locale). If you want to use
-them, just import and register them in `_config.ts`:
+[multiple locales](https://deno.land/x/date_fns/locale). You can configure them in `_config.ts`:
 
 ```js
 import date from "lume/plugins/date.ts";
-import gl from "lume/plugins/date/locale/gl/index.js";
-import es from "lume/plugins/date/locale/es/index.js";
 
 site.use(date({
-  locales: { gl, es },
+  locales: ["gl", "es"],
 }));
 ```
 
@@ -103,7 +100,7 @@ Use the second argument to set the locale:
 
 ```html
 <time datetime="{{ createdAt | date }}">
-  {{ createdAt | date('HUMAN_DATE', 'gl') }}
+  {{ createdAt | date("HUMAN_DATE", "gl") }}
 </time>
 ```
 
