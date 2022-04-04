@@ -33,10 +33,8 @@ Use the `imagick` plugin to process image files using the
 manipulation library with support for over 100 major file formats. With this
 plugin you can resize, rotate and convert any image to other format.
 
-The plugin reads the data assigned to image files (specifically the `imagick`
-key). Unlike other formats like `.md` or `.njk`, the image files (`.png`, `.jpg`
-etc) does not contain front matter, so the way to assign data to these pages is
-using a `_data` file.
+The plugin read the data assigned to the image files (specifically the `imagick`
+key) to know how to transform the image.
 
 ## Example
 
@@ -53,12 +51,16 @@ imagick:
 
 </lume-code>
 
+This file assigns this data to all image pages in this folder and subfolders
+(see [Shared data](../docs/creating-pages/shared-data.md) for more info about
+`_data` files). The plugin will read the data, resize all images to 200x200 and
+convert them to webp format.
+
 ## Multiple outputs
 
-With this code, the plugin will resize all images to 200x200 and convert to webp
-format. If you need to create multiple versions of the same image file (for
-responsive design, for example), use an array of values. Make sure to include
-the `suffix` key to generate different names of the output files:
+If you need to create multiple versions of the same image file (for responsive
+design, for example), use an array of values. Make sure to include the `suffix`
+key to generate different names of the output files:
 
 <lume-code>
 
