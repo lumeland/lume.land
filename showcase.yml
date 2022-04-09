@@ -10,23 +10,23 @@ description: |
 sites:
   - title: Base Blog
     url: https://lumeland.github.io/base-blog/
-    description: The official starter to build a blog
+    description: The official starter to build a blog.
     code: https://github.com/lumeland/base-blog
 
   - title: Muse Blog
     url: https://lume-blog-muse.pages.dev/
-    description: A starter template to build a blog for musicians
+    description: A starter template to build a blog for musicians.
     code: https://github.com/NeroBlackstone/lume-blog-muse
 
   - title: Todo App
     url: https://lumeland.github.io/react-todo/
-    description: Example of a React app with bundled and minified `tsx` code
+    description: Example of a React app with bundled and minified `tsx` code.
     code: https://github.com/lumeland/react-todo
 
   - title: Lume
     img: /img/showcase/lume.webp
     url: https://lume.land/
-    description: This web site
+    description: This web site.
     code: https://github.com/lumeland/lume.land
 
   - title: NM type
@@ -37,7 +37,7 @@ sites:
   - title: OAK Studio
     img: /img/showcase/oak.webp
     url: https://oakstudio.co/
-    description: A creative agency based in Bartlesville, Oklahoma
+    description: A creative agency based in Bartlesville, Oklahoma.
     code: https://github.com/bradeneast/oakstudio.co
 
   - title: Tarugo 21
@@ -49,14 +49,20 @@ sites:
   - title: Tobias Schmidt
     img: /img/showcase/tobias.webp
     url: https://tobiasschmidt.me/
-    description: The personal blog of Tobias Schmidt
+    description: The personal blog of Tobias Schmidt.
     code: https://github.com/tobiasschmidt89/tobiasschmidt.me
 
   - title: Braden East
     img: /img/showcase/bradeneast.webp
     url: https://bradeneast.com/
-    description: The personal site of Branden East
+    description: The personal site of Branden East.
     code: https://github.com/bradeneast/bradeneast.com
+
+  - title: jQuery Cheat Sheet
+    img: /img/showcase/jquery.webp
+    url: https://oscarotero.com/jquery/
+    description: An interactive reference for all versions of jQuery.
+    code: https://github.com/oscarotero/jquery-cheatsheet
 
   - title: Tarugo5
     img: /img/showcase/tarugo5.webp
@@ -67,71 +73,71 @@ sites:
   - title: Notion enhancer
     img: /img/showcase/notion-enhancer.webp
     url: https://notion-enhancer.github.io/
-    description: An enhancer/customiser for the all-in-one productivity workspace notion.so
+    description: An enhancer/customiser for the all-in-one productivity workspace notion.so.
     code: https://github.com/notion-enhancer/notion-enhancer.github.io
 
   - title: Deniz Akşimşek
     # img: /img/showcase/denizaksimsek.webp
     url: https://denizaksimsek.com/
-    description: Personal website with webmentions, intl, backlinks and post timestamps pulled from git
+    description: Personal website with webmentions, intl, backlinks and post timestamps pulled from git.
     code: https://github.com/dz4k/denizaksimsek.com
 
   - title: Exact Report Generator
     url: https://exact-report-generator.vercel.app/
-    description: A tool to create financial reports
+    description: A tool to create financial reports.
     code: https://github.com/WilcoKruijer/ExactReportGenerator
 
   - title: Macadam Grinding
     url: https://macadamgrinding.com/
-    description: A blog about cycling by Isaac Tait
+    description: A blog about cycling by Isaac Tait.
     code: https://github.com/Isaac-Tait/macadamGrinding_denoStyle
 
   - title: Ensino
     url: https://laurarubio.net/
-    description: A collection of resources for Galego teachers by Laura Rubio
+    description: A collection of resources for Galego teachers by Laura Rubio.
     code: https://github.com/laura-rubio/ensino
 
   - title: Kusaeni
     #img: /img/showcase/kusaeni.webp
     url: https://kusaeni.com/
-    description: The personal blog of Kusaeni
+    description: The personal blog of Kusaeni.
     code: https://notabug.org/kuspoes/kusaicom
 
   - title: Fabon
     url: https://www.fabon.info/
-    description: The personal website of Fabon
+    description: The personal website of Fabon.
     code: https://github.com/fabon-f/website
 
   - title: Better Know Canvas
     url: https://canvas.rocks/
-    description: A collection of advanced web graphics tutorials by Fernando Serboncini
+    description: A collection of advanced web graphics tutorials by Fernando Serboncini.
     code: https://github.com/fserb/bkc
 
   - title: DenissB
-    img: /img/showcase/denissb.webp
+    # img: /img/showcase/denissb.webp
     url: https://denissb.github.io/
-    description: A personal website of a web developer
+    description: A personal website of a web developer.
     code: https://github.com/denissb/denissb.github.io
 
   - title: Johan Brook
     img: /img/showcase/johan.webp
     url: https://johanbrook.com
-    description: The personal website and blog of Johan
+    description: The personal website and blog of Johan.
     code: https://github.com/johanbrook/johanbrook.com
 
   - title: scarf@127.0.0.1
     url: https://www.maribel.dev/
-    description: The personal blog of scarf
+    description: The personal blog of scarf.
     code: https://github.com/scarf005/scarf005.github.com
 
   - title: aiotter
     img: /img/showcase/aiotter.webp
     url: https://aiotter.com/
-    description: The technical blog of Yuto Oguchi
+    description: The technical blog of Yuto Oguchi.
     code: https://github.com/aiotter/blog
 
   - title: Velociraptor
     img: /img/showcase/velociraptor.webp
     url: https://velociraptor.run/
-    description: The documentation of Velociraptor script runner for Deno
+    description: The documentation of Velociraptor script runner for Deno.
     code: https://github.com/jurassiscripts/velociraptor-dot-run
