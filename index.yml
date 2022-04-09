@@ -225,7 +225,7 @@ features:
 
   - title: Zero runtime overhead
     img: /icons/stack.svg
-    description: Lume only exports your code. No extra JavaScript for the client to load content or hydratation generated magically.
+    description: Lume only exports your code. It doesn't generate any extra JavaScript code.
 
   - title: Deploy anywhere
     img: /icons/deploy.svg
