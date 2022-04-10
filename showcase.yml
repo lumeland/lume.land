@@ -76,11 +76,12 @@ sites:
     description: An enhancer/customiser for the all-in-one productivity workspace notion.so.
     code: https://github.com/notion-enhancer/notion-enhancer.github.io
 
-  - title: Deniz Akşimşek
-    # img: /img/showcase/denizaksimsek.webp
-    url: https://denizaksimsek.com/
-    description: Personal website with webmentions, intl, backlinks and post timestamps pulled from git.
-    code: https://github.com/dz4k/denizaksimsek.com
+  - title: Hyro
+    img: /img/showcase/hyro.webp
+    url: https://hyro.pages.dev/
+    description: Personal website by Hyro.
+    code: https://github.com/xHyroM/xHyroM
+
 
   - title: Exact Report Generator
     url: https://exact-report-generator.vercel.app/
@@ -98,10 +99,16 @@ sites:
     code: https://github.com/laura-rubio/ensino
 
   - title: Kusaeni
-    #img: /img/showcase/kusaeni.webp
+    img: /img/showcase/kusaeni.webp
     url: https://kusaeni.com/
     description: The personal blog of Kusaeni.
     code: https://notabug.org/kuspoes/kusaicom
+
+  - title: Deniz Akşimşek
+    img: /img/showcase/denizaksimsek.webp
+    url: https://denizaksimsek.com/
+    description: Personal website with webmentions, intl, backlinks and post timestamps pulled from git.
+    code: https://github.com/dz4k/denizaksimsek.com
 
   - title: Fabon
     url: https://www.fabon.info/
@@ -114,7 +121,7 @@ sites:
     code: https://github.com/fserb/bkc
 
   - title: DenissB
-    # img: /img/showcase/denissb.webp
+    img: /img/showcase/denissb.webp
     url: https://denissb.github.io/
     description: A personal website of a web developer.
     code: https://github.com/denissb/denissb.github.io
