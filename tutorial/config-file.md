@@ -42,7 +42,7 @@ Once the command finish you will see 3 new files:
   `deno task build` and `deno task serve` (useful for environments without Lume
   installed as CLI).
 
-This is an example of a typical `_config` file:
+This is an example of these three configuration files:
 
 <lume-code>
 
@@ -52,6 +52,24 @@ import lume from "lume/mod.ts";
 const site = lume();
 
 export default site;
+```
+
+```json {title="deno.json"}
+{
+  "importMap": "import_map.json",
+  "tasks": {
+    "build": "deno run -A https://deno.land/x/lume@v1.7.2/ci.ts",
+    "serve": "deno task build -- -s"
+  }
+}
+```
+
+```json {title="import_map.json"}
+{
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v1.7.2/"
+  }
+}
 ```
 
 </lume-code>
