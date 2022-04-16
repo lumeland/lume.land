@@ -39,7 +39,7 @@
   justify-self: center;
 
   @media (min-width: 1000px) {
-    font-size: min(2.5vw, 40px);
+    font-size: min(2.5vw, 30px);
   }
 }
 
