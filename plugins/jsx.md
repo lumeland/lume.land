@@ -26,6 +26,17 @@ export default site;
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/jsx.ts/~/Options).
 
+You might want to add following fields to deno.json in order to tell Deno that Lume exposes React in global scope:
+
+```json
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "https://esm.sh/react@18.0.0"
+  }
+}
+```
+
 ## Description
 
 [JSX](https://facebook.github.io/jsx/) (or the equivalent TSX for TypeScript) is
