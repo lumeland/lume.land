@@ -13,27 +13,49 @@ lume-code {
   
   & .hljs {
     border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+    border-top: 0 !important;
   }
 
   & .lume-code-menu {
     display: flex;
     list-style: none;
-    padding: 10px;
+    padding: 0 1em;
     margin: 0;
     background: var(--color-background-2);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    column-gap: 10px;
     overflow-x: auto;
+    column-gap: 1px;
 
     & li {
       margin: 0;
     }
+  }
+}
 
-    & .button.is-secondary {
-      display: block;
-      --background: var(--color-background-2);
-      --background-hover: var(--color-background-3);
-    }
+.lume-code-tab {
+  --background: var(--color-background-2);
+  --background-hover: var(--color-background-3);
+
+  display: block;
+  border: none;
+  border-radius: 0;
+  padding: 10px 1em;
+  font: var(--text-caption);
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: var(--animation-duration);
+  background: var(--color-background-2);
+  color: var(--color-foreground-1);
+
+  &:hover {
+    background: var(--color-background-1);
+    color: var(--color-foreground);
+  }
+
+  &.is-active {
+    background: var(--color-background-1);
+    color: var(--color-foreground);
+    font: var(--text-caption-bold);
   }
 }
 

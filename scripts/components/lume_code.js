@@ -9,7 +9,7 @@ export default class LumeCode extends HTMLElement {
       const li = document.createElement("li");
       const button = document.createElement("button");
       button.innerText = title;
-      button.classList.add("button", "is-secondary");
+      button.classList.add("lume-code-tab");
       button.addEventListener("click", () => {
         blocks.forEach((el) => el.hidden = el !== block);
         this.querySelectorAll("button.is-active").forEach((el) =>
