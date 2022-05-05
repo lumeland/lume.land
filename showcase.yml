@@ -32,7 +32,7 @@ sites:
   - title: Achraf Garai
     img: /img/showcase/achrafgarai.webp
     url: https://achrafgarai.github.io/Portfolio/
-    description: Portfolio of Achraf Garai, senior product designer.
+    description: A personal portfolio website of Achraf Garai.
     code: https://github.com/AchrafGarai/Portfolio
 
   - title: NM type

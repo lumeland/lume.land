@@ -2,7 +2,7 @@ layout: layouts/landing.njk
 title: Lume, the static site generator for Deno
 description: Support for multiple file formats like Markdown, YAML, JavaScript, TypeScript, JSX, Nunjucks etc.
 header:
-  title: Lume is a simple & elegant static site generator for Deno
+  title: Lume is a <span>simple & elegant</span> static site generator for Deno
 
 install:
   title: "Run the following to [install](./docs/overview/about-lume.md):"
