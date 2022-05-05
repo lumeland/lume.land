@@ -29,6 +29,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Achraf Garai
+    img: /img/showcase/achrafgarai.webp
+    url: https://achrafgarai.github.io/Portfolio/
+    description: Portfolio of Achraf Garai, senior product designer.
+    code: https://github.com/AchrafGarai/Portfolio
+
   - title: NM type
     img: /img/showcase/nmtype.webp
     url: https://nmtype.com/
