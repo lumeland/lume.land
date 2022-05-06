@@ -3,7 +3,7 @@ title: Metas
 docs: plugins/metas.ts/~/Options
 description: Add automatically `<meta>` tags for SEO and social networks.
 tags:
-  - utils
+  - html
 ---
 
 ${toc}
