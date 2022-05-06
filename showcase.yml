@@ -127,7 +127,7 @@ sites:
     code: https://github.com/fserb/bkc
 
   - title: DenissB
-    img: /img/showcase/denissb.webp
+    # img: /img/showcase/denissb.webp
     url: https://denissb.github.io/
     description: A personal website of a web developer.
     code: https://github.com/denissb/denissb.github.io
