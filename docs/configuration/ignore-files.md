@@ -21,3 +21,13 @@ The following paths are **always ignored**:
 - `node_modules`
 - `import_map.json`
 - `deno.json`
+
+## Ignore function
+
+Starting from Lume `v1.8.0` you can set functions for more advanced filtering.
+Example:
+
+```js
+// Ignore all files with ".md" extension inside the "draft" folder
+site.ignore((path) => path.match(/^\/draft\/.*\.md$/));
+```

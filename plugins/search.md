@@ -195,25 +195,31 @@ current page. Let's see an example:
 {% endif %}
 ```
 
-## Searching tags
+## Get all values of a key
 
-The function `tags` returns the list of all available tags. You can use the
-first argument to filter the pages of which you want to get the tags. For
-example, to list all tags used by pages with the category `sport`:
+The function `values()` returns all values found of a specific key, removing
+duplicates. For example, let's say your pages have the variable `author` and you
+want to list all authors:
 
 ```html
-<strong>List of tags in sport:</strong>
+<strong>List of authors:</strong>
 
 <ul>
-  {% for tag in search.tags("category=sport") %}
+  {% for author in search.values("author") %}
   <li>
-    <a href="/tags/{{ tag }}">
-      {{ tag }}
-    </a>
+    {{ author }}
   </li>
   {% endfor %}
 </ul>
 ```
+
+Use the second argument to filter the pages to get the values. For example, to
+get the authors of pages in the category `sport`:
+`search.values("author", "category=sport")`
+
+There's the function `search.tags()` for backward compatibility. It's the
+equivalent of using `search.values("tags")`, to return all tags found in some
+pages.
 
 ## Searching data
 

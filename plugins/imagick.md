@@ -120,3 +120,25 @@ imagick:
   resizeBlur: 20
   format: webp
 ```
+
+## Cache
+
+For sites with many images, it may be interesting to cache the transformed
+images, improving the build speed significally. Use the `cache` option:
+
+```js
+import lume from "lume/mod.ts";
+import imagick from "lume/plugins/imagick.ts";
+
+const site = lume();
+
+site.use(imagick({
+  cache: true,
+}));
+
+export default site;
+```
+
+This will create a `_cache` folder to save the images. If you want to save in a
+different folder, set the folder name instead `true`. For example:
+`cache: "_cache/images"`.

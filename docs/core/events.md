@@ -39,6 +39,8 @@ build. Use **afterUpdate** for subsequent changes.
 ```js
 site.addEventListener("afterBuild", () => {
   console.log("The build is finished");
+  console.log(event.pages); // The pages that have been build
+  console.log(event.staticFiles); // The files that have been copied
 });
 ```
 
@@ -71,6 +73,8 @@ This event is triggered after re-build the site after detecting changes with
 site.addEventListener("afterUpdate", (event) => {
   console.log("Site updated");
   console.log(event.files); // The files that have changed
+  console.log(event.pages); // The pages that have been rebuilt
+  console.log(event.staticFiles); // The static files that have been copied again
 });
 ```
 

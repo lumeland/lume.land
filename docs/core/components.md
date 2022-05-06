@@ -59,6 +59,34 @@ Eta templates:
 
 Etc.
 
+### Nested components in Nunjucks
+
+In Nunjucks you can nest components in this way:
+
+```html
+{% comp "Container" %}
+  Content of the Container component
+
+  {% comp "Button" %}
+  This is a button inside the Contaner component
+  {% endcomp %}
+{% endcomp %}
+```
+
+The content of the components are passed in the `content` key:
+
+<lume-code>
+
+```html {title="_components/container.njk"}
+<section class="container">{{ content | safe }}</section>
+```
+
+```html {title="_components/button.njk"}
+<button>{{ content | safe }}</button>
+```
+
+</lume-code>
+
 ## Component assets
 
 Components can export CSS and JS code. To do that, the component need to export
