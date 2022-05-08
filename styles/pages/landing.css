@@ -106,7 +106,6 @@
 .landing-usage-text {
   font: var(--text-caption);
   color: var(--color-foreground-1);
-  align-self: center;
   max-width: 30em;
 
   & h2 {
