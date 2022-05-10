@@ -37,7 +37,7 @@
   --color-black-970: hsl(200deg, 20%, 97%);
   --color-black-930: hsl(200deg, 20%, 93%);
   --color-black-860: hsl(200deg, 20%, 86%);
-  --color-black-600: hsl(200deg, 20%, 60%);
+  --color-black-650: hsl(200deg, 20%, 65%);
   --color-black-350: hsl(200deg, 20%, 35%);
   --color-black-240: hsl(200deg, 20%, 24%);
   --color-black-180: hsl(200deg, 20%, 18%);
@@ -92,7 +92,7 @@
   --color-primary: var(--color-red-600);
   --color-primary-1: var(--color-red-400);
   --color-foreground: var(--color-white);
-  --color-foreground-1: var(--color-black-600);
+  --color-foreground-1: var(--color-black-650);
   --color-background: var(--color-black-100);
   --color-background-a: var(--color-black-100-alpha);
   --color-background-1: var(--color-black-140);
@@ -106,7 +106,7 @@
     --color-primary: var(--color-red-600);
     --color-primary-1: var(--color-red-400);
     --color-foreground: var(--color-white);
-    --color-foreground-1: var(--color-black-600);
+    --color-foreground-1: var(--color-black-650);
     --color-background: var(--color-black-100);
     --color-background-a: var(--color-black-100-alpha);
     --color-background-1: var(--color-black-140);
