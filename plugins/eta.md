@@ -50,7 +50,7 @@ intro: This is my first post using lume, I hope you like it!
   </head>
 
   <body>
-    <%~ includeFile("partials/nav.eta") %>
+    <%~ await includeFile("partials/nav.eta") %>
 
     <p><%= title %></p>
   </body>
