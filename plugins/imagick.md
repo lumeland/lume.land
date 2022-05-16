@@ -123,8 +123,8 @@ imagick:
 
 ## Cache
 
-For sites with many images, it may be interesting to cache the transformed
-images, improving the build speed significally. Use the `cache` option:
+This plugin save the transformed images in the `_cache` folder to improve the
+build speed. If you want to disable the cache, set this option to `false`.
 
 ```js
 import lume from "lume/mod.ts";
@@ -133,12 +133,11 @@ import imagick from "lume/plugins/imagick.ts";
 const site = lume();
 
 site.use(imagick({
-  cache: true,
+  cache: false, // Disable cache
 }));
 
 export default site;
 ```
 
-This will create a `_cache` folder to save the images. If you want to save in a
-different folder, set the folder name instead `true`. For example:
-`cache: "_cache/images"`.
+This option allows to customize the cache folder. For example:
+`cache: "_imagick-cache"`.

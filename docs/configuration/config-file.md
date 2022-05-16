@@ -120,6 +120,10 @@ const site = lume({
 });
 ```
 
+The string value `no-html-extension` allows to save the files as
+`/about-us.html` but generate the urls without extension extension
+(`/about-us`).
+
 ## Server options
 
 The `server` key contains the configuration for the local server. It has the

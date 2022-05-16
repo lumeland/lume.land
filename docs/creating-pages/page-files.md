@@ -77,6 +77,17 @@ numbers:
     └── 3_downloads.md         => /docs/downloads/index.html
 ```
 
+From `Lume v1.9`, dates can be defined in folders:
+
+```txt
+.
+├── index.md                          => /index.html
+└── posts
+    └── 2020-06-21_hello-world/
+        └── index.md     => /posts/hello-world/index.html
+        └── other.md     => /posts/hello-world/other/index.html
+```
+
 ## Ignored pages
 
 All files or directories starting with `_` are ignored by **lume** to generate

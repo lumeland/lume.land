@@ -31,6 +31,36 @@ site.copy("static-files/favicons/favicon.ico", "favicon.ico");
 site.copy("assets", ".");
 ```
 
-The method `site.copy()` only accepts files and folders. Patterns like
-`img/*.png` are not supported. The files and folders copied are not processed,
-even if they have known extensions like `.md`, `.njk`, etc.
+## Copy by file extension
+
+An additional way to select files to copy is by extension. Use an array with the
+extensions:
+
+```js
+// Copy all image files
+site.copy([".jpg", ".gif", ".png"]);
+```
+
+This will copy all files with the extensions `.jpg`, `.gif` and `.png`, keeping
+the original file structure. For example, a the file `/img/pictures/image.jpg`
+will be copied in to `_site/img/pictures/image.jpg` folder.
+
+You cannot set a custom folder destination to files selected by extensions. For
+example `site.copy([".pdf"], "/pdf-files")` will fail. {.tip}
+
+## Customize the destination
+
+For more fine tuning about the file destination, you can provide a function in
+the second argument that accept the original file path and must return the
+destination path:
+
+```js
+// Copy all images but ensure they are lower case
+site.copy([".jpg", ".gif", ".png"], (file) => file.toLowerCase());
+
+// Copy all images in the /img/ directory
+site.copy([".jpg", ".gif", ".png"], (file) => "/img" + file);
+```
+
+The copied files are not processed, even if they have known extensions like
+`.md`, `.njk`, etc. {.tip}

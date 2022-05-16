@@ -13,7 +13,7 @@ const server = new Server({
 server.use(expires());
 server.use(cacheBusting());
 server.use(analytics({
-  id: "UA-110819-22"
+  id: "UA-110819-22",
 }));
 
 server.start();

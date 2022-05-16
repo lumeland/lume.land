@@ -14,46 +14,114 @@ There are different types of files:
 ## Page files
 
 A page file is a file that is loaded, processed and saved to the `dest` folder
-generating one or more pages. For example, a `.md` file (markdown) is a page
-file, because it's loaded, rendered and saved as html file.
+generating one or more pages. In Lume there are two different types of pages:
 
-But pages not only export `html` files: `css`, `js`, `svg` files can be pages.
-For example, you can create a `.js` page file to generate a `.css` file. Or
-another example: if you enable a plugin like [postcss](../../plugins/postcss.md)
-to load `.css` files, process and save them into `dest` folder, this convert
-`.css` files as "Pages".
+### Regular pages
 
-By default lume interprets the following formats as page files, so they are
-loaded, processed and exported to `dest` folder: `.md`, `.njk`, `.tmpl.json`,
-`.tmpl.js`, `.tmpl.ts` and `.yaml`.
+Are files intended to generate HTML pages. Let's take `my-page.md` as an
+example:
+
+- Load the content of the file.
+- Replace the extension `.md` with `.html`. If `prettyUrls` is enabled, append
+  `/index` to the file name.
+- (Pre)process the page, render the markdown and apply the layout (if defined).
+- Save the output file as `/my-page/index.html`.
+
+By default Lume interprets the following formats as regular page files, so they
+are loaded, processed and exported to `dest` folder: `.md`, `.njk`,
+`.tmpl.json`, `.tmpl.js`, `.tmpl.ts` and `.yaml`. Use `site.loadPages()` to add
+additional extensions:
+
+```ts
+// To load /my-page.foo and output /my-page/index.html
+site.loadPages([".foo"]);
+```
+
+If you're using any plugin to provide support for a new template engine, like
+[pug](../../plugins/pug.md) or [eta](../../plugins/eta.md), don't need to run
+`site.loadPages()` because the plugin does it for you. {.tip}
+
+Note that regular pages are not always exported as `.html` files. You can
+configure a different output with the
+[`url` variable](../creating-pages/urls.md), but the way Lume handle them is the
+same.
+
+### Asset pages
+
+Are pages intended to output assets, like `.css` files, `.js` or images. They
+are very similar to regular pages but with a couple of differences. Let's take
+`my-styles.css` as an example:
+
+- Load the content of the file.
+- The original extension **isn't replaced** and `prettyUrls` configuration
+  **doesn't apply.**
+- Render and pre/process the page, **but the layout value isn't used.**
+- Save the output file as `/my-styles.css`.
+
+Lume doesn't load any asset by default. Use the function `site.loadAssets()` to
+configure Lume to load some extensions as page assets. For example:
+
+```ts
+// Load .css files
+site.loadAssets([".css"]);
+```
+
+If you're using any plugin to process assets, like
+[postcss](../../plugins/postcss.md), [esbuild](../../plugins/esbuild.md) or
+[svgo](../../plugins/svgo.md), don't need to run `site.loadAssets()` because the
+plugin does it for you. {.tip}
 
 ## Data files
 
 Data files are the files saved as `_data.*` or in a `_data/` directory. Like
 pages, they are loaded but don't generate pages but are used by the page files
 to access to interesting data. The following files are interpreted as data
-files: `_data.yaml`, `_data.ts`, `_data.js`, `_data.json`.
+files: `_data.yaml`, `_data.ts`, `_data.js`, `_data.json`. If you want to load
+additional data formats, use `site.loadData()` function:
+
+```ts
+// Load .toml files
+site.loadData([".toml"], tomlLoader);
+```
 
 ## Static files
 
-They are files that are exportedt to the `dest` folder but don't need to be
-processed. They are copied as is using the `site.copy()` function.
+They are files that are exported to the `dest` folder but don't need to be
+processed, so Lume doesn't load the content, only copy them. They are copied as
+is using the `site.copy()` function.
+[See more about copy](../configuration/copy-static-files.md).
+
+```ts
+// Copy all files from the "/static/" directory
+site.copy("static");
+
+// Copy .pdf files
+site.copy([".pdf"]);
+```
 
 ## Includes
 
-Are files that are loaded by the pages, for example the layouts or templates.
-They used to be in the `_includes` folder but not always. Components could be
-included in this group too.
+Are files that are loaded by the pages, for example the layouts or templates. By
+default, they are placed in the `_includes` folder but you can configure it.
+
+```ts
+// Save the layouts files of nunjucks in the "/njk/" directory
+site.includes([".njk"], "/njk/");
+```
+
+## Components
+
+By default are saved in the `_components` folder and store reusable pieces of
+code that you can use in your templates. You can load additional components with
+`site.loadComponents()` function. [See more about components](./components.md)
+
+```ts
+// Load vue components
+site.loadComponents([".vue"], vueLoader, vueRenderer);
+```
 
 ## Plugins
 
 Everything in Lume is a plugin. Even the support of core formats like `.md`,
 `.yaml`, `.json` etc is provided by some
 [plugins that **enabled by default**](../../../plugins/index.yml?status=enabled)
-
-## Extensions
-
-The extension of the files determine if they are a page file or a data file. If
-a file has an unknown extension or not extension at all, it will be ignored.
-Even popular extensions like `.css`, `.js`, `.png` etc are not loaded by
-default. You have to use a plugin or configure lume to load and process them.
