@@ -28,8 +28,7 @@ To update Lume to the latest version, use the command:
 lume upgrade
 ```
 
-If you get an error upgrading from an old versions of Lume, just install it
-again. { .tip }
+If you get an error upgrading from an old versions of Lume, just reinstall it. { .tip }
 
 Use the command `lume upgrade --dev` to install the latest development version
 (the last commit in the [Github repository](https://github.com/lumeland/lume)).
@@ -43,9 +42,3 @@ It's useful for CI environments:
 ```sh
 deno run -A https://deno.land/x/lume/ci.ts
 ```
-
-## Docker image
-
-There's a docker image at
-[oscarotero/lume](https://hub.docker.com/r/oscarotero/lume) that you can use for
-some CI environments.
