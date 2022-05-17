@@ -42,3 +42,7 @@ It's useful for CI environments:
 ```sh
 deno run -A https://deno.land/x/lume/ci.ts
 ```
+
+### Deno tasks
+
+Additionally, the command `lume init` not only create a configuration file but also a `deno.json` file with [deno tasks](https://deno.land/manual/tools/task_runner). This allows to run Lume in any environment with `deno task build` (to build the site) or `deno task serve` (to build and start a local server). Deno tasks is already an unstable feature but as soon as is stabilized, it will be the recommended way to run Lume.
