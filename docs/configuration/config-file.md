@@ -6,17 +6,19 @@ order: 1
 
 ${toc}
 
-**Lume** has a default behaviour that is enough for simple cases, but if you want to copy or process additional files, use plugins or change some default settings, you must create a configuration file.
+**Lume** has a default behaviour that is enough for simple cases, but if you
+want to copy or process additional files, use plugins or change some default
+settings, you must create a configuration file.
 
-The configuration file is a `_config.ts` or `_config.js`, saved in the site's root directory, which you can
-create yourself or with the following command:
+The configuration file is a `_config.ts` or `_config.js`, saved in the site's
+root directory, which you can create yourself or with the following command:
 
 ```sh
 lume init
 ```
 
-It's a JavaScript/TypeScript module that exports a Lume instance. The
-minimal required code is:
+It's a JavaScript/TypeScript module that exports a Lume instance. The minimal
+required code is:
 
 ```js
 import lume from "lume/mod.ts";
@@ -26,7 +28,8 @@ const site = lume();
 export default site;
 ```
 
-The `lume()` function create a new instance of Lume, used to build your site. This function accepts an object with the following configuration values:
+The `lume()` function create a new instance of Lume, used to build your site.
+This function accepts an object with the following configuration values:
 
 ## Basic options
 
