@@ -72,21 +72,3 @@ There are other useful commands like:
   file.
 
 To see all available commands and arguments, run `lume --help`.
-
-## Passing arguments to Deno
-
-Deno CLI has some useful options that can be interesting for you, like
-[Node.js compatiblity mode](https://deno.land/manual/npm_nodejs/compatibility_mode)
-with `--compat` flag,
-[a configuration file](https://deno.land/manual/getting_started/configuration_file)
-with `--config=<FILE>` or a
-[import map file](https://deno.land/manual/linking_to_external_code/import_maps)
-with `--import-map=<FILE>`.
-
-Lume CLI runs Deno CLI with some arguments predefined, but you can customize
-them including the Deno arguments after `--`. For example, if you want to run
-Lume with a custom import map and Node compatibility:
-
-```sh
-lume -- --import-map=import_map.json --compat
-```
