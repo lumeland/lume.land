@@ -71,7 +71,7 @@ sites:
     code: https://github.com/oscarotero/jquery-cheatsheet
 
   - title: Tarugo5
-    img: /img/showcase/tarugo5.webp
+    # img: /img/showcase/tarugo5.webp
     url: https://tarugoconf.github.io/tarugo5/
     description: An event about technology and business in Madrid, Spain.
     code: https://github.com/tarugoconf/tarugo5
@@ -88,6 +88,11 @@ sites:
     description: Personal website by Hyro.
     code: https://github.com/xHyroM/xHyroM
 
+  - title: Missing style
+    img: /img/showcase/missing_style.webp
+    url: https://missing.style/
+    description: Website for missing.css, a base style sheet solution.
+    code: https://github.com/bigskysoftware/missing
 
   - title: Exact Report Generator
     url: https://exact-report-generator.vercel.app/
