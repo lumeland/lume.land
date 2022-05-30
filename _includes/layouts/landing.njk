@@ -72,6 +72,27 @@ page_css: landing.css
     </lume-carousel>
   </section>
 
+  <section class="landing-testimonials">
+    <h2>{{ testimonials.title }}</h2>
+
+    <ul class="landing-testimonials-quotes">
+    {% for item in testimonials.quotes %}
+      <li>
+        <blockquote class="landing-testimonials-quote">
+          {{ item.text | md | safe }}
+          <cite>
+            <img src="{{ item.avatar }}" width="50" height="50">
+            <a href="{{ item.url }}">
+              <strong>{{ item.author }}</strong>
+              <time>{{ item.date }}</time>
+            </a>
+          </cite>
+        </blockquote>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+
   <section class="landing-suppport">
     <h2>{{ support.title }}</h2>
 
