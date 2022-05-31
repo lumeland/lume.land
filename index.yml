@@ -285,6 +285,13 @@ testimonials:
       date: May 30, 2022
       text: Lume is a fantastic tool. It’s more powerful and flexible than any static site generator I’ve used in 5 years of web development.
 
+    - url: https://twitter.com/dragonwocky/status/1531413299757457408
+      author: "@dragonwocky"
+      avatar: /img/avatars/dragonwocky.webp
+      date: May 31, 2022
+      text: |
+        Deno is awesome. If you use it right, you&#39;ll never want to go back to Node - and Lume (<a href="https://t.co/EIFgNe07Sc">https://t.co/EIFgNe07Sc</a>) does it right: powerful, developer-friendly, super simple, and extremely flexible static site generation.
+
     - url: https://twitter.com/matthewcp/status/1522572060182171649
       author: Matthew Phillips (@matthewcp)
       avatar: /img/avatars/mattew.webp
@@ -315,8 +322,8 @@ testimonials:
       date: December 10, 2020
       text: Lume…another Static Site Generator (SSG) but this time built on Deno. 🔥🦖 <br><br>Love the logo.<a href="https://t.co/ajHHcXMnfq">https://t.co/ajHHcXMnfq</a>
 
-    # - url: https://twitter.com/deno_land/status/1403052999673618438
-    #   author: Deno (@deno_land)
-    #   avatar: /img/avatars/deno.webp
-    #   date: June 10, 2021
-    #   text: lume, a Static Site Generator for Deno <a href="https://t.co/l3Ko6nWy2H">https://t.co/l3Ko6nWy2H</a>
+    - url: https://twitter.com/deno_land/status/1403052999673618438
+      author: Deno (@deno_land)
+      avatar: /img/avatars/deno.webp
+      date: June 10, 2021
+      text: lume, a Static Site Generator for Deno <a href="https://t.co/l3Ko6nWy2H">https://t.co/l3Ko6nWy2H</a>
