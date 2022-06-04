@@ -18,7 +18,8 @@ jobs:
         with:
           deno-version: v1.x
       
-      - uses: actions/cache@v3
+      - name: Setup Cache
+        uses: actions/cache@v3
         with:
           path: |
             ~/.deno
