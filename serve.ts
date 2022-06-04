@@ -1,5 +1,4 @@
 // deno run --allow-net --allow-read serve.ts
-
 import Server from "https:/deno.land/x/lume/core/server.ts";
 import expires from "https:/deno.land/x/lume/middlewares/expires.ts";
 import cacheBusting from "https:/deno.land/x/lume/middlewares/cache_busting.ts";
