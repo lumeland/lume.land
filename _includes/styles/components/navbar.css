@@ -77,3 +77,10 @@
     }
   }
 }
+.navbar-search {
+  --docsearch-searchbox-background: var(--color-background-2);
+  --docsearch-text-color: var(--color-foreground-1);
+  --docsearch-searchbox-focus-background: var(--color-background-1);
+  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--color-foreground-1);
+  align-self: center;
+}

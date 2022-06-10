@@ -28,6 +28,8 @@
   {% if page_css %}
   <link rel="stylesheet" href="/{{ cache_busting }}/styles/pages/{{ page_css }}">
   {% endif %}
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"/>
 </head>
 <body>
   {% include "templates/navbar.njk" %}
@@ -35,5 +37,17 @@
     {{ content | safe }}
   </div>
   {% include "templates/footer.njk" %}
+
+  <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+
+  <script type="text/javascript">
+    docsearch({
+      appId: "O7U42EOTRQ",
+      apiKey: "bcb89a19824e0100724bc16011dea6f8",
+      indexName: "lume",
+      container: document.getElementById("search"),
+      debug: false
+    });
+  </script>
 </body>
 </html>
