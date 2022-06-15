@@ -12,34 +12,38 @@ includes, macros, etc). The Lume components have the following advantages:
 
 - They are template engine agnostic. For example, you can create your components
   in JSX or JavaScript and use them in Nunjucks.
-- They generate not only the HTML code but also CSS and JavaScript code needed.
+- They can generate not only the HTML code but also CSS and JavaScript code
+  needed.
 - They are available everywhere, no need to import them manually.
+- For module based components (like JavaScript, TypeScript, JSX or TSX), it's
+  the only way to hot-reload components without stop and restart the local
+  server.
 
 ## Create your own components
 
-Components are stored in the `_components` directory. You can change it in the
-[configuration file](../configuration/config-file.md). To create a new
-component, just create a file in this directory with the name of your component
-and the extension of the template engine that you want to use. For example a
-component in Nunjucks that renders a button could be stored in
-`_components/button.njk`:
+Components are stored in the `_components` directory. Like with `_data`, you can
+create `_components` directories in different sub-directories to make them
+available only to specific pages. To create a new component, just create a file
+in this directory with the name of your component and the extension of the
+template engine that you want to use. For example a component in Nunjucks that
+renders a button could be stored in `_components/button.njk`:
 
 ```html
 <button class="button">{{ text }}</button>
 ```
 
-This component is available in your layouts under the `comp` variable (this can
-be configured also). It's a global variable that contain all components. In our
-example, we can render the button component with the `comp.button()` function:
+This component is available in your layouts under the `comp` variable (you can
+configure a different variable name in `_config.ts`). It's a global variable
+that contain all components. In our example, we can render the button component
+with the `comp.button()` function:
 
 ```html
 <h1>Welcome to my site.</h1>
 {{ comp.button({ text: "Login" }) | safe }}
 ```
 
-Note that the component accepts an object with the properties that we want to
-pass to the component. This component is available in any other template engine.
-For example JavaScript:
+Note that the component accepts an object with the properties. This component is
+available in any other template engine. For example JavaScript:
 
 ```js
 export default function ({ comp }) {
@@ -57,7 +61,19 @@ Eta templates:
 <%= comp.button({ text: "Login" }) %>
 ```
 
-Etc.
+Lume components can be used like React components if you're using the JSX
+plugin:
+
+```jsx
+export default function ({ comp }) {
+  return (
+    <>
+      <h1>Welcome to my site.</h1>
+      <comp.Button text="Login" />
+    </>
+  );
+}
+```
 
 ### Nested components in Nunjucks
 
@@ -154,23 +170,3 @@ export default function ({ comp }) {
 
 In this example, the component exports CSS and JS code, in addition to the HTML
 code.
-
-## JSX and TSX components
-
-If the [JSX plugin](../../plugins/jsx.md) is enabled, you can use it to generate
-components:
-
-```jsx
-export const css = `
-.button {
-  background-color: blue;
-  color: white;
-}
-`;
-
-export default function ({ text }) {
-  return <button>{text}</button>;
-}
-```
-
-JSX components can be used in any template engine.

@@ -112,3 +112,16 @@ slugified automatically, so the final url will be `/post/my-fist-post/`.
 
 Using functions as URLs gives a lot of flexibility to generate the URLs as you
 want.
+
+## Setting url to `false`
+
+The `url` variable can be also `false`. This prevent the page to be saved into
+the dest folder (although the page is still visible by other pages, for example
+in paginations).
+
+```yml
+---
+title: This is a title
+url: false # Don't output page yet
+---
+```

@@ -33,7 +33,8 @@ are loaded, processed and exported to `dest` folder: `.md`, `.njk`,
 additional extensions:
 
 ```ts
-// To load /my-page.foo and output /my-page/index.html
+// To load pages with the extension .foo
+// Example: /my-page.foo => /my-page/index.html
 site.loadPages([".foo"]);
 ```
 
@@ -55,7 +56,7 @@ are very similar to regular pages but with a couple of differences. Let's take
 - Load the content of the file.
 - The original extension **isn't replaced** and `prettyUrls` configuration
   **doesn't apply.**
-- Render and pre/process the page, **but the layout value isn't used.**
+- (Pre)process the page, **but layouts and template engines are not used.**
 - Save the output file as `/my-styles.css`.
 
 Lume doesn't load any asset by default. Use the function `site.loadAssets()` to

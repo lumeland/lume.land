@@ -45,16 +45,18 @@ The `deno.json` file created by Lume is similar to this:
 {
   "importMap": "import_map.json",
   "tasks": {
-    "build": "deno run -A https://deno.land/x/lume@v1.7.0/ci.ts",
-    "serve": "deno task build -- -s"
+    "lume": "deno eval \"import 'lume/task.ts'\" --",
+    "build": "deno task lume",
+    "serve": "deno task lume -s"
   }
 }
 ```
 
 - The `importMap` key contains the path of the import map file used by Deno.
   This means the next time you run the `lume` command, this file will be used.
-- The `tasks` key contains the tasks `build` and `serve`. This allows to run
-  Lume without the `lume` command, with `deno task build` and `deno task serve`.
+- The `tasks` key contains the tasks `lume`, `build` and `serve`. This allows to
+  run Lume without the `lume` command but `deno task lume`. `build` and `serve`
+  task are alias to `deno task lume` with some arguments.
 
 Deno supports `deno.json` and `deno.jsonc` extensions, but Lume only supports
 `deno.json`. {.tip}

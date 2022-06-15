@@ -106,6 +106,16 @@ site.addEventListener("beforeSave", () => {
 });
 ```
 
+## afterStartServer
+
+Event triggered after starting the local server (with `lume --server` command).
+
+```js
+site.addEventListener("afterStartServer", () => {
+  console.log("Local server started successfully");
+});
+```
+
 ## Execute scripts with events
 
 In addition to functions, you can also execute [scripts](scripts.md) in events

@@ -200,7 +200,6 @@ There are some files and directories that are automatically ignored, for example
 The `components` object allows to configure the components load and output
 files.
 
-- **directory:** The directory where the components files are stored.
 - **variable:** The variable name used to access to the loaded components.
 - **cssFile:** The file name to export the CSS code of the components.
 - **jsFile:** The file name to export the JS code of the components.
