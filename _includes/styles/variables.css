@@ -55,7 +55,7 @@
   --color-primary: var(--color-red-500);
   --color-primary-1: var(--color-red-400);
   --color-foreground: var(--color-black-100);
-  --color-foreground-1: var(--color-black-350);
+  --color-foreground-1: var(--color-black-240);
   --color-background: var(--color-white);
   --color-background-a: var(--color-white-alpha);
   --color-background-1: var(--color-black-970);
@@ -118,7 +118,7 @@
     --color-primary: var(--color-red-500);
     --color-primary-1: var(--color-red-400);
     --color-foreground: var(--color-black-100);
-    --color-foreground-1: var(--color-black-350);
+    --color-foreground-1: var(--color-black-240);
     --color-background: var(--color-white);
     --color-background-a: var(--color-white-alpha);
     --color-background-1: var(--color-black-970);

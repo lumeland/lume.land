@@ -70,5 +70,7 @@ There are other useful commands like:
 - `lume import-map`: to create a
   [import_map.json](https://deno.land/manual/linking_to_external_code/import_maps)
   file.
+- `lume vendor`: to download the Lume vendors in the `_vendor` directory. See
+  [Deno docs](https://deno.land/manual/tools/vendor).
 
 To see all available commands and arguments, run `lume --help`.
