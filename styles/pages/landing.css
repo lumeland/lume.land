@@ -5,7 +5,7 @@
   column-gap: var(--margin);
   grid-template-columns: 0 minmax(0, var(--max-width)) 0;
   justify-content: space-between;
-  padding: var(--row-gap-2) 0;
+  padding: var(--row-gap-2) 0 var(--row-gap-4);
 
   & > * {
     grid-column: 2;
