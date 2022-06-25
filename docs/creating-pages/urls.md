@@ -105,7 +105,7 @@ Now, all pages in the post directory share the same `url` function, that returns
 the title of the page as a relative URL, for example `./My first post/` (See
 [Shared data](../creating-pages/shared-data.md)).
 
-Due the URL is relative, the current directory is appended automatically (it
+Because the URL is relative, the current directory is appended automatically (it
 will be resolved to `/post/My first post/`). And if you are using the
 [`slugify_urls`](../../plugins/slugify_urls.md) plugin all output paths are
 slugified automatically, so the final url will be `/post/my-first-post/`.
