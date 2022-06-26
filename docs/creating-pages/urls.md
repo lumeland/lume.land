@@ -14,7 +14,7 @@ posts/my-first-post.md  =>  /posts/my-first-post/index.html
 ```
 
 By default, the pages are saved as "pretty URLs", using directories for the path
-and a `index.html` file. So the final URL is `/posts/my-fist-post/`. To disable
+and a `index.html` file. So the final URL is `/posts/my-first-post/`. To disable
 this behaviour, set the option `prettyUrls` to `false` in your `_config.js` file
 (see [Configuration](../configuration/config-file.md)).
 
@@ -68,7 +68,7 @@ For example:
 
 ```yml
 ---
-title: My fist post
+title: My first post
 url: ./welcome/
 ---
 ```
@@ -105,10 +105,10 @@ Now, all pages in the post directory share the same `url` function, that returns
 the title of the page as a relative URL, for example `./My first post/` (See
 [Shared data](../creating-pages/shared-data.md)).
 
-Due the URL is relative, the current directory is appended automatically (it
+Because the URL is relative, the current directory is appended automatically (it
 will be resolved to `/post/My first post/`). And if you are using the
 [`slugify_urls`](../../plugins/slugify_urls.md) plugin all output paths are
-slugified automatically, so the final url will be `/post/my-fist-post/`.
+slugified automatically, so the final url will be `/post/my-first-post/`.
 
 Using functions as URLs gives a lot of flexibility to generate the URLs as you
 want.
