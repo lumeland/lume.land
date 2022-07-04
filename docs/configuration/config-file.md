@@ -209,7 +209,6 @@ import lume from "lume/mod.ts";
 
 const site = lume({
   components: {
-    directory: "/_components",
     variable: "comp",
     cssFile: "/components.css",
     jsFile: "/components.js",
