@@ -20,7 +20,7 @@ The following paths are **always ignored**:
 
 - `node_modules`
 - `import_map.json`
-- `deno.json`
+- `deno.json` / `deno.jsonc`
 
 ## Ignore function
 
