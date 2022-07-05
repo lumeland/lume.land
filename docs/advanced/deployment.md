@@ -5,26 +5,31 @@ description: How to deploy a site built with Lume.
 
 ${toc}
 
+Note: The following examples assume that the site is built by running `deno task build`.{.tip}
+
 ## Deploy manually with rsync
 
 This is the simplest way to deploy a site: just build the site and upload it to
 your server with [rsync](https://en.wikipedia.org/wiki/Rsync). An easy way is by
-creating a script in your `_config.ts` file to automate this process:
+creating a deno task in the `deno.json` file:
 
-```ts
-site.script(
-  "deploy",
-  "lume --location=https://my-site.com",
-  "rsync -r _site/ user@my-site.com:~/www",
-);
+```json
+{
+  "importMap": "import_map.json",
+  "tasks": {
+    "build": "deno task lume",
+    "serve": "deno task lume -s",
+    "lume": "deno eval \"import 'lume/task.ts'\" --",
+    "deploy": "deno task build && rsync -r _site/ user@my-site.com:~/www"
+  }
+}
 ```
 
-This is a simple script that execute two commands: It builds the site with the
-final location URL and upload the site to the server. Now, to build and deploy
+This file is created automatically by Lume by running `lume import-map`. We just added a new task, named **deploy** that execute two commands: It builds the site and upload it to the server. Now, to build and deploy
 your site, just run:
 
 ```sh
-lume run deploy
+deno task deploy
 ```
 
 ## GitHub Pages
@@ -53,8 +58,7 @@ jobs:
           deno-version: v1.x
 
       - name: Build site
-        run: |
-          deno run -A https://deno.land/x/lume/ci.ts
+        run: deno task build
 
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v2.0.1
@@ -73,14 +77,14 @@ configuration with the following code:
 <lume-code>
 
 ```yml {title=".gitlab-ci.yml"}
-image: oscarotero/lume
+image: denoland/deno
 
 stages:
   - pages
 
 pages:
   stage: pages
-  script: lume --dest=public
+  script: deno task build --dest=public
 
   artifacts:
     paths:
@@ -105,7 +109,7 @@ by Deno with support for static files. It requires to have your repo in GitHub.
   file `serve.ts` with the following code:
 
 ```ts
-import Server from "https:/deno.land/x/lume/core/server.ts";
+import Server from "lume/core/server.ts";
 
 const server = new Server({
   port: 8000,
@@ -144,13 +148,13 @@ jobs:
           deno-version: v1.x
 
       - name: Build site
-        run: |
-          deno run -A https://deno.land/x/lume/ci.ts
+        run: deno task build
 
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: project-name
+          import-map: "./import_map.json"
           entrypoint: server.ts
 ```
 
@@ -168,7 +172,7 @@ Create `netlify.toml` file in your repository with the following code:
   publish = "_site"
   command = """
     curl -fsSL https://deno.land/x/install/install.sh | sh && \
-    /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.ts \
+    /opt/buildhome/.deno/bin/deno task build \
   """
 ```
 
@@ -180,7 +184,7 @@ Create `netlify.toml` file in your repository with the following code:
 build command must install it.
 
 ```sh
-curl -fsSL https://deno.land/x/install/install.sh | sh && /vercel/.deno/bin/deno run -A https://deno.land/x/lume/ci.ts
+curl -fsSL https://deno.land/x/install/install.sh | sh && /vercel/.deno/bin/deno task build
 ```
 
 Remember also to configure the output directory to `_site`.
@@ -195,8 +199,8 @@ file in your repository with the following code:
 ```json {title=".fleek.json"}
 {
   "build": {
-    "image": "oscarotero/lume",
-    "command": "lume",
+    "image": "denoland/deno",
+    "command": "deno task build",
     "publicDir": "_site"
   }
 }
@@ -210,7 +214,7 @@ To deploy your Lume site with [Cloudflare Pages](https://pages.cloudflare.com/),
 configure the build command as follow:
 
 ```sh
-curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno run -A https://deno.land/x/lume/ci.ts
+curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno task build
 ```
 
 Remember to configure the output directory to `_site`.
@@ -229,7 +233,7 @@ frontend:
     build:
       commands:
         - curl -fsSL https://deno.land/x/install/install.sh | sh
-        - /root/.deno/bin/deno run -A https://deno.land/x/lume/ci.ts
+        - /root/.deno/bin/deno task build
   artifacts:
     baseDirectory: /_site
     files:
