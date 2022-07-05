@@ -1,7 +1,7 @@
 // deno run --allow-net --allow-read serve.ts
-import Server from "https:/deno.land/x/lume/core/server.ts";
-import expires from "https:/deno.land/x/lume/middlewares/expires.ts";
-import cacheBusting from "https:/deno.land/x/lume/middlewares/cache_busting.ts";
+import Server from "lume/core/server.ts";
+import expires from "lume/middlewares/expires.ts";
+import cacheBusting from "lume/middlewares/cache_busting.ts";
 import analytics from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/google_analytics/mod.ts";
 
 const server = new Server({
