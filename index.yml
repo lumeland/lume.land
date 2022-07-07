@@ -293,6 +293,12 @@ testimonials:
       text: |
         Deno is awesome. If you use it right, you&#39;ll never want to go back to Node - and Lume (<a href="https://t.co/EIFgNe07Sc">https://t.co/EIFgNe07Sc</a>) does it right: powerful, developer-friendly, super simple, and extremely flexible static site generation.
 
+    - url: https://twitter.com/tarugoconf/status/1543881979426381824
+      author: Tarugoconf (@tarugoconf)
+      avatar: /img/avatars/tarugoconf.webp
+      date: July 4, 2022
+      text: ¿No habíamos contado que el código de la web de la <a href="https://twitter.com/hashtag/tarugo22?src=hash&amp;ref_src=twsrc%5Etfw">#tarugo22</a> es COMPLETAMENTE OPEN SOURCE? <br>¿Y tampoco que está creada con tecnología gallega? <a href="https://t.co/5hJNkf7otY">https://t.co/5hJNkf7otY</a>
+
     - url: https://twitter.com/matthewcp/status/1522572060182171649
       author: Matthew Phillips (@matthewcp)
       avatar: /img/avatars/mattew.webp
