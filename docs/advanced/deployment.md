@@ -5,7 +5,8 @@ description: How to deploy a site built with Lume.
 
 ${toc}
 
-Note: The following examples assume that the site is built by running `deno task build`.{.tip}
+Note: The following examples assume that the site is built by running
+`deno task build`.{.tip}
 
 ## Deploy manually with rsync
 
@@ -25,8 +26,9 @@ creating a deno task in the `deno.json` file:
 }
 ```
 
-This file is created automatically by Lume by running `lume import-map`. We just added a new task, named **deploy** that execute two commands: It builds the site and upload it to the server. Now, to build and deploy
-your site, just run:
+This file is created automatically by Lume by running `lume import-map`. We just
+added a new task, named **deploy** that execute two commands: It builds the site
+and upload it to the server. Now, to build and deploy your site, just run:
 
 ```sh
 deno task deploy

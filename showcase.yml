@@ -45,11 +45,11 @@ sites:
     description: A creative agency based in Bartlesville, Oklahoma.
     code: https://github.com/bradeneast/oakstudio.co
 
-  - title: Tarugo 21
-    img: /img/showcase/tarugo21.webp
-    url: https://tarugo21.netlify.app/
-    description: An online event about technology and business.
-    code: https://github.com/tarugoconf/tarugo21
+  - title: Tarugo22
+    img: /img/showcase/tarugo22.webp
+    url: https://tarugoconf.com/
+    description: An event about technology and business in Madrid, Spain.
+    code: https://github.com/tarugoconf/tarugo22
   
   - title: Tobias Schmidt
     img: /img/showcase/tobias.webp
@@ -68,12 +68,6 @@ sites:
     url: https://oscarotero.com/jquery/
     description: An interactive reference for all versions of jQuery.
     code: https://github.com/oscarotero/jquery-cheatsheet
-
-  - title: Tarugo5
-    # img: /img/showcase/tarugo5.webp
-    url: https://tarugoconf.github.io/tarugo5/
-    description: An event about technology and business in Madrid, Spain.
-    code: https://github.com/tarugoconf/tarugo5
 
   - title: Notion enhancer
     img: /img/showcase/notion-enhancer.webp
