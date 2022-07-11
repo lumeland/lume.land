@@ -36,6 +36,21 @@ const site = lume({}, { markdown });
 export default site;
 ```
 
+Use the `options` property to change the
+[markdown-it settings](https://github.com/markdown-it/markdown-it#usage-examples):
+
+```ts
+// Change markdown-it configuration
+const markdown = {
+  options: {
+    breaks: false,
+    xhtmlOut: true,
+  },
+};
+
+const site = lume({}, { markdown });
+```
+
 ### Plugins
 
 Lume uses [markdown-it](https://github.com/markdown-it/markdown-it) as the
@@ -46,7 +61,7 @@ markdown parser, with the following plugins enabled:
 - [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs) to add support
   for CSS classes and other attributes using `{}`.
 
-Use the option `plugins` to replace them. For example, to add the
+Use the `plugins` option to replace them. For example, to add the
 [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor)
 plugin:
 
@@ -65,7 +80,7 @@ This will override the default plugins with yours. If you only want to add more
 plugins without remove the defaults, use the `keepDefaultPlugins` option:
 
 ```ts
-// Add more markdown plugins without override the defaults
+// Add more markdown plugins without overriding the defaults
 const markdown = {
   plugins: [anchor],
   keepDefaultPlugins: true,
@@ -74,20 +89,24 @@ const markdown = {
 const site = lume({}, { markdown });
 ```
 
-Use the `options` property to change the
-[markdown-it settings](https://github.com/markdown-it/markdown-it#usage-examples):
+You can pass options to your markdown-it plugins (as opposed to the markdown-it engine
+itself) like so:
 
 ```ts
-// Change markdown-it configuration
+import anchor from "https://jspm.dev/markdown-it-anchor";
+import footnote from "https://jspm.dev/markdown-it-footnote";
+
+// Pass options to markdown-it plugins
 const markdown = {
-  options: {
-    breaks: false,
-    xhtmlOut: true,
-  },
+  plugins: [[anchor, { level: 2 }], footnote],
+  keepDefaultPlugins: true,
 };
 
 const site = lume({}, { markdown });
 ```
+
+(When an array is passed as an element of `plugins`, its value will be spread
+into the `.use()` call on the markdown engine.)
 
 ## Creating pages in Markdown
 
@@ -128,8 +147,8 @@ Markdown in _inline_ mode.
 
 ```html
 <!-- Render to HTML code -->
-<div>{{ text | md }}<div>
+<div>{{ text | md }}</div>
 
 <!-- Single line rendering, without the paragraph wrap: -->
-<p>{{ text | md(true) }}<p>
+<p>{{ text | md(true) }}</p>
 ```
