@@ -36,6 +36,21 @@ const site = lume({}, { markdown });
 export default site;
 ```
 
+Use the `options` property to change the
+[markdown-it settings](https://github.com/markdown-it/markdown-it#usage-examples):
+
+```ts
+// Change markdown-it configuration
+const markdown = {
+  options: {
+    breaks: false,
+    xhtmlOut: true,
+  },
+};
+
+const site = lume({}, { markdown });
+```
+
 ### Plugins
 
 Lume uses [markdown-it](https://github.com/markdown-it/markdown-it) as the
