@@ -89,20 +89,24 @@ const markdown = {
 const site = lume({}, { markdown });
 ```
 
-Use the `options` property to change the
-[markdown-it settings](https://github.com/markdown-it/markdown-it#usage-examples):
+You can pass options to your markdown-it plugins (as opposed to the markdown-it engine
+itself) like so:
 
 ```ts
-// Change markdown-it configuration
+import anchor from "https://jspm.dev/markdown-it-anchor";
+import footnote from "https://jspm.dev/markdown-it-footnote";
+
+// Pass options to markdown-it plugins
 const markdown = {
-  options: {
-    breaks: false,
-    xhtmlOut: true,
-  },
+  plugins: [[anchor, { level: 2 }], footnote],
+  keepDefaultPlugins: true,
 };
 
 const site = lume({}, { markdown });
 ```
+
+(When an array is passed as an element of `plugins`, its value will be spread
+into the `.use()` call on the markdown engine.)
 
 ## Creating pages in Markdown
 
