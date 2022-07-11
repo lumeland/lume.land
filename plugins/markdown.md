@@ -65,7 +65,7 @@ This will override the default plugins with yours. If you only want to add more
 plugins without remove the defaults, use the `keepDefaultPlugins` option:
 
 ```ts
-// Add more markdown plugins without override the defaults
+// Add more markdown plugins without overriding the defaults
 const markdown = {
   plugins: [anchor],
   keepDefaultPlugins: true,
