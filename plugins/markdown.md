@@ -61,7 +61,7 @@ markdown parser, with the following plugins enabled:
 - [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs) to add support
   for CSS classes and other attributes using `{}`.
 
-Use the option `plugins` to replace them. For example, to add the
+Use the `plugins` option to replace them. For example, to add the
 [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor)
 plugin:
 
