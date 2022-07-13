@@ -34,16 +34,17 @@ sites:
     description: A personal portfolio website of Achraf Garai.
     code: https://github.com/AchrafGarai/Portfolio
 
-  - title: NM type
-    img: /img/showcase/nmtype.webp
-    url: https://nmtype.com/
-    description: A type foundry based in Sweden and Spain.
-
   - title: OAK Studio
     img: /img/showcase/oak.webp
     url: https://oakstudio.co/
     description: A creative agency based in Bartlesville, Oklahoma.
     code: https://github.com/bradeneast/oakstudio.co
+  
+  - title: Microflash
+    img: /img/showcase/mflash.webp
+    url: https://mflash.dev/
+    description: Personal site of Naiyer Asif
+    code: https://github.com/Microflash/site
 
   - title: Tarugo22
     img: /img/showcase/tarugo22.webp
@@ -51,11 +52,10 @@ sites:
     description: An event about technology and business in Madrid, Spain.
     code: https://github.com/tarugoconf/tarugo22
   
-  - title: Tobias Schmidt
-    img: /img/showcase/tobias.webp
-    url: https://tobiasschmidt.me/
-    description: The personal blog of Tobias Schmidt.
-    code: https://github.com/tobiasschmidt89/tobiasschmidt.me
+  - title: NM type
+    img: /img/showcase/nmtype.webp
+    url: https://nmtype.com/
+    description: A type foundry based in Sweden and Spain.
 
   - title: Braden East
     img: /img/showcase/bradeneast.webp
@@ -68,6 +68,12 @@ sites:
     url: https://oscarotero.com/jquery/
     description: An interactive reference for all versions of jQuery.
     code: https://github.com/oscarotero/jquery-cheatsheet
+  
+  - title: Tobias Schmidt
+    img: /img/showcase/tobias.webp
+    url: https://tobiasschmidt.me/
+    description: The personal blog of Tobias Schmidt.
+    code: https://github.com/tobiasschmidt89/tobiasschmidt.me
 
   - title: Notion enhancer
     img: /img/showcase/notion-enhancer.webp
@@ -103,7 +109,7 @@ sites:
     code: https://github.com/laura-rubio/ensino
 
   - title: Kusaeni
-    img: /img/showcase/kusaeni.webp
+    # img: /img/showcase/kusaeni.webp
     url: https://kusaeni.com/
     description: The personal blog of Kusaeni.
     code: https://notabug.org/kuspoes/kusaicom
@@ -125,7 +131,7 @@ sites:
     code: https://github.com/fserb/bkc
 
   - title: DenissB
-    # img: /img/showcase/denissb.webp
+    img: /img/showcase/denissb.webp
     url: https://denissb.github.io/
     description: A personal website of a web developer.
     code: https://github.com/denissb/denissb.github.io
@@ -142,7 +148,7 @@ sites:
     code: https://github.com/scarf005/scarf005.github.com
 
   - title: aiotter
-    img: /img/showcase/aiotter.webp
+    # img: /img/showcase/aiotter.webp
     url: https://aiotter.com/
     description: The technical blog of Yuto Oguchi.
     code: https://github.com/aiotter/blog
@@ -152,9 +158,3 @@ sites:
     url: https://velociraptor.run/
     description: The documentation of Velociraptor script runner for Deno.
     code: https://github.com/jurassiscripts/velociraptor-dot-run
-
-  - title: Microflash
-    img: /img/showcase/mflash.webp
-    url: https://mflash.dev/
-    description: Personal site of Naiyer Asif
-    code: https://github.com/Microflash/site
