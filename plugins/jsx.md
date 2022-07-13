@@ -56,9 +56,12 @@ can export JSX code in the default export:
 export const title = "Welcome to my page";
 export const layout = "layouts/main.njk";
 
-export default (data) =>
-  <h1>{ data.title }</h1>
-  <p>This is my first post using lume. I hope you like it!</p>
+export default (data) => (
+  <>
+    <h1>{data.title}</h1>
+    <p>This is my first post using lume. I hope you like it!</p>
+  </>
+);
 ```
 
 Note that this page uses the `layouts/main.njk` layout to wrap the content (you
