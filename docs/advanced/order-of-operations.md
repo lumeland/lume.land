@@ -17,9 +17,10 @@ This is a high level description of how Lume build your site. When you run
    - If the name of the file is `_data` or is inside a `_data` folder, is shared
      data.
    - Otherwise, it's a page.
-5. Group all pages by [`renderOrder` value](../core/render-order.md) and sort
+5. Dispatch the [event](../core/events.md) `beforeRender`.
+6. Group all pages by [`renderOrder` value](../core/render-order.md) and sort
    them.
-6. For each group of pages with the same `renderOrder`:
+7. For each group of pages with the same `renderOrder`:
    - If the [page content is a generator](../core/searching.md#pagination),
      generate all the sub-pages.
    - Calculate the [final url](../creating-pages/urls.md).
@@ -27,11 +28,11 @@ This is a high level description of how Lume build your site. When you run
    - Render the page using the assigned
      [template engine](../core/multiple-template-engines.md) and
      [layout](../creating-pages/layouts.md).
-7. Dispatch the [event](../core/events.md) `afterRender`.
-8. Run the [processors](../core/processors.md) registered
-9. Dispatch the [event](../core/events.md) `beforeSave`.
-10. Save all pages to `dest` folder.
-11. Dispatch the [event](../core/events.md) `afterBuild`.
+8. Dispatch the [event](../core/events.md) `afterRender`.
+9. Run the [processors](../core/processors.md) registered
+10. Dispatch the [event](../core/events.md) `beforeSave`.
+11. Save all pages to `dest` folder.
+12. Dispatch the [event](../core/events.md) `afterBuild`.
 
 ## Watch mode
 

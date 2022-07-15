@@ -49,8 +49,8 @@ and layouts and use `React` for rendering.
 
 To create a page with this format, just add a file with `.jsx` or `.tsx`
 extension to your site. This format works exactly the same as
-[JavaScript/TypeScript files](./modules.md), but with the addition of you
-can export JSX code in the default export:
+[JavaScript/TypeScript files](./modules.md), but with the addition of you can
+export JSX code in the default export:
 
 ```jsx
 export const title = "Welcome to my page";

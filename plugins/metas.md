@@ -41,6 +41,8 @@ keyword of every page and the supported values are:
 - `icon`: The logotype or icon of the site.
 - `twitter`: The twitter username.
 - `color`: The color theme of the website.
+- `generator`: The sofware that generate the page (Lume v1.x). It can be a
+  boolean or a string with a custom value.
 
 ## Usage
 
@@ -55,6 +57,7 @@ metas:
   twitter: "@misteroom"
   icon: /img/icon.png
   lang: en
+  generator: true
 
 mergedKeys:
   metas: object
@@ -107,6 +110,7 @@ to:
     <meta itemprop="description" content="My first post">
     <meta itemprop="image" content="/hello-world.png">
     <meta name="description" content="My first post">
+    <meta name="generator" content="Lume v1.10.1">
   </header>
   <body>
     <p>This is my first post</p>
