@@ -28,6 +28,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Reese Schultz
+    img: /img/showcase/reese.webp
+    url: https://reese.codes/
+    description: Reese's website about programming. 
+    code: https://github.com/reeseschultz/reese.codes
+
   - title: Achraf Garai
     img: /img/showcase/achrafgarai.webp
     url: https://achrafgarai.github.io/Portfolio/
@@ -88,7 +94,7 @@ sites:
     code: https://github.com/notion-enhancer/notion-enhancer.github.io
 
   - title: Hyro
-    img: /img/showcase/hyro.webp
+    # img: /img/showcase/hyro.webp
     url: https://hyro.pages.dev/
     description: Personal website by Hyro.
     code: https://github.com/xHyroM/xHyroM

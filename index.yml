@@ -266,6 +266,10 @@ support:
       url: https://johan.im/
       img: /img/avatars/johan.webp
       amount: 20
+    - name: Reese Schultz
+      url: https://reese.codes/
+      img: /img/avatars/reeseschultz.webp
+      amount: 1
 
   contribute:
     title: How to contribute?
