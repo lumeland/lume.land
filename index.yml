@@ -269,7 +269,8 @@ support:
     - name: Reese Schultz
       url: https://reese.codes/
       img: /img/avatars/reeseschultz.webp
-      amount: 1
+      amount: 5
+      recurrent: true
 
   contribute:
     title: How to contribute?
