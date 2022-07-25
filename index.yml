@@ -285,11 +285,18 @@ support:
 testimonials:
   title: What people say?
   quotes:
-    - url: https://twitter.com/bradenthehair/status/1531357349356654592
-      author: Braden East (@bradenthehair)
-      avatar: /img/avatars/bradenthehair.webp
-      date: May 30, 2022
-      text: Lume is a fantastic tool. It’s more powerful and flexible than any static site generator I’ve used in 5 years of web development.
+    - url: https://twitter.com/Microflash/status/1551599531615473665
+      author: Naiyer Asif نیر آصف (@Microflash)
+      avatar: /img/avatars/naiyer.webp
+      date: July 25, 2022
+      text: |
+        I recently redesigned my site (<a href="https://t.co/n9FcC2ATtp">https://t.co/n9FcC2ATtp</a>) with Lume: a lovely static site generator built by <a href="https://twitter.com/misteroom?ref_src=twsrc%5Etfw">@misteroom</a>. Easy, simple and fast to work with. Definitely worth checking out if you&#39;re a fan of 11ty on Node.js. 
+
+    - url: https://twitter.com/tarugoconf/status/1543881979426381824
+      author: Tarugoconf (@tarugoconf)
+      avatar: /img/avatars/tarugoconf.webp
+      date: July 4, 2022
+      text: ¿No habíamos contado que el código de la web de la <a href="https://twitter.com/hashtag/tarugo22?src=hash&amp;ref_src=twsrc%5Etfw">#tarugo22</a> es COMPLETAMENTE OPEN SOURCE? <br>¿Y tampoco que está creada con tecnología gallega? <a href="https://t.co/5hJNkf7otY">https://t.co/5hJNkf7otY</a>
 
     - url: https://twitter.com/dragonwocky/status/1531413299757457408
       author: "@dragonwocky"
@@ -298,11 +305,11 @@ testimonials:
       text: |
         Deno is awesome. If you use it right, you&#39;ll never want to go back to Node - and Lume (<a href="https://t.co/EIFgNe07Sc">https://t.co/EIFgNe07Sc</a>) does it right: powerful, developer-friendly, super simple, and extremely flexible static site generation.
 
-    - url: https://twitter.com/tarugoconf/status/1543881979426381824
-      author: Tarugoconf (@tarugoconf)
-      avatar: /img/avatars/tarugoconf.webp
-      date: July 4, 2022
-      text: ¿No habíamos contado que el código de la web de la <a href="https://twitter.com/hashtag/tarugo22?src=hash&amp;ref_src=twsrc%5Etfw">#tarugo22</a> es COMPLETAMENTE OPEN SOURCE? <br>¿Y tampoco que está creada con tecnología gallega? <a href="https://t.co/5hJNkf7otY">https://t.co/5hJNkf7otY</a>
+    - url: https://twitter.com/bradenthehair/status/1531357349356654592
+      author: Braden East (@bradenthehair)
+      avatar: /img/avatars/bradenthehair.webp
+      date: May 30, 2022
+      text: Lume is a fantastic tool. It’s more powerful and flexible than any static site generator I’ve used in 5 years of web development.
 
     - url: https://twitter.com/matthewcp/status/1522572060182171649
       author: Matthew Phillips (@matthewcp)
@@ -322,6 +329,12 @@ testimonials:
       date: June 26, 2021
       text: tapi sekarang sih pengennya pakai lumeland<a href="https://t.co/v6konf7O0Z">https://t.co/v6konf7O0Z</a>
 
+    - url: https://twitter.com/deno_land/status/1403052999673618438
+      author: Deno (@deno_land)
+      avatar: /img/avatars/deno.webp
+      date: June 10, 2021
+      text: lume, a Static Site Generator for Deno <a href="https://t.co/l3Ko6nWy2H">https://t.co/l3Ko6nWy2H</a>
+
     - url: https://twitter.com/fserb/status/1390404312581410817
       author: Fernando Serboncini (@fserb)
       avatar: /img/avatars/fserb.webp
@@ -333,9 +346,3 @@ testimonials:
       avatar: /img/avatars/brianleroux.webp
       date: December 10, 2020
       text: Lume…another Static Site Generator (SSG) but this time built on Deno. 🔥🦖 <br><br>Love the logo.<a href="https://t.co/ajHHcXMnfq">https://t.co/ajHHcXMnfq</a>
-
-    - url: https://twitter.com/deno_land/status/1403052999673618438
-      author: Deno (@deno_land)
-      avatar: /img/avatars/deno.webp
-      date: June 10, 2021
-      text: lume, a Static Site Generator for Deno <a href="https://t.co/l3Ko6nWy2H">https://t.co/l3Ko6nWy2H</a>
