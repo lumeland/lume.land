@@ -36,8 +36,6 @@ function process(page) {
   page.document; // The parsed HTML code, to use the DOM API
   page.src; // The info about the source file of this page
   page.dest; // The info about the destination of the page
-  page.path; // The path of the output file (without the extension)
-  page.ext; // The extension of the output file
   page.data; // All data available for this page (frontmatter merged with _data)
 }
 ```
@@ -84,7 +82,9 @@ site.process([".js"], function (page) {
 
   // Append .min to the filename
   // so it will be saved as example.min.js
-  page.path += ".min";
+  page.updatDest({
+    path: page.dest.path + ".min"
+  });
 });
 ```
 
