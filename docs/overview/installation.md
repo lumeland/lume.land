@@ -28,8 +28,8 @@ To update Lume to the latest version, use the command:
 lume upgrade
 ```
 
-If you get an error upgrading from an old versions of Lume, just reinstall it. {
-.tip }
+If you get an error upgrading from an old versions of Lume, just reinstall it.
+{.tip}
 
 Use the command `lume upgrade --dev` to install the latest development version
 (the last commit in the [Github repository](https://github.com/lumeland/lume)).
@@ -44,12 +44,18 @@ It's useful for CI environments:
 deno run -A https://deno.land/x/lume/ci.ts
 ```
 
-### Deno tasks
+## Install Lume as a Deno task
 
-Additionally, the command `lume init` not only create a configuration file but
-also a `deno.json` file with
-[deno tasks](https://deno.land/manual/tools/task_runner). This allows to run
-Lume in any environment with `deno task build` (to build the site) or
+The command `lume init` creates a
+[configuration file](../configuration/config-file.md) and a `deno.json` file
+with some [deno tasks](https://deno.land/manual/tools/task_runner). This allows
+to run Lume in any environment with `deno task build` (to build the site) or
 `deno task serve` (to build and start a local server). Deno tasks is already an
-unstable feature but as soon as is stabilized, it will be the recommended way to
-run Lume.
+unstable feature but as soon as is stabilized, it will be **the recommended way
+to run Lume.**
+
+If you don't have `lume` installed in your computer, you can run:
+
+```sh
+deno run -A https://deno.land/x/lume/init.ts
+```

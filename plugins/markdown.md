@@ -89,8 +89,8 @@ const markdown = {
 const site = lume({}, { markdown });
 ```
 
-You can pass options to your markdown-it plugins (as opposed to the markdown-it engine
-itself) like so:
+You can pass options to your markdown-it plugins (as opposed to the markdown-it
+engine itself) like so:
 
 ```ts
 import anchor from "https://jspm.dev/markdown-it-anchor";

@@ -78,6 +78,16 @@ site.addEventListener("afterUpdate", (event) => {
 });
 ```
 
+## beforeRender
+
+This event is triggered just after all pages are loaded but before rendered.
+
+```js
+site.addEventListener("beforeRender", (event) => {
+  console.log("Ready to render the pages");
+});
+```
+
 ## afterRender
 
 This event is triggered just after all pages are rendered but before process.

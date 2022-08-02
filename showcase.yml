@@ -28,6 +28,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Reese Schultz
+    img: /img/showcase/reese.webp
+    url: https://reese.codes/
+    description: Reese's website about programming. 
+    code: https://github.com/reeseschultz/reese.codes
+
   - title: Achraf Garai
     img: /img/showcase/achrafgarai.webp
     url: https://achrafgarai.github.io/Portfolio/
@@ -39,6 +45,12 @@ sites:
     url: https://oakstudio.co/
     description: A creative agency based in Bartlesville, Oklahoma.
     code: https://github.com/bradeneast/oakstudio.co
+
+  - title: Badger
+    img: /img/showcase/getbadger.webp
+    url: https://getbadger.io/
+    description: Landing of a SEO reporting tool
+    code: https://github.com/marketgoo/badger-landing
   
   - title: Microflash
     img: /img/showcase/mflash.webp
@@ -82,7 +94,7 @@ sites:
     code: https://github.com/notion-enhancer/notion-enhancer.github.io
 
   - title: Hyro
-    img: /img/showcase/hyro.webp
+    # img: /img/showcase/hyro.webp
     url: https://hyro.pages.dev/
     description: Personal website by Hyro.
     code: https://github.com/xHyroM/xHyroM
@@ -131,7 +143,7 @@ sites:
     code: https://github.com/fserb/bkc
 
   - title: DenissB
-    img: /img/showcase/denissb.webp
+    # img: /img/showcase/denissb.webp
     url: https://denissb.github.io/
     description: A personal website of a web developer.
     code: https://github.com/denissb/denissb.github.io
