@@ -1,6 +1,7 @@
 ---
-step: 1
 title: Create your first page
+description: How to build the most simple page in Lume
+order: 1
 ---
 
 ## The page file

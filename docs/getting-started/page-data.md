@@ -1,6 +1,7 @@
 ---
-step: 3
-title: Add more data to your page
+title: Add data to your page
+description: Working with front matters to add page data
+order: 3
 ---
 
 We just defined the variable `layout` in the front matter to assign a layout to

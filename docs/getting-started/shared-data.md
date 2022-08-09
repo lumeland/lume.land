@@ -1,6 +1,7 @@
 ---
-step: 5
 title: Shared data
+description: Reuse the same data by multiple pages
+order: 5
 ---
 
 In previous steps we have created two pages using the same layout, so they have

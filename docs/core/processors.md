@@ -83,7 +83,7 @@ site.process([".js"], function (page) {
   // Append .min to the filename
   // so it will be saved as example.min.js
   page.updatDest({
-    path: page.dest.path + ".min"
+    path: page.dest.path + ".min",
   });
 });
 ```

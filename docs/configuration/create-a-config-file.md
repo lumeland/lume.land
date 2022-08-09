@@ -1,28 +1,28 @@
 ---
-step: 7
 title: Create a config file
+order: 1
 ---
 
-We have been using Lume with the default configuration. But in most cases you
-will need to configure the site build to better adapt to your needs. There's the
-`_config.ts` file for that purpose.
+**Lume** has a default behaviour that is enough for simple cases, but if you
+want to copy or process additional files, use plugins or change some default
+settings, you must create a configuration file.
+
+The configuration file is a `_config.ts` or `_config.js`, saved in the site's
+root directory.
 
 ## Create a _config file
 
 Although it can be created manually Lume provides the `lume init` command to
 configure Lume and Deno easily.
 
-After running `lume init`, Lume will ask you some questions:
+After running `lume init`, Lume will ask you a couple of questions:
 
-### Use TypeScript for the configuration file
+- **Use TypeScript for the configuration file:** Type `y` (yes) to create the
+  configuration file in TypeScript (it will create the file `config.ts`), or `n`
+  (no, by default) to create it in JavaScript.
 
-Type `y` (yes) to create the configuration file in TypeScript (it will create
-the file `config.ts`), or `n` (no, by default) to create it in JavaScript.
-
-### Plugins
-
-Then, you can use some plugins provided by Lume. For now, let's skip this step
-by pressing `Enter`.
+- **Plugins**: Then, you can use some plugins provided by Lume. This is a
+  convenient way to import and use plugins.
 
 Once the command finish you will see 3 new files:
 
@@ -58,8 +58,9 @@ export default site;
 {
   "importMap": "import_map.json",
   "tasks": {
-    "build": "deno run -A https://deno.land/x/lume@v1.7.2/ci.ts",
-    "serve": "deno task build -- -s"
+    "build": "deno task lume",
+    "serve": "deno task lume -s",
+    "lume": "deno eval \"import 'lume/task.ts'\" --"
   }
 }
 ```
@@ -73,12 +74,3 @@ export default site;
 ```
 
 </lume-code>
-
-To see all available options of the `_config.js` file
-[See the config documentation](/docs/configuration/config-file.md) {.tip}
-
-## Learn more
-
-You have learn the basics of Lume.
-[Go to the documentation](/docs/overview/about-lume.md) to become a Lume
-expert!.

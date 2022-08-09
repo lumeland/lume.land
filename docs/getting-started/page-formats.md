@@ -1,6 +1,7 @@
 ---
-step: 6
 title: Other page formats
+description: Creating pages with Nunjucks, JavaScript and other formats
+order: 6
 ---
 
 ${toc}

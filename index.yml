@@ -7,7 +7,7 @@ header:
 install:
   title: "Run the following to [install](./docs/overview/installation.md):"
   code: deno run -A https://deno.land/x/lume/install.ts
-  url: /tutorial/your-first-page/
+  url: /docs/getting-started/your-first-page/
 
 usage:
   - title: Supports any template engine

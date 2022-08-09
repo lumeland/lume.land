@@ -1,7 +1,7 @@
 ---
 title: Copy static files
 description: Configure static files and directories be copied as is.
-order: 2
+order: 3
 ---
 
 Static files are files that don't have to be processed, like images, PDFs,

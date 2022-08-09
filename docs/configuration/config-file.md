@@ -1,24 +1,13 @@
 ---
 title: The _config file
 description: How to create a configuration file to customize Lume
-order: 1
+order: 2
 ---
 
 ${toc}
 
-**Lume** has a default behaviour that is enough for simple cases, but if you
-want to copy or process additional files, use plugins or change some default
-settings, you must create a configuration file.
-
 The configuration file is a `_config.ts` or `_config.js`, saved in the site's
-root directory, which you can create yourself or with the following command:
-
-```sh
-lume init
-```
-
-It's a JavaScript/TypeScript module that exports a Lume instance. The minimal
-required code is:
+root directory exports a Lume instance. The minimal required code is:
 
 ```js
 import lume from "lume/mod.ts";

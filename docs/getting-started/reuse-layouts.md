@@ -1,6 +1,7 @@
 ---
-step: 4
-title: Use the same layout by multiple pages
+title: Reuse your layouts
+description: Create a single layout used by multiple pages
+order: 4
 ---
 
 In the previous step we learn to define variables in the pages that can be used
