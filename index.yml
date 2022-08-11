@@ -266,17 +266,27 @@ support:
       url: https://johan.im/
       img: /img/avatars/johan.webp
       amount: 20
+    - name: Jon Paul Uritis
+      url: https://jonpauluritis.com/
+      img: /img/avatars/jppope.webp
+      amount: 1
+      recurrent: true
     - name: Reese Schultz
       url: https://reese.codes/
       img: /img/avatars/reeseschultz.webp
       amount: 5
+      recurrent: true
+    - name: Jrson
+      url: https://jrson.me/
+      img: /img/avatars/jrson.webp
+      amount: 10
       recurrent: true
 
   contribute:
     title: How to contribute?
     description: |
       - Star the [repo in GitHub](https://github.com/lumeland/lume) or vote in [Product Hunt](https://www.producthunt.com/posts/lume-2).
-      - Support this project on [Open collective](https://opencollective.com/lume) or [sponsor me](https://github.com/sponsors/oscarotero).
+      - Support this project by [sponsor me](https://github.com/sponsors/oscarotero).
       - Fork the repo and [contribute](https://github.com/lumeland/lume/graphs/contributors) fixing bugs or adding new features.
       - Help to [improve the docs](https://github.com/lumeland/lume.land).
       - Spread to the world your love for Lume in a tweet, post or any kind of publication.
