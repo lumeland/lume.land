@@ -108,6 +108,29 @@ site.preprocess(
 );
 ```
 
+## Pages array manipulations
+
+Some processors can generate additional pages (or remove them). The second
+argument of the (pre)processors contain the array with all pages that are being
+processed. You can modify this array to add or remove pages dynamically. For
+example:
+
+```js
+import { Page } from "lume/core/filesystem.ts";
+
+site.process([".css"], (page, pages) => {
+  // Minify the css content
+  const { code, map } = myCssMinifier(page.content);
+
+  // Update the page content
+  page.content = code;
+
+  // Create a new page with the source map
+  const url = page.data.url + ".map";
+  pages.push(Page.create(url, map));
+});
+```
+
 ## How processors and preprocessors work
 
 Both processors and preprocessors are tied to file extensions (`.html`, `.js`

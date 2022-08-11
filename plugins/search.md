@@ -117,7 +117,8 @@ The available operators for the conditions are:
 - `=` to search coincidences, for example `menu=true`. The strings `true` and
   `false` are converted to booleans automatically. `undefined` and `null` are
   also converted so you can filter pages without a value with
-  `keyname=undefined`.
+  `keyname=undefined`. The strings with numeric values are also converted to
+  numbers.
 - `!=` to search non-coincidences, for example `menu!=true`. The strings `true`
   and `false` are converted to booleans automatically. `undefined` and `null`
   are also converted so you can filter pages containing a value with

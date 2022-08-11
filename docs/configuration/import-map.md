@@ -58,8 +58,8 @@ The `deno.json` file created by Lume is similar to this:
   run Lume without the `lume` command but `deno task lume`. `build` and `serve`
   task are alias to `deno task lume` with some arguments.
 
-Deno supports `deno.json` and `deno.jsonc` extensions, but Lume only supports
-`deno.json`. {.tip}
+Deno supports `deno.json` and `deno.jsonc` extensions, but for now Lume only can
+edit `deno.json` files. {.tip}
 
 If you use VS Code with the Deno extension installed, this file will be detected
 and used automatically. {.tip}
