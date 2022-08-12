@@ -10,7 +10,7 @@
   --text-display-size: clamp(30px, 10vw, 75px);
   --text-display-height: 0.95;
   --text-display: 700 var(--text-display-size)/var(--text-display-height) var(--font-display);
-  --text-display-spacing: -0.035em;
+  --text-display-spacing: -0.045em;
   --text-heading-size: clamp(20px, 8vw, 50px);
   --text-heading: 700 var(--text-heading-size)/1.1 var(--font-display);
   --text-heading-spacing: -0.03em;
@@ -23,8 +23,8 @@
   --text-body-spacing: -0.02em;
   --text-caption: 15px/1.6 var(--font-ui);
   --text-caption-bold: 600 15px/1.6 var(--font-ui);
-  --text-caption-mini: 12px/1.6 var(--font-ui);
-  --text-caption-mini-bold: 600 12px/1.6 var(--font-ui);
+  --text-caption-mini: 13px/1.6 var(--font-ui);
+  --text-caption-mini-bold: 600 13px/1.6 var(--font-ui);
   --text-code: 16px/1.6 var(--font-code);
 
   /* Colors */

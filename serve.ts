@@ -9,11 +9,7 @@ const server = new Server({
   root: `${Deno.cwd()}/_site`,
 });
 
-server.use(expires({
-  durations: {
-    "text/html; charset=UTF-8": 0,
-  },
-}));
+server.use(expires());
 server.use(cacheBusting());
 server.use(analytics({
   id: "UA-110819-22",

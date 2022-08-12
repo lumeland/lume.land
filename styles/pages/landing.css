@@ -320,14 +320,26 @@
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  gap: var(--column-gap-0);
   grid-row: 2;
   margin-top: 0;
   margin-bottom: var(--row-gap-1);
 
+  & > li {
+    margin-right: -25px;
+
+    &:hover {
+      z-index: 1;
+
+      & img {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
   & img {
     border-radius: 50%;
     display: block;
+    border: solid 4px var(--color-background);
   }
 }
 .landing-support-contribute {
