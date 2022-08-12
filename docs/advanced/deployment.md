@@ -44,7 +44,7 @@ name: Publish on GitHub Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -131,7 +131,7 @@ name: Publish on Deno Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -157,7 +157,7 @@ jobs:
         with:
           project: project-name
           import-map: "./import_map.json"
-          entrypoint: server.ts
+          entrypoint: serve.ts
 ```
 
 ## Netlify
