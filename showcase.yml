@@ -81,6 +81,12 @@ sites:
     description: An interactive reference for all versions of jQuery.
     code: https://github.com/oscarotero/jquery-cheatsheet
   
+  - title: jrson
+    img: /img/showcase/jrson.webp
+    url: https://jrson.me/
+    description: The personal blog of jrson.
+    code: https://github.com/jrson83/jrson.me
+  
   - title: Tobias Schmidt
     img: /img/showcase/tobias.webp
     url: https://tobiasschmidt.me/
@@ -94,7 +100,7 @@ sites:
     code: https://github.com/notion-enhancer/notion-enhancer.github.io
 
   - title: Hyro
-    # img: /img/showcase/hyro.webp
+    img: /img/showcase/hyro.webp
     url: https://hyro.pages.dev/
     description: Personal website by Hyro.
     code: https://github.com/xHyroM/xHyroM
@@ -121,7 +127,7 @@ sites:
     code: https://github.com/laura-rubio/ensino
 
   - title: Kusaeni
-    # img: /img/showcase/kusaeni.webp
+    img: /img/showcase/kusaeni.webp
     url: https://kusaeni.com/
     description: The personal blog of Kusaeni.
     code: https://notabug.org/kuspoes/kusaicom
@@ -143,7 +149,7 @@ sites:
     code: https://github.com/fserb/bkc
 
   - title: DenissB
-    # img: /img/showcase/denissb.webp
+    img: /img/showcase/denissb.webp
     url: https://denissb.github.io/
     description: A personal website of a web developer.
     code: https://github.com/denissb/denissb.github.io
