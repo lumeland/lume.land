@@ -8,27 +8,22 @@ ${toc}
 
 As Lume is run by Deno, read the
 [Deno installation](https://deno.land/#installation) instructions if you don't
-have it yet.
+have it installed yet.
 
 ## Don't install Lume
 
-**Lume doesn't need to be installed**. The recommended way to use Lume is with
-[Deno's tasks](https://deno.land/manual/tools/task_runner) so you can run
-`deno task lume` in any environment. If you want to create a Lume project from
-scratch, run the following command:
+**Lume doesn't need to be installed**. The recommended way to use Lume is via
+[Deno's tasks](https://deno.land/manual/tools/task_runner) so you can run for
+example `deno task lume` in any environment with Deno and it just works.
+
+To configure Deno to use Lume, go to your project folder and run the following
+command:
 
 ```sh
 deno run -A https://deno.land/x/lume/init.ts
 ```
 
-This command ask you a couple of questions:
-
-- **Use TypeScript for the configuration file:** Type `y` to create the
-  configuration file in TypeScript or `n` to create it in JavaScript.
-- **Plugins**: This is a convenient way to setup
-  [Lume plugins](../../plugins/index.yml).
-
-This command creates the following 3 files:
+This command creates the following files:
 
 - `_config.ts` or `_config.js`: The
   [Lume configuration file](../configuration/config-file.md), where you can
@@ -94,12 +89,9 @@ version, use the command:
 lume upgrade
 ```
 
-If you get an error upgrading from an old versions of Lume, just reinstall it.
-{.tip}
-
-Use the command `lume upgrade --dev` to install the latest development version
-(the last commit in the [Github repository](https://github.com/lumeland/lume)).
-It's useful to test new features of Lume before released.
+The command `lume upgrade --dev` installs the latest development version (the
+last commit in the [Github repository](https://github.com/lumeland/lume)). It's
+useful to test new features of Lume not yet released.
 
 Run `lume init` to create the `_config.js`, `deno.json` and `import_map.json`
 files in your project.
