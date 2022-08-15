@@ -7,7 +7,11 @@ order: 2
 ${toc}
 
 The configuration file is a `_config.ts` or `_config.js`, saved in the site's
-root directory exports a Lume instance. The minimal required code is:
+root directory exports a Lume instance. If you don't have it yet,
+[see Installation documentation](../overview/installation.md) to know how to
+create it.
+
+The minimal required code is:
 
 ```js
 import lume from "lume/mod.ts";
