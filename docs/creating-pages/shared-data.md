@@ -7,16 +7,16 @@ order: 5
 ${toc}
 
 In addition to the variables defined in the pages and layouts, you can store
-data accessible by some or all pages and layouts. Shared data must be saved in
-the `_data` directory or `_data.*` files with extensions like `.json`, `.yaml`,
-`.js` or `.ts`.
+data accessible by some or all pages. Shared data must be saved in the `_data`
+directory or `_data.*` files with extensions like `.json`, `.yaml`, `.js` or
+`.ts`.
 
 The formats `.json` and `.yaml` are useful for static data. `.js` and `.ts` fit
 better for dynamic data (for example, data fetch from a API or a database):
 
 <lume-code>
 
-```json { title=.json }
+```json { title=_data.json }
 {
   "people": [
     {
@@ -31,7 +31,7 @@ better for dynamic data (for example, data fetch from a API or a database):
 }
 ```
 
-```yml { title=.yml }
+```yml { title=_data.yml }
 people:
   - name: Oscar Otero
     color: black
@@ -40,7 +40,7 @@ people:
     color: blue
 ```
 
-```ts { title=.ts }
+```ts { title=_data.ts }
 import { db } from "./database.ts";
 
 const people = db.query("select name, color from people");
@@ -76,8 +76,8 @@ pages in the same directory so you don't have to repeat it for every page.
 
 `_data` directories are similar to `_data` files, but instead of using only one
 file, the data is stored in several files inside that directory. The _basename_
-of each file determines the variable name used to store the data. Let's see an
-example:
+of each file determines the variable name used to access to the data. Let's see
+an example:
 
 ```txt
 └── _data
@@ -90,11 +90,11 @@ example:
 
 In this example, the data stored in the file `_/data/users.json` can be accessed
 via `users` variable and documents via `documents.one`, `documents.two` and
-`documents.three`. To use this data in your templates:
+`documents.three`. To use this data in your pages:
 
 <lume-code>
 
-```html {title=".njk"}
+```html {title="page.njk"}
 <h2>Documents</h2>
 
 <ul>
@@ -106,7 +106,7 @@ via `users` variable and documents via `documents.one`, `documents.two` and
 </ul>
 ```
 
-```jsx {title=".jsx"}
+```jsx {title="page.jsx"}
 export default function ({ documents }) {
   return <>
     <h2>Documents</h2>

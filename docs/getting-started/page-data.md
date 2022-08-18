@@ -4,9 +4,8 @@ description: Working with front matters to add page data
 order: 3
 ---
 
-We just defined the variable `layout` in the front matter to assign a layout to
-the page. The front matter can contain all variables you want. For example,
-let's define a variable with the name `title`:
+The front matter can contain any variable that you want. For example, let's
+define a variable with the name `title`:
 
 <lume-code>
 
@@ -25,7 +24,8 @@ I hope you enjoy it.
 
 </lume-code>
 
-We can use this variable in the layout to insert its value in the html code:
+This variable is accessible by the layout, so it can be inserted in the html
+code:
 
 <lume-code>
 
@@ -44,8 +44,8 @@ We can use this variable in the layout to insert its value in the html code:
 
 </lume-code>
 
-The `<title>` tag contain the `{{ title }}` placeholder that will be replaced by
-the value of the variable `title` (in our example _"This is my website"_).
+The `<title>` tag has the `{{ title }}` placeholder used to insert the value of
+the variable `title`.
 
 [Go to Page data documentation](/docs/creating-pages/page-data.md) for more info
 about page data. {.tip}

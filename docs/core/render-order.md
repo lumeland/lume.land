@@ -4,7 +4,7 @@ description: Configure the rendering order of the pages
 order: 12
 ---
 
-In lume all pages are rendered at the same time. This works well in most cases,
+In Lume all pages are rendered at the same time. This works well in most cases,
 but sometimes you want to make sure a page is rendered after or before others.
 The most typical example is with auto-generated pages. Let's say you have a page
 that generate multiple pages dynammically using data from an external API:
@@ -20,34 +20,36 @@ export default function* () {
     yield {
       url: `item-${item.id}`,
       title: item.title,
-      tags: ["api-item"],
+      type: "api",
       content: item.text,
     };
   }
 }
 ```
 
-This script will generate one page for every item returned by the api. To list
-and paginate all these auto-generated pages, you may want to create an
-additional page like this:
+This script will generate one page for every item returned by the api. Note that
+we have added the variable `type` to all pages with the value `"api"`. This will
+help us to select these new pages later.
+
+To list and paginate all these auto-generated pages, you may want to create
+something like this:
 
 ```js
 export const layout = "layouts/api-pagination.njk";
 
 export default function* ({ search, paginate }) {
-  const items = search.pages("api-item");
+  const items = search.pages("type=api");
 
-  for (const page of paginate(items, { url: (n) => `/page/${n}/`, size: 10 })) {
+  for (const page of paginate(items)) {
     yield page;
   }
 }
 ```
 
 In this script, we are using the [search](../../plugins/search.md) helper to
-search all pages tagged as `api-item` (we have added this tag to the previous
-pages generated automatically) and paginate them with the
+search all pages with the variable `type=api` and paginate them with the
 [paginate](../../plugins/paginate.md) helper. But we have a problem: due all
-pages are executed at the same time, it's possible that the `api-item` pages
+pages are executed at the same time, it's possible that the `type=api` pages
 didn't exist before paginate them, so the pagination won't work. What we really
 need is create all dynamic pages **before** paginate them.
 
@@ -66,7 +68,7 @@ export const layout = "layouts/api-pagination.njk";
 export const renderOrder = 1;
 
 export default function* ({ search, paginate }) {
-  const items = search.pages("api-item");
+  const items = search.pages("type=api");
 
   for (const page of paginate(items, { url: (n) => `/page/${n}/`, size: 10 })) {
     yield page;
@@ -74,6 +76,6 @@ export default function* ({ search, paginate }) {
 }
 ```
 
-This ensures that this script will be runned **after** all other pages are
+This ensures that this script will be runned **after** the `type=api` pages are
 created. An alternative solution is change the `renderOrder` of the API script
 to a negative value, like `-1`.

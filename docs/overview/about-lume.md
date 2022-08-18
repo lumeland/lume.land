@@ -9,10 +9,10 @@ for _fire_ but also a static site generator for [Deno](https://deno.land/).
 
 It's inspired by other static site generators, such as
 [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/) or
-[Eleventy](https://www.11ty.dev/), but it's easier to use and configure, besides
-being super flexible.
+[Eleventy](https://www.11ty.dev/), but easier to use and configure and much more
+flexible.
 
-- Supports **multiple file formats**, like `markdown`, `yaml`, `JavaScript`,
+- It supports **multiple file formats**, like `markdown`, `yaml`, `JavaScript`,
   `typescript`, `jsx` and `nunjucks`, and it's easy to extend with more.
 - You can hook **processors** to manipulate `html` and assets, like `css` or
   `js`.

@@ -6,9 +6,9 @@ order: 10
 
 ${toc}
 
-Lume has events that you can use to run some code at certain times during the
-compiling process. You can configure those events in the `_config.js` file with
-the function `addEventListener`.
+Lume has an events system to run some code at certain times during the compiling
+process. You can configure those events in the `_config.js` file with the
+function `addEventListener`.
 
 ## beforeBuild
 

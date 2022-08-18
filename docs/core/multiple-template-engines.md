@@ -25,12 +25,12 @@ templateEngine: njk
 ```
 
 A typical example is a file using Markdown to render HTML but Nunjucks to insert
-variables or includes. To do that, you can use commas to add several engines:
+variables or includes. To do that, you can use an array to add several engines:
 
 ```yml
 ---
 title: My post
-templateEngine: njk,md
+templateEngine: [njk, md]
 ---
 
 # Hello, this is the post title {{ title }}

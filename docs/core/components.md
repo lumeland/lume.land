@@ -12,9 +12,9 @@ includes, macros, etc). The Lume components have the following advantages:
 
 - They are template engine agnostic. For example, you can create your components
   in JSX or JavaScript and use them in Nunjucks.
-- They can generate not only the HTML code but also CSS and JavaScript code
-  needed.
-- They are available everywhere, no need to import them manually.
+- They can generate not only the HTML code but also the CSS and JavaScript code
+  needed in client side.
+- They are automatically available everywhere, no need to import them manually.
 - For module based components (like JavaScript, TypeScript, JSX or TSX), it's
   the only way to hot-reload components without stop and restart the local
   server.

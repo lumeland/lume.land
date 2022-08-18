@@ -4,8 +4,8 @@ description: Adding global data to be used anywhere in your site
 order: 4
 ---
 
-You can assign custom data to your site that will be available in your pages,
-layouts and components from your `_config.ts` file. For example:
+You can set global variables to your site, accessible by all pages, layouts and
+components. For example:
 
 ```js
 // Set a variable

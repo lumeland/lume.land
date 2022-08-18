@@ -1,6 +1,6 @@
 ---
 title: Copy static files
-description: Configure static files and directories be copied as is.
+description: Configure what files and directories are copied as is.
 order: 3
 ---
 
@@ -52,9 +52,6 @@ the second argument that accept the original file path and must return the
 destination path:
 
 ```js
-// Copy all images but ensure they are lower case
-site.copy([".jpg", ".gif", ".png"], (file) => file.toLowerCase());
-
 // Copy all files in the static directory but ensure they are lower case
 site.copy("static", (file) => file.toLowerCase());
 

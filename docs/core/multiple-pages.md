@@ -151,8 +151,8 @@ export default function* () {
 ```
 
 In this example, we use a database to get all articles and a generator to
-generate a new page per article. Every yielded article contains the url and
-other properties you like (title, category, tag, body etc). We are exporting the
+generate a new page per article. Each yielded article contains the url and other
+properties you like (title, category, tag, body etc). We are exporting the
 `layout` value so all pages will use the same layout to be rendered.
 
 Other common use case is for pagination. Go to

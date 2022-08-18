@@ -1,13 +1,13 @@
 ---
 title: The _config file
-description: How to create a configuration file to customize Lume
+description: How to use the configuration file to customize Lume
 order: 2
 ---
 
 ${toc}
 
-The configuration file is a `_config.ts` or `_config.js`, saved in the site's
-root directory exports a Lume instance. If you don't have it yet,
+The configuration file is the `_config.ts` or `_config.js`, saved in the site's
+root directory. If you don't have it yet,
 [see Installation documentation](../overview/installation.md) to know how to
 create it.
 
@@ -21,18 +21,18 @@ const site = lume();
 export default site;
 ```
 
-The `lume()` function create a new instance of Lume, used to build your site.
-This function accepts an object with the following configuration values:
+The `lume()` function creates a new instance of Lume and export it. This
+function accepts an object with the following configuration values:
 
 ## Basic options
 
 ### src
 
-This is the directory of the sources of your site. All files needed to build
-your site must be here. Files and folders outside this directory won't be
-included in your site. It's relative to `cwd` and by default it's `.` (the same
-directory), but some people prefer to store the source files in a subfolder like
-`src`.
+This is the directory containing the source files of your site. All files needed
+to build your site must be here. Files and folders outside this directory won't
+be included in your site. It's relative to `cwd` and by default it's `.` (the
+same directory), but some people prefer to store the source files in a subfolder
+like `src`.
 
 ```ts
 const site = lume({
@@ -41,7 +41,8 @@ const site = lume({
 ```
 
 You can override the value from the CLI with `--src`, useful if you have
-different sites in the same directory. For example: `lume --src=./src` {.tip}
+different sites in the same directory. For example: `deno task lume --src=./src`
+{.tip}
 
 ### dest
 
@@ -56,13 +57,13 @@ const site = lume({
 
 You can override the value from the CLI with `--dest`, useful if you want to
 generate the site without override the previous one. For example:
-`lume --dest=./output` { .tip }
+`deno task lume --dest=./output` { .tip }
 
 ### location
 
-This is the public URL where the site will be published. Useful to generate
-absolute URLs or if your site is published in a subdirectory, for example:
-`https://username.github.io/project-name/`. The value must be an
+This is the public URL of the site. It's useful to generate absolute URLs or fix
+the relative urls if your site is published under a subdirectory, for example:
+`https://example.com/project-name/`. It only accepts an
 [URL object](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL), for
 example:
 
@@ -77,27 +78,7 @@ always use `http://localhost:3000` (or the defined port if you change it).
 
 You can override the value from the CLI with `--location`, useful if you want to
 build and deploy the site to different locations. For example:
-`lume --location=https://my-site.com/blog/` { .tip }
-
-### dev
-
-Set `true` to build the site in development mode (by default is `false`). The
-only difference is that pages with the value `draft: true` will be included in
-the build (otherwise, they would be ignored). This value can be used also to
-load or configure plugins depending on the environment. For example: minify the
-JavaScript code only in production mode.
-
-```ts
-const site = lume({
-  dev: true,
-});
-
-if (site.options.dev) {
-  // Custom dev configuration
-}
-```
-
-You can override the value from the CLI, with `lume --dev` {.tip}
+`deno task lume --location=https://my-site.com/blog/` { .tip }
 
 ### prettyUrls
 
@@ -110,7 +91,7 @@ const site = lume({
 });
 ```
 
-The string value `no-html-extension` allows to save the files as
+It also accepts the string value `no-html-extension` to save the files as
 `/about-us.html` but generate the urls without extension extension
 (`/about-us`).
 
@@ -133,7 +114,7 @@ const site = lume({
 ```
 
 This value can be overrided from CLI with `--port`. For example:
-`lume --serve --port=8888` {.tip}
+`deno task lume --serve --port=8888` {.tip}
 
 ### page404
 
@@ -163,7 +144,7 @@ const site = lume({
 ```
 
 This value can be set from CLI with `--open` or `-o`. For example:
-`lume --serve --open` {.tip}
+`deno task lume --serve --open` {.tip}
 
 ## Watcher options
 
@@ -185,8 +166,8 @@ const site = lume({
 });
 ```
 
-There are some files and directories that are automatically ignored, for example
-`.git`, `.DS_Store` or the `dest` directory. {.tip}
+There are some files and directories that are automatically ignored by the
+watcher, like `.git` or `.DS_Store`. {.tip}
 
 ## Components options
 

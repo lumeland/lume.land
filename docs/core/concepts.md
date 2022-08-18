@@ -42,11 +42,6 @@ If you're using any plugin to provide support for a new template engine, like
 [pug](../../plugins/pug.md) or [eta](../../plugins/eta.md), don't need to run
 `site.loadPages()` because the plugin does it for you. {.tip}
 
-Note that regular pages are not always exported as `.html` files. You can
-configure a different output with the
-[`url` variable](../creating-pages/urls.md), but the way Lume handle them is the
-same.
-
 ### Asset pages
 
 Are pages intended to output assets, like `.css` files, `.js` or images. They
@@ -54,8 +49,8 @@ are very similar to regular pages but with a couple of differences. Let's take
 `my-styles.css` as an example:
 
 - Load the content of the file.
-- The original extension **isn't replaced** and `prettyUrls` configuration
-  **doesn't apply.**
+- Unlike regular pages, the original extension **isn't replaced** and
+  `prettyUrls` configuration **doesn't apply.**
 - (Pre)process the page, **but layouts and template engines are not used.**
 - Save the output file as `/my-styles.css`.
 
@@ -74,11 +69,10 @@ plugin does it for you. {.tip}
 
 ## Data files
 
-Data files are the files saved as `_data.*` or in a `_data/` directory. Like
-pages, they are loaded but don't generate pages but are used by the page files
-to access to interesting data. The following files are interpreted as data
-files: `_data.yaml`, `_data.ts`, `_data.js`, `_data.json`. If you want to load
-additional data formats, use `site.loadData()` function:
+Data files are the files saved as `_data.*` or in `_data/` directories and
+contain data shared to the page files. The following files are interpreted as
+data files: `_data.yaml`, `_data.ts`, `_data.js`, `_data.json`. If you want to
+load additional data formats, use `site.loadData()` function:
 
 ```ts
 // Load .toml files
@@ -102,8 +96,8 @@ site.copy([".pdf"]);
 
 ## Includes
 
-Are files that are loaded by the pages, for example the layouts or templates. By
-default, they are placed in the `_includes` folder but you can configure it.
+Are files loaded by the pages, for example the layouts or templates. By default,
+they are placed in the `_includes` folder but you can configure it.
 
 ```ts
 // Save the layouts files of nunjucks in the "/njk/" directory
@@ -117,8 +111,8 @@ code that you can use in your templates. You can load additional components with
 `site.loadComponents()` function. [See more about components](./components.md)
 
 ```ts
-// Load vue components
-site.loadComponents([".vue"], vueLoader, vueRenderer);
+// Load jsx components
+site.loadComponents([".jsx"], jsxLoader, jsxRenderer);
 ```
 
 ## Plugins

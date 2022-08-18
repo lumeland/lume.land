@@ -29,7 +29,7 @@ differences can help.
 ## Template languages
 
 - In Lume, `HTML` files are not processed by default.
-- There's no support for Handlebars (`.hbs`) and Mustache (`.mustache`) files.
+- There's no support for Handlebars (`.hbs`) and Mustache (`.mustache`) files (but it would be easy to create a plugin for that)
 - Instead of `.ejs`, Lume uses `.eta` template engine.
 
 ## Site build
@@ -52,7 +52,8 @@ Serverless
 radar).
 
 Image
-: Working on it.
+: There's the
+[imagick plugin](../../plugins/imagick.md) for that.
 
 Cache assets
 : There isn't any plugin for that.
@@ -63,7 +64,7 @@ RSS
 
 Syntax Highlighting
 : There's the
-[code highlight plugin](../../plugins/code_highlight.md) for that.
+[code highlight plugin](../../plugins/code_highlight.md) and [prism plugin](../../plugins/prism.md) for that.
 
 Navigation
 : There isn't a plugin for that. But you can (partially) emulate it

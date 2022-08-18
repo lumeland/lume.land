@@ -103,8 +103,9 @@ export default class HandlebarsEngine implements Engine {
   render(content: string, data: Data): string {
     return this.renderSync(content, data, filename);
   }
-  /** Render async */
-  render(content: string, data: Data): string {
+
+  /** Render sync (used only for components) */
+  renderSync(content: string, data: Data): string {
     const template = HandlebarsJS.compile(content);
     return template(data);
   }

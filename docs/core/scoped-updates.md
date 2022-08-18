@@ -1,12 +1,11 @@
 ---
-title: Update optimization
+title: Scoped updates
 description: How to optimize the update process in the watch mode.
 ---
 
-As you can see in [the order of operations](./order-of-operations.md) section,
-after any change in the watch mode (with `lume --serve` or `lume --watch`), the
-**entire site is built again**. This happens because it's almost impossible to
-know in advance which pages will be affected by a change in any file. For
+In Lume, any change in the watch mode (with `lume --serve` or `lume --watch`),
+**rebuils the entire site again**. This happens because it's almost impossible
+to know in advance which pages will be affected by a change in any file. For
 example:
 
 - A change in a CSS file can affect to other CSS files that `@import` it (if you

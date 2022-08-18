@@ -16,7 +16,7 @@ posts/my-first-post.md  =>  /posts/my-first-post/index.html
 By default, the pages are saved as "pretty URLs", using directories for the path
 and a `index.html` file. So the final URL is `/posts/my-first-post/`. To disable
 this behaviour, set the option `prettyUrls` to `false` in your `_config.js` file
-(see [Configuration](../configuration/config-file.md)).
+(see [Configuration](../configuration/config-file.md#prettyurls)).
 
 ```js
 const site = lume({
@@ -40,8 +40,7 @@ url: /posts/welcome/
 ---
 ```
 
-In this example, the `url` value will be used to generate the output file
-instead of the filename:
+In this example, the `url` value change the output file name:
 
 ```txt
 /posts/my-first-post.md  =>  /posts/welcome/index.html
@@ -51,7 +50,8 @@ Note that defining manually the URL of a page will makes that `prettyUrls`
 option **won't have any effect.** For example:
 
 ```yml
-# This outputs /posts/welcome/index.html
+# Use a trailing / to pretty urls.
+# For example, this outputs /posts/welcome/index.html
 url: /posts/welcome/
 
 # This outputs /posts/welcome (a file without extension)
@@ -88,11 +88,11 @@ Using `../welcome/` as URL will remove also the last directory.
 
 ## URLs as functions
 
-The variable `url` accepts also a function that will be used to generate the
-final value. This function will receive the current page as the first argument.
+The variable `url` accepts also a function to generate the final value
+dynamically. This function has the current page object as the first argument.
 
 For example, let's say that we want to generate automatically all URLs of our
-posts, using the title value. We can create a `_data.js` file in the `/post/`
+posts, using the title value. We can create a `_data.js` file in the `/posts/`
 directory, with the following code:
 
 ```js
@@ -101,27 +101,26 @@ export function url(page) {
 }
 ```
 
-Now, all pages in the post directory share the same `url` function, that returns
-the title of the page as a relative URL, for example `./My first post/` (See
-[Shared data](../creating-pages/shared-data.md)).
+Now, all pages in this directory share the same `url` function. The function
+returns the title of the page as a relative URL, for example `./My first post/`
+(See [Shared data](../creating-pages/shared-data.md)).
 
 Because the URL is relative, the current directory is appended automatically (it
 will be resolved to `/post/My first post/`). And if you are using the
 [`slugify_urls`](../../plugins/slugify_urls.md) plugin all output paths are
-slugified automatically, so the final url will be `/post/my-first-post/`.
+slugified automatically, so the final url would be `/post/my-first-post/`.
 
 Using functions as URLs gives a lot of flexibility to generate the URLs as you
 want.
 
 ## Setting url to `false`
 
-The `url` variable can be also `false`. This prevent the page to be saved into
-the dest folder (although the page is still visible by other pages, for example
-in paginations).
+Setting the `url` variable to `false` prevents to be saved into the dest folder
+(although the page is still visible by other pages, for example in paginations).
 
 ```yml
 ---
 title: This is a title
-url: false # Don't output page yet
+url: false # Don't output this page yet
 ---
 ```

@@ -8,7 +8,7 @@ ${toc}
 
 The following examples assume that you are using Lume as a Deno's task.
 
-The commands for the globally installed Lume are the same but removing the
+The commands for the globally installed Lume are similar but removing the
 `deno task` part. For example `deno task lume --serve` becomes to
 `lume --serve`.
 
@@ -20,24 +20,24 @@ To build your website, simply run:
 deno task lume
 ```
 
-This command will compile your documents to HTML and save them into the dest
+This command compiles your documents to HTML and save them into the dest
 directory (usually `_site`).
 
-You have also the `deno task build` task as an alias.{.tip}
+There's the `deno task build` task as an alias.{.tip}
 
 ### Start a local server
 
-Typically you will want to see the site in your browser so to start a local
-server with your site, add the `--serve` (or `-s`) argument:
+Typically you will want to open the site in your browser so can start a local
+server adding the `--serve` (or `-s`) argument:
 
 ```sh
 deno task lume --serve
 ```
 
-You have also the `deno task serve` task as an alias.{.tip}
+There's the `deno task serve` task as an alias.{.tip}
 
 This command init a **local web server** and starts **watching the changes** of
-your site. So if you edit anything, Lume will rebuild the site and reload
+your site. So after changing anything, Lume will rebuild the site and reload
 automatically your browser with the new changes. The local server use the port
 `3000` by default but you can change it with the `--port` argument. For example:
 

@@ -38,8 +38,8 @@ extension). This means that, instead of `/about-us.html`, the URL is
 directories as needed.
 
 If you want to disable it, set `prettyUrls` to `false` in
-[config file](../configuration/config-file.md), so you will have something like
-this:
+[config file](../configuration/config-file.md#prettyurls), so you will have
+something like this:
 
 ```txt
 .
@@ -51,11 +51,11 @@ this:
 
 ## Page order
 
-Pages are ordered by date, using the file creation date as default. If you want
-to have full control over this, you can assign the data by prepending it to the
-filename using the `yyyy-mm-dd` syntax following by an underscore `_` (or
-`yyyy-mm-dd-hh-ii-ss` if you need also the time). Note that this part is removed
-to generate the final name:
+All pages have a `date` variable with the file creation date. This value can be
+used to order the pages (in a blog, for example). If you want to define a
+different date, you can prepend it to the filename using the `yyyy-mm-dd` syntax
+following by an underscore `_` (or `yyyy-mm-dd-hh-ii-ss` if you need also the
+time). Note that this part is removed on generating the final url:
 
 ```txt
 .
@@ -65,8 +65,8 @@ to generate the final name:
     └── 2020-06-22_my-second-post.md  => /posts/my-second-post/index.html
 ```
 
-If you don't mind the exact date, only want to keep an order, you can use just
-numbers:
+If you don't mind the exact date but want to keep an order, you can use just
+numbers (they are treated as timestamp):
 
 ```txt
 .
@@ -87,17 +87,6 @@ From `Lume v1.9`, dates can be defined in folders:
         └── index.md     => /posts/hello-world/index.html
         └── other.md     => /posts/hello-world/other/index.html
 ```
-
-## Ignored pages
-
-All files or directories starting with `_` are ignored by **lume** to generate
-pages. This convention allows to place stuff that you don't want to include in
-your site output. This is the reason why the config file is `_config.js`, the
-output directory is `_site`, the includes directory is `_includes`, or shared
-data is named `_data`, all these things starts with an underscore so they are
-ignored on loading page files.
-
-Dot files and directories (such as `.git`, `.gitignore`, etc) are also ignored.
 
 ## Changing the output URL
 

@@ -4,10 +4,10 @@ description: Reuse the same data by multiple pages
 order: 5
 ---
 
-In previous steps we have created two pages using the same layout, so they have
-the same value assigned to the `layout` variable. This can be fine for few pages
-but what if you have tens, hundreds or thousands of pages using the same layout?
-`_data` files to the rescue!
+In [the previou step](./reuse-layouts.md) we have created two pages using the
+same layout, by setting the same `layout` variable to both. This can be fine for
+few pages but what if you have tens, hundreds or thousands of pages using the
+same layout? `_data` files to the rescue!
 
 ## Create a _data file
 
@@ -22,7 +22,7 @@ layout: layout.njk
 
 </lume-code>
 
-This is a special file that contains data accesible by all pages of the same
+This is a special file containing data accesible by all pages of the same
 directory or subdirectory. In this file we have defined the variable `layout` so
 all pages have this variable too. There's no need to repeat it in the front
 matter of all pages so we can remove it.

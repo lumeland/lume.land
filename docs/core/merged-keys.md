@@ -12,35 +12,27 @@ the page (like the front matter) with the data of the parent folders (stored in
 the `_data` files and folders).
 
 ```txt
-├── _data.yaml          # title: Title 1
-├── page1.md
+├── _data.yaml
+├── ...
 └── documents
-    └── _data.json      # title: Title 2
-    └── page2.md
+    └── _data.json
+    └── ...
     └── examples
-        └── _data.json  # title: Title 3
-        └── page3.md
-        └── page4.md    # title: Title 4
+        └── _data.json
+        └── my-page.md
 ```
 
-In this example the `_data.yaml` in the root define the variable `title` with
-the value "Title 1". The `page1.md` has this variable because it's in the same
-directory as the `_data.yaml` file.
+In this example the `/documents/examples/my-page.md` file contains all data from
+the page front matter, merged with the data from
+`/documents/examples/_data.json`, `documents/_data.json` and `/_data.yaml`
+files, **in this order of priority**.
 
-In the `/documents` subfolder we have a `_data.json` file that override the
-`title` variable to "Title 2". So the `page2.md` that is in the same directory
-will have this variable with the new value.
+## Object mode merging
 
-In `/documents/examples` subfolder, another `_data.json` file overrides the
-`title` variable again, so `page3.md` will have this variable with the value
-"Title 3". The `page4.md` has the `title` variable in the front matter, so the
-final value is "Title 4".
-
-## object mode
-
-You may want to merge some values in a different way. For example let's say we
-have a site with the following two data files, one in the root and other in a
-subfolder:
+On merging variables, **the complete value is overrided**. But you may want to
+merge some values in a different way. For example let's say we have the
+following two data files, one in the root and other in a subfolder. Both files
+have a `site` variable, with different values:
 
 <lume-code>
 
@@ -58,9 +50,9 @@ site:
 </lume-code>
 
 All pages in the subfolder (and sub-subfolders) will have the latest version of
-the variable, including only the author, but not the site title, because the
-whole variable is overriden. You can change this behaviour using the special
-value `mergedKeys`. This value indicates to Lume how to merge some keys:
+the variable, that has the `author` subkey but missing the `title` value,
+because the whole variable is overriden. You can change this behaviour using the
+special value `mergedKeys`. This value indicates to Lume how to merge some keys:
 
 <lume-code>
 
@@ -91,8 +83,8 @@ site:
   author: Laura Rubio
 ```
 
-The `object` merge is not recursive, only works with the properties of the first
-level of the object. A recursive option can be added in the future.
+The `object` merge mode is not recursive, only works with the first level
+properties. A recursive option can be added in the future.
 
 The `mergedKeys` variable is also merged with other `mergedKeys` variables in
 subfolders and pages and using always the `object` mode. This means that you can

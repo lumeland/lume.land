@@ -6,8 +6,8 @@ order: 8
 
 ${toc}
 
-In the layouts, there are the `search` and `paginate` helpers that allows to
-search other pages and paginate the result.
+The variables `search` and `paginate` are global functions that allows to search
+other pages and paginate the result.
 
 ## Searching pages
 
@@ -23,11 +23,12 @@ sort. For example, to search pages having the variable `category` set to
 </ul>
 ```
 
-You can access to any value of every page using the property `page.data`. In the
-example above, we use the title of every page to build the list.
+Each `page` is an object with all info related with this page. The property
+`data` contains all data assigned to this page (like variables in the front
+matter, or in the _data.* files). In the example above, we use the title of
+every page to build the list.
 
-The `search` helper is very powerful and can do much more than that (sorting,
-limit, complex queries, etc).
+The `search` helper is very powerful and has more interesting features.
 [Go to the Search plugin documentation](../../plugins/search.md) for more info.
 
 ## Pagination

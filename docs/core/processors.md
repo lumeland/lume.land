@@ -6,8 +6,8 @@ order: 15
 
 ${toc}
 
-A processor is a function to transform the content of pages. Let's see an
-example of a processor to minify HTML pages:
+A processor is a function to transform the content of pages just **after the
+page is rendered**. Let's see an example of a processor to minify HTML pages:
 
 ```js
 function minifyHTML(page) {
@@ -22,13 +22,12 @@ If you want to use this processor to build your site, you can register it in the
 site.process([".html"], minifyHTML);
 ```
 
-Now, all HTML pages with be minified.
+Now, all HTML pages are minified.
 
-## The page data
+## The page object
 
 As you can see in the previous example, the function receives an object with the
-page (or asset). This means that you can access not only to the page content but
-to many other data:
+page (or asset). This object has not only the page content but much more data:
 
 ```js
 function process(page) {
@@ -60,16 +59,13 @@ create a processor to add automatically the `alt` attribute to all images:
 
 ```js
 site.process([".html"], (page) => {
-  page.document.querySelectorAll("img").forEach((img) => {
+  page.document?.querySelectorAll("img").forEach((img) => {
     if (!img.hasAttribute("alt")) {
       img.setAttribute("alt", "This is a random alt");
     }
   });
 });
 ```
-
-Processors are executed just after render the page (with a template engine).
-{.tip}
 
 ## Process assets
 
@@ -138,7 +134,7 @@ etc). To decide if a page must use a registered processor or preprocessor, Lume
 search this extension in the input file (like `.md` or `.njk`) or the output
 file (like `.html` or `.css`).
 
-Another interesting thing is they are executed in the same order they are
+Another interesting thing is they are executed in the same order as they are
 defined. This allows to chain different processors to the same file extension.
 For example: two processors to the `.css` extension, one to compile the code and
 other to minify.

@@ -16,8 +16,7 @@ have it installed yet.
 [Deno's tasks](https://deno.land/manual/tools/task_runner) so you can run for
 example `deno task lume` in any environment with Deno and it just works.
 
-To configure Deno to use Lume, go to your project folder and run the following
-command:
+To setup Lume in your project folder, run the following command:
 
 ```sh
 deno run -A https://deno.land/x/lume/init.ts
@@ -35,8 +34,8 @@ This command creates the following files:
   persmissions, etc.
 - `import_map.json`: The
   [import map file](https://deno.land/manual/node/import_maps#using-import-maps)
-  with the import url of Lume, including the version number. Here you can add
-  the dependencies of your project.
+  with the import url of Lume. Here you can add the dependencies of your project
+  and update Lume by editing the version number.
 
 This is an example of these three configuration files:
 
@@ -71,18 +70,18 @@ export default site;
 
 </lume-code>
 
-Now you can run Lume with `deno task build` (to build the site) or
-`deno task serve` (to build and start a local server).
+You can run Lume with `deno task build` (to build the site) or `deno task serve`
+(to build and start a local server).
 
 ## Install Lume globally on your computer
 
-Other way to install Lume is by executing the following command:
+It's also possible to install Lume globally by executing the following command:
 
 ```sh
 deno run -A https://deno.land/x/lume/install.ts
 ```
 
-Once installed, you will have the `lume` command. To update Lume to the latest
+Once installed, you have the `lume` command. To update Lume to the latest
 version, use the command:
 
 ```sh

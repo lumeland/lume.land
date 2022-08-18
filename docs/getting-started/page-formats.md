@@ -14,8 +14,8 @@ Every page has its own format.
 ## Create pages with Nunjucks
 
 Nunjucks, the format we have used to create layouts in the previous examples,
-can also be used to create pages. You only have to create a file with the `.njk`
-extension. For example:
+can also be used to create pages directly. You only have to create a file with
+the `.njk` extension. For example:
 
 <lume-code>
 
@@ -59,9 +59,9 @@ variables `title` and `links`).
 
 JavaScript can be useful for complex pages requiring some logic before
 rendering. You have to create a file with the extension `.tmpl.js`. The `.tmpl`
-subextension is required to distinguish the JavaScript files that create pages
-from other JavaScript files destined to the executed in the browser ("tmpl" is
-for "template").
+subextension is required to distinguish the JavaScript files to generate static
+pages from other JavaScript files destined to the executed in the browser
+("tmpl" is for "template").
 
 The previous Nunjucks example in JavaScript is:
 

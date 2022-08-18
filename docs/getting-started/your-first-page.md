@@ -6,7 +6,7 @@ order: 1
 
 ## The page file
 
-After setting up Lume in your project's folder
+After setup Lume in your project's folder
 ([see installation instructions](../overview/installation.md) if you don't have
 it yet), create the file `index.md` and add some content in
 [markdown](https://en.wikipedia.org/wiki/Markdown) format, for example:
@@ -28,8 +28,8 @@ I hope you enjoy it.
 
 Run `deno task serve` in your terminal. This task does two things:
 
-- Build your site. This means that the `index.md` file is compiled and exported
-  as `index.html` in the folder `_site`.
+- Build your site. The `index.md` file is compiled and exported as `index.html`
+  in the folder `_site`.
 - Starts a local web server, so you can see the generated site in your browser.
   Open the url `http://localhost:3000/` in your browser to see the page.
 

@@ -26,7 +26,7 @@ Here you can write Markdown content
 ```
 
 **Lume** has support for many template engines. In this example, the layout file
-has the extension `njk`, used by the
+has the extension `.njk`, used by the
 [Nunjucks](https://mozilla.github.io/nunjucks/) template engine:
 
 ```html
@@ -54,18 +54,18 @@ the title, and `content` with the rendered Markdown content of the page.
 
 ## Layout data
 
-Layouts can have also data with variables that will be merged with the variables
-from the page. Note that variables defined in the pages have precedence over the
+Layouts can have additional data that will be merged with the data from the
+page. Note that variables defined in the pages have precedence over the
 variables in the layouts. This means that you can set default values in the
 layouts and override them within the pages.
 
 A layout can be wrapped around another layout. Just set a `layout` variable in
-front matter. In the following examples, the layout uses the `layouts/main.njk`
-layout as a wrapper.
+the front matter. In the following examples, the layout uses the
+`layouts/main.njk` layout as a wrapper.
 
 <lume-code>
 
-```html { title=".njk" }
+```html { title="page.njk" }
 ---
 title: Default title
 language: en
@@ -81,7 +81,7 @@ layout: layouts/main.njk
 </article>
 ```
 
-```js { title=".js" }
+```js { title="page.js" }
 export const title = "Default title";
 export const language = "en";
 export const layout = "layouts/main.njk";
