@@ -1,7 +1,7 @@
 ---
 title: The _config file
 description: How to use the configuration file to customize Lume
-order: 2
+order: 1
 ---
 
 ${toc}
@@ -152,7 +152,8 @@ The `watcher` key contains an object to configure the file watcher, used to
 watch file changes with `lume --serve` and `lume --watch`.
 
 - **debounce:** The debounce interval (in milliseconds). By default is `100`.
-- **ignore:** An array of paths that the watcher will ignore.
+- **ignore:** An array of strings or functions to filter paths ignored by the
+  watcher.
 
 ```ts
 const site = lume({
@@ -161,6 +162,7 @@ const site = lume({
     ignore: [
       "./ignored-folder/",
       "./ignored-file.txt",
+      (path) => path.endsWith(".foo"), // ignore extension
     ],
   },
 });

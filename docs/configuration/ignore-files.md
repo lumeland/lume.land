@@ -1,7 +1,7 @@
 ---
 title: Ignore files
 description: Configure Lume to ignore some files and folders.
-order: 3
+order: 2
 ---
 
 All files and directories starting with `.` or `_` are automatically ignored by

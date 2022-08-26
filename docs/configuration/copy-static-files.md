@@ -31,6 +31,30 @@ site.copy("static-files/favicons/favicon.ico", "favicon.ico");
 site.copy("assets", ".");
 ```
 
+## Ignored files
+
+Note that the ignore settings explained in [Ignore files](./ignore-files.md) are
+applied when copy static files, including files starting with `_` and `.`. for
+example:
+
+```js
+// Ignore a subfolder
+site.ignore("/files/pictures/");
+
+// Copy the /files/ folder.
+// Note that the /files/pictures/ folder is ignored,
+// in addition to all files starting with . and _
+site.copy("/files/");
+```
+
+If you need to copy a file starting with `.` or `_`, you have to configure it
+explicity:
+
+```js
+// Copy a underscored file
+site.copy("_headers");
+```
+
 ## Copy by file extension
 
 An additional way to select files is by extension. Use an array with the

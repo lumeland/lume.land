@@ -295,6 +295,13 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://twitter.com/freeLance0451/status/1557386172120416258
+      author: freeLance (@freeLance0451)
+      avatar: /img/avatars/freelance.webp
+      date: August 10, 2022
+      text: |
+        OK, falling in love with <a href="https://twitter.com/deno_land?ref_src=twsrc%5Etfw">@deno_land</a> and the Lume SSG. So nice not having to worry about node_modules 😄 
+
     - url: https://twitter.com/Microflash/status/1551599531615473665
       author: Naiyer Asif نیر آصف (@Microflash)
       avatar: /img/avatars/naiyer.webp
