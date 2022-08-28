@@ -146,6 +146,25 @@ const site = lume({
 This value can be set from CLI with `--open` or `-o`. For example:
 `deno task lume --serve --open` {.tip}
 
+### middlewares
+
+Use this option to add middlewares to the local web server. There are some
+middlewares for common needs at `lume/middlewares/*`, but you can create custom
+middlewares easily. More info in the
+[Server documentation](../core/server.md#middlewares).
+
+```ts
+import expires from "lume/middlewares/expires.ts";
+
+const site = lume({
+  server: {
+    middlewares: [
+      expires(),
+    ],
+  },
+});
+```
+
 ## Watcher options
 
 The `watcher` key contains an object to configure the file watcher, used to
