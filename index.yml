@@ -229,7 +229,7 @@ features:
 
   - title: Deploy anywhere
     img: /icons/deploy.svg
-    description: Static sites can be hosted (for free) anywhere GitHub/GitLab Pages, Deno Deploy, Vercel, Netlify… [More info](/docs/advanced/deployment.md)
+    description: Static sites can be hosted (for free) anywhere GitHub/GitLab Pages, Deno Deploy, Vercel, Netlify… [Explore ways to deploy](/docs/advanced/deployment.md)
 
   - title: Easy to extend
     img: /icons/extend.svg

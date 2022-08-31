@@ -15,12 +15,12 @@ page_css: landing.css
 
       <div class="landing-install-code">
         <pre><code>{{ install.code }}</code></pre>
-        <a class="landing-install-cta" href="{{ install.url }}">
+        <a class="landing-install-cta" href="{{ install.url }}" aria-label="Continue to Getting Started">
           <img src="/icons/arrow-right.svg" inline>
         </a>
       </div>
 
-      <a href="https://deno.land/x/lume"><img src="https://shield.deno.dev/x/lume" alt="deno.land/x/lume"></a>
+      <a href="https://deno.land/x/lume"><img src="https://shield.deno.dev/x/lume" alt="deno.land/x/lume" width="144" height="20"></a>
     </div>
   </header>
 
@@ -52,10 +52,10 @@ page_css: landing.css
       <h2>{{ examples.title }}</h2>
 
       <lume-carousel-controls target="#examples" class="lume-carousel-buttons">
-        <button value="prev" class="button is-secondary has-icon">
+        <button value="prev" class="button is-secondary has-icon" aria-label="Previous examples">
           <img src="/icons/arrow-left.svg" inline>
         </button>
-        <button value="next" class="button is-secondary has-icon">
+        <button value="next" class="button is-secondary has-icon" aria-label="Next examples">
           <img src="/icons/arrow-right.svg" inline>
         </button>
       </lume-carousel-controls>
@@ -81,7 +81,7 @@ page_css: landing.css
         <blockquote class="landing-testimonials-quote">
           {{ item.text | md | safe }}
           <cite>
-            <img src="{{ item.avatar }}" width="50" height="50">
+            <img src="{{ item.avatar }}" width="50" height="50" alt="{{ item.author }}">
             <a href="{{ item.url }}">
               <strong>{{ item.author }}</strong>
               <time>{{ item.date }}</time>
@@ -100,7 +100,7 @@ page_css: landing.css
       {% for sponsor in support.sponsors %}
       <li>
         <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
-          <img src="{{ sponsor.img }}" height="100" width="100">
+          <img src="{{ sponsor.img }}" height="100" width="100" alt="{{ sponsor.name }}">
         </a>
       </li>
       {% endfor %}
