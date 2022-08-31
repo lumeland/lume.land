@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} - Lume</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
   <link rel="stylesheet" href="/{{ cache_busting }}/styles/main.css">
   <script src="/{{ cache_busting }}/main.js" type="module"></script>
   <script>
@@ -38,16 +39,18 @@
   </div>
   {% include "templates/footer.njk" %}
 
-  <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.js" defer></script>
 
   <script type="text/javascript">
-    docsearch({
-      appId: "O7U42EOTRQ",
-      apiKey: "bcb89a19824e0100724bc16011dea6f8",
-      indexName: "lume",
-      container: document.getElementById("search"),
-      debug: false
-    });
+    window.addEventListener('DOMContentLoaded', () => {
+      docsearch({
+        appId: "O7U42EOTRQ",
+        apiKey: "bcb89a19824e0100724bc16011dea6f8",
+        indexName: "lume",
+        container: document.getElementById("search"),
+        debug: false
+      });
+    }, false);
   </script>
 </body>
 </html>
