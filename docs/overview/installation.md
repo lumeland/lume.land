@@ -73,6 +73,8 @@ export default site;
 You can run Lume with `deno task build` (to build the site) or `deno task serve`
 (to build and start a local server).
 
+To upgrade Lume, just run `deno task lume upgrade`.
+
 ## Install Lume globally on your computer
 
 It's also possible to install Lume globally by executing the following command:
@@ -85,7 +87,7 @@ Once installed, you have the `lume` command. To update Lume to the latest
 version, use the command:
 
 ```sh
-lume upgrade
+lume upgrade --global
 ```
 
 The command `lume upgrade --dev` installs the latest development version (the

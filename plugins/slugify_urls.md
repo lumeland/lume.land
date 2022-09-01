@@ -49,6 +49,7 @@ site.use(slugifyUrls({
   lowercase: true, // Converts all characters to lowercase
   alphanumeric: true, // Replace non alphanumeric characters for the equivalent. Example: ñ to n.
   separator: "-", // Character used as separator for words
+  stopWords: ["and", "or", "the"], // A list of words not included in the slug
   replace: { // An object with individual characters replacements
     "Ð": "D", // eth
     "ð": "d",

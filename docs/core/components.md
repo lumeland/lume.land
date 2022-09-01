@@ -170,3 +170,25 @@ export default function ({ comp }) {
 
 In this example, the component exports CSS and JS code, in addition to the HTML
 code.
+
+## Register components from the _config file
+
+In addition to the `_components` folder, you can register components dynamically
+in the `_config` file with the function `site.component()`. This function takes
+two arguments: the component context and the component object:
+
+```ts
+site.component("ui", {
+  name: "button",
+  css: ".btn { background: blue; color: white }",
+  render({ text }) {
+    return `<button class="btn">${text}</button>`;
+  },
+});
+```
+
+Now, you can use the component as always:
+
+```html
+{{ comp.ui.button({ text: "Login" }) | safe }}
+```

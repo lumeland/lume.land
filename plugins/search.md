@@ -167,6 +167,30 @@ sometimes is more practical.
 {% endfor %}
 ```
 
+## The `data` filter
+
+In most cases you don't need the `Page` instance, only the `data` object of the
+pages. So you can use the `data` filter to return only these objects. So instead
+this:
+
+```html
+{% for post in search.pages("category=lume"]) %}
+<a href="{{ post.data.url }}">
+  {{ post.data.title }}
+</a>
+{% endfor %}
+```
+
+You can do this:
+
+```html
+{% for post in search.pages("category=lume"]) | data %}
+<a href="{{ post.url }}">
+  {{ post.title }}
+</a>
+{% endfor %}
+```
+
 ## Search one page
 
 The function `search.page()` is very similar to `search.pages()` but only

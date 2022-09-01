@@ -43,7 +43,7 @@ object with the options. The available options are:
 | `size` | `10`               | Number of elements per page                                                             |
 | `url`  | `(n) => page-${n}` | The function to generate the URL of each page. It receives the page number as argument. |
 
-This helper returns a generator. Each item has the following values:
+This helper returns an array. Each item has the following values:
 
 ```js
 for (const page of paginate(posts, options)) {

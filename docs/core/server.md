@@ -75,6 +75,20 @@ server.start();
 console.log("Listening on http://localhost:8000");
 ```
 
+### basic_auth
+
+Implements the
+[basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication)
+method to access to the site:
+
+```js
+server.use(basicAuth({
+  users: {
+    "user": "password",
+  },
+}));
+```
+
 ### cache_busting
 
 Cache busting is a way to tell the browser that some static files like CSS
