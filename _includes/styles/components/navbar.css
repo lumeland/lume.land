@@ -90,7 +90,7 @@
 }
 @media (max-width: 768px) {
   .navbar-search {
-    width: auto;
-    height: auto;
+    min-width: auto;
+    min-height: auto;
   }
 }
