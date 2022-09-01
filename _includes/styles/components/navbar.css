@@ -85,12 +85,12 @@
   align-self: center;
   padding: 0;
   margin: 0;
-  width: 172px;
-  height: 36px;
+  min-width: 173px;
+  min-height: 36px;
 }
 @media (max-width: 768px) {
-	.navbar-search {
-		width: auto;
+  .navbar-search {
+    width: auto;
     height: auto;
-	}
+  }
 }
