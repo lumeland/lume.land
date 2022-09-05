@@ -390,3 +390,13 @@ articles:
     title: Aprendiendo Lume (Generador de sitios estáticos basado en Deno)
     author: ManzDev at YouTube
     date: 2021-09-13
+
+  - url: https://itrendbuzz.com/how-to-install/
+    title: How to install Lume static site generator on Ubuntu
+    author: Santhosh Veer at ITrendbuzz
+    date: 2022-06-23
+
+  - url: https://johan.im/writings/deno/
+    title: A whole new world with Deno
+    author: Johan Brook
+    date: 2022-02-08
