@@ -1,5 +1,14 @@
 {
   "importMap": "import_map.json",
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "deno.ns",
+      "deno.unstable"
+    ]
+  },
   "tasks": {
     "build": "deno task lume",
     "serve": "deno task lume -s",
