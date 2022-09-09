@@ -1,6 +1,7 @@
 ---
 title: Scoped updates
 description: How to optimize the update process in the watch mode.
+order: 11
 ---
 
 In Lume, any change in the watch mode (with `lume --serve` or `lume --watch`),

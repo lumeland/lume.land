@@ -21,11 +21,12 @@ generating one or more pages. In Lume there are two different types of pages:
 Are files intended to generate HTML pages. Let's take `my-page.md` as an
 example:
 
-- Load the content of the file.
-- Replace the extension `.md` with `.html`. If `prettyUrls` is enabled, append
-  `/index` to the file name.
-- (Pre)process the page, render the markdown and apply the layout (if defined).
-- Save the output file as `/my-page/index.html`.
+1. Load the content of the file.
+2. Change the output file from `/my-page.md` to `/my-page/index.html`.
+3. Run preprocessors
+4. Render the page content and layouts
+5. Run processors
+6. Save the output file as `/my-page/index.html`.
 
 By default Lume interprets the following formats as regular page files, so they
 are loaded, processed and exported to `dest` folder: `.md`, `.njk`,
@@ -48,11 +49,10 @@ Are pages intended to output assets, like `.css` files, `.js` or images. They
 are very similar to regular pages but with a couple of differences. Let's take
 `my-styles.css` as an example:
 
-- Load the content of the file.
-- Unlike regular pages, the original extension **isn't replaced** and
-  `prettyUrls` configuration **doesn't apply.**
-- (Pre)process the page, **but layouts and template engines are not used.**
-- Save the output file as `/my-styles.css`.
+1. Load the content of the file.
+2. Run preprocessors
+3. Run processors
+4. Save the output file as `/my-styles.css`.
 
 Lume doesn't load any asset by default. Use the function `site.loadAssets()` to
 configure Lume to load some extensions as page assets. For example:
