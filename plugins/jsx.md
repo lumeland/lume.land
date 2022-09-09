@@ -26,17 +26,36 @@ export default site;
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/jsx.ts/~/Options).
 
-You might want to add following fields to deno.json in order to tell Deno that
-Lume exposes React in global scope:
+### Configuration
 
-```json
+You might want to add following fields to `deno.json` and `import_map.json` in
+order to tell Deno that Lume exposes React in global scope:
+
+<lume-code>
+
+```json {title="deno.json"}
 {
+  "importMap": "import_map.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "https://esm.sh/react@18.0.0"
+    "jsxImportSource": "react"
   }
 }
 ```
+
+```json {title="import_map.json"}
+{
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v1.11.1/",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0",
+  }
+}
+```
+
+</lume-code>
+
+[Go to Using TypeScript](/docs/configuration/using-typescript/) for more info
+about using TypeScript with Lume. {.tip}
 
 ## Description
 
@@ -87,3 +106,6 @@ export default ({ title, children }) => (
   </html>
 );
 ```
+
+Lume will automatically add the missing `<!DOCTYPE html>` to the generated
+`.html` pages. {.tip}

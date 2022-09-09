@@ -14,11 +14,11 @@ Import this plugin in your `_config.ts` file to use it:
 
 ```js
 import lume from "lume/mod.ts";
-import preact from "lume/plugins/jsx_preact.ts";
+import jsx from "lume/plugins/jsx_preact.ts";
 
 const site = lume();
 
-site.use(preact({/* your config here */}));
+site.use(jsx({/* your config here */}));
 
 export default site;
 ```
@@ -26,14 +26,16 @@ export default site;
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/jsx_preact.ts/~/Options).
 
-You might want to add following fields to deno.json and import_map.json in order
-to configure Deno to use Preact as the JSX library:
+### Configuration
+
+You might want to add following fields to `deno.json` and `import_map.json` in
+order to configure Deno to use Preact as the JSX library:
 
 <lume-code>
 
-```json{title=deno.json}
+```json {title="deno.json"}
 {
-  "importMap": "./import_map.json",
+  "importMap": "import_map.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
@@ -41,10 +43,10 @@ to configure Deno to use Preact as the JSX library:
 }
 ```
 
-```json{title=import_map.json}
+```json {title="import_map.json"}
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.11.0/",
+    "lume/": "https://deno.land/x/lume@v1.11.1/",
     "preact/jsx-runtime": "https://esm.sh/preact@10.10.6/jsx-runtime",
     "preact/jsx-dev-runtime": "https://esm.sh/preact@10.10.6/jsx-dev-runtime"
   }
@@ -52,6 +54,9 @@ to configure Deno to use Preact as the JSX library:
 ```
 
 </lume-code>
+
+[Go to Using TypeScript](/docs/configuration/using-typescript/) for more info
+about using TypeScript with Lume. {.tip}
 
 ## Description
 
@@ -101,3 +106,6 @@ export default ({ title, children }) => (
   </html>
 );
 ```
+
+Lume will automatically add the missing `<!DOCTYPE html>` to the generated
+`.html` pages. {.tip}
