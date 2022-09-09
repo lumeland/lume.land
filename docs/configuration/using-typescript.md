@@ -160,7 +160,7 @@ Example of using the custom types in your template files.
 
 <lume-code>
 
-```ts {title="post.ts"}
+```ts {title="post.tsx"}
 import type { PageData, PageHelpers } from "./types.ts";
 
 // TypeScript is aware of `readingTime`
