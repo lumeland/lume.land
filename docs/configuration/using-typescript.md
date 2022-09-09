@@ -27,10 +27,6 @@ extension.
 To create pages and layouts with JSX, you can either use the Lume
 [JSX](/plugins/jsx/) ([React](https://reactjs.org/)) or
 [JSX Preact](/plugins/jsx_preact/) ([Preact](https://preactjs.com/)) plugin.
-Additionally you can use the [Nano JSX](https://nanojsx.io/) plugin, which lives
-in the Lume
-[experimental-plugins](https://github.com/lumeland/experimental-plugins)
-repository.
 
 ### IDE Support
 
@@ -124,8 +120,8 @@ import type { Page, PageData } from "lume/core.ts";
 import type { PageHelpers } from "lume/core.ts";
 ```
 
-[Go to interface source code](https://github.com/lumeland/lume/blob/26b4d2e2f39f8100f9f5389e00811978afe5655f/core.ts#L149)
-for more info about the `PageData` interface. {.tip}
+[Go to source code](https://github.com/lumeland/lume/blob/master/core.ts) for
+more info about the `PageData` interface. {.tip}
 
 ### Extending Lumes Types
 
@@ -135,22 +131,20 @@ defined properties.
 <lume-code>
 
 ```ts {title="types.ts"}
-import type { Page as BasePage, PageData as BasePageData } from "lume/core.ts";
+import type { Page, PageData } from "lume/core.ts";
 
 // To handle all types in one place, use re-export
 export type { PageHelpers } from "lume/core.ts";
 
-export interface PageData extends BasePageData {
+// Example interface for `post.tsx`
+export interface CustomPageData extends PageData {
   // Define your own properties
   readingTime?: string;
-
-  // Or overwrite defaults
-  page: Page;
 }
 
 // Use this workaround, to overwrite Lumes `Page` interface
-export interface Page extends BasePage {
-  data: PageData;
+export interface CustomPage extends Page {
+  data: CustomPageData;
 }
 ```
 
@@ -160,12 +154,12 @@ Example of using the custom types in your template files.
 
 <lume-code>
 
-```ts {title="post.tsx"}
-import type { PageData, PageHelpers } from "./types.ts";
+```ts {title="custom.tsx"}
+import type { CustomPageData, PageHelpers } from "./types.ts";
 
 // TypeScript is aware of `readingTime`
 export default (
-  { children, date, readingTime, title }: PageData, 
+  { children, date, readingTime, title }: CustomPageData, 
   filters: PageHelpers) => {
   return (
     <article>
@@ -186,4 +180,4 @@ export default (
 
 To overwrite the default `Page | Page[]` interface, assign your custom interface
 when dealing with type `Page` e.g.
-`search.pages("type=post", "date=desc") as Page[]`. {.tip}
+`search.pages("type=post", "date=desc") as CustomPage[]`. {.tip}
