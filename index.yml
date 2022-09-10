@@ -281,6 +281,10 @@ support:
       img: /img/avatars/jrson.webp
       amount: 10
       recurrent: true
+    - name: SheetJS
+      url: https://sheetjs.com/
+      img: /img/avatars/sheetjs.webp
+      amount: 50
 
   contribute:
     title: How to contribute?
