@@ -18,7 +18,7 @@ const site = lume(
     location: new URL("https://lume.land"),
     server: {
       page404: "/404/",
-      middlewares: [cacheBusting({})],
+      middlewares: [cacheBusting()],
     },
   },
   { markdown },
