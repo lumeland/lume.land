@@ -46,13 +46,6 @@ site
   .filter("slice", (arr, length) => arr.slice(0, length))
   .process([".html"], (page) => {
     const doc = page.document!;
-    const toc = doc.querySelector(".toc");
-    const header = doc.querySelector(".doc-header");
-
-    if (toc && header) {
-      header.appendChild(toc);
-    }
-
     const blocks = doc.querySelectorAll("lume-code");
 
     blocks.forEach((block, i) => {
