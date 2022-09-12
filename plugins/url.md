@@ -7,8 +7,6 @@ tags:
   - urls
 ---
 
-${toc}
-
 ## Installation
 
 This plugin is installed by default. 🎉

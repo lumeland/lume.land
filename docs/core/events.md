@@ -4,8 +4,6 @@ description: A list of all the events which Lume will dispatch in the lifecycle
 order: 10
 ---
 
-${toc}
-
 Lume has an events system to run some code at certain times during the compiling
 process. You can configure those events in the `_config.js` file with the
 function `addEventListener`.

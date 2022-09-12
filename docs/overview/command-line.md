@@ -4,8 +4,6 @@ description: Using the command line interface of Lume
 order: 2
 ---
 
-${toc}
-
 The following examples assume that you are using Lume as a Deno's task.
 
 The commands for the globally installed Lume are similar but removing the

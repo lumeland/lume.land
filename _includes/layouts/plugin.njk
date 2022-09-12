@@ -16,6 +16,8 @@ page_css: docs.css
       </h1>
       {{ description | md | safe }}
 
+      {% include "templates/toc.njk" %}
+
       {% if docs %}
       <div class="doc-cta">
         <a href="https://doc.deno.land/https/deno.land/x/lume/{{ docs }}" class="button is-primary is-big">

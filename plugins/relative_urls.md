@@ -5,8 +5,6 @@ tags:
   - urls
 ---
 
-${toc}
-
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:

@@ -7,8 +7,6 @@ tags:
   - template_engine
 ---
 
-${toc}
-
 ## Installation
 
 This plugin is installed by default. 🎉

@@ -4,8 +4,6 @@ description: Using the search and paginate helper to create dynamic pages.
 order: 8
 ---
 
-${toc}
-
 The variables `search` and `paginate` are global functions that allows to search
 other pages and paginate the result.
 

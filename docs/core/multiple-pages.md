@@ -4,8 +4,6 @@ description: Generators allows to create multiple pages from an unique source fi
 order: 8
 ---
 
-${toc}
-
 It's possible with Lume to generate more than one page from the same source
 file. This is useful to generate pages programatically using a external source
 like a database or an API.

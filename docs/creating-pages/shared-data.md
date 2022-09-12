@@ -4,8 +4,6 @@ description: Add custom data that can be shared by all pages in a directory
 order: 5
 ---
 
-${toc}
-
 In addition to the variables defined in the pages and layouts, you can store
 data accessible by some or all pages. Shared data must be saved in the `_data`
 directory or `_data.*` files with extensions like `.json`, `.yaml`, `.js` or

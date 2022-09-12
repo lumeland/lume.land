@@ -4,8 +4,6 @@ description: About different types of files, plugins and extensions.
 order: 1
 ---
 
-${toc}
-
 The way Lume works is simple: it just read files in your `src` directory,
 process the content and save the final files into the `dest` folder.
 

@@ -4,8 +4,6 @@ description: How to add custom loaders and template engines to Lume.
 order: 14
 ---
 
-${toc}
-
 Loaders are functions that read and return the content of files. There are
 different loaders for different formats, like `json`, `yaml`, JavaScript modules
 or plain text.

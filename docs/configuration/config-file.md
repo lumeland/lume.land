@@ -4,8 +4,6 @@ description: How to use the configuration file to customize Lume
 order: 1
 ---
 
-${toc}
-
 The configuration file is the `_config.ts` or `_config.js`, saved in the site's
 root directory. If you don't have it yet,
 [see Installation documentation](../overview/installation.md) to know how to

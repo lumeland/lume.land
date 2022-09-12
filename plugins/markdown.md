@@ -7,8 +7,6 @@ tags:
   - template_engine
 ---
 
-${toc}
-
 ## Installation
 
 This plugin is installed by default. 🎉
@@ -61,8 +59,8 @@ markdown parser, with the following plugins enabled:
 - [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs) to add support
   for CSS classes and other attributes using `{}`.
 
-Use the `plugins` option to replace them. For example, to add the
-[markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor)
+You can find [more plugins in NPM](https://www.npmjs.com/search?q=markdown-it-plugin) that you can use with the `plugins` option. For example, to add the
+[markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji)
 plugin:
 
 ```ts
@@ -71,26 +69,15 @@ import anchor from "https://jspm.dev/markdown-it-anchor";
 // Set the markdown plugins
 const markdown = {
   plugins: [anchor],
-};
-
-const site = lume({}, { markdown });
-```
-
-This will override the default plugins with yours. If you only want to add more
-plugins without remove the defaults, use the `keepDefaultPlugins` option:
-
-```ts
-// Add more markdown plugins without overriding the defaults
-const markdown = {
-  plugins: [anchor],
   keepDefaultPlugins: true,
 };
 
 const site = lume({}, { markdown });
 ```
 
-You can pass options to your markdown-it plugins (as opposed to the markdown-it
-engine itself) like so:
+The `keepDefaultPlugins` option keeps the two default plugins installed by default by Lume (`markdown-it-deflist` and `markdown-it-attrs`). Set to `false` (or don't set it at all) to replace your plugins with the default ones.
+
+You can pass options to your markdown-it plugins using an array with `[plugin, options]` signature. Example:
 
 ```ts
 import anchor from "https://jspm.dev/markdown-it-anchor";
@@ -105,8 +92,9 @@ const markdown = {
 const site = lume({}, { markdown });
 ```
 
-(When an array is passed as an element of `plugins`, its value will be spread
-into the `.use()` call on the markdown engine.)
+### Lume markdown plugins
+
+The repository [lume_markdown_plugins](https://deno.land/x/lume_markdown_plugins) contain a collection of plugins specially adapted to Lume, with useful features like extract the title from the markdown or generate a table of contents.
 
 ## Creating pages in Markdown
 

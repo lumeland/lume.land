@@ -7,8 +7,6 @@ tags:
   - data_format
 ---
 
-${toc}
-
 ## Installation
 
 This plugin is installed by default. 🎉

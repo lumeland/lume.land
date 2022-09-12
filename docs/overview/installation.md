@@ -4,8 +4,6 @@ description: How to install and update Lume
 order: 1
 ---
 
-${toc}
-
 As Lume is run by Deno, read the
 [Deno installation](https://deno.land/#installation) instructions if you don't
 have it installed yet.

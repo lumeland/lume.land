@@ -4,8 +4,6 @@ description: Generic Lume components
 order: 8
 ---
 
-${toc}
-
 Components are template pieces that you can use in other templates. Some
 template engines like Nunjucks, Pug or Liquid have ways to reuse codes (like
 includes, macros, etc). The Lume components have the following advantages:

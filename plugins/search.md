@@ -7,8 +7,6 @@ tags:
   - utils
 ---
 
-${toc}
-
 ## Installation
 
 This plugin is installed by default. 🎉

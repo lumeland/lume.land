@@ -4,8 +4,6 @@ description: How Lume generate your site based on the source file structure
 order: 1
 ---
 
-${toc}
-
 Pages are the files that are loaded, processed and saved in your site. You can
 create pages using different formats (`md`, `js`, `ts`, `jsx`, `tsx`, `yml`,
 etc) but the simplest way is by adding a Markdown file in the root directory

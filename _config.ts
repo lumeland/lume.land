@@ -6,15 +6,10 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import imagick from "lume/plugins/imagick.ts";
 import cacheBusting from "lume/middlewares/cache_busting.ts";
-import anchor from "https://jspm.dev/markdown-it-anchor@8.0.0";
-import toc from "https://jspm.dev/markdown-it-toc-done-right@4.2.0";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.1.0/toc/mod.ts";
 
 const markdown = {
-  plugins: [
-    // @ts-ignore: no anchor typings
-    [anchor, { permalink: anchor.permalink.headerLink() }],
-    [toc, { containerClass: "toc", level: 2 }],
-  ],
+  plugins: [toc],
   keepDefaultPlugins: true,
 };
 

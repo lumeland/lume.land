@@ -4,8 +4,6 @@ description: A guide on extending Lume with custom processors
 order: 15
 ---
 
-${toc}
-
 A processor is a function to transform the content of pages just **after the
 page is rendered**. Let's see an example of a processor to minify HTML pages:
 

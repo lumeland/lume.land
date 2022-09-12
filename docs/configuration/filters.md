@@ -4,8 +4,6 @@ description: Helpers are functions accessible from pages and layouts that help t
 order: 4
 ---
 
-${toc}
-
 ## Filters
 
 There are different types of helpers, the most common type is a **filter**, used

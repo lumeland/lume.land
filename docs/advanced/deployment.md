@@ -3,8 +3,6 @@ title: Deployment
 description: How to deploy a site built with Lume.
 ---
 
-${toc}
-
 ## Deploy manually with rsync
 
 This is the simplest way to deploy a site: just build the site and upload it to

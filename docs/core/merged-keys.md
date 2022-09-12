@@ -4,8 +4,6 @@ description: Configure how the data is merged
 order: 12
 ---
 
-${toc}
-
 As explained in [Shared data](/docs/creating-pages/shared-data.md), the data
 assigned to every page is the result of merging the data directly assigned to
 the page (like the front matter) with the data of the parent folders (stored in
