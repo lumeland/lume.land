@@ -59,9 +59,10 @@ markdown parser, with the following plugins enabled:
 - [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs) to add support
   for CSS classes and other attributes using `{}`.
 
-You can find [more plugins in NPM](https://www.npmjs.com/search?q=markdown-it-plugin) that you can use with the `plugins` option. For example, to add the
-[markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji)
-plugin:
+You can find
+[more plugins in NPM](https://www.npmjs.com/search?q=markdown-it-plugin) that
+you can use with the `plugins` option. For example, to add the
+[markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji) plugin:
 
 ```ts
 import anchor from "https://jspm.dev/markdown-it-anchor";
@@ -75,9 +76,12 @@ const markdown = {
 const site = lume({}, { markdown });
 ```
 
-The `keepDefaultPlugins` option keeps the two default plugins installed by default by Lume (`markdown-it-deflist` and `markdown-it-attrs`). Set to `false` (or don't set it at all) to replace your plugins with the default ones.
+The `keepDefaultPlugins` option keeps the two default plugins installed by
+default by Lume (`markdown-it-deflist` and `markdown-it-attrs`). Set to `false`
+(or don't set it at all) to replace your plugins with the default ones.
 
-You can pass options to your markdown-it plugins using an array with `[plugin, options]` signature. Example:
+You can pass options to your markdown-it plugins using an array with
+`[plugin, options]` signature. Example:
 
 ```ts
 import anchor from "https://jspm.dev/markdown-it-anchor";
@@ -94,7 +98,10 @@ const site = lume({}, { markdown });
 
 ### Lume markdown plugins
 
-The repository [lume_markdown_plugins](https://deno.land/x/lume_markdown_plugins) contain a collection of plugins specially adapted to Lume, with useful features like extract the title from the markdown or generate a table of contents.
+The repository
+[lume_markdown_plugins](https://deno.land/x/lume_markdown_plugins) contain a
+collection of plugins specially adapted to Lume, with useful features like
+extract the title from the markdown or generate a table of contents.
 
 ## Creating pages in Markdown
 

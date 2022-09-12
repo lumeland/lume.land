@@ -7,6 +7,7 @@ import esbuild from "lume/plugins/esbuild.ts";
 import imagick from "lume/plugins/imagick.ts";
 import cacheBusting from "lume/middlewares/cache_busting.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.1.0/toc/mod.ts";
+import sitemap from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/sitemap/sitemap.ts";
 
 const markdown = {
   plugins: [toc],
@@ -39,6 +40,7 @@ site
   .use(imagick({
     cache: true,
   }))
+  .use(sitemap())
   .scopedUpdates(
     (path) => path.endsWith(".css"),
     (path) => path.endsWith(".png") || path.endsWith(".jpg"),
