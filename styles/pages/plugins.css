@@ -87,3 +87,70 @@
   color: var(--color-foreground);
   display: block;
 }
+.plugin-tags .button {
+  --color: black;
+
+  /* Colors */
+  &.is-color-lemonchiffon {
+    --background: lemonchiffon;
+  }
+  &.is-color-tomato {
+    --background: tomato;
+  }
+  &.is-color-violet {
+    --background: violet;
+  }
+  &.is-color-gold {
+    --background: gold;
+  }
+  &.is-color-lightskyblue {
+    --background: lightskyblue;
+  }
+  &.is-color-lightgreen {
+    --background: lightgreen;
+  }
+  &.is-color-pink {
+    --background: pink;
+  }
+  &.is-color-lightgray {
+    --background: lightgray;
+  }
+}
+
+.plugins-filter .button {
+  --color-active: black;
+
+  /* Colors */
+  &.is-color-lemonchiffon {
+    --background-active: lemonchiffon;
+    --accent: lemonchiffon;
+  }
+  &.is-color-tomato {
+    --background-active: tomato;
+    --accent: tomato;
+  }
+  &.is-color-violet {
+    --background-active: violet;
+    --accent: violet;
+  }
+  &.is-color-gold {
+    --background-active: gold;
+    --accent: gold;
+  }
+  &.is-color-lightskyblue {
+    --background-active: lightskyblue;
+    --accent: lightskyblue;
+  }
+  &.is-color-lightgreen {
+    --background-active: lightgreen;
+    --accent: lightgreen;
+  }
+  &.is-color-pink {
+    --background-active: pink;
+    --accent: pink;
+  }
+  &.is-color-lightgray {
+    --background-active: lightgray;
+    --accent: lightgray;
+  }
+}

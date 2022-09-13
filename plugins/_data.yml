@@ -3,25 +3,25 @@ main_menu: plugins
 tags_info:
   data_format:
     name: Data format
-    background: LemonChiffon
+    color: lemonchiffon
   html:
     name: HTML
-    background: tomato
+    color: tomato
   images:
     name: Images
-    background: violet
+    color: violet
   javascript:
     name: JavaScript
-    background: gold
+    color: gold
   styles:
     name: Styles
-    background: LightSkyBlue
+    color: lightskyblue
   template_engine:
     name: Template engine
-    background: lightgreen
+    color: lightgreen
   urls:
     name: URLs
-    background: pink
+    color: pink
   utils:
     name: Utils
-    background: lightgray
+    color: lightgray

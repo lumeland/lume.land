@@ -18,7 +18,7 @@ page_css: plugins.css
       </select>
 
       {% for id, info in tags_info %}
-      <label class="button is-secondary" style="--background-active:{{ info.background }};--accent:{{ info.background }};--color-active:black">
+      <label class="button is-secondary is-color-{{ info.color }}">
         <input type="checkbox" name="{{ id }}"> {{ info.name }}
       </label>
       {% endfor %}
@@ -40,7 +40,7 @@ page_css: plugins.css
 
         <nav class="plugin-tags">
           {% for tag in page.data.tags %}
-          <a href="?{{ tag }}=on" class="button is-secondary is-small" style="--background:{{ tags_info[tag].background }};--color:black">
+          <a href="?{{ tag }}=on" class="button is-secondary is-small is-color-{{ tags_info[tag].color }}">
             {{ tags_info[tag].name }}
           </a>
           {% endfor %}
