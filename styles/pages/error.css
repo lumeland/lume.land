@@ -4,13 +4,15 @@
   align-content: center;
   justify-items: center;
   align-items: center;
-  padding: var(--row-gap-2) 5vw;
+  padding: var(--row-gap-1) 5vw;
+  height: 100%;
+  box-sizing: border-box;
 
   & h1 {
     font: var(--text-display);
     letter-spacing: var(--text-display-spacing);
     text-align: center;
-    margin: 0 0 var(--row-gap-2) 0;
+    margin: 0 0 var(--row-gap-1) 0;
 
     & span {
       color: var(--color-primary);
@@ -23,4 +25,7 @@
     color: var(--color-foreground-1);
     text-align: center;
   }
+}
+.error-fire {
+  margin: 0;
 }
