@@ -1,7 +1,7 @@
 ---
-title: ParcelCSS
-description: Transform and minify your CSS files with ParcelCSS.
-docs: plugins/parcel_css.ts/~/Options
+title: Lightning CSS
+description: Transform and minify your CSS files with Lightning CSS.
+docs: plugins/lightningcss.ts/~/Options
 tags:
   - styles
 ---
@@ -12,11 +12,11 @@ Import this plugin in your `_config.ts` file to use it:
 
 ```js
 import lume from "lume/mod.ts";
-import parcelCss from "lume/plugins/parcel_css.ts";
+import lightningCss from "lume/plugins/lightningcss.ts";
 
 const site = lume();
 
-site.use(parcelCss({/* your config here */}));
+site.use(lightningCss({/* your config here */}));
 
 export default site;
 ```
@@ -26,8 +26,9 @@ See
 
 ## Description
 
-The `ParcelCSS` plugin load and transform your CSS files using
-[ParcelCSS](https://github.com/parcel-bundler/parcel-css) processor.
+The `lightningcss` plugin load and transform your CSS files using
+[Lightning CSS](https://github.com/parcel-bundler/lightningcss) processor
+(previously known as Parcel CSS).
 
 ## Configuration
 
@@ -44,11 +45,11 @@ Example with the default configuration:
 
 ```js
 import lume from "lume/mod.ts";
-import parcelCss, { version } from "lume/plugins/parcel_css.ts";
+import lightningCss, { version } from "lume/plugins/lightningcss.ts";
 
 const site = lume();
 
-site.use(parcelCss({
+site.use(lightningCss({
   extensions: [".css"],
   sourceMap: false,
   options: {
@@ -75,4 +76,4 @@ export default site;
 
 The `version()` function is provided to convert semver version to single 24-bit
 number, used by parcel_css.
-[More info](https://github.com/parcel-bundler/parcel-css#from-node) {.tip}
+[More info](https://github.com/parcel-bundler/lightningcss#from-node) {.tip}
