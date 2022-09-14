@@ -29,15 +29,15 @@ server
       includeSubDomains: true,
       preload: true,
     },
-    "Report-To": {
+    /* "Report-To": {
       "group": "default",
       "max_age": 31536000,
       "endpoints": [{ "url": "https://jrson.report-uri.com/a/d/g" }],
       "include_subdomains": true,
-    },
+    }, */
     "Content-Security-Policy": {
       mergeDefaults: true,
-      reportOnly: true,
+      reportOnly: false,
       directives: {
         "default-src": ["'none'"],
         "base-uri": ["'none'"],
@@ -61,8 +61,8 @@ server
           "data:",
         ],
         "media-src": ["'self'", "data:"],
-        "report-uri": "https://jrson.report-uri.com/r/d/csp/reportOnly",
-        "report-to": "default",
+        /* "report-uri": "https://jrson.report-uri.com/r/d/csp/reportOnly",
+        "report-to": "default", */
       },
     },
     "Referrer-Policy": ["no-referrer"],
