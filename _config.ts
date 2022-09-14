@@ -64,6 +64,7 @@ site
         const title = pre.querySelector("code")!.getAttribute("title")!;
 
         const li = doc.createElement("li");
+        li.setAttribute("role", "presentation");
 
         const button = doc.createElement("button");
         button.setAttribute("role", "tab");
