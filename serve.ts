@@ -66,6 +66,8 @@ server
       },
     },
     "Referrer-Policy": ["no-referrer", "strict-origin-when-cross-origin"],
+    "Permissions-Policy":
+      "accelerometer=(), autoplay=(), camera=(), microphone=()",
     "X-Frame-Options": true,
     "X-Content-Type-Options": true,
     "X-XSS-Protection": true,
