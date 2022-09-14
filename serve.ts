@@ -43,6 +43,7 @@ server
         "base-uri": ["'none'"],
         "object-src": ["'none'"],
         "frame-ancestors": ["'none'"],
+        "form-action": ["'none'"],
         "connect-src": [
           "'self'",
           "https://w3.org",
