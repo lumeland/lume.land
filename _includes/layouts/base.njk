@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} - Lume</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
-  <link rel="stylesheet" href="/{{ cache_busting }}/styles/main.css">
-  <script src="/{{ cache_busting }}/main.js" type="module"></script>
-  <script>
-    document.documentElement.className = localStorage.getItem("theme") || document.documentElement.className;
-  </script>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Lume</title>
 
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141b1f" media="(prefers-color-scheme: dark)">
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:url" content="{{ url | url(true) }}">
-  <meta property="og:description" content="{{ description | md(true) | striptags }}">
-  <meta property="og:image" content="{{ "/avatar.jpg" | url(true) }}">
-  <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ description | md(true) | striptags }}">
-  <meta name="twitter:site" content="@misteroom">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="{{ "/avatar.jpg" | url(true) }}">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="stylesheet" href="/{{ cache_busting }}/styles/main.css">
 
-  {% if page_css %}
-  <link rel="stylesheet" href="/{{ cache_busting }}/styles/pages/{{ page_css }}">
-  {% endif %}
+    <script src="/{{ cache_busting }}/main.js" type="module"></script>
+    <script>
+      document.documentElement.className = localStorage.getItem("theme") || document.documentElement.className;
+    </script>
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@docsearch/css@3.2.1/dist/style.css"
-    integrity="sha256-brWyd+lKlaU/B5Lhqd/FUXyZQu4rVmbFRsP2E8S2CLw="
-    crossorigin="anonymous">
-</head>
-<body>
-  {% include "templates/navbar.njk" %}
-  <div>
-    {{ content | safe }}
-  </div>
-  {% include "templates/footer.njk" %}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:url" content="{{ url | url(true) }}">
+    <meta property="og:description" content="{{ description | md(true) | striptags }}">
+    <meta property="og:image" content="{{ "/avatar.jpg" | url(true) }}">
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.2.1/dist/umd/index.js"
-    integrity="sha256-7XYP2JLQrbyOqBKrAn8sT3l8PG/v2j6C3A5EyBDp9to="
-    crossorigin="anonymous"></script>
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description | md(true) | striptags }}">
+    <meta name="twitter:site" content="@misteroom">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="{{ "/avatar.jpg" | url(true) }}">
 
-  <script type="text/javascript">
-    window.addEventListener('DOMContentLoaded', () => {
-      docsearch({
-        appId: "O7U42EOTRQ",
-        apiKey: "bcb89a19824e0100724bc16011dea6f8",
-        indexName: "lume",
-        container: document.getElementById("search"),
-        debug: false
-      });
-    }, false);
-  </script>
-</body>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+
+    {% if page_css %}
+      <link rel="stylesheet" href="/{{ cache_busting }}/styles/pages/{{ page_css }}">
+    {% endif %}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3.2.1/dist/style.css"
+      integrity="sha256-brWyd+lKlaU/B5Lhqd/FUXyZQu4rVmbFRsP2E8S2CLw="
+      crossorigin="anonymous">
+  </head>
+  <body>
+    {% include "templates/navbar.njk" %}
+    <div>
+      {{ content | safe }}
+    </div>
+    {% include "templates/footer.njk" %}
+    <script
+      src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.2.1/dist/umd/index.js"
+      integrity="sha256-7XYP2JLQrbyOqBKrAn8sT3l8PG/v2j6C3A5EyBDp9to="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      window.addEventListener('DOMContentLoaded', () => {
+        docsearch({
+          appId: "O7U42EOTRQ",
+          apiKey: "bcb89a19824e0100724bc16011dea6f8",
+          indexName: "lume",
+          container: document.getElementById("search"),
+          debug: false
+        });
+      }, false);
+    </script>
+  </body>
 </html>

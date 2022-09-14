@@ -93,4 +93,8 @@
     min-width: auto;
     min-height: auto;
   }
+
+  .DocSearch-Container {
+    position: fixed !important; /* This overrides the docsearch modal `position: absolute`, fixes position issue on chrome (mobile) */
+  }
 }
