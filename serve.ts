@@ -5,6 +5,7 @@ import cacheBusting from "lume/middlewares/cache_busting.ts";
 import notFound from "lume/middlewares/not_found.ts";
 import analytics from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/google_analytics/mod.ts";
 import csp from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/csp/mod.ts";
+import www from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/www/mod.ts";
 
 const root = `${Deno.cwd()}/_site`;
 
@@ -21,20 +22,7 @@ server
     page404: "/404/",
   }))
   .use(analytics({ id: "UA-110819-22" }))
-  // www.lume.land => lume.land
-  .use(async (request: Request, next) => {
-    const url = new URL(request.url);
-    if (url.hostname.startsWith("www.")) {
-      url.hostname = url.hostname.replace("www.", "");
-      return new Response(null, {
-        status: 301,
-        headers: {
-          location: url.toString(),
-        },
-      });
-    }
-    return await next(request);
-  })
+  .use(www())
   .use(csp({
     "Strict-Transport-Security": {
       maxAge: 31536000,
