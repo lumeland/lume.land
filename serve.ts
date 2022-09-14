@@ -24,8 +24,8 @@ server
   // www.lume.land => lume.land
   .use(async (request: Request, next) => {
     const url = new URL(request.url);
-    if (url.hostname.startsWith("localhost")) {
-      url.hostname = url.hostname.replace("localhost", "local");
+    if (url.hostname.startsWith("www.")) {
+      url.hostname = url.hostname.replace("www.", "");
       return new Response(null, {
         status: 301,
         headers: {
