@@ -4,7 +4,6 @@ import expires from "lume/middlewares/expires.ts";
 import cacheBusting from "lume/middlewares/cache_busting.ts";
 import notFound from "lume/middlewares/not_found.ts";
 import analytics from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/google_analytics/mod.ts";
-import fscache from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/fs_cache/mod.ts";
 import csp from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/csp/mod.ts";
 
 const root = `${Deno.cwd()}/_site`;
@@ -22,7 +21,15 @@ server
     page404: "/404/",
   }))
   .use(analytics({ id: "UA-110819-22" }))
-  .use(fscache())
+  // www.lume.land => lume.land
+  .use(async (request: Request, next) => {
+    const url = new URL(request.url);
+    if (url.hostname.startsWith("www.")) {
+      url.hostname = url.hostname.replace("www.", "");
+      return Response.redirect(url.toString(), 301);
+    }
+    return await next(request);
+  })
   .use(csp({
     "Strict-Transport-Security": {
       maxAge: 31536000,
