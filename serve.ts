@@ -1,6 +1,5 @@
 // deno run --allow-net --allow-read serve.ts
 import Server from "lume/core/server.ts";
-import expires from "lume/middlewares/expires.ts";
 import cacheBusting from "lume/middlewares/cache_busting.ts";
 import notFound from "lume/middlewares/not_found.ts";
 import analytics from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/google_analytics/mod.ts";
@@ -14,7 +13,6 @@ const server = new Server({
 });
 
 server
-  .use(expires())
   .use(cacheBusting())
   .use(notFound({
     root,
