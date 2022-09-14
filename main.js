@@ -12,3 +12,17 @@ document.querySelector("#switch-theme")?.addEventListener("click", () => {
   document.documentElement.classList.toggle("is-reverse");
   localStorage.setItem("theme", document.documentElement.className);
 });
+
+// For testing purpose of CSP middleware
+const userAgentString = navigator.userAgent;
+const chromeAgent = userAgentString.indexOf("Chrome") > -1;
+
+if (chromeAgent) {
+  const observer = new ReportingObserver((reports) => {
+    for (const report of reports) {
+      console.log(report.type, report.url, report.body);
+    }
+  }, { buffered: true });
+
+  observer.observe();
+}
