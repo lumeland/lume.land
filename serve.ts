@@ -74,6 +74,7 @@ server
           "data:",
         ],
         "media-src": ["'self'", "data:"],
+        "manifest-src": ["'self'"],
         /* "report-uri": "https://jrson.report-uri.com/r/d/csp/reportOnly",
         "report-to": "default", */
       },
