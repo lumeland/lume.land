@@ -35,6 +35,13 @@
     href="https://cdn.jsdelivr.net/npm/@docsearch/css@3.2.1/dist/style.css"
     integrity="sha256-brWyd+lKlaU/B5Lhqd/FUXyZQu4rVmbFRsP2E8S2CLw="
     crossorigin="anonymous">
+  <style>
+    @media (max-width: 768px){
+      .DocSearch-Container {
+        position: fixed;
+      }
+    }
+  </style>
 </head>
 <body>
   {% include "templates/navbar.njk" %}
