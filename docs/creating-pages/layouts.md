@@ -65,9 +65,19 @@ the front matter. In the following examples, the layout uses the
 
 <lume-code>
 
-```html { title="page.njk" }
+```yml { title="page.md" }
 ---
-title: Default title
+title: This is the front matter
+layout: layouts/page.njk
+---
+
+# This is the page content
+Here you can write Markdown content
+```
+
+```html { title="_includes/layouts/page.njk" }
+---
+title: Default page title
 language: en
 layout: layouts/main.njk
 ---
@@ -81,21 +91,25 @@ layout: layouts/main.njk
 </article>
 ```
 
-```js { title="page.js" }
-export const title = "Default title";
-export const language = "en";
-export const layout = "layouts/main.njk";
+```html { title="_includes/layouts/main.njk" }
+---
+title: Default main title
+language: en
+---
+<!doctype html>
 
-export default function ({ language, title, content }) {
-  return `
-  <article lang="${language}">
-    <header>
-      <h1>${title}</h1>
-    </header>
-  
-    ${content}
-  </article>`;
-}
+<html lang="{{ language }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+  </head>
+
+  <body>
+    <main>
+      {{ content | safe }}
+    </main>
+  </body>
+</html>
 ```
 
 </lume-code>
