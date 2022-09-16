@@ -40,7 +40,7 @@ Go to <a href="/about-us/">About us</a>
 </lume-code>
 
 If the page `about-us.md` has a different url (because has a
-[`url` variable](../creating-pages/urls.md#the-url-variable) in the front
+[`url` variable](../docs/creating-pages/urls.md#the-url-variable) in the front
 matter), this plugin will use it accordingly. It also works with static files
 that change the output directory.
 
