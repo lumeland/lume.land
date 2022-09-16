@@ -176,3 +176,9 @@ sites:
     url: https://velociraptor.run/
     description: The documentation of Velociraptor script runner for Deno.
     code: https://github.com/jurassiscripts/velociraptor-dot-run
+
+  - title: GK Neumann website
+    img: /img/showcase/neumann-tokyo.webp
+    url: https://en.neumann.tokyo
+    description: The corporate website of GK Neumann in Japan
+    code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
