@@ -1,6 +1,3 @@
-@import "styles/variables.css";
-@import "styles/reset.css";
-
 @import "styles/components/button.css";
 @import "styles/components/selector.css";
 @import "styles/components/tag.css";

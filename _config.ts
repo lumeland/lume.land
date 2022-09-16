@@ -31,8 +31,8 @@ site
   .copy("static", ".")
   .data("cache_busting", `v${Date.now()}`)
   .use(codeHighlight())
-  .use(inline())
   .use(postcss())
+  .use(inline())
   .use(esbuild({
     extensions: [".js"],
   }))

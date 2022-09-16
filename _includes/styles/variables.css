@@ -1,10 +1,8 @@
-@import "./fonts.css";
-
 :root {
   /* Fonts */
-  --font-display: Epilogue, var(--font-ui);
-  --font-ui: Inter, -apple-system, system-ui, Inter, sans-serif;
-  --font-code: 'JetBrains Mono';
+  --font-display: 'Epilogue-fallback', var(--font-ui);
+  --font-ui: 'Inter-fallback', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
+  --font-code: 'JetBrains-fallback', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
 
   /* Text styles */
   --text-display-size: clamp(30px, 10vw, 75px);
