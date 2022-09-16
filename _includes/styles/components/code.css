@@ -139,9 +139,9 @@ lume-code {
 .hljs-code,.hljs-comment,.hljs-formula{color:var(--color-6)}
 .hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:var(--color-7)}
 .hljs-subst{color:var(--color-8)}
-.hljs-section{color:var(--color-9);font-weight:700}
+.hljs-section{color:var(--color-9);font-weight:600}
 .hljs-bullet{color:var(--color-10)}
 .hljs-emphasis{color:var(--color-8);font-style:italic}
-.hljs-strong{color:var(--color-8);font-weight:700}
+.hljs-strong{color:var(--color-8);font-weight:600}
 .hljs-addition{color:var(--color-11);background-color:var(--color-12)}
 .hljs-deletion{color:var(--color-13);background-color:var(--color-14)}
