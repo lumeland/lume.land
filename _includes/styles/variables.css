@@ -1,8 +1,8 @@
 :root {
   /* Fonts */
-  --font-display: 'Epilogue-fallback', var(--font-ui);
-  --font-ui: 'Inter-fallback', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
-  --font-code: 'JetBrains-fallback', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+  --font-display: 'Epilogue', 'Epilogue-fallback', var(--font-ui);
+  --font-ui: 'Inter', 'Inter-fallback', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
+  --font-code: 'JetBrains Mono', 'JetBrains-fallback', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
 
   /* Text styles */
   --text-display-size: clamp(30px, 10vw, 75px);
