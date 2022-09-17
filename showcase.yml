@@ -166,7 +166,7 @@ sites:
     code: https://github.com/scarf005/scarf005.github.com
 
   - title: aiotter
-    # img: /img/showcase/aiotter.webp
+    img: /img/showcase/aiotter.webp
     url: https://aiotter.com/
     description: The technical blog of Yuto Oguchi.
     code: https://github.com/aiotter/blog
