@@ -37,7 +37,7 @@ your code.
 
 ### Without pre-commit hooks
 
-If you do not want o use Velociraptor, make sure to:
+If you do not want to use Velociraptor, make sure to:
 
 - Run `deno fmt` to fix the code format before commit.
 - Run `deno lint` to check linting before commit.
