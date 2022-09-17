@@ -285,6 +285,11 @@ support:
       url: https://sheetjs.com/
       img: /img/avatars/sheetjs.webp
       amount: 50
+    - name: Emil Sadek
+      url: https://emilsadek.com/
+      img: /img/avatars/emilsadek.webp
+      amount: 1
+      recurrent: true
 
   contribute:
     title: How to contribute?
