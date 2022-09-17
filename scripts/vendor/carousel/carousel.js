@@ -36,9 +36,9 @@ export default class Carousel extends HTMLElement {
 
     //Handle navigation if children have ids
     if (this.querySelector(":scope > [id]")) {
-      window.addEventListener(
+      self.addEventListener(
         "popstate",
-        (event) => handleTarget(this, document.location.hash),
+        () => handleTarget(this, document.location.hash),
       );
 
       if (document.location.hash) {
@@ -49,14 +49,14 @@ export default class Carousel extends HTMLElement {
 
       let scrolling;
 
-      function handleScroll() {
+      const handleScroll = () => {
         clearTimeout(scrolling);
         scrolling = setTimeout(() => {
           const target = this.target;
           handleHistory(target, this.history);
           this.lastTarget = target;
         }, 50);
-      }
+      };
 
       this.addEventListener("scroll", handleScroll, false);
     }
@@ -65,7 +65,7 @@ export default class Carousel extends HTMLElement {
     if (window.ResizeObserver) {
       if (!observer) {
         observer = new ResizeObserver((entries) => {
-          for (let entry of entries) {
+          for (const entry of entries) {
             const element = entry.target;
 
             if (element.lastTarget) {
@@ -88,6 +88,7 @@ export default class Carousel extends HTMLElement {
     }
   }
 
+  // deno-lint-ignore no-unused-vars
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === "index") {
       this.index = parseInt(newValue);
@@ -158,6 +159,8 @@ export default class Carousel extends HTMLElement {
         left: scroll,
         behavior: this.scrollBehavior,
       });
+
+      // deno-lint-ignore no-unused-vars
     } catch (err) {
       this.scrollLeft = scroll;
     }
