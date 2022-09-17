@@ -312,7 +312,7 @@
   @media (min-width: 650px) {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    column-gap: var(--column-gap-1);
+    column-gap: var(--column-gap-3);
   }
 }
 .landing-support-sponsors {
