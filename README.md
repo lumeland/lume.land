@@ -8,5 +8,5 @@ generator for [Deno](https://deno.land/) 🦕.
 
 ## Contributing
 
-We welcome all contributions submitted as pull requests. Before create a pull
-request please read the [contributing guidelines](CONTRIBUTING.md).
+We welcome all contributions submitted as pull requests. Before contributing
+please read the [guidelines](CONTRIBUTING.md).
