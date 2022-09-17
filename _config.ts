@@ -28,6 +28,7 @@ const site = lume(
 site
   .ignore("CONTRIBUTING.md")
   .ignore("README.md")
+  .ignore("velociraptor.json")
   .ignore("scripts")
   .copy("static", ".")
   .data("cache_busting", `v${Date.now()}`)
