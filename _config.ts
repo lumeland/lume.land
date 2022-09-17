@@ -26,6 +26,7 @@ const site = lume(
 );
 
 site
+  .ignore("CONTRIBUTING.md")
   .ignore("README.md")
   .ignore("scripts")
   .copy("static", ".")
