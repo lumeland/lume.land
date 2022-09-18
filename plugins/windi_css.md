@@ -26,14 +26,14 @@ See
 
 ## Description
 
-This plugin allows to use [Windi CSS](https://windicss.org/) a utility-first CSS
+This plugin allows using the [Windi CSS](https://windicss.org/) utility-first CSS
 framework compatible with Tailwind.
 
-It analyze the HTML code of the pages, searching for Windi classes and generate
-the CSS code needed. It also load `.windi.css` files, process them and output
+It analyzes the HTML code of the pages, searching for Windi classes and generating
+the CSS code needed. It also loads `.windi.css` files, processes them, and outputs
 CSS files.
 
-It can also transform Windi code embedded the HTML using
+It can also transform Windi code embedded in the HTML using
 `<style lang="windi">...</style>` elements.
 
 <lume-code>
@@ -73,7 +73,7 @@ This plugin accepts a configuration object with the available options:
   shortcuts, plugins, etc. See the
   [Windi docs for more info](https://windicss.org/guide/configuration.html)
 - `cssFile`: Set the name of the file to export the CSS code. If it's not
-  defined, the CSS is inserted in `<style>` tag per each page.
+  defined, the CSS is inserted in a `<style>` tag for each page.
 - `minify`: Set `true` to minify the CSS code.
 - `mode`: It can be "interpret" or "compile". See
   [Interpret vs Compile](https://windicss.org/posts/modes.html) for more info
