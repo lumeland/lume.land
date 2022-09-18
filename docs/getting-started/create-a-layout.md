@@ -24,8 +24,8 @@ create a fully complete web page.
 
 Create a new directory `_includes` and the file `layout.njk` inside it. The
 `.njk` extension is for [Nunjucks](https://mozilla.github.io/nunjucks/): a
-template engine supported by default by Lume. Insert the following code in
-the file:
+template engine supported by default by Lume. Insert the following code in the
+file:
 
 <lume-code>
 
@@ -78,5 +78,5 @@ I hope you enjoy it.
 Lume will compile the markdown code and use the `layout.njk` file as the page
 layout.
 
-The directory `_includes` is a special directory that Lume understands. You don't
-need to include it in the `layout` variable. {.tip}
+The directory `_includes` is a special directory that Lume understands. You
+don't need to include it in the `layout` variable. {.tip}

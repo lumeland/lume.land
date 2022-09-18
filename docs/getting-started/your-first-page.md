@@ -33,7 +33,7 @@ Run `deno task serve` in your terminal. This task does two things:
 - Starts a local web server, so you can see the generated site in your browser.
   Open the url `http://localhost:3000/` in your browser to see the page.
 
-The web server also includes live-reloading. If you edit the `index.md` file, the
-browser is reloaded automatically to see the new changes. {.tip}
+The web server also includes live-reloading. If you edit the `index.md` file,
+the browser is reloaded automatically to see the new changes. {.tip}
 
 **Congratulations, you have created your first page with Lume! 🎉**

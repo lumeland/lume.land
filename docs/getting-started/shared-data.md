@@ -11,8 +11,7 @@ same layout? `_data` files to the rescue!
 
 ## Create a _data file
 
-In your project directory create a `_data.yml` file with the following
-content:
+In your project directory create a `_data.yml` file with the following content:
 
 <lume-code>
 

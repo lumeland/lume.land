@@ -24,8 +24,8 @@ I hope you enjoy it.
 
 </lume-code>
 
-This variable is accessible by the layout so that it can be inserted into the html
-code:
+This variable is accessible by the layout so that it can be inserted into the
+html code:
 
 <lume-code>
 

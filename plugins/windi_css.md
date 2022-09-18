@@ -26,12 +26,12 @@ See
 
 ## Description
 
-This plugin allows using the [Windi CSS](https://windicss.org/) utility-first CSS
-framework compatible with Tailwind.
+This plugin allows using the [Windi CSS](https://windicss.org/) utility-first
+CSS framework compatible with Tailwind.
 
-It analyzes the HTML code of the pages, searching for Windi classes and generating
-the CSS code needed. It also loads `.windi.css` files, processes them, and outputs
-CSS files.
+It analyzes the HTML code of the pages, searching for Windi classes and
+generating the CSS code needed. It also loads `.windi.css` files, processes
+them, and outputs CSS files.
 
 It can also transform Windi code embedded in the HTML using
 `<style lang="windi">...</style>` elements.
