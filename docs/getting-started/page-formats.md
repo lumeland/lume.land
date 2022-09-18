@@ -6,7 +6,7 @@ order: 6
 
 We have seen how to create pages from Markdown files in Lume. This is a
 convenient way for text-based sites like blogs or documentation. But you may
-want to create a complex page with small texts, images, videos animation, etc.
+want to create a complex page with small texts, images, videos, animations, etc.
 Every page has its own format.
 
 ## Create pages with Nunjucks

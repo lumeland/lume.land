@@ -6,11 +6,11 @@ We welcome all contributions submitted as pull requests.
 
 ### Pull Requests
 
-Before create a pull request, please read these instructions:
+Before creating a pull request, please read these instructions:
 
 - Make sure you have [Deno installed](https://deno.land/#installation).
 - One pull request per feature. If you want to do more than one thing, send
-  multiple pull request.
+  multiple pull requests.
 - Ensure your code is working properly.
 - Document any change in your PR description.
 - Make sure to read the pre-commit hook instructions to format/lint your code.
@@ -39,5 +39,5 @@ your code.
 
 If you do not want to use Velociraptor, make sure to:
 
-- Run `deno fmt` to fix the code format before commit.
-- Run `deno lint` to check linting before commit.
+- Run `deno fmt` to fix the code format before committing.
+- Run `deno lint` to check linting before committing.

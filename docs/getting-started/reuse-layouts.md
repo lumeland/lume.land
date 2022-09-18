@@ -1,14 +1,14 @@
 ---
 title: Reuse your layouts
-description: Create a single layout used by multiple pages
+description: Create a single layout used for multiple pages
 order: 4
 ---
 
 In the [previous step](./page-data.md) we learned to define variables in the
-pages that can be used by the layouts. This allows to reuse the same layout by
+pages that can be used by the layouts. This allows reusing the same layout for
 multiple pages with different content.
 
-Create the file `second-page.md` in your project directory and add a front
+Create the file `second-page.md` in your project directory and add front
 matter with the `layout` and `title` variables and some markdown below:
 
 <lume-code>
@@ -29,7 +29,7 @@ This is getting better!
 
 Go to `http://localhost:3000/second-page/` in your browser to see the new page.
 
-The url of the page depends on the file name of markdown file: `/second-page.md`
+The URL of the page depends on the file name of the markdown file: `/second-page.md`
 will generate the url `/second-page/` path.
 [Go to the Page files documentation](/docs/creating-pages/page-files.md) to know
 more {.tip}
