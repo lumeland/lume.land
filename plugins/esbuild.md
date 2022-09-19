@@ -26,15 +26,15 @@ See
 
 ## Description
 
-The plugin `esbuild` process your JavaScript and TypeScript files using
+The plugin `esbuild` processes your JavaScript and TypeScript files using
 [esbuild bundler](https://esbuild.github.io/).
 
 The available options are:
 
 - **extensions**: Array with the extensions of the files that this plugin will
-  handle. By default is `[".js", ".ts"]`.
+  handle. By default it is `[".js", ".ts"]`.
 - **options**: The options to pass to esbuild library.
-  [See the esbuild documentation](https://esbuild.github.io/api/#simple-options)
+  [See the esbuild documentation](https://esbuild.github.io/api/#simple-options).
 
 Example with the default options:
 

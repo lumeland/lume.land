@@ -14,8 +14,8 @@ This plugin is installed by default. 🎉
 ## Description
 
 [Markdown](https://en.wikipedia.org/wiki/Markdown) is a popular markup language
-to write content that is converted to HTML. It is useful for pages with long
-text like posts, articles or documentation sites.
+for writing content that is converted to HTML. It is useful for pages with long
+text like posts, articles, or documentation sites.
 
 ## Configuration
 
@@ -77,8 +77,9 @@ const site = lume({}, { markdown });
 ```
 
 The `keepDefaultPlugins` option keeps the two default plugins installed by
-default by Lume (`markdown-it-deflist` and `markdown-it-attrs`). Set to `false`
-(or don't set it at all) to replace your plugins with the default ones.
+default by Lume (`markdown-it-deflist` and `markdown-it-attrs`). Set it to
+`false` (or don't set it at all) to replace the defaults with your specified
+plugins.
 
 You can pass options to your markdown-it plugins using an array with
 `[plugin, options]` signature. Example:
@@ -117,7 +118,7 @@ layout: layouts/main.njk
 
 # Welcome
 
-**This is my first post** using lume
+**This is my first post** using Lume.
 I hope you like it!
 ```
 
@@ -136,9 +137,9 @@ The Markdown code is stored in the `content` variable:
 
 ## md filter
 
-The Markdown plugin also register the `md` filter that renders any string value
-as Markdown and output a HTML. The filter also accepts an argument to render the
-Markdown in _inline_ mode.
+The Markdown plugin also registers the `md` filter that renders any string value
+as Markdown and outputs an HTML fragment. The filter also accepts an argument to
+render the Markdown in _inline_ mode.
 
 ```html
 <!-- Render to HTML code -->

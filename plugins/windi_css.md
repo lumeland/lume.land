@@ -1,6 +1,6 @@
 ---
 title: Windi CSS
-description: Use Windi framework to create the CSS styles.
+description: Use the Windi framework to create the CSS styles.
 docs: plugins/windi_css.ts/~/Options
 tags:
   - styles
@@ -27,7 +27,7 @@ See
 ## Description
 
 This plugin allows using the [Windi CSS](https://windicss.org/) utility-first
-CSS framework compatible with Tailwind.
+CSS framework, compatible with Tailwind.
 
 It analyzes the HTML code of the pages, searching for Windi classes and
 generating the CSS code needed. It also loads `.windi.css` files, processes
@@ -76,4 +76,4 @@ This plugin accepts a configuration object with the available options:
   defined, the CSS is inserted in a `<style>` tag for each page.
 - `minify`: Set `true` to minify the CSS code.
 - `mode`: It can be "interpret" or "compile". See
-  [Interpret vs Compile](https://windicss.org/posts/modes.html) for more info
+  [Interpret vs Compile](https://windicss.org/posts/modes.html) for more info.

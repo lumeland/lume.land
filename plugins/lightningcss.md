@@ -26,7 +26,7 @@ See
 
 ## Description
 
-The `lightningcss` plugin load and transform your CSS files using
+The `lightningcss` plugin loads and transforms your CSS files using the
 [Lightning CSS](https://github.com/parcel-bundler/lightningcss) processor
 (previously known as Parcel CSS).
 
@@ -39,7 +39,7 @@ This plugin accepts a configuration object. The available options are:
 - `sourceMap`: Set `true` to generate a source map file that will be saved in
   the same place but with the `.map` extension appended. For example, the file
   `my/styles.css` will generate the sourcemap file `my/styles.css.map`.
-- `options`: An object with the options for parcel-css.
+- `options`: An object with the options for lightning-css.
 
 Example with the default configuration:
 
@@ -74,6 +74,6 @@ site.use(lightningCss({
 export default site;
 ```
 
-The `version()` function is provided to convert semver version to single 24-bit
-number, used by parcel_css.
+The `version()` function is provided to convert a semver version to single
+24-bit number as used by lightningcss.
 [More info](https://github.com/parcel-bundler/lightningcss#from-node) {.tip}

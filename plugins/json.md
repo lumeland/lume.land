@@ -32,7 +32,7 @@ export default site;
 
 ## Description
 
-This plugins allows to create pages and store data using the JSON format.
+This plugin allows you to create pages and store data using the JSON format.
 
 ### Create pages
 

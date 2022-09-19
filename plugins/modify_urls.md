@@ -29,11 +29,12 @@ See
 The `modify_urls` plugin modifies all URLs in your HTML documents using a
 function. It's used internally by other plugins like
 [resolve_urls](resolve_urls.md), [relative_urls](relative_urls.md) and
-[base_path](base_path.md) but you can use it to modify the urls using a custom
+[base_path](base_path.md), but you can use it to modify URLs using a custom
 function.
 
-To use it, just import in the `_config.js` file and create a callback to change
-the url. For example, let's say we want to convert all urls to lowercase:
+To use it, just import the plugin in the `_config.js` file and create a callback
+to change the url. For example, let's say we want to convert all URLs to
+lowercase:
 
 ```js
 import lume from "lume/mod.ts";
@@ -48,7 +49,7 @@ site.use(modifyUrls({
 export default site;
 ```
 
-The plugin will search all urls in your HTML documents (elements with `href`,
-`src`, `srcset` and `imagesrcset` attributes) and invoke the callback for every
-url found. The callback has two arguments: the url and the `Page` instance where
-that url was found.
+The plugin will search all URLs in your HTML documents (elements with `href`,
+`src`, `srcset`, and `imagesrcset` attributes) and invoke the callback for every
+URL found. The callback has two arguments: the URL and the `Page` instance where
+that URL was found.

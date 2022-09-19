@@ -29,12 +29,12 @@ See
 [Eta](https://eta.js.org/) is a JavaScript template engine with a syntax very
 similar to EJS but with
 [some differences](https://eta.js.org/docs/about/eta-vs-ejs). This plugin allows
-to use this template engine to create pages and layouts.
+using this template engine to create pages and layouts.
 
 ## Creating layouts
 
 Add a file with `.eta` extension in the `_includes` directory. Use the `layout`
-page variable to use this layout.
+page variable to specify this layout.
 
 ```html
 ---

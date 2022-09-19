@@ -26,7 +26,7 @@ See
 
 ## Description
 
-The `SASS` plugin load and transform your `.scss` files using
+The `SASS` plugin loads and transforms your `.scss` files using the
 [Deno SASS](https://github.com/binyamin/deno-sass) library.
 
 ## Configuration
@@ -34,18 +34,18 @@ The `SASS` plugin load and transform your `.scss` files using
 This plugin accepts a configuration object. The available options are:
 
 - `extensions`: Array with the extensions of the files that this plugin will
-  load. By default is `[".scss", ".sass"]`.
+  load. By default it is `[".scss", ".sass"]`.
 - `sourceMap`: Set `true` to generate the source map file.
-- `format`: The output format (expanded or compressed). By default is
+- `format`: The output format (expanded or compressed). By default it is
   `compressed`.
 - `options`: An object with options to configure Deno SASS.
 - `includes`: An array of directories to search for the `@import`ed files. By
-  default is `_includes`.
+  default is it is `["_includes"]`.
 
 ## Includes
 
 By default, the plugin is configured to look into the `_includes` directory to
-find the imported files (you can change this behavior editing the `includes`
+find the imported files (you can change this behavior by editing the `includes`
 option):
 
 ```css

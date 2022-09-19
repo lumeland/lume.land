@@ -26,7 +26,7 @@ See
 
 ## Description
 
-The `MinifyHTML` plugin minify the HTML code of your pages using
+The `MinifyHTML` plugin minifies the HTML code of your pages using the
 [minify-html](https://github.com/wilsonzlin/minify-html) minifier. It can also
 minify CSS and JavaScript code.
 
@@ -35,7 +35,7 @@ minify CSS and JavaScript code.
 This plugin accepts a configuration object. The available options are:
 
 - `extensions`: Array with the extensions of the files that will be minified. By
-  default is `[".html"]`, but you can include also `.css` and `.js` to minify
+  default it is `[".html"]`, but you can include also `.css` and `.js` to minify
   these files.
 - `options`: The available options for `minify-html`. See
   [the documentation](https://doc.deno.land/https://deno.land/x/lume/deps/minify_html.ts/~/Options)

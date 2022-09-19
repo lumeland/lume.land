@@ -23,9 +23,9 @@ export default site;
 ## Description
 
 The `resolve_urls` plugin converts all URLs in your HTML documents matching with
-any file in the `src` folder with the final url.
+any file in the `src` folder with the final URL.
 
-For example, the following link pointing to a markdown file.
+For example, the following link pointing to a markdown file gets transformed:
 
 <lume-code>
 
@@ -39,15 +39,15 @@ Go to <a href="/about-us/">About us</a>
 
 </lume-code>
 
-If the page `about-us.md` has a different url (because has a
+If the page `about-us.md` has a different URL (because it has a
 [`url` variable](../docs/creating-pages/urls.md#the-url-variable) in the front
 matter), this plugin will use it accordingly. It also works with static files
 that change the output directory.
 
-The plugin also resolves relative urls (like `../about-us.md`) and keep any
+The plugin also resolves relative URLs (like `../about-us.md`) and keeps any
 anchor or search query in the url (for example: `/about-us.md#contact` is
 replaced with `/about-us/#contact`).
 
-A very common use case is a repository with documentation content in markdown
-files. You may want the links to work in GitHub, but on build the HTML site they
-change to the final urls.
+A very common use case is a repository with documentation content in Markdown
+files. You may want the links to work in GitHub, but upon building the HTML site
+they change to the final urls.

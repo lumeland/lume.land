@@ -26,8 +26,8 @@ See
 
 ## Description
 
-This plugin uses the [Prism](https://prismjs.com/) library to search and
-highlight the syntax code of any `<pre><code>` element.
+This plugin uses the [Prism](https://prismjs.com/) library to search and syntax
+highlight the code of any `<pre><code>` element.
 
 ```js
 import lume from "lume/mod.ts";

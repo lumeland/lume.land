@@ -1,6 +1,6 @@
 ---
 title: Modules
-description: Use ESM and TypeScript modules to create pages, layouts and store data.
+description: Use ESM and TypeScript modules to create pages, layouts, and store data.
 docs: plugins/modules.ts/~/Options
 enabled: true
 tags:
@@ -14,9 +14,9 @@ This plugin is installed by default. 🎉
 
 ## Description
 
-Lume is built on top of Deno so it has native support for JavaScript and
-TypeScript modules. This plugin allows to use JavaScript and TypeScript to
-create pages, layouts and data files.
+Lume is built on top of Deno, so it has native support for JavaScript and
+TypeScript modules. This plugin allows you to use JavaScript and TypeScript to
+create pages, layouts, and data files.
 
 ## Configuration
 
@@ -72,7 +72,7 @@ export const layout = "layouts/main.njk";
 export default "This is my first post using lume. I hope you like it!";
 ```
 
-The default export can be a function, so it will be executed passing all the
+The default export can be a function. It will be executed by passing all the
 available data in the first argument and the filters in the second argument:
 
 ```js
@@ -85,7 +85,7 @@ export default (data, filters) =>
   <a href="${filters.url("/")}">Back to home</a>`;
 ```
 
-JavaScript/TypeScript allows to generate multiple pages from the same file, see
+JavaScript/TypeScript allows generating multiple pages from the same file. See
 [Pagination](./paginate.md) for more info.
 
 ## Creating layouts

@@ -26,10 +26,9 @@ See
 
 ## Description
 
-This plugin allows to render pages on demand. It can be useful in some
-scenarios:
+This plugin allows renderng pages on demand. It can be useful in some scenarios:
 
-- There are pages with a dynamic content that must be generated at the request
+- There are pages with dynamic content that must be generated at the request
   time.
 - The site is too big, with thousands of pages, so the build takes too much
   time.
@@ -38,10 +37,10 @@ Lume can generate pages on demand for these cases.
 
 Note: This plugin only works with [Deno Deploy](https://deno.com/deploy).{.tip}
 
-## How it works?
+## How does it work?
 
 First, you need to configure the pages that must be rendered on demand. This is
-done by setting the `ondemand` variable as `true`. For example, let's say we
+done by setting the `ondemand` variable to `true`. For example, let's say we
 want to render the home page dynamically:
 
 <lume-code>
@@ -58,8 +57,8 @@ ondemand: true
 
 </lume-code>
 
-When the site is build, this page will be skipped. But a `_routes.json` file
-will be generated containing a map with the url and the associated page file:
+When the site is built, this page will be skipped. But a `_routes.json` file
+will be generated containing a map with the URL and the associated page file:
 
 <lume-code>
 
@@ -96,9 +95,9 @@ console.log("Listening on http://localhost:8000");
 </lume-code>
 
 The middleware needs an instance of our `site` in order to render the pages. We
-can import it from the `_config.ts` file. It also load automatically the
-`_routes.json` file in order to know which file needs to render for each url. If
-the file is in a different path, you can configure it.
+can import it from the `_config.ts` file. It also automatically loads the
+`_routes.json` file in order to know which file needs to be rendered for each
+URL. If the file is in a different path, you can configure it.
 
 And that's all! The `_routes.json` file is regenerated automatically by the
 build to ensure it's up to date with your changes.
@@ -107,10 +106,10 @@ build to ensure it's up to date with your changes.
 
 Deno Deploy doesn't have support for dynamic imports (modules imported
 dynamically with `import("./module-name.ts")`).
-[See the issue for more info](https://github.com/denoland/deploy_feedback/issues/1).
+[See this issue for more info](https://github.com/denoland/deploy_feedback/issues/1).
 
 If you have on-demand pages created with JavaScript or TypeScript, the plugin
-not only generates a `_routes.json` file, but also a `_preload.ts` file. This
+generates not only a `_routes.json` file, but also a `_preload.ts` file. This
 file contains the code to preload statically all modules needed to build the
 pages on demand. You have to import it in your server.ts so Lume can render
 these pages in Deno Deploy:

@@ -48,7 +48,7 @@ export default site;
 
 ## Languages
 
-`Highlight.js` has support for several languages by default, you can see
+`Highlight.js` has support for several languages by default. You can see
 [a list of supported languages](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md).
 Use the `languages` key to register additional languages:
 
@@ -77,7 +77,7 @@ export default site;
 ## Themes
 
 You may need to load the CSS file of the color theme. The simplest way to load a
-theme is import it from a CDN in your css files. For example:
+theme is import it from a CDN in your CSS files. For example:
 
 ```css
 @import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css";

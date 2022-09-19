@@ -1,6 +1,6 @@
 ---
 title: Slugify URLs
-description: Slugify all page urls to remove conflictive characters
+description: Slugify all page URLs to remove potentially conflicting characters
 docs: plugins/slugify_urls.ts/~/Options
 tags:
   - urls
@@ -23,12 +23,12 @@ export default site;
 
 ## Description
 
-The `slugify_urls` plugin converts all URLs in your HTML documents removing or
-replacing conflictive characteres like accents, spaces, etc.
+The `slugify_urls` plugin converts all URLs in your HTML documents by removing
+or replacing potentially conflicting characteres like accents, spaces, etc.
 
 Once enabled, all output paths are **automatically slugified:** the spaces are
 replaced with `-`, characters like `ñ` or `á` are replaced by ASCII equivalents
-(`n` and `a`) and converted to lower case:
+(`n` and `a`), and converted to lower case:
 
 ```txt
 /posts/My First Post.md  =>  /posts/my-first-post/index.html
@@ -45,10 +45,10 @@ const site = lume();
 
 site.use(slugifyUrls({
   lowercase: true, // Converts all characters to lowercase
-  alphanumeric: true, // Replace non alphanumeric characters for the equivalent. Example: ñ to n.
+  alphanumeric: true, // Replace non-alphanumeric characters with their equivalent. Example: ñ to n.
   separator: "-", // Character used as separator for words
   stopWords: ["and", "or", "the"], // A list of words not included in the slug
-  replace: { // An object with individual characters replacements
+  replace: { // An object with individual character replacements
     "Ð": "D", // eth
     "ð": "d",
     "Đ": "D", // crossed D

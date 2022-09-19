@@ -26,5 +26,5 @@ See
 
 ## Description
 
-This plugin load all `.svg` files and optimize them using
-[SVGO](https://github.com/svg/svgo)
+This plugin loads all `.svg` files and optimizes them using
+[SVGO](https://github.com/svg/svgo).

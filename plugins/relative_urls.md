@@ -23,10 +23,11 @@ export default site;
 ## Description
 
 The `relative_urls` plugin converts all URLs in your HTML documents to relative,
-so you can publish the same site under different domains or subdirectories or
-protocols like opening the site from the filesystem under `file://`.
+so you can publish the same site under different domains, subdirectories, or
+even protocols (like opening the site from the filesystem under `file://`).
 
-The plugin convert all internal URLs of your site will be relative. For example:
+The plugin converts all internal URLs of your site to relative URLs. For
+example:
 
 <lume-code>
 
@@ -42,5 +43,5 @@ The plugin convert all internal URLs of your site will be relative. For example:
 
 </lume-code>
 
-This plugin doesn't change only the `<a>` elements, but any element with the
-`href` attribute (`link`, `area`) or `src` (`img`, `video`, `audio`, etc).
+This plugin changes not only the `<a>` elements, but any element with the `href`
+attribute (`link`, `area`) or `src` (`img`, `video`, `audio`, etc).

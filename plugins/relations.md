@@ -62,35 +62,35 @@ foreign key configured previously:
 
 ```yml {title=/article-1.md}
 ---
-title: This is the title 1
+title: This is title 1
 type: article
 id: 1
 author_id: 2
 ---
 
-Content of the article 1
+Content of article 1
 ```
 
 ```yml {title=/article-2.md}
 ---
-title: This is the title 2
+title: This is title 2
 type: article
 id: 2
 author_id: 2
 ---
 
-Content of the article 2
+Content of article 2
 ```
 
 ```yml {title=/article-3.md}
 ---
-title: This is the title 2
+title: This is title 2
 type: article
 id: 3
 author_id: 2
 ---
 
-Content of the article 2
+Content of article 2
 ```
 
 ```yml {title=/oscar.md}
@@ -115,8 +115,9 @@ Bio of Laura
 
 </lume-code>
 
-This plugin automatically create the variable `author` for each article with the
-data of the author (`1:n` relation). To render an article including the author:
+This plugin automatically creates the variable `author` for each article with
+the data of the author (`1:n` relation). To render an article including the
+author:
 
 <lume-code>
 
@@ -133,8 +134,8 @@ data of the author (`1:n` relation). To render an article including the author:
 
 </lume-code>
 
-The plugin also creates the inverse relation (`n:1` relation) and create the
-variable `article` that is an array with all articles related with each author:
+The plugin also creates the inverse relation (`n:1` relation) and creates the
+variable `article` that is an array with all articles related to each author:
 
 <lume-code>
 
