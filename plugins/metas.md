@@ -30,17 +30,19 @@ This plugin generates `<meta>` tags in your HTML pages for Open graph, Twitter
 cards, Schema.org, and SEO purposes. The data must be defined in the `metas`
 keyword of every page and the supported values are:
 
-- `title`: The title of the page, article, post, etc.
-- `description`: Page description.
 - `site`: The name of the site.
+- `title`: The title of the page, article, post, etc.
 - `lang`: The language of the page.
-- `keywords`: An array of keywords.
+- `description`: Page description.
 - `image`: The main image of the page, article, post, etc.
 - `icon`: The logotype or icon of the site.
+- `keywords`: An array of keywords.
 - `twitter`: The twitter username.
 - `color`: The color theme of the website.
-- `generator`: The software that generated the page (Lume v1.x). It can be a
-  boolean or a string with a custom value.
+- `robots`: Configuration for search engines (a boolean to enable/disable or a
+  string with a custom value).
+- `generator`: The software that generated the page (Lume v1.x). It can be true
+  to autogenerate or a string with a custom value.
 
 ## Usage
 
