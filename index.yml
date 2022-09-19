@@ -311,13 +311,6 @@ testimonials:
       text: |
         deno lumeファイル数が少なくJSXで書けてとても体験が良い
 
-    - url: https://twitter.com/azulitenet/status/1571617825642663937
-      author: Hiroki (@azulitenet)
-      avatar: /img/avatars/testimonials/azulitenet.webp
-      date: September 18, 2022
-      text: |
-        Lume (Denoの静的サイトジェネレーター) を触ってみる <a href="https://t.co/iGmdTKexed">https://t.co/iGmdTKexed</a> <a href="https://twitter.com/hashtag/zenn">#zenn</a>
-
     - url: https://twitter.com/_LautaroLopez/status/1571525610937241603
       author: Lauchita. (@_LautaroLopez)
       avatar: /img/avatars/testimonials/lautarolopez.webp
