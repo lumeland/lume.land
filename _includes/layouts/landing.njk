@@ -81,7 +81,7 @@ page_css: landing.css
         <blockquote class="landing-testimonials-quote">
           {{ item.text | md | safe }}
           <cite>
-            <img src="{{ item.avatar }}" width="50" height="50" alt="{{ item.author }}">
+            <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar | replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
             <a href="{{ item.url }}">
               <strong>{{ item.author }}</strong>
               <time>{{ item.date }}</time>

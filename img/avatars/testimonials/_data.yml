@@ -1,3 +1,6 @@
 imagick:
-  resize: [200, 200]
-  format: webp
+  - resize: [50, 50]
+    format: webp
+  - resize: [100, 100]
+    suffix: "@2x"
+    format: webp
