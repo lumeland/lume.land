@@ -26,8 +26,8 @@ See
 
 ### Configuration
 
-You might want to add following fields to `deno.json` and `import_map.json` in
-order to configure Deno to use Preact as the JSX library:
+You might want to add the following fields to `deno.json` and `import_map.json`
+in order to configure Deno to use Preact as the JSX library:
 
 <lume-code>
 
@@ -66,8 +66,8 @@ faster and lighter) to render the JSX.
 
 To create a page with this format, just add a file with `.jsx` or `.tsx`
 extension to your site. This format works exactly the same as
-[JavaScript/TypeScript files](./modules.md), but with the addition of you can
-export JSX code in the default export:
+[JavaScript/TypeScript files](./modules.md), but with the addition of the
+ability to export JSX code in the default export:
 
 ```jsx
 export const title = "Welcome to my page";
@@ -81,8 +81,8 @@ export default (data) => (
 );
 ```
 
-Note that this page uses the `layouts/main.njk` layout to wrap the content (you
-can mix different template languages like Nunjucks and JSX)
+Note that this page uses the `layouts/main.njk` layout to wrap the content. (You
+can mix different template languages like Nunjucks and JSX.)
 
 ## Creating layouts
 

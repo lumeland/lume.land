@@ -26,7 +26,7 @@ See
 
 ## Description
 
-The `PostCSS` plugin load and transform your CSS files using
+The `PostCSS` plugin loads and transforms your CSS files using the
 [PostCSS](https://postcss.org/) processor.
 
 ## Configuration
@@ -39,10 +39,10 @@ This plugin accepts a configuration object. The available options are:
 - `keepDefaultPlugins`: Set `true` to append your plugins to the defaults,
   instead of replacing them.
 - `sourceMap`: Set `true` to generate the source map that will be inlined in the
-  css file. To generate the source map in a different file, set
+  CSS file. To generate the source map in a different file, set
   `sourceMap: { inline: false }`.
 - `includes`: An array of directories to search for the `@import`ed files. By
-  default is `_includes`. Set `false` to disable it.
+  default it is `["_includes"]`. Set `false` to disable it.
 
 ## PostCSS Plugins
 
@@ -66,10 +66,10 @@ site.use(postcss({
 ```
 
 This will override the default plugins with yours. If you only want to add more
-plugins without remove the defaults, use the `keepDefaultPlugins` option:
+plugins without removing the defaults, use the `keepDefaultPlugins` option:
 
 ```ts
-// Add more postcss plugins without override the defaults
+// Add more postcss plugins without overriding the defaults
 site.use(postcss({
   plugins: [postcssFontFormatKeywords()],
   keepDefaultPlugins: true,
@@ -78,9 +78,9 @@ site.use(postcss({
 
 ## Includes
 
-In addition to the default plugins, PostCSS use also
+In addition to the default plugins, PostCSS also uses
 [postcss-import](https://deno.land/x/postcss_import), to inline the local
-`@imports` looking in the `_includes` directory.
+`@imports` by looking in the `_includes` directory.
 
 ```css
 /* Import the CSS file from _includes/css/reset.css */
@@ -90,9 +90,9 @@ In addition to the default plugins, PostCSS use also
 @import "./variables.css";
 ```
 
-For convenience, this plugin won't be removed with your plugins (even if
+For convenience, this plugin won't be removed by your plugins (even if
 `keepDefaultPlugins` is set to `false`). But you can change the `_includes`
-directory or disable completelly with the `includes` option:
+directory or disable it completely with the `includes` option:
 
 ```ts
 // Change the includes folder of CSS to _styles
@@ -110,7 +110,7 @@ site.use(postcss({
 
 ## The `postcss` filter
 
-This plugin also register the `postcss` filter so you can transform css code in
+This plugin also registers the `postcss` filter so you can transform CSS code in
 the template engines. For example:
 
 ```html

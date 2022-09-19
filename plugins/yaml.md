@@ -1,6 +1,6 @@
 ---
 title: YAML
-description: Add suppport for YAML to store data and create pages.
+description: Add support for YAML to store data and create pages.
 docs: plugins/yaml.ts/~/Options
 enabled: true
 tags:
@@ -36,12 +36,12 @@ guides, directories, etc.
 
 ## Creating _data files
 
-This format is useful for shared data, so you can create `_data.yml` or
+This format is useful for shared data so that you can create `_data.yml` or
 `_data/*.yml` files to save common variables.
 
 ## Creating pages in YAML
 
-This format can be used also to create pages, just add a file with `.yml` or
+This format can also be used to create pages; just add a file with the `.yml` or
 `.yaml` extension to your site. For example:
 
 ```yaml
@@ -54,7 +54,7 @@ intro: |
 sections:
   - title: Design
     image: img/section1.jpg
-    text: I design beautiful and accesible websites
+    text: I design beautiful and accessible websites
 
   - title: Development
     image: img/section2.jpg

@@ -1,7 +1,7 @@
 ---
 title: Metas
 docs: plugins/metas.ts/~/Options
-description: Add automatically `<meta>` tags for SEO and social networks.
+description: Automatically add `<meta>` tags for SEO and social networks.
 tags:
   - html
 ---
@@ -26,8 +26,8 @@ See
 
 ## Description
 
-This plugin generate `<meta>` tags in your HTML pages for Open graph, Twitter
-cards, Schema.org and SEO purposes. The data must be defined in the `metas`
+This plugin generates `<meta>` tags in your HTML pages for Open graph, Twitter
+cards, Schema.org, and SEO purposes. The data must be defined in the `metas`
 keyword of every page and the supported values are:
 
 - `title`: The title of the page, article, post, etc.
@@ -39,7 +39,7 @@ keyword of every page and the supported values are:
 - `icon`: The logotype or icon of the site.
 - `twitter`: The twitter username.
 - `color`: The color theme of the website.
-- `generator`: The sofware that generate the page (Lume v1.x). It can be a
+- `generator`: The software that generated the page (Lume v1.x). It can be a
   boolean or a string with a custom value.
 
 ## Usage
@@ -63,7 +63,7 @@ mergedKeys:
 
 </lume-code>
 
-The `mergeKeys` value allows to override some values of `metas` in your pages.
+The `mergeKeys` value allows overriding some values of `metas` in your pages.
 See [Merged Keys documentation](../docs/core/merged-keys.md) for more info.
 {.tip}
 

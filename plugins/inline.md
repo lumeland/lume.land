@@ -1,6 +1,6 @@
 ---
 title: Inline
-description: Inline CSS, JavaScript, SVG and images in the HTML.
+description: Inline CSS, JavaScript, SVG, and images in the HTML.
 docs: plugins/inline.ts/~/Options
 tags:
   - html
@@ -26,8 +26,8 @@ See
 
 ## Description
 
-This plugin allows to inline some sources, like CSS, images or JavaScript, in
-the HTML automatically. Any HTML tag with the `inline` attribute will be
+This plugin allows you to inline some sources, like CSS, images, or JavaScript,
+in the HTML automatically. Any HTML tag with the `inline` attribute will be
 included in the HTML. For example:
 
 <lume-code>
@@ -58,7 +58,7 @@ included in the HTML. For example:
 
 </lume-code>
 
-The source file must be exported to the `dest` directory, there's no support for
+The source file must be exported to the `dest` directory; there's no support for
 external URLs. {.tip}
 
 ## SVG inline
@@ -73,7 +73,7 @@ For example, this image:
 <img src="icon.svg" class="icon" id="icon-1" inline>
 ```
 
-Will become to:
+Will become:
 
 ```html
 <svg width="180px" height="180px" xmlns="http://www.w3.org/2000/svg" class="icon" id="icon-1">

@@ -26,14 +26,14 @@ See
 
 ## Description
 
-This plugin allows to export the same page multiple times, one per language. To
-configure a page as multilanguage, just set in the `lang` variable an array with
-the available languages. For example:
+This plugin allows exporting the same page multiple times, once per language. To
+configure a page as multilanguage, just set in the `lang` variable to an array
+with the available languages. For example:
 
 <lume-code>
 
 ```yml {title=about-me.yml}
-# This page is in 3 different languages: english, galician and spanish.
+# This page is in 3 different languages: English, Galician, and Spanish.
 lang: [en, gl, es]
 title: About me
 layout: base-layout.njk
@@ -52,8 +52,8 @@ each page with the language code:
 
 ### Define the data
 
-You may want to set different data per language. One way adding a suffix to the
-variable name with a dot plus the language code. For example:
+You may want to set different data per language. One way to do this is by adding
+a suffix to the variable name with a dot plus the language code. For example:
 
 <lume-code>
 
@@ -69,15 +69,15 @@ layout: base-layout.njk
 </lume-code>
 
 In the example above, the `title` value has different values for `gl` and `es`
-languages. Any unsuffixed value (like `layout`) is used by all languages, unless
-there's another suffixed value for a specific language.
+languages. Any unsuffixed value (like `layout`) is used by all languages unless
+there's a suffixed value for that specific language.
 
 You can use suffixed variables inside other objects or arrays. For example:
 
 <lume-code>
 
 ```yml {title=about-me.yml}
-# This page is in 3 different languages: english, galician and spanish.
+# This page is in 3 different languages: English, Galician, and Spanish.
 lang: [en, gl, es]
 title: About me
 title.gl: Sobre min
@@ -96,12 +96,12 @@ links:
 
 </lume-code>
 
-The `links` array contains a list of links. Some titles needs to be translated
-to other languages (like the first one), others don't.
+The `links` array contains a list of links. Some titles need to be translated to
+other languages (like the first one), others don't.
 
-### Customize the urls
+### Customize the URLs
 
-You can customize the urls of the multilanguage pages by adding the language
+You can customize the URLs of the multilanguage pages by adding the language
 suffix to the `url` variable:
 
 <lume-code>
@@ -123,8 +123,8 @@ url.es: /acerca-de-mi/
 ### Alternative way to define data
 
 In addition to the suffixes, another way to define different data per language
-is creating a root variable with the language code. This can be more useful in
-some case. For example:
+is by creating a root variable with the language code. This can be more useful
+in some cases. For example:
 
 <lume-code>
 
@@ -149,9 +149,10 @@ layout: base-layout.njk
 
 ### Automatic rel=alternate links
 
-This plugin not only create the different languages, but also insert
-automatically the `<link rel="alternate" hreflang="{lang}" href="{url}" />`
-element in the multilanguage pages. For example:
+This plugin not only creates the pages for the different languages, but also
+automatically inserts the
+`<link rel="alternate" hreflang="{lang}" href="{url}" />` element in the
+multilanguage pages. For example:
 
 ```html
 <!doctype html>
@@ -168,13 +169,13 @@ element in the multilanguage pages. For example:
 </html>
 ```
 
-Note that the attribute `lang` will be inserted automatically to the `html`
+Note that the attribute `lang` will be inserted automatically in the `html`
 element if it's missing.
 
 ### Create a language switcher menu
 
 If you want to include the links to the other translations, this plugin also
-create the variable `alternates` with all alternative pages. This is an example
+creates the variable `alternates` with all alternative pages. This is an example
 in nunjucks:
 
 <lume-code>
@@ -218,8 +219,8 @@ This code outputs something like:
 ## Multilanguage paginations
 
 If you want to search and paginate multilanguage pages (for example a blog with
-posts translated to several languages), this plugin includes also the
-`mergeLanguages` helper to make it more easy.
+posts translated to several languages), this plugin also includes the
+`mergeLanguages` helper to make it easier.
 
 <lume-code>
 

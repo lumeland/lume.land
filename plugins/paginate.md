@@ -13,9 +13,9 @@ This plugin is installed by default. 🎉
 
 ## Description
 
-This plugin register the `paginate` helper to create pages using an array of
-results. This is useful combined with the `search` helper to create paginated
-results. For example:
+This plugin registers the `paginate` helper to create pages using an array of
+results. This is useful when combined with the `search` helper to create
+paginated results. For example:
 
 ```js
 export const layout = "layouts/post-list.njk";
@@ -36,10 +36,10 @@ export default function* ({ search, paginate }) {
 As you can see, the `paginate` helper accepts two arguments: an iterable and an
 object with the options. The available options are:
 
-| Name   | Default            | Description                                                                             |
-| ------ | ------------------ | --------------------------------------------------------------------------------------- |
-| `size` | `10`               | Number of elements per page                                                             |
-| `url`  | `(n) => page-${n}` | The function to generate the URL of each page. It receives the page number as argument. |
+| Name   | Default            | Description                                                                                |
+| ------ | ------------------ | ------------------------------------------------------------------------------------------ |
+| `size` | `10`               | Number of elements per page                                                                |
+| `url`  | `(n) => page-${n}` | The function to generate the URL of each page. It receives the page number as an argument. |
 
 This helper returns an array. Each item has the following values:
 

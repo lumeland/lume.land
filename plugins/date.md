@@ -26,9 +26,9 @@ See
 
 ## Description
 
-This plugin register the `date` filter, that allows to manipulate and format a
-datetime value in different locales. It uses [date-fns](https://date-fns.org/)
-library under the hood.
+This plugin registers the `date` filter, which allows manipulating and
+formatting a datetime value in different locales. It uses the
+[date-fns](https://date-fns.org/) library under the hood.
 
 ```html
 <time>{{ createdAt | date }}</time>
@@ -36,7 +36,7 @@ library under the hood.
 
 ## Formats
 
-By default, the value is formatted to `yyyy-MM-dd` but you can use the first
+By default, the value is formatted to `yyyy-MM-dd`, but you can use the first
 argument to set a different format. See the
 [`date-fms` documentation](https://date-fns.org/v2.22.0/docs/format) for more
 info.
@@ -62,8 +62,8 @@ There are some predefined formats that you can use:
 </time>
 ```
 
-On install the plugin you can edit or add more formats under a name, so it's
-more easy to apply them in the templates:
+After installing the plugin you can edit or add more named formats, so it's
+easier to apply them in templates:
 
 <lume-code>
 
@@ -103,5 +103,5 @@ Use the second argument to set the locale:
 </time>
 ```
 
-The first locale set in the `_config.js` is used also as the default locale.
+The first locale set in the `_config.js` is also used as the default locale.
 {.tip}

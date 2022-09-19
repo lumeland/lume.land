@@ -1,6 +1,6 @@
 ---
 title: Nunjucks
-description: Use the template engine Nunjucks to create pages and layouts.
+description: Use the Nunjucks template engine to create pages and layouts.
 docs: plugins/nunjucks.ts/~/Options
 enabled: true
 tags:
@@ -13,9 +13,9 @@ This plugin is installed by default. 🎉
 
 ## Description
 
-[Nunjucks](https://mozilla.github.io/nunjucks/) is powerful template language
-created by Mozilla and inspired by **ninja2**. This plugins allows to use it to
-create pages and layouts.
+[Nunjucks](https://mozilla.github.io/nunjucks/) is a powerful template language
+created by Mozilla and inspired by **ninja2**. This plugin allows you to use it
+to create pages and layouts.
 
 ## Configuration
 
@@ -51,7 +51,7 @@ matter_ to set data to the template.
 ```html
 ---
 title: Welcome to my page
-intro: This is my first post using lume, I hope you like it!
+intro: This is my first post using Lume. I hope you like it!
 ---
 
 <html>
@@ -67,13 +67,13 @@ intro: This is my first post using lume, I hope you like it!
 
 ## Creating pages
 
-Creating pages is the same as creating layouts, just place the `.njk` file
+Creating pages is the same as creating layouts; just place the `.njk` file
 outside the `_includes` directory.
 
 ## njk filter
 
-The Nunjucks plugin also register the `njk` filter, to render any string value
-as a Nunjucks template and output a HTML. The filter accepts an object with
+The Nunjucks plugin also registers the `njk` filter, to render any string value
+as a Nunjucks template and output it as HTML. The filter accepts an object with
 data.
 
 ```html

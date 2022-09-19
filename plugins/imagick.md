@@ -29,10 +29,10 @@ See
 Use the `imagick` plugin to process image files using the
 [magick-wasm](https://github.com/dlemstra/magick-wasm) library, a powerful image
 manipulation library with support for over 100 major file formats. With this
-plugin you can resize, rotate and convert any image to other format.
+plugin, you can resize, rotate, and convert any image to other formats.
 
-The plugin read the data assigned to the image files (specifically the `imagick`
-key) to know how to transform the image.
+The plugin reads the data assigned to the image files (specifically the
+`imagick` key) to know how to transform the image.
 
 ## Example
 
@@ -51,14 +51,14 @@ imagick:
 
 This file assigns this data to all image pages in this folder and subfolders
 (see [Shared data](../docs/creating-pages/shared-data.md) for more info about
-`_data` files). The plugin will read the data, resize all images to 200x200 and
+`_data` files). The plugin will read the data, resize all images to 200x200, and
 convert them to webp format.
 
 ## Multiple outputs
 
 If you need to create multiple versions of the same image file (for responsive
 design, for example), use an array of values. Make sure to include the `suffix`
-key to generate different names of the output files:
+key to generate different names for the output files:
 
 <lume-code>
 
@@ -76,7 +76,7 @@ imagick:
 
 </lume-code>
 
-This code generate three files for every image file. For example, if the input
+This code generates three files for every image file. For example, if the input
 file is `background.jpg`, it will generate the files `background.webp`,
 `background-small.webp` and `background-big.webp`.
 
@@ -121,8 +121,8 @@ imagick:
 
 ## Cache
 
-This plugin save the transformed images in the `_cache` folder to improve the
-build speed. If you want to disable the cache, set this option to `false`.
+This plugin saves the transformed images in the `_cache` folder to improve the
+build speed. If you want to disable the cache, set its option to `false`.
 
 ```js
 import lume from "lume/mod.ts";
@@ -137,5 +137,5 @@ site.use(imagick({
 export default site;
 ```
 
-This option allows to customize the cache folder. For example:
+This option allows customizing the cache folder. For example:
 `cache: "_imagick-cache"`.

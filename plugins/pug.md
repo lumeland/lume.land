@@ -1,6 +1,6 @@
 ---
 title: Pug
-description: Use the template engine Pug to create pages and layouts
+description: Use the Pug template engine to create pages and layouts
 docs: plugins/pug.ts/~/Options
 tags:
   - template_engine
@@ -27,17 +27,17 @@ See
 ## Description
 
 [Pug](https://pugjs.org/) is a template engine heavily influenced by Haml. This
-plugin allows to use it to create pages and layouts.
+plugin allows you to use it to create pages and layouts.
 
 ## Creating layouts
 
 Add a file with `.pug` extension in the `_includes` directory. Use the _front
-matter_ to set data to the template.
+matter_ to set data for the template.
 
 ```yml
 ---
 title: Welcome to my page
-intro: This is my first post using lume, I hope you like it!
+intro: This is my first post using Lume. I hope you like it!
 ---
 
 doctype html
@@ -55,5 +55,5 @@ Note that the paths passed to `include` are relative to `_includes` directory.
 
 ## Creating pages
 
-Creating pages is the same as creating layouts, just place the `.pug` file
+Creating pages is the same as creating layouts; just place the `.pug` file
 outside the `_includes` directory.
