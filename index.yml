@@ -304,6 +304,20 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://twitter.com/yukimis/status/1571734045398278145
+      author: ゆきみす (@yukimis)
+      avatar: /img/avatars/yukimis.webp
+      date: September 19, 2022
+      text: |
+        deno lumeファイル数が少なくJSXで書けてとても体験が良い
+
+    - url: https://twitter.com/_LautaroLopez/status/1571525610937241603
+      author: Lauchita. (@_LautaroLopez)
+      avatar: /img/avatars/lautarolopez.webp
+      date: September 18, 2022
+      text: |
+        Que hermoso ver cómo está creciendo el ecosistema de <a href="https://twitter.com/deno_land">@deno_land</a> con cositas tan copadas como Fresh o Lume🦕
+
     - url: https://twitter.com/hashedrock/status/1571478377831501824
       author: hashrock (@hashedrock)
       avatar: /img/avatars/hashedrock.webp

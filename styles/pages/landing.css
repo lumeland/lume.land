@@ -234,10 +234,10 @@
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
     margin-top: 0;
+    max-width: var(--max-width);
   }
 
   & > * {
-    max-width: var(--max-width);
     padding-left: var(--margin);
     padding-right: var(--margin);
     margin-left: auto;
