@@ -27,7 +27,7 @@ export default function* ({ search, paginate }) {
     size: 10
   };
 
-  for (const page of paginate(posts, options))) {
+  for (const page of paginate(posts, options)) {
     yield page;
   }
 }
