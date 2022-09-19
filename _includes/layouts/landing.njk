@@ -100,7 +100,7 @@ page_css: landing.css
       {% for sponsor in support.sponsors %}
       <li>
         <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
-          <img src="{{ sponsor.img }}" height="100" width="100" alt="{{ sponsor.name }}">
+          <img src="{{ sponsor.img }}" srcset="{{ sponsor.img }}, {{ sponsor.img | replace(".webp", "@2x.webp") }} 2x" height="100" width="100" alt="{{ sponsor.name }}">
         </a>
       </li>
       {% endfor %}
