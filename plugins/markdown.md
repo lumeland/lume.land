@@ -65,11 +65,11 @@ you can use with the `plugins` option. For example, to add the
 [markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji) plugin:
 
 ```ts
-import anchor from "https://jspm.dev/markdown-it-anchor";
+import emoji from "https://jspm.dev/markdown-it-emoji";
 
 // Set the markdown plugins
 const markdown = {
-  plugins: [anchor],
+  plugins: [emoji],
   keepDefaultPlugins: true,
 };
 
