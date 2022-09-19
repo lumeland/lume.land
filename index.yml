@@ -247,47 +247,47 @@ support:
   sponsors:
     - name: Óscar Otero (creator & maintainer)
       url: https://oscarotero.com/
-      img: /img/avatars/oscar.webp
+      img: /img/avatars/supporters/oscar.webp
     - name: Androw Nash
       url: https://audrow.github.io/
-      img: /img/avatars/audrow.webp
+      img: /img/avatars/supporters/audrow.webp
       amount: 5
       recurrent: true
     - name: Yuto Oguchi
       url: https://aiotter.com/
-      img: /img/avatars/aiotter.webp
+      img: /img/avatars/supporters/aiotter.webp
       amount: 1
       recurrent: true
     - name: Tobias Schmidt
       url: https://tobiasschmidt.me/
-      img: /img/avatars/tobias.webp
+      img: /img/avatars/supporters/tobias.webp
       amount: 20
     - name: Yohan Brook
       url: https://johan.im/
-      img: /img/avatars/johan.webp
+      img: /img/avatars/supporters/johan.webp
       amount: 20
     - name: Jon Paul Uritis
       url: https://jonpauluritis.com/
-      img: /img/avatars/jppope.webp
+      img: /img/avatars/supporters/jppope.webp
       amount: 1
       recurrent: true
     - name: Reese Schultz
       url: https://reese.codes/
-      img: /img/avatars/reeseschultz.webp
+      img: /img/avatars/supporters/reeseschultz.webp
       amount: 5
       recurrent: true
     - name: Jrson
       url: https://jrson.me/
-      img: /img/avatars/jrson.webp
+      img: /img/avatars/supporters/jrson.webp
       amount: 10
       recurrent: true
     - name: SheetJS
       url: https://sheetjs.com/
-      img: /img/avatars/sheetjs.webp
+      img: /img/avatars/supporters/sheetjs.webp
       amount: 50
     - name: Emil Sadek
       url: https://emilsadek.com/
-      img: /img/avatars/emilsadek.webp
+      img: /img/avatars/supporters/emilsadek.webp
       amount: 1
       recurrent: true
 
@@ -306,98 +306,98 @@ testimonials:
   quotes:
     - url: https://twitter.com/yukimis/status/1571734045398278145
       author: ゆきみす (@yukimis)
-      avatar: /img/avatars/yukimis.webp
+      avatar: /img/avatars/testimonials/yukimis.webp
       date: September 19, 2022
       text: |
         deno lumeファイル数が少なくJSXで書けてとても体験が良い
 
     - url: https://twitter.com/azulitenet/status/1571617825642663937
       author: Hiroki (@azulitenet)
-      avatar: /img/avatars/azulitenet.webp
+      avatar: /img/avatars/testimonials/azulitenet.webp
       date: September 18, 2022
       text: |
         Lume (Denoの静的サイトジェネレーター) を触ってみる <a href="https://t.co/iGmdTKexed">https://t.co/iGmdTKexed</a> <a href="https://twitter.com/hashtag/zenn">#zenn</a>
 
     - url: https://twitter.com/_LautaroLopez/status/1571525610937241603
       author: Lauchita. (@_LautaroLopez)
-      avatar: /img/avatars/lautarolopez.webp
+      avatar: /img/avatars/testimonials/lautarolopez.webp
       date: September 18, 2022
       text: |
         Que hermoso ver cómo está creciendo el ecosistema de <a href="https://twitter.com/deno_land">@deno_land</a> con cositas tan copadas como Fresh o Lume🦕
 
     - url: https://twitter.com/hashedrock/status/1571478377831501824
       author: hashrock (@hashedrock)
-      avatar: /img/avatars/hashedrock.webp
+      avatar: /img/avatars/testimonials/hashedrock.webp
       date: September 18, 2022
       text: |
         Lume触ってみた。コンパクトで使いやすかった<a href="https://t.co/IBdWKpe9BA">https://t.co/IBdWKpe9BA</a> <a href="https://twitter.com/hashtag/zenn">#zenn</a>
 
     - url: https://twitter.com/freeLance0451/status/1557386172120416258
       author: freeLance (@freeLance0451)
-      avatar: /img/avatars/freelance.webp
+      avatar: /img/avatars/testimonials/freelance.webp
       date: August 10, 2022
       text: |
         OK, falling in love with <a href="https://twitter.com/deno_land">@deno_land</a> and the Lume SSG. So nice not having to worry about node_modules 😄 
 
     - url: https://twitter.com/Microflash/status/1551599531615473665
       author: Naiyer Asif نیر آصف (@Microflash)
-      avatar: /img/avatars/naiyer.webp
+      avatar: /img/avatars/testimonials/naiyer.webp
       date: July 25, 2022
       text: |
         I recently redesigned my site (<a href="https://t.co/n9FcC2ATtp">https://t.co/n9FcC2ATtp</a>) with Lume: a lovely static site generator built by <a href="https://twitter.com/misteroom?ref_src=twsrc%5Etfw">@misteroom</a>. Easy, simple and fast to work with. Definitely worth checking out if you&#39;re a fan of 11ty on Node.js. 
 
     - url: https://twitter.com/tarugoconf/status/1543881979426381824
       author: Tarugoconf (@tarugoconf)
-      avatar: /img/avatars/tarugoconf.webp
+      avatar: /img/avatars/testimonials/tarugoconf.webp
       date: July 4, 2022
       text: ¿No habíamos contado que el código de la web de la <a href="https://twitter.com/hashtag/tarugo22?src=hash&amp;ref_src=twsrc%5Etfw">#tarugo22</a> es COMPLETAMENTE OPEN SOURCE? <br>¿Y tampoco que está creada con tecnología gallega? <a href="https://t.co/5hJNkf7otY">https://t.co/5hJNkf7otY</a>
 
     - url: https://twitter.com/dragonwocky/status/1531413299757457408
       author: "@dragonwocky"
-      avatar: /img/avatars/dragonwocky.webp
+      avatar: /img/avatars/testimonials/dragonwocky.webp
       date: May 31, 2022
       text: |
         Deno is awesome. If you use it right, you&#39;ll never want to go back to Node - and Lume (<a href="https://t.co/EIFgNe07Sc">https://t.co/EIFgNe07Sc</a>) does it right: powerful, developer-friendly, super simple, and extremely flexible static site generation.
 
     - url: https://twitter.com/bradenthehair/status/1531357349356654592
       author: Braden East (@bradenthehair)
-      avatar: /img/avatars/bradenthehair.webp
+      avatar: /img/avatars/testimonials/bradenthehair.webp
       date: May 30, 2022
       text: Lume is a fantastic tool. It’s more powerful and flexible than any static site generator I’ve used in 5 years of web development.
 
     - url: https://twitter.com/matthewcp/status/1522572060182171649
       author: Matthew Phillips (@matthewcp)
-      avatar: /img/avatars/mattew.webp
+      avatar: /img/avatars/testimonials/mattew.webp
       date: May 6, 2022
       text: This is a nice looking static site generator for Deno. Reminds me of 11ty a bit. <a href="https://t.co/EiE4yOHlmS">https://t.co/EiE4yOHlmS</a>
 
     - url: https://twitter.com/automaetopia/status/1420960967534563329
       author: "@automaetopia"
-      avatar: /img/avatars/automaetopia.webp
+      avatar: /img/avatars/testimonials/automaetopia.webp
       date: July 30, 2021
       text: I was having paralysis regarding what static generator to write my website in and I’ve finally decided to settle on Lume (a static generator written in Deno). I like it and it’s easy to configure
 
     - url: https://twitter.com/kuspoes/status/1408642055241302018
       author: Poes (@kuspoes)
-      avatar: /img/avatars/kuspoes.webp
+      avatar: /img/avatars/testimonials/kuspoes.webp
       date: June 26, 2021
       text: tapi sekarang sih pengennya pakai lumeland<a href="https://t.co/v6konf7O0Z">https://t.co/v6konf7O0Z</a>
 
     - url: https://twitter.com/deno_land/status/1571469733093851140
       author: Deno (@deno_land)
-      avatar: /img/avatars/deno.webp
+      avatar: /img/avatars/testimonials/deno.webp
       date: September 18, 2022
       text: Lume static site generator <a href="https://t.co/Lr9GTGUOlB">https://t.co/Lr9GTGUOlB</a>
 
     - url: https://twitter.com/fserb/status/1390404312581410817
       author: Fernando Serboncini (@fserb)
-      avatar: /img/avatars/fserb.webp
+      avatar: /img/avatars/testimonials/fserb.webp
       date: May 6, 2021
       text: Personally I migrated from Jekyll to Eleventy to Lume (<a href="https://t.co/aSHo422kxJ">https://t.co/aSHo422kxJ</a>). And I love it. Github pages is fine, if you are building it yourself (not relying on Github&#39;s MD parser).
 
     - url: https://twitter.com/brianleroux/status/1337081772278870016
       author: Brian LeRoux (@brianleroux)
-      avatar: /img/avatars/brianleroux.webp
+      avatar: /img/avatars/testimonials/brianleroux.webp
       date: December 10, 2020
       text: Lume…another Static Site Generator (SSG) but this time built on Deno. 🔥🦖 <br><br>Love the logo.<a href="https://t.co/ajHHcXMnfq">https://t.co/ajHHcXMnfq</a>
 
