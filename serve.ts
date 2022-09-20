@@ -3,7 +3,7 @@ import Server from "lume/core/server.ts";
 import expires from "lume/middlewares/expires.ts";
 import cacheBusting from "lume/middlewares/cache_busting.ts";
 import notFound from "lume/middlewares/not_found.ts";
-import analytics from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/google_analytics/mod.ts";
+// import analytics from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/google_analytics/mod.ts";
 import csp from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/csp/mod.ts";
 import www from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/www/mod.ts";
 
@@ -21,7 +21,7 @@ server
     root,
     page404: "/404/",
   }))
-  .use(analytics({ id: "UA-110819-22" }))
+  // .use(analytics({ id: "UA-110819-22" }))
   .use(www())
   .use(csp({
     "Strict-Transport-Security": {
