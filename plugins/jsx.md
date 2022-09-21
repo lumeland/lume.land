@@ -34,6 +34,11 @@ in order to tell Deno that Lume exposes React in global scope:
 ```json {title="deno.json"}
 {
   "importMap": "import_map.json",
+  "tasks": {
+    "lume": "deno eval \"import 'lume/task.ts'\" --",
+    "build": "deno task lume",
+    "serve": "deno task lume -s"
+  },
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react"
@@ -44,8 +49,8 @@ in order to tell Deno that Lume exposes React in global scope:
 ```json {title="import_map.json"}
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.11.1/",
-    "react/jsx-runtime": "https://esm.sh/react@18.2.0",
+    "lume/": "https://deno.land/x/lume@v1.11.4/",
+    "react/jsx-runtime": "https://deno.land/x/lume@v1.11.4/deps/react_runtime.ts"
   }
 }
 ```

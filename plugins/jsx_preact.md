@@ -34,6 +34,11 @@ in order to configure Deno to use Preact as the JSX library:
 ```json {title="deno.json"}
 {
   "importMap": "import_map.json",
+  "tasks": {
+    "lume": "deno eval \"import 'lume/task.ts'\" --",
+    "build": "deno task lume",
+    "serve": "deno task lume -s"
+  },
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
@@ -44,9 +49,8 @@ in order to configure Deno to use Preact as the JSX library:
 ```json {title="import_map.json"}
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.11.1/",
-    "preact/jsx-runtime": "https://esm.sh/preact@10.10.6/jsx-runtime",
-    "preact/jsx-dev-runtime": "https://esm.sh/preact@10.10.6/jsx-dev-runtime"
+    "lume/": "https://deno.land/x/lume@v1.11.4/",
+    "preact/jsx-runtime": "https://deno.land/x/lume@v1.11.4/deps/preact_runtime.ts"
   }
 }
 ```
