@@ -68,6 +68,8 @@
   margin: 5px 0;
 
   & pre {
+    width: 100%;
+    max-width: 432px;
     background: var(--color-black-140);
     color: var(--color-white);
     padding: 20px 25px;
