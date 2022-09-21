@@ -61,7 +61,7 @@ export default site;
 ```json {title="import_map.json"}
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.7.2/"
+    "lume/": "https://deno.land/x/lume@v1.11.4/"
   }
 }
 ```
