@@ -74,7 +74,8 @@ Example configuration using Lume with TypeScript and [JSX](/plugins/jsx/)
 ```json {title="import_map.json"}
 {
   "imports": {
-    "react/jsx-runtime": "https://esm.sh/react@18.2.0",
+    "lume/": "https://deno.land/x/lume@v1.11.4/",
+    "react/jsx-runtime": "https://deno.land/x/lume@v1.11.4/deps/react_runtime.ts"
   }
 }
 ```
@@ -99,8 +100,8 @@ Example configuration using Lume with TypeScript and
 ```json {title="import_map.json"}
 {
   "imports": {
-    "preact/jsx-runtime": "https://esm.sh/preact@10.10.6/jsx-runtime",
-    "preact/jsx-dev-runtime": "https://esm.sh/preact@10.10.6/jsx-dev-runtime"
+    "lume/": "https://deno.land/x/lume@v1.11.4/",
+    "preact/jsx-runtime": "https://deno.land/x/lume@v1.11.4/deps/preact_runtime.ts"
   }
 }
 ```
