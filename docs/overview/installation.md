@@ -17,7 +17,7 @@ example `deno task lume` in any environment with Deno and it just works.
 To setup Lume in your project folder, run the following command:
 
 ```sh
-deno run -A https://deno.land/x/lume/init.ts
+deno run -Ar https://deno.land/x/lume/init.ts
 ```
 
 This command creates the following files:

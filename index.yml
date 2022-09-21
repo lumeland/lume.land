@@ -6,7 +6,7 @@ header:
 
 install:
   title: "Run the following to [setup Lume](./docs/overview/installation.md):"
-  code: deno run -A https://deno.land/x/lume/init.ts
+  code: deno run -Ar https://deno.land/x/lume/init.ts
   url: /docs/getting-started/your-first-page/
 
 usage:
