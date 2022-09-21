@@ -304,6 +304,13 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://www.youtube.com/watch?v=6ld61HU6V6k
+      author: Coding with Robby
+      avatar: /img/avatars/testimonials/robby.webp
+      date: September 20, 2022
+      text: Getting started with Lume (new Deno static site generator)
+      cover: https://i.ytimg.com/vi/6ld61HU6V6k/hqdefault.jpg
+
     - url: https://twitter.com/yukimis/status/1571734045398278145
       author: ゆきみす (@yukimis)
       avatar: /img/avatars/testimonials/yukimis.webp

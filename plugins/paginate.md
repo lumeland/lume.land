@@ -24,7 +24,7 @@ export default function* ({ search, paginate }) {
   const posts = search.pages("posts");
   const options = {
     url: (n) => `posts/page/${n}/`,
-    size: 10
+    size: 10,
   };
 
   for (const page of paginate(posts, options)) {
