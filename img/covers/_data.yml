@@ -1,0 +1,3 @@
+imagick:
+  - resize: [480, 360]
+    format: webp
