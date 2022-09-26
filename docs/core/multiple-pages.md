@@ -16,7 +16,7 @@ Every element yielded by the generator is a new page and must contain, at least,
 the `url` property.
 
 ```js
-export default function ()* {
+export default function* () {
   yield {
     url: "/page-1/",
     content: "This is the first page",
@@ -46,7 +46,7 @@ in the layouts:
 <lume-code>
 
 ```js {title="pages.tmpl.js"}
-export default function ()* {
+export default function* () {
   yield {
     url: "/page-1/",
     layout: "layouts/article.njk",
@@ -91,7 +91,7 @@ once, instead of duplicating it in every yielded page:
 ```js {title="pages.tmpl.js"}
 export const layout = "layouts/article.njk";
 
-export default function ()* {
+export default function* () {
   yield {
     url: "/page-1/",
     title: "Article 1",

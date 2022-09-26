@@ -12,10 +12,7 @@
   display: flex;
   justify-content: space-between;
   height: 70px;
-  overflow-x: auto;
   column-gap: var(--column-gap-1);
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
 }
 .navbar-logo {
   display: flex;
@@ -47,6 +44,9 @@
   overflow-x: auto;
   flex: 1 1 auto;
   width: 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  will-change: scroll-position;
 
   & li {
     display: flex;
