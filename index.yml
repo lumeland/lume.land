@@ -304,19 +304,19 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://twitter.com/Jedi_Thiago/status/1574234113367752705
+      author: Thiago Jedi (@Jedi_Thiago)
+      avatar: /img/avatars/testimonials/jedithiago.webp
+      date: September 26, 2022
+      text: |
+        Maior acerto dos últimos meses: migrar meu blog do GitHub pages para Lume. Me deu menos dor de cabeça do que Astro. E eu posso finalmente usar <a href="https://twitter.com/deno_land">@deno_land</a> na prática.
+
     - url: https://www.youtube.com/watch?v=6ld61HU6V6k
       author: Coding with Robby
       avatar: /img/avatars/testimonials/robby.webp
       date: September 20, 2022
       text: Getting started with Lume (new Deno static site generator)
       cover: /img/covers/coding_with_robby.webp
-
-    - url: https://twitter.com/yukimis/status/1571734045398278145
-      author: ゆきみす (@yukimis)
-      avatar: /img/avatars/testimonials/yukimis.webp
-      date: September 19, 2022
-      text: |
-        deno lumeファイル数が少なくJSXで書けてとても体験が良い
 
     - url: https://twitter.com/_LautaroLopez/status/1571525610937241603
       author: Lauchita. (@_LautaroLopez)
