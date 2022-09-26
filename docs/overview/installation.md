@@ -85,7 +85,7 @@ Once installed, you have the `lume` command. To update Lume to the latest
 version, use the command:
 
 ```sh
-lume upgrade --global
+deno task lume upgrade --global
 ```
 
 The command `lume upgrade --dev` installs the latest development version (the
