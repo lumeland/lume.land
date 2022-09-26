@@ -304,6 +304,13 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://twitter.com/kulak_at/status/1572639244799315968
+      author: Kacper Kula (@kulak_at)
+      avatar: /img/avatars/testimonials/kulak_at.webp
+      date: September 21, 2022
+      text: |
+        I’ve spent just 30 minutes playing with Lume Static Site Generator by <a href="https://twitter.com/deno_land">@deno_land</a> and I already love it! It’s blazingly fast and seems to have all features I need out of the box.<a href="https://twitter.com/hashtag/deno">#deno</a> <a href="https://twitter.com/hashtag/typescript">#typescript</a> <a href="https://twitter.com/hashtag/webdev">#webdev</a>
+
     - url: https://twitter.com/Jedi_Thiago/status/1574234113367752705
       author: Thiago Jedi (@Jedi_Thiago)
       avatar: /img/avatars/testimonials/jedithiago.webp
@@ -330,7 +337,7 @@ testimonials:
       avatar: /img/avatars/testimonials/hashedrock.webp
       date: September 18, 2022
       text: |
-        Lume触ってみた。コンパクトで使いやすかった<a href="https://t.co/IBdWKpe9BA">https://t.co/IBdWKpe9BA</a> <a href="https://twitter.com/hashtag/zenn">#zenn</a>
+        Lume触ってみた。コンパクトで使いやすかった <a href="https://t.co/IBdWKpe9BA">https://t.co/IBdWKpe9BA</a> <a href="https://twitter.com/hashtag/zenn">#zenn</a>
 
     - url: https://twitter.com/freeLance0451/status/1557386172120416258
       author: freeLance (@freeLance0451)
@@ -381,7 +388,7 @@ testimonials:
       author: Poes (@kuspoes)
       avatar: /img/avatars/testimonials/kuspoes.webp
       date: June 26, 2021
-      text: tapi sekarang sih pengennya pakai lumeland<a href="https://t.co/v6konf7O0Z">https://t.co/v6konf7O0Z</a>
+      text: tapi sekarang sih pengennya pakai lumeland <a href="https://t.co/v6konf7O0Z">https://t.co/v6konf7O0Z</a>
 
     - url: https://twitter.com/deno_land/status/1571469733093851140
       author: Deno (@deno_land)
@@ -399,7 +406,7 @@ testimonials:
       author: Brian LeRoux (@brianleroux)
       avatar: /img/avatars/testimonials/brianleroux.webp
       date: December 10, 2020
-      text: Lume…another Static Site Generator (SSG) but this time built on Deno. 🔥🦖 <br><br>Love the logo.<a href="https://t.co/ajHHcXMnfq">https://t.co/ajHHcXMnfq</a>
+      text: Lume…another Static Site Generator (SSG) but this time built on Deno. 🔥🦖 <br><br>Love the logo. <a href="https://t.co/ajHHcXMnfq">https://t.co/ajHHcXMnfq</a>
 
 articles:
   - url: https://dev.to/kbaba1001/lume-land-code-highlight-setting-2gbh
