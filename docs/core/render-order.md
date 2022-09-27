@@ -7,7 +7,7 @@ order: 12
 In Lume all pages are rendered at the same time. This works well in most cases,
 but sometimes you want to make sure a page is rendered after or before others.
 The most typical example is with auto-generated pages. Let's say you have a page
-that generate multiple pages dynammically using data from an external API:
+that generate multiple pages dynamically using data from an external API:
 
 ```js
 export const layout = "layouts/api.njk";
@@ -76,6 +76,6 @@ export default function* ({ search, paginate }) {
 }
 ```
 
-This ensures that this script will be runned **after** the `type=api` pages are
+This ensures that this script will be run **after** the `type=api` pages are
 created. An alternative solution is change the `renderOrder` of the API script
 to a negative value, like `-1`.

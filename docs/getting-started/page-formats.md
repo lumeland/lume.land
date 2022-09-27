@@ -57,7 +57,7 @@ variables `title` and `links`).
 
 JavaScript can be useful for complex pages requiring some logic before
 rendering. You have to create a file with the extension `.tmpl.js`. The `.tmpl`
-subextension is required to distinguish the JavaScript files to generate static
+sub-extension is required to distinguish the JavaScript files to generate static
 pages from other JavaScript files destined to the executed in the browser
 ("tmpl" is for "template").
 

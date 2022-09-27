@@ -27,7 +27,7 @@ files, **in this order of priority**.
 
 ## Object mode merging
 
-On merging variables, **the complete value is overrided**. But you may want to
+On merging variables, **the complete value is overridden**. But you may want to
 merge some values in a different way. For example let's say we have the
 following two data files, one in the root and other in a subfolder. Both files
 have a `site` variable, with different values:
@@ -49,8 +49,9 @@ site:
 
 All pages in the subfolder (and sub-subfolders) will have the latest version of
 the variable, that has the `author` subkey but missing the `title` value,
-because the whole variable is overriden. You can change this behaviour using the
-special value `mergedKeys`. This value indicates to Lume how to merge some keys:
+because the whole variable is overridden. You can change this behaviour using
+the special value `mergedKeys`. This value indicates to Lume how to merge some
+keys:
 
 <lume-code>
 

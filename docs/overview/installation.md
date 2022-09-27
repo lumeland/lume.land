@@ -29,7 +29,7 @@ This command creates the following files:
   [Deno's configuration file](https://deno.land/manual/getting_started/configuration_file).
   It includes the path of the import map file and some tasks to run Lume. You
   can also configure other features of Deno like TypeScript, formatter,
-  persmissions, etc.
+  permissions, etc.
 - `import_map.json`: The
   [import map file](https://deno.land/manual/node/import_maps#using-import-maps)
   with the import url of Lume. Here you can add the dependencies of your project

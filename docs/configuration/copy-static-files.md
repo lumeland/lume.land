@@ -5,8 +5,8 @@ order: 3
 ---
 
 Static files are files that don't have to be processed, like images, PDFs,
-videos or audios. So it's better (and faster) to copy these files directly to
-the `dest` directory with the `copy()` method:
+videos or audio. So it's better (and faster) to copy these files directly to the
+`dest` directory with the `copy()` method:
 
 ```js
 // Copy the "img" directory to _site/img
@@ -48,7 +48,7 @@ site.copy("/files/");
 ```
 
 If you need to copy a file starting with `.` or `_`, you have to configure it
-explicity:
+explicitly:
 
 ```js
 // Copy a underscored file

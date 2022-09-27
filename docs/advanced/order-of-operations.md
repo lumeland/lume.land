@@ -13,7 +13,7 @@ This is a high level description of how Lume build your site. When you run
    - Skip files and folders starting with `_`, `.` or ignored with
      `site.ignore()`.
    - If the file
-     [`must be copies staticaly`](../configuration/copy-static-files.md),
+     [`must be copied statically`](../configuration/copy-static-files.md),
      calculate the source and destination paths.
    - If the name of the file is `_data` or is inside a `_data` folder, is shared
      data.
@@ -39,7 +39,7 @@ This is a high level description of how Lume build your site. When you run
 ## Watch mode
 
 In watch mode (with `lume --serve` or `lume --watch`), the first build is
-exactly the same, but the succesive changes have some differences:
+exactly the same, but the successive changes have some differences:
 
 - The `dest` folder is not emptied.
 - Only the files with changes are reloaded.

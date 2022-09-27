@@ -1,6 +1,6 @@
 ---
 title: Page data
-description: Asssign custom data to the pages
+description: Assign custom data to the pages
 order: 2
 ---
 

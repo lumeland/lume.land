@@ -5,7 +5,7 @@ order: 8
 ---
 
 It's possible with Lume to generate more than one page from the same source
-file. This is useful to generate pages programatically using a external source
+file. This is useful to generate pages programmatically using a external source
 like a database or an API.
 
 ## Basic example

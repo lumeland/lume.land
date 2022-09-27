@@ -110,7 +110,7 @@ Example configuration using Lume with TypeScript and
 
 ## TypeScript in Templates
 
-You can import, use and extend Lumes built-in types, within your TypeScript
+You can import, use and extend Lume's built-in types, within your TypeScript
 files. For the most common use case these are the following `interfaces`.
 
 ```ts
@@ -124,7 +124,7 @@ import type { PageHelpers } from "lume/core.ts";
 [Go to source code](https://github.com/lumeland/lume/blob/master/core.ts) for
 more info about the `PageData` interface. {.tip}
 
-### Extending Lumes Types
+### Extending Lume's Types
 
 To use custom types with Lume, extend the existing interfaces with custom
 defined properties.

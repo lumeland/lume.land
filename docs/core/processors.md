@@ -33,7 +33,7 @@ function process(page) {
   page.document; // The parsed HTML code, to use the DOM API
   page.src; // The info about the source file of this page
   page.dest; // The info about the destination of the page
-  page.data; // All data available for this page (frontmatter merged with _data)
+  page.data; // All data available for this page (front matter merged with _data)
 }
 ```
 

@@ -31,7 +31,7 @@ You can assign event listeners to the server:
 
 ```ts
 server.addEventListener("start", () => {
-  console.log("Server started succesfully");
+  console.log("Server started successfully");
 });
 ```
 

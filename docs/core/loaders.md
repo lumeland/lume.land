@@ -66,7 +66,7 @@ want to transform (bundle, minify...) and save them keeping the same extension,
 instead of renaming to `html`.
 
 **Note:** you can't use the same extension to generate pages and assets, so a
-way to have support for both is adding a subextension (like `tmpl`) for pages.
+way to have support for both is adding a sub-extension (like `tmpl`) for pages.
 Example:
 
 ```js
