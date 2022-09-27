@@ -111,7 +111,7 @@ const site = lume({
 });
 ```
 
-This value can be overrided from CLI with `--port`. For example:
+This value can be overridden from CLI with `--port`. For example:
 `deno task lume --serve --port=8888` {.tip}
 
 ### page404

@@ -5,7 +5,7 @@ order: 11
 ---
 
 In Lume, any change in the watch mode (with `lume --serve` or `lume --watch`),
-**rebuils the entire site again**. This happens because it's almost impossible
+**rebuilds the entire site again**. This happens because it's almost impossible
 to know in advance which pages will be affected by a change in any file. For
 example:
 

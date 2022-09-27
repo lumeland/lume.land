@@ -48,7 +48,7 @@ Not all template engines support async filters. {.tip}
 
 ### Builtin filters
 
-Lume includes the following convenient preinstalled filters:
+Lume includes the following convenient pre-installed filters:
 
 - **md**: Allows to render Markdown content to HTML.
   [More info](../../plugins/markdown.md#md-filter)
@@ -60,7 +60,7 @@ Lume includes the following convenient preinstalled filters:
 
 Some templates engines allows to add other helpers different to filters, like
 custom tags. To configure that, there's the `helper()` method that allows to add
-any generical helper.
+any generic helper.
 
 <lume-code>
 

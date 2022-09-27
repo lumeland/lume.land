@@ -82,7 +82,7 @@ In Nunjucks you can nest components in this way:
   Content of the Container component
 
   {% comp "Button" %}
-  This is a button inside the Contaner component
+  This is a button inside the Container component
   {% endcomp %}
 {% endcomp %}
 ```

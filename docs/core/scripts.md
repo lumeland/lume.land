@@ -36,7 +36,7 @@ site.script(
 
 Now, by running `lume run save-site`, these two commands will be executed.
 
-If you don't need to execute the commands in serie but in **parallel**, use an
+If you don't need to execute the commands in series but in **parallel**, use an
 array of commands or the character `&`:
 
 ```js
