@@ -76,7 +76,7 @@ site.process([".js"], function (page) {
 
   // Append .min to the filename
   // so it will be saved as example.min.js
-  page.updatDest({
+  page.updateDest({
     path: page.dest.path + ".min",
   });
 });
