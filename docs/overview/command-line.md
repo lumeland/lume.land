@@ -55,5 +55,3 @@ There are other useful commands like:
 
 - `deno task lume -V`: to show the current version.
 - `deno task lume run <SCRIPT>`: to run a custom script.
-- `deno task lume vendor`: to download the Lume vendors in the `_vendor`
-  directory. See [Deno docs](https://deno.land/manual/tools/vendor).

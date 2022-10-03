@@ -16,7 +16,7 @@ import terser from "lume/plugins/terser.ts";
 
 const site = lume();
 
-site.use(terser({/* your config here */}));
+site.use(terser());
 
 export default site;
 ```
@@ -51,10 +51,6 @@ Other minification options can also be set, but those relating to the filesystem
 cannot. Minified files are given the same name as the input file in the same
 directory structure. Note too that options apply to all files; you cannot use
 different options for some files and not for others.
-
-Source maps can be produced by passing `sourceMap: true` as a top-level option.
-This will create a source map in the same directory as the file, with `.map`
-appended to the file name.
 
 ## The `terser` filter
 

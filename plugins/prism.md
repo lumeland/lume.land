@@ -16,7 +16,7 @@ import prism from "lume/plugins/prism.ts";
 
 const site = lume();
 
-site.use(prism({/* your config here */}));
+site.use(prism());
 
 export default site;
 ```

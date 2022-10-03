@@ -66,16 +66,7 @@ Example configuration using Lume with TypeScript and [JSX](/plugins/jsx/)
   "importMap": "import_map.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
-  }
-}
-```
-
-```json {title="import_map.json"}
-{
-  "imports": {
-    "lume/": "https://deno.land/x/lume@v1.11.4/",
-    "react/jsx-runtime": "https://deno.land/x/lume@v1.11.4/deps/react_runtime.ts"
+    "jsxImportSource": "npm:react"
   }
 }
 ```
@@ -92,16 +83,7 @@ Example configuration using Lume with TypeScript and
   "importMap": "import_map.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "preact"
-  }
-}
-```
-
-```json {title="import_map.json"}
-{
-  "imports": {
-    "lume/": "https://deno.land/x/lume@v1.11.4/",
-    "preact/jsx-runtime": "https://deno.land/x/lume@v1.11.4/deps/preact_runtime.ts"
+    "jsxImportSource": "npm:preact"
   }
 }
 ```

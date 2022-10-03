@@ -16,7 +16,7 @@ import bundler from "lume/plugins/bundler.ts";
 
 const site = lume();
 
-site.use(bundler({/* your config here */}));
+site.use(bundler());
 
 export default site;
 ```
@@ -33,9 +33,6 @@ It works differently depending on the configuration. The available options are:
 
 - **extensions**: Array with the extensions of the files that this plugin will
   handle. By default is `[".js", ".ts"]`.
-- **sourceMap**: Set `true` to generate a source map file that will be saved in
-  the same place but with the `.map` extension appended. For example, the file
-  `my/script.js` will generate the sourcemap file `my/script.js.map`.
 - **options**: The options available in
   [`Deno.EmitOptions`](https://doc.deno.land/deno/unstable/~/Deno.EmitOptions)
 

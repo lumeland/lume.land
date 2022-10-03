@@ -39,9 +39,7 @@ site
     extensions: [".js"],
   }))
   .use(resolveUrls())
-  .use(imagick({
-    cache: true,
-  }))
+  .use(imagick())
   .use(sitemap())
   .scopedUpdates(
     (path) => path.endsWith(".png") || path.endsWith(".jpg"),

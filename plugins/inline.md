@@ -16,7 +16,7 @@ import inline from "lume/plugins/inline.ts";
 
 const site = lume();
 
-site.use(inline({/* your config here */}));
+site.use(inline());
 
 export default site;
 ```

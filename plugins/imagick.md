@@ -54,11 +54,24 @@ This file assigns this data to all image pages in this folder and subfolders
 `_data` files). The plugin will read the data, resize all images to 200x200, and
 convert them to webp format.
 
+The `format` value can be an array of values, in order to output the same file
+configuration to different formats:
+
+<lume-code>
+
+```yml { title="/img/_data.yml" }
+imagick:
+  resize: [200, 200]
+  format: [webp, jpg]
+```
+
+</lume-code>
+
 ## Multiple outputs
 
 If you need to create multiple versions of the same image file (for responsive
-design, for example), use an array of values. Make sure to include the `suffix`
-key to generate different names for the output files:
+design, for example), use an array of transforms. Make sure to include the
+`suffix` key to generate different names for the output files:
 
 <lume-code>
 
@@ -66,7 +79,7 @@ key to generate different names for the output files:
 imagick:
   - resize: [200, 200]
     suffix: -small
-    format: webp
+    format: [webp, jpg]
   - resize: [1000, 1000]
     format: webp
   - resize: [2000, 2000]
@@ -76,20 +89,48 @@ imagick:
 
 </lume-code>
 
-This code generates three files for every image file. For example, if the input
-file is `background.jpg`, it will generate the files `background.webp`,
-`background-small.webp` and `background-big.webp`.
+This code generates 4 files for every image file (note the first transform with
+2 formats). For example, if the input file is `background.png`, it will generate
+the files `background.webp`, `background.jpg`, `background-small.webp` and
+`background-big.webp`.
+
+## Matches
+
+The property `matches` allows to set a regular expression so the transform is
+executed only to these files matching the pattern.
+
+In the following example, the images containing `-cover` will be resized to
+1000x1000, and the images containing `-icon` to 100x100.
+
+<lume-code>
+
+```yml { title="/img/_data.yml" }
+imagick:
+  - resize: [1000, 1000]
+    matches: -cover
+
+  - resize: [100, 100]
+    matches: -icon
+```
+
+</lume-code>
+
+The `matches` value must be a
+[RegExp](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+or a valid string that can be used to create a RegExp instance.
 
 ## Custom functions
 
 By default, the following functions are available:
 
-- resize
-- crop
-- blur
-- sharpen
-- rotate
-- autoOrient
+- **resize:** Accepts two numbers for `width` and `height` or one number that
+  will be used for `with` and `height`.
+- **crop:** Accepts two numbers for `width` and `height` or one number that will
+  be used for `with` and `height`.
+- **blur:** Accepts two numbers for `radius` and `sigma`.
+- **sharpen:** Accepts two numbers for `radius` and `sigma`.
+- **rotate:** Accepts one number for `degrees`.
+- **autoOrient:** No argument is needed.
 
 You can add more custom functions in the `_config` file. For example:
 

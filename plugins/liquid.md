@@ -16,7 +16,7 @@ import liquid from "lume/plugins/liquid.ts";
 
 const site = lume();
 
-site.use(liquid({/* your config here */}));
+site.use(liquid());
 
 export default site;
 ```

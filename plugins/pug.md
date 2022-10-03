@@ -16,7 +16,7 @@ import pug from "lume/plugins/pug.ts";
 
 const site = lume();
 
-site.use(pug({/* your config here */}));
+site.use(pug());
 
 export default site;
 ```

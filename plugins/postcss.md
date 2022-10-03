@@ -16,7 +16,7 @@ import postcss from "lume/plugins/postcss.ts";
 
 const site = lume();
 
-site.use(postcss({/* your config here */}));
+site.use(postcss());
 
 export default site;
 ```
@@ -38,9 +38,6 @@ This plugin accepts a configuration object. The available options are:
 - `plugins`: Array with the PostCSS plugins that you want to use.
 - `keepDefaultPlugins`: Set `true` to append your plugins to the defaults,
   instead of replacing them.
-- `sourceMap`: Set `true` to generate the source map that will be inlined in the
-  CSS file. To generate the source map in a different file, set
-  `sourceMap: { inline: false }`.
 - `includes`: An array of directories to search for the `@import`ed files. By
   default it is `["_includes"]`. Set `false` to disable it.
 

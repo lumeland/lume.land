@@ -102,12 +102,11 @@ site.preprocess(
 );
 ```
 
-## Pages array manipulations
+## Create or remove pages dynamically
 
 Some processors can generate additional pages (or remove them). The second
 argument of the (pre)processors contain the array with all pages that are being
-processed. You can modify this array to add or remove pages dynamically. For
-example:
+processed. You can modify this array to add pages dynamically. For example:
 
 ```js
 import { Page } from "lume/core/filesystem.ts";
@@ -122,6 +121,22 @@ site.process([".css"], (page, pages) => {
   // Create a new page with the source map
   const url = page.data.url + ".map";
   pages.push(Page.create(url, map));
+});
+```
+
+### Remove pages dynamically
+
+If a processor return `false`, the page is removed from the build process. This
+allows to create a processor to filter only some pages:
+
+```ts
+// Remove all html pages with the language = "en"
+site.process([".html"], (page) => {
+  const language = page.data.lang;
+
+  if (language === "en") {
+    return false;
+  }
 });
 ```
 

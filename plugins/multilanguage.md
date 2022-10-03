@@ -16,7 +16,7 @@ import multilanguage from "lume/plugins/multilanguage.ts";
 
 const site = lume();
 
-site.use(multilanguage({/* your config here */}));
+site.use(multilanguage());
 
 export default site;
 ```

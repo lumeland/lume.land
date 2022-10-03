@@ -47,7 +47,7 @@ something like this:
     └── doc2.md     => /documentation/doc2.html
 ```
 
-## Page order
+## Page date
 
 All pages have a `date` variable with the file creation date. This value can be
 used to order the pages (in a blog, for example). If you want to define a
@@ -75,7 +75,7 @@ numbers (they are treated as timestamp):
     └── 3_downloads.md         => /docs/downloads/index.html
 ```
 
-From `Lume v1.9`, dates can be defined in folders:
+Dates can be defined in folders, so it's shared by all pages inside:
 
 ```txt
 .

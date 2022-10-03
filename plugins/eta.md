@@ -16,7 +16,7 @@ import eta from "lume/plugins/eta.ts";
 
 const site = lume();
 
-site.use(eta({/* your config here */}));
+site.use(eta());
 
 export default site;
 ```

@@ -16,7 +16,7 @@ import date from "lume/plugins/date.ts";
 
 const site = lume();
 
-site.use(date({/* your config here */}));
+site.use(date());
 
 export default site;
 ```

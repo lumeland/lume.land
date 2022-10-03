@@ -16,7 +16,7 @@ import lightningCss from "lume/plugins/lightningcss.ts";
 
 const site = lume();
 
-site.use(lightningCss({/* your config here */}));
+site.use(lightningCss());
 
 export default site;
 ```
@@ -36,9 +36,6 @@ This plugin accepts a configuration object. The available options are:
 
 - `extensions`: Array with the extensions of the files that this plugin will
   load. By default is `[".css"]`. instead of replacing them.
-- `sourceMap`: Set `true` to generate a source map file that will be saved in
-  the same place but with the `.map` extension appended. For example, the file
-  `my/styles.css` will generate the sourcemap file `my/styles.css.map`.
 - `options`: An object with the options for lightning-css.
 
 Example with the default configuration:
@@ -51,7 +48,6 @@ const site = lume();
 
 site.use(lightningCss({
   extensions: [".css"],
-  sourceMap: false,
   options: {
     minify: true,
     drafts: {

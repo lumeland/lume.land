@@ -16,7 +16,7 @@ import codeHighlight from "lume/plugins/code_highlight.ts";
 
 const site = lume();
 
-site.use(codeHighlight({/* your config here */}));
+site.use(codeHighlight());
 
 export default site;
 ```

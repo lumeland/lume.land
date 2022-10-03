@@ -16,7 +16,7 @@ import onDemand from "lume/plugins/on_demand.ts";
 
 const site = lume();
 
-site.use(onDemand({/* your config here */}));
+site.use(onDemand());
 
 export default site;
 ```

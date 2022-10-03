@@ -16,7 +16,7 @@ import windi from "lume/plugins/windi_css.ts";
 
 const site = lume();
 
-site.use(windi({/* your config here */}));
+site.use(windi());
 
 export default site;
 ```

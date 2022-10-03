@@ -16,7 +16,7 @@ import relations from "lume/plugins/relations.ts";
 
 const site = lume();
 
-site.use(relations({/* your config here */}));
+site.use(relations());
 
 export default site;
 ```

@@ -16,7 +16,7 @@ import modifyUrls from "lume/plugins/modify_urls.ts";
 
 const site = lume();
 
-site.use(modifyUrls({/* your config here */}));
+site.use(modifyUrls());
 
 export default site;
 ```

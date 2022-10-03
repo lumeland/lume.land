@@ -16,7 +16,7 @@ import sass from "lume/plugins/sass.ts";
 
 const site = lume();
 
-site.use(sass({/* your config here */}));
+site.use(sass());
 
 export default site;
 ```
@@ -35,7 +35,6 @@ This plugin accepts a configuration object. The available options are:
 
 - `extensions`: Array with the extensions of the files that this plugin will
   load. By default it is `[".scss", ".sass"]`.
-- `sourceMap`: Set `true` to generate the source map file.
 - `format`: The output format (expanded or compressed). By default it is
   `compressed`.
 - `options`: An object with options to configure Deno SASS.

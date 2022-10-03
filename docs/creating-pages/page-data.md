@@ -64,20 +64,49 @@ content as the `content` variable or, optionally, as a default export (like in
 
 There are some special variables that **Lume** can understand:
 
-- `url`: Contains the public URL of the page, useful to create links and
-  configure the output filename. If it doesn't exist, it's generated
-  automatically by lume. See [URL docs](./urls.md)
-- `date`: By default it's the file creation date but you can override with this
-  variable (or prepending it to the filename). This value is used to sort the
-  pages in a list.
-- `layout`: To define the layout that is used to render the page. See
-  [Layouts](layouts.md)
-- `tags`: Tags are used to group pages. See [Tags](tags.md)
-- `templateEngine`: To override the template engine used to render the page. See
-- `renderOrder`: To customize the order in which the page is rendered. See
-  [Render Order](../core/render-order.md)
-- `mergedKeys`: To customize how some data is merged. See
-  [Merged Keys docs](../core/merged-keys.md)
+### url
+
+The `url` variable contains the public URL of the page, useful to create links
+and configure the output filename. If it doesn't exist, it's generated
+automatically by lume. See [URL docs](./urls.md)
+
+### date
+
+If it's not defined, Lume uses automatically the file creation date. This
+variable can be defined in the filename
+[See Page date](./page-files.md#page-date) or in the front matter. The accepted
+values are:
+
+- Any `IS0 8601` compatible date, like `2021-01-01`, `2021-01-01 03:10:10`,
+  `2021-01-01T03:10:10Z`, `2021-01-01Y03:10:10-0700`, etc.
+- The special value `Git Created` to get the first time this file was added to
+  the Git history.
+- The special value `Git Last Modified` to get the last time this file has
+  changed in the Git history.
+
+### layout
+
+To define the layout that is used to render the page. See [Layouts](layouts.md)
+for more info.
+
+### tags
+
+Tags are used to group pages. See [Tags](tags.md)
+
+### templateEngine
+
+To override the template engine used to render the page. See
+[Template engine](../core/multiple-template-engines.md)
+
+### renderOrder
+
+To customize the order in which the page is rendered. See
+[Render Order](../core/render-order.md)
+
+### mergedKeys
+
+To customize how some data is merged. See
+[Merged Keys docs](../core/merged-keys.md)
 
 <lume-code>
 

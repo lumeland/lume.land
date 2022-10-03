@@ -16,7 +16,7 @@ import minifyHTML from "lume/plugins/minify_html.ts";
 
 const site = lume();
 
-site.use(minifyHTML({/* your config here */}));
+site.use(minifyHTML());
 
 export default site;
 ```

@@ -16,7 +16,7 @@ import esbuild from "lume/plugins/esbuild.ts";
 
 const site = lume();
 
-site.use(esbuild({/* your config here */}));
+site.use(esbuild());
 
 export default site;
 ```
