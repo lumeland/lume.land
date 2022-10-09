@@ -23,7 +23,7 @@ directory (usually `_site`).
 
 There's the `deno task build` task as an alias.{.tip}
 
-### Start a local server
+## Start a local server
 
 Typically you will want to open the site in your browser so can start a local
 server adding the `--serve` (or `-s`) argument:
@@ -49,9 +49,6 @@ To watch changes without starting a local server, use the `--watch` argument:
 deno task lume --watch
 ```
 
-## Other commands
+## Help
 
-There are other useful commands like:
-
-- `deno task lume -V`: to show the current version.
-- `deno task lume run <SCRIPT>`: to run a custom script.
+Run `deno task lume -h` to show all available commands and options.
