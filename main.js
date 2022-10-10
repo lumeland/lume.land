@@ -8,11 +8,6 @@ customElements.define("lume-carousel", LumeCarousel);
 customElements.define("lume-carousel-controls", LumeCarouselControls);
 customElements.define("lume-filter", LumeFilter);
 
-document.querySelector("#switch-theme")?.addEventListener("click", () => {
-  document.documentElement.classList.toggle("is-reverse");
-  localStorage.setItem("theme", document.documentElement.className);
-});
-
 // For testing purpose of CSP middleware
 const userAgentString = navigator.userAgent;
 const chromeAgent = userAgentString.indexOf("Chrome") > -1;

@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+  <script type="text/javascript">
+    const root = document.firstElementChild;
+    const mediaQuery = "(prefers-color-scheme: dark)";
+    const mediaMatch = window.matchMedia;
+    const currentMode = mediaMatch(mediaQuery).matches;
+
+    const storeTheme = (targetTheme) => {
+      if ("boolean" === typeof targetTheme) {
+        targetTheme = targetTheme ? "dark" : "light";
+      }
+      root.setAttribute("data-theme", targetTheme);
+      localStorage.setItem("data-theme", targetTheme);
+    };
+
+    const storedTheme = ("data-theme" in localStorage)
+      ? localStorage.getItem("data-theme")
+      : currentMode;
+
+    storedTheme && storeTheme(storedTheme);
+  </script>
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Lume</title>
+
+    <meta name="supported-color-schemes" content="light dark">
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -67,6 +89,16 @@
       
     <script type="text/javascript">
       window.addEventListener('DOMContentLoaded', () => {
+        document.getElementById("switch-theme").addEventListener("click", (event) => {
+          const currentTheme =
+            localStorage.getItem("data-theme") == "light" || (getComputedStyle(root).getPropertyValue("color-scheme") == "light");
+          storeTheme(!!currentTheme);
+        });
+
+        mediaMatch(mediaQuery).addEventListener("change", (event) => {
+          storeTheme(event.matches);
+        });
+
         docsearch({
           appId: "O7U42EOTRQ",
           apiKey: "bcb89a19824e0100724bc16011dea6f8",

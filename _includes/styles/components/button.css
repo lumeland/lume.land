@@ -98,36 +98,14 @@
   &:hover {
     background: var(--color-background-2);
   }
-
-  & .is-light {
-    display: block;
-  }
-  & .is-dark {
-    display: none;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    & .is-light {
-      display: none;
-    }
-    & .is-dark {
-      display: block;
-    }
-  }
 }
-:root.is-reverse .button-theme {
-  & .is-light {
-    display: none;
-  }
-  & .is-dark {
-    display: block;
-  }
-  @media (prefers-color-scheme: dark) {
-    & .is-light {
-      display: block;
-    }
-    & .is-dark {
-      display: none;
-    }
-  }
+
+[data-theme="light"] .button-theme .is-light,
+[data-theme="dark"] .button-theme .is-dark {
+  display: block;
+}
+
+[data-theme="light"] .button-theme .is-dark,
+[data-theme="dark"] .button-theme .is-light {
+  display: none;
 }

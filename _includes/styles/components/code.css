@@ -73,7 +73,7 @@ lume-code {
   }
 }
 
-.hljs {
+:root[data-theme="light"] {
   --color-1: #d73a49;
   --color-2: #6f42c1;
   --color-3: #005cc5;
@@ -89,7 +89,8 @@ lume-code {
   --color-13: #b31d28;
   --color-14: #ffeef0;
 }
-:root.is-reverse .hljs {
+
+:root[data-theme="dark"] {
   --color-1: #ff7b72;
   --color-2: #d2a8ff;
   --color-3: #79c0ff;
@@ -104,40 +105,6 @@ lume-code {
   --color-12: #033a16;
   --color-13: #ffdcd7;
   --color-14: #67060c;
-}
-@media (prefers-color-scheme: dark) {
-  .hljs {
-    --color-1: #ff7b72;
-    --color-2: #d2a8ff;
-    --color-3: #79c0ff;
-    --color-4: #a5d6ff;
-    --color-5: #ffa657;
-    --color-6: #8b949e;
-    --color-7: #7ee787;
-    --color-8: #c9d1d9;
-    --color-9: #5b97f1;
-    --color-10: #f2cc60;
-    --color-11: #aff5b4;
-    --color-12: #033a16;
-    --color-13: #ffdcd7;
-    --color-14: #67060c;
-  }
-  :root.is-reverse .hljs {
-    --color-1: #d73a49;
-    --color-2: #6f42c1;
-    --color-3: #005cc5;
-    --color-4: #032f62;
-    --color-5: #e36209;
-    --color-6: #6a737d;
-    --color-7: #22863a;
-    --color-8: #24292e;
-    --color-9: #005cc5;
-    --color-10: #735c0f;
-    --color-11: #22863a;
-    --color-12: #f0fff4;
-    --color-13: #b31d28;
-    --color-14: #ffeef0;
-  }
 }
 
 .hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:var(--color-1)}

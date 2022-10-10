@@ -52,14 +52,12 @@
   }
 }
 
-/* Theme dark in light mode */
-:root.is-reverse .site-image img {
-  --shadow-color: rgba(0, 0, 0, 0.3);
+/* Theme light mode */
+:root[data-theme="light"] .site-image img {
+  --shadow-color: rgba(0, 0, 0, 0.05);
 }
 
-@media (prefers-color-scheme: dark) {
-  /* Theme dark in dark mode */
-  :root .site-image img {
-    --shadow-color: rgba(0, 0, 0, 0.3);
-  }
+/* Theme dark mode */
+:root[data-theme="dark"] .site-image img {
+  --shadow-color: rgba(0, 0, 0, 0.3);
 }
