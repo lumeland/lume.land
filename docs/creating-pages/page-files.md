@@ -63,18 +63,6 @@ time). Note that this part is removed on generating the final url:
     └── 2020-06-22_my-second-post.md  => /posts/my-second-post/index.html
 ```
 
-If you don't mind the exact date but want to keep an order, you can use just
-numbers (they are treated as timestamp):
-
-```txt
-.
-├── index.md                   => /index.html
-└── docs
-    └── 1_getting-started.md   => /docs/getting-started/index.html
-    └── 2_installation.md      => /docs/installation/index.html
-    └── 3_downloads.md         => /docs/downloads/index.html
-```
-
 Dates can be defined in folders, so it's shared by all pages inside:
 
 ```txt
