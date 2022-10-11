@@ -6,6 +6,8 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import imagick from "lume/plugins/imagick.ts";
 import cacheBusting from "lume/middlewares/cache_busting.ts";
+import minifyHTML from "lume/plugins/minify_html.ts";
+import lightningCss from "lume/plugins/lightningcss.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.1.0/toc/mod.ts";
 import sitemap from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/sitemap/sitemap.ts";
 
@@ -34,6 +36,7 @@ site
   .data("cache_busting", `v${Date.now()}`)
   .use(codeHighlight())
   .use(postcss())
+  .use(lightningCss())
   .use(inline())
   .use(esbuild({
     extensions: [".js"],
@@ -91,6 +94,7 @@ site
 
       (block as unknown as HTMLElement).prepend(menu as unknown as Node);
     });
-  });
+  })
+  .use(minifyHTML());
 
 export default site;
