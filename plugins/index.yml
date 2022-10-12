@@ -4,3 +4,28 @@ main_menu: plugins
 description: |
   **Lume** has a powerful plugin system to extend its functionality with new
   features and support for more formats.
+
+plugins:
+  - title: lume_cleancss
+    description: Use CleanCSS to minify CSS with structural optimization.
+    url: https://deno.land/x/lume_cleancss
+
+  - title: lume_plugin_ci
+    description: Lume plugin for accessing CI information. Integrates deno-ci with your Lume websites.
+    url: https://deno.land/x/lume_plugin_ci
+
+  - title: lume_plugin_squoosh
+    description: A plugin for Lume to use Squoosh CLI for handling images for your static site.
+    url: https://deno.land/x/lume_plugin_squoosh
+
+  - title: lume_publish
+    description: Create a new post on the social network that specify in the frontmatter of each page
+    url: https://deno.land/x/lume_publish
+
+  - title: lume-plugins
+    description: Collection of lume.land plugins 
+    url: https://github.com/DrSensor/lume-plugins
+
+  - title: oi-lume-charts
+    description: Lume Plugin that enables charting 
+    url: https://github.com/open-innovations/oi-lume-charts

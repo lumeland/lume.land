@@ -49,4 +49,19 @@ page_css: plugins.css
       {% endfor %}
     </ul>
   </lume-filter>
+
+  <section class="plugins-more">
+    <h2>Plugins from the community</h2>
+
+    <ul>
+      {% for plugin in plugins %}
+      <li>
+        <a href="{{ plugin.url }}" class="plugin-info">
+          <strong class="plugin-name">{{ plugin.title }}</strong>
+          {{ plugin.description | md | safe }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 </main>

@@ -154,3 +154,29 @@
     --accent: lightgray;
   }
 }
+
+.plugins-more {
+  margin-top: var(--row-gap-1);
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+
+  & h2 {
+    font: var(--text-title);
+    letter-spacing: var(--text-title-spacing);
+    margin: 0 0 var(--row-gap-1);
+    text-align: center;
+  }
+
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 280px);
+    column-gap: var(--column-gap-1);
+    row-gap: var(--row-gap-0);
+    justify-content: center;
+  }
+}
