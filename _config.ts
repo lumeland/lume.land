@@ -5,7 +5,6 @@ import inline from "lume/plugins/inline.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import imagick from "lume/plugins/imagick.ts";
-import cacheBusting from "lume/middlewares/cache_busting.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import lightningCss from "lume/plugins/lightningcss.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.1.0/toc/mod.ts";
@@ -21,7 +20,6 @@ const site = lume(
     location: new URL("https://lume.land"),
     server: {
       page404: "/404/",
-      middlewares: [cacheBusting()],
     },
   },
   { markdown },
@@ -33,7 +31,6 @@ site
   .ignore("velociraptor.json")
   .ignore("scripts")
   .copy("static", ".")
-  .data("cache_busting", `v${Date.now()}`)
   .use(codeHighlight())
   .use(postcss())
   .use(lightningCss())
