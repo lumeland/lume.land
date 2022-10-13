@@ -179,4 +179,11 @@
     row-gap: var(--row-gap-0);
     justify-content: center;
   }
+
+  & .plugin-name {
+    font: var(--text-caption-bold);
+    letter-spacing: 0;
+    display: block;
+    margin: .3em 0;
+  }
 }
