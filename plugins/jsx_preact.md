@@ -26,8 +26,8 @@ See
 
 ### Configuration
 
-You might want to add the following fields to `deno.json` and `import_map.json`
-in order to configure Deno to use Preact as the JSX library:
+You might want to add the following `compilerOptions` to `deno.json` in order to
+configure the JSX transform:
 
 <lume-code>
 
@@ -41,16 +41,7 @@ in order to configure Deno to use Preact as the JSX library:
   },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "preact"
-  }
-}
-```
-
-```json {title="import_map.json"}
-{
-  "imports": {
-    "lume/": "https://deno.land/x/lume@v1.11.4/",
-    "preact/jsx-runtime": "https://deno.land/x/lume@v1.11.4/deps/preact_runtime.ts"
+    "jsxImportSource": "npm:preact"
   }
 }
 ```

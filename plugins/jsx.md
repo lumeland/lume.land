@@ -26,8 +26,8 @@ See
 
 ### Configuration
 
-You might want to add the following fields to `deno.json` and `import_map.json`
-in order to tell Deno that Lume exposes React in global scope:
+You might want to add the following `compilerOptions` to `deno.json` in order to
+configure the JSX transform:
 
 <lume-code>
 
@@ -41,16 +41,7 @@ in order to tell Deno that Lume exposes React in global scope:
   },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
-  }
-}
-```
-
-```json {title="import_map.json"}
-{
-  "imports": {
-    "lume/": "https://deno.land/x/lume@v1.11.4/",
-    "react/jsx-runtime": "https://deno.land/x/lume@v1.11.4/deps/react_runtime.ts"
+    "jsxImportSource": "npm:react"
   }
 }
 ```
