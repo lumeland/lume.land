@@ -119,3 +119,28 @@ to:
 ```
 
 </lume-code>
+
+## defaultPageData option
+
+The `defaultPageData` option allows to use an existing value as the default
+value if the `meta` key doesn't exist. For example: you may want to use the
+existing `title` value as the `meta.title` to avoid to repeat the same value in
+two places:
+
+```js
+import lume from "lume/mod.ts";
+import metas from "lume/plugins/metas.ts";
+
+const site = lume();
+
+site.use(metas({
+  defaultPageData: {
+    title: "title", // Use the `title` value as fallback.
+  },
+}));
+
+export default site;
+```
+
+Now, the pages with the `meta.title` variable missing will use the value of
+`title`.

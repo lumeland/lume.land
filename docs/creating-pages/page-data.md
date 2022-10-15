@@ -80,9 +80,9 @@ values are:
 - Any `IS0 8601` compatible date, like `2021-01-01`, `2021-01-01 03:10:10`,
   `2021-01-01T03:10:10Z`, `2021-01-01Y03:10:10-0700`, etc.
 - The special value `Git Created` to get the first time this file was added to
-  the Git history.
+  the Git history. It uses the creation date as fallback.
 - The special value `Git Last Modified` to get the last time this file has
-  changed in the Git history.
+  changed in the Git history. It uses the last modified date as fallback.
 
 ### layout
 

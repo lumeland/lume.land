@@ -83,6 +83,7 @@ This event is triggered just after all pages are loaded but before rendered.
 ```js
 site.addEventListener("beforeRender", (event) => {
   console.log("Ready to render the pages");
+  console.log(event.pages); // The pages to render
 });
 ```
 

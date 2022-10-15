@@ -35,7 +35,7 @@ in order to tell Deno that Lume exposes React in global scope:
 {
   "importMap": "import_map.json",
   "tasks": {
-    "lume": "deno eval \"import 'lume/task.ts'\" --",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   },
