@@ -38,7 +38,7 @@ formatting a datetime value in different locales. It uses the
 
 By default, the value is formatted to `yyyy-MM-dd`, but you can use the first
 argument to set a different format. See the
-[`date-fms` documentation](https://date-fns.org/v2.22.0/docs/format) for more
+[`date-fns` documentation](https://date-fns.org/v2.22.0/docs/format) for more
 info.
 
 ```html
