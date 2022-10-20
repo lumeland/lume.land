@@ -6,7 +6,7 @@ order: 4
 
 ## Filters
 
-There are different types of helpers, the most common type is a **filter**, used
+There are different types of helpers; the most common type is a **filter**, used
 to transform values. Some template engines, like Nunjucks,
 [have several builtin filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters),
 but you can add more:
@@ -58,8 +58,8 @@ Lume includes the following convenient pre-installed filters:
 
 ## Helpers
 
-Some templates engines allows to add other helpers different to filters, like
-custom tags. To configure that, there's the `helper()` method that allows to add
+Some template engines allow adding other helpers different from filters, like
+custom tags. To configure that, there's the `helper()` method that allows adding
 any generic helper.
 
 <lume-code>

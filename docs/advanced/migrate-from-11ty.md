@@ -4,9 +4,8 @@ description: How to migrate your project from Eleventy to Lume.
 ---
 <!-- deno-fmt-ignore-file -->
 
-[Eleventy](https://www.11ty.dev/) is a great SSG with a big community. Lume was
-inspired by it, so if you have a Eleventy project and want to migrate to Lume
-(maybe it's not a good idea), or simply are familiar with Eleventy and want to
+[Eleventy](https://www.11ty.dev/) is a great SSG with a big community. It inspired Lume, so if you have an Eleventy project and want to migrate to Lume
+(maybe it's not a good idea) or simply are familiar with Eleventy and want to
 see the differences with Lume, this short guide outlining the most important
 differences can help.
 
@@ -58,7 +57,7 @@ Cache assets
 : There isn't a plugin for that.
 
 RSS
-: No plugin is needed to generate a RSS files in Lume.
+: No plugin is needed to generate RSS files in Lume.
 [See this example](https://github.com/lumeland/base-blog/blob/master/feed.xml.njk)
 
 Syntax Highlighting
@@ -77,5 +76,4 @@ Inclusive Language
 - Process assets (like `css`, `js` or `svg` files).
 - Support for `JSX` and `TSX`.
 - You can search pages by any criteria, not only tags.
-- It's easy to add processors and preprocessors to do arbitrary things like
-  manipulate HTML code using DOM APIs.
+- It's easy to add processors and preprocessors to do arbitrary things like manipulating HTML code using DOM APIs.

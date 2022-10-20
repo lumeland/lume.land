@@ -5,9 +5,8 @@ order: 1
 ---
 
 The configuration file is the `_config.ts` or `_config.js`, saved in the site's
-root directory. If you don't have it yet,
-[see Installation documentation](../overview/installation.md) to know how to
-create it.
+root directory. If you don't have it yet, [see the Installation
+[documentation](../overview/installation.md) to learn how to create it.
 
 The minimal required code is:
 
@@ -19,7 +18,7 @@ const site = lume();
 export default site;
 ```
 
-The `lume()` function creates a new instance of Lume and export it. This
+The `lume()` function creates a new instance of Lume and exports it. This
 function accepts an object with the following configuration values:
 
 ## Basic options
@@ -38,9 +37,9 @@ const site = lume({
 });
 ```
 
-You can override the value from the CLI with `--src`, useful if you have
-different sites in the same directory. For example: `deno task lume --src=./src`
-{.tip}
+You can override the value from the CLI with `--src`, which is useful if you
+have different sites in the same directory. For example:
+`deno task lume --src=./src` {.tip}
 
 ### dest
 
@@ -53,14 +52,14 @@ const site = lume({
 });
 ```
 
-You can override the value from the CLI with `--dest`, useful if you want to
-generate the site without override the previous one. For example:
-`deno task lume --dest=./output` { .tip }
+You can override the value from the CLI with
+`--`dest`, which is useful if you want to generate the site without overriding the previous one. For example:`deno
+task lume --dest=./output` { .tip }
 
 ### location
 
 This is the public URL of the site. It's useful to generate absolute URLs or fix
-the relative urls if your site is published under a subdirectory, for example:
+the relative URLs if your site is published under a subdirectory, for example:
 `https://example.com/project-name/`. It only accepts an
 [URL object](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL), for
 example:
@@ -71,16 +70,16 @@ const site = lume({
 });
 ```
 
-This value is ignored by the local server (started with `lume --serve`), that
-always use `http://localhost:3000` (or the defined port if you change it).
+This value is ignored by the local server (started with `lume --serve`), which
+always uses `http://localhost:3000` (or the defined port if you change it).
 
-You can override the value from the CLI with `--location`, useful if you want to
-build and deploy the site to different locations. For example:
-`deno task lume --location=https://my-site.com/blog/` { .tip }
+You can override the value from the CLI with
+`--`location`, which is useful if you want to build and deploy the site to different locations. For example:`deno
+task lume --location=https://my-site.com/blog/` { .tip }
 
 ### prettyUrls
 
-By default it's enabled and generate pretty URLs, for example `/about-us/`
+By default it's enabled and generates pretty URLs, for example `/about-us/`
 instead of `/about-us.html`. Set `false` to disable it.
 
 ```ts
@@ -90,8 +89,7 @@ const site = lume({
 ```
 
 It also accepts the string value `no-html-extension` to save the files as
-`/about-us.html` but generate the urls without extension extension
-(`/about-us`).
+`/about-us.html` but generates the URLs without an extension (`/about-us`).
 
 ## Server options
 
@@ -100,7 +98,7 @@ following options:
 
 ### port
 
-By default the local server use the port `3000`. Use this option to set a
+By default, the local server uses port `3000`. Use this option to set a
 different port.
 
 ```ts
@@ -116,8 +114,8 @@ This value can be overridden from CLI with `--port`. For example:
 
 ### page404
 
-This option allows to configure the HTML page to display for 404 errors. By
-default is `/404.html`. If you are building a SPA with dynamic urls, you may
+This option allows configuring the HTML page to displayed for 404 errors. By
+default it is `/404.html`. If you are building a SPA with dynamic URLs, you may
 want to change it to `/index.html`.
 
 ```ts
@@ -146,9 +144,9 @@ This value can be set from CLI with `--open` or `-o`. For example:
 
 ### middlewares
 
-Use this option to add middlewares to the local web server. There are some
-middlewares for common needs at `lume/middlewares/*`, but you can create custom
-middlewares easily. More info in the
+Use this option to add middleware to the local web server. There are some
+middleware options for common needs at `lume/middlewares/*`, but you can create
+custom middleware easily. More info in the
 [Server documentation](../core/server.md#middlewares).
 
 ```ts

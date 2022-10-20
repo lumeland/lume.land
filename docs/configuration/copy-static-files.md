@@ -16,7 +16,7 @@ site.copy("img");
 site.copy("favicon.ico");
 ```
 
-The path is relative to the source directory of your site (configured in `src`)
+The path is relative to the source directory of your site (configured in `src`),
 and the files and directories are copied as is, maintaining the same directory
 structure. Use the second argument to change the output directory:
 
@@ -34,8 +34,8 @@ site.copy("assets", ".");
 ## Ignored files
 
 Note that the ignore settings explained in [Ignore files](./ignore-files.md) are
-applied when copy static files, including files starting with `_` and `.`. for
-example:
+applied when copying static files, including files starting with `_` and `.`.
+for example:
 
 ```js
 // Ignore a subfolder
@@ -67,12 +67,12 @@ site.copy([".jpg", ".gif", ".png"]);
 
 This will copy all files with the extensions `.jpg`, `.gif` and `.png`, keeping
 the original file structure. For example, the file `/img/pictures/image.jpg`
-will be copied in to `_site/img/pictures/image.jpg` folder.
+will be copied into `_site/img/pictures/image.jpg` location.
 
 ## Customize the destination
 
-For more fine tuning about the file destination, you can provide a function in
-the second argument that accept the original file path and must return the
+For more fine-tuning of the file destination, you can provide a function in the
+second argument that accepts the original file path and must return the
 destination path:
 
 ```js

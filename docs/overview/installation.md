@@ -11,8 +11,8 @@ have it installed yet.
 ## Don't install Lume
 
 **Lume doesn't need to be installed**. The recommended way to use Lume is via
-[Deno's tasks](https://deno.land/manual/tools/task_runner) so you can run for
-example `deno task lume` in any environment with Deno and it just works.
+[Deno's tasks](https://deno.land/manual/tools/task_runner) so you can run, for
+example, `deno` task lume` in any environment with Deno and it just works.
 
 To setup Lume in your project folder, run the following command:
 
@@ -32,10 +32,10 @@ This command creates the following files:
   permissions, etc.
 - `import_map.json`: The
   [import map file](https://deno.land/manual/node/import_maps#using-import-maps)
-  with the import url of Lume. Here you can add the dependencies of your project
+  with the import URL of Lume. Here you can add the dependencies of your project
   and update Lume by editing the version number.
 
-This is an example of these three configuration files:
+Here is an example of these three configuration files:
 
 <lume-code>
 

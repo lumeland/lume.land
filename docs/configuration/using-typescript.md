@@ -19,26 +19,26 @@ Use TypeScript for the configuration file? [y/N]
 ```
 
 When confirmed, Lume will automatically create a `_config.ts` file in your
-project. You're now ready to start creating files using `.ts` and `.tsx`
-extension.
+project. You're now ready to start creating files using the `.ts` and `.tsx`
+extensions.
 
 ### JSX Plugins
 
 To create pages and layouts with JSX, you can either use the Lume
 [JSX](/plugins/jsx/) ([React](https://reactjs.org/)) or
-[JSX Preact](/plugins/jsx_preact/) ([Preact](https://preactjs.com/)) plugin.
+[JSX Preact](/plugins/jsx_preact/) ([Preact](https://preactjs.com/)) plugins.
 
 ### IDE Support
 
 - Using [Visual Studio Code](https://code.visualstudio.com/), it's highly
-  recommended installing the
+  recommended to install the
   [Deno extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).
-- Additionally [configure](https://lint.deno.land/) and enable Deno's built-in
+- Additionally, [configure](https://lint.deno.land/) and enable Deno's built-in
   [code linter](https://deno.land/manual@v1.25.1/tools/linter).
 
 ## TypeScript configuration
 
-TypeScript in Deno comes with a lot of different options, but works out of the
+TypeScript in Deno comes with a lot of different options but works out of the
 box. If you want to specify
 [compiler options](https://deno.land/manual@v1.25.1/typescript/configuration#how-deno-uses-a-configuration-file),
 the recommended way is to use `compilerOptions` within the projects `deno.json`
@@ -92,7 +92,7 @@ Example configuration using Lume with TypeScript and
 
 ## TypeScript in Templates
 
-You can import, use and extend Lume's built-in types, within your TypeScript
+You can import, use and extend Lume's built-in types within your TypeScript
 files. For the most common use case these are the following `interfaces`.
 
 ```ts
@@ -108,8 +108,8 @@ more info about the `PageData` interface. {.tip}
 
 ### Extending Lume's Types
 
-To use custom types with Lume, extend the existing interfaces with custom
-defined properties.
+To use custom types with Lume, extend the existing interfaces with
+custom-defined properties.
 
 <lume-code>
 

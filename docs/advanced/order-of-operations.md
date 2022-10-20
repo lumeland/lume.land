@@ -3,7 +3,7 @@ title: Order of operations
 description: What does Lume do to build your site?
 ---
 
-This is a high level description of how Lume build your site. When you run
+This is a high-level description of how Lume builds your site. When you run
 `lume`, the following operations are executed in this order:
 
 1. Dispatch the [event](../core/events.md) `beforeBuild`.
@@ -43,7 +43,7 @@ exactly the same, but the successive changes have some differences:
 
 - The `dest` folder is not emptied.
 - Only the files with changes are reloaded.
-- The steps 4 to 8 are exactly the same. All pages (not only the modified) are
-  re-rendered. This is because a change in one file can affect to many pages, so
-  we have to render all pages again.
-- Only the pages that have changed its content are saved in `dest`.
+- Steps 4 to 8 are exactly the same. All pages (not only the modified ones) are
+  re-rendered. This is because a change in one file can affect many pages, so we
+  have to render all pages again.
+- Only the pages that have changed their content are saved in `dest`.

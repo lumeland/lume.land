@@ -12,8 +12,8 @@ folder:
 site.ignore("README.md", "CHANGELOG.md", "node_modules");
 ```
 
-One quick way to make Lume to ignore a file or folder is by prepending `_` to
-the name. For example renaming the folder `./projects` to `./_projects`. {.tip}
+One quick way to make Lume ignore a file or folder is by prepending `_` to the
+name. For example, renaming the folder `./projects` to `./_projects`. {.tip}
 
 ## Paths ignored by default
 

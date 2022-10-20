@@ -4,11 +4,10 @@ description: Using the command line interface of Lume
 order: 2
 ---
 
-The following examples assume that you are using Lume as a Deno's task.
+The following examples assume that you are using Lume as a Deno task.
 
 The commands for the globally installed Lume are similar but removing the
-`deno task` part. For example `deno task lume --serve` becomes to
-`lume --serve`.
+`deno task` part. For example `deno task lume --serve` becomes `lume --serve`.
 
 ## Build the site
 
@@ -25,8 +24,8 @@ There's the `deno task build` task as an alias.{.tip}
 
 ## Start a local server
 
-Typically you will want to open the site in your browser so can start a local
-server adding the `--serve` (or `-s`) argument:
+Typically you will want to open the site in your browser so you can start a
+local server by adding the `--serve` (or `-s`) argument:
 
 ```sh
 deno task lume --serve
@@ -34,9 +33,9 @@ deno task lume --serve
 
 There's the `deno task serve` task as an alias.{.tip}
 
-This command init a **local web server** and starts **watching the changes** of
-your site. So after changing anything, Lume will rebuild the site and reload
-automatically your browser with the new changes. The local server use the port
+This command initializes a **local web server** and starts **watching changes**
+of your site. So after changing anything, Lume will rebuild the site and reload
+your browser automatically with the new changes. The local server use the port
 `3000` by default but you can change it with the `--port` argument. For example:
 
 ```sh
