@@ -22,8 +22,8 @@ creating a deno task in the `deno.json` file:
 ```
 
 In addition to the regular Lume task, we have added a new task, named **deploy**
-that execute two commands: It builds the site and upload it to the server. Now,
-to build and deploy your site, just run:
+that executes two commands: It builds the site and uploads it to the server.
+Now, to build and deploy your site, just run:
 
 ```sh
 deno task deploy
@@ -88,8 +88,8 @@ pages:
       - public
 ```
 
-The `--dest=public` argument in the build command set the destination folder as
-`./public`. This is the folder that GitLab use to publish the site. This
+The `--dest=public` argument in the build command sets the destination folder as
+`./public`. This is the folder that GitLab uses to publish the site. This
 argument is not needed if you have defined the
 [dest folder in the config file](/docs/configuration/config-file.md#dest).
 
@@ -98,11 +98,11 @@ argument is not needed if you have defined the
 ## Deno Deploy
 
 [Deno Deploy](https://deno.com/deploy) is a distributed deploy system provided
-by Deno with support for static files. It requires to have your repo in GitHub.
+by Deno with support for static files. It requires having your repo in GitHub.
 
 - Sign up in Deno Deploy and create a new project.
 - Configure the Git integration to use the **GitHub Actions** deployment mode.
-- In your repository, you need a entrypoint file to server the files. Create the
+- In your repository, you need an entrypoint file to serve the files. Create the
   file `serve.ts` with the following code:
 
 ```ts

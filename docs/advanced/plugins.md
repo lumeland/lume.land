@@ -3,10 +3,10 @@ title: Creating plugins
 description: Guide to create your own plugins to extend Lume
 ---
 
-Lume is an static site generator that can be extended easily adding more
-[loaders, engines](../core/loaders.md), [processors](../core/processors.md) etc.
-Plugins provide an easy interface to extend Lume without write too much code in
-the `_config.ts` file.
+Lume is a static site generator that can be extended easily by adding more
+[loaders](../core/loaders.md), engines](../core/loaders.md),
+[processors](../core/processors.md) etc. Plugins provide an easy interface to
+extend Lume without writing too much code in the `_config.ts` file.
 
 A plugin is just a function that receives a lume instance in the first argument,
 in order to configure and register new elements to it.
@@ -35,7 +35,7 @@ site.process([".css"], (page) => {
 export default site;
 ```
 
-We can encapsulate this code inside a plugin, and even include some
+We can encapsulate this code inside a plugin and even include some
 configuration:
 
 ```ts
@@ -59,7 +59,7 @@ export default function (options: Options) {
 }
 ```
 
-And now we can use it in the `_config.ts` file in this way:
+And now, we can use it in the `_config.ts` file in this way:
 
 ```ts
 import lume from "lume/mod.ts";
