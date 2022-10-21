@@ -4,14 +4,14 @@ description: Using the search and paginate helper to create dynamic pages.
 order: 8
 ---
 
-The variables `search` and `paginate` are global functions that allows to search
-other pages and paginate the result.
+The variables `search` and `paginate` are global functions that allow searching
+other pages and paginating the result.
 
 ## Searching pages
 
-The function `search.pages()` returns an array of pages that you can filter and
-sort. For example, to search pages having the variable `category` set to
-`music`, use the following code:
+The function `search.pages()` returns an array of pages you can filter and sort.
+For example, to search pages having the variable `category` set to `music`, use
+the following code:
 
 ```html
 <ul>

@@ -16,8 +16,8 @@ Now, you can run this script from the CLI with `lume run deploy`.
 
 ## Running multiple commands
 
-You can create a script to execute multiple commands, **one after other.** There
-are two ways to do that: by adding more arguments or joining the different
+You can create a script to execute multiple commands, **one after another.**
+There are two ways to do that: by adding more arguments or joining the different
 commands with `&&`. For example:
 
 ```js
@@ -57,7 +57,7 @@ site.script(
 
 ## Compose scripts
 
-Scripts can execute other scripts, just use the name of a registered script as a
+Scripts can execute other scripts: just use the name of a registered script as a
 command in another script. For example:
 
 ```js
@@ -65,7 +65,7 @@ command in another script. For example:
 site.script("compress", "gzip -r _site site.gz");
 site.script("upload", "scp site.gz user@host.com:/home/user/archive");
 
-// Create a third scripts that runs the two previous scripts
+// Create a third script that runs the two previous scripts
 site.script("compress-and-upload", "compress", "upload");
 ```
 

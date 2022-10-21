@@ -5,7 +5,7 @@ order: 3
 ---
 
 Layouts are templates that wrap around your content. They allow you to have the
-source code for your template in one place so you don’t have to repeat things
+source code for your template in one place, so you don’t have to repeat things
 like the navigation and footer on every page.
 
 Layout files are loaded from a special directory named `_includes`. This
@@ -46,10 +46,10 @@ has the extension `.njk`, used by the
 </html>
 ```
 
-**Lume** will search the file `_includes/layouts/main.njk` (note that all
+**Lume** will search for the file `_includes/layouts/main.njk` (note that all
 layouts are relative to `_includes` directory).
 
-The template can use any variable from the page, for example `title` to render
+The template can use any variable from the page, for example, `title` to render
 the title, and `content` with the rendered Markdown content of the page.
 
 ## Layout data

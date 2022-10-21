@@ -10,10 +10,10 @@ or plain text.
 
 ## Creating a loader
 
-Creating a custom loader is really easy, you only have to create a function that
-reads the content of a file and return an object with that content.
+Creating a custom loader is really easy: you only have to create a function that
+reads the content of a file and returns an object with that content.
 
-Let's say you want to add support for `toml` format, using the
+Let's say you want to add support for the `toml` format, using the
 [encoding/toml](https://deno.land/std/encoding#toml) Deno std module:
 
 ```js
@@ -62,8 +62,8 @@ site.loadAssets([".toml"], tomlLoader);
 
 Now, the `*.toml` files are loaded and saved as `toml`. The function
 `loadAssets` is useful to load assets files, like `css`, `js`, `svg`, that you
-want to transform (bundle, minify...) and save them keeping the same extension,
-instead of renaming to `html`.
+want to transform (bundle, minify...) and save them while keeping the same
+extension, instead of renaming them to `html`.
 
 **Note:** you can't use the same extension to generate pages and assets, so a
 way to have support for both is adding a sub-extension (like `tmpl`) for pages.
@@ -116,7 +116,7 @@ export default class HandlebarsEngine implements Engine {
 }
 ```
 
-To use this template engine pass it as third argument of the `loadPages`
+To use this template engine, pass it as the third argument of the `loadPages`
 function:
 
 ```ts
@@ -129,5 +129,5 @@ site.loadPages([".hbs"], textLoader, new HandlebarsEngine(site));
 Now, all files with the `.hbs` extension will be loaded using the `textLoader`
 and rendered using the Handlebars engine.
 
-This is a very basic implementation only for example. You can see the code of
+This is a very basic implementation only as an example. You can see the code of
 the available template engines in Lume for real examples. {.tip}

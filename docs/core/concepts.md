@@ -12,7 +12,7 @@ There are different types of files:
 ## Page files
 
 A page file is a file that is loaded, processed and saved to the `dest` folder
-generating one or more pages. In Lume there are two different types of pages:
+generating one or more pages. In Lume, there are two different types of pages:
 
 ### Regular pages
 
@@ -26,7 +26,7 @@ example:
 5. Run processors
 6. Save the output file as `/my-page/index.html`.
 
-By default Lume interprets the following formats as regular page files, so they
+By default, Lume interprets the following formats as regular page files, so they
 are loaded, processed and exported to `dest` folder: `.md`, `.njk`,
 `.tmpl.json`, `.tmpl.js`, `.tmpl.ts` and `.yaml`. Use `site.loadPages()` to add
 additional extensions:
@@ -38,8 +38,8 @@ site.loadPages([".foo"]);
 ```
 
 If you're using any plugin to provide support for a new template engine, like
-[pug](../../plugins/pug.md) or [eta](../../plugins/eta.md), don't need to run
-`site.loadPages()` because the plugin does it for you. {.tip}
+[pug](../../plugins/pug.md) or [eta](../../plugins/eta.md), you don't need to
+run `site.loadPages()` because the plugin does it for you. {.tip}
 
 ### Asset pages
 
@@ -80,8 +80,8 @@ site.loadData([".toml"], tomlLoader);
 ## Static files
 
 They are files that are exported to the `dest` folder but don't need to be
-processed, so Lume doesn't load the content, only copy them. They are copied as
-is using the `site.copy()` function.
+processed, so Lume doesn't load the content, only copies them. They are copied
+as is using the `site.copy()` function.
 [See more about copy](../configuration/copy-static-files.md).
 
 ```ts
@@ -94,8 +94,8 @@ site.copy([".pdf"]);
 
 ## Includes
 
-Are files loaded by the pages, for example the layouts or templates. By default,
-they are placed in the `_includes` folder but you can configure it.
+Are files loaded by the pages, for example, the layouts or templates. By
+default, they are placed in the `_includes` folder, but you can configure it.
 
 ```ts
 // Save the layouts files of nunjucks in the "/njk/" directory

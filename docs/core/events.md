@@ -30,8 +30,8 @@ site.addEventListener("beforeBuild", () => {
 
 ## afterBuild
 
-This event is triggered after build the site. Note that if you are watching the
-files with `lume --serve`, this is **only executed once** after the initial
+This event is triggered after building the site. Note that if you are watching
+the files with `lume --serve`, this is **only executed once** after the initial
 build. Use **afterUpdate** for subsequent changes.
 
 ```js
@@ -44,8 +44,8 @@ site.addEventListener("afterBuild", () => {
 
 ## beforeUpdate
 
-This event is triggered every time a change is detected on build the site with
-`lume --serve`.
+This event is triggered every time a change is detected on building the site
+with `lume --serve`.
 
 ```js
 site.addEventListener("beforeUpdate", (event) => {
@@ -64,7 +64,7 @@ site.addEventListener("beforeUpdate", () => {
 
 ## afterUpdate
 
-This event is triggered after re-build the site after detecting changes with
+This event is triggered after re-building the site after detecting changes with
 `lume --serve`.
 
 ```js
@@ -78,7 +78,8 @@ site.addEventListener("afterUpdate", (event) => {
 
 ## beforeRender
 
-This event is triggered just after all pages are loaded but before rendered.
+This event is triggered just after all pages are loaded but before they are
+rendered.
 
 ```js
 site.addEventListener("beforeRender", (event) => {
@@ -89,7 +90,8 @@ site.addEventListener("beforeRender", (event) => {
 
 ## afterRender
 
-This event is triggered just after all pages are rendered but before process.
+This event is triggered just after all pages are rendered but before they are
+processed.
 
 ```js
 site.addEventListener("afterRender", (event) => {
@@ -117,7 +119,8 @@ site.addEventListener("beforeSave", () => {
 
 ## afterStartServer
 
-Event triggered after starting the local server (with `lume --server` command).
+This event is triggered after starting the local server (with `lume --server`
+command).
 
 ```js
 site.addEventListener("afterStartServer", () => {
@@ -145,7 +148,7 @@ site.addEventListener("afterBuild", "gzip -r _site site.gz").
 
 Similar to
 [web APIs](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
-the third argument of `addEventListener` allows to customize the event listener.
+the third argument of `addEventListener` allows customizing the event listener.
 The available options are:
 
 - **once:** To run the listener only once and then remove it.

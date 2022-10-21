@@ -7,7 +7,7 @@ order: 2
 Pages can contain arbitrary data. In Markdown files, the data is defined in the
 **front matter** block, a block delimited by two triple-dashed lines containing
 [YAML](https://yaml.org/) code. There are other formats that can have front
-matters or store the data in different ways. Let's see some examples:
+matter or store the data in different ways. Let's see some examples:
 
 <lume-code>
 
@@ -53,16 +53,16 @@ export default () => "<p>This is the page content</p>";
 
 </lume-code>
 
-In the examples above, all pages contains two variables: `title` and `url`.
+In the examples above, all pages contain two variables: `title` and `url`.
 
-In the formats with a front matter (like Markdown and Nunjucks), the content is
-defined below the front matter. Formats that don't use front matter exports the
+In the formats with front matter (like Markdown and Nunjucks), the content is
+defined below the front matter. Formats that don't use front matter export the
 content as the `content` variable or, optionally, as a default export (like in
 `page.tmpl.js`).
 
 ## Standard variables
 
-There are some special variables that **Lume** can understand:
+There are some special variables that **Lume** understands:
 
 ### url
 
@@ -72,7 +72,7 @@ automatically by lume. See [URL docs](./urls.md)
 
 ### date
 
-If it's not defined, Lume uses automatically the file creation date. This
+If it's not defined, Lume automatically uses the file creation date. This
 variable can be defined in the filename
 [See Page date](./page-files.md#page-date) or in the front matter. The accepted
 values are:
