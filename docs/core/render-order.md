@@ -5,9 +5,9 @@ order: 12
 ---
 
 In Lume all pages are rendered at the same time. This works well in most cases,
-but sometimes you want to make sure a page is rendered after or before others.
+but sometimes you want to make sure a page is rendered before or after others.
 The most typical example is with auto-generated pages. Let's say you have a page
-that generate multiple pages dynamically using data from an external API:
+that generates multiple pages dynamically using data from an external API:
 
 ```js
 export const layout = "layouts/api.njk";
@@ -48,16 +48,16 @@ export default function* ({ search, paginate }) {
 
 In this script, we are using the [search](../../plugins/search.md) helper to
 search all pages with the variable `type=api` and paginate them with the
-[paginate](../../plugins/paginate.md) helper. But we have a problem: due all
+[paginate](../../plugins/paginate.md) helper. But we have a problem: because all
 pages are executed at the same time, it's possible that the `type=api` pages
-didn't exist before paginate them, so the pagination won't work. What we really
-need is create all dynamic pages **before** paginate them.
+didn't exist when we went to paginate them, so the pagination won't work. What
+we really need is create all dynamic pages **before** paginating them.
 
 To control this, lume has the `renderOrder` variable, to configure the order in
-which every page will be rendered. By default this value is `0`, so if you
-change it to a negative value (like `-1`, `-2` etc) the page will be rendered
-**before** the others, and changing to a positive value (`1`, `2`, etc) the page
-will be rendered **after**. So, to fix our example, the solution could be to
+which every page is rendered. By default this value is `0`, so if you change it
+to a negative value (like `-1`, `-2` etc) the page will be rendered **before**
+the others, and changing it to a positive value (`1`, `2`, etc) will cause the
+page to be rendered **after**. So, to fix our example, the solution could be to
 change the `renderOrder` of the pagination script to a value greater than 0, for
 example, `1`:
 

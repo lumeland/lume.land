@@ -37,8 +37,8 @@ function process(page) {
 }
 ```
 
-For example, let's say you only want to minify the pages with the value `minify`
-as `true`:
+For example, let's say you only want to minify the pages where the value
+`minify` is `true`:
 
 ```js
 site.process([".html"], (page) => {
@@ -90,7 +90,7 @@ Make sure the file extension that you want to process is previously loaded. See
 
 If you need to execute a function **before rendering** (for example, to
 configure a custom template engine or add extra data to some pages), you can use
-a **preprocessor**. Preprocessors work like processors but with they are
+a **preprocessor**. Preprocessors work like processors, but with they are
 executed before rendering.
 
 Let's create a preprocessor to include a variable with the source filename:
@@ -105,7 +105,7 @@ site.preprocess(
 ## Create or remove pages dynamically
 
 Some processors can generate additional pages (or remove them). The second
-argument of the (pre)processors contain the array with all pages that are being
+argument of the (pre)processors contains an array with all pages that are being
 processed. You can modify this array to add pages dynamically. For example:
 
 ```js
@@ -126,8 +126,8 @@ site.process([".css"], (page, pages) => {
 
 ### Remove pages dynamically
 
-If a processor return `false`, the page is removed from the build process. This
-allows to create a processor to filter only some pages:
+If a processor returns `false`, the page is removed from the build process. This
+allows to creating a processor to filter only some pages:
 
 ```ts
 // Remove all html pages with the language = "en"
@@ -144,17 +144,17 @@ site.process([".html"], (page) => {
 
 Both processors and preprocessors are tied to file extensions (`.html`, `.js`
 etc). To decide if a page must use a registered processor or preprocessor, Lume
-search this extension in the input file (like `.md` or `.njk`) or the output
+searches the extension of the input file (like `.md` or `.njk`) or the output
 file (like `.html` or `.css`).
 
 Another interesting thing is they are executed in the same order as they are
-defined. This allows to chain different processors to the same file extension.
-For example: two processors to the `.css` extension, one to compile the code and
-other to minify.
+defined. This allows chaining different processors to the same file extension.
+For example: two processors for the `.css` extension, one to compile the code
+and another to minify.
 
 ## Global (pre)processors
 
-If you want to run a processor or preprocessor with all pages, use `*` in the
+If you want to run a processor or preprocessor for all pages, use `*` in the
 first argument:
 
 ```js

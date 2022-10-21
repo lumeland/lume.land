@@ -28,9 +28,9 @@ files, **in this order of priority**.
 ## Object mode merging
 
 On merging variables, **the complete value is overridden**. But you may want to
-merge some values in a different way. For example let's say we have the
-following two data files, one in the root and other in a subfolder. Both files
-have a `site` variable, with different values:
+merge some values in a different way. For example, let's say we have the
+following two data files, one in the root and the other in a subfolder. Both
+files have a `site` variable with different values:
 
 <lume-code>
 
@@ -48,10 +48,9 @@ site:
 </lume-code>
 
 All pages in the subfolder (and sub-subfolders) will have the latest version of
-the variable, that has the `author` subkey but missing the `title` value,
-because the whole variable is overridden. You can change this behaviour using
-the special value `mergedKeys`. This value indicates to Lume how to merge some
-keys:
+the variable that has the `author` subkey but missing the `title` value, because
+the whole variable is overridden. You can change this behaviour using the
+special value `mergedKeys`. This value indicates to Lume how to merge some keys:
 
 <lume-code>
 
@@ -73,7 +72,7 @@ site:
 
 In this example, we are indicating to Lume that the variable `site` must be
 merged using the `object` mode. Now, the result of the variable `site` is an
-object including the properties of the parent variable and only override the
+object including the properties of the parent variable and only overrides the
 properties with the same name. So the result will be something like this:
 
 ```yml
@@ -82,8 +81,8 @@ site:
   author: Laura Rubio
 ```
 
-The `object` merge mode is not recursive, only works with the first level
-properties. A recursive option can be added in the future.
+The `object` merge mode is not recursive; it only works with the first-level
+properties. A recursive option may be added in the future.
 
 The `mergedKeys` variable is also merged with other `mergedKeys` variables in
 subfolders and pages and using always the `object` mode. This means that you can
@@ -158,10 +157,9 @@ category:
   - "404"
 ```
 
-As you can see, the value `404` is duplicated, one as a number and other as an
-string. To prevent this behavior, you may want to convert all values to string
-in order to remove all duplicates. Instead of `array`, use the `stringArray`
-mode:
+As you can see, the value `404` is duplicated, once as a number and again as a
+string. To prevent this behavior, you may want to convert all values to strings
+to remove duplicates. Instead of `array`, use the `stringArray` mode:
 
 ```yml
 mergedKeys:

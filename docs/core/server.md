@@ -5,7 +5,7 @@ order: 8
 ---
 
 Lume includes a `Server` class used to start a local HTTP server when running
-`lume --serve`. You can use this class to start your own server, for example to
+`lume --serve`. You can use this class to start your own server, for example, to
 serve the static files in **Deno Deploy**. Let's see a basic example of a
 server:
 
@@ -22,8 +22,8 @@ server.start();
 console.log("Listening on http://localhost:8000");
 ```
 
-This code starts a local server in the port `8000` and serve the static files in
-the `_site` folder.
+This code starts a local server on the port `8000` and serves the static files
+in the `_site` folder.
 
 ## Events
 
@@ -37,7 +37,7 @@ server.addEventListener("start", () => {
 
 ## Middlewares
 
-To customize how the server handle the requests and responses, there's a simple
+To customize how the server handles the requests and responses, there's a simple
 middleware system with the following signature:
 
 ```js
@@ -91,8 +91,8 @@ server.use(basicAuth({
 
 Cache busting is a way to tell the browser that some static files like CSS
 styles or JavaScript code have changed, in order to use the new version instead
-of the locally cached version. It consist of including the number version in the
-file path, for example `/styles.css` becomes to `/v234/styles.css`.
+of the locally cached version. It consists of including the number version in
+the file path. For example `/styles.css` becomes `/v234/styles.css`.
 [More info](https://www.keycdn.com/support/what-is-cache-busting).
 
 This middleware implements cache busting, so all requests with paths starting
@@ -100,7 +100,7 @@ with `/v{numbers}` will remove this part so the real file will be served.
 
 ### expires
 
-It's a middleware to include the `Expires` header to the response for better
+It's a middleware to include the `Expires` header in the response for better
 caching. See the
 [available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/expires.ts/~/Options).
 
@@ -116,8 +116,8 @@ Modify the responses to disable the browser cache. It's used by Lume in the
 
 ### not_found
 
-To show a not-found page on 404 errors. Optionally can create a directoryIndex
-for folders. It's used by Lume in the `--serve` mode. See the
+To show a not-found page on 404 errors. Optionally it can create a
+directoryIndex for folders. It's used by Lume in the `--serve` mode. See the
 [available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/not_found.ts/~/Options).
 
 ### on_demand
