@@ -111,6 +111,11 @@ sites:
     description: Website for missing.css, a base style sheet solution.
     code: https://github.com/bigskysoftware/missing
 
+  - title: Biber
+    img: /img/showcase/biber.webp
+    url: https://biber.denizaksimsek.com/
+    description: Website of Biber the cat.
+
   - title: Exact Report Generator
     url: https://exact-report-generator.vercel.app/
     description: A tool to create financial reports.
