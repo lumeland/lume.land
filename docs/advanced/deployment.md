@@ -47,7 +47,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Deno environment
         uses: denoland/setup-deno@v1
@@ -58,7 +58,7 @@ jobs:
         run: deno task build
 
       - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2.0.1
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           build_dir: _site
         env:
