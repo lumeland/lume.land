@@ -191,5 +191,5 @@ sites:
   - title: minimalist blog template
     img: /img/showcase/minimalist-blog-image.webp
     url: https://minimalist-blog-x8c5ngg3kzt0.deno.dev/
-    description: minimalist blog template built for lume
+    description: Minimalist blog template built for lume 
     code: https://github.com/officialrajdeepsingh/Minimalist-blog
