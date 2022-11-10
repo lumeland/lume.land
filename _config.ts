@@ -31,6 +31,7 @@ site
   .ignore("velociraptor.json")
   .ignore("scripts")
   .copy("static", ".")
+  .copy("_redirects")
   .use(codeHighlight())
   .use(postcss())
   .use(lightningCss())
