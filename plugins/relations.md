@@ -182,3 +182,37 @@ Content of the article
 ```
 
 </lume-code>
+
+## Customize the id key
+
+By default the pages are identified by the value in the `id` key. You can change
+the key name in the config:
+
+```js
+site.use(relations({
+  idKey: "slug",
+  foreignKeys: {
+    article: "article_id",
+    author: "author_id",
+  },
+}));
+```
+
+Now, all pages are identified by the `slug` value, so you don't need to create a
+`id`.
+
+It's also possible to configure the id key name per type. For example, if you
+want to identify the `author` by the field `name`:
+
+```js
+site.use(relations({
+  idKey: "slug",
+  foreignKeys: {
+    article: "article_id",
+    author: ["author_id", "name"],
+  },
+}));
+```
+
+Using an array with two values in the `foreignKeys` object allows to configure
+idKeys per type.

@@ -269,3 +269,38 @@ const search = {/* your config here */};
 // Apply the plugin config
 const site = lume({}, { search });
 ```
+
+### returnPageData
+
+Use this option to return only the `page.data` object instead the page instance.
+Probably this is what you want and will make your code shorter.
+
+It's disabled by default due compatibility with the old behavior but in the
+future Lume 2.0 **it will be the default behavior**.
+
+```ts
+import lume from "lume/mod.ts";
+
+const search = { returnPageData: true };
+const site = lume({}, { search });
+```
+
+Once configured, the following code:
+
+```html
+{% for article in search.pages("type=article", "date=desc") %} 
+<a href="{{ article.data.url }}">
+  <h1>{{ article.data.title }}</h1>
+</a>
+{% endfor %}
+```
+
+must be changed to:
+
+```html
+{% for article in search.pages("type=article", "date=desc") %} 
+<a href="{{ article.url }}">
+  <h1>{{ article.title }}</h1>
+</a>
+{% endfor %}
+```
