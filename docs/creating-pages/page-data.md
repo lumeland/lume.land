@@ -70,11 +70,6 @@ The `url` variable contains the public URL of the page, useful to create links
 and configure the output filename. If it doesn't exist, it's generated
 automatically by lume. See [URL docs](./urls.md)
 
-### slug
-
-The slug is the last part of the URL and usually is the filename of the src
-file. It can be used to edit the url of the page.
-
 ### date
 
 If it's not defined, Lume automatically uses the file creation date. This

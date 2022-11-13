@@ -201,8 +201,7 @@ site.use(relations({
 }));
 ```
 
-Now, all pages are identified by the `slug` value, so you don't need to create a
-`id`.
+Now, all pages are identified by the `slug` key instead of the `id`.
 
 It's also possible to configure the id key name per type. For example, if you
 want to identify the `author` by the field `name`:
