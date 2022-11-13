@@ -8,9 +8,9 @@ tags:
 
 ## Installation
 
-This plugin needs a JSX library. Use it together with [jsx](./jsx.md) or
-[jsx_preact](./jsx_preact.md) plugins depending on whether you want to use React
-or Preact.
+This plugin depends on a JSX library to work. Use it together with
+[jsx](./jsx.md) or [jsx_preact](./jsx_preact.md) plugin depending on whether you
+want to use React or Preact.
 
 This is an example with React:
 
@@ -32,8 +32,9 @@ See
 
 ## Description
 
-This plugin adds support for [MDX](https://mdxjs.com) to create pages in Lume,
-just add files with the `.mdx` extension to your site.
+[MDX](https://mdxjs.com) is a format that combined Markdown and JSX, so you can
+write regular Markdown content and import components. This plugin adds support
+for MDX to create pages in Lume, by creating files with the `.mdx` extension.
 
 ## Plugins
 

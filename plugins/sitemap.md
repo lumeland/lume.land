@@ -41,7 +41,7 @@ and sorted by URL. You can setup a different configuration:
 ```js
 site.use(sitemap({
   filename: "my-sitemap.xml", // to change the sitemap filename
-  query: "indexable=false", // To filter out pages with the indexable attribute
+  query: "indexable=true", // Select only pages with the indexable attribute as true
   sort: "date=desc", // To sort by data in ascendent order
 }));
 ```

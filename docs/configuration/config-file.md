@@ -69,7 +69,7 @@ const site = lume({
 
 This is useful if you want to combine two or more sites to the same folder.
 Other use case is for very big sites (with more than 100K pages) that needs to
-be built in several steps due memory errors.
+be built in several steps to prevent running out of memory.
 
 ### location
 
