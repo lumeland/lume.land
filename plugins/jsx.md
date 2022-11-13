@@ -6,6 +6,13 @@ tags:
   - template_engine
 ---
 
+## Description
+
+[JSX](https://facebook.github.io/jsx/) (or the equivalent TSX for TypeScript) is
+a template language to create and render HTML code, very popular in some
+frameworks, like React. This plugin adds support for `JSX / TSX` to create pages
+and layouts, using `React` for rendering.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -50,13 +57,6 @@ configure the JSX transform:
 
 [Go to Using TypeScript](/docs/configuration/using-typescript/) for more info
 about using TypeScript with Lume. {.tip}
-
-## Description
-
-[JSX](https://facebook.github.io/jsx/) (or the equivalent TSX for TypeScript) is
-a template language to create and render HTML code, very popular in some
-frameworks, like React. This plugin adds support for using `JSX / TSX` to create
-pages and layouts and using `React` for rendering.
 
 ## Creating pages
 

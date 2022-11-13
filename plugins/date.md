@@ -6,6 +6,16 @@ tags:
   - utils
 ---
 
+## Description
+
+This plugin registers the `date` filter, which allows manipulating and
+formatting a datetime value in different locales. It uses the
+[date-fns](https://date-fns.org/) library under the hood.
+
+```html
+<time>{{ createdAt | date }}</time>
+```
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,16 +33,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/date.ts/~/Options).
-
-## Description
-
-This plugin registers the `date` filter, which allows manipulating and
-formatting a datetime value in different locales. It uses the
-[date-fns](https://date-fns.org/) library under the hood.
-
-```html
-<time>{{ createdAt | date }}</time>
-```
 
 ## Formats
 

@@ -6,6 +6,20 @@ tags:
   - utils
 ---
 
+## Description
+
+This plugin allows to render pages on demand. It can be useful in some
+scenarios:
+
+- There are pages with dynamic content that must be generated at the request
+  time.
+- The site is too big, with thousands of pages, so the build takes too much
+  time.
+
+Lume can generate pages on demand for these cases.
+
+Note: This plugin only works with [Deno Deploy](https://deno.com/deploy).{.tip}
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,19 +37,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/on_demand.ts/~/Options).
-
-## Description
-
-This plugin allows renderng pages on demand. It can be useful in some scenarios:
-
-- There are pages with dynamic content that must be generated at the request
-  time.
-- The site is too big, with thousands of pages, so the build takes too much
-  time.
-
-Lume can generate pages on demand for these cases.
-
-Note: This plugin only works with [Deno Deploy](https://deno.com/deploy).{.tip}
 
 ## How does it work?
 

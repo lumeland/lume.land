@@ -5,21 +5,6 @@ tags:
   - urls
 ---
 
-## Installation
-
-Import this plugin in your `_config.ts` file to use it:
-
-```js
-import lume from "lume/mod.ts";
-import resolveUrls from "lume/plugins/resolve_urls.ts";
-
-const site = lume();
-
-site.use(resolveUrls());
-
-export default site;
-```
-
 ## Description
 
 The `resolve_urls` plugin converts all URLs in your HTML documents matching with
@@ -51,3 +36,18 @@ replaced with `/about-us/#contact`).
 A very common use case is a repository with documentation content in Markdown
 files. You may want the links to work in GitHub, but upon building the HTML site
 they change to the final urls.
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "lume/mod.ts";
+import resolveUrls from "lume/plugins/resolve_urls.ts";
+
+const site = lume();
+
+site.use(resolveUrls());
+
+export default site;
+```

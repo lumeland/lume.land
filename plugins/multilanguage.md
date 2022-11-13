@@ -6,24 +6,6 @@ tags:
   - utils
 ---
 
-## Installation
-
-Import this plugin in your `_config.ts` file to use it:
-
-```js
-import lume from "lume/mod.ts";
-import multilanguage from "lume/plugins/multilanguage.ts";
-
-const site = lume();
-
-site.use(multilanguage());
-
-export default site;
-```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/multilanguage.ts/~/Options).
-
 ## Description
 
 This plugin allows exporting the same page multiple times, once per language. To
@@ -49,6 +31,24 @@ each page with the language code:
 /gl/about-me/index.html
 /es/about-me/index.html
 ```
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "lume/mod.ts";
+import multilanguage from "lume/plugins/multilanguage.ts";
+
+const site = lume();
+
+site.use(multilanguage());
+
+export default site;
+```
+
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/multilanguage.ts/~/Options).
 
 ### Define the data
 

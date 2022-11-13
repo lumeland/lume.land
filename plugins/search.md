@@ -7,14 +7,14 @@ tags:
   - utils
 ---
 
-## Installation
-
-This plugin is installed by default. 🎉
-
 ## Description
 
 This plugin registers the `search` helper to search pages from other pages. It's
 useful to build menus or other navigation stuff.
+
+## Installation
+
+This plugin is installed by default. 🎉
 
 ## Searching pages
 

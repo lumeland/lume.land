@@ -6,6 +6,11 @@ tags:
   - template_engine
 ---
 
+## Description
+
+[Pug](https://pugjs.org/) is a template engine heavily influenced by Haml. This
+plugin allows you to use it to create pages and layouts.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,11 +28,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/pug.ts/~/Options).
-
-## Description
-
-[Pug](https://pugjs.org/) is a template engine heavily influenced by Haml. This
-plugin allows you to use it to create pages and layouts.
 
 ## Creating layouts
 

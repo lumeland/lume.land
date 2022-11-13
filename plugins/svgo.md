@@ -6,6 +6,11 @@ tags:
   - images
 ---
 
+## Description
+
+This plugin loads all `.svg` files and optimizes them using
+[SVGO](https://github.com/svg/svgo).
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,8 +28,3 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/svgo.ts/~/Options).
-
-## Description
-
-This plugin loads all `.svg` files and optimizes them using
-[SVGO](https://github.com/svg/svgo).

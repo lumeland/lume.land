@@ -6,9 +6,16 @@ tags:
   - template_engine
 ---
 
+## Description
+
+[MDX](https://mdxjs.com) is a format that combine Markdown and JSX, so you can
+write regular Markdown content and import JSX components. This plugin adds
+support for MDX to create pages in Lume, by creating files with the `.mdx`
+extension.
+
 ## Installation
 
-This plugin depends on a JSX library to work. Use it together with
+The MDX plugin depends on a JSX plugin to work. Use it together with
 [jsx](./jsx.md) or [jsx_preact](./jsx_preact.md) plugin depending on whether you
 want to use React or Preact.
 
@@ -29,12 +36,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/mdx.ts/~/Options).
-
-## Description
-
-[MDX](https://mdxjs.com) is a format that combined Markdown and JSX, so you can
-write regular Markdown content and import components. This plugin adds support
-for MDX to create pages in Lume, by creating files with the `.mdx` extension.
 
 ## Plugins
 

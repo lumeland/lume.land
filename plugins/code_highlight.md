@@ -6,24 +6,6 @@ tags:
   - html
 ---
 
-## Installation
-
-Import this plugin in your `_config.ts` file to use it:
-
-```js
-import lume from "lume/mod.ts";
-import codeHighlight from "lume/plugins/code_highlight.ts";
-
-const site = lume();
-
-site.use(codeHighlight());
-
-export default site;
-```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/code_highlight.ts/~/Options).
-
 ## Description
 
 This plugin uses the [highlight.js](https://highlightjs.org/) library to search
@@ -45,6 +27,24 @@ site.use(codeHighlight({
 
 export default site;
 ```
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "lume/mod.ts";
+import codeHighlight from "lume/plugins/code_highlight.ts";
+
+const site = lume();
+
+site.use(codeHighlight());
+
+export default site;
+```
+
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/code_highlight.ts/~/Options).
 
 ## Languages
 

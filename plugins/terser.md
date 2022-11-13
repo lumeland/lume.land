@@ -6,6 +6,14 @@ tags:
   - javascript
 ---
 
+## Description
+
+The Terser plugin minifies `.js` files using the
+[Terser minifier](https://terser.org/).
+
+To get around compatibility issues of using NodeJS software in Deno, it uses the
+browser version.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -24,13 +32,7 @@ export default site;
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/terser.ts/~/Options).
 
-## Description
-
-The Terser plugin minifies `.js` files using the
-[Terser minifier](https://terser.org/).
-
-To get around compatibility issues of using NodeJS software in Deno, it uses the
-browser version.
+## Usage
 
 It assumes that the files to be minified are modules, and so the `module`
 option, as well as the `compress` and `mangle` options, are by default set to

@@ -6,6 +6,12 @@ tags:
   - utils
 ---
 
+## Description
+
+This plugin is useful if you have different types of pages that are related. For
+example, let's say there are pages with articles and pages with authors. This
+plugin can relate the articles and authors pages automatically.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -24,13 +30,10 @@ export default site;
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/relations.ts/~/Options).
 
-## Description
+## Usage
 
-This plugin is useful if you have different types of pages that are related. For
-example, let's say there are pages with articles and pages with authors. This
-plugin can relate the articles and authors pages automatically. To do that, you
-need to specify the page types and the foreign key used to make the relation.
-For example:
+First, you need to specify the page types and their foreign key used to make the
+relation. For example:
 
 ```js
 import lume from "lume/mod.ts";

@@ -6,6 +6,12 @@ tags:
   - html
 ---
 
+## Description
+
+The `MinifyHTML` plugin minifies the HTML code of your pages using the
+[minify-html](https://github.com/wilsonzlin/minify-html) minifier. It can also
+minify CSS and JavaScript code.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,12 +29,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/minify_html.ts/~/Options).
-
-## Description
-
-The `MinifyHTML` plugin minifies the HTML code of your pages using the
-[minify-html](https://github.com/wilsonzlin/minify-html) minifier. It can also
-minify CSS and JavaScript code.
 
 ## Configuration
 

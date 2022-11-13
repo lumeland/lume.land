@@ -6,6 +6,11 @@ tags:
   - javascript
 ---
 
+## Description
+
+The plugin `esbuild` processes your JavaScript and TypeScript files using
+[esbuild bundler](https://esbuild.github.io/).
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -21,19 +26,13 @@ site.use(esbuild());
 export default site;
 ```
 
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/esbuild.ts/~/Options).
-
-## Description
-
-The plugin `esbuild` processes your JavaScript and TypeScript files using
-[esbuild bundler](https://esbuild.github.io/).
+## Configuration
 
 The available options are:
 
 - **extensions**: Array with the extensions of the files that this plugin will
   handle. By default it is `[".js", ".ts"]`.
-- **options**: The options to pass to esbuild library.
+- **options**: The options to pass to the esbuild library.
   [See the esbuild documentation](https://esbuild.github.io/api/#simple-options).
 
 Example with the default options:
@@ -53,3 +52,6 @@ site.use(esbuild({
   },
 }));
 ```
+
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/esbuild.ts/~/Options).

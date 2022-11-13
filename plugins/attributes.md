@@ -5,21 +5,6 @@ tags:
   - utils
 ---
 
-## Installation
-
-Import this plugin in your `_config.ts` file to use it:
-
-```js
-import lume from "lume/mod.ts";
-import attributes from "lume/plugins/attributes.ts";
-
-const site = lume();
-
-site.use(attributes());
-
-export default site;
-```
-
 ## Description
 
 Use the `attributes` plugin to register two template filters to normalize the
@@ -91,3 +76,18 @@ export default function (_, filters) {
 ```
 
 </lume-code>
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "lume/mod.ts";
+import attributes from "lume/plugins/attributes.ts";
+
+const site = lume();
+
+site.use(attributes());
+
+export default site;
+```

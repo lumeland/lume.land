@@ -6,6 +6,14 @@ tags:
   - utils
 ---
 
+## Description
+
+This plugin generates a `sitemap.xml` file automatically with all your pages,
+which is
+[useful for SEO](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview).
+It also creates a `robots.txt` file that include a link to the sitemap file, so
+it's easier to discover for the search engines.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,14 +31,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/sitemap.ts/~/Options).
-
-## Description
-
-This plugin generates a `sitemap.xml` file automatically with all your pages,
-which is
-[useful for SEO](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview).
-It also creates a `robots.txt` file that include a link to the sitemap file, so
-it's easier to discover for the search engines.
 
 ## Configuration
 

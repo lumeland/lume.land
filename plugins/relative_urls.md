@@ -5,6 +5,12 @@ tags:
   - urls
 ---
 
+## Description
+
+The `relative_urls` plugin converts all URLs in your HTML documents to relative,
+so you can publish the same site under different domains, subdirectories, or
+even protocols (like opening the site from the filesystem under `file://`).
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -20,11 +26,7 @@ site.use(relativeUrls());
 export default site;
 ```
 
-## Description
-
-The `relative_urls` plugin converts all URLs in your HTML documents to relative,
-so you can publish the same site under different domains, subdirectories, or
-even protocols (like opening the site from the filesystem under `file://`).
+## Example
 
 The plugin converts all internal URLs of your site to relative URLs. For
 example:
