@@ -19,11 +19,11 @@ The MDX plugin depends on a JSX plugin to work. Use it together with
 [jsx](./jsx.md) or [jsx_preact](./jsx_preact.md) plugin depending on whether you
 want to use React or Preact.
 
-This is an example with React:
+This is an example with Preact:
 
 ```js
 import lume from "lume/mod.ts";
-import jsx from "lume/plugins/jsx.ts";
+import jsx from "lume/plugins/jsx_preact.ts";
 import mdx from "lume/plugins/mdx.ts";
 
 const site = lume();
