@@ -4,7 +4,7 @@ description: Guide to create your own plugins to extend Lume
 ---
 
 Lume is a static site generator that can be extended easily by adding more
-[loaders](../core/loaders.md), engines](../core/loaders.md),
+[loaders](../core/loaders.md), [engines](../core/loaders.md#template-engines),
 [processors](../core/processors.md) etc. Plugins provide an easy interface to
 extend Lume without writing too much code in the `_config.ts` file.
 
