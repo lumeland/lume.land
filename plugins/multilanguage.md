@@ -8,9 +8,34 @@ tags:
 
 ## Description
 
-This plugin allows exporting the same page multiple times, once per language. To
-configure a page as multilanguage, just set in the `lang` variable to an array
-with the available languages. For example:
+This plugin makes easier the creation of a multilanguage site by generating
+different language versions from the same page or detect and create
+`<link rel="alternate" hreflang="{lang}" href="{url}" />` elements
+automatically.
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "lume/mod.ts";
+import multilanguage from "lume/plugins/multilanguage.ts";
+
+const site = lume();
+
+site.use(multilanguage());
+
+export default site;
+```
+
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/multilanguage.ts/~/Options).
+
+## Multilanguage pages from a single file
+
+You can export the same page multiple times, once per language. To configure a
+page as multilanguage, just set in the `lang` variable to an array with the
+available languages. For example:
 
 <lume-code>
 
@@ -32,38 +57,21 @@ each page with the language code:
 /es/about-me/index.html
 ```
 
-## Installation
-
-Import this plugin in your `_config.ts` file to use it:
-
-```js
-import lume from "lume/mod.ts";
-import multilanguage from "lume/plugins/multilanguage.ts";
-
-const site = lume();
-
-site.use(multilanguage());
-
-export default site;
-```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/multilanguage.ts/~/Options).
-
-### Define the data
-
-You may want to set different data per language. One way to do this is by adding
-a suffix to the variable name with a dot plus the language code. For example:
+This makes no sense if all pages have the same content. We need to set different
+values for each language. One way to do this is by adding a suffix to the
+variable name with a dot plus the language code. For example:
 
 <lume-code>
 
 ```yml {title=about-me.yml}
 # This page is in 3 different languages: english, galician and spanish.
 lang: [en, gl, es]
-title: About me
-title.gl: Acerca de min
-title.es: Acerca de mí
-layout: base-layout.njk
+
+title: About me # The default title
+title.gl: Acerca de min # The title in galician
+title.es: Acerca de mí # The title in spanish
+
+layout: base-layout.njk # Common value for all languages
 ```
 
 </lume-code>
@@ -86,8 +94,8 @@ layout: base-layout.njk
 
 links:
   - title: My personal site
-    title.gl: O meu sitio persoal
-    title.es: Mi sitio personal
+    title.gl: O meu sitio persoal # The link title in galician
+    title.es: Mi sitio personal # The link title in spanish
     url: https://oscarotero.com
 
   - title: Lume
@@ -145,6 +153,49 @@ layout: base-layout.njk
 
 </lume-code>
 
+## Multilanguage pages from multiple files
+
+Creating multiple language versions from a single file is useful to avoid
+duplicated content in cases in which the different languages have many common
+data.
+
+But in other cases is more convenient to have a file per language. This plugin
+can detect these files if they fulfill the following requirements:
+
+- They are in the same directory.
+- They have the `lang` variable defined.
+- They have the same filename ending with the `_[lang]` suffix.
+
+In the following example we can see three files containing the same post but in
+different languages:
+
+```txt
+|_ /posts
+  |_ /about-me_en.md
+  |_ /about-me_gl.md
+  |_ /about-me_es.md
+```
+
+The plugin can identify these three pages as language versions of the same page,
+and they will be exported as `/en/about-me/`, `/gl/about-me/` and
+`/es/about-me/`. Note that you can customize the `url` of the pages.
+
+If there's a page without the language defined in the filename it will be
+detected too:
+
+```txt
+|_ /posts
+  |_ /about-me.md
+  |_ /about-me_gl.md
+  |_ /about-me_es.md
+```
+
+In this example, the first file doesn't have the language suffix, but it's
+identified as another language version. This is useful if you already have a
+site with only one language and want to add other languages progressively
+without affeting to the existing urls. In this case, the URLs generated are
+`/posts/about-me/`, `/gl/about-me/` and `/es/about-me/`.
+
 ## Links to the translated languages
 
 ### Automatic rel=alternate links
@@ -174,9 +225,9 @@ element if it's missing.
 
 ### Create a language switcher menu
 
-If you want to include the links to the other translations, this plugin also
-creates the variable `alternates` with all alternative pages. This is an example
-in nunjucks:
+If you want to create a menu to see the current page in other languages, you can
+use the variable `alternates` with all alternative pages. This is an example in
+nunjucks:
 
 <lume-code>
 
