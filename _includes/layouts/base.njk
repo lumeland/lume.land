@@ -37,7 +37,7 @@
 
     <link rel="stylesheet" href="/styles/critical.css" inline>
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="canonical" href="{{ url }}">
+    <link rel="canonical" href="{{ url | url(true) }}">
     
     {% if page_css %}
       <link rel="stylesheet" href="/styles/pages/{{ page_css }}">
