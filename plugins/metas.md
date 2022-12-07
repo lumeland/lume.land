@@ -6,24 +6,6 @@ tags:
   - html
 ---
 
-## Installation
-
-Import this plugin in your `_config.ts` file to use it:
-
-```js
-import lume from "lume/mod.ts";
-import metas from "lume/plugins/metas.ts";
-
-const site = lume();
-
-site.use(metas());
-
-export default site;
-```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/netlify_cms.ts/~/Options).
-
 ## Description
 
 This plugin generates `<meta>` tags in your HTML pages for Open graph, Twitter
@@ -43,6 +25,24 @@ keyword of every page and the supported values are:
   string with a custom value).
 - `generator`: The software that generated the page (Lume v1.x). It can be true
   to autogenerate or a string with a custom value.
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "lume/mod.ts";
+import metas from "lume/plugins/metas.ts";
+
+const site = lume();
+
+site.use(metas());
+
+export default site;
+```
+
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/netlify_cms.ts/~/Options).
 
 ## Usage
 

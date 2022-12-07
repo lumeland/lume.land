@@ -149,3 +149,16 @@ server.use(redirects({
 To implement a live-reload in the browser after file changes. It's used by Lume
 in the `--serve` mode. See the
 [available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/reload.ts/~/Options).
+
+### www
+
+This middleware redirects from `www.` domains to non-www domain (or viceversa).
+
+```js
+server.use(www({
+  add: false, // false to remove, true to add it.
+}));
+```
+
+. See the
+[available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/www.ts/~/Options).

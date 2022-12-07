@@ -7,15 +7,15 @@ tags:
   - template_engine
 ---
 
-## Installation
-
-This plugin is installed by default. 🎉
-
 ## Description
 
 [Nunjucks](https://mozilla.github.io/nunjucks/) is a powerful template language
 created by Mozilla and inspired by **ninja2**. This plugin allows you to use it
 to create pages and layouts.
+
+## Installation
+
+This plugin is installed by default. 🎉
 
 ## Configuration
 

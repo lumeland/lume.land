@@ -6,6 +6,12 @@ tags:
   - template_engine
 ---
 
+## Description
+
+This plugin works exactly like [JSX](./jsx.md) but using
+[Preact](https://preactjs.com/) (a 3kb React alternative with the same API but
+faster and lighter) to render the JSX.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -50,12 +56,6 @@ configure the JSX transform:
 
 [Go to Using TypeScript](/docs/configuration/using-typescript/) for more info
 about using TypeScript with Lume. {.tip}
-
-## Description
-
-This plugin works exactly like [JSX](./jsx.md) but using
-[Preact](https://preactjs.com/) (a 3kb React alternative with the same API but
-faster and lighter) to render the JSX.
 
 ## Creating pages
 

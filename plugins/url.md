@@ -7,14 +7,14 @@ tags:
   - urls
 ---
 
-## Installation
-
-This plugin is installed by default. 🎉
-
 ## Description
 
 This plugin provides the `url` and `htmlUrl` filters to fix the page URLs in the
 pages and layouts.
+
+## Installation
+
+This plugin is installed by default. 🎉
 
 ## `url` filter
 

@@ -6,6 +6,12 @@ tags:
   - template_engine
 ---
 
+## Description
+
+This plugin use [Remark](https://remark.js.org/) to render the markdown files,
+replacing the default `markdown-it` library. It allows to use Remark and Rehype
+plugins. By default it uses the _GitHub-flavored markdown_.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -20,12 +26,6 @@ site.use(remark());
 
 export default site;
 ```
-
-## Description
-
-This plugin use [Remark](https://remark.js.org/) to render the markdown files,
-replacing the default `markdown-it` library. It allows to use Remark and Rehype
-plugins. By default it uses the _GitHub-flavored markdown_.
 
 ## Plugins
 

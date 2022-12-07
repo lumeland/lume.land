@@ -6,6 +6,12 @@ tags:
   - styles
 ---
 
+## Description
+
+The `lightningcss` plugin loads and transforms your CSS files using the
+[Lightning CSS](https://github.com/parcel-bundler/lightningcss) processor
+(previously known as Parcel CSS).
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,12 +29,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/parcel_css.ts/~/Options).
-
-## Description
-
-The `lightningcss` plugin loads and transforms your CSS files using the
-[Lightning CSS](https://github.com/parcel-bundler/lightningcss) processor
-(previously known as Parcel CSS).
 
 ## Configuration
 

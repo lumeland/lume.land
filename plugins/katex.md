@@ -6,24 +6,6 @@ tags:
   - html
 ---
 
-## Installation
-
-Import this plugin in your `_config.ts` file to use it:
-
-```js
-import lume from "lume/mod.ts";
-import katex from "lume/plugins/katex.ts";
-
-const site = lume();
-
-site.use(katex());
-
-export default site;
-```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/katex.ts/~/Options).
-
 ## Description
 
 This plugin uses the [KaTeX](https://katex.org/) library to render the math
@@ -45,6 +27,24 @@ Or addign the `language-math` directly to the html element containing the code:
   c = \pm\sqrt{a^2 + b^2}
 </p>
 ```
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "lume/mod.ts";
+import katex from "lume/plugins/katex.ts";
+
+const site = lume();
+
+site.use(katex());
+
+export default site;
+```
+
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/katex.ts/~/Options).
 
 ## Load styles
 

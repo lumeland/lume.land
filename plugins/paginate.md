@@ -7,10 +7,6 @@ tags:
   - utils
 ---
 
-## Installation
-
-This plugin is installed by default. 🎉
-
 ## Description
 
 This plugin registers the `paginate` helper to create pages using an array of
@@ -58,6 +54,10 @@ for (const page of paginate(posts, options)) {
   yield page;
 }
 ```
+
+## Installation
+
+This plugin is installed by default. 🎉
 
 ## Configuration
 

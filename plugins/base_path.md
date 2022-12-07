@@ -5,6 +5,16 @@ tags:
   - urls
 ---
 
+## Description
+
+The `base_path` plugin fixes all URLs in your HTML documents by prepending the
+path of the [location setting](../docs/configuration/config-file.md#location).
+It's useful if your site is hosted in a subdirectory.
+
+It will search for any element with the attribute `href`, `src`, `srcset` and
+`imagesrcset` in your html pages and automatically fix the URLs. Note that the
+plugin only works with HTML pages, it won't fix CSS or JavaScript files.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -19,16 +29,6 @@ site.use(basePath());
 
 export default site;
 ```
-
-## Description
-
-The `base_path` plugin fixes all URLs in your HTML documents by prepending the
-path of the [location setting](../docs/configuration/config-file.md#location).
-It's useful if your site is hosted in a subdirectory.
-
-It will search for any element with the attribute `href`, `src`, `srcset` and
-`imagesrcset` in your html pages and automatically fix the URLs. Note that the
-plugin only works with HTML pages, it won't fix CSS or JavaScript files.
 
 ## Example
 

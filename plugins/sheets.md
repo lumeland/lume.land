@@ -6,6 +6,11 @@ tags:
   - data_format
 ---
 
+## Description
+
+This plugin use [SheetJS](https://sheetjs.com/) to read any spreadsheet document
+as _data files, so you can use this data to render your pages.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -20,11 +25,6 @@ site.use(sheets());
 
 export default site;
 ```
-
-## Description
-
-This plugin use [SheetJS](https://sheetjs.com/) to read any spreadsheet document
-as _data files, so you can use this data to render your pages.
 
 ## Formats
 

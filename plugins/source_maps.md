@@ -8,6 +8,14 @@ tags:
   - utils
 ---
 
+## Description
+
+Lume plugins like [Postcss](./postcss.md), [esbuild](./esbuild.md),
+[Terser](./terser.md), [SASS](./sass.md) or [Lightning CSS](./lightningcss.md)
+process and bundle your CSS and JavaScript files. Combine them with
+`source_maps` to create the source maps files to debug your code in the
+browser's development tools.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -34,14 +42,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/source_maps.ts/~/Options).
-
-## Description
-
-Lume plugins like [Postcss](./postcss.md), [esbuild](./esbuild.md),
-[Terser](./terser.md), [SASS](./sass.md) or [Lightning CSS](./lightningcss.md)
-process and bundle your CSS and JavaScript files. Combine them with
-`source_maps` to create the source maps files to debug your code in the
-browser's development tools.
 
 ## Configuration
 

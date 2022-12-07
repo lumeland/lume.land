@@ -6,6 +6,17 @@ tags:
   - utils
 ---
 
+## Description
+
+This plugin uses the [Pagefind](https://pagefind.app/) library to create a fully
+static search engine in your site without requiring any hosting infrastructure.
+The process is divided in two steps:
+
+- **Indexing**: It's the process to scan all HTML page and build the search
+  index.
+- **UI rendering**: A UI component that supports searching, filtering and
+  metadata out of the box.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,16 +34,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/pagefind.ts/~/Options).
-
-## Description
-
-This plugin uses the [Pagefind](https://pagefind.app/) library to create a fully
-static search engine in your site without requiring any hosting infrastructure.
-The process is divided in three areas:
-
-- **Indexing**: It's process to scan all HTML page and build the search index.
-- **UI rendering**: A UI component that supports searching, filtering and
-  metadata out of the box.
 
 ## The binary file
 

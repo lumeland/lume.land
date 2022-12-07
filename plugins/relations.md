@@ -6,6 +6,12 @@ tags:
   - utils
 ---
 
+## Description
+
+This plugin is useful if you have different types of pages that are related. For
+example, let's say there are pages with articles and pages with authors. This
+plugin can relate the articles and authors pages automatically.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -24,13 +30,10 @@ export default site;
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/relations.ts/~/Options).
 
-## Description
+## Usage
 
-This plugin is useful if you have different types of pages that are related. For
-example, let's say there are pages with articles and pages with authors. This
-plugin can relate the articles and authors pages automatically. To do that, you
-need to specify the page types and the foreign key used to make the relation.
-For example:
+First, you need to specify the page types and their foreign key used to make the
+relation. For example:
 
 ```js
 import lume from "lume/mod.ts";
@@ -182,3 +185,36 @@ Content of the article
 ```
 
 </lume-code>
+
+## Customize the id key
+
+By default the pages are identified by the value in the `id` key. You can change
+the key name in the config:
+
+```js
+site.use(relations({
+  idKey: "slug",
+  foreignKeys: {
+    article: "article_id",
+    author: "author_id",
+  },
+}));
+```
+
+Now, all pages are identified by the `slug` key instead of the `id`.
+
+It's also possible to configure the id key name per type. For example, if you
+want to identify the `author` by the field `name`:
+
+```js
+site.use(relations({
+  idKey: "slug",
+  foreignKeys: {
+    article: "article_id",
+    author: ["author_id", "name"],
+  },
+}));
+```
+
+Using an array with two values in the `foreignKeys` object allows to configure
+idKeys per type.

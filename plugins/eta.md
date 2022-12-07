@@ -6,6 +6,13 @@ tags:
   - template_engine
 ---
 
+## Description
+
+[Eta](https://eta.js.org/) is a JavaScript template engine with a syntax very
+similar to EJS but with
+[some differences](https://eta.js.org/docs/about/eta-vs-ejs). This plugin allows
+using this template engine to create pages and layouts.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,13 +30,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/eta.ts/~/Options).
-
-## Description
-
-[Eta](https://eta.js.org/) is a JavaScript template engine with a syntax very
-similar to EJS but with
-[some differences](https://eta.js.org/docs/about/eta-vs-ejs). This plugin allows
-using this template engine to create pages and layouts.
 
 ## Creating layouts
 

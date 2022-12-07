@@ -7,6 +7,10 @@ tags:
   - data_format
 ---
 
+## Description
+
+This plugin allows you to create pages and store data using the JSON format.
+
 ## Installation
 
 This plugin is installed by default. 🎉
@@ -29,10 +33,6 @@ const site = lume({}, { json });
 
 export default site;
 ```
-
-## Description
-
-This plugin allows you to create pages and store data using the JSON format.
 
 ### Create pages
 

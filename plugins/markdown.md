@@ -7,15 +7,15 @@ tags:
   - template_engine
 ---
 
-## Installation
-
-This plugin is installed by default. 🎉
-
 ## Description
 
 [Markdown](https://en.wikipedia.org/wiki/Markdown) is a popular markup language
 for writing content that is converted to HTML. It is useful for pages with long
 text like posts, articles, or documentation sites.
+
+## Installation
+
+This plugin is installed by default. 🎉
 
 ## Configuration
 

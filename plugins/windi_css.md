@@ -6,24 +6,6 @@ tags:
   - styles
 ---
 
-## Installation
-
-Import this plugin in your `_config.ts` file to use it:
-
-```js
-import lume from "lume/mod.ts";
-import windi from "lume/plugins/windi_css.ts";
-
-const site = lume();
-
-site.use(windi());
-
-export default site;
-```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/windi_css.ts/~/Options).
-
 ## Description
 
 This plugin allows using the [Windi CSS](https://windicss.org/) utility-first
@@ -64,6 +46,24 @@ body {
 ```
 
 </lume-code>
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "lume/mod.ts";
+import windi from "lume/plugins/windi_css.ts";
+
+const site = lume();
+
+site.use(windi());
+
+export default site;
+```
+
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/windi_css.ts/~/Options).
 
 ## Configuration
 

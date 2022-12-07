@@ -6,6 +6,11 @@ tags:
   - styles
 ---
 
+## Description
+
+The `PostCSS` plugin loads and transforms your CSS files using the
+[PostCSS](https://postcss.org/) processor.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,11 +28,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/postcss.ts/~/Options).
-
-## Description
-
-The `PostCSS` plugin loads and transforms your CSS files using the
-[PostCSS](https://postcss.org/) processor.
 
 ## Configuration
 

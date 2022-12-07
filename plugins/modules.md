@@ -8,15 +8,15 @@ tags:
   - data_format
 ---
 
-## Installation
-
-This plugin is installed by default. 🎉
-
 ## Description
 
 Lume is built on top of Deno, so it has native support for JavaScript and
 TypeScript modules. This plugin allows you to use JavaScript and TypeScript to
 create pages, layouts, and data files.
+
+## Installation
+
+This plugin is installed by default. 🎉
 
 ## Configuration
 

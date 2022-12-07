@@ -56,6 +56,21 @@ You can override the value from the CLI with
 `--`dest`, which is useful if you want to generate the site without overriding the previous one. For example:`deno
 task lume --dest=./output` { .tip }
 
+### emptyDest
+
+By default, Lume empty the `dest` folder before the build. You can prevent this
+by setting this option to false:
+
+```ts
+const site = lume({
+  emptyDest: false,
+});
+```
+
+This is useful if you want to combine two or more sites to the same folder.
+Other use case is for very big sites (with more than 100K pages) that needs to
+be built in several steps to prevent running out of memory.
+
 ### location
 
 This is the public URL of the site. It's useful to generate absolute URLs or fix
@@ -87,9 +102,6 @@ const site = lume({
   prettyUrls: false, // Disable pretty urls
 });
 ```
-
-It also accepts the string value `no-html-extension` to save the files as
-`/about-us.html` but generates the URLs without an extension (`/about-us`).
 
 ## Server options
 

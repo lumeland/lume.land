@@ -6,6 +6,13 @@ tags:
   - utils
 ---
 
+## Description
+
+This plugin generates the code to run [Netlify CMS](https://www.netlifycms.org/)
+and update the site content in a faster and easier way in both local and remote
+environments. By default the CMS is accesible at the `/admin/` path, but you can
+change it in the `path` option.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,13 +30,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/netlify_cms.ts/~/Options).
-
-## Description
-
-This plugin generates the code to run [Netlify CMS](https://www.netlifycms.org/)
-and update the site content in a faster and easier way in both local and remote
-environments. By default the CMS is accesible at the `/admin/` path, but you can
-change it in the `path` option.
 
 ## Usage
 

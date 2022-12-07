@@ -7,6 +7,12 @@ tags:
   - data_format
 ---
 
+## Description
+
+[YAML](https://en.wikipedia.org/wiki/YAML) is a format to save serialized data.
+It's also useful for pages with multiple pieces of text, like landing pages,
+guides, directories, etc.
+
 ## Installation
 
 This plugin is installed by default. 🎉
@@ -27,12 +33,6 @@ const site = lume({}, { yaml });
 
 export default site;
 ```
-
-## Description
-
-[YAML](https://en.wikipedia.org/wiki/YAML) is a format to save serialized data.
-It's also useful for pages with multiple pieces of text, like landing pages,
-guides, directories, etc.
 
 ## Creating _data files
 

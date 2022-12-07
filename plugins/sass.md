@@ -6,6 +6,11 @@ tags:
   - styles
 ---
 
+## Description
+
+The `SASS` plugin loads and transforms your `.scss` files using the
+[Deno SASS](https://github.com/binyamin/deno-sass) library.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,11 +28,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/sass.ts/~/Options).
-
-## Description
-
-The `SASS` plugin loads and transforms your `.scss` files using the
-[Deno SASS](https://github.com/binyamin/deno-sass) library.
 
 ## Configuration
 

@@ -6,6 +6,16 @@ tags:
   - images
 ---
 
+## Description
+
+Use the `imagick` plugin to process image files using the
+[magick-wasm](https://github.com/dlemstra/magick-wasm) library, a powerful image
+manipulation library with support for over 100 major file formats. With this
+plugin, you can resize, rotate, and convert any image to other formats.
+
+The plugin reads the data assigned to the image files (specifically the
+`imagick` key) to know how to transform the image.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -23,16 +33,6 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/imagick.ts/~/Options).
-
-## Description
-
-Use the `imagick` plugin to process image files using the
-[magick-wasm](https://github.com/dlemstra/magick-wasm) library, a powerful image
-manipulation library with support for over 100 major file formats. With this
-plugin, you can resize, rotate, and convert any image to other formats.
-
-The plugin reads the data assigned to the image files (specifically the
-`imagick` key) to know how to transform the image.
 
 ## Example
 

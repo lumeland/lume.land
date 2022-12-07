@@ -6,6 +6,14 @@ tags:
   - urls
 ---
 
+## Description
+
+The `modify_urls` plugin modifies all URLs in your HTML documents using a
+function. It's used internally by other plugins like
+[resolve_urls](resolve_urls.md), [relative_urls](relative_urls.md) and
+[base_path](base_path.md), but you can use it to modify URLs using a custom
+function.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -24,13 +32,7 @@ export default site;
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/modify_urls.ts/~/Options).
 
-## Description
-
-The `modify_urls` plugin modifies all URLs in your HTML documents using a
-function. It's used internally by other plugins like
-[resolve_urls](resolve_urls.md), [relative_urls](relative_urls.md) and
-[base_path](base_path.md), but you can use it to modify URLs using a custom
-function.
+## Example
 
 To use it, just import the plugin in the `_config.js` file and create a callback
 to change the url. For example, let's say we want to convert all URLs to

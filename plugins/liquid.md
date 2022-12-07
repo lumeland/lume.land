@@ -6,6 +6,11 @@ tags:
   - template_engine
 ---
 
+## Description
+
+[Liquid](https://liquidjs.com/) is a simple, expressive, and safe template
+engine. This plugin allows you to use it to create pages and layouts.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -25,11 +30,6 @@ See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/liquid.ts/~/Options).
 [Go to the Liquid options page](https://liquidjs.com/api/interfaces/liquid_options_.liquidoptions.html)
 for more info about specific Liquid settings.
-
-## Description
-
-[Liquid](https://liquidjs.com/) is a simple, expressive, and safe template
-engine. This plugin allows you to use it to create pages and layouts.
 
 ## Creating layouts
 
