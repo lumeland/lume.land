@@ -22,7 +22,7 @@
 
   @media (min-width: 900px) {
     overflow-y: auto;
-    height: calc(100vh - 110px);
+    max-height: calc(100vh - 110px);
   }
 }
 .doc-navbar-section {
