@@ -49,6 +49,8 @@ const markdown = {
 const site = lume({}, { markdown });
 ```
 
+Additionally, you can use [hooks](#hooks) to add additional plugins and rules.
+
 ### Plugins
 
 Lume uses [markdown-it](https://github.com/markdown-it/markdown-it) as the
@@ -65,7 +67,7 @@ you can use with the `plugins` option. For example, to add the
 [markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji) plugin:
 
 ```ts
-import emoji from "https://jspm.dev/markdown-it-emoji";
+import emoji from "npm:markdown-it-emoji";
 
 // Set the markdown plugins
 const markdown = {
@@ -85,8 +87,8 @@ You can pass options to your markdown-it plugins using an array with
 `[plugin, options]` signature. Example:
 
 ```ts
-import anchor from "https://jspm.dev/markdown-it-anchor";
-import footnote from "https://jspm.dev/markdown-it-footnote";
+import anchor from "npm:markdown-it-anchor";
+import footnote from "npm:markdown-it-footnote";
 
 // Pass options to markdown-it plugins
 const markdown = {
@@ -103,6 +105,26 @@ The repository
 [lume_markdown_plugins](https://deno.land/x/lume_markdown_plugins) contain a
 collection of plugins specially adapted to Lume, with useful features like
 extract the title from the markdown or generate a table of contents.
+
+## Hooks
+
+This plugin exposes the following hooks:
+
+- `addMarkdownItPlugin(plugin, options)` To add additional plugins.
+- `addMarkdownItRule(name, rule)` To add additional rules.
+
+```js
+import lume from "lume/mod.ts";
+import anchor from "npm:markdown-it-anchor";
+import footnote from "npm:markdown-it-footnote";
+
+const site = lume();
+
+site.hooks.addMarkdownItPlugin(anchor, { level: 2 });
+site.hooks.addMarkdownItPlugin(footnote);
+
+export default site;
+```
 
 ## Creating pages in Markdown
 

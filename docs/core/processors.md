@@ -157,3 +157,18 @@ first argument:
 ```js
 site.process("*", processAllPages);
 ```
+
+## Process all pages
+
+`site.process` and `site.preprocess` functions works at page level. They only
+process a page each time. If you need to run the processor only once to all
+pages, there's the `site.processAll` and `site.preprocessAll`. They are very
+similar but they are executed only once and receives an array of all pages in
+the first argument:
+
+```js
+site.processAll([".html"], (pages) => {
+  pages.forEach((page) => my_processor(page));
+  console.log(`Processed ${pages.length} HTML pages!`);
+});
+```

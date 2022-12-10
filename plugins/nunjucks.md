@@ -86,3 +86,9 @@ text: "Hello {{ username }}"
 <!-- Render a string -->
 <div>{{ text | njk(data) | safe }}<div>
 ```
+
+## Hooks
+
+This plugin exposes the following hooks:
+
+- `addNunjucksPlugin(name, fn)` To add additional plugins.

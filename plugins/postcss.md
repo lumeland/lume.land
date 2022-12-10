@@ -105,6 +105,26 @@ site.use(postcss({
 }));
 ```
 
+## Hooks
+
+This plugin exposes the following hooks:
+
+- `addPostcssPlugin(plugin)` To add additional plugins.
+
+```js
+import lume from "lume/mod.ts";
+import postcss from "lume/plugins/postcss.ts";
+import nano from "npm:cssnano";
+
+const site = lume();
+
+site.use(postcss());
+
+site.hooks.addPostcssPlugin(nano);
+
+export default site;
+```
+
 ## The `postcss` filter
 
 This plugin also registers the `postcss` filter so you can transform CSS code in

@@ -99,3 +99,25 @@ A way to use it in a mdx file is:
   { __html: comp.title({ text: "Hello world" }) }
 } />
 ```
+
+### Overwriting components
+
+You can use the `components` option to overwrite or add additional components.
+For example, to convert all `h1` to `h2`:
+
+```js
+import lume from "lume/mod.ts";
+import mdx from "lume/plugins/mdx.ts";
+import jsx from "lume/plugins/jsx.ts";
+
+const site = lume();
+
+site.use(jsx());
+site.use(mdx({
+  components: {
+    h1: "h2",
+  },
+}));
+
+export default site;
+```

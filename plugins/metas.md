@@ -58,16 +58,9 @@ metas:
   icon: /img/icon.png
   lang: en
   generator: true
-
-mergedKeys:
-  metas: object
 ```
 
 </lume-code>
-
-The `mergeKeys` value allows overriding some values of `metas` in your pages.
-See [Merged Keys documentation](../docs/core/merged-keys.md) for more info.
-{.tip}
 
 You can complete the meta values with the specific values for every page. For
 example:
@@ -120,27 +113,25 @@ to:
 
 </lume-code>
 
-## defaultPageData option
+## Field aliases
 
-The `defaultPageData` option allows to use an existing value as the default
-value if the `meta` key doesn't exist. For example: you may want to use the
-existing `title` value as the `meta.title` to avoid to repeat the same value in
-two places:
+Field aliases allow to use an existing value in the metas. Aliases start with
+`=` following by the field name:
 
-```js
-import lume from "lume/mod.ts";
-import metas from "lume/plugins/metas.ts";
+```yml
+title: This is the title
 
-const site = lume();
-
-site.use(metas({
-  defaultPageData: {
-    title: "title", // Use the `title` value as fallback.
-  },
-}));
-
-export default site;
+metas:
+  title: "=title" # Alias to the title value
 ```
 
-Now, the pages with the `meta.title` variable missing will use the value of
-`title`.
+It's also possible to use dots for subvalues:
+
+```yml
+title: This is the title
+intro:
+  text: Page description
+metas:
+  title: "=title"
+  description: "=intro.text"
+```

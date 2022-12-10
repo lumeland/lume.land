@@ -81,3 +81,85 @@ share it with others.
 Take a look to the
 [repository of Lume plugins](https://github.com/lumeland/lume/tree/master/plugins)
 for more advanced examples.
+
+## Hooks
+
+Some plugins expose _hooks_ that can be invoked by other plugins or in the
+`_config.ts` file. A hook is only a function that can do arbitrary things, like
+changing a configuration of a plugin. Hooks are stored in `site.hooks`. Let's
+create a hook in our `css_banner` plugin to change the message:
+
+```ts
+// my-plugins/css_banner.ts
+
+interface Options {
+  message: string;
+}
+
+export default function (options: Options) {
+  function addBanner(content: string): string {
+    const banner = `/* ${options.message} */`;
+    return $banner + "\n" + content;
+  }
+
+  return (site: Site) => {
+    // Add a hook to change the message
+    site.hooks.changeCssBanner = (message: string) => {
+      options.message = message;
+    };
+
+    site.process([".css"], (page) => {
+      page.content = addBanner(page.content as string);
+    });
+  };
+}
+```
+
+Now the message can be changed after the plugin installation:
+
+```ts
+import lume from "lume/mod.ts";
+import cssBanner from "./my-plugins/css_banner.ts";
+
+const site = lume();
+
+site.use(cssBanner({
+  message: "© This code belongs to ACME inc.",
+}));
+
+site.hooks.changeCssBanner("This code is open source");
+
+export default site;
+```
+
+Or we can invoke this hook from other plugin:
+
+```ts
+// my-plugins/open_source.ts
+
+export default function () {
+  return (site: Site) => {
+    if (!site.hooks.changeCssBanner) {
+      throw new Error("This plugin requires css_banner to be installed before");
+    }
+
+    site.hooks.changeCssBanner("This code is open source");
+  };
+}
+```
+
+```ts
+import lume from "lume/mod.ts";
+import cssBanner from "./my-plugins/css_banner.ts";
+import openSource from "./my-plugins/open_source.ts";
+
+const site = lume();
+
+site.use(cssBanner({
+  message: "© This code belongs to ACME inc.",
+}));
+
+site.use(openSource());
+
+export default site;
+```

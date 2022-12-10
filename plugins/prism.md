@@ -28,13 +28,22 @@ export default site;
 
 ## Configuration
 
-By default it only load a subset of languanges. You can configure more languages
-in this way:
+Prism by default load the default languages `markup`, `css`, `clike` and
+`javascript`. You can load
+[more languages](https://prismjs.com/#supported-languages) in this way:
 
-```js
-site.use(prism({
-  languages: ["md", "js", "css", "rust"], // Load these languages
-}));
+```ts
+import lume from "lume/mod.ts";
+import prism from "lume/plugins/prism.ts";
+
+// Additional prism languages
+import "npm:prismjs@1.29.0/components/prism-less.js";
+import "npm:prismjs@1.29.0/components/prism-git.js";
+
+const site = lume();
+site.use(prism());
+
+export default site;
 ```
 
 See
