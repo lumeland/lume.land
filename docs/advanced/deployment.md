@@ -216,6 +216,17 @@ curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/b
 
 Remember to configure the output directory to `_site`.
 
+## Render
+
+To deploy your Lume site with [Render](https://render.com/), create a new
+_Static Site_ project and configure the build command as follow:
+
+```sh
+curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/render/.deno/bin/deno task build
+```
+
+Configure the output directory to `_site`.
+
 ## AWS Amplify
 
 To deploy your Lume site with [AWS Amplify](https://aws.amazon.com/amplify/)
