@@ -314,6 +314,13 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://twitter.com/DogaArmangil/status/1602879934095048704
+      author: Doğa Armangil (@DogaArmangil)
+      avatar: /img/avatars/testimonials/doga.webp
+      date: December 14, 2022
+      text: |
+        Time to ditch <a href="https://twitter.com/jekyllrb">@jekyllrb</a> as my preferred <a href="https://twitter.com/hashtag/StaticSiteGenerator">#StaticSiteGenerator</a>. <br><br>Standout features of Lume, besides running on <a href="https://twitter.com/deno_land">@deno_land</a>&#39;s TypeScript &amp; JavaScript runtime:<br>▶︎ Pages can be written in YAML containing an outline of the page contents<br>▶︎ Nested layouts
+
     - url: https://twitter.com/hmans/status/1590663816639307777
       author: Hendrik Mans (@hmans)
       avatar: /img/avatars/testimonials/hmans.webp
