@@ -1,3 +1,10 @@
 imagick:
   - resize: [480, 360]
+    cropCenter: [480, 270]
+    matches: /video_
+    format: webp
+
+  - resize: [480, 360]
+    cropCenter: [480, 270]
+    matches: /og_
     format: webp

@@ -321,12 +321,12 @@ testimonials:
       text: |
         Time to ditch <a href="https://twitter.com/jekyllrb">@jekyllrb</a> as my preferred <a href="https://twitter.com/hashtag/StaticSiteGenerator">#StaticSiteGenerator</a>. <br><br>Standout features of Lume, besides running on <a href="https://twitter.com/deno_land">@deno_land</a>&#39;s TypeScript &amp; JavaScript runtime:<br>▶︎ Pages can be written in YAML containing an outline of the page contents<br>▶︎ Nested layouts
 
-    - url: https://twitter.com/hmans/status/1590663816639307777
-      author: Hendrik Mans (@hmans)
+    - url: https://hmans.co/posts/lume-is-great/
+      author: Hendrik Mans (hmans.co)
       avatar: /img/avatars/testimonials/hmans.webp
       date: November 10, 2022
-      text: |
-        Lume (a <a href="https://twitter.com/hashtag/deno">#deno</a> static site generator) is crazy good. Focused, flexible, comes with batteries included. Enjoying it a lot so far.<a href="https://t.co/siuwkh2aMF">https://t.co/siuwkh2aMF</a>
+      text: Lume is Great and I'm finally at peace.
+      cover: /img/covers/og_lume_is_great.webp
 
     - url: https://twitter.com/hmans/status/1590781772371234818
       author: Hendrik Mans (@hmans)
@@ -354,7 +354,8 @@ testimonials:
       avatar: /img/avatars/testimonials/robby.webp
       date: September 20, 2022
       text: Getting started with Lume (new Deno static site generator)
-      cover: /img/covers/coding_with_robby.webp
+      cover: /img/covers/video_coding_with_robby.webp
+      type: video
 
     - url: https://twitter.com/_LautaroLopez/status/1571525610937241603
       author: Lauchita. (@_LautaroLopez)
@@ -426,6 +427,14 @@ testimonials:
       avatar: /img/avatars/testimonials/deno.webp
       date: September 18, 2022
       text: Lume static site generator <a href="https://t.co/Lr9GTGUOlB">https://t.co/Lr9GTGUOlB</a>
+
+    - url: https://www.youtube.com/watch?v=4YtxRK8oHAU
+      author: ManzDev
+      avatar: /img/avatars/testimonials/manzdev.webp
+      date: September 13, 2021
+      text: 🦕🔥 Aprendiendo Lume (Generador de sitios estáticos basado en Deno)
+      cover: /img/covers/video_aprendiendo_lume.webp
+      type: video
 
     - url: https://twitter.com/fserb/status/1390404312581410817
       author: Fernando Serboncini (@fserb)

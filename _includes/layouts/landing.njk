@@ -79,10 +79,17 @@ page_css: landing.css
     {% for item in testimonials.quotes %}
       <li>
         {% if item.cover %}
-        <figure class="landing-testimonials-video">
-          <a href="{{ item.url }}">
+        <figure class="landing-testimonials-cover">
+          {% if item.type == "video" %}
+          <a href="{{ item.url }}" class="is-video">
             <img src="{{ item.cover }}" alt="{{ item.text }}" width="300" height="200">
           </a>
+          {% else %}
+          <a href="{{ item.url }}" class="is-article">
+            <img src="{{ item.cover }}" width="300">
+            <p>{{ item.text }}</p>
+          </a>
+          {% endif %}
           <figcaption class="landing-testimonial-caption">
             <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar | replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
             <a href="{{ item.url }}">

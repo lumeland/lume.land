@@ -40,7 +40,13 @@ site
     extensions: [".js"],
   }))
   .use(resolveUrls())
-  .use(imagick())
+  .use(imagick({
+    functions: {
+      cropCenter(image, width: number, height: number) {
+        image.crop(width, height, 5);
+      },
+    },
+  }))
   .use(sitemap())
   .scopedUpdates(
     (path) => path.endsWith(".png") || path.endsWith(".jpg"),
