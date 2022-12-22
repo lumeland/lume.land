@@ -5,7 +5,7 @@ order: 1
 ---
 
 The configuration file is the `_config.ts` or `_config.js`, saved in the site's
-root directory. If you don't have it yet, [see the Installation
+root directory. If you don't have it yet, see the Installation
 [documentation](../overview/installation.md) to learn how to create it.
 
 The minimal required code is:
