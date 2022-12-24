@@ -160,5 +160,5 @@ server.use(www({
 }));
 ```
 
-. See the
+See the
 [available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/www.ts/~/Options).
