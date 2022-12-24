@@ -12,7 +12,7 @@ have it installed yet.
 
 **Lume doesn't need to be installed**. The recommended way to use Lume is via
 [Deno's tasks](https://deno.land/manual/tools/task_runner) so you can run, for
-example, `deno` task lume` in any environment with Deno and it just works.
+example, `deno task lume` in any environment with Deno and it just works.
 
 To setup Lume in your project folder, run the following command:
 
