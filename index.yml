@@ -300,6 +300,11 @@ support:
       img: /img/avatars/supporters/jobsinjs.webp
       amount: 10
       recurrent: true
+    - name: Romuald Bulyshko
+      url: https://r13o.com/
+      img: /img/avatars/supporters/romuald.webp
+      amount: 5
+      recurrent: true
 
   contribute:
     title: How to contribute?
