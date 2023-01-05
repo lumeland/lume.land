@@ -42,7 +42,7 @@ export default site;
 ```
 
 See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/netlify_cms.ts/~/Options).
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/metas.ts/~/Options).
 
 ## Usage
 
