@@ -58,7 +58,7 @@ task lume --dest=./output` { .tip }
 
 ### emptyDest
 
-By default, Lume empty the `dest` folder before the build. You can prevent this
+By default, Lume will empty the `dest` folder before the build. You can prevent this
 by setting this option to false:
 
 ```ts
