@@ -305,6 +305,10 @@ support:
       img: /img/avatars/supporters/romuald.webp
       amount: 5
       recurrent: true
+    - name: Chad Henry
+      url: https://simplerethink.com/
+      img: /img/avatars/supporters/chadhenry.webp
+      amount: 50
 
   contribute:
     title: How to contribute?
