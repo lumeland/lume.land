@@ -22,7 +22,9 @@ import relations from "lume/plugins/relations.ts";
 
 const site = lume();
 
-site.use(relations());
+site.use(relations({
+  // Your config here
+}));
 
 export default site;
 ```
@@ -32,8 +34,8 @@ See
 
 ## Usage
 
-First, you need to specify the page types and their foreign key used to make the
-relation. For example:
+This plugin requires to specify the page types and their foreign key used to
+make the relation. For example:
 
 ```js
 import lume from "lume/mod.ts";
@@ -51,56 +53,47 @@ site.use(relations({
 export default site;
 ```
 
-Now, we have to do the following for every page:
-
-- Define the type of the page (in our example "article" or "author").
-- Define the id to identify this page.
-- Set the foreign keys of the related pages.
-
-In the following example, there are some pages of type `article` and `author`.
-The pages of type `article` include the relation with the author, using the
-foreign key configured previously:
+In the following example, there are some pages of `type: article` or
+`type: author`. The pages of type `article` include the relation with the
+author, using the foreign key `author_id`:
 
 <lume-code>
 
 ```yml {title=/article-1.md}
 ---
-title: This is title 1
-type: article
 id: 1
+type: article
 author_id: 2
 ---
 
-Content of article 1
+Content of article 1, by Laura
 ```
 
 ```yml {title=/article-2.md}
 ---
-title: This is title 2
-type: article
 id: 2
+type: article
 author_id: 2
 ---
 
-Content of article 2
+Content of article 2, by Laura
 ```
 
 ```yml {title=/article-3.md}
 ---
-title: This is title 2
-type: article
 id: 3
-author_id: 2
+type: article
+author_id: 1
 ---
 
-Content of article 2
+Content of article 3, by Óscar
 ```
 
 ```yml {title=/oscar.md}
 ---
-title: Óscar Otero
-type: author
 id: 1
+type: author
+title: Óscar Otero
 ---
 
 Bio of Óscar
@@ -108,9 +101,9 @@ Bio of Óscar
 
 ```yml {title=/laura.md}
 ---
-title: Laura Rubio
-type: author
 id: 2
+type: author
+title: Laura Rubio
 ---
 
 Bio of Laura
@@ -126,12 +119,9 @@ author:
 
 ```html{title=_includes/layouts/article.njk}
 <article>
-  <header>
-    <h1>{{ title }}</h1>
-    <p>By {{ author.title }}</p>
-  </header>
-
   {{ content | safe }}
+  
+  <footer>By {{ author.title }}</footer>
 </article>
 ```
 
@@ -144,10 +134,6 @@ variable `article` that is an array with all articles related to each author:
 
 ```html{title=_includes/layouts/author.njk}
 <article>
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
-
   {{ content | safe }}
 
   <h2>Articles created:</h2>
@@ -186,13 +172,14 @@ Content of the article
 
 </lume-code>
 
-## Customize the id key
+## Customize the id and type key
 
-By default the pages are identified by the value in the `id` key. You can change
-the key name in the config:
+By default, the pages are identified by the value of the `type` and `id` keys.
+You can change it globally in the config:
 
 ```js
 site.use(relations({
+  typeKey: "kind",
   idKey: "slug",
   foreignKeys: {
     article: "article_id",
@@ -201,20 +188,39 @@ site.use(relations({
 }));
 ```
 
-Now, all pages are identified by the `slug` key instead of the `id`.
+## Configure individual relations
 
-It's also possible to configure the id key name per type. For example, if you
-want to identify the `author` by the field `name`:
+You can use an object to configure individual relations. The available options
+are:
+
+- `foreignKey` (required): The key name use to set a relation (for example
+  `article_id`).
+- `relationKey`: The key name use to store the relation (for example `article`).
+- `pluralRelationKey`: The key name use to store the relation if it's a multiple
+  relation (for example `articles` instead of `article`).
+- `idKey`: The key name used to identify the entity (by default is `id`).
+
+Let's see an example:
 
 ```js
 site.use(relations({
-  idKey: "slug",
   foreignKeys: {
     article: "article_id",
-    author: ["author_id", "name"],
+    author: {
+      foreignKey: "author_id",
+      relationKey: "author",
+      pluralRelationKey: "authors"
+      idKey: "name",
+    },
   },
 }));
 ```
 
-Using an array with two values in the `foreignKeys` object allows to configure
-idKeys per type.
+In this example, the pages of type `author` have a custom configuration:
+
+- The foreign key is `author_id`.
+- The relation key is `author`. For example, the author related with an article
+  is stored in the `author` key.
+- The plural relation key is `authors`. If an article has multiple authors, they
+  are stored in the `authors` key.
+- The id key is `name` instead of `id`.

@@ -110,6 +110,7 @@ site.use(postcss({
 This plugin exposes the following hooks:
 
 - `addPostcssPlugin(plugin)` To add additional plugins.
+- `postcss(processor)` To modify the processor instance in a low level way.
 
 ```js
 import lume from "lume/mod.ts";

@@ -12,6 +12,7 @@ This plugin generates `<meta>` tags in your HTML pages for Open graph, Twitter
 cards, Schema.org, and SEO purposes. The data must be defined in the `metas`
 keyword of every page and the supported values are:
 
+- `type`: The page type (by default is `website`).
 - `site`: The name of the site.
 - `title`: The title of the page, article, post, etc.
 - `lang`: The language of the page.

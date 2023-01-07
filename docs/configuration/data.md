@@ -38,3 +38,23 @@ export default function ({ myNumber, randomNumber }) {
 
 Note that page data have priority over global data. If a page has a variable
 with the same name as a global variable, the page variable will be used. {.tip}
+
+## Context data
+
+Use the third argument to assign a data value to only a directory. For example:
+
+```js
+// Set the layout value to the directory /pages
+site.data("layout", "pages.njk", "/pages");
+```
+
+This will assign the data to the `/pages` directory so only the files in this
+directory will access to this value. See
+[shared data](../creating-pages/shared-data.md) for more info.
+
+It's also possible to assign a data value to a specific file:
+
+```js
+// Set the layout value to a specific file
+site.data("layout", "pages.njk", "/pages/my-custom-page.njk");
+```

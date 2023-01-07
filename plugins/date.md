@@ -84,14 +84,16 @@ site.use(date({
 ## Locales
 
 `date-fns` has support for
-[multiple locales](https://deno.land/x/date_fns/locale). You can configure them
-in `_config.ts`:
+[multiple locales](https://github.com/date-fns/date-fns/tree/main/src/locale).
+You can configure them in `_config.ts` by importing them from npm:
 
 ```js
 import date from "lume/plugins/date.ts";
+import gl from "npm:date-fns/locale/gl/index.js";
+import es from "npm:date-fns/locale/es/index.js";
 
 site.use(date({
-  locales: ["gl", "es"],
+  locales: { gl, es },
 }));
 ```
 
