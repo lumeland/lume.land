@@ -8,11 +8,7 @@ As Lume is run by Deno, read the
 [Deno installation](https://deno.land/#installation) instructions if you don't
 have it installed yet.
 
-## Don't install Lume
-
-**Lume doesn't need to be installed**. The recommended way to use Lume is via
-[Deno's tasks](https://deno.land/manual/tools/task_runner) so you can run, for
-example, `deno task lume` in any environment with Deno and it just works.
+## Setup Lume
 
 To setup Lume in your project folder, run the following command:
 
@@ -68,32 +64,44 @@ export default site;
 
 </lume-code>
 
-You can run Lume with `deno task build` (to build the site) or `deno task serve`
-(to build and start a local server).
+Now you can use [Deno's tasks](https://deno.land/manual/tools/task_runner) to
+run Lume in any environment. The command `deno task lume` runs Lume and you can
+add additional arguments. For example `deno task lume -s` runs Lume, open a
+local web server and start watching the changes.
 
-To upgrade Lume, just run `deno task lume upgrade`.
+The tasks `build` (to build the website) and `serve` (to build and start a local
+server) are just shortcuts to the main `lume` task with additional arguments.
 
-## Install Lume globally on your computer
+Run `deno task lume -h` to see the instructions.
 
-It's also possible to install Lume globally by executing the following command:
+## Setup Lume CLI on your computer
 
-```sh
-deno run -A https://deno.land/x/lume/install.ts
+Due Lume uses Deno task to work, you need to type always
+`deno task lume [...args]`, which is a bit verbose. To avoid typing `deno task`
+all the time, you can install the [Lume CLI](https://github.com/lumeland/cli)
+script with:
+
+```
+deno install --allow-run --name lume --force --reload https://deno.land/x/lume_cli/mod.ts
 ```
 
-Once installed, you have the `lume` command. To update Lume to the latest
-version, use the command:
+This creates the `lume` command:
 
-```sh
-lume upgrade --global
-```
+- `lume init` will run the command
+  `deno run -Ar https://deno.land/x/lume/init.ts` to initialize Lume in the
+  current directory.
+- `lume upgrade-cli` will upgrade the Lume CLI script to the latest version.
+- Any other command will be delegated to `deno task lume [...args]`. For
+  example, `lume -s` will run `deno task lume -s`.
 
-The command `lume upgrade --dev` installs the latest development version (the
-last commit in the [Github repository](https://github.com/lumeland/lume)). It's
+## Update Lume
+
+The task `deno task lume upgrade` (or `lume upgrade` on Lume CLI) upgrades the
+Lume version used in your project folder to the latest version.
+
+Use the argument `--dev` to ugrade to the latest development version (the last
+commit in the [Github repository](https://github.com/lumeland/lume)). It's
 useful to test new features of Lume not yet released.
-
-Run `lume init` to create the `_config.js`, `deno.json` and `import_map.json`
-files in your project.
 
 ## Visual Studio Code configuration
 
