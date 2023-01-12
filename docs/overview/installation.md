@@ -103,6 +103,26 @@ Use the argument `--dev` to ugrade to the latest development version (the last
 commit in the [Github repository](https://github.com/lumeland/lume)). It's
 useful to test new features of Lume not yet released.
 
+## Vendoring
+
+If you want to download all remote dependencies of Deno in a local folder, you
+can use the `DENO_DIR` environment variable. For example, edit the `lume` task
+to define this variable:
+
+```json
+{
+  "importMap": "import_map.json",
+  "tasks": {
+    "lume": "DENO_DIR=_vendor echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "build": "deno task lume",
+    "serve": "deno task lume -s"
+  }
+}
+```
+
+Now, when you run any Lume task, all Deno dependencies will be downloaded into
+the `_vendor` folder.
+
 ## Visual Studio Code configuration
 
 If you use Visual Studio Code, it's highly recommended to install the
