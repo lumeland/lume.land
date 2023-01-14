@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Val Packett
+    img: /img/showcase/val-packett.webp
+    url: https://val.packett.cool/
+    description: The website of Val Packett
+    code: https://codeberg.org/valpackett/val.packett.cool
+
   - title: Qworum
     img: /img/showcase/qworum.webp
     url: https://qworum.net
