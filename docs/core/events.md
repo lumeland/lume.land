@@ -35,7 +35,7 @@ the files with `lume --serve`, this is **only executed once** after the initial
 build. Use **afterUpdate** for subsequent changes.
 
 ```js
-site.addEventListener("afterBuild", () => {
+site.addEventListener("afterBuild", (event) => {
   console.log("The build is finished");
   console.log(event.pages); // The pages that have been build
   console.log(event.staticFiles); // The files that have been copied
@@ -94,7 +94,7 @@ This event is triggered just after all pages are rendered but before they are
 processed.
 
 ```js
-site.addEventListener("afterRender", (event) => {
+site.addEventListener("afterRender", () => {
   console.log("All pages rendered");
 });
 ```
@@ -104,7 +104,7 @@ site.addEventListener("afterRender", (event) => {
 This event is triggered just before saving the generated pages.
 
 ```js
-site.addEventListener("beforeSave", (event) => {
+site.addEventListener("beforeSave", () => {
   console.log("All pages are about to be saved");
 });
 ```
