@@ -45,7 +45,7 @@ import modifyUrls from "lume/plugins/modify_urls.ts";
 const site = lume();
 
 site.use(modifyUrls({
-  fn: (url) => url.toLowerCase();
+  fn: (url) => url.toLowerCase(),
 }));
 
 export default site;
