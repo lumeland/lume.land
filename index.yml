@@ -323,6 +323,14 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://www.youtube.com/watch?v=lQb_u5X0gck
+      author: denolab
+      avatar: /img/avatars/testimonials/denolab.webp
+      date: January 16, 2023
+      text: Lume - Deno Static Site Generator
+      cover: /img/covers/video_lume_denolab.webp
+      type: video
+
     - url: https://twitter.com/DogaArmangil/status/1602879934095048704
       author: Doğa Armangil (@DogaArmangil)
       avatar: /img/avatars/testimonials/doga.webp
