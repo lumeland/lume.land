@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Hypermedia Systems
+    img: /img/showcase/hypermedia_systems.webp
+    url: https://hypermedia.systems/
+    description: A book on building Hypermedia Driven Applications with htmx and Hyperview
+    code: https://hypermedia.systems/
+
   - title: Val Packett
     img: /img/showcase/val-packett.webp
     url: https://val.packett.cool/
