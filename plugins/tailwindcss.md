@@ -41,7 +41,7 @@ See
 
 This plugin accepts a configuration object with the available options:
 
-- `config`: Configuration object for Tailwind where you can define themes,
+- `options`: Configuration object for Tailwind where you can define themes,
   plugins, etc. See the
   [Tailwind docs for more info](https://tailwindcss.com/docs/configuration)
 - `extensions`: The file extensions that Tailwind will be analyze to extract the
@@ -53,8 +53,8 @@ site.use(tailwindcss({
   // Extract the classes from HTML and JSX files
   extensions: [".html", ".jsx"],
 
-  // Additional config, like the theme colors and fonts
-  config: {
+  // Your Tailwind options, like the theme colors and fonts
+  options: {
     theme: {
       colors: {
         blue: "#1fb6ff",
