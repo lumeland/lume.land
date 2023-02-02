@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Angel Dollface
+    img: /img/showcase/angeldollface.webp
+    url: https://angeldollface.art/
+    description: Personal website of Angel Dollface.
+    code: https://github.com/angeldollface/angeldollface.github.io
+
   - title: Hypermedia Systems
     img: /img/showcase/hypermedia_systems.webp
     url: https://hypermedia.systems/
@@ -167,7 +173,7 @@ sites:
     code: https://github.com/fabon-f/website
 
   - title: Better Know Canvas
-    img: /img/showcase/canvas.webp
+    #img: /img/showcase/canvas.webp
     url: https://canvas.rocks/
     description: A collection of advanced web graphics tutorials by Fernando Serboncini.
     code: https://github.com/fserb/bkc
