@@ -1,5 +1,8 @@
 {
-  "importMap": "import_map.json",
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v1.15.2/"
+  },
+  "lock": false,
   "compilerOptions": {
     "lib": [
       "dom",

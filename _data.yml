@@ -1,0 +1,8 @@
+metas:
+  title: =title
+  description: =description
+  twitter: "@misteroom"
+  image: /avatar.jpg
+  color: "#141b1f"
+  icon: /apple-touch-icon.png
+  generator: true
