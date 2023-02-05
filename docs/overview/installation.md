@@ -23,19 +23,14 @@ This command creates the following files:
   customize the site build.
 - `deno.json`: The
   [Deno's configuration file](https://deno.land/manual/getting_started/configuration_file).
-  It includes the path of the import map file and some tasks to run Lume. You
-  can also configure other features of Deno like TypeScript, formatter, linter,
-  etc.
-- `import_map.json`: The
-  [import map file](https://deno.land/manual/node/import_maps#using-import-maps)
-  with the import URL of Lume. Here you can add the dependencies of your project
-  and update Lume by editing the version number.
+  It includes the import map and some tasks to run Lume. You can also configure
+  other features of Deno like TypeScript, formatter, linter, etc.
 
 Here is an example of these three configuration files:
 
 <lume-code>
 
-```js {title="_config.js"}
+```js {title="_config.ts"}
 import lume from "lume/mod.ts";
 
 const site = lume();
@@ -45,19 +40,13 @@ export default site;
 
 ```json {title="deno.json"}
 {
-  "importMap": "import_map.json",
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
-  }
-}
-```
-
-```json {title="import_map.json"}
-{
+  },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.11.4/"
+    "lume/": "https://deno.land/x/lume@v1.15.2/"
   }
 }
 ```
@@ -81,7 +70,7 @@ Due Lume uses Deno task to work, you need to type always
 all the time, you can install the [Lume CLI](https://github.com/lumeland/cli)
 script with:
 
-```
+```sh
 deno install --allow-run --name lume --force --reload https://deno.land/x/lume_cli/mod.ts
 ```
 

@@ -6,12 +6,13 @@ order: 2
 
 The following examples assume that you are using Lume as a Deno task.
 
-The commands for the globally installed Lume are similar but removing the
-`deno task` part. For example `deno task lume --serve` becomes `lume --serve`.
+If you have [Lume CLI](https://deno.land/x/lume_cli) installed, the commands are
+similar but removing the `deno task` part. For example `deno task lume --serve`
+becomes `lume --serve`.
 
 ## Build the site
 
-To build your website, simply run:
+Run the following to build your website:
 
 ```sh
 deno task lume
