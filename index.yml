@@ -323,6 +323,13 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://twitter.com/angeldollface66/status/1624559604460912641
+      author: 🎀 𖤐𝔸ℕ𝔾𝔼𝕃 𝔻𝕆𝕃𝕃𝔽𝔸ℂ𝔼𖤐 🎀 (@angeldollface66)
+      avatar: /img/avatars/testimonials/angeldollface.webp
+      date: February 12, 2023
+      text: |
+        Quick PSA: Lume, an SSG by <a href="https://twitter.com/misteroom">@misteroom</a>, really helped me rebuild my site in an easy and safe way. Using three.js and Lume side-by-side was easy, flexible, and really fun. Thank you so much for Lume.❤️
+
     - url: https://www.youtube.com/watch?v=lQb_u5X0gck
       author: denolab
       avatar: /img/avatars/testimonials/denolab.webp
