@@ -75,12 +75,6 @@ sites:
     url: https://getbadger.io/
     description: Landing of a SEO reporting tool
     code: https://github.com/marketgoo/badger-landing
-  
-  - title: Microflash
-    img: /img/showcase/mflash.webp
-    url: https://mflash.dev/
-    description: Personal site of Naiyer Asif
-    code: https://github.com/Microflash/site
 
   - title: Tarugo22
     img: /img/showcase/tarugo22.webp
