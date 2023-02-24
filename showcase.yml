@@ -13,6 +13,24 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: LEEDS 2023 Data
+    img: /img/showcase/leeds_2023_data.webp
+    url: https://data.leeds2023.co.uk/
+    description: Microsite to display data about the LEEDS 2023 Year of Culture.
+    code: https://github.com/open-innovations/leeds-2023
+
+  - title: Exploit Notes
+    img: /img/showcase/exploit_notes.webp
+    url: https://exploit-notes.hdks.org/
+    description: A sticky notes for pentesting. 
+    code: https://github.com/hideckies/exploit-notes
+
+  - title: Open Innovations Weeknotes
+    img: /img/showcase/weeknotes.webp
+    url: https://weeknotes.open-innovations.org/
+    description: A site to hold weeknotes for the Open Innovations team.
+    code: https://github.com/open-innovations/weeknotes
+
   - title: Angel Dollface
     img: /img/showcase/angeldollface.webp
     url: https://angeldollface.art/
