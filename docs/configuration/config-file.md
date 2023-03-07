@@ -52,9 +52,9 @@ const site = lume({
 });
 ```
 
-You can override the value from the CLI with
-`--dest`, which is useful if you want to generate the site without overriding the previous one. For example:`deno
-task lume --dest=./output` { .tip }
+You can override the value from the CLI with `--dest`, which is useful if you
+want to generate the site without overriding the previous one. For
+example:`deno task lume --dest=./output` { .tip }
 
 ### emptyDest
 
@@ -88,9 +88,9 @@ const site = lume({
 This value is ignored by the local server (started with `lume --serve`), which
 always uses `http://localhost:3000` (or the defined port if you change it).
 
-You can override the value from the CLI with
-`--location`, which is useful if you want to build and deploy the site to different locations. For example: `deno
-task lume --location=https://my-site.com/blog/` { .tip }
+You can override the value from the CLI with `--location`, which is useful if
+you want to build and deploy the site to different locations. For example:
+`deno task lume --location=https://my-site.com/blog/` { .tip }
 
 ### prettyUrls
 

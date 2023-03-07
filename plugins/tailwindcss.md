@@ -37,7 +37,9 @@ export default site;
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/tailwindcss.ts/~/Options).
 
-Note that Tailwind requires the `@tailwind` directives somewhere in your CSS code to output the generated code. For example, you can create the `styles.css` file with the following code:
+Note that Tailwind requires the `@tailwind` directives somewhere in your CSS
+code to output the generated code. For example, you can create the `styles.css`
+file with the following code:
 
 ```css
 @tailwind base;
@@ -45,7 +47,8 @@ Note that Tailwind requires the `@tailwind` directives somewhere in your CSS cod
 @tailwind utilities;
 ```
 
-See [more info about Tailwind's functions and directives in its documentation page](https://tailwindcss.com/docs/functions-and-directives)
+See
+[more info about Tailwind's functions and directives in its documentation page](https://tailwindcss.com/docs/functions-and-directives)
 
 ## Configuration
 
