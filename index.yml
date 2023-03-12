@@ -329,6 +329,7 @@ testimonials:
       date: March 6, 2023
       text: From static site generator to static site processor
       cover: /img/covers/og_thomasorus.webp
+      type: article
 
     - url: https://twitter.com/m_giron/status/1625883711169339392
       author: Mario Girón (@m_giron)
@@ -372,7 +373,7 @@ testimonials:
       avatar: /img/avatars/testimonials/hmans.webp
       date: November 10, 2022
       text: Lume is Great and I'm finally at peace.
-      cover: /img/covers/og_lume_is_great.webp
+      type: article
 
     - url: https://twitter.com/hmans/status/1590781772371234818
       author: Hendrik Mans (@hmans)
@@ -473,14 +474,6 @@ testimonials:
       avatar: /img/avatars/testimonials/deno.webp
       date: September 18, 2022
       text: Lume static site generator <a href="https://t.co/Lr9GTGUOlB">https://t.co/Lr9GTGUOlB</a>
-
-    - url: https://www.youtube.com/watch?v=4YtxRK8oHAU
-      author: ManzDev
-      avatar: /img/avatars/testimonials/manzdev.webp
-      date: September 13, 2021
-      text: 🦕🔥 Aprendiendo Lume (Generador de sitios estáticos basado en Deno)
-      cover: /img/covers/video_aprendiendo_lume.webp
-      type: video
 
     - url: https://twitter.com/fserb/status/1390404312581410817
       author: Fernando Serboncini (@fserb)

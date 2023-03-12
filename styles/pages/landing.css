@@ -259,6 +259,7 @@
     break-inside: avoid;
   }
 }
+.landing-testimonials-article,
 .landing-testimonials-quote {
   border-radius: var(--border-radius);
   margin: 0;
@@ -269,6 +270,18 @@
   & p {
     margin: 0;
     font: var(--text-caption);
+  }
+}
+.landing-testimonials-article {
+  & h3 {
+    margin: 0;
+
+    & a {
+      text-decoration: none;
+      &:hover {
+        color: var(--color-foreground);
+      }
+    }
   }
 }
 .landing-testimonials-cover {

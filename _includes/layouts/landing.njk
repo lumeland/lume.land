@@ -78,18 +78,11 @@ page_css: landing.css
     <ul class="landing-testimonials-quotes">
     {% for item in testimonials.quotes %}
       <li>
-        {% if item.cover %}
+        {% if item.type == "video" %}
         <figure class="landing-testimonials-cover">
-          {% if item.type == "video" %}
           <a href="{{ item.url }}" class="is-video">
             <img src="{{ item.cover }}" alt="{{ item.text }}" width="300" height="200">
           </a>
-          {% else %}
-          <a href="{{ item.url }}" class="is-article">
-            <img src="{{ item.cover }}" width="300">
-            <p>{{ item.text }}</p>
-          </a>
-          {% endif %}
           <figcaption class="landing-testimonial-caption">
             <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar | replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
             <a href="{{ item.url }}">
@@ -98,6 +91,17 @@ page_css: landing.css
             </a>
           </figcaption>
         </figure>
+        {% elif item.type == "article" %}
+        <article class="landing-testimonials-article">
+          <h3><a href="{{ item.url }}">{{ item.text }}</a></h3>
+          <footer class="landing-testimonial-caption">
+            <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar | replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
+            <a href="{{ item.url }}">
+              <strong>{{ item.author }}</strong>
+              <time>{{ item.date }}</time>
+            </a>
+          </footer>
+        </article>
         {% else %}
         <blockquote class="landing-testimonials-quote">
           {{ item.text | md | safe }}
