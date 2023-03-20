@@ -23,7 +23,9 @@ import multilanguage from "lume/plugins/multilanguage.ts";
 
 const site = lume();
 
-site.use(multilanguage());
+site.use(multilanguage({
+  languages: ["en", "gl", "es"], // Available languages
+}));
 
 export default site;
 ```
@@ -160,41 +162,36 @@ duplicated content in cases in which the different languages have many common
 data.
 
 But in other cases is more convenient to have a file per language. This plugin
-can detect these files if they fulfill the following requirements:
+can detect these files if they share the same `id` variable.
 
-- They are in the same directory.
-- They have the `lang` variable defined.
-- They have the same filename ending with the `_[lang]` suffix.
+For example, let's say we have the following pages:
 
-In the following example we can see three files containing the same post but in
-different languages:
+```md
+---
+lang: en
+url: /about-me/
+id: about
+---
 
-```txt
-|_ /posts
-  |_ /about-me_en.md
-  |_ /about-me_gl.md
-  |_ /about-me_es.md
+# About me
 ```
 
-The plugin can identify these three pages as language versions of the same page,
-and they will be exported as `/en/about-me/`, `/gl/about-me/` and
-`/es/about-me/`. Note that you can customize the `url` of the pages.
+The galician version:
 
-If there's a page without the language defined in the filename it will be
-detected too:
+```md
+---
+lang: gl
+url: /acerca-de-min/
+id: about
+---
 
-```txt
-|_ /posts
-  |_ /about-me.md
-  |_ /about-me_gl.md
-  |_ /about-me_es.md
+# Acerca de min
 ```
 
-In this example, the first file doesn't have the language suffix, but it's
-identified as another language version. This is useful if you already have a
-site with only one language and want to add other languages progressively
-without affeting to the existing urls. In this case, the URLs generated are
-`/posts/about-me/`, `/gl/about-me/` and `/es/about-me/`.
+The plugin interprets these two pages as the same content but in different
+languages, because they have the same id (`about`). The pages will be exported
+as `/en/about-me/`, `/gl/acerca-de-min/`. Note that the `/en/` and `/gl/`
+prefixes are automatically added.
 
 ## Links to the translated languages
 
@@ -235,8 +232,8 @@ nunjucks:
 <ul class="languages">
 {% for pageLang, page in alternates %}
   <li>
-    <a href="{{ page.data.url }}" {% if pageLang == lang %}aria-current="page"{% endif %}>
-      {{ page.data.title }} ({{ pageLang }})
+    <a href="{{ page.url }}" {% if pageLang == lang %}aria-current="page"{% endif %}>
+      {{ page.title }} ({{ pageLang }})
     </a>
   </li>
 {% endfor %}
@@ -266,30 +263,3 @@ This code outputs something like:
   </li>
 </ul>
 ```
-
-## Multilanguage paginations
-
-If you want to search and paginate multilanguage pages (for example a blog with
-posts translated to several languages), this plugin also includes the
-`mergeLanguages` helper to make it easier.
-
-<lume-code>
-
-```js {title=posts.js}
-export default function* ({ search, paginate, mergeLanguages }) {
-  // Search all posts in english, galician and spanish
-  const enPages = search.pages("lang=en type=post");
-  const glPages = search.pages("lang=gl type=post");
-  const esPages = search.pages("lang=es type=post");
-
-  // Paginate the results
-  const en = paginate(enPages, { url: (n) => `/en/posts/${n}/` });
-  const gl = paginate(glPages, { url: (n) => `/gl/posts/${n}/` });
-  const es = paginate(esPages, { url: (n) => `/es/posts/${n}/` });
-
-  // Merge and yield all paginations
-  yield* mergeLanguages({en, gl, es});
-}
-```
-
-</lume-code>

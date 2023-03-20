@@ -52,8 +52,8 @@ something like this:
 All pages have a `date` variable with the file creation date. This value can be
 used to order the pages (in a blog, for example). If you want to define a
 different date, you can prepend it to the filename using the `yyyy-mm-dd` syntax
-followed by an underscore `_` (or `yyyy-mm-dd-hh-ii-ss` if you also need the
-time). Note that this part is removed in generating the final url:
+followed by a hyphen `-` or an underscore `_` (or `yyyy-mm-dd-hh-ii-ss` if you
+also need the time). Note that this part is removed in generating the final url:
 
 ```txt
 .

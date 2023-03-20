@@ -199,6 +199,9 @@ are:
 - `pluralRelationKey`: The key name use to store the relation if it's a multiple
   relation (for example `articles` instead of `article`).
 - `idKey`: The key name used to identify the entity (by default is `id`).
+- `filter`: A custom function to filter the related elements. It's useful when
+  combined with the [multilanguage plugin](./multilanguage.md), to relate only
+  elements not only with the same `id` but also the same language.
 
 Let's see an example:
 

@@ -43,6 +43,24 @@ included in the HTML. For example:
 The source file must be exported to the `dest` directory; there's no support for
 external URLs. {.tip}
 
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "lume/mod.ts";
+import inline from "lume/plugins/inline.ts";
+
+const site = lume();
+
+site.use(inline());
+
+export default site;
+```
+
+See
+[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/inline.ts/~/Options).
+
 ## SVG inline
 
 Bitmap images (like `.png` or `.jpeg`) are inlined as base64 data but SVG images
@@ -63,20 +81,12 @@ Will become:
 </svg>
 ```
 
-## Installation
-
-Import this plugin in your `_config.ts` file to use it:
+By default, some attributes like `id` or `class` are copied from the original
+`img` to the new `svg` element. You can configure the plugin to copy more
+attributes using an array of strings or regular expressions:
 
 ```js
-import lume from "lume/mod.ts";
-import inline from "lume/plugins/inline.ts";
-
-const site = lume();
-
-site.use(inline());
-
-export default site;
+site.use(inline({
+  copyAttributes: ["title", /^data-/], // Copy the "title" and all data-* attributes
+}));
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/inline.ts/~/Options).

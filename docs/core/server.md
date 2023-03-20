@@ -144,6 +144,23 @@ server.use(redirects({
 }));
 ```
 
+### serve_folder
+
+Middleware to add additional folders to the server. Useful to serve more static
+files stored in a different place.
+
+```js
+server.use(serve_folder({
+  root: "./other-folder",
+}));
+
+// Serve the files in this folder only if they don't exist in the main folder.
+server.use(serve_folder({
+  root: "./fallback-files",
+  after: true,
+}));
+```
+
 ### reload
 
 To implement a live-reload in the browser after file changes. It's used by Lume

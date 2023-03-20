@@ -85,3 +85,57 @@ site.copy([".jpg", ".gif", ".png"], (file) => "/img" + file);
 
 The copied files are not processed, even if they have known extensions like
 `.md`, `.njk`, etc. {.tip}
+
+## Copy remaining files
+
+Sometimes it's not possible to know in advance all files that must be copied,
+because they can be stored in any folder or can have any extension. For example,
+imagine you have a website with articles, and every article is stored in it's
+folder that can contain static files of any extension:
+
+```txt
+|_ articles/
+    |_ article-1/
+    |   |_ index.md
+    |   |_ picture.jpg
+    |   |_ document.pdf
+    |   |_ foo32.gif
+    |_ article-2/
+        |_ index.md
+        |_ journey.mp4
+        |_ download.zip
+```
+
+We cannot do `site.copy("articles")`, because the `index.md` files are inside
+these folders and wouldn't be processed (they would be treated as static files).
+We can select the files by extension with
+`site.copy([".jpg", ".pdf", ".gif", ".mp4", ".zip"])` but every time a file with
+a new extension is uploaded to our site, we have to remember to update the
+`_config` file.
+
+For these use cases, there's the `copyRemainingFiles()` function that basically
+says: when you find a file and don't know what to do with it, copy it. To setup
+this behavior, just add the following line to your _config file:
+
+```ts
+site.copyRemainingFiles();
+```
+
+It's possible to include a function in the first argument to filter which files
+must be copied. For example, if we only want to copy the remaining files inside
+the `/articles/` folder:
+
+```ts
+site.copyRemainingFiles(
+  (path: string) => path.startsWith("/articles/"),
+);
+```
+
+If the filter returns a string instead of a boolean, it will be used to rename
+the file. For example, let's say we want to ensure all files are in lower case:
+
+```ts
+site.copyRemainingFiles(
+  (path: string) => path.startsWith("/articles/") ? path.toLowerCase() : false,
+);
+```
