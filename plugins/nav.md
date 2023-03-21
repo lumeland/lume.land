@@ -122,7 +122,7 @@ example in Nunjucks:
 
 ### Change the initial URL
 
-If you want to start your menu from a subfolder, just include the initial url in
+If you want to start your menu from a specific page, just include it's url in
 the first argument:
 
 ```js
@@ -131,7 +131,7 @@ nav.menu("/articles/");
 
 ### Children sorting
 
-By default, the children of the elements are sorted by `slug`. You can configure
+By default, the children of the elements are sorted by URL. You can configure
 the plugin to sort by any page data variable. For example:
 
 ```ts
@@ -143,8 +143,34 @@ site.use(nav({
 ## Breadcrumbs
 
 The function `nav.breadcrumb()` returns an array of the parent items until the
-root. For example, in the page `/articles/second-article/chapter-2/` we can
-generate a breadcrumb with the following Nunjucks code:
+root. For example, the page `/articles/second-article/chapter-2/` returns the
+following breadcrumb data:
+
+```js
+[
+  {
+    slug: "chapter-2",
+    data: Data,
+  },
+  {
+    slug: "second-article",
+    children: [...],
+  },
+  {
+    slug: "articles",
+    data: Data,
+    children: [...],
+  },
+  {
+    slug: "",
+    data: Data,
+    children: [...],
+  }
+]
+```
+
+We can use this data to generate the breadcrumb with the following Nunjucks
+code:
 
 ```html
 <ul>
