@@ -55,9 +55,19 @@ sites:
     description: A software product site.
     code: https://github.com/doga/qworum-website
 
+  - title: "Theme: Simple Blog"
+    url: https://lumeland.github.io/theme-simple-blog/
+    description: Official theme to start a Blog.
+    code: https://github.com/lumeland/theme-simple-blog
+
+  - title: "Theme: Simple Wiki"
+    url: https://lumeland.github.io/theme-simple-wiki/
+    description: Official theme to start Wiki.
+    code: https://github.com/lumeland/theme-simple-wiki
+
   - title: Base Blog
     url: https://lumeland.github.io/base-blog/
-    description: The official starter to build a blog.
+    description: A starter template to build a blog.
     code: https://github.com/lumeland/base-blog
 
   - title: Muse Blog
