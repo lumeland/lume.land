@@ -34,6 +34,7 @@ The available options are:
   handle. By default it is `[".js", ".ts"]`.
 - **options**: The options to pass to the esbuild library.
   [See the esbuild documentation](https://esbuild.github.io/api/#simple-options).
+- **esm**: Options to pass to requests to `esm.sh`.
 
 Example with the default options:
 
@@ -55,6 +56,69 @@ site.use(esbuild({
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/esbuild.ts/~/Options).
+
+## esm.sh
+
+This plugin converts any module imported from `npm` to `esm.sh`. For example,
+the following code:
+
+```js
+import classNames from "npm:classnames";
+```
+
+is converted to:
+
+```js
+import classNames from "https://esm.sh/classnames";
+```
+
+You can use the `esm` key to add parameters to some packages. See the
+[esm.sh docs](https://esm.sh/#docs) for more info.
+
+For example, let's say you are using
+[react-table](https://www.npmjs.com/package/react-table) in your code, that is a
+CJS package.
+
+```js
+import { useTable } from "npm:react-table";
+```
+
+ESM.sh not always can resolve modules from CJS to ESM, so you may get an error
+like `react-table not provide an export named useTable`. You can specify the
+export names to this package with the `cjsExports` parameter:
+
+```js
+site.use(esbuild({
+  extensions: [".jsx"],
+  esm: {
+    cjsExports: {
+      "react-table": ["useTable"],
+    },
+  },
+}));
+```
+
+The available options for `esm` are:
+
+- `cjsExports`: To specify the modules exported by a CJS package.
+- `dev`: To include the `?dev` flag to all packages. Example:
+  ```js
+  site.use(esbuild({
+    esm: {
+      dev: true,
+    },
+  }));
+  ```
+- `deps`: To specify the dependencies of a specific package.
+  ```js
+  site.use(esbuild({
+    esm: {
+      deps: {
+        swr: "react@17.0.2",
+      },
+    },
+  }));
+  ```
 
 ## Hooks
 

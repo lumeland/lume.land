@@ -129,15 +129,14 @@ the first argument:
 nav.menu("/articles/");
 ```
 
-### Children sorting
+### Filtering and sorting
 
-By default, the children of the elements are sorted by URL. You can configure
-the plugin to sort by any page data variable. For example:
+You can filter and sort the elements of the menu in the same way as the
+[Search](./search.md) plugin. For example, let's build a menu with the english
+pages, sorted by URL:
 
-```ts
-site.use(nav({
-  order: "order", // order all children by the data.order variable.
-}));
+```js
+nav.menu("/", "lang=en", "url=asc");
 ```
 
 ## Breadcrumbs
