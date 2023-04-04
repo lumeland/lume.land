@@ -117,10 +117,6 @@ The available operators for the conditions are:
   also converted so you can filter pages without a value with
   `keyname=undefined`. The strings with numeric values are also converted to
   numbers.
-- `!=` to search non-coincidences, for example `menu!=true`. The strings `true`
-  and `false` are converted to booleans automatically. `undefined` and `null`
-  are also converted so you can filter pages containing a value with
-  `keyname!=undefined`.
 - `^=` to search values starting with another value. For example all categories
   starting with the letter `A`: `category^=A`.
 - `$=` to search values ending with another value. For example all categories
@@ -142,6 +138,20 @@ and with the tag `football`:
 {% endfor %}
 ```
 
+### Negative conditions
+
+You can prepend the `!` character to the operator to negate the condition. For
+example while `menu=true` returns pages whose `menu` variable is `true`,
+`menu!=true` returns pages whose `menu` variable is NOT `true`.
+
+All operators accepts NOT operators. For example `category!^=A` (pages which
+categories that does NOT start with the letter `A`), or `title!*=security`
+(pages whose title does NOT contain the word "security").
+
+Alternatively, you can prepend the `!` character at the begining of the
+condition. For example `!menu=true` is equivalent to `menu!=true`, and
+`!category^=A` is equivalent to `category!^=A`.
+
 ### Using `|` for OR conditions
 
 You can assign several values for any condition using the pipe character `|`.
@@ -153,17 +163,6 @@ the tags `html` or `css`: `search.pages("post html|css")`.
 OR conditions can be used with other fields. For example, to search pages with
 titles containing the words "html", "css" or "javascript":
 `search.pages("title*=html|css|javascript")`.
-
-In addition to space-separated values, you can use an array of values, which is
-sometimes more practical.
-
-```html
-{% for post in search.pages(["taxonomy.category=sport", "football"]) %}
-<a href="{{ post.data.url }}">
-  {{ post.data.title }}
-</a>
-{% endfor %}
-```
 
 ## The `data` filter
 
