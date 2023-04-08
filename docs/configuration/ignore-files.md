@@ -30,5 +30,7 @@ Example:
 
 ```js
 // Ignore all files with ".md" extension inside the "draft" folder
-site.ignore((path) => path.match(/^\/draft\/.*\.md$/));
+site.ignore((path) => {
+  return path.match(/^\/draft\/.*\.md$/) !== null;
+});
 ```
