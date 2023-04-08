@@ -124,3 +124,7 @@ template engine you want to use. For example
 [Eta](https://marketplace.visualstudio.com/items?itemName=shadowtime2000.eta-vscode),
 [postcss](https://marketplace.visualstudio.com/items?itemName=cpylua.language-postcss),
 etc.
+
+## WebStorm configuration
+
+There's a [Deno plugin](https://plugins.jetbrains.com/plugin/14382-deno/) for WebStorm that you can install if you use this IDE.
