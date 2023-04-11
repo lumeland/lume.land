@@ -13,6 +13,11 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Universo Reich
+    img: /img/showcase/universo-reich.webp
+    url: https://escoladeartelugo.com/universo-reich/
+    description: Collaborative and educational project about Steve Reich.
+
   - title: Kille
     img: /img/showcase/kille.webp
     url: https://kille.es/
