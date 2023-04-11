@@ -13,6 +13,11 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Universo Reich
+    img: /img/showcase/universo-reich.webp
+    url: https://escoladeartelugo.com/universo-reich/
+    description: Collaborative and educational project about Steve Reich.
+
   - title: Kille
     img: /img/showcase/kille.webp
     url: https://kille.es/
@@ -245,8 +250,3 @@ sites:
     url: https://minimalist-blog-x8c5ngg3kzt0.deno.dev/
     description: Minimalist blog template built for lume 
     code: https://github.com/officialrajdeepsingh/Minimalist-blog
-
-  - title: Universo Reich
-    img: /img/showcase/universo-reich.webp
-    url: https://escoladeartelugo.com/universo-reich/
-    description: Collaborative and educational project about Steve Reich.
