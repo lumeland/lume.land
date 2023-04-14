@@ -28,7 +28,7 @@ export default site;
 
 See
 [all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/liquid.ts/~/Options).
-[Go to the Liquid options page](https://liquidjs.com/api/interfaces/liquid_options_.liquidoptions.html)
+[Go to the Liquid options page](https://liquidjs.com/api/interfaces/LiquidOptions.html)
 for more info about specific Liquid settings.
 
 ## Creating layouts
