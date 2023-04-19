@@ -254,6 +254,6 @@ sites:
   - title: Lume Deno Template
     img: /img/showcase/LumeTemplate.webp
     url: https://lume-deno-template.deno.dev/
-    description: eAnother Lume Template/ With CSS & Blog (MD) Support
+    description: Another Lume Template/ With CSS & Blog (MD) Support
     code: https://github.com/ArnavK-09/lume-deno-template
  
