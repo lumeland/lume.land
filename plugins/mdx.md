@@ -34,10 +34,10 @@ site.use(mdx());
 export default site;
 ```
 
-By default, Deno uses React to render JSX.
-If you want to use the `jsx_preact` plugin, add the following to your `deno.json` file:
+By default, Deno uses React to render JSX. If you want to use the `jsx_preact`
+plugin, add the following to your `deno.json` file:
 
-```
+```json
 "compilerOptions": {
   "jsx": "react-jsx",
   "jsxImportSource": "npm:react"
