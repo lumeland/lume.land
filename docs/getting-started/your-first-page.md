@@ -6,7 +6,7 @@ order: 1
 
 ## The page file
 
-After setup Lume in your project's folder
+After you setup Lume in your project's folder
 ([see installation instructions](../overview/installation.md) if you don't have
 it yet), create the file `index.md` and add some content in
 [markdown](https://en.wikipedia.org/wiki/Markdown) format, for example:
