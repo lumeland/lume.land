@@ -192,7 +192,7 @@
   margin: 0;
   padding: var(--row-gap-0) var(--margin);
   display: flex;
-  column-gap: 10px;
+  column-gap: var(--column-gap-1);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -201,8 +201,12 @@
     display: none;
   }
 
+  & > figure,
   & > a {
-    flex: 0 0 auto;
+    flex: 0 0 300px;
+  }
+  & .button.is-small {
+    float: right;
   }
 }
 .landing-examples-cta {

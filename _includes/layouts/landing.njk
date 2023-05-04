@@ -64,9 +64,20 @@ page_css: landing.css
     <lume-carousel role="region" aria-label="Showcase" tabindex="0" class="landing-examples-sites" id="examples">
       {% set showcase = search.page("url=/showcase/") %}
       {% for site in showcase.data.sites | selectattr("img") | slice(8) %}
-      <a href="{{ site.url }}" title="{{ site.title }}" class="site-image">
-        <img src="{{ site.img }}" alt="{{ site.title }}" width="300" height="200">
-      </a>
+      <figure class="site">
+        <a href="{{ site.url }}" class="site-image">
+          <img src="{{ site.img }}" alt="Screenshot of the site" width="300" height="200">
+        </a>
+        <figcaption class="site-description">
+          <p>
+            <a href="{{ site.url }}" class="site-name">
+              {{ site.title }}
+            </a>
+          </p>
+
+          {{ site.description | md | safe }}
+        </figcaption>
+      </figure>
       {% endfor %}
       <a href="{{ examples.more.href }}" class="landing-examples-cta">{{ examples.more.text }}</a>
     </lume-carousel>

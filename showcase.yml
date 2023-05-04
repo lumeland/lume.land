@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: IBM Deep Search
+    img: /img/showcase/deep_search.webp
+    url: https://ds4sd.github.io/
+    description: Landing page for the IBM Deep Search project.
+    code: https://github.com/DS4SD/DS4SD.github.io
+
   - title: Universo Reich
     img: /img/showcase/universo-reich.webp
     url: https://escoladeartelugo.com/universo-reich/
