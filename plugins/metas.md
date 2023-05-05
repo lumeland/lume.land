@@ -136,3 +136,10 @@ metas:
   title: "=title"
   description: "=intro.text"
 ```
+
+As of Lume 1.17.0 is possible to use CSS selectors using the `$` prefix:
+
+```yml
+metas:
+  title: "$ h1" # Use the content of the first <h1> element
+```

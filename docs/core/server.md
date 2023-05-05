@@ -4,10 +4,9 @@ description: Set up a server for your site.
 order: 8
 ---
 
-Lume includes a `Server` class used to start a local HTTP server when running
-`lume --serve`. You can use this class to start your own server, for example, to
-serve the static files in **Deno Deploy**. Let's see a basic example of a
-server:
+Lume includes a `Server` class used to run a HTTP server. You can use this class
+to start your own server, for example, to serve the static files in **Deno
+Deploy**. Let's see a basic example of a server:
 
 ```ts
 import Server from "https:/deno.land/x/lume/core/server.ts";

@@ -38,8 +38,8 @@ This plugin accepts a configuration object. The available options are:
 - `format`: The output format (expanded or compressed). By default it is
   `compressed`.
 - `options`: An object with options to configure Deno SASS.
-- `includes`: An array of directories to search for the `@import`ed files. By
-  default is it is `["_includes"]`.
+- `includes`: The directory to search for the `@import`ed files. By default is
+  it is `_includes`.
 
 ## Includes
 

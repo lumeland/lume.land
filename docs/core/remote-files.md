@@ -102,9 +102,3 @@ etc). More info about
 
 JavaScript/TypeScript modules imported as `import foo from "./filename.ts"` are
 not managed by Lume reader, but you can use import maps for a similar behavior.
-
-### Asset processors
-
-Some processors like `SASS` don't allow customizing how to load imported
-resources, so they cannot use the Lume reader. For styles, only the `postcss`
-plugin supports remote files. And to bundle JavaScript use `esbuild`.

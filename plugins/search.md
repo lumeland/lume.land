@@ -44,6 +44,17 @@ by the tags `post` and `static site generator`:
 </ul>
 ```
 
+Use the exclamation mark to search pages that doesn't contain a specific tag.
+For example, to search pages with the tag "post" not containing the tag "html":
+
+```html
+<ul>
+  {% for post in search.pages("post !html") %}
+  <li>{{ post.data.title }}</li>
+  {% endfor %}
+</ul>
+```
+
 ## Sort pages
 
 The second argument is the value used to sort. By default, the pages are sorted

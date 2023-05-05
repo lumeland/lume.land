@@ -18,11 +18,9 @@
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -"
   },
   "lint": {
-    "files": {
-      "exclude": [
-        "./_site"
-      ]
-    },
+    "exclude": [
+      "./_site"
+    ],
     "rules": {
       "tags": [
         "recommended"
@@ -30,10 +28,8 @@
     }
   },
   "fmt": {
-    "files": {
-      "exclude": [
-        "./_site"
-      ]
-    }
+    "exclude": [
+      "./_site"
+    ]
   }
 }

@@ -140,6 +140,46 @@ console.log("Listening on http://localhost:8000");
 
 </lume-code>
 
+## Using extra data
+
+If you want to use dynamic data, use the option `extraData` which accepts a
+function that must return an object with the extra data to be passed to the
+page. For example, let's say we want to pass the search parameters of the
+request's url:
+
+```ts
+import lume from "lume/mod.ts";
+import onDemand from "lume/plugins/on_demand.ts";
+
+site.use(onDemand({
+  extraData(request: Request) {
+    const searchParams = new URL(request.url).searchParams;
+    const params = Object.fromEntries(searchParams.entries());
+
+    return {
+      params,
+    };
+  },
+}));
+
+export default site;
+```
+
+Now, the on demand pages will have the `params` key with the search params
+values. For example, in a Nunjucks page:
+
+```njk
+---
+layout: layout.njk
+ondemand: true
+url: /example/
+---
+
+Hello {{ params.name }}
+```
+
+The URL `/example/?name=Óscar` will return `Hello Òscar`.
+
 ## See an example
 
 You can see [a live example of a site](https://lume-ondemand.deno.dev/) with two

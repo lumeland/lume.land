@@ -127,4 +127,5 @@ etc.
 
 ## WebStorm configuration
 
-There's a [Deno plugin](https://plugins.jetbrains.com/plugin/14382-deno/) for WebStorm that you can install if you use this IDE.
+There's a [Deno plugin](https://plugins.jetbrains.com/plugin/14382-deno/) for
+WebStorm that you can install if you use this IDE.
