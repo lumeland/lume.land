@@ -19,21 +19,26 @@ sites:
     description: Landing page for the IBM Deep Search project.
     code: https://github.com/DS4SD/DS4SD.github.io
 
-  - title: Universo Reich
-    img: /img/showcase/universo-reich.webp
-    url: https://escoladeartelugo.com/universo-reich/
-    description: Collaborative and educational project about Steve Reich.
-
-  - title: Kille
-    img: /img/showcase/kille.webp
-    url: https://kille.es/
-    description: Personal site of Guille Reimunde.
-
   - title: LEEDS 2023 Data
     img: /img/showcase/leeds_2023_data.webp
     url: https://data.leeds2023.co.uk/
     description: Microsite to display data about the LEEDS 2023 Year of Culture.
     code: https://github.com/open-innovations/leeds-2023
+
+  - title: Universo Reich
+    img: /img/showcase/universo-reich.webp
+    url: https://escoladeartelugo.com/universo-reich/
+    description: Collaborative and educational project about Steve Reich.
+
+  - title: Candela
+    img: /img/showcase/candela.webp
+    url: https://help.candela.com/
+    description: Documentation site for a boat.
+
+  - title: Kille
+    img: /img/showcase/kille.webp
+    url: https://kille.es/
+    description: Personal site of Guille Reimunde.
 
   - title: Exploit Notes
     img: /img/showcase/exploit_notes.webp

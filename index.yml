@@ -328,7 +328,13 @@ testimonials:
       avatar: /img/avatars/testimonials/thomasorus.webp
       date: March 6, 2023
       text: From static site generator to static site processor
-      cover: /img/covers/og_thomasorus.webp
+      type: article
+
+    - url: https://paulrobertlloyd.com/2023/054/a1/lume/
+      author: Paul Robert Lloyd (paulrobertlloyd.com)
+      avatar: /img/avatars/testimonials/paulrobertlloyd.webp
+      date: Februrary 23, 2023
+      text: Thinking out loud about static site generators
       type: article
 
     - url: https://twitter.com/m_giron/status/1625883711169339392

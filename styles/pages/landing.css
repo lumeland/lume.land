@@ -240,7 +240,15 @@
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
     margin-top: 0;
+    margin-bottom: clamp(20px, 5vh, 40px);
     max-width: var(--max-width);
+    text-align: center;
+
+    & svg {
+      width: 48px;
+      height: 48px;
+      vertical-align: middle;
+    }
   }
 
   & > * {
