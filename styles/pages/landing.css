@@ -184,6 +184,7 @@
   align-items: center;
   column-gap: var(--column-gap-0);
   margin: 0 auto;
+  margin-bottom: clamp(20px, 5vh, 40px);
   max-width: var(--max-width);
   padding-left: var(--margin);
   padding-right: var(--margin);
@@ -240,15 +241,8 @@
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
     margin-top: 0;
-    margin-bottom: clamp(20px, 5vh, 40px);
+    margin-bottom: var(--row-gap-1);
     max-width: var(--max-width);
-    text-align: center;
-
-    & svg {
-      width: 48px;
-      height: 48px;
-      vertical-align: middle;
-    }
   }
 
   & > * {
@@ -430,6 +424,7 @@
     font: var(--text-body-bold);
     letter-spacing: var(--text-body-spacing);
     margin: 0;
+    margin-bottom: var(--row-gap-0);
   }
   & ul {
     margin: .5em 0;
