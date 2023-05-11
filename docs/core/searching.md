@@ -59,6 +59,9 @@ export default function* ({ search }) {
         totalResults,
       },
     };
+
+    // Increase the page number
+    ++currentPage;
   }
 }
 ```
