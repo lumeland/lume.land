@@ -19,7 +19,7 @@ export const layout = "layouts/post-list.njk";
 export default function* ({ search, paginate }) {
   const posts = search.pages("posts");
   const options = {
-    url: (n) => `posts/page/${n}/`,
+    url: (n) => `/posts/page/${n}/`,
     size: 10,
   };
 
@@ -32,10 +32,10 @@ export default function* ({ search, paginate }) {
 As you can see, the `paginate` helper accepts two arguments: an iterable and an
 object with the options. The available options are:
 
-| Name   | Default            | Description                                                                                |
-| ------ | ------------------ | ------------------------------------------------------------------------------------------ |
-| `size` | `10`               | Number of elements per page                                                                |
-| `url`  | `(n) => page-${n}` | The function to generate the URL of each page. It receives the page number as an argument. |
+| Name   | Default              | Description                                                                                |
+| ------ | -------------------- | ------------------------------------------------------------------------------------------ |
+| `size` | `10`                 | Number of elements per page                                                                |
+| `url`  | `(n) => ./page-${n}` | The function to generate the URL of each page. It receives the page number as an argument. |
 
 This helper returns an array. Each item has the following values:
 
