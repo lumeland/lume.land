@@ -74,17 +74,16 @@ and `pagination` (with some interesting info like the current page number or the
 total results).
 
 [The Paginate plugin](../../plugins/paginate.md) (enabled by default in Lume),
-exposes the `paginate` helper to ease this process. The previous example could
-be done in this simpler way:
+exposes the `paginate` helper to ease this process. The previous example can be
+done in this simpler way:
 
 ```js
 export const layout = "layouts/post-list.njk";
 
 export default function* ({ search, paginate }) {
   const musicPages = search.pages("category=music");
-  const url = (n) => `/music/page-${n}/`,
 
-  for (const page of paginate(musicPages, { url }))) {
+  for (const page of paginate(musicPages))) {
     yield page;
   }
 }
