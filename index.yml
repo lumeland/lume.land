@@ -248,11 +248,6 @@ support:
     - name: Óscar Otero (creator & maintainer)
       url: https://oscarotero.com/
       img: /img/avatars/supporters/oscar.webp
-    - name: Androw Nash
-      url: https://audrow.github.io/
-      img: /img/avatars/supporters/audrow.webp
-      amount: 5
-      recurrent: true
     - name: Yuto Oguchi
       url: https://aiotter.com/
       img: /img/avatars/supporters/aiotter.webp
@@ -271,16 +266,6 @@ support:
       img: /img/avatars/supporters/jppope.webp
       amount: 1
       recurrent: true
-    - name: Reese Schultz
-      url: https://reese.codes/
-      img: /img/avatars/supporters/reeseschultz.webp
-      amount: 5
-      recurrent: true
-    - name: Jrson
-      url: https://jrson.me/
-      img: /img/avatars/supporters/jrson.webp
-      amount: 10
-      recurrent: true
     - name: SheetJS
       url: https://sheetjs.com/
       img: /img/avatars/supporters/sheetjs.webp
@@ -295,11 +280,6 @@ support:
       img: /img/avatars/supporters/hmans.webp
       amount: 5
       recurrent: true
-    - name: Jobs in JS
-      url: https://jobsinjs.com/
-      img: /img/avatars/supporters/jobsinjs.webp
-      amount: 10
-      recurrent: true
     - name: Romuald Bulyshko
       url: https://r13o.com/
       img: /img/avatars/supporters/romuald.webp
@@ -309,15 +289,44 @@ support:
       url: https://simplerethink.com/
       img: /img/avatars/supporters/chadhenry.webp
       amount: 50
+    - name: Daniel Mon Chit
+      url: https://opencollective.com/daniel-mon-chit
+      img: /img/avatars/supporters/daniel-mc.webp
+      amount: 3
+      recurrent: true
+  past_title: Past sponsors
+  past_sponsors:
+    - name: Androw Nash
+      url: https://audrow.github.io/
+      img: /img/avatars/supporters/audrow.webp
+      amount: 5
+      recurrent: true
+    - name: Reese Schultz
+      url: https://reese.codes/
+      img: /img/avatars/supporters/reeseschultz.webp
+      amount: 5
+      recurrent: true
+    - name: Jobs in JS
+      url: https://jobsinjs.com/
+      img: /img/avatars/supporters/jobsinjs.webp
+      amount: 10
+      recurrent: true
+    - name: Jrson
+      url: https://jrson.me/
+      img: /img/avatars/supporters/jrson.webp
+      amount: 10
+      recurrent: true
+
+
 
   contribute:
     title: How to contribute?
     description: |
       - Star the [repo in GitHub](https://github.com/lumeland/lume) or vote in [Product Hunt](https://www.producthunt.com/posts/lume-2).
-      - Support this project by [sponsoring its creator](https://github.com/sponsors/oscarotero).
+      - Support this project by [sponsoring its creator](https://github.com/sponsors/oscarotero) or [the project](https://opencollective.com/lume).
       - Fork the repo and [contribute](https://github.com/lumeland/lume/graphs/contributors) fixing bugs or adding new features.
       - Help to [improve the docs](https://github.com/lumeland/lume.land).
-      - Spread to the world your love for Lume in a tweet, post or any kind of publication.
+      - Spread to the world your love for Lume in a tweet, post or any kind of publication (and let me know, [so I can include it in this page](#testimonials))
       - Get help and propose ideas [at Discord](https://discord.gg/YbTmpACHWB).
 
 testimonials:

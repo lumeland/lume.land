@@ -83,7 +83,7 @@ page_css: landing.css
     </lume-carousel>
   </section>
 
-  <section class="landing-testimonials">
+  <section class="landing-testimonials" id="testimonials">
     <h2>{{ testimonials.title }}</h2>
 
     <ul class="landing-testimonials-quotes">
@@ -133,15 +133,28 @@ page_css: landing.css
   <section class="landing-suppport">
     <h2>{{ support.title }}</h2>
 
-    <ul class="landing-support-sponsors">
-      {% for sponsor in support.sponsors %}
-      <li>
-        <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
-          <img src="{{ sponsor.img }}" srcset="{{ sponsor.img }}, {{ sponsor.img | replace(".webp", "@2x.webp") }} 2x" height="100" width="100" alt="{{ sponsor.name }}">
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
+    <div>
+      <ul class="landing-support-sponsors">
+        {% for sponsor in support.sponsors %}
+        <li>
+          <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
+            <img src="{{ sponsor.img }}" srcset="{{ sponsor.img }}, {{ sponsor.img | replace(".webp", "@2x.webp") }} 2x" height="100" width="100" alt="{{ sponsor.name }}">
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      
+      <h3>{{ support.past_title }}</h3>
+      <ul class="landing-support-sponsors is-past">
+        {% for sponsor in support.past_sponsors %}
+        <li>
+          <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
+            <img src="{{ sponsor.img }}" srcset="{{ sponsor.img }}, {{ sponsor.img | replace(".webp", "@2x.webp") }} 2x" height="60" width="60" alt="{{ sponsor.name }}">
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
 
     <div class="landing-support-contribute">
       <h3>{{ support.contribute.title }}</h3>
