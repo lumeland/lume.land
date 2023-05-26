@@ -10,7 +10,10 @@ tags:
 
 This plugin generates a `sitemap.xml` file automatically with all your pages,
 which is
-[useful for SEO](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview). See the [Sitemaps XML format specification](https://www.sitemaps.org/protocol.html) for more info.
+[useful for SEO](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview).
+See the
+[Sitemaps XML format specification](https://www.sitemaps.org/protocol.html) for
+more info.
 
 It also creates a `robots.txt` file that include a link to the sitemap file, so
 it's easier to discover for the search engines.

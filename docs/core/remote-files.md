@@ -4,9 +4,9 @@ description: Load remote files as fallback of missing local files
 order: 16
 ---
 
-From Lume `v1.10.0` it's possible to use remote files as if they were local
-files. To configure a remote file, you must set a local name and a remote URL in
-your `_config.ts` file using the `remoteFile()` function. For example:
+In Lume it's possible to use remote files as if they were local files. To
+configure a remote file, you must set a local name and a remote URL in your
+`_config.ts` file using the `remoteFile()` function. For example:
 
 ```ts
 import lume from "lume/mod.ts";
@@ -19,7 +19,7 @@ export default site;
 ```
 
 This indicates to Lume that if the file `styles.css` **doesn't exist locally**
-the remote URL must be used. Note that the file **wont be saved in the project
+the remote URL must be used. Note that the file **won't be saved in the project
 folder**, but it's in memory.
 
 If you want to copy this file statically:
@@ -97,6 +97,22 @@ files**. Keep in mind that Lume reader is asynchronous, meaning that the remote
 files loaded by Nunjucks must use the async API (`asyncEach` instead of `for`
 etc). More info about
 [Asynchronous support for Nunjucks](https://mozilla.github.io/nunjucks/api.html#asynchronous-support).
+
+### Cache files
+
+As of Lume 1.17.4, files are automatically cached using the
+[Web Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache), so it's
+only requested the first time and then network access is no longer needed. It's
+possible to disable the cache for a specific file by removing the cached
+response before the build. For example:
+
+```ts
+// Open the cache of Lume's remote files
+const cache = await caches.open("lume_remote_files");
+
+// Remove the cache using the remote URL
+await cache.delete("https://example.com/theme/styles.css");
+```
 
 ### Import modules
 
