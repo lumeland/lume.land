@@ -29,3 +29,7 @@ plugins:
   - title: oi-lume-charts
     description: Lume Plugin that enables charting 
     url: https://github.com/open-innovations/oi-lume-charts
+
+  - title: serea
+    description: Charts, diagrams and graphs
+    url: https://github.com/idris-maps/serea
