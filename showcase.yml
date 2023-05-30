@@ -268,3 +268,8 @@ sites:
     description: Another Lume Template/ With CSS & Blog (MD) Support
     code: https://github.com/ArnavK-09/lume-deno-template
  
+  - title: Lume Theme Shiraha
+    img: /img/showcase/lume_theme_shiraha.webp
+    url: https://importantimport.github.io/lume_theme_shiraha/
+    description: '❄️ Material 3-inspired Lume Blog Theme.'
+    code: https://github.com/importantimport/lume_theme_shiraha
