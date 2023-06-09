@@ -25,11 +25,17 @@ sites:
     description: Microsite to display data about the LEEDS 2023 Year of Culture.
     code: https://github.com/open-innovations/leeds-2023
 
+  - title: Lume Dark Material
+    img: /img/showcase/dark_material.webp
+    url: https://angeldollface.art/lume-dark-material/
+    description: 'A simple material-design inspired theme'
+    code: https://github.com/angeldollface/lume-dark-material
+
   - title: Universo Reich
     img: /img/showcase/universo-reich.webp
     url: https://escoladeartelugo.com/universo-reich/
     description: Collaborative and educational project about Steve Reich.
-  
+
   - title: Angel Dollface
     img: /img/showcase/angeldollface.webp
     url: https://angeldollface.art/
