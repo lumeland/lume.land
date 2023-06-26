@@ -1,6 +1,6 @@
 ---
 title: JSON
-description: Add support for JSON to store data and create pages.
+description: Add support for JSON or JSONC to store data and create pages.
 docs: plugins/json.ts/~/Options
 enabled: true
 tags:
@@ -9,7 +9,8 @@ tags:
 
 ## Description
 
-This plugin allows you to create pages and store data using the JSON format.
+This plugin allows you to create pages and store data using the JSON format. As
+of Lume 1.18.0, JSONC (JSON with comments) is also supported.
 
 ## Installation
 
@@ -36,7 +37,8 @@ export default site;
 
 ### Create pages
 
-Create a file with the extension `.tmpl.json` in your `src` folder. For example:
+Create a file with the extension `.tmpl.json` or `.tmpl.jsonc` in your `src`
+folder. For example:
 
 ```json
 {
@@ -48,4 +50,5 @@ Create a file with the extension `.tmpl.json` in your `src` folder. For example:
 
 ### Create data files
 
-Create a file with the name `_data.json` or inside a `_data` directory.
+Create a file with the name `_data.json` or `_data.jsonc` or inside a `_data`
+directory.

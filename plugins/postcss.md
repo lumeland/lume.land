@@ -38,8 +38,8 @@ This plugin accepts a configuration object. The available options are:
 - `plugins`: Array with the PostCSS plugins that you want to use.
 - `keepDefaultPlugins`: Set `true` to append your plugins to the defaults,
   instead of replacing them.
-- `includes`: An array of directories to search for the `@import`ed files. By
-  default it is `["_includes"]`. Set `false` to disable it.
+- `includes`: The directory to search for the `@import`ed files. By default it
+  is `"_includes"`. Set `false` to disable it.
 
 ## PostCSS Plugins
 
