@@ -8,7 +8,7 @@ tags:
 
 ## Description
 
-The `lightningcss` plugin loads and transforms your CSS files using the
+The `lightningcss` plugin bundles your CSS files using the
 [Lightning CSS](https://github.com/parcel-bundler/lightningcss) processor
 (previously known as Parcel CSS).
 
@@ -37,8 +37,8 @@ This plugin accepts a configuration object. The available options are:
 - `extensions`: Array with the extensions of the files that this plugin will
   load. By default is `[".css"]`. instead of replacing them.
 - `options`: An object with the options for lightning-css.
-- `includes`: By default is `false`, so the plugin only transforms the CSS code.
-  Set a directory name (for example, `_includes`) to bundle the code.
+- `includes`: The directory to search for the `@import`ed files. By default it
+  is `"_includes"`. Set `false` to disable it.
 
 Example with the default configuration:
 
@@ -50,6 +50,7 @@ const site = lume();
 
 site.use(lightningCss({
   extensions: [".css"],
+  includes: "_includes",
   options: {
     minify: true,
     drafts: {
