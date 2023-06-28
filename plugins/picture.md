@@ -8,8 +8,8 @@ tags:
 
 ## Description
 
-This plugin creates `<picture>` elements, adding all `<source>` as needed to
-provide versions in different formats and resolutions for the same image. It
+The Picture plugin creates `<picture>` elements, adding all `<source>` as needed
+to provide versions in different formats and resolutions for the same image. It
 uses the [`imagick` plugin](./imagick.md) under the hood to make the
 transformations.
 
