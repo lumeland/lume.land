@@ -69,7 +69,7 @@ site.helper("uppercase", (text) => text.toUpperCase(), { type: "tag" });
 ```
 
 ```html { title="Nunjucks" }
-{% uppercase user.name %}
+{{ uppercase user.name }}
 ```
 
 </lume-code>
@@ -94,9 +94,9 @@ site.helper("uppercase", (body) => body.toUpperCase(), {
 ```
 
 ```js { title="Nunjucks" }
-{% uppercase %}
+{{ uppercase }}
 Hello, {{ user.name }}
-{% enduppercase %}
+{{ enduppercase }}
 ```
 
 </lume-code>

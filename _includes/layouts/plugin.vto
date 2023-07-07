@@ -1,34 +1,34 @@
 ---
-layout: ./base.njk
+layout: ./base.vto
 page_css: docs.css
 ---
 
 <div class="doc">
-  {% include "templates/plugin-navbar.njk" %}
+  {{ include "templates/plugin-navbar.vto" }}
 
   <main class="doc-content">
     <header class="doc-header">
       <h1>
         {{ title }}
-        {% if enabled %}
+        {{ if it.enabled }}
           <span class="tag is-small">Installed</span>
-        {% endif %}
+        {{ /if }}
       </h1>
-      {{ description | md | safe }}
+      {{ description |> md }}
 
-      {% include "templates/toc.njk" %}
+      {{ include "templates/toc.vto" }}
 
-      {% if docs %}
+      {{ if it.docs }}
       <div class="doc-cta">
         <a href="https://doc.deno.land/https/deno.land/x/lume/{{ docs }}" class="button is-primary is-big">
           See available Options in Deno Doc
         </a>
       </div>
-    {% endif %}
+    {{ /if }}
     </header>
 
     <div class="doc-body">
-      {{ content | safe }}
+      {{ content }}
     </div>
   </main>
 </div>

@@ -1,17 +1,17 @@
 ---
-layout: ./base.njk
+layout: ./base.vto
 page_css: landing.css
 ---
 <div class="landing">
   <header class="landing-header">
-    <h1>{{ header.title | safe }}</h1>
+    <h1>{{ header.title }}</h1>
 
     <figure class="landing-header-fire">
-      {{ comp.fire() | safe }}
+      {{ await comp.fire() }}
     </figure>
 
     <div class="landing-install">
-      {{ install.title | md | safe }}
+      {{ install.title |> md }}
 
       <div class="landing-install-code">
         <pre><code>{{ install.code }}</code></pre>
@@ -26,25 +26,25 @@ page_css: landing.css
 
 
   <section class="landing-usage">
-  {% for block in usage %}
+  {{ for block of usage }}
     <div class="landing-usage-text">
       <h2>{{ block.title }}</h2>
-      {{ block.description | md | safe }}
+      {{ block.description |> md }}
     </div>
     <div class="landing-usage-code">
-      {{ block.code | md | safe }}
+      {{ block.code |> md }}
     </div>
-  {% endfor %}
+  {{ /for }}
   </section>
 
   <ul class="landing-features">
-    {% for feature in features %}
+    {{ for feature of features }}
     <li>
       <img src="{{ feature.img }}" inline>
       <h3>{{ feature.title }}</h3>
-      {{ feature.description | md | safe }}
+      {{ feature.description |> md }}
     </li>
-    {% endfor %}
+    {{ /for }}
   </ul>
 
   <section class="landing-examples">
@@ -62,8 +62,8 @@ page_css: landing.css
     </header>
 
     <lume-carousel role="region" aria-label="Showcase" tabindex="0" class="landing-examples-sites" id="examples">
-      {% set showcase = search.page("url=/showcase/") %}
-      {% for site in showcase.data.sites | selectattr("img") | slice(8) %}
+      {{ set showcase = search.page("url=/showcase/") }}
+      {{ for site of showcase.data.sites.filter((site) => site.img).slice(8) }}
       <figure class="site">
         <a href="{{ site.url }}" class="site-image">
           <img src="{{ site.img }}" alt="Screenshot of the site" width="300" height="200">
@@ -75,10 +75,10 @@ page_css: landing.css
             </a>
           </p>
 
-          {{ site.description | md | safe }}
+          {{ site.description |> md }}
         </figcaption>
       </figure>
-      {% endfor %}
+      {{ /for }}
       <a href="{{ examples.more.href }}" class="landing-examples-cta">{{ examples.more.text }}</a>
     </lume-carousel>
   </section>
@@ -87,46 +87,46 @@ page_css: landing.css
     <h2>{{ testimonials.title }}</h2>
 
     <ul class="landing-testimonials-quotes">
-    {% for item in testimonials.quotes %}
+    {{ for item of testimonials.quotes }}
       <li>
-        {% if item.type == "video" %}
+        {{ if item.type == "video" }}
         <figure class="landing-testimonials-cover">
           <a href="{{ item.url }}" class="is-video">
             <img src="{{ item.cover }}" alt="{{ item.text }}" width="300" height="200">
           </a>
           <figcaption class="landing-testimonial-caption">
-            <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar | replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
+            <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar |> replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
             <a href="{{ item.url }}">
               <strong>{{ item.author }}</strong>
               <time>{{ item.date }}</time>
             </a>
           </figcaption>
         </figure>
-        {% elif item.type == "article" %}
+        {{ else if item.type == "article" }}
         <article class="landing-testimonials-article">
           <h3><a href="{{ item.url }}">{{ item.text }}</a></h3>
           <footer class="landing-testimonial-caption">
-            <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar | replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
+            <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar |> replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
             <a href="{{ item.url }}">
               <strong>{{ item.author }}</strong>
               <time>{{ item.date }}</time>
             </a>
           </footer>
         </article>
-        {% else %}
+        {{ else }}
         <blockquote class="landing-testimonials-quote">
-          {{ item.text | md | safe }}
+          {{ item.text |> md }}
           <cite class="landing-testimonial-caption">
-            <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar | replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
+            <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar |> replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
             <a href="{{ item.url }}">
               <strong>{{ item.author }}</strong>
               <time>{{ item.date }}</time>
             </a>
           </cite>
         </blockquote>
-        {% endif %}
+        {{ /if }}
       </li>
-    {% endfor %}
+    {{ /for }}
     </ul>
   </section>
 
@@ -135,31 +135,31 @@ page_css: landing.css
 
     <div>
       <ul class="landing-support-sponsors">
-        {% for sponsor in support.sponsors %}
+        {{ for sponsor of support.sponsors }}
         <li>
           <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
-            <img src="{{ sponsor.img }}" srcset="{{ sponsor.img }}, {{ sponsor.img | replace(".webp", "@2x.webp") }} 2x" height="100" width="100" alt="{{ sponsor.name }}">
+            <img src="{{ sponsor.img }}" srcset="{{ sponsor.img }}, {{ sponsor.img |> replace(".webp", "@2x.webp") }} 2x" height="100" width="100" alt="{{ sponsor.name }}">
           </a>
         </li>
-        {% endfor %}
+        {{ /for }}
       </ul>
       
       <h3>{{ support.past_title }}</h3>
       <ul class="landing-support-sponsors is-past">
-        {% for sponsor in support.past_sponsors %}
+        {{ for sponsor of support.past_sponsors }}
         <li>
           <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
-            <img src="{{ sponsor.img }}" srcset="{{ sponsor.img }}, {{ sponsor.img | replace(".webp", "@2x.webp") }} 2x" height="60" width="60" alt="{{ sponsor.name }}">
+            <img src="{{ sponsor.img }}" srcset="{{ sponsor.img }}, {{ sponsor.img |> replace(".webp", "@2x.webp") }} 2x" height="60" width="60" alt="{{ sponsor.name }}">
           </a>
         </li>
-        {% endfor %}
+        {{ /for }}
       </ul>
     </div>
 
     <div class="landing-support-contribute">
       <h3>{{ support.contribute.title }}</h3>
 
-      {{ support.contribute.description | md | safe }}
+      {{ support.contribute.description |> md }}
     </div>
   </section>
 </div>

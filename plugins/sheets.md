@@ -59,18 +59,18 @@ returned, even if it contains more. For example a file stored in
 ```html
 <table>
   <tr>
-    {% for key, column in people[0] %}
+    {{ for key, column in people[0] }}
       <th>{{ key }}</th>
-    {% endfor %}
+    {{ /for }}
   </tr>
 
-  {% for row in people %}
+  {{ for row in people }}
     <tr>
-      {% for key, column in row %}
+      {{ for key, column in row }}
         <td>{{ column }}</td>
-      {% endfor %}
+      {{ /for }}
     </tr>
-  {% endfor %}
+  {{ /for }}
 </table>
 ```
 
@@ -85,20 +85,20 @@ For example, if the file `_data/people.xlsx` contains the sheets "Women" and
 ```html
 <h1>Women</h1>
 <ul>
-  {% for person in people["Women"] %}
+  {{ for person in people["Women"] }}
     <li>
       {{ person.name }} - {{ person.surname }}
     </li>
-  {% endfor %}
+  {{ /for }}
 </ul>
 
 <h1>Men</h1>
 <ul>
-  {% for person in people["Men"] %}
+  {{ for person in people["Men"] }}
     <li>
       {{ person.name }} - {{ person.surname }}
     </li>
-  {% endfor %}
+  {{ /for }}
 </ul>
 ```
 

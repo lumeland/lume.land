@@ -1,20 +1,20 @@
 <nav class="doc-navbar">
-  {% for section in docs_menu %}
-  <details class="doc-navbar-section" {% if url.includes(section.id) %}open{% endif %}>
+  {{ for section of docs_menu }}
+  <details class="doc-navbar-section" {{ if url.includes(section.id) }}open{{ /if }}>
     <summary>
       <span class="doc-navbar-section-title">{{ section.title }}</span>
     </summary>
     <ul class="doc-navbar-section-links">
-      {% for page in search.pages("url^=/docs/" + section.id, "order title") %}
+      {{ for page of search.pages("url^=/docs/" + section.id, "order title") }}
         <li>
-          {% if page.data.url == url %}
+          {{ if page.data.url == url }}
           <a href="{{ page.data.url }}" aria-current="page" title="{{ page.data.description }}">{{ page.data.title }}</a>
-          {% else %}
+          {{ else }}
           <a href="{{ page.data.url }}" title="{{ page.data.description }}">{{ page.data.title }}</a>
-          {% endif %}
+          {{ /if }}
         </li>
-      {% endfor %}
+      {{ /for }}
     </ul>
   </details>
-  {% endfor %}
+  {{ /for }}
 </nav>

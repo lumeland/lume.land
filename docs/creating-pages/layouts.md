@@ -18,7 +18,7 @@ the template that we want to use:
 ```yml
 ---
 title: This is the front matter
-layout: layouts/main.njk
+layout: layouts/main.vto
 ---
 
 # This is the page content
@@ -26,7 +26,7 @@ Here you can write Markdown content
 ```
 
 **Lume** has support for many template engines. In this example, the layout file
-has the extension `.njk`, used by the
+has the extension `.vto`, used by the
 [Nunjucks](https://mozilla.github.io/nunjucks/) template engine:
 
 ```html
@@ -46,7 +46,7 @@ has the extension `.njk`, used by the
 </html>
 ```
 
-**Lume** will search for the file `_includes/layouts/main.njk` (note that all
+**Lume** will search for the file `_includes/layouts/main.vto` (note that all
 layouts are relative to `_includes` directory).
 
 The template can use any variable from the page, for example, `title` to render
@@ -61,25 +61,25 @@ layouts and override them within the pages.
 
 A layout can be wrapped around another layout. Just set a `layout` variable in
 the front matter. In the following examples, the layout uses the
-`layouts/main.njk` layout as a wrapper.
+`layouts/main.vto` layout as a wrapper.
 
 <lume-code>
 
 ```yml { title="page.md" }
 ---
 title: This is the front matter
-layout: layouts/page.njk
+layout: layouts/page.vto
 ---
 
 # This is the page content
 Here you can write Markdown content
 ```
 
-```html { title="_includes/layouts/page.njk" }
+```html { title="_includes/layouts/page.vto" }
 ---
 title: Default page title
 language: en
-layout: layouts/main.njk
+layout: layouts/main.vto
 ---
 
 <article lang="{{ language }}">
@@ -91,7 +91,7 @@ layout: layouts/main.njk
 </article>
 ```
 
-```html { title="_includes/layouts/main.njk" }
+```html { title="_includes/layouts/main.vto" }
 ---
 title: Default main title
 language: en

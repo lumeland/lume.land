@@ -16,7 +16,7 @@ Provide a convenient way to work with HTML attributes.
 
 <lume-code>
 
-```yml { title=".njk" }
+```yml { title=".vto" }
 ---
 link:
   title: Go to GitHub
@@ -53,7 +53,7 @@ To work with HTML class names:
 
 <lume-code>
 
-```yml { title=".njk" }
+```yml { title=".vto" }
 ---
 styles:
   - btn

@@ -110,15 +110,15 @@ menu to change the language of the current page. This is an example in nunjucks:
 
 <lume-code>
 
-```html {title=_includes/layout.njk}
+```html {title=_includes/layout.vto}
 <ul class="languages">
-{% for alt in alternates %}
+{{ for alt in alternates }}
   <li>
-    <a href="{{ alt.url }}" {% if alt.lang == lang %}aria-current="page"{% endif %}>
+    <a href="{{ alt.url }}" {{ if alt.lang == lang }}aria-current="page"{{ /if }}>
       {{ alt.title }} ({{ alt.lang }})
     </a>
   </li>
-{% endfor %}
+{{ /for }}
 </ul>
 ```
 
@@ -244,7 +244,7 @@ to an array with the available languages. For example:
 # This page is in 3 different languages: English, Galician, and Spanish.
 lang: [en, gl, es]
 title: About me
-layout: base-layout.njk
+layout: base-layout.vto
 ```
 
 </lume-code>
@@ -269,7 +269,7 @@ title: About me # The default title
 title.gl: Acerca de min # The title in galician
 title.es: Acerca de mí # The title in spanish
 
-layout: base-layout.njk # Common value for all languages
+layout: base-layout.vto # Common value for all languages
 ```
 
 </lume-code>
@@ -288,7 +288,7 @@ title: About me
 title.gl: Sobre min
 title.es: Acerca de mí
 
-layout: base-layout.njk
+layout: base-layout.vto
 
 url.en: /about-me/
 url.gl: /sobre-min/

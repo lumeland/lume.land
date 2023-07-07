@@ -132,11 +132,11 @@ This plugin also registers the `postcss` filter so you can transform CSS code in
 the template engines. For example:
 
 ```html
-{% set css %}
+{{ set css }}
   body::after {
     content: "Hello, the CSS world!";
   }
-{% endset %}
+{{ endset }}
 
 <style>
   {{- css | postcss | safe -}}

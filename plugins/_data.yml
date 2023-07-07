@@ -1,4 +1,4 @@
-layout: layouts/plugin.njk
+layout: layouts/plugin.vto
 main_menu: plugins
 tags_info:
   data_format:

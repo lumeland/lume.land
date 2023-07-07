@@ -37,11 +37,11 @@
 
     <link rel="stylesheet" href="/styles/critical.css" inline>
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="canonical" href="{{ url | url(true) }}">
+    <link rel="canonical" href="{{ url |> url(true) }}">
     
-    {% if page_css %}
+    {{ if it.page_css }}
       <link rel="stylesheet" href="/styles/pages/{{ page_css }}">
-    {% endif %}
+    {{ /if }}
 
     <script src="/main.js" type="module"></script>
 
@@ -58,11 +58,11 @@
       crossorigin="anonymous">
   </head>
   <body>
-    {% include "templates/navbar.njk" %}
+    {{ include "templates/navbar.vto" }}
     <div>
-      {{ content | safe }}
+      {{ content }}
     </div>
-    {% include "templates/footer.njk" %}
+    {{ include "templates/footer.vto" }}
 
     <script
       src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.2.1/dist/umd/index.js"

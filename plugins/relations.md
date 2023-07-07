@@ -117,7 +117,7 @@ author:
 
 <lume-code>
 
-```html{title=_includes/layouts/article.njk}
+```html{title=_includes/layouts/article.vto}
 <article>
   {{ content | safe }}
   
@@ -132,20 +132,20 @@ variable `article` that is an array with all articles related to each author:
 
 <lume-code>
 
-```html{title=_includes/layouts/author.njk}
+```html{title=_includes/layouts/author.vto}
 <article>
   {{ content | safe }}
 
   <h2>Articles created:</h2>
 
   <ul>
-  {% for item in article %}
+  {{ for item in article }}
     <li>
       <a href="{{ item.url }}">
         {{ item.title }}
       </a>
     </li>
-  {% endfor %}
+  {{ /for }}
   </ul>
 </article>
 ```

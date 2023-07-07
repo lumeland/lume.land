@@ -179,7 +179,7 @@ export default function* (title: string) {
   yield {
     path: `/pages/${slug}/_data.yml`,
     content: {
-      layout: "section.njk",
+      layout: "section.vto",
       section_title: title,
     },
   };

@@ -84,7 +84,7 @@ site.copy([".jpg", ".gif", ".png"], (file) => "/img" + file);
 ```
 
 The copied files are not processed, even if they have known extensions like
-`.md`, `.njk`, etc. {.tip}
+`.md`, `.vto`, etc. {.tip}
 
 ## Copy remaining files
 

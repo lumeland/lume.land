@@ -67,7 +67,7 @@ to export the main content you can use the default export.
 
 ```js
 export const title = "Welcome to my page";
-export const layout = "layouts/main.njk";
+export const layout = "layouts/main.vto";
 
 export default "This is my first post using lume. I hope you like it!";
 ```
@@ -77,7 +77,7 @@ available data in the first argument and the filters in the second argument:
 
 ```js
 export const title = "Welcome to my page";
-export const layout = "layouts/main.njk";
+export const layout = "layouts/main.vto";
 
 export default (data, filters) =>
   `<h1>${data.title}</h1>

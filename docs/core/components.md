@@ -24,7 +24,7 @@ create `_components` directories in different sub-directories to make them
 available only to specific pages. To create a new component, just create a file
 in this directory with the name of your component and the extension of the
 template engine you want to use. For example, a component in Nunjucks that
-renders a button could be stored in `_components/button.njk`:
+renders a button could be stored in `_components/button.vto`:
 
 ```html
 <button class="button">{{ text }}</button>
@@ -78,24 +78,24 @@ export default function ({ comp }) {
 In Nunjucks you can nest components in this way:
 
 ```html
-{% comp "Container" %}
+{{ comp "Container" }}
   Content of the Container component
 
-  {% comp "Button" %}
+  {{ comp "Button" }}
   This is a button inside the Container component
-  {% endcomp %}
-{% endcomp %}
+  {{ endcomp }}
+{{ endcomp }}
 ```
 
 The content of the components are passed in the `content` key:
 
 <lume-code>
 
-```html {title="_components/container.njk"}
+```html {title="_components/container.vto"}
 <section class="container">{{ content | safe }}</section>
 ```
 
-```html {title="_components/button.njk"}
+```html {title="_components/button.vto"}
 <button>{{ content | safe }}</button>
 ```
 
@@ -129,7 +129,7 @@ CSS and JS code that you only need.
 ## Organize your components
 
 Components can be saved in subdirectories. For example, the `button` component
-could be saved in the `ui` subdirectory (`_components/ui/button.njk` in your
+could be saved in the `ui` subdirectory (`_components/ui/button.vto` in your
 `src` folder). In this case, you can access this component with
 `comp.ui.button()`.
 

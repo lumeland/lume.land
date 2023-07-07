@@ -27,9 +27,9 @@ by spaces. For example, to search all pages containing the tags `post` and
 
 ```html
 <ul>
-  {% for post in search.pages("post html") %}
+  {{ for post in search.pages("post html") }}
   <li>{{ post.data.title }}</li>
-  {% endfor %}
+  {{ /for }}
 </ul>
 ```
 
@@ -38,9 +38,9 @@ by the tags `post` and `static site generator`:
 
 ```html
 <ul>
-  {% for post in search.pages("post 'static site generator'") %}
+  {{ for post in search.pages("post 'static site generator'") }}
   <li>{{ post.data.title }}</li>
-  {% endfor %}
+  {{ /for }}
 </ul>
 ```
 
@@ -49,9 +49,9 @@ For example, to search pages with the tag "post" not containing the tag "html":
 
 ```html
 <ul>
-  {% for post in search.pages("post !html") %}
+  {{ for post in search.pages("post !html") }}
   <li>{{ post.data.title }}</li>
-  {% endfor %}
+  {{ /for }}
 </ul>
 ```
 
@@ -62,9 +62,9 @@ by `date`, but you can use any field. For example, if you want to sort by title:
 
 ```html
 <ul>
-  {% for post in search.pages("post html", "title") %}
+  {{ for post in search.pages("post html", "title") }}
   <li>{{ post.data.title }}</li>
-  {% endfor %}
+  {{ /for }}
 </ul>
 ```
 
@@ -75,18 +75,18 @@ Sorting allows specifying multiple fields. For example let's sort by the "order"
 and "title" fields:
 
 ```html
-{% for post in search.pages("post html", "order title") %}
+{{ for post in search.pages("post html", "order title") }}
   ...
-{% endfor %}
+{{ /for }}
 ```
 
 By default, sort is ascendening, but this can be changed by appending `=desc` to
 the field name:
 
 ```html
-{% for post in search.pages("post html", "order=asc title=desc") %}
+{{ for post in search.pages("post html", "order=asc title=desc") }}
   ...
-{% endfor %}
+{{ /for }}
 ```
 
 ### Limit the results
@@ -97,14 +97,14 @@ number to return the last `n` results:
 
 ```html
 <!-- Get the 3 first values -->
-{% for post in search.pages("post html", "order title", 3) %}
+{{ for post in search.pages("post html", "order title", 3) }}
   ...
-{% endfor %}
+{{ /for }}
 
 <!-- Get the 3 last values -->
-{% for post in search.pages("post html", "order title", -3) %}
+{{ for post in search.pages("post html", "order title", -3) }}
   ...
-{% endfor %}
+{{ /for }}
 ```
 
 ### Filtering by a field
@@ -114,11 +114,11 @@ For example, to search all pages with the value `menu` as `true`, simply include
 the query `menu=true`:
 
 ```html
-{% for option in search.pages("menu=true") %}
+{{ for option in search.pages("menu=true") }}
 <a href="{{ option.data.url }}">
   {{ option.data.title }}
 </a>
-{% endfor %}
+{{ /for }}
 ```
 
 The available operators for the conditions are:
@@ -142,11 +142,11 @@ let's say you want to select all pages with the value `taxonomy.category=sport`
 and with the tag `football`:
 
 ```html
-{% for post in search.pages("taxonomy.category=sport football") %}
+{{ for post in search.pages("taxonomy.category=sport football") }}
 <a href="{{ post.data.url }}">
   {{ post.data.title }}
 </a>
-{% endfor %}
+{{ /for }}
 ```
 
 ### Negative conditions
@@ -182,21 +182,21 @@ pages. So you can use the `data` filter to return only these objects. So instead
 of this:
 
 ```html
-{% for post in search.pages("category=lume"]) %}
+{{ for post in search.pages("category=lume"]) }}
 <a href="{{ post.data.url }}">
   {{ post.data.title }}
 </a>
-{% endfor %}
+{{ /for }}
 ```
 
 You can do this:
 
 ```html
-{% for post in search.pages("category=lume"]) | data %}
+{{ for post in search.pages("category=lume"]) | data }}
 <a href="{{ post.url }}">
   {{ post.title }}
 </a>
-{% endfor %}
+{{ /for }}
 ```
 
 ## Search one page
@@ -215,17 +215,17 @@ current page. Let's see an example:
 ```html
 <h2>More articles tagged as "html"</h2>
 
-{% set post = search.previousPage(url, "html") %}
+{{ set post = search.previousPage(url, "html") }}
 
-{% if post %}
+{{ if post }}
   <a href="{{ post.data.url }}" rel="prev">← {{ post.data.title }}</a>
-{% else %}
+{{ else }}
 
-{% set post = search.nextPage(url, "html") %}
+{{ set post = search.nextPage(url, "html") }}
 
-{% if post %}
+{{ if post }}
   <a href="{{ post.data.url }}" rel="next">{{ post.data.title }} →</a>
-{% endif %}
+{{ /if }}
 ```
 
 ## Get all values of a key
@@ -238,11 +238,11 @@ want to list all authors:
 <strong>List of authors:</strong>
 
 <ul>
-  {% for author in search.values("author") %}
+  {{ for author in search.values("author") }}
   <li>
     {{ author }}
   </li>
-  {% endfor %}
+  {{ /for }}
 </ul>
 ```
 
@@ -298,19 +298,19 @@ const site = lume({}, { search });
 Once configured, the following code:
 
 ```html
-{% for article in search.pages("type=article", "date=desc") %} 
+{{ for article in search.pages("type=article", "date=desc") }} 
 <a href="{{ article.data.url }}">
   <h1>{{ article.data.title }}</h1>
 </a>
-{% endfor %}
+{{ /for }}
 ```
 
 must be changed to:
 
 ```html
-{% for article in search.pages("type=article", "date=desc") %} 
+{{ for article in search.pages("type=article", "date=desc") }} 
 <a href="{{ article.url }}">
   <h1>{{ article.title }}</h1>
 </a>
-{% endfor %}
+{{ /for }}
 ```

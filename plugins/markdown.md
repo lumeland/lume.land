@@ -135,7 +135,7 @@ delimited by two triple-dashed lines with YAML code:
 ```yaml
 ---
 title: Welcome to my page
-layout: layouts/main.njk
+layout: layouts/main.vto
 ---
 
 # Welcome

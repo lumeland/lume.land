@@ -46,9 +46,9 @@ want to render the home page dynamically:
 
 <lume-code>
 
-```html{title=index.njk}
+```html{title=index.vto}
 ---
-layout: layout.njk
+layout: layout.vto
 title: This is a title
 ondemand: true
 ---
@@ -65,7 +65,7 @@ will be generated containing a map with the URL and the associated page file:
 
 ```json{title=_routes.json}
 {
-  "/": "./index.njk"
+  "/": "./index.vto"
 }
 ```
 
@@ -170,7 +170,7 @@ values. For example, in a Nunjucks page:
 
 ```html
 ---
-layout: layout.njk
+layout: layout.vto
 ondemand: true
 url: /example/
 ---

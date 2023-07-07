@@ -40,12 +40,12 @@ const nunjucks = {
 const site = lume({}, { nunjucks });
 ```
 
-Now, Lume will search the `.njk` templates in the directory `_layouts` instead
+Now, Lume will search the `.vto` templates in the directory `_layouts` instead
 of `_includes`.
 
 ## Creating layouts
 
-Add a file with `.njk` extension in the `_includes` directory. Use the _front
+Add a file with `.vto` extension in the `_includes` directory. Use the _front
 matter_ to set data to the template.
 
 ```html
@@ -67,7 +67,7 @@ intro: This is my first post using Lume. I hope you like it!
 
 ## Creating pages
 
-Creating pages is the same as creating layouts; just place the `.njk` file
+Creating pages is the same as creating layouts; just place the `.vto` file
 outside the `_includes` directory.
 
 ## njk filter

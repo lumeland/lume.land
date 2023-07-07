@@ -46,8 +46,8 @@ load it remotely:
 
 ```ts
 site.remoteFile(
-  "_includes/layouts/main.njk",
-  "https://example.com/theme/layouts/main.njk",
+  "_includes/layouts/main.vto",
+  "https://example.com/theme/layouts/main.vto",
 );
 ```
 
@@ -56,7 +56,7 @@ Now, you can use this layout in all your files:
 ```md
 ---
 title: This is a page
-layout: layouts/main.njk
+layout: layouts/main.vto
 ---
 
 Page content
@@ -65,7 +65,7 @@ Page content
 ## Override remote files
 
 If a remote file exists locally (in the previous examples: `styles.css` and
-`_includes/layouts/main.njk`) the local file will be used instead of the remote
+`_includes/layouts/main.vto`) the local file will be used instead of the remote
 one. This is useful for creating themes with all templates and assets loaded
 remotely but allowing overriding some files locally in order to customize the
 theme. As an example, see the
@@ -88,7 +88,7 @@ way:
 ### Including templates
 
 Some template engines have their own way of loading templates. For example, Pug
-uses `extends "filename"`, Liquid and Nunjucks use `{% include "filename" %}`,
+uses `extends "filename"`, Liquid and Nunjucks use `{{ include "filename" }}`,
 etc.
 
 Some engines allow configuring how to load these files (so they can use the Lume

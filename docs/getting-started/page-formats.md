@@ -13,14 +13,14 @@ Every page has its own format.
 
 Nunjucks, the format we have used to create layouts in the previous examples,
 can also be used to create pages directly. You only have to create a file with
-the `.njk` extension. For example:
+the `.vto` extension. For example:
 
 <lume-code>
 
-```html {title="nunjucks-page.njk"}
+```html {title="nunjucks-page.vto"}
 ---
 title: Welcome to my page
-layout: layout.njk
+layout: layout.vto
 links:
   - text: My Twitter
     url: https://twitter.com/misteroom
@@ -34,13 +34,13 @@ links:
   </header>
 
   <ul>
-    {% for link in links %}
+    {{ for link in links }}
     <li>
       <a href="{{ link.url }}">
         {{ link.text }}
       </a>
     </li>
-    {% endfor %}
+    {{ /for }}
   </ul>
 </article>
 ```
@@ -67,7 +67,7 @@ The previous Nunjucks example in JavaScript is:
 
 ```js { title="complex-page.tmpl.js" }
 export const title = "Welcome to my page";
-export const layout = "layout.njk";
+export const layout = "layout.vto";
 export const links = [
   {
     text: "My Twitter",

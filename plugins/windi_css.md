@@ -20,9 +20,9 @@ It can also transform Windi code embedded in the HTML using
 
 <lume-code>
 
-```html{title=hello.njk}
+```html{title=hello.vto}
 ---
-layout: layout.njk
+layout: layout.vto
 ---
 <h1 class="bg-purple-500">Hello world</h1>
 

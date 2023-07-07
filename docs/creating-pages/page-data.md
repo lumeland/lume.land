@@ -26,7 +26,7 @@ url: custom-url.html
 content: This is the page content
 ```
 
-```yaml { title="page.njk" }
+```yaml { title="page.vto" }
 ---
 title: This is the title
 url: custom-url.html
@@ -114,7 +114,7 @@ To customize how some data is merged. See
 ---
 url: /welcome.html
 date: 2021-01-01
-layout: layouts/post.njk
+layout: layouts/post.vto
 draft: true
 tags: post
 ---
@@ -123,7 +123,7 @@ tags: post
 ```js { title="JavaScript" }
 export const url = "/welcome.html";
 export const date = new Date('2021-01-01T03:24:00');
-export const layout = "layouts/post.njk";
+export const layout = "layouts/post.vto";
 export const draft = true;
 export const tags = ["post"];
 ```
@@ -132,7 +132,7 @@ export const tags = ["post"];
 const data = {
   url: "/welcome.html",
   date: new Date('2021-01-01T03:24:00'),
-  layout: "layouts/post.njk",
+  layout: "layouts/post.vto",
   draft: true,
   tags: ["post"],
 }

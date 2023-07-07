@@ -7,17 +7,17 @@
 
     <ul class="navbar-menu">
       <li>
-        <a href="/docs/overview/about-lume/" {% if main_menu == "docs" %}class="is-selected"{% endif %}>
+        <a href="/docs/overview/about-lume/" {{ if it.main_menu == "docs" }}class="is-selected"{{ /if }}>
           Documentation
         </a>
       </li>
       <li>
-        <a href="/showcase/" {% if main_menu == "showcase" %}class="is-selected"{% endif %}>
+        <a href="/showcase/" {{ if it.main_menu == "showcase" }}class="is-selected"{{ /if }}>
           Showcase
         </a>
       </li>
       <li>
-        <a href="/plugins/" {% if main_menu == "plugins" %}class="is-selected"{% endif %}>
+        <a href="/plugins/" {{ if it.main_menu == "plugins" }}class="is-selected"{{ /if }}>
           Plugins
         </a>
       </li>

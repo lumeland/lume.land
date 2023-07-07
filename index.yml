@@ -1,4 +1,4 @@
-layout: layouts/landing.njk
+layout: layouts/landing.vto
 title: Lume, the static site generator for Deno
 description: Support for multiple file formats like Markdown, YAML, JavaScript, TypeScript, JSX, Nunjucks etc.
 header:
@@ -24,22 +24,22 @@ usage:
       - Ordes
       - Cedeira
       ```
-      ```html { title="page.njk" }
+      ```html { title="page.vto" }
       <h1>{{ title }}</h1>
 
       <ul>
-        {% for item in items %}
+        {{ for item in items }}
         <li>{{ item | safe }}</li>
-        {% endfor %}
+        {{ /for }}
       </ul>
       ```
       ```html { title="page.liquid" }
       <h1>{{ title }}</h1>
 
       <ul>
-        {% for item in items %}
+        {{ for item in items }}
         <li>{{ item }}</li>
-        {% endfor %}
+        {{ /for }}
       </ul>
       ```
       ```jsx { title="page.jsx" }

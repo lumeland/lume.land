@@ -141,7 +141,7 @@ site.process([".html"], (page) => {
 
 Both processors and preprocessors are tied to file extensions (`.html`, `.js`
 etc). To decide if a page must use a registered processor or preprocessor, Lume
-searches the extension of the input file (like `.md` or `.njk`) or the output
+searches the extension of the input file (like `.md` or `.vto`) or the output
 file (like `.html` or `.css`).
 
 Another interesting thing is they are executed in the same order as they are

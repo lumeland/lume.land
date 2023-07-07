@@ -1,52 +1,52 @@
 ---
-layout: ./base.njk
+layout: ./base.vto
 page_css: plugins.css
 ---
 
 <main class="plugins">
   <header class="plugins-header">
     <h1>{{ title }}</h1>
-    {{ description | md | safe }}
+    {{ description |> md }}
   </header>
 
   <lume-filter>
     <form class="plugins-filter">
       <select name="status" class="selector">
-        <option value="all">All plugins {{ all_total }}</option>
+        <option value="all">All plugins</option>
         <option value="enabled">Enabled by default</option>
         <option value="disabled">Disabled by default</option>
       </select>
 
-      {% for id, info in tags_info %}
+      {{ for id, info of tags_info }}
       <label class="button is-secondary is-color-{{ info.color }}">
         <input type="checkbox" name="{{ id }}"> {{ info.name }}
       </label>
-      {% endfor %}
+      {{ /for }}
     </form>
 
     <ul class="plugins-list">
-      {% for page in search.pages("url^=/plugins/ url!=/plugins/", "title") %}
-      <li class="plugin {% if page.data.enabled %} is-enabled{% endif %}" data-tags="{{ page.data.tags }}">
+      {{ for page of search.pages("url^=/plugins/ url!=/plugins/", "title") }}
+      <li class="plugin {{ if page.data.enabled }} is-enabled{{ /if }}" data-tags="{{ page.data.tags }}">
         <a href="{{ page.data.url }}" class="plugin-info">
           <strong class="plugin-name">
             {{ page.data.title }}
-            {% if page.data.enabled %}
+            {{ if page.data.enabled }}
             <span class="tag is-small">Installed</span>
-            {% endif %}
+            {{ /if }}
           </strong>
 
-          {{ page.data.description | md | safe }}
+          {{ page.data.description |> md }}
         </a>
 
         <nav class="plugin-tags">
-          {% for tag in page.data.tags %}
+          {{ for tag of page.data.tags }}
           <a href="?{{ tag }}=on" class="button is-secondary is-small is-color-{{ tags_info[tag].color }}">
             {{ tags_info[tag].name }}
           </a>
-          {% endfor %}
+          {{ /for }}
         </nav>
       </li>
-      {% endfor %}
+      {{ /for }}
     </ul>
   </lume-filter>
 
@@ -54,14 +54,14 @@ page_css: plugins.css
     <h2>🔥🔥 From the community 🔥🔥</h2>
 
     <ul>
-      {% for plugin in plugins %}
+      {{ for plugin of plugins }}
       <li>
         <a href="{{ plugin.url }}" class="plugin-info">
           <strong class="plugin-name">{{ plugin.title }}</strong>
-          {{ plugin.description | md | safe }}
+          {{ plugin.description |> md }}
         </a>
       </li>
-      {% endfor %}
+      {{ /for }}
     </ul>
   </section>
 </main>

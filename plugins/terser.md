@@ -61,9 +61,9 @@ the `terser` filter so you can transform JavaScript code in the template
 engines. For example:
 
 ```html
-{% set js %}
+{{ set js }}
   console.log("Hello, the JavaScript world!");
-{% endset %}
+{{ endset }}
 
 <script type="module">
   {{- js | terser | safe -}}

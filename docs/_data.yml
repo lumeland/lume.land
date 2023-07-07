@@ -1,4 +1,4 @@
-layout: layouts/docs.njk
+layout: layouts/docs.vto
 main_menu: docs
 docs_menu:
   - title: Overview

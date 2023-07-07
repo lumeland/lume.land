@@ -66,7 +66,7 @@ ability to export JSX code in the default export:
 
 ```jsx
 export const title = "Welcome to my page";
-export const layout = "layouts/main.njk";
+export const layout = "layouts/main.vto";
 
 export default (data) => (
   <>
@@ -76,7 +76,7 @@ export default (data) => (
 );
 ```
 
-Note that this page uses the `layouts/main.njk` layout to wrap the content. (You
+Note that this page uses the `layouts/main.vto` layout to wrap the content. (You
 can mix different template languages like Nunjucks and JSX.)
 
 ## Creating layouts

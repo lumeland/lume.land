@@ -1,4 +1,4 @@
-layout: layouts/plugins.njk
+layout: layouts/plugins.vto
 title: Plugins
 main_menu: plugins
 description: |

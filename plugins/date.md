@@ -75,7 +75,7 @@ site.use(date({
 }));
 ```
 
-```html {title=".njk"}
+```html {title=".vto"}
 <time>{{ createdAt | date('MY_FORMAT') }}</time>
 ```
 

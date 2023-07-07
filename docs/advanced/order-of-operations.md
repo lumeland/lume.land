@@ -9,7 +9,7 @@ This is a high-level description of how Lume builds your site. When you run
 1. Dispatch the [event](../core/events.md) `beforeBuild`.
 2. Ensure the `dest` folder is empty.
 3. Walk the `src` folder recursively and load all files matching with a valid
-   file extension, like `.md`, `.njk`, etc.
+   file extension, like `.md`, `.vto`, etc.
    - Skip files and folders starting with `_`, `.` or ignored with
      `site.ignore()`.
    - If the file

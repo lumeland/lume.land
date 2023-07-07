@@ -58,7 +58,7 @@ Cache assets
 
 RSS
 : No plugin is needed to generate RSS files in Lume.
-[See this example](https://github.com/lumeland/base-blog/blob/master/feed.xml.njk)
+[See this example](https://github.com/lumeland/base-blog/blob/master/feed.xml.vto)
 
 Syntax Highlighting
 : There's the
