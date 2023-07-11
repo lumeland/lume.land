@@ -63,7 +63,7 @@ page_css: landing.css
 
     <lume-carousel role="region" aria-label="Showcase" tabindex="0" class="landing-examples-sites" id="examples">
       {{ set showcase = search.page("url=/showcase/") }}
-      {{ for site of showcase.data.sites.filter((site) => site.img).slice(8) }}
+      {{ for site of showcase.data.sites.filter((site) => site.img).slice(0, 8) }}
       <figure class="site">
         <a href="{{ site.url }}" class="site-image">
           <img src="{{ site.img }}" alt="Screenshot of the site" width="300" height="200">
