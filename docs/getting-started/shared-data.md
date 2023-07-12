@@ -16,7 +16,7 @@ In your project directory create a `_data.yml` file with the following content:
 <lume-code>
 
 ```yml {title="_data.yml"}
-layout: layout.vto
+layout: layout.njk
 ```
 
 </lume-code>
@@ -29,7 +29,7 @@ matter of all pages so we can remove it there.
 <lume-code>
 
 ```yml {title="_data.yml"}
-layout: layout.vto
+layout: layout.njk
 ```
 
 ```yml { title="index.md" }

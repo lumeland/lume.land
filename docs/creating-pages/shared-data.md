@@ -93,7 +93,7 @@ via `users` variable and documents via `documents.one`, `documents.two` and
 
 <lume-code>
 
-```html {title="page.vto"}
+```html {title="page.njk"}
 <h2>Documents</h2>
 
 <ul>

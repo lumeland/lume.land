@@ -14,7 +14,7 @@ results. This is useful when combined with the `search` helper to create
 paginated results. For example:
 
 ```js
-export const layout = "layouts/post-list.vto";
+export const layout = "layouts/post-list.njk";
 
 export default function* ({ search, paginate }) {
   const posts = search.pages("posts");

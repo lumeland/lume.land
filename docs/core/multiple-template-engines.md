@@ -5,7 +5,7 @@ order: 13
 ---
 
 By default, the template engine used to render a file is decided according to
-the file extension. For example, an `.md` file uses Markdown, `.vto` file uses
+the file extension. For example, an `.md` file uses Markdown, `.njk` file uses
 Nunjucks and so on.
 
 You can override this default behaviour with the `templateEngine` option. Any

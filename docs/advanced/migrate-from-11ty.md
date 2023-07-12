@@ -57,16 +57,15 @@ Cache assets
 : There isn't a plugin for that.
 
 RSS
-: No plugin is needed to generate RSS files in Lume.
-[See this example](https://github.com/lumeland/base-blog/blob/master/feed.xml.vto)
+: There's the
+[FEED plugin](../../plugins/feed.md) for that.
 
 Syntax Highlighting
 : There's the
 [code highlight plugin](../../plugins/code_highlight.md) and [prism plugin](../../plugins/prism.md) for that.
 
 Navigation
-: There isn't a plugin for that, but you can (partially) emulate it
-using the [search helper](../../plugins/search.md).
+: There's the [search helper](../../plugins/search.md) and [nav plugin](../../plugins/nav.md) for that.
 
 Inclusive Language
 : There isn't a plugin for that (I'd love it).

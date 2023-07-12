@@ -22,14 +22,14 @@ create a fully complete web page.
 
 ## Create a layout
 
-Create a new directory `_includes` and the file `layout.vto` inside it. The
-`.vto` extension is for [Nunjucks](https://mozilla.github.io/nunjucks/): a
+Create a new directory `_includes` and the file `layout.njk` inside it. The
+`.njk` extension is for [Nunjucks](https://mozilla.github.io/nunjucks/): a
 template engine supported by default by Lume. Insert the following code in the
 file:
 
 <lume-code>
 
-```html {Title="_includes/layout.vto}
+```html {Title="_includes/layout.njk}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,13 +57,13 @@ know more about its syntax. {.tip}
 Now let's configure the page (`index.md`) to use the layout just created. We
 have to create a _front matter_: a block delimited by two triple-dashed lines
 containing [YAML](https://yaml.org/) code. In this block, we define the variable
-`layout` with the value `layout.vto` (the name of the layout file).
+`layout` with the value `layout.njk` (the name of the layout file).
 
 <lume-code>
 
 ```yml {title="index.md"}
 ---
-layout: layout.vto
+layout: layout.njk
 ---
 # Welcome to my website
 
@@ -75,7 +75,7 @@ I hope you enjoy it.
 
 </lume-code>
 
-Lume will compile the markdown code and use the `layout.vto` file as the page
+Lume will compile the markdown code and use the `layout.njk` file as the page
 layout.
 
 The directory `_includes` is a special directory that Lume understands. You

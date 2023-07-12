@@ -117,7 +117,7 @@ author:
 
 <lume-code>
 
-```html{title=_includes/layouts/article.vto}
+```html{title=_includes/layouts/article.njk}
 <article>
   {{ content | safe }}
   
@@ -132,7 +132,7 @@ variable `article` that is an array with all articles related to each author:
 
 <lume-code>
 
-```html{title=_includes/layouts/author.vto}
+```html{title=_includes/layouts/author.njk}
 <article>
   {{ content | safe }}
 

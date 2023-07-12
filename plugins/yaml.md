@@ -46,7 +46,7 @@ This format can also be used to create pages; just add a file with the `.yml` or
 
 ```yaml
 title: Welcome to my page
-layout: layouts/main.vto
+layout: layouts/main.njk
 intro: |
   This is my first post using lume
   I hope you like it!

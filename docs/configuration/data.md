@@ -45,7 +45,7 @@ Use the third argument to assign a data value to only a directory. For example:
 
 ```js
 // Set the layout value to the directory /pages
-site.data("layout", "pages.vto", "/pages");
+site.data("layout", "pages.njk", "/pages");
 ```
 
 This will assign the data to the `/pages` directory so only the files in this
@@ -56,5 +56,5 @@ It's also possible to assign a data value to a specific file:
 
 ```js
 // Set the layout value to a specific file
-site.data("layout", "pages.vto", "/pages/my-custom-page.vto");
+site.data("layout", "pages.njk", "/pages/my-custom-page.njk");
 ```

@@ -27,7 +27,7 @@ example:
 6. Save the output file as `/my-page/index.html`.
 
 By default, Lume interprets the following formats as regular page files, so they
-are loaded, processed and exported to `dest` folder: `.md`, `.markdown`, `.vto`,
+are loaded, processed and exported to `dest` folder: `.md`, `.markdown`, `.njk`,
 `.tmpl.json`, `.tmpl.js`, `.tmpl.ts` and `.yaml`. Use `site.loadPages()` to add
 additional extensions:
 
@@ -99,7 +99,7 @@ default, they are placed in the `_includes` folder, but you can configure it.
 
 ```ts
 // Save the layouts files of nunjucks in the "/njk/" directory
-site.includes([".vto"], "/njk/");
+site.includes([".njk"], "/njk/");
 ```
 
 ## Components

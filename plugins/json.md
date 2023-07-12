@@ -43,7 +43,7 @@ folder. For example:
 ```json
 {
   "title": "Welcome to my page",
-  "layout": "layouts/main.vto",
+  "layout": "layouts/main.njk",
   "content": "This is my first post using lume,\nI hope you like it!"
 }
 ```

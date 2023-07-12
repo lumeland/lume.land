@@ -49,28 +49,28 @@ in the layouts:
 export default function* () {
   yield {
     url: "/page-1/",
-    layout: "layouts/article.vto",
+    layout: "layouts/article.njk",
     title: "Article 1",
     body: "Welcome to the article 1"
   };
   yield {
     url: "/page-2/",
-    layout: "layouts/article.vto",
+    layout: "layouts/article.njk",
     title: "Article 2",
     body: "Welcome to the article 2"
   };
   yield {
     url: "/page-3/",
-    layout: "layouts/article.vto",
+    layout: "layouts/article.njk",
     title: "Article 3",
     body: "Welcome to the article 3"
   };
 }
 ```
 
-```html {title=_includes/layouts/article.vto}
+```html {title=_includes/layouts/article.njk}
 ---
-layout: layouts/base.vto
+layout: layouts/base.njk
 ---
 
 <article>
@@ -89,7 +89,7 @@ define it once instead of duplicating it in every yielded page:
 <lume-code>
 
 ```js {title="pages.tmpl.js"}
-export const layout = "layouts/article.vto";
+export const layout = "layouts/article.njk";
 
 export default function* () {
   yield {
@@ -110,9 +110,9 @@ export default function* () {
 }
 ```
 
-```html {title=_includes/layouts/article.vto}
+```html {title=_includes/layouts/article.njk}
 ---
-layout: layouts/base.vto
+layout: layouts/base.njk
 ---
 
 <article>
@@ -134,7 +134,7 @@ Database or an API:
 ```js
 import database from "./my-database.ts";
 
-export const layout = "layouts/article.vto";
+export const layout = "layouts/article.njk";
 
 export default function* () {
   const articles = database.query("select * from articles");

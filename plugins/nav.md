@@ -90,17 +90,17 @@ example in Nunjucks:
 
 <lume-code>
 
-```html{title="menu.vto"}
+```html{title="menu.njk"}
 <ul class="menu">
   {{ asyncEach item in nav.menu().children }}
     <li>
-      {{ include "templates/menu_item.vto" }}
+      {{ include "templates/menu_item.njk" }}
     </li>
   {{ endeach }}
 </ul>
 ```
 
-```html{title="menu_item.vto"}
+```html{title="menu_item.njk"}
 {{ if item.data }}
   <a href="{{ item.data.url }}">
     {{ item.data.title }}
@@ -112,7 +112,7 @@ example in Nunjucks:
 <ul>
   {{ asyncEach item in item.children }}
   <li>
-    {{ include "templates/menu_item.vto" }}
+    {{ include "templates/menu_item.njk" }}
   </li>
   {{ endeach }}
 </ul>
