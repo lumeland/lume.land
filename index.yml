@@ -24,7 +24,7 @@ usage:
       - Ordes
       - Cedeira
       ```
-      ```html { title="page.vto" }
+      ```html { title="page.njk" }
       <h1>{{ title }}</h1>
 
       <ul>
