@@ -65,7 +65,7 @@ Run `deno task lume -h` to see the instructions.
 
 ## Setup Lume CLI on your computer
 
-Due Lume uses Deno task to work, you need to type always
+Lume uses Deno task to work, you need to type always
 `deno task lume [...args]`, which is a bit verbose. To avoid typing `deno task`
 all the time, you can install the [Lume CLI](https://github.com/lumeland/cli)
 script with:
