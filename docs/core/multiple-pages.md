@@ -76,7 +76,7 @@ layout: layouts/base.njk
 <article>
   <h1>{{ title }}</h1>
   <div>
-    {{ body |> md}}
+    {{ body | md | safe }}
   </div>
 </article>
 ```
@@ -118,7 +118,7 @@ layout: layouts/base.njk
 <article>
   <h1>{{ title }}</h1>
   <div>
-    {{ body |> md}}
+    {{ body | md | safe }}
   </div>
 </article>
 ```

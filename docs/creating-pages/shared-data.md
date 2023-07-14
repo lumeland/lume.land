@@ -97,11 +97,11 @@ via `users` variable and documents via `documents.one`, `documents.two` and
 <h2>Documents</h2>
 
 <ul>
-{{ for doc in documents }}
+{% for doc in documents %}
   <li>
       {{ doc.title }}
   </li>
-{{ /for }}
+{% endfor %}
 </ul>
 ```
 

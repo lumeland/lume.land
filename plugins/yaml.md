@@ -74,13 +74,13 @@ You will need a layout to render this page and generate the HTML:
       <p>{{ intro }}</p>
     </header>
 
-    {{ for section in sections }}
+    {% for section in sections %}
     <section>
       <h2>{{ section.title }}</h2>
       <img src="{{ section.image }}">
       <p>{{ section.text }}</p>
     </section>
-    {{ /for }}
+    {% endfor %}
   </body>
 </html>
 ```

@@ -139,13 +139,13 @@ variable `article` that is an array with all articles related to each author:
   <h2>Articles created:</h2>
 
   <ul>
-  {{ for item in article }}
+  {% for item in article %}
     <li>
       <a href="{{ item.url }}">
         {{ item.title }}
       </a>
     </li>
-  {{ /for }}
+  {% endfor %}
   </ul>
 </article>
 ```

@@ -25,9 +25,9 @@ the `search` object:
 
 ```html
 <ul>
-  {{ for post in search.pages("post") }}
+  {% for post in search.pages("post") %}
   <li>{{ post.data.title }}</li>
-  {{ /for }}
+  {% endfor %}
 </ul>
 ```
 
@@ -36,9 +36,9 @@ with a space:
 
 ```html
 <ul>
-  {{ for post in search.pages("post ssg") }}
+  {% for post in search.pages("post ssg") %}
   <li>{{ post.data.title }}</li>
-  {{ /for }}
+  {% endfor %}
 </ul>
 ```
 

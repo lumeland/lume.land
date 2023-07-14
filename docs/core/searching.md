@@ -15,9 +15,9 @@ the following code:
 
 ```html
 <ul>
-  {{ for page of search.pages("category=music") }}
+  {% for page in search.pages("category=music") %}
   <li>{{ page.data.title }}</li>
-  {{ /for }}
+  {% endfor %}
 </ul>
 ```
 

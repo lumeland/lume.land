@@ -92,29 +92,29 @@ example in Nunjucks:
 
 ```html{title="menu.njk"}
 <ul class="menu">
-  {{ asyncEach item in nav.menu().children }}
+  {% asyncEach item in nav.menu().children %}
     <li>
-      {{ include "templates/menu_item.njk" }}
+      {% include "templates/menu_item.njk" %}
     </li>
-  {{ endeach }}
+  {% endeach %}
 </ul>
 ```
 
 ```html{title="menu_item.njk"}
-{{ if item.data }}
+{% if item.data %}
   <a href="{{ item.data.url }}">
     {{ item.data.title }}
   </a>
-{{ else }}
+{% else %}
   <span>{{ item.slug }}</span>
-{{ /if }}
+{% endif %}
 
 <ul>
-  {{ asyncEach item in item.children }}
+  {% asyncEach item in item.children %}
   <li>
-    {{ include "templates/menu_item.njk" }}
+    {% include "templates/menu_item.njk" %}
   </li>
-  {{ endeach }}
+  {% endeach %}
 </ul>
 ```
 
@@ -173,16 +173,16 @@ code:
 
 ```html
 <ul>
-  {{ for item in nav.breadcrumb("/articles/second-article/chapter-2") }}
+  {% for item in nav.breadcrumb("/articles/second-article/chapter-2") %}
   <li>
-    {{ if item.data }}
+    {% if item.data %}
       <a href="{{ item.data.url }}">
         {{ item.data.title }}
       </a>
-    {{ else }}
+    {% else %}
       <span>{{ item.slug }}</span>
-    {{ /if }}
+    {% endif %}
   </li>
-  {{ /for }}
+  {% endfor %}
 </ul>
 ```

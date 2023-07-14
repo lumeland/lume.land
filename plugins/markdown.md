@@ -165,8 +165,8 @@ render the Markdown in _inline_ mode.
 
 ```html
 <!-- Render to HTML code -->
-<div>{{ text | md }}</div>
+<div>{{ text | md | safe }}</div>
 
 <!-- Single line rendering, without the paragraph wrap: -->
-<p>{{ text | md(true) }}</p>
+<p>{{ text | md(true) | safe }}</p>
 ```

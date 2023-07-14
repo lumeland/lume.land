@@ -34,13 +34,13 @@ links:
   </header>
 
   <ul>
-    {{ for link in links }}
+    {% for link in links %}
     <li>
       <a href="{{ link.url }}">
         {{ link.text }}
       </a>
     </li>
-    {{ /for }}
+    {% endfor %}
   </ul>
 </article>
 ```

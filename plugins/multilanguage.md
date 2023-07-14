@@ -112,13 +112,13 @@ menu to change the language of the current page. This is an example in nunjucks:
 
 ```html {title=_includes/layout.njk}
 <ul class="languages">
-{{ for alt in alternates }}
+{% for alt in alternates %}
   <li>
-    <a href="{{ alt.url }}" {{ if alt.lang == lang }}aria-current="page"{{ /if }}>
+    <a href="{{ alt.url }}" {% if alt.lang == lang %}aria-current="page"{% endif %}>
       {{ alt.title }} ({{ alt.lang }})
     </a>
   </li>
-{{ /for }}
+{% endfor %}
 </ul>
 ```
 

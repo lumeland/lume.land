@@ -88,7 +88,7 @@ way:
 ### Including templates
 
 Some template engines have their own way of loading templates. For example, Pug
-uses `extends "filename"`, Liquid and Nunjucks use `{{ include "filename" }}`,
+uses `extends "filename"`, Liquid and Nunjucks use `{% include "filename" %}`,
 etc.
 
 Some engines allow configuring how to load these files (so they can use the Lume
