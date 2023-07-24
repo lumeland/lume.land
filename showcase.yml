@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Dev Radar
+    img: /img/showcase/dev_radar.webp
+    url: https://dev-radar.com/
+    description: An AI-powered news aggregator that helps you stay up to date with the latest trends in software development.
+    code: https://github.com/lfarroco/news-radar
+
   - title: IBM Deep Search
     img: /img/showcase/deep_search.webp
     url: https://ds4sd.github.io/
