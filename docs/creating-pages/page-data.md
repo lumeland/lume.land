@@ -84,6 +84,11 @@ values are:
 - The special value `Git Last Modified` to get the last time this file has
   changed in the Git history. It uses the last modified date as fallback.
 
+### draft
+
+The draft variable mark this page as draft, which means it will be exported only
+in development mode, but not production environment.
+
 ### layout
 
 To define the layout that is used to render the page. See [Layouts](layouts.md)
