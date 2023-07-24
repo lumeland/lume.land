@@ -47,6 +47,18 @@ file with the following code:
 @tailwind utilities;
 ```
 
+Reference it in your main html file (index.html, main.njk, etc.) :
+
+```html
+// index.html | main.njk | else
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+...
+```
+
 See
 [more info about Tailwind's functions and directives in its documentation page](https://tailwindcss.com/docs/functions-and-directives)
 
@@ -81,4 +93,32 @@ site.use(tailwindcss({
     },
   },
 }));
+```
+
+### Mix with Markdown : @tailwindcss/typography plugin
+
+[@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) plugin
+is required to apply TailwindCSS styling to markdown files.
+
+```typescript
+import lume from "lume/mod.ts";
+import postcss from "lume/plugins/postcss.ts";
+import tailwindcss from "lume/plugins/tailwindcss.ts";
+import typography from "npm:@tailwindcss/typography";
+
+const site = lume();
+
+site.use(tailwindcss({
+  options: {
+    plugins: [typography],
+  },
+}));
+```
+
+In your html, you should use the `prose` class.
+
+```html
+<article class="prose">
+  {{ content | safe }}
+</article>
 ```
