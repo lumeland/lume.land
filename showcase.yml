@@ -13,6 +13,11 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Studio Kingdom
+    img: /img/showcase/studio_kingdom.webp
+    url: https://studiokingdom.co.kr/en/
+    description: A video game studio based in Korea.
+
   - title: Dev Radar
     img: /img/showcase/dev_radar.webp
     url: https://dev-radar.com/
