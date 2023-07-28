@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Obradoiro Dixital Galego
+    img: /img/showcase/obradoiro-dixital-galego.webp
+    url: https://obradoirodixitalgalego.gal/
+    description: Cultural association that brings together and promotes Galician content on the internet.
+    code: https://github.com/pvillaverde/web-obradoiro-dixital-galego
+
   - title: Studio Kingdom
     img: /img/showcase/studio_kingdom.webp
     url: https://studiokingdom.co.kr/en/
