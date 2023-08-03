@@ -341,6 +341,15 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://twitter.com/Jedi_Thiago/status/1574234113367752705
+      author: Thiago Jedi (@jedi@cuscuz.in)
+      avatar: /img/avatars/testimonials/jedithiago.webp
+      date: August 3, 2023
+      text: |
+        Aliás, tenho que reforçar o quão feliz eu estou com o Lume como sistema para gerir o meu blog. Sem falar o quanto que [@deno_land](https://fosstodon.org/@deno_land) evoluiu desde que eu fiz a migração.
+
+        Recomendo a todos que utilizam o Github Pages ou outro sistema de hospedagem de páginas estáticas.
+
     - url: https://thomasorus.com/from-static-site-generator-to-static-site-processor.html
       author: Thomasorus (thomasorus.com)
       avatar: /img/avatars/testimonials/thomasorus.webp
@@ -412,13 +421,6 @@ testimonials:
       date: September 21, 2022
       text: |
         I’ve spent just 30 minutes playing with Lume Static Site Generator by <a href="https://twitter.com/deno_land">@deno_land</a> and I already love it! It’s blazingly fast and seems to have all features I need out of the box.<a href="https://twitter.com/hashtag/deno">#deno</a> <a href="https://twitter.com/hashtag/typescript">#typescript</a> <a href="https://twitter.com/hashtag/webdev">#webdev</a>
-
-    - url: https://twitter.com/Jedi_Thiago/status/1574234113367752705
-      author: Thiago Jedi (@Jedi_Thiago)
-      avatar: /img/avatars/testimonials/jedithiago.webp
-      date: September 26, 2022
-      text: |
-        Maior acerto dos últimos meses: migrar meu blog do GitHub pages para Lume. Me deu menos dor de cabeça do que Astro. E eu posso finalmente usar <a href="https://twitter.com/deno_land">@deno_land</a> na prática.
 
     - url: https://www.youtube.com/watch?v=6ld61HU6V6k
       author: Coding with Robby
