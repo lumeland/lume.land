@@ -76,7 +76,8 @@ default. This means that after running `lume --serve`, you can go to
 `http://localhost:3000/admin/` to access the CMS and make changes to the content
 of your site.
 
-Keep in mind that local mode needs Node installed on your computer because it's
-needed to run `npx netlify-cms-proxy-server` to start the local proxy server for
-the CMS. If you want to disable the local mode, set `local: false` in the plugin
-configuration.
+Keep in mind that local mode runs
+`deno run --allow-read --allow-net=0.0.0.0 --allow-write --allow-env npm:netlify-cms-proxy-server`
+to start the local proxy server for the CMS. You can change this command with
+`proxyCommand` option or disable the local mode, by setting `local: false` in
+the plugin configuration.
