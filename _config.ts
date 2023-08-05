@@ -1,5 +1,4 @@
 import lume from "lume/mod.ts";
-import postcss from "lume/plugins/postcss.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 import inline from "lume/plugins/inline.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
@@ -35,7 +34,6 @@ site
   .copy("static", ".")
   .copy("_redirects")
   .use(codeHighlight())
-  .use(postcss())
   .use(lightningCss())
   .use(inline())
   .use(metas())
