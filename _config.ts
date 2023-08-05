@@ -5,7 +5,7 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import imagick from "lume/plugins/imagick.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
-import lightningCss from "lume/plugins/lightningcss.ts";
+import postcss from "lume/plugins/postcss.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import metas from "lume/plugins/metas.ts";
 import vento from "lume/plugins/vento.ts";
@@ -19,9 +19,6 @@ const markdown = {
 const site = lume(
   {
     location: new URL("https://lume.land"),
-    server: {
-      page404: "/404/",
-    },
   },
   { markdown },
 );
@@ -34,7 +31,7 @@ site
   .copy("static", ".")
   .copy("_redirects")
   .use(codeHighlight())
-  .use(lightningCss())
+  .use(postcss())
   .use(inline())
   .use(metas())
   .use(vento())

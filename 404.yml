@@ -1,4 +1,5 @@
 layout: layouts/error.vto
+url: /404.html
 title: "404: Page Not Found"
 description: |
   Sorry, the page you are looking for could not be found.
