@@ -5,7 +5,7 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import imagick from "lume/plugins/imagick.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
-import postcss from "lume/plugins/postcss.ts";
+import lightningcss from "lume/plugins/lightningcss.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import metas from "lume/plugins/metas.ts";
 import vento from "lume/plugins/vento.ts";
@@ -31,7 +31,7 @@ site
   .copy("static", ".")
   .copy("_redirects")
   .use(codeHighlight())
-  .use(postcss())
+  .use(lightningcss())
   .use(inline())
   .use(metas())
   .use(vento())
