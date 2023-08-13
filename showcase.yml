@@ -14,7 +14,7 @@ sites:
     code: https://github.com/lumeland/lume.land
 
   - title: Nonwiz's Homepage
-    img: /img/showcase/nonwiz_compressed.webp
+    img: /img/showcase/nonwiz.webp
     url: https://nonwiz.dev
     description: Minimalist blog inspired by Sakura and classless css.
     code: https://github.com/nonwiz/nonwiz
