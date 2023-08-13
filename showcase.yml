@@ -304,7 +304,8 @@ sites:
     code: https://github.com/dominickp/dom-deno
 
   - title: Nonwiz's Homepage
-    img: /img/showcase
+    img: /img/showcase/nonwiz_compressed.png
     url: https://nonwiz.dev
     description: Minimalist blog inspired by Sakura and classless css.
     code: https://github.com/nonwiz/nonwiz
+    
