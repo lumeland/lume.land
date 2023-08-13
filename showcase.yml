@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Nonwiz's Homepage
+    img: /img/showcase/nonwiz_compressed.webp
+    url: https://nonwiz.dev
+    description: Minimalist blog inspired by Sakura and classless css.
+    code: https://github.com/nonwiz/nonwiz
+
   - title: Obradoiro Dixital Galego
     img: /img/showcase/obradoiro-dixital-galego.webp
     url: https://obradoirodixitalgalego.gal/
@@ -303,9 +309,4 @@ sites:
     description: The personal site of Dominick Peluso.
     code: https://github.com/dominickp/dom-deno
 
-  - title: Nonwiz's Homepage
-    img: /img/showcase/nonwiz_compressed.png
-    url: https://nonwiz.dev
-    description: Minimalist blog inspired by Sakura and classless css.
-    code: https://github.com/nonwiz/nonwiz
     
