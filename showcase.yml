@@ -18,6 +18,12 @@ sites:
     url: https://nonwiz.dev
     description: Minimalist blog inspired by Sakura and classless css.
     code: https://github.com/nonwiz/nonwiz
+  
+  - title: Dom's Homepage
+    img: /img/showcase/dominick_cc.webp
+    url: https://dominick.cc/
+    description: The personal site of Dominick Peluso.
+    code: https://github.com/dominickp/dom-deno
 
   - title: Obradoiro Dixital Galego
     img: /img/showcase/obradoiro-dixital-galego.webp
@@ -302,9 +308,3 @@ sites:
     url: https://minimalist-blog-x8c5ngg3kzt0.deno.dev/
     description: Minimalist blog template built for lume 
     code: https://github.com/officialrajdeepsingh/Minimalist-blog
-
-  - title: Dom's Homepage
-    img: /img/showcase/dominick_cc.webp
-    url: https://dominick.cc/
-    description: The personal site of Dominick Peluso.
-    code: https://github.com/dominickp/dom-deno
