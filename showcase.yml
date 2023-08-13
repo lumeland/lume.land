@@ -302,3 +302,9 @@ sites:
     url: https://dominick.cc/
     description: The personal site of Dominick Peluso.
     code: https://github.com/dominickp/dom-deno
+
+  - title: Nonwiz's Homepage
+    img: /img/showcase
+    url: https://nonwiz.dev
+    description: Minimalist blog inspired by Sakura and classless css.
+    code: https://github.com/nonwiz/nonwiz
