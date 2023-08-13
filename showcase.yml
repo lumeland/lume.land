@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Nonwiz's Homepage
+    img: /img/showcase/nonwiz.webp
+    url: https://nonwiz.dev
+    description: Minimalist blog inspired by Sakura and classless css.
+    code: https://github.com/nonwiz/nonwiz
+
   - title: Obradoiro Dixital Galego
     img: /img/showcase/obradoiro-dixital-galego.webp
     url: https://obradoirodixitalgalego.gal/
