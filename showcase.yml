@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: CloudCannon documentation
+    img: /img/showcase/cloudcannon.webp
+    url: https://cloudcannon.com/documentation/
+    description: Platform documentation for CloudCannon
+    code: https://github.com/CloudCannon/platform-documentation
+
   - title: Nonwiz's Homepage
     img: /img/showcase/nonwiz.webp
     url: https://nonwiz.dev
