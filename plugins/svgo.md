@@ -2,6 +2,7 @@
 title: SVGO
 description: Optimize SVG files with SVGO
 docs: plugins/svgo.ts/~/Options
+# mod: plugins/svgo.ts
 tags:
   - images
 ---

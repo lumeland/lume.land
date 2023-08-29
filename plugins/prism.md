@@ -2,6 +2,7 @@
 title: Prism
 description: Code syntax highlighting using Prism
 docs: plugins/prism.ts/~/Options
+mod: plugins/prism.ts
 tags:
   - html
 ---

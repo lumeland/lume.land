@@ -2,6 +2,7 @@
 title: Liquid
 description: Use the Liquid template engine to create pages and layouts
 docs: plugins/liquid.ts/~/Options
+# mod: plugins/liquid.ts
 tags:
   - template_engine
 ---

@@ -2,6 +2,7 @@
 title: Eta
 description: Use the template engine Eta to build pages.
 docs: plugins/eta.ts/~/Options
+# mod: plugins/eta.ts
 tags:
   - template_engine
 ---

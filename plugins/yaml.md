@@ -2,6 +2,7 @@
 title: YAML
 description: Add support for YAML to store data and create pages.
 docs: plugins/yaml.ts/~/Options
+mod: plugins/yaml.ts
 enabled: true
 tags:
   - data_format

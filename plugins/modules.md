@@ -2,6 +2,7 @@
 title: Modules
 description: Use ESM and TypeScript modules to create pages, layouts, and store data.
 docs: plugins/modules.ts/~/Options
+mod: plugins/modules.ts
 enabled: true
 tags:
   - template_engine

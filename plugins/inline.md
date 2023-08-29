@@ -2,6 +2,7 @@
 title: Inline
 description: Inline CSS, JavaScript, SVG, and images in the HTML.
 docs: plugins/inline.ts/~/Options
+mod: plugins/inline.ts
 tags:
   - html
 ---

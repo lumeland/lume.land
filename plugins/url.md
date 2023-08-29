@@ -2,6 +2,7 @@
 title: URL
 description: Provide the `url` filter to fix and resolve URLs.
 docs: plugins/url.ts/~/Options
+mod: plugins/url.ts
 enabled: true
 tags:
   - urls

@@ -1,7 +1,8 @@
 ---
 title: Metas
-docs: plugins/metas.ts/~/Options
 description: Automatically add `<meta>` tags for SEO and social networks.
+docs: plugins/metas.ts/~/Options
+mod: plugins/metas.ts
 tags:
   - html
 ---

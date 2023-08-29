@@ -2,6 +2,7 @@
 title: Relations
 description: Create automatic relations between pages
 docs: plugins/relations.ts/~/Options
+mod: plugins/relations.ts
 tags:
   - utils
 ---

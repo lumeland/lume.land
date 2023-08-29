@@ -2,6 +2,7 @@
 title: Nunjucks
 description: Use the Nunjucks template engine to create pages and layouts.
 docs: plugins/nunjucks.ts/~/Options
+mod: plugins/nunjucks.ts
 enabled: true
 tags:
   - template_engine

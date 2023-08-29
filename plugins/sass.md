@@ -2,6 +2,7 @@
 title: SASS
 description: Compile SCSS files to CSS.
 docs: plugins/sass.ts/~/Options
+mod: plugins/sass.ts
 tags:
   - styles
 ---

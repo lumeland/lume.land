@@ -1,7 +1,8 @@
 ---
 title: Imagick
-docs: plugins/imagick.ts/~/Options
 description: Image manipulation using Imagick
+docs: plugins/imagick.ts/~/Options
+# mod: plugins/imagick.ts
 tags:
   - images
 ---

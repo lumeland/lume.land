@@ -2,6 +2,7 @@
 title: Lightning CSS
 description: Transform and minify your CSS files with Lightning CSS.
 docs: plugins/lightningcss.ts/~/Options
+mod: plugins/lightningcss.ts
 tags:
   - styles
 ---
