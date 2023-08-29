@@ -2,6 +2,7 @@
 title: Minify HTML
 description: Minify the HTML code of your pages.
 docs: plugins/minify_html.ts/~/Options
+mod: plugins/minify_html.ts
 tags:
   - html
 ---

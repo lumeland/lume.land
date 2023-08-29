@@ -1,7 +1,8 @@
 ---
 title: Feed
 description: Generate a RSS or JSON Feed automatically for your site
-docs: plugins/sitemap.ts/~/Options
+docs: plugins/feed.ts/~/Options
+mod: plugins/feed.ts
 tags:
   - utils
 ---

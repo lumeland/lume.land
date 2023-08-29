@@ -2,6 +2,7 @@
 title: Sitemap
 description: Generate a sitemap automatically for your site
 docs: plugins/sitemap.ts/~/Options
+mod: plugins/sitemap.ts
 tags:
   - utils
 ---

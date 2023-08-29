@@ -2,6 +2,7 @@
 title: Tailwind CSS
 description: Use Tailwind CSS to create the CSS styles.
 docs: plugins/tailwindcss.ts/~/Options
+# mod: plugins/tailwindcss.ts
 tags:
   - styles
 ---

@@ -2,6 +2,7 @@
 title: Source Maps
 description: Generate source maps files for your CSS and JS.
 docs: plugins/source_maps.ts/~/Options
+mod: plugins/source_maps.ts
 tags:
   - styles
   - javascript

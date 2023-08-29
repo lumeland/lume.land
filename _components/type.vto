@@ -1,0 +1,42 @@
+{{> function printDef(def) {
+  if (def.type === "array") {
+    return `<em>${def.children.type}[]</em>`;
+  } else {
+    return `<em>${def.type}</em>`;
+  }
+}
+}}
+
+<dl class="type">
+  {{ for name, option of options }}
+  <div>
+    <dt class="type-name">
+      <strong>{{ name }}</strong>
+      {{ if option.type === "union" }}
+        {{ option.union.map(printDef).join(" ")}}
+      {{ else }}
+        {{ printDef(option.type) }}
+      {{ /if }}
+    </dt>
+    <dd class="type-details">
+      {{ option.description |> md }}
+
+      {{ if option.type === "object" && Object.keys(option.children).length }}
+        {{ await comp.type({ options: option.children })}}
+      {{ /if }}
+
+      {{ if option.default !== undefined && (typeof option.default !== "object" || Object.keys(option.default).length) }}
+
+      <details class="type-default">
+        <summary>Default value</summary>
+        <pre><code class="language-js hljs">{{
+          Deno.inspect(option.default, {
+            compact: false,
+          })
+        }}</code></pre>
+      </details>
+      {{ /if }}
+    </dd>
+  </div>
+  {{ /for }}
+</dl>

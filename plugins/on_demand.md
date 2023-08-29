@@ -2,6 +2,7 @@
 title: On demand
 description: Plugin to render pages on demand in Deno Deploy
 docs: plugins/on_demand.ts/~/Options
+mod: plugins/on_demand.ts
 tags:
   - utils
 ---

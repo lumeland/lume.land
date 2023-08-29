@@ -2,6 +2,7 @@
 title: Paginate
 description: Provide a helper to paginate results.
 docs: plugins/paginate.ts/~/Options
+mod: plugins/paginate.ts
 enabled: true
 tags:
   - utils

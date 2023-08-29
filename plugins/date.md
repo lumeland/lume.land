@@ -2,6 +2,7 @@
 title: Date
 description: To manipulate date & time values in different locales
 docs: plugins/date.ts/~/Options
+mod: plugins/date.ts
 tags:
   - utils
 ---

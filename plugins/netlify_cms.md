@@ -1,7 +1,8 @@
 ---
 title: Netlify CMS
-docs: plugins/netlify_cms.ts/~/Options
 description: Run Netlify CMS to update the site content
+docs: plugins/netlify_cms.ts/~/Options
+mod: plugins/netlify_cms.ts
 tags:
   - utils
 ---

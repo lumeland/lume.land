@@ -2,6 +2,7 @@
 title: JSX Preact
 description: Create pages and layouts with JSX (Preact).
 docs: plugins/jsx_preact.ts/~/Options
+mod: plugins/jsx_preact.ts
 tags:
   - template_engine
 ---

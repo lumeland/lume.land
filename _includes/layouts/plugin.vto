@@ -28,6 +28,11 @@ page_css: docs.css
     </header>
 
     <div class="doc-body">
+      {{ if it.mod }}
+        <h2>Options</h2>
+        {{ await comp.type({options: await scheme(mod)}) }}
+      {{ /if }}
+
       {{ content }}
     </div>
   </main>

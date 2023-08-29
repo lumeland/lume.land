@@ -2,6 +2,7 @@
 title: Multilanguage
 description: Create multiple language versions of the same page
 docs: plugins/multilanguage.ts/~/Options
+mod: plugins/multilanguage.ts
 tags:
   - utils
 ---
