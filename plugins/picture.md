@@ -2,7 +2,7 @@
 title: Picture
 description: Create responsive images using Imagick
 docs: plugins/picture.ts/~/Options
-mod: plugins/picture.ts
+# mod: plugins/picture.ts
 tags:
   - images
 ---

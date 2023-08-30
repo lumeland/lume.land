@@ -16,8 +16,7 @@ it yet), create the file `index.md` and add some content in
 ```md {title="index.md"}
 # Welcome to my website
 
-This is my first page using **Lume,**
-a static site generator for Deno.
+This is my first page using **Lume,** a static site generator for Deno.
 
 I hope you enjoy it.
 ```
