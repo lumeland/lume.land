@@ -2,29 +2,31 @@
   if (def.type === "array") {
     return `<em>${def.children.type}[]</em>`;
   } else {
-    return `<em>${def.type}</em>`;
+    return `<em>${def.value || def.type}</em>`;
   }
 }
 }}
 
 <dl class="type">
-  {{ for name, option of options }}
+  {{ for name, info of options }}
+  {{# {{ JSON.stringify(info)}} #}}
   <div>
     <dt class="type-name">
       <strong>{{ name }}</strong>
-      {{ if option.type === "union" }}
-        {{ option.union.map(printDef).join(" ")}}
+      {{ if info.type === "union" }}
+        {{ info.children.map(printDef).join(" ")}}
       {{ else }}
-        {{ printDef(option.type) }}
+        {{ printDef(info) }}
       {{ /if }}
     </dt>
     <dd class="type-details">
-      {{ option.description |> md }}
+      {{ info.description |> md |> replace("<style>", "style") }}
 
-      {{ if option.type === "object" && Object.keys(option.children).length }}
-        {{ await comp.type({ options: option.children })}}
+      {{ if info.type === "object" && info.children }}
+        {{ await comp.type({ options: info.children })}}
       {{ /if }}
 
+      {{# 
       {{ if option.default !== undefined && (typeof option.default !== "object" || Object.keys(option.default).length) }}
 
       <details class="type-default">
@@ -35,7 +37,7 @@
           })
         }}</code></pre>
       </details>
-      {{ /if }}
+      {{ /if }} #}}
     </dd>
   </div>
   {{ /for }}

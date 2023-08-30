@@ -127,7 +127,7 @@ tags: post
 
 ```js { title="JavaScript" }
 export const url = "/welcome.html";
-export const date = new Date('2021-01-01T03:24:00');
+export const date = new Date("2021-01-01T03:24:00");
 export const layout = "layouts/post.njk";
 export const draft = true;
 export const tags = ["post"];
@@ -136,11 +136,11 @@ export const tags = ["post"];
 ```js { title="JavaScript (alternative)" }
 const data = {
   url: "/welcome.html",
-  date: new Date('2021-01-01T03:24:00'),
+  date: new Date("2021-01-01T03:24:00"),
   layout: "layouts/post.njk",
   draft: true,
   tags: ["post"],
-}
+};
 
 export default data;
 ```

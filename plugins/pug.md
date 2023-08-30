@@ -2,7 +2,7 @@
 title: Pug
 description: Use the Pug template engine to create pages and layouts
 docs: plugins/pug.ts/~/Options
-# mod: plugins/pug.ts
+mod: plugins/pug.ts
 tags:
   - template_engine
 ---

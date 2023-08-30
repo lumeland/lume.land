@@ -19,12 +19,12 @@ better for dynamic data (for example, data fetched from an API or a database):
   "people": [
     {
       "name": "Oscar Otero",
-      "color": "black",
+      "color": "black"
     },
     {
       "name": "Laura Rubio",
-      "color": "blue",
-    },
+      "color": "blue"
+    }
   ]
 }
 ```
@@ -107,13 +107,15 @@ via `users` variable and documents via `documents.one`, `documents.two` and
 
 ```jsx {title="page.jsx"}
 export default function ({ documents }) {
-  return <>
-    <h2>Documents</h2>
+  return (
+    <>
+      <h2>Documents</h2>
 
-    <ul>
-    { documents.map((doc) => <li>{ doc.title }</li>) }
-    </ul>
-  </>;
+      <ul>
+        {documents.map((doc) => <li>{doc.title}</li>)}
+      </ul>
+    </>
+  );
 }
 ```
 

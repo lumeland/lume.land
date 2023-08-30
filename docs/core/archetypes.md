@@ -130,6 +130,7 @@ export default function () {
 ---
 title: Title content
 ---
+
 Page content
 ```
 

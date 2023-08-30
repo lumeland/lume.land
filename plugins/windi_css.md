@@ -2,7 +2,7 @@
 title: Windi CSS
 description: Use the Windi framework to create the CSS styles.
 docs: plugins/windi_css.ts/~/Options
-# mod: plugins/windi_css.ts
+mod: plugins/windi_css.ts
 tags:
   - styles
 ---

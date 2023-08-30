@@ -29,8 +29,8 @@ Now, this data is available in your pages, layouts and components:
 ```js { title="JavaScript" }
 export default function ({ myNumber, randomNumber }) {
   return `
-  <p>My number: ${ myNumber }</p>
-  <p>Random number: ${ randomNumber() }</p>`;
+  <p>My number: ${myNumber}</p>
+  <p>Random number: ${randomNumber()}</p>`;
 }
 ```
 

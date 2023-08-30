@@ -71,7 +71,7 @@ const styles = [
 ];
 
 export default function (_, filters) {
-  return `<a class="${ filters.class(styles) }>Hello</a>`;
+  return `<a class="${filters.class(styles)}>Hello</a>`;
 }
 ```
 
