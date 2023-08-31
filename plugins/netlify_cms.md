@@ -1,7 +1,6 @@
 ---
 title: Netlify CMS
 description: Run Netlify CMS to update the site content
-docs: plugins/netlify_cms.ts/~/Options
 mod: plugins/netlify_cms.ts
 tags:
   - utils
@@ -24,13 +23,10 @@ import netlifyCMS from "lume/plugins/netlify_cms.ts";
 
 const site = lume();
 
-site.use(netlifyCMS());
+site.use(netlifyCMS(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/netlify_cms.ts/~/Options).
 
 ## Usage
 

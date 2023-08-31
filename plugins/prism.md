@@ -1,7 +1,6 @@
 ---
 title: Prism
 description: Code syntax highlighting using Prism
-docs: plugins/prism.ts/~/Options
 mod: plugins/prism.ts
 tags:
   - html
@@ -22,7 +21,7 @@ import prism from "lume/plugins/prism.ts";
 
 const site = lume();
 
-site.use(prism());
+site.use(prism(/* Options */));
 
 export default site;
 ```
@@ -46,6 +45,3 @@ site.use(prism());
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/prism.ts/~/Options).

@@ -1,7 +1,6 @@
 ---
 title: Metas
 description: Automatically add `<meta>` tags for SEO and social networks.
-docs: plugins/metas.ts/~/Options
 mod: plugins/metas.ts
 tags:
   - html
@@ -38,13 +37,10 @@ import metas from "lume/plugins/metas.ts";
 
 const site = lume();
 
-site.use(metas());
+site.use(metas(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/metas.ts/~/Options).
 
 ## Usage
 

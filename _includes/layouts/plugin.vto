@@ -29,7 +29,13 @@ page_css: docs.css
 
     <div class="doc-body">
       {{ if it.mod }}
-        <h2>Options</h2>
+        <h2>
+          Options
+          <a class="header-aside-link" target="_blank" href="https://deno.land/x/lume/{{ it.mod }}?s=Options">
+            See on deno.land
+            <img width="20" height="20" src="/icons/arrow-square-out.svg" inline>
+          </a>
+        </h2>
         {{ await comp.type({options: await scheme(mod)}) }}
       {{ /if }}
 

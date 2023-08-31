@@ -1,7 +1,6 @@
 ---
 title: Inline
 description: Inline CSS, JavaScript, SVG, and images in the HTML.
-docs: plugins/inline.ts/~/Options
 mod: plugins/inline.ts
 tags:
   - html
@@ -54,13 +53,10 @@ import inline from "lume/plugins/inline.ts";
 
 const site = lume();
 
-site.use(inline());
+site.use(inline(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/inline.ts/~/Options).
 
 ## SVG inline
 

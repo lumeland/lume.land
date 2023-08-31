@@ -1,7 +1,6 @@
 ---
 title: YAML
 description: Add support for YAML to store data and create pages.
-docs: plugins/yaml.ts/~/Options
 mod: plugins/yaml.ts
 enabled: true
 tags:
@@ -21,8 +20,7 @@ This plugin is installed by default. 🎉
 ## Configuration
 
 If you want to change the default configuration, use the second argument of
-`lume()` function in your `_config.ts` file. See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/yaml.ts/~/Options).
+`lume()` function in your `_config.ts` file.
 
 ```js
 import lume from "lume/mod.ts";

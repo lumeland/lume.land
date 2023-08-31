@@ -1,7 +1,6 @@
 ---
 title: SASS
 description: Compile SCSS files to CSS.
-docs: plugins/sass.ts/~/Options
 mod: plugins/sass.ts
 tags:
   - styles
@@ -22,25 +21,10 @@ import sass from "lume/plugins/sass.ts";
 
 const site = lume();
 
-site.use(sass());
+site.use(sass(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/sass.ts/~/Options).
-
-## Configuration
-
-This plugin accepts a configuration object. The available options are:
-
-- `extensions`: Array with the extensions of the files that this plugin will
-  load. By default it is `[".scss", ".sass"]`.
-- `format`: The output format (expanded or compressed). By default it is
-  `compressed`.
-- `options`: An object with options to configure Deno SASS.
-- `includes`: The directory to search for the `@import`ed files. By default is
-  it is `_includes`.
 
 ## Includes
 

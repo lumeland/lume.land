@@ -1,7 +1,6 @@
 ---
 title: Lightning CSS
 description: Transform and minify your CSS files with Lightning CSS.
-docs: plugins/lightningcss.ts/~/Options
 mod: plugins/lightningcss.ts
 tags:
   - styles
@@ -23,13 +22,10 @@ import lightningCss from "lume/plugins/lightningcss.ts";
 
 const site = lume();
 
-site.use(lightningCss());
+site.use(lightningCss(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/parcel_css.ts/~/Options).
 
 ## Configuration
 

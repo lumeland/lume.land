@@ -1,7 +1,6 @@
 ---
 title: Nunjucks
 description: Use the Nunjucks template engine to create pages and layouts.
-docs: plugins/nunjucks.ts/~/Options
 mod: plugins/nunjucks.ts
 enabled: true
 tags:
@@ -21,8 +20,7 @@ This plugin is installed by default. 🎉
 ## Configuration
 
 If you want to change the default configuration, use the second argument of
-`lume()` function in your `_config.ts` file. See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/nunjucks.ts/~/Options).
+`lume()` function in your `_config.ts` file.
 
 For example, let's
 [configure nunjucks](https://mozilla.github.io/nunjucks/api.html#configure) and

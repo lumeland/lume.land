@@ -1,8 +1,7 @@
 ---
 title: Terser
 description: Minify JavaScript files with Terser.
-docs: plugins/terser.ts/~/Options
-# mod: plugins/terser.ts
+mod: plugins/terser.ts
 tags:
   - javascript
 ---
@@ -25,13 +24,10 @@ import terser from "lume/plugins/terser.ts";
 
 const site = lume();
 
-site.use(terser());
+site.use(terser(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/terser.ts/~/Options).
 
 ## Usage
 

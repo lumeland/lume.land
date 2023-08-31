@@ -1,7 +1,6 @@
 ---
 title: ESbuild
 description: Bundle JavaScript, TypeScript and JSX files using esbuild library.
-docs: plugins/esbuild.ts/~/Options
 mod: plugins/esbuild.ts
 tags:
   - javascript
@@ -22,7 +21,7 @@ import esbuild from "lume/plugins/esbuild.ts";
 
 const site = lume();
 
-site.use(esbuild());
+site.use(esbuild(/* Options */));
 
 export default site;
 ```
@@ -55,10 +54,7 @@ site.use(esbuild({
 }));
 ```
 
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/esbuild.ts/~/Options).
-
-## esm.sh
+## ESM
 
 This plugin converts any module imported from `npm` to `esm.sh`. For example,
 the following code:

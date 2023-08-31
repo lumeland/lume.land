@@ -24,7 +24,7 @@
       display: block;
       width: 10px;
       height: 10px;
-      background-color: var(--color-primary);
+      background-color: var(--color-primary-1);
       position: absolute;
       bottom: 6px;
       left: -18px;
@@ -49,7 +49,7 @@
     margin-left: 0;
     
     & p {
-      margin: .25em 0;
+      margin: 0;
       font: var(--text-caption);
       color: var(--color-foreground-1);
     }
@@ -58,6 +58,7 @@
       display: inline-block;
       vertical-align: top;
       font-size: inherit;
+      max-width: 100%;
     }
 
     & code {
@@ -74,7 +75,7 @@
     border: none;
 
     .type-name::before {
-      background-color: var(--color-background-3);
+      background-color: var(--color-primary);
     }
   }
 }

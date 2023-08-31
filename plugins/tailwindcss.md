@@ -1,7 +1,6 @@
 ---
 title: Tailwind CSS
 description: Use Tailwind CSS to create the CSS styles.
-docs: plugins/tailwindcss.ts/~/Options
 mod: plugins/tailwindcss.ts
 tags:
   - styles
@@ -29,14 +28,11 @@ import postcss from "lume/plugins/postcss.ts";
 
 const site = lume();
 
-site.use(tailwindcss());
+site.use(tailwindcss(/* Options */));
 site.use(postcss());
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/tailwindcss.ts/~/Options).
 
 Note that Tailwind requires the `@tailwind` directives somewhere in your CSS
 code to output the generated code. For example, you can create the `styles.css`
@@ -96,7 +92,7 @@ site.use(tailwindcss({
 }));
 ```
 
-### Mix with Markdown : @tailwindcss/typography plugin
+### Mix with Markdown: @tailwindcss/typography plugin
 
 [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) plugin
 is required to apply TailwindCSS styling to markdown files.

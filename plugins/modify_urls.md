@@ -1,7 +1,6 @@
 ---
 title: Modify URLs
 description: Modify all URLs of HTML files with a custom function.
-docs: plugins/modify_urls.ts/~/Options
 mod: plugins/modify_urls.ts
 tags:
   - urls
@@ -25,13 +24,10 @@ import modifyUrls from "lume/plugins/modify_urls.ts";
 
 const site = lume();
 
-site.use(modifyUrls());
+site.use(modifyUrls(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/modify_urls.ts/~/Options).
 
 ## Example
 

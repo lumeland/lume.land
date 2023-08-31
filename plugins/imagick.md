@@ -1,8 +1,7 @@
 ---
 title: Imagick
 description: Image manipulation using Imagick
-docs: plugins/imagick.ts/~/Options
-# mod: plugins/imagick.ts
+mod: plugins/imagick.ts
 tags:
   - images
 ---
@@ -27,13 +26,10 @@ import imagick from "lume/plugins/imagick.ts";
 
 const site = lume();
 
-site.use(imagick());
+site.use(imagick(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/imagick.ts/~/Options).
 
 ## Example
 

@@ -1,7 +1,6 @@
 ---
 title: Vento
 description: Use the Vento template engine to create pages and layouts.
-docs: plugins/vento.ts/~/Options
 mod: plugins/vento.ts
 enabled: false
 tags:
@@ -25,13 +24,10 @@ import vento from "lume/plugins/vento.ts";
 
 const site = lume();
 
-site.use(vento());
+site.use(vento(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/vento.ts/~/Options).
 
 ## Creating layouts
 

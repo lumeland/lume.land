@@ -1,7 +1,6 @@
 ---
 title: Nav
 description: Provide a helper to build menus and breadcrumbs.
-docs: plugins/nav.ts/~/Options
 mod: plugins/nav.ts
 enabled: false
 tags:
@@ -23,13 +22,10 @@ import nav from "lume/plugins/nav.ts";
 
 const site = lume();
 
-site.use(nav());
+site.use(nav(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/nav.ts/~/Options).
 
 ## Menu
 

@@ -1,7 +1,6 @@
 ---
 title: Multilanguage
 description: Create multiple language versions of the same page
-docs: plugins/multilanguage.ts/~/Options
 mod: plugins/multilanguage.ts
 tags:
   - utils
@@ -28,9 +27,6 @@ site.use(multilanguage({
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/multilanguage.ts/~/Options).
 
 ## Create pages in multiple languages
 

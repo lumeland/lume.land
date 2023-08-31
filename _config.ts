@@ -15,6 +15,9 @@ import analyze, { mergeDefaults } from "./_schema.ts";
 const markdown = {
   plugins: [toc],
   keepDefaultPlugins: true,
+  options: {
+    linkify: true,
+  },
 };
 
 const site = lume(
@@ -105,7 +108,8 @@ site.script("plugin-docs", [
   "deno doc --json https://deno.land/x/lume/plugins/feed.ts",
 ]);
 site.data("scheme", async (mod: string) => {
-  const url = `https://deno.land/x/lume@v1.18.4/${mod}`;
+  // const url = `https://deno.land/x/lume@v1.18.4/${mod}`;
+  const url = import.meta.resolve(`../lume/${mod}`);
   const { defaults } = await import(url);
   const { Options } = await analyze(url, { maxDepth: 2 });
 

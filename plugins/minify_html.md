@@ -1,7 +1,6 @@
 ---
 title: Minify HTML
 description: Minify the HTML code of your pages.
-docs: plugins/minify_html.ts/~/Options
 mod: plugins/minify_html.ts
 tags:
   - html
@@ -23,13 +22,10 @@ import minifyHTML from "lume/plugins/minify_html.ts";
 
 const site = lume();
 
-site.use(minifyHTML());
+site.use(minifyHTML(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/minify_html.ts/~/Options).
 
 ## Configuration
 

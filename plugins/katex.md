@@ -1,7 +1,6 @@
 ---
 title: Katex
 description: TeX math rendering in html
-docs: plugins/katex.ts/~/Options
 mod: plugins/katex.ts
 tags:
   - html
@@ -39,13 +38,10 @@ import katex from "lume/plugins/katex.ts";
 
 const site = lume();
 
-site.use(katex());
+site.use(katex(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/katex.ts/~/Options).
 
 ## Load styles
 
