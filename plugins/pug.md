@@ -1,7 +1,6 @@
 ---
 title: Pug
 description: Use the Pug template engine to create pages and layouts
-docs: plugins/pug.ts/~/Options
 mod: plugins/pug.ts
 tags:
   - template_engine
@@ -22,13 +21,10 @@ import pug from "lume/plugins/pug.ts";
 
 const site = lume();
 
-site.use(pug());
+site.use(pug(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/pug.ts/~/Options).
 
 ## Creating layouts
 

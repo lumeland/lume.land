@@ -1,8 +1,7 @@
 ---
 title: Eta
 description: Use the template engine Eta to build pages.
-docs: plugins/eta.ts/~/Options
-# mod: plugins/eta.ts
+mod: plugins/eta.ts
 tags:
   - template_engine
 ---
@@ -24,13 +23,10 @@ import eta from "lume/plugins/eta.ts";
 
 const site = lume();
 
-site.use(eta());
+site.use(eta(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/eta.ts/~/Options).
 
 ## Creating layouts
 

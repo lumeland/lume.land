@@ -1,7 +1,6 @@
 ---
 title: Relations
 description: Create automatic relations between pages
-docs: plugins/relations.ts/~/Options
 mod: plugins/relations.ts
 tags:
   - utils
@@ -23,15 +22,10 @@ import relations from "lume/plugins/relations.ts";
 
 const site = lume();
 
-site.use(relations({
-  // Your config here
-}));
+site.use(relations(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/relations.ts/~/Options).
 
 ## Usage
 

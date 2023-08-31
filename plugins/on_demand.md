@@ -1,7 +1,6 @@
 ---
 title: On demand
 description: Plugin to render pages on demand in Deno Deploy
-docs: plugins/on_demand.ts/~/Options
 mod: plugins/on_demand.ts
 tags:
   - utils
@@ -31,13 +30,10 @@ import onDemand from "lume/plugins/on_demand.ts";
 
 const site = lume();
 
-site.use(onDemand());
+site.use(onDemand(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/on_demand.ts/~/Options).
 
 ## How does it work?
 

@@ -1,7 +1,6 @@
 ---
 title: Feed
 description: Generate a RSS or JSON Feed automatically for your site
-docs: plugins/feed.ts/~/Options
 mod: plugins/feed.ts
 tags:
   - utils
@@ -37,9 +36,6 @@ site.use(feed({
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/feed.ts/~/Options).
 
 ## Configuration
 

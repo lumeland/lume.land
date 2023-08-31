@@ -1,7 +1,6 @@
 ---
 title: Code Highlight
 description: Code syntax highlighting using highlight.js
-docs: plugins/code_highlight.ts/~/Options
 mod: plugins/code_highlight.ts
 tags:
   - html
@@ -10,24 +9,7 @@ tags:
 ## Description
 
 This plugin uses the [highlight.js](https://highlightjs.org/) library to search
-and highlight the syntax code of any `<pre><code>` element. See the
-[highlight.js docs](https://highlightjs.readthedocs.io/en/latest/api.html#configure)
-for available config options. Example:
-
-```js
-import lume from "lume/mod.ts";
-import codeHighlight from "lume/plugins/code_highlight.ts";
-
-const site = lume();
-
-site.use(codeHighlight({
-  options: {
-    classPrefix: "syntax-",
-  },
-}));
-
-export default site;
-```
+and highlight the syntax code of any `<pre><code>` element.
 
 ## Installation
 
@@ -39,13 +21,10 @@ import codeHighlight from "lume/plugins/code_highlight.ts";
 
 const site = lume();
 
-site.use(codeHighlight());
+site.use(codeHighlight(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/code_highlight.ts/~/Options).
 
 ## Languages
 
@@ -58,8 +37,8 @@ import lume from "lume/mod.ts";
 import code_highlight from "lume/plugins/code_highlight.ts";
 
 // import your favorite language
-import lang_javascript from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/javascript.min.js";
-import lang_bash from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/bash.min.js";
+import lang_javascript from "npm:highlight.js/lib/languages/javascript";
+import lang_bash from "npm:highlight.js/lib/languages/bash";
 
 const site = lume();
 

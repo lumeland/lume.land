@@ -1,7 +1,6 @@
 ---
 title: Paginate
 description: Provide a helper to paginate results.
-docs: plugins/paginate.ts/~/Options
 mod: plugins/paginate.ts
 enabled: true
 tags:
@@ -63,8 +62,7 @@ This plugin is installed by default. 🎉
 ## Configuration
 
 If you want to change the default configuration, use the second argument of
-`lume()` function in your `_config.ts` file. See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/paginate.ts/~/Options).
+`lume()` function in your `_config.ts` file.
 
 ```ts
 import lume from "lume/mod.ts";

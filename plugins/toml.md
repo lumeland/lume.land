@@ -1,7 +1,6 @@
 ---
 title: TOML
 description: Add support for TOML to store data and create pages.
-docs: plugins/toml.ts/~/Options
 mod: plugins/toml.ts
 enabled: false
 tags:

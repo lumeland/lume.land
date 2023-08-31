@@ -1,7 +1,6 @@
 ---
 title: Modules
 description: Use ESM and TypeScript modules to create pages, layouts, and store data.
-docs: plugins/modules.ts/~/Options
 mod: plugins/modules.ts
 enabled: true
 tags:
@@ -22,8 +21,7 @@ This plugin is installed by default. 🎉
 ## Configuration
 
 If you want to change the default configuration, use the second argument of
-`lume()` function in your `_config.ts` file. See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/modules.ts/~/Options).
+`lume()` function in your `_config.ts` file.
 
 For example, to use a different extension than `.tmpl.js` and `.tmpl.ts` to
 generate pages, edit the `pageExtensions` property:

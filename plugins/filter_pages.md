@@ -1,7 +1,6 @@
 ---
 title: Filter pages
 description: To filter pages under a specific condition
-docs: plugins/filter_pages.ts/~/Options
 mod: plugins/filter_pages.ts
 tags:
   - utils
@@ -29,6 +28,3 @@ site.use(filterPages({
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/filter_pages.ts/~/Options).

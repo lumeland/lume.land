@@ -1,7 +1,6 @@
 ---
 title: Markdown
 description: Create pages in Markdown format
-docs: plugins/markdown.ts/~/Options
 mod: plugins/markdown.ts
 enabled: true
 tags:
@@ -21,8 +20,7 @@ This plugin is installed by default. 🎉
 ## Configuration
 
 If you want to change the default configuration, use the second argument of
-`lume()` function in your `_config.ts` file. See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/markdown.ts/~/Options).
+`lume()` function in your `_config.ts` file.
 
 ```js
 import lume from "lume/mod.ts";

@@ -1,7 +1,6 @@
 ---
 title: Pagefind
 description: A static search engine in your site
-docs: plugins/pagefind.ts/~/Options
 mod: plugins/pagefind.ts
 tags:
   - utils
@@ -28,13 +27,10 @@ import pagefind from "lume/plugins/pagefind.ts";
 
 const site = lume();
 
-site.use(pagefind());
+site.use(pagefind(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/pagefind.ts/~/Options).
 
 ## The binary file
 

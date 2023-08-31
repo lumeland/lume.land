@@ -15,7 +15,9 @@ import type {
   TsTypeFnOrConstructorDef,
   TsTypeKeywordDef,
   TsTypeParenthesizedDef,
+  TsTypeTupleDef,
   TsTypeTypeLiteralDef,
+  TsTypeTypeOperatorDef,
   TsTypeTypeRefDef,
   TsTypeUnionDef,
 } from "https://deno.land/x/deno_doc@0.64.0/types.d.ts";
@@ -55,7 +57,6 @@ interface Options {
 interface Status extends Options {
   url: string;
   depth: number;
-  cache: Map<string, DocNode[]>;
 }
 
 export default async function analyze(url: string, options: Options = {}) {
@@ -81,13 +82,14 @@ export default async function analyze(url: string, options: Options = {}) {
 }
 
 const decoder = new TextDecoder();
+const cache = new Map<string, DocNode[]>();
 
 export async function doc(
   url: string,
   status: Status,
 ): Promise<DocNode[]> {
-  if (status.cache.has(url)) {
-    return status.cache.get(url)!;
+  if (cache.has(url)) {
+    return cache.get(url)!;
   }
   const args = ["doc", "--json"];
   if (status.private) {
@@ -108,8 +110,8 @@ export async function doc(
 
   const json = decoder.decode(stdout);
   console.log(url);
-  status.cache.set(url, JSON.parse(json));
-  return status.cache.get(url)!;
+  cache.set(url, JSON.parse(json));
+  return cache.get(url)!;
 }
 
 async function typeAll(
@@ -119,6 +121,17 @@ async function typeAll(
   // @ts-ignore: jsDoc does not exist on TsTypeDef
   const doc = node.jsDoc as JsDoc | undefined;
   const props = jsDoc(doc);
+
+  // @ts-ignore: optional does not exist on TsTypeDef
+  if (typeof node.optional === "boolean") {
+    // @ts-ignore: optional does not exist on TsTypeDef
+    props.optional = node.optional;
+  }
+
+  // @ts-ignore: readonly does not exist on TsTypeDef
+  if (node.readonly) {
+    props.readonly = true;
+  }
 
   switch (node.kind) {
     case "interface":
@@ -135,16 +148,20 @@ async function typeAll(
       return { ...await typeUnion(node, status), ...props };
     case "array":
       return { ...await typeArray(node, status), ...props };
+    case "tuple":
+      return { ...await typeTuple(node, status), ...props };
     case "literal":
       return { ...typeLiteral(node, status), ...props };
     case "typeLiteral":
       return { ...await typeLiteralObject(node, status), ...props };
+    case "typeOperator":
+      return { ...await typeOperator(node, status), ...props };
     case "keyword":
       return { ...typeKeyword(node, status), ...props };
     case "fnOrConstructor":
       return { ...typefnOrConstructor(node, status), ...props };
     case "parenthesized":
-      return { ...typeParenthesized(node, status), ...props };
+      return { ...await typeParenthesized(node, status), ...props };
     case "enum":
       return { ...await typeEnum(node, status), ...props };
     default:
@@ -173,6 +190,11 @@ async function children(
 
     // @ts-ignore: jsDoc does not exist on InterfacePropertyDef
     const props = jsDoc(property.jsDoc as JsDoc | undefined);
+    props.optional = property.optional;
+    if (property.readonly) {
+      props.readonly = true;
+    }
+
     children[name] = { ...await typeAll(tsType, status), ...props };
   }
   status.depth--;
@@ -218,6 +240,23 @@ async function typeParenthesized(
   return await typeAll(node.parenthesized, status);
 }
 
+async function typeOperator(
+  node: TsTypeTypeOperatorDef,
+  status: Status,
+): Promise<NodeType> {
+  const { operator, tsType } = node.typeOperator;
+  const type = await typeAll(tsType, status);
+  switch (operator) {
+    case "readonly":
+      type.readonly = true;
+      break;
+    default:
+      console.log(node);
+      throw new Error(`Unhandled operator kind "${operator}"`);
+  }
+  return type;
+}
+
 async function typeRef(
   node: TsTypeTypeRefDef,
   status: Status,
@@ -252,7 +291,7 @@ async function typeRef(
   }
 
   // Find the type reference
-  const nodes = status.cache.get(status.url)!;
+  const nodes = await doc(status.url, status);
   const type = nodes.find((t) => t.name === node.typeRef.typeName);
 
   if (type) {
@@ -284,9 +323,6 @@ async function typeImport(
     type: "object",
     typeName: node.importDef.imported,
   };
-
-  console.log(node);
-  throw new Error(`Type "${node.importDef.imported}" not found`);
 }
 
 async function typeAlias(
@@ -313,6 +349,18 @@ async function typeArray(
   return {
     type: "array",
     children: await typeAll(node.array, status),
+  };
+}
+
+async function typeTuple(
+  node: TsTypeTupleDef,
+  status: Status,
+): Promise<NodeType> {
+  return {
+    type: "array",
+    children: await Promise.all(
+      node.tuple.map((node) => typeAll(node, status)),
+    ),
   };
 }
 
@@ -449,7 +497,7 @@ function cast(str: string) {
   return str;
 }
 
-export function mergeDefaults(node: NodeType, defaults: any): NodeType {
+export function mergeDefaults(node: NodeType, defaults: any, override = false) {
   switch (node.type) {
     case "object":
       if (node.children) {
@@ -458,8 +506,14 @@ export function mergeDefaults(node: NodeType, defaults: any): NodeType {
             node.children as Record<string, NodeType>,
           )
         ) {
-          if (defaults && defaults[key]) {
-            if (child.type === "object") {
+          if (child.default && !override) {
+            continue;
+          }
+          if (defaults && defaults[key] !== undefined) {
+            if (
+              child.type === "object" && child.children &&
+              Object.keys(child.children).length
+            ) {
               mergeDefaults(child, defaults[key]);
             } else {
               child.default = defaults[key];

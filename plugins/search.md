@@ -1,7 +1,6 @@
 ---
 title: Search
 description: Provide a helper to search pages from other pages.
-docs: plugins/search.ts/~/Options
 mod: plugins/search.ts
 enabled: true
 tags:
@@ -268,8 +267,7 @@ any directory. For example:
 ## Configuration
 
 If you want to change the default configuration, use the second argument of
-`lume()` function in your `_config.ts` file. See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/search.ts/~/Options).
+`lume()` function in your `_config.ts` file.
 
 ```ts
 import lume from "lume/mod.ts";

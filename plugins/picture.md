@@ -1,8 +1,6 @@
 ---
 title: Picture
 description: Create responsive images using Imagick
-docs: plugins/picture.ts/~/Options
-# mod: plugins/picture.ts
 tags:
   - images
 ---
@@ -26,14 +24,11 @@ import imagick from "lume/plugins/imagick.ts";
 
 const site = lume();
 
-site.use(picture());
+site.use(picture(/* Options */));
 site.use(imagick());
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/picture.ts/~/Options).
 
 ## Example
 

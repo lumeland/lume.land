@@ -1,7 +1,6 @@
 ---
 title: JSX Preact
 description: Create pages and layouts with JSX (Preact).
-docs: plugins/jsx_preact.ts/~/Options
 mod: plugins/jsx_preact.ts
 tags:
   - template_engine
@@ -23,13 +22,10 @@ import jsx from "lume/plugins/jsx_preact.ts";
 
 const site = lume();
 
-site.use(jsx());
+site.use(jsx(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/jsx_preact.ts/~/Options).
 
 ### Configuration
 

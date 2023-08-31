@@ -1,7 +1,6 @@
 ---
 title: JSON
 description: Add support for JSON or JSONC to store data and create pages.
-docs: plugins/json.ts/~/Options
 mod: plugins/json.ts
 enabled: true
 tags:
@@ -20,15 +19,16 @@ This plugin is installed by default. 🎉
 ## Configuration
 
 If you want to change the default configuration, use the second argument of
-`lume()` function in your `_config.ts` file. See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/json.ts/~/Options).
+`lume()` function in your `_config.ts` file.
 
 ```js
 import lume from "lume/mod.ts";
 
 // JSON plugin configuration
 const json = {
-  pagesExtensions: [".page.json"],
+  extensions: {
+    pages: [".page.json"],
+  },
 };
 
 const site = lume({}, { json });

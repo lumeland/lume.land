@@ -1,7 +1,6 @@
 ---
 title: MDX
 description: Use MDX to create pages.
-docs: plugins/mdx.ts/~/Options
 mod: plugins/mdx.ts
 tags:
   - template_engine
@@ -30,7 +29,7 @@ import mdx from "lume/plugins/mdx.ts";
 const site = lume();
 
 site.use(jsx());
-site.use(mdx());
+site.use(mdx(/* Options */));
 
 export default site;
 ```
@@ -44,9 +43,6 @@ plugin, add the following to your `deno.json` file:
   "jsxImportSource": "npm:react"
 }
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/mdx.ts/~/Options).
 
 ## Plugins
 

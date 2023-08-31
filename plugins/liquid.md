@@ -1,7 +1,6 @@
 ---
 title: Liquid
 description: Use the Liquid template engine to create pages and layouts
-docs: plugins/liquid.ts/~/Options
 mod: plugins/liquid.ts
 tags:
   - template_engine
@@ -22,15 +21,10 @@ import liquid from "lume/plugins/liquid.ts";
 
 const site = lume();
 
-site.use(liquid());
+site.use(liquid(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/liquid.ts/~/Options).
-[Go to the Liquid options page](https://liquidjs.com/api/interfaces/LiquidOptions.html)
-for more info about specific Liquid settings.
 
 ## Creating layouts
 

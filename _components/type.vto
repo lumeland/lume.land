@@ -1,5 +1,8 @@
 {{> function printDef(def) {
   if (def.type === "array") {
+    if (Array.isArray(def.children)) {
+      return `<em>[${def.children.map((child) => child.type).join(", ")}]</em>`;
+    }
     return `<em>${def.children.type}[]</em>`;
   } else {
     return `<em>${def.value || def.type}</em>`;
@@ -21,9 +24,18 @@
     </dt>
     <dd class="type-details">
       {{ info.description |> md |> replace("<style>", "style") }}
+      
+      {{ if info.see }}
+        <p>See <a href="{{ info.see }}">{{ info.see }}</a></p>
+      {{ /if }}
 
-      {{ if info.default !== undefined }}
-        <strong>Default:</strong> <pre><code class="language-js hljs">{{ Deno.inspect(info.default) }}</code></pre>
+      {{ if info.default !== undefined && !["{}", "[]"].includes(JSON.stringify(info.default)) }}
+        <strong>Default:</strong>
+        <pre><code class="language-js hljs">{{
+          typeof info.default === "string" && info.default.startsWith("`")
+          ? info.default.slice(1, -1)
+          : Deno.inspect(info.default)
+          }}</code></pre>
       {{ /if }}
 
       {{ if info.type === "object" && info.children }}

@@ -1,7 +1,6 @@
 ---
 title: Windi CSS
 description: Use the Windi framework to create the CSS styles.
-docs: plugins/windi_css.ts/~/Options
 mod: plugins/windi_css.ts
 tags:
   - styles
@@ -58,13 +57,10 @@ import windi from "lume/plugins/windi_css.ts";
 
 const site = lume();
 
-site.use(windi());
+site.use(windi(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/windi_css.ts/~/Options).
 
 ## Configuration
 

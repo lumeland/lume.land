@@ -1,7 +1,6 @@
 ---
 title: Sitemap
 description: Generate a sitemap automatically for your site
-docs: plugins/sitemap.ts/~/Options
 mod: plugins/sitemap.ts
 tags:
   - utils
@@ -29,13 +28,10 @@ import sitemap from "lume/plugins/sitemap.ts";
 
 const site = lume();
 
-site.use(sitemap());
+site.use(sitemap(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/sitemap.ts/~/Options).
 
 ## Configuration
 

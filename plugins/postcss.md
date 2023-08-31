@@ -1,7 +1,6 @@
 ---
 title: PostCSS
 description: Transform your CSS code with PostCSS.
-docs: plugins/postcss.ts/~/Options
 mod: plugins/postcss.ts
 tags:
   - styles
@@ -22,13 +21,10 @@ import postcss from "lume/plugins/postcss.ts";
 
 const site = lume();
 
-site.use(postcss());
+site.use(postcss(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/postcss.ts/~/Options).
 
 ## Configuration
 

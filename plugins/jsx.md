@@ -1,7 +1,6 @@
 ---
 title: JSX
 description: Create pages and layouts with JSX (React).
-docs: plugins/jsx.ts/~/Options
 mod: plugins/jsx.ts
 tags:
   - template_engine
@@ -24,13 +23,10 @@ import jsx from "lume/plugins/jsx.ts";
 
 const site = lume();
 
-site.use(jsx());
+site.use(jsx(/* Options */));
 
 export default site;
 ```
-
-See
-[all available options in Deno Doc](https://doc.deno.land/https/deno.land/x/lume/plugins/jsx.ts/~/Options).
 
 ### Configuration
 

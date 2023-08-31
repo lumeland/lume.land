@@ -1,7 +1,6 @@
 ---
 title: Remark
 description: Use Remark to render the markdown content.
-docs: plugins/remark.ts/~/Options
 mod: plugins/remark.ts
 tags:
   - template_engine
