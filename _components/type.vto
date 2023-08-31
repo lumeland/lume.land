@@ -22,22 +22,13 @@
     <dd class="type-details">
       {{ info.description |> md |> replace("<style>", "style") }}
 
+      {{ if info.default !== undefined }}
+        <strong>Default:</strong> <pre><code class="language-js hljs">{{ Deno.inspect(info.default) }}</code></pre>
+      {{ /if }}
+
       {{ if info.type === "object" && info.children }}
         {{ await comp.type({ options: info.children })}}
       {{ /if }}
-
-      {{# 
-      {{ if option.default !== undefined && (typeof option.default !== "object" || Object.keys(option.default).length) }}
-
-      <details class="type-default">
-        <summary>Default value</summary>
-        <pre><code class="language-js hljs">{{
-          Deno.inspect(option.default, {
-            compact: false,
-          })
-        }}</code></pre>
-      </details>
-      {{ /if }} #}}
     </dd>
   </div>
   {{ /for }}

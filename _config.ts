@@ -10,7 +10,7 @@ import sitemap from "lume/plugins/sitemap.ts";
 import metas from "lume/plugins/metas.ts";
 import vento from "lume/plugins/vento.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.1.0/toc/mod.ts";
-import analyze from "./_schema.ts";
+import analyze, { mergeDefaults } from "./_schema.ts";
 
 const markdown = {
   plugins: [toc],
@@ -106,8 +106,10 @@ site.script("plugin-docs", [
 ]);
 site.data("scheme", async (mod: string) => {
   const url = `https://deno.land/x/lume@v1.18.4/${mod}`;
-  // const { defaults } = await import(url);
+  const { defaults } = await import(url);
   const { Options } = await analyze(url, { maxDepth: 2 });
+
+  mergeDefaults(Options, defaults);
   return Options.children;
 });
 
