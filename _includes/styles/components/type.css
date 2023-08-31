@@ -4,15 +4,31 @@
   border: solid 1px var(--color-background-2);
   border-radius: var(--border-radius-small);
 
+  > div {
+    padding-left: 16px;
+  }
+
   > div + div {
     border-top: solid 1px var(--color-background-2);
-    padding-top: .5em;
-    margin-top: .5em;
+    padding-top: .75em;
+    margin-top: .75em;
   }
 
   .type-name {
     font: var(--text-caption-bold);
     color: var(--color-foreground);
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: var(--color-primary);
+      position: absolute;
+      bottom: 6px;
+      left: -18px;
+    }
 
     & strong {
       display: inline-block;
@@ -37,26 +53,28 @@
       font: var(--text-caption);
       color: var(--color-foreground-1);
     }
+
+    & pre {
+      display: inline-block;
+      vertical-align: top;
+      font-size: inherit;
+    }
+
+    & code {
+      font-size: inherit;
+      margin: 0;
+      padding: 0 .3em !important;
+      background: var(--color-background);
+    }
   }
 
   .type {
     padding-left: 1.5em;
     padding-right: 0;
     border: none;
-  }
 
-  .type-default {
-    & summary {
-      cursor: pointer;
-      text-decoration: underline;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
-    & pre {
-      margin-top: .5em;
+    .type-name::before {
+      background-color: var(--color-background-3);
     }
   }
 }

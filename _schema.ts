@@ -448,3 +448,25 @@ function cast(str: string) {
   }
   return str;
 }
+
+export function mergeDefaults(node: NodeType, defaults: any): NodeType {
+  switch (node.type) {
+    case "object":
+      if (node.children) {
+        for (
+          const [key, child] of Object.entries(
+            node.children as Record<string, NodeType>,
+          )
+        ) {
+          if (defaults && defaults[key]) {
+            if (child.type === "object") {
+              mergeDefaults(child, defaults[key]);
+            } else {
+              child.default = defaults[key];
+            }
+          }
+        }
+      }
+      break;
+  }
+}
