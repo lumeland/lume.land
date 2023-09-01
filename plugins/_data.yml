@@ -22,6 +22,9 @@ tags_info:
   urls:
     name: URLs
     color: pink
+  nav:
+    name: Navigation
+    color: mediumpurple
   utils:
     name: Utils
     color: lightgray

@@ -3,6 +3,7 @@ title: Feed
 description: Generate a RSS or JSON Feed automatically for your site
 mod: plugins/feed.ts
 tags:
+  - nav
   - utils
 ---
 

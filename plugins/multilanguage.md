@@ -3,7 +3,7 @@ title: Multilanguage
 description: Create multiple language versions of the same page
 mod: plugins/multilanguage.ts
 tags:
-  - utils
+  - nav
 ---
 
 ## Description

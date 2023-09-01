@@ -3,7 +3,7 @@ title: Pagefind
 description: A static search engine in your site
 mod: plugins/pagefind.ts
 tags:
-  - utils
+  - nav
 ---
 
 ## Description

@@ -3,7 +3,7 @@ title: Relations
 description: Create automatic relations between pages
 mod: plugins/relations.ts
 tags:
-  - utils
+  - nav
 ---
 
 ## Description

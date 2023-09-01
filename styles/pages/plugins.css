@@ -121,6 +121,9 @@
     &.is-color-lightgray {
       --background: lightgray;
     }
+    &.is-color-mediumpurple {
+      --background: mediumpurple;
+    }
   }
 }
 
@@ -159,6 +162,10 @@
   &.is-color-lightgray {
     --background-active: lightgray;
     --accent: lightgray;
+  }
+  &.is-color-mediumpurple {
+    --background-active: mediumpurple;
+    --accent: mediumpurple;
   }
 }
 

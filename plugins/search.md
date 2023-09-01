@@ -4,7 +4,7 @@ description: Provide a helper to search pages from other pages.
 mod: plugins/search.ts
 enabled: true
 tags:
-  - utils
+  - nav
 ---
 
 ## Description
