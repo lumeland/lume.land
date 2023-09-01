@@ -101,7 +101,7 @@ to define this variable:
 {
   "importMap": "import_map.json",
   "tasks": {
-    "lume": "DENO_DIR=_vendor; echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "lume": "DENO_DIR=_vendor echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   }
