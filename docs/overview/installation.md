@@ -26,7 +26,7 @@ This command creates the following files:
   It includes the import map and some tasks to run Lume. You can also configure
   other features of Deno like TypeScript, formatter, linter, etc.
 
-Here is an example of these three configuration files:
+Here is an example of these two configuration files:
 
 <lume-code>
 
