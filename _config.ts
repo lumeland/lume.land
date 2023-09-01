@@ -112,7 +112,7 @@ site.script("plugin-docs", [
 site.data("scheme", async (mod: string) => {
   const url = `https://deno.land/x/lume@v1.18.5/${mod}`;
   const { defaults } = await import(url);
-  const { Options } = await analyze(url, { maxDepth: 2 });
+  const { Options } = await analyze(url, { maxDepth: 2, private: false });
 
   mergeDefaults(Options, defaults);
   return Options.children;
