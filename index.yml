@@ -257,11 +257,6 @@ support:
     - name: Óscar Otero (creator & maintainer)
       url: https://oscarotero.com/
       img: /img/avatars/supporters/oscar.webp
-    - name: Yuto Oguchi
-      url: https://aiotter.com/
-      img: /img/avatars/supporters/aiotter.webp
-      amount: 1
-      recurrent: true
     - name: Jon Paul Uritis
       url: https://jonpauluritis.com/
       img: /img/avatars/supporters/jppope.webp
@@ -329,6 +324,11 @@ support:
       url: https://opencollective.com/daniel-mon-chit
       img: /img/avatars/supporters/daniel-mc.webp
       amount: 3
+      recurrent: true
+    - name: Yuto Oguchi
+      url: https://aiotter.com/
+      img: /img/avatars/supporters/aiotter.webp
+      amount: 1
       recurrent: true
 
 

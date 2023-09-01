@@ -36,7 +36,7 @@ page_css: docs.css
             <img width="20" height="20" src="/icons/arrow-square-out.svg" inline>
           </a>
         </h2>
-        {{ await comp.type({options: await scheme(mod)}) }}
+        {{ include "templates/type.vto" {options: await scheme(mod)} }}
       {{ /if }}
 
       {{ content }}

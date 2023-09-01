@@ -39,7 +39,7 @@
       {{ /if }}
 
       {{ if info.type === "object" && info.children }}
-        {{ await comp.type({ options: info.children })}}
+        {{ include "./type.vto" { options: info.children } }}
       {{ /if }}
     </dd>
   </div>
