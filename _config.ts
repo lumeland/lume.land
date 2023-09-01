@@ -12,7 +12,7 @@ import vento from "lume/plugins/vento.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.1.0/toc/mod.ts";
 import analyze, {
   mergeDefaults,
-} from "https://deno.land/x/aldara@v0.1.0/mod.ts";
+} from "./_aldara.ts";
 
 const markdown = {
   plugins: [toc],
