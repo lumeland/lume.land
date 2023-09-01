@@ -24,10 +24,11 @@
       display: block;
       width: 10px;
       height: 10px;
-      background-color: var(--color-primary-1);
+      background-color: var(--color-primary);
       position: absolute;
       bottom: 6px;
       left: -18px;
+      border-radius: 50%;
     }
 
     & strong {
@@ -73,9 +74,5 @@
     padding-left: 1.5em;
     padding-right: 0;
     border: none;
-
-    .type-name::before {
-      background-color: var(--color-primary);
-    }
   }
 }
