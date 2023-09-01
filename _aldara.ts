@@ -105,7 +105,8 @@ export async function doc(
 
   if (stderr.length) {
     const error = decoder.decode(stderr);
-    throw new Error(error);
+    console.log({error});
+    // throw new Error(error);
   }
 
   const json = decoder.decode(stdout);
