@@ -110,12 +110,18 @@ site.script("plugin-docs", [
   "deno doc --json https://deno.land/x/lume/plugins/feed.ts",
 ]);
 site.data("scheme", async (mod: string) => {
-  const url = `https://deno.land/x/lume@v1.18.5/${mod}`;
-  const { defaults } = await import(url);
-  const { Options } = await analyze(url, { maxDepth: 2, private: false });
+  try {
+    const url = `https://deno.land/x/lume@v1.18.5/${mod}`;
+    const { defaults } = await import(url);
+    const { Options } = await analyze(url, { maxDepth: 2, private: false });
 
-  mergeDefaults(Options, defaults);
-  return Options.children;
+    mergeDefaults(Options, defaults);
+    return Options.children;
+  } catch (error) {
+    console.log(`Error generating the documentation for ${mod}`);
+    console.log(error);
+    return [];
+  }
 });
 
 export default site;
