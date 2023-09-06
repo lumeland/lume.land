@@ -103,3 +103,22 @@ export default ({ title, content }, filters) =>
     </body>
   </html>`;
 ```
+
+## Improving developers' experience
+
+Unlike JSX family plugins that comes with syntax highlighting out of the box. 
+Modules use vanilla JS string template, which is treated as string in syntax hightlighting. We can work around with this problem by looking for the plugin support nested syntax.
+
+- **vscode**: install [lit-html](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html), it support highlight nest html inside a tagged function. This is recommend 'cause it gives a clear note on the code what the string format should be. After installing, add this utility code:  
+  ```TypeScript
+  export const html = (str: string[], ...val: unknown[]): string => String.raw({ raw: str }, ...val)
+  ```  
+  Later on we can use it like this:  
+  ```js
+  import { html } from 'utilit.ts';
+
+  export default (params) => html`
+    <p>It's work!</p>
+  `;
+  ```  
+  It works in markdown preview as well.
