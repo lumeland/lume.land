@@ -55,3 +55,7 @@ intro: This is my first post using Lume. I hope you like it!
 
 Creating pages is the same as creating layouts; just place the `.vto` file
 outside the `_includes` directory.
+
+## Configure VSCode
+
+You can use the [Vento extension for VS Code](https://marketplace.visualstudio.com/items?itemName=oscarotero.vento-syntax) for syntax highlight and some useful snippets.

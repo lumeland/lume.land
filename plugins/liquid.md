@@ -68,3 +68,7 @@ text: "Hello {{ username }}"
 <!-- Render a string -->
 <div>{{ text | liquid: data }}<div>
 ```
+
+## Configure VSCode
+
+You can use the [Liquid extension for VS Code](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid) for syntax highlight and some useful snippets.

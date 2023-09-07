@@ -59,3 +59,7 @@ Note that the paths passed to `includeFile()` function are always relative to
 
 Creating pages is the same as creating layouts, just place the `.eta` file
 outside the `_includes` directory.
+
+## Configure VSCode
+
+You can use the [Eta extension for VS Code](https://marketplace.visualstudio.com/items?itemName=shadowtime2000.eta-vscode) for syntax highlight and some useful snippets.

@@ -139,3 +139,7 @@ the template engines. For example:
   {{- css | postcss | safe -}}
 </style>
 ```
+
+## Configure VSCode
+
+You can use the [Postcss extension for VS Code](https://marketplace.visualstudio.com/items?itemName=cpylua.language-postcss) for syntax highlight.

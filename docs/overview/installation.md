@@ -116,14 +116,6 @@ the `_vendor` folder.
 If you use Visual Studio Code, it's highly recommended to install the
 [Deno extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).
 
-There are other extensions that you may want to install, depending on the
-template engine you want to use. For example
-[Nunjucks](https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks),
-[Liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid),
-[Eta](https://marketplace.visualstudio.com/items?itemName=shadowtime2000.eta-vscode),
-[postcss](https://marketplace.visualstudio.com/items?itemName=cpylua.language-postcss),
-etc.
-
 ## WebStorm configuration
 
 There's a [Deno plugin](https://plugins.jetbrains.com/plugin/14382-deno/) for
