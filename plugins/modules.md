@@ -104,21 +104,22 @@ export default ({ title, content }, filters) =>
   </html>`;
 ```
 
-## Improving developers' experience
+## Configure VSCode
 
-Unlike JSX family plugins that comes with syntax highlighting out of the box. 
-Modules use vanilla JS string template, which is treated as string in syntax hightlighting. We can work around with this problem by looking for the plugin support nested syntax.
+You can use some extensions for VS Code for template string syntax highlight:
 
-- **vscode**: install [lit-html](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html), it support highlight nest html inside a tagged function. This is recommend 'cause it gives a clear note on the code what the string format should be. After installing, add this utility code:  
-  ```TypeScript
-  export const html = (str: string[], ...val: unknown[]): string => String.raw({ raw: str }, ...val)
-  ```  
-  Later on we can use it like this:  
+- [ES6 String HTML](https://marketplace.visualstudio.com/items?itemName=hjb2012.vscode-es6-string-html): highlight HTML with Js comment `/*html*/`   
   ```js
-  import { html } from 'utilit.ts';
+  export default (params) => /*html*/`<p>It's work!</p>`;
+  ```
+- [lit-html](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html): highlight HTML with Js tag function   
+  ```TypeScript
+  // utilities.ts
+  export const html = (str: string[], ...val: unknown[]): string =>
+    String.raw({ raw: str }, ...val);
+  ```
+  ```js
+  import { html } from "utilities.ts";
 
-  export default (params) => html`
-    <p>It's work!</p>
-  `;
-  ```  
-  It works in markdown preview as well.
+  export default (params) => html`<p>It's work!</p>`;
+  ```
