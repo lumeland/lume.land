@@ -17,14 +17,14 @@
   }
 }
 
-:root[data-theme="light"] .tip {
+[data-theme="light"] .tip {
   --color-tip: var(--color-yellow-800);
   --color-tip-foreground: var(--color-yellow-200);
   --color-tip-1: var(--color-yellow-750);
   --background-blend-mode: difference;
 }
 
-:root[data-theme="dark"] .tip {
+[data-theme="dark"] .tip {
   --color-tip-foreground: var(--color-brown-600);
   --color-tip: var(--color-brown-160);
   --color-tip-1: var(--color-brown-200);

@@ -5,7 +5,7 @@
   column-gap: var(--margin);
   grid-template-columns: 0 minmax(0, var(--max-width)) 0;
   justify-content: space-between;
-  padding: var(--row-gap-2) 0 var(--row-gap-4);
+  padding: 0 0 var(--row-gap-4);
 
   & > * {
     grid-column: 2;
@@ -14,36 +14,48 @@
 
 /** Header */
 .landing-header {
-  position: relative;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  grid-column: 1 / -1;
+  display: grid;
+  justify-content: space-between;
+  align-content: center;
+  grid-template-columns: 0 minmax(0, var(--max-width)) 0;
+  grid-template-rows: minmax(var(--row-gap-2), 1fr) auto auto minmax(var(--row-gap-2), 1fr);
+  row-gap: 2em;
+  column-gap: var(--margin);
+  padding-top: 71px;
+  margin-top: -71px;
+
+  > * {
+    grid-column: 2;
+  }
 
   & h1 {
     font: var(--text-display);
     letter-spacing: var(--text-display-spacing);
     margin: 0;
     max-width: 8em;
-    grid-area: title;
+    grid-row: 2;
+    z-index: 1;
 
     & span {
       color: var(--color-primary);
     }
   }
-
-  @media (min-width: 1000px) {
-    display: grid;
-    grid-template-columns: minmax(620px, 1fr) 1fr;
-    grid-template-areas: "title fire" "install fire";
-    row-gap: var(--row-gap-0);
-  }
 }
 .landing-header-fire {
   margin: 0;
   padding: 0;
-  grid-area: fire;
-  align-self: end;
+  grid-row: 1 / -1;
+  align-self: start;
   justify-self: center;
+  height: 100%;
+  opacity: 0.3;
 
   @media (min-width: 1000px) {
-    font-size: min(2.5vw, 30px);
+    justify-self: end;
+    opacity: 1;
   }
 }
 
@@ -52,7 +64,8 @@
   margin: var(--row-gap-0) 0 0;
   font: var(--text-caption);
   color: var(--color-foreground-1);
-  grid-area: install;
+  grid-row: 3;
+  z-index: 1;
 
   & p {
     margin: 0;

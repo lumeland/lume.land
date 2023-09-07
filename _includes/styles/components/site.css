@@ -53,11 +53,11 @@
 }
 
 /* Theme light mode */
-:root[data-theme="light"] .site-image img {
+[data-theme="light"] .site-image img {
   --shadow-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Theme dark mode */
-:root[data-theme="dark"] .site-image img {
+[data-theme="dark"] .site-image img {
   --shadow-color: rgba(0, 0, 0, 0.3);
 }

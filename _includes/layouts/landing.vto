@@ -1,14 +1,13 @@
 ---
 layout: ./base.vto
 page_css: landing.css
+navbar_theme: dark
 ---
 <div class="landing">
-  <header class="landing-header">
+  <header class="landing-header" data-theme="dark">
     <h1>{{ header.title }}</h1>
 
-    <figure class="landing-header-fire">
-      {{ await comp.fire() }}
-    </figure>
+    <lume-fire class="landing-header-fire"></lume-fire>
 
     <div class="landing-install">
       {{ install.title |> md }}
