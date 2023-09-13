@@ -49,7 +49,7 @@ the info of the items (in the `items` key). This is an example with all
 available options:
 
 ```js
-site.use(sitemap({
+site.use(feed({
   output: ["/posts.rss", "/posts.json"], // The file or files that must be generated
   query: "type=post", // Select only pages of type=post
   sort: "date=desc", // To sort by data in ascendent order
@@ -82,7 +82,7 @@ say we want to generate a RSS with the same content as the div `.post-content`.
 We just have to start the value of the code with `$`:
 
 ```ts
-site.use(sitemap({
+site.use(feed({
   // general config
   info: {
     // info config
