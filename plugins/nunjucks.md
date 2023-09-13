@@ -94,4 +94,6 @@ This plugin exposes the following hooks:
 
 ## Configure VSCode
 
-You can use the [Nunjucks extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks) for syntax highlight and some useful snippets.
+You can use the
+[Nunjucks extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks)
+for syntax highlight and some useful snippets.

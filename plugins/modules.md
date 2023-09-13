@@ -108,11 +108,13 @@ export default ({ title, content }, filters) =>
 
 You can use some extensions for VS Code for template string syntax highlight:
 
-- [ES6 String HTML](https://marketplace.visualstudio.com/items?itemName=hjb2012.vscode-es6-string-html): highlight HTML with Js comment `/*html*/`   
+- [ES6 String HTML](https://marketplace.visualstudio.com/items?itemName=hjb2012.vscode-es6-string-html):
+  highlight HTML with Js comment `/*html*/`
   ```js
-  export default (params) => /*html*/`<p>It's work!</p>`;
+  export default (params) => /*html*/ `<p>It's work!</p>`;
   ```
-- [lit-html](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html): highlight HTML with Js tag function   
+- [lit-html](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html):
+  highlight HTML with Js tag function
   ```TypeScript
   // utilities.ts
   export const html = (str: string[], ...val: unknown[]): string =>

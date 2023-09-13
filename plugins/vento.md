@@ -58,4 +58,6 @@ outside the `_includes` directory.
 
 ## Configure VSCode
 
-You can use the [Vento extension for VS Code](https://marketplace.visualstudio.com/items?itemName=oscarotero.vento-syntax) for syntax highlight and some useful snippets.
+You can use the
+[Vento extension for VS Code](https://marketplace.visualstudio.com/items?itemName=oscarotero.vento-syntax)
+for syntax highlight and some useful snippets.

@@ -62,4 +62,6 @@ outside the `_includes` directory.
 
 ## Configure VSCode
 
-You can use the [Eta extension for VS Code](https://marketplace.visualstudio.com/items?itemName=shadowtime2000.eta-vscode) for syntax highlight and some useful snippets.
+You can use the
+[Eta extension for VS Code](https://marketplace.visualstudio.com/items?itemName=shadowtime2000.eta-vscode)
+for syntax highlight and some useful snippets.

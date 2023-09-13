@@ -142,4 +142,6 @@ the template engines. For example:
 
 ## Configure VSCode
 
-You can use the [Postcss extension for VS Code](https://marketplace.visualstudio.com/items?itemName=cpylua.language-postcss) for syntax highlight.
+You can use the
+[Postcss extension for VS Code](https://marketplace.visualstudio.com/items?itemName=cpylua.language-postcss)
+for syntax highlight.
