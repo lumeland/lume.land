@@ -21,12 +21,15 @@ const markdown = {
     linkify: true,
   },
 };
+const search = {
+  returnPageData: true,
+};
 
 const site = lume(
   {
     location: new URL("https://lume.land"),
   },
-  { markdown },
+  { markdown, search },
 );
 
 site

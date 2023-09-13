@@ -26,20 +26,20 @@ page_css: plugins.css
 
     <ul class="plugins-list">
       {{ for page of search.pages("url^=/plugins/ url!=/plugins/", "title") }}
-      <li class="plugin {{ if page.data.enabled }} is-enabled{{ /if }}" data-tags="{{ page.data.tags }}">
-        <a href="{{ page.data.url }}" class="plugin-info">
+      <li class="plugin {{ if page.enabled }} is-enabled{{ /if }}" data-tags="{{ page.tags }}">
+        <a href="{{ page.url }}" class="plugin-info">
           <strong class="plugin-name">
-            {{ page.data.title }}
-            {{ if page.data.enabled }}
+            {{ page.title }}
+            {{ if page.enabled }}
             <span class="tag is-small">Installed</span>
             {{ /if }}
           </strong>
 
-          {{ page.data.description |> md }}
+          {{ page.description |> md }}
         </a>
 
         <nav class="plugin-tags">
-          {{ for tag of page.data.tags }}
+          {{ for tag of page.tags }}
           <a href="?{{ tag }}=on" class="button is-secondary is-small is-color-{{ tags_info[tag].color }}">
             {{ tags_info[tag].name }}
           </a>

@@ -23,9 +23,9 @@ page_css: docs.css
         {{- set previousPost = search.previousPage(url, "url^=/docs/", "section_order order title") }}
         {{- if previousPost }}
         <li class="is-prev">
-          <a href="{{ previousPost.data.url }}" rel="prev">
+          <a href="{{ previousPost.url }}" rel="prev">
             ← Previous 
-            <strong>{{ previousPost.data.title }}</strong>
+            <strong>{{ previousPost.title }}</strong>
           </a>
         </li>
         {{ /if }}
@@ -33,9 +33,9 @@ page_css: docs.css
         {{- set nextPost = search.nextPage(url, "url^=/docs/", "section_order order title") }}
         {{- if nextPost }}
         <li class="is-next">
-          <a href="{{ nextPost.data.url }}" rel="next">
+          <a href="{{ nextPost.url }}" rel="next">
             Next → 
-            <strong>{{ nextPost.data.title }}</strong>
+            <strong>{{ nextPost.title }}</strong>
           </a>
         </li>
         {{ /if }}

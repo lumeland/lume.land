@@ -2,13 +2,13 @@
   <ol class="doc-navbar-section-links">
     {{ for page of search.pages("url^=/tutorial/", "step") }}
       <li>
-        {{ if page.data.url == url }}
-        <a href="{{ page.data.url }}" aria-current="page" title="{{ page.data.description }}">
-          {{ page.data.step }}. {{ page.data.title }}
+        {{ if page.url == url }}
+        <a href="{{ page.url }}" aria-current="page" title="{{ page.description }}">
+          {{ page.step }}. {{ page.title }}
         </a>
         {{ else }}
-        <a href="{{ page.data.url }}" title="{{ page.data.description }}">
-          {{ page.data.step }}. {{ page.data.title }}
+        <a href="{{ page.url }}" title="{{ page.description }}">
+          {{ page.step }}. {{ page.title }}
         </a>
         {{ /if }}
       </li>
