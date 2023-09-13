@@ -113,13 +113,11 @@ want.
 
 ## Setting url to `false`
 
-Setting the `url` variable to `false` prevents the page being saved into the
-dest folder (although it is still visible by other pages, for example, in
-paginations).
+Setting the `url` variable to `false` prevents the page being processed by Lume.
 
 ```yml
 ---
 title: This is a title
-url: false # Don't output this page yet
+url: false # Ignore this page for now
 ---
 ```
