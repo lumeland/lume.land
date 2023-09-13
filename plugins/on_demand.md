@@ -37,6 +37,8 @@ export default site;
 
 ## How does it work?
 
+### 1. Mark the ondemand pages
+
 First, you need to configure the pages that must be rendered on demand. This is
 done by setting the `ondemand` variable to `true`. For example, let's say we
 want to render the home page dynamically:
@@ -55,8 +57,11 @@ ondemand: true
 
 </lume-code>
 
-When the site is built, this page will be skipped. But a `_routes.json` file
-will be generated containing a map with the URL and the associated page file:
+### 2. The `_routes.json` file
+
+When the site is built, the pages with the `ondemand` variable are skipped and a
+`_routes.json` file is generated containing a map with the associated page file
+for each URL, for example:
 
 <lume-code>
 
@@ -68,8 +73,22 @@ will be generated containing a map with the URL and the associated page file:
 
 </lume-code>
 
-Finally, in the `serve.ts` file used by Deno Deploy, we have to import and use
-the `onDemand` middleware:
+### 3. The `_preload.ts` file
+
+If your source folder contains any file with extensions `.ts`, `.tsx`, `.js`,
+`.jsx` or `.mjs`, the archive `_preload.ts` is also created. This file is
+important if your site is hosted on Deno Deploy.
+
+Deno Deploy only can import dynamically files that are statically analyzable in
+the code. The `_preload.ts` file contains code that does nothing but Deno Deploy
+can analyze and prepare to execute on demand. You have more info in the
+[Deno Deploy's Changelog](https://deno.com/deploy/changelog#statically-analyzable-dynamic-imports).
+
+### 4. The serve file
+
+Finally, we have to configure a HTTP server with the `onDemand` middleware.
+Create the file `serve.ts`, that will be used by Deno Deploy with the following
+code:
 
 <lume-code>
 
@@ -77,6 +96,7 @@ the `onDemand` middleware:
 import site from "./_config.ts";
 import Server from "lume/core/server.ts";
 import onDemand from "lume/middlewares/on_demand.ts";
+import "./_preload.ts";
 
 const server = new Server({
   port: 8000,
@@ -95,47 +115,10 @@ console.log("Listening on http://localhost:8000");
 The middleware needs an instance of our `site` in order to render the pages. We
 can import it from the `_config.ts` file. It also automatically loads the
 `_routes.json` file in order to know which file needs to be rendered for each
-URL. If the file is in a different path, you can configure it.
+URL.
 
 And that's all! The `_routes.json` file is regenerated automatically by the
 build to ensure it's up to date with your changes.
-
-## Preload modules
-
-Deno Deploy doesn't have support for dynamic imports (modules imported
-dynamically with `import("./module-name.ts")`).
-[See this issue for more info](https://github.com/denoland/deploy_feedback/issues/1).
-
-If you have on-demand pages created with JavaScript or TypeScript, the plugin
-generates not only a `_routes.json` file, but also a `_preload.ts` file. This
-file contains the code to preload statically all modules needed to build the
-pages on demand. You have to import it in your server.ts so Lume can render
-these pages in Deno Deploy:
-
-<lume-code>
-
-```ts{title=serve.ts}
-import site from "./_config.ts";
-import Server from "lume/core/server.ts";
-import onDemand from "lume/middlewares/on_demand.ts";
-import preload from "./_preload.ts";
-
-const server = new Server({
-  port: 8000,
-  root: site.dest(),
-});
-
-// Preload the JS/TS modules
-preload(site);
-
-server.use(onDemand({ site }));
-
-server.start();
-
-console.log("Listening on http://localhost:8000");
-```
-
-</lume-code>
 
 ## Using extra data
 
@@ -162,7 +145,7 @@ site.use(onDemand({
 export default site;
 ```
 
-Now, the on demand pages will have the `params` key with the search params
+Now, the on-demand pages will have the `params` key with the search params
 values. For example, in a Nunjucks page:
 
 ```html
@@ -175,7 +158,7 @@ url: /example/
 Hello {{ params.name }}
 ```
 
-The URL `/example/?name=Óscar` will return `Hello Òscar`.
+The URL `/example/?name=Óscar` will return `Hello Óscar`.
 
 ## See an example
 
