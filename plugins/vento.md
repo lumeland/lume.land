@@ -34,7 +34,7 @@ export default site;
 Add a file with `.vto` extension in the `_includes` directory. Use the _front
 matter_ to set data to the template.
 
-```html
+```vento
 ---
 title: Welcome to my page
 intro: This is my first post using Lume. I hope you like it!

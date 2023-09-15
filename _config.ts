@@ -14,6 +14,8 @@ import analyze, {
   mergeDefaults,
 } from "https://deno.land/x/aldara@v0.1.1/mod.ts";
 
+import ventoLang from "https://deno.land/x/vento@v0.8.1/highlightjs-vento.js";
+
 const markdown = {
   plugins: [toc],
   keepDefaultPlugins: true,
@@ -39,7 +41,11 @@ site
   .ignore("scripts")
   .copy("static", ".")
   .copy("_redirects")
-  .use(codeHighlight())
+  .use(codeHighlight({
+    languages: {
+      vento: ventoLang,
+    },
+  }))
   .use(postcss())
   .use(inline())
   .use(metas())
