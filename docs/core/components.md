@@ -13,9 +13,17 @@ includes, macros, etc). The Lume components have the following advantages:
 - They can generate not only the HTML code but also the CSS and JavaScript code
   needed on the client side.
 - They are automatically available everywhere; no need to import them manually.
-- For module-based components (like JavaScript, TypeScript, JSX or TSX) it's the
-  only way to hot-reload components without stopping and restarting the local
-  server.
+- For ESM module-based components (like JavaScript, TypeScript, JSX or TSX) it's
+  the only way to hot-reload components without stopping and restarting the
+  local server.
+
+Note that **Lume components are not run in the browser**. They are intended to
+generate static HTML code on building time.
+
+For interactive client-side components (with `onclick` callbacks and similar
+stuff) you may want to use the [esbuild plugin](../../plugins/esbuild.md) to
+compile your JavaScript code. But the code architecture is up to you (**Lume is
+not a frontend framework**).{.tip}
 
 ## Create your own components
 
