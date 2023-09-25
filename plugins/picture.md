@@ -47,8 +47,7 @@ that this size should support also the 2x resolution. The output HTML code is:
 <picture>
   <source srcset="/flowers-300w.avif, /flowers-300w@2.avif 2x" type="image/avif">
   <source srcset="/flowers-300w.webp, /flowers-300w@2.webp 2x" type="image/webp">
-  <source srcset="/flowers-300w.jpg, /flowers-300w@2.jpg 2x" type="image/jpeg">
-  <img src="/flowers.jpg">
+  <img src="/flowers-300w.jpg" srcset="/flowers-300w@2.jpg 2x">
 </picture>
 ```
 

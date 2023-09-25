@@ -32,35 +32,6 @@ site.use(pagefind(/* Options */));
 export default site;
 ```
 
-## The binary file
-
-The first time, the plugin downloads the Pagefind's binary file to the `_bin`
-directory, taking into account your platform and operating system. Make sure to
-add this folder to the `.gitignore` file.
-
-There are some options in the plugin to configure the binary file under the key
-`binary`. The default values:
-
-```js
-import lume from "lume/mod.ts";
-import pagefind from "lume/plugins/pagefind.ts";
-
-const site = lume();
-
-site.use(pagefind({
-  binary: {
-    path: "./_bin/pagefind", // Binary location
-    extended: false, // Set true for Chinese and Japanese support.
-    version: "v0.8.1", // Pagefind version
-  },
-}));
-
-export default site;
-```
-
-The default Pagefind version is updated every new Lume version, it's recommended
-to don't configure a fixed version {.tip}
-
 ## UI Component
 
 To add the search component in your site, just create a element with the
@@ -150,7 +121,6 @@ const site = lume();
 
 site.use(pagefind({
   indexing: {
-    bundleDirectory: "pagefind",
     rootSelector: "html",
     glob: "**/*.html",
     forceLanguage: false,

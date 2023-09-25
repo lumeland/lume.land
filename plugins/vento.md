@@ -56,6 +56,23 @@ intro: This is my first post using Lume. I hope you like it!
 Creating pages is the same as creating layouts; just place the `.vto` file
 outside the `_includes` directory.
 
+## vto filter
+
+The Vento plugin also registers the `vto` filter, to render any string value as
+a Vento template and output it as HTML. The filter accepts an object with data.
+For example, to render Vento code inside a Nunjucks template:
+
+```html
+---
+data:
+  username: Oscar
+text: "Hello {{ username }}"
+---
+
+<!-- Render a string -->
+<div>{{ text | vto(data) | safe }}<div>
+```
+
 ## Configure VSCode
 
 You can use the

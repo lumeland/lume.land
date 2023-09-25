@@ -176,3 +176,12 @@ category:
 
 For backward compatibility, Lume assigns the `stringArray` merge mode to the key
 `tags` automatically. {.tip}
+
+As of Lume 1.19, it's possible to configure the merged keys strategy from the
+`_config.ts` file:
+
+```ts
+//_config.ts
+
+site.mergeKey("category", "stringArray");
+```

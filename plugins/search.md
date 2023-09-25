@@ -264,6 +264,24 @@ any directory. For example:
 {% set companyData = search.data("about/the-company") %}
 ```
 
+## Search files
+
+The function `files()` allows to search any file that will be copied to the
+`dest` folder and returns its URL. It accepts an regular expression or a string
+with a glob expression. For example, to search all CSS files:
+
+```html
+This site uses the following CSS files:
+
+<ul>
+  {% for file in search.files("*.css") %}
+  <a href="{{ file }}">
+    {{ file }}
+  </a>
+  {% endfor %}
+</ul>
+```
+
 ## Configuration
 
 If you want to change the default configuration, use the second argument of

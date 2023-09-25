@@ -47,3 +47,23 @@ site.use(sitemap({
   sort: "date=desc", // To sort by data in ascendent order
 }));
 ```
+
+## Multilanguage
+
+It's possible generate sitemaps for sites with multiple languages using the
+[multilanguage](./multilanguage.md) plugin:
+
+```js
+import lume from "lume/mod.ts";
+import multilanguage from "lume/plugins/multilanguage.ts";
+import sitemap from "lume/plugins/sitemap.ts";
+
+const site = lume();
+
+site.use(multilanguage({
+  languages: ["en", "gl", "es"],
+}));
+site.use(sitemap(/* Options */));
+
+export default site;
+```

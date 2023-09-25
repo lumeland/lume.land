@@ -92,10 +92,7 @@ to:
     <meta property="og:description" content="My first post">
     <meta property="og:url" content="http://example.com/">
     <meta property="og:image" content="http://example.com/hello-world.png">
-    <meta name="twitter:title" content="Hello world">
-    <meta name="twitter:description" content="My first post">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="http://example.com/hello-wold.png">
     <meta name="twitter:site" content="@misteroom">
     <meta itemprop="name" content="Hello world">
     <meta itemprop="description" content="My first post">
