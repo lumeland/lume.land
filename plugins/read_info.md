@@ -1,6 +1,7 @@
 ---
-title: Read info
+title: Reading info
 description: Provide some information about the page content
+mod: plugins/reading_info.ts
 tags:
   - utils
 ---

@@ -1,7 +1,7 @@
 ---
 title: Favicon
 description: Create all favicons needed automatically using a svg file as the source
-# mod: plugins/favicon.ts
+mod: plugins/favicon.ts
 tags:
   - images
 ---
