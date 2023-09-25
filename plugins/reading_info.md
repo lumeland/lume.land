@@ -8,7 +8,7 @@ tags:
 
 ## Description
 
-This plugin creates the `readInfo` variable in your pages with some interesting
+This plugin creates the `readingInfo` variable in your pages with some interesting
 info about the page content, like the time to read or the number of pages.
 
 ## Installation
@@ -17,7 +17,7 @@ Import this plugin in your `_config.ts` file to use it:
 
 ```js
 import lume from "lume/mod.ts";
-import readInfo from "lume/plugins/read_info.ts";
+import readInfo from "lume/plugins/reading_info.ts";
 
 const site = lume();
 
