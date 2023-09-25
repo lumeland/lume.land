@@ -17,7 +17,7 @@ Import this plugin in your `_config.ts` file to use it:
 
 ```js
 import lume from "lume/mod.ts";
-import readInfo from "lume/plugins/read_info.ts";
+import readInfo from "lume/plugins/reading_info.ts";
 
 const site = lume();
 
