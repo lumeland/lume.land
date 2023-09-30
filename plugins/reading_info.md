@@ -8,8 +8,9 @@ tags:
 
 ## Description
 
-This plugin creates the `readingInfo` variable in your pages with some interesting
-info about the page content, like the time to read or the number of pages.
+This plugin creates the `readingInfo` variable in your pages with some
+interesting info about the page content, like the time to read or the number of
+pages.
 
 ## Installation
 

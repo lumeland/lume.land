@@ -7,7 +7,8 @@ This is a high-level description of how Lume builds your site. When you run
 `lume`, the following operations are executed in this order:
 
 1. Dispatch the [event](../core/events.md) `beforeBuild`.
-2. Ensure the `dest` folder is empty.
+2. Ensure the `dest` folder is empty (unless
+   [`emptyDest` is disabled](../configuration/config-file.md#emptydest)).
 3. Walk the `src` folder recursively and load all files matching with a valid
    file extension, like `.md`, `.njk`, etc.
    - Skip files and folders starting with `_`, `.` or ignored with
@@ -17,6 +18,7 @@ This is a high-level description of how Lume builds your site. When you run
      calculate the source and destination paths.
    - If the name of the file is `_data` or is inside a `_data` folder, is shared
      data.
+   - If the file inside a `_components` folder, is a component.
    - If it has a known extension, it's a page.
    - Otherwise, ignore it.
 4. Dispatch the [event](../core/events.md) `beforeRender`.
