@@ -295,6 +295,11 @@ support:
       img: /img/avatars/supporters/cvburgess.webp
       amount: 5
       recurrent: true
+    - name: Daniel Saunders
+      url: https://daniel-saunders.com/
+      img: /img/avatars/supporters/dsaunders.webp
+      amount: 1
+      recurrent: true
   past_title: Lovely past sponsors
   past_sponsors:
     - name: Androw Nash
