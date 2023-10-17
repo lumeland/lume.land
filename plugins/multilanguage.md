@@ -28,6 +28,23 @@ site.use(multilanguage({
 export default site;
 ```
 
+Due to the [automatic alternate links generating](#automatic-rel%3Dalternate-links), the plugin must be registered after all URL modifers to work probably.
+
+```js
+import lume from "lume/mod.ts";
+import basePath from "lume/plugins/base_path.ts";
+import multilanguage from "lume/plugins/multilanguage.ts";
+
+site.use(basePath()); // modify url
+site.use(multilanguage({
+  languages: ["en", "gl", "es"],
+})); // use the modify url
+// site.use(basePath()); // this modification will not be applied
+
+
+export default site;
+```
+
 ## Create pages in multiple languages
 
 This plugin uses the `id` variable to detect the different translations of the
