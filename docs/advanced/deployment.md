@@ -265,3 +265,27 @@ frontend:
 Remember to ignore `amplify.yml` file in the Lume `_config.ts` file. If you
 don't want to create this file in your repository, you can configure it in the
 AWS control panel.
+
+## Kinsta
+
+[Kinsta](https://kinsta.com/) is a hosting service that allows to host
+[up to 100 static sites for free](https://kinsta.com/static-site-hosting/). Due
+Kinsta only has support for Node, to host a Lume site you need to create the
+following `package.json` file:
+
+```json
+{
+  "scripts": {
+    "build": "deno task lume"
+  },
+  "devDependencies": {
+    "deno-bin": "^1.37.2"
+  }
+}
+```
+
+In the project settings, configure the build command to `npm run build` and the
+publish directory to `_site`.
+
+Kinsta provides [this nice template](https://github.com/kinsta/hello-world-lume)
+that you can use.

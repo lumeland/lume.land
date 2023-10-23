@@ -28,7 +28,9 @@ site.use(multilanguage({
 export default site;
 ```
 
-Due to the [automatic alternate links generating](#automatic-rel%3Dalternate-links), the plugin must be registered after all URL modifers to work probably.
+Due to the
+[automatic alternate links generating](#automatic-rel%3Dalternate-links), the
+plugin must be registered after all URL modifers to work probably.
 
 ```js
 import lume from "lume/mod.ts";
@@ -40,7 +42,6 @@ site.use(multilanguage({
   languages: ["en", "gl", "es"],
 })); // use the modify url
 // site.use(basePath()); // this modification will not be applied
-
 
 export default site;
 ```
