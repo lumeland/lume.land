@@ -161,7 +161,7 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: project-name
-          import-map: "./import_map.json"
+          import-map: "./deno.json"
           entrypoint: serve.ts
 ```
 
