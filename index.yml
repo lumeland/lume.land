@@ -300,6 +300,16 @@ support:
       img: /img/avatars/supporters/dsaunders.webp
       amount: 1
       recurrent: true
+    - name: Bulkfollows
+      url: https://bulkfollows.com/
+      img: /img/avatars/supporters/bfl.webp
+      amount: 1
+      recurrent: true
+    - name: Smmlite
+      url: https://smmlite.com/
+      img: /img/avatars/supporters/sl.webp
+      amount: 1
+      recurrent: true
   past_title: Lovely past sponsors
   past_sponsors:
     - name: Androw Nash

@@ -418,6 +418,7 @@
     border-radius: 50%;
     display: block;
     border: solid 4px var(--color-background);
+    object-fit: cover;
   }
 
   &.is-past > li {
