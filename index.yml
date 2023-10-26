@@ -310,6 +310,11 @@ support:
       img: /img/avatars/supporters/sl.webp
       amount: 1
       recurrent: true
+    - name: Feedpixel
+      url: https://feedpixel.com/
+      img: /img/avatars/supporters/feedpixel.webp
+      amount: 1
+      recurrent: true
   past_title: Lovely past sponsors
   past_sponsors:
     - name: Androw Nash
