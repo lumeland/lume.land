@@ -300,12 +300,12 @@ support:
       img: /img/avatars/supporters/dsaunders.webp
       amount: 1
       recurrent: true
-    - name: Bulkfollows
+    - name: smm panel
       url: https://bulkfollows.com/
       img: /img/avatars/supporters/bfl.webp
       amount: 1
       recurrent: true
-    - name: Smmlite
+    - name: smm panel
       url: https://smmlite.com/
       img: /img/avatars/supporters/sl.webp
       amount: 1
