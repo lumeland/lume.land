@@ -13,6 +13,13 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Xe Iaso
+    img: /img/showcase/xeiaso.webp
+    url: https://xeiaso.net/
+    description: |
+      Personal site and portfolio of Xe Iaso
+    code: https://github.com/Xe/site
+
   - title: 2100Finance
     img: /img/showcase/2100finance.webp
     url: https://www.2100finance.com/
