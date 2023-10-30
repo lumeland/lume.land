@@ -121,9 +121,9 @@ or a valid string that can be used to create a RegExp instance.
 By default, the following functions are available:
 
 - **resize:** Accepts two numbers for `width` and `height` or one number that
-  will be used for `with` and `height`.
+  will be used for `width` and `height`.
 - **crop:** Accepts two numbers for `width` and `height` or one number that will
-  be used for `with` and `height`.
+  be used for `width` and `height`.
 - **blur:** Accepts two numbers for `radius` and `sigma`.
 - **sharpen:** Accepts two numbers for `radius` and `sigma`.
 - **rotate:** Accepts one number for `degrees`.
