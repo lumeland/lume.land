@@ -289,3 +289,10 @@ publish directory to `_site`.
 
 Kinsta provides [this nice template](https://github.com/kinsta/hello-world-lume)
 that you can use.
+
+## Surge
+
+[Surge](https://surge.sh/) is a CLI-based static web publishing host with
+unlimited sites and custom domain. To upload your site on Surge, you need to
+install first the CLI tool with `npm install --global surge`. Then, in the
+`_dest` directory, run `surge` to login/register and upload the site.
