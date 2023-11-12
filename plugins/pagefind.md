@@ -122,7 +122,7 @@ const site = lume();
 site.use(pagefind({
   indexing: {
     rootSelector: "html",
-    forceLanguage: false,
+    forceLanguage: "en",
     verbose: false,
   },
 }));
