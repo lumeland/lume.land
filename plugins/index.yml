@@ -33,3 +33,7 @@ plugins:
   - title: serea
     description: Charts, diagrams and graphs
     url: https://github.com/idris-maps/serea
+
+  - title: Inclusive language
+    description: Inclusive Language plugin for Lume 
+    url: https://deno.land/x/lume_plugin_inclusive_language

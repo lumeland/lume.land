@@ -68,7 +68,8 @@ Navigation
 : There's the [search helper](../../plugins/search.md) and [nav plugin](../../plugins/nav.md) for that.
 
 Inclusive Language
-: There isn't a plugin for that (I'd love it).
+: There's the
+[Inclusive language plugin](https://deno.land/x/lume_plugin_inclusive_language) for that.
 
 ## Things that Lume does and Eleventy doesn't
 

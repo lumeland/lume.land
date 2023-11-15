@@ -129,9 +129,17 @@ site.use(pagefind({
 export default site;
 ```
 
-We can set explicit content indexing by adding the [`data-pagefind-body`](https://pagefind.app/docs/indexing/#removing-pages-from-pagefinds-index) attribute. If this attribute is present in an HTML element, only content inside that elemement is indexed. Anything else without this attribute will not be indexed. As such, the best way to remove pages is by adding `data-pagefind-body` to the wrapper element of the content you would like to index.
+We can set explicit content indexing by adding the
+[`data-pagefind-body`](https://pagefind.app/docs/indexing/#removing-pages-from-pagefinds-index)
+attribute. If this attribute is present in an HTML element, only content inside
+that elemement is indexed. Anything else without this attribute will not be
+indexed. As such, the best way to remove pages is by adding `data-pagefind-body`
+to the wrapper element of the content you would like to index.
 
-Alternatively, you can selectively ignore content by setting the [`data-pagefind-ignore`](https://pagefind.app/docs/indexing/#removing-individual-elements-from-the-index) attribute on a HTML element. And `data-pagefind-ignore="all"` to also ignore its children.
+Alternatively, you can selectively ignore content by setting the
+[`data-pagefind-ignore`](https://pagefind.app/docs/indexing/#removing-individual-elements-from-the-index)
+attribute on a HTML element. And `data-pagefind-ignore="all"` to also ignore its
+children.
 
 See the [Pagefind indexing docs](https://pagefind.app/docs/indexing/) for more
 info. {.tip}
