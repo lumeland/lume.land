@@ -31,7 +31,7 @@ deno task deploy
 
 ## GitHub Pages
 
-To deploy a Lume site using [GitHub Pages](https://pages.github.com/), create
+To deploy a Lume site using [GitHub Pages](https://pages.github.com/), go to Settings > Pages in your repo, configure the source to use GitHub Actions and create
 the following workflow:
 
 ```yml
