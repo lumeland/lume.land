@@ -86,13 +86,13 @@ export default function ({ comp }) {
 In Nunjucks you can nest components in this way:
 
 ```html
-{{ comp "Container" }}
+{% comp "Container" %}
   Content of the Container component
 
-  {{ comp "Button" }}
+  {% comp "Button" %}
   This is a button inside the Container component
-  {{ endcomp }}
-{{ endcomp }}
+  {% endcomp %}
+{% endcomp %}
 ```
 
 The content of the components are passed in the `content` key:
