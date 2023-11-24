@@ -106,8 +106,6 @@ to:
 </html>
 ```
 
-</lume-code>
-
 ## Field aliases
 
 Field aliases allow to use an existing value in the metas. Aliases start with
