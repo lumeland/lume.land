@@ -84,7 +84,7 @@ to:
 
 ```html
 <html>
-  <header>
+  <head>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Oscar's blog">
     <meta property="og:locale" content="en">
@@ -99,7 +99,7 @@ to:
     <meta itemprop="image" content="http://example.com/hello-world.png">
     <meta name="description" content="My first post">
     <meta name="generator" content="Lume v1.10.1">
-  </header>
+  </head>
   <body>
     <p>This is my first post</p>
   </body>
