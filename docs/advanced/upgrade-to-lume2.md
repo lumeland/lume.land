@@ -236,9 +236,10 @@ site.use(windiCSS());
 
 // Lume 2
 site.use(unoCSS());
+site.use(postcss());
 ```
 
-Note: The UnoCSS plugin doesn't process `.css` files.
+> The UnoCSS plugin is not a 1:1 substitute of windiCSS.
 
 ## Feed plugin
 
