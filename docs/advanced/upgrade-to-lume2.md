@@ -69,8 +69,9 @@ export default lume;
 
 ### The `url` function
 
-If you're generating the url of the pages with the `url()` function, the
-property `page.src.slug` was removed. Use `page.data.basename`.
+If you're generating the url of the pages with the `url()` function, keep in
+mind that the property `page.src.slug` was removed. Use `page.data.basename`
+instead.
 
 ```js
 // Lume 1
@@ -80,18 +81,19 @@ export const url = (page) => `/articles/${page.src.slug}/`;
 export const url = (page) => `/articles/${page.data.basename}/`;
 ```
 
-In Lume 2, the page passed to the function has already the default URL applied:
+In Lume 2, the page passed to the function has already the default URL applied,
+which is easier to make small tweaks:
 
 ```js
 // Only in Lume 2:
-// Remove the `/foo/` directory:
+// Just remove the `/foo/` directory:
 
 export const url = (page) => page.data.url.replace("/foo/", "/");
 ```
 
 ### 404 pages
 
-Pretty URLs is no longer applied to the 404 page:
+Pretty URLs no longer ouputs `/404/index.html`:
 
 ```bash
 # Lume 1
@@ -101,7 +103,7 @@ Pretty URLs is no longer applied to the 404 page:
 /404.md  => /404.html
 ```
 
-To revert this, use the `url` variable in the page's frontmater.
+To revert this, use the `url` variable in the frontmater.
 
 ### Automatic extension detection
 
