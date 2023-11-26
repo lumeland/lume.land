@@ -311,3 +311,38 @@ url.es: /acerca-de-mi/
 ```
 
 </lume-code>
+
+## Multilanguage + pagination
+
+If your site is using the [paginate plugin](./paginate.md), this is an example
+showing how to apply multilanguage:
+
+<lume-code>
+
+```js {title=paginate.tmpl.js}
+export const layout = "layouts/my-layout.njk";
+
+export default function* ({ search, paginate }) {
+  const langs = ["gl", "en"];
+
+  for (const lang of langs) {
+    const pages = search.pages(`type=article lang=${lang}`);
+
+    yield* paginate(pages, {
+      url: (n) => `/${lang}/articles/${n}/`,
+      each(page, number) {
+        page.lang = lang;
+        page.id = `articles-page-${number}`;
+      },
+    });
+  }
+}
+```
+
+</lume-code>
+
+- In this example, the generator is generating all pages in all languages.
+- In the `each` option, we are adding the `lang` and `id` values to the new
+  pages.
+- The `id` ensures that the page `/gl/articles/1/` and `/en/articles/1/` are
+  treated as translations of the same content, because both have the same `id`.
