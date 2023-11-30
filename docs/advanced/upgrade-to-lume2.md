@@ -268,6 +268,34 @@ site.use(feed({
 }));
 ```
 
+## Multilanguage plugin
+
+The [`multilanguage` plugin](../../plugins/multilanguage.md) no longer allows
+translations using the `.[lang]` prefix:
+
+```yml
+# Lume 1
+title: Default title
+title.gl: Translation to galician
+title.es: Translation to spanish
+
+description: Default description
+description.gl: Translation to galician
+description.es: Translation to spanish
+
+# Lume 2
+title: Default title
+description: Default description
+
+gl:
+  title: Translation to galician
+  description: Translation to galician
+
+es:
+  title: Translation to spanish
+  description: Translation to spanish
+```
+
 ## Plugins options
 
 The option `keepDefaultPlugins` was renamed to `useDefaultPlugins` that is
