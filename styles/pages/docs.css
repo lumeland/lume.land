@@ -202,6 +202,9 @@
   & dt {
     font-weight: 600;
   }
+  & dd + dt {
+    margin-top: 1em;
+  }
 }
 .doc-footer {
   padding: var(--row-gap-0) 0;

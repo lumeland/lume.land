@@ -1,6 +1,6 @@
 ---
 title: The data model
-description: Understand the Lume data model for pages
+description: Understanding the Lume data model for pages
 ---
 
 ## The content
@@ -10,14 +10,14 @@ object may have the `content` variable, with the file content. For example, the
 following markdown file:
 
 ```md
-Content of the page
+**Content** of the page
 ```
 
 is converted to this object:
 
 ```js
 {
-  content: "Content of the page",
+  content: "**Content** of the page",
 }
 ```
 
@@ -29,7 +29,7 @@ If the file has additional variables, like a front matter, they are added to the
 title: Title of the page
 ---
 
-Content of the page
+**Content** of the page
 ```
 
 Now the title is added to the page data:
@@ -37,7 +37,7 @@ Now the title is added to the page data:
 ```js
 {
   title: "Title of the page",
-  content: "Content of the page",
+  content: "**Content** of the page",
 }
 ```
 
@@ -128,9 +128,9 @@ automatically 3 variables:
 - `date`: Define the date of the page.
 - `basename`: Define the basename of the page (only in Lume 2).
 
-The `url` can be a function or even a relative path
+You can define the `url` as a absolute or relative paths or even a function
 ([see URLs documentation](../creating-pages/urls.md) for more info). Lume will
-resolve this value to a string. If the url is `false`, the page is ignored.
+resolve this value to a string, and if the url is `false`, the page is ignored.
 
 The `date` variable can be defined
 [in the filename](http://localhost:3000/docs/creating-pages/page-files/#page-date)
@@ -138,11 +138,14 @@ The `date` variable can be defined
 [a page variable](../creating-pages/page-data.md#date), etc. Lume will try to
 resolve it, using the file creation date as a fallback.
 
-For example, the following markdown file saved in the `posts/hello-world.md`
-file:
+The `basename` is like the filename. It can be used to change the last part of
+the URL.
+
+For example, the following markdown file saved in the
+`posts/2023-11-30_hello-world.md` file:
 
 ```md
-Hello world
+Hello **world**
 ```
 
 This is converted to:
@@ -150,9 +153,9 @@ This is converted to:
 ```js
 {
   url: "/posts/hello-world/",
-  date: Date(),
+  date: Date("2023-11-30 00:00:00"),
   basename: "hello-word",
-  content: "Hello world"
+  content: "Hello **world**"
 }
 ```
 
@@ -160,10 +163,10 @@ This is converted to:
 
 Once a page is loaded, converted to `Data` and the special variables `url`,
 `date` and `basename` are assigned, it will be merged with other data defined in
-[`_data` files](../creating-pages/shared-data.md). There are also other
+[`_data` files](../creating-pages/shared-data.md). Components stored in the
+`_components` folders are added to the page under the `comp` variable. Other
 variables defined by plugins like [`search`](../../plugins/search.md) or
-[`paginate`](../../plugins/paginate.md) that are automatically added. So the
-markdown file:
+[`paginate`](../../plugins/paginate.md) are added too. So the markdown file:
 
 ```md
 Hello world
@@ -174,19 +177,22 @@ Is converted to:
 ```js
 {
   url: "/posts/hello-world/",
-  date: Date(),
+  date: Date("2023-11-30 00:00:00"),
   basename: "hello-word",
-  content: "Hello world",
+  content: "Hello **world**",
   search: Searcher(),
   paginate: Paginate(),
+  comp: {}
   // etc...
 }
 ```
 
 ## Generators
 
-If the `content` variable is a Generator, Lume will generate the pages at this
-point. More info about [generating pages](../core/multiple-pages.md).
+If the `content` variable is a
+[Generator function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function*),
+Lume will generate the pages at this point. More info about
+[generating pages](../core/multiple-pages.md).
 
 For example, let's say we have the following generator page:
 
@@ -216,6 +222,7 @@ This will generate the three following pages:
   basename: "page-1",
   search: Searcher(),
   paginate: Paginate(),
+  comp: {}
 }
 
 {
@@ -226,6 +233,7 @@ This will generate the three following pages:
   basename: "page-2",
   search: Searcher(),
   paginate: Paginate(),
+  comp: {}
 }
 
 {
@@ -236,6 +244,7 @@ This will generate the three following pages:
   basename: "page-3",
   search: Searcher(),
   paginate: Paginate(),
+  comp: {}
 }
 ```
 
@@ -257,19 +266,112 @@ site.preprocess([".html"], (page) => {
 
 ## Rendering
 
-The result of rendering a page is stored in the `page.content` variable, (do not
-confuse with `page.data.content` variable which is the source file content).
-Then you can use processors, to modify this variable:
+This is the process of rendering the `Data` object (and `Data.content` if it's
+defined) and saving the result in the `page.content` variable. Anything defined
+in the `Data` object is available in the template engine as a variable.
+
+```vento
+<!-- Render the title variable -->
+<h1>{{ title }}</h1>
+```
+
+## Processing
+
+While `Page.data` returns the `Data` object of the page, `Page.content` returns
+the result of rendering the data or, in other words, the content that will be
+output to the dest folder. You can use processors to modify this content:
 
 ```js
 site.process([".html"], (page) => {
-  let content = page.content; // Get the rendered content
-  content += "<!-- Created by Óscar Otero -->"; // Modify the content
-  page.content = content; // Assign the new content
+  // Get the rendered content
+  const content = page.content;
+
+  // Modify the content
+  page.content = content + "\n<!-- Created by Óscar Otero -->";
 });
 ```
 
-## Saving
+If the page content is HTML code, there's the `document` property to use the
+[DOM API](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction)
+to modify the content:
 
-The content of the variable `page.content` will be saved to the dest folder. If
-this variable is empty, the page won't be saved.
+```js
+site.process([".html"], (page) => {
+  // Get the DOM
+  const document = page.document;
+
+  // Modify the content
+  document.querySelectorAll('a[href^="http"]').forEach((link) => {
+    link.setAttribute("target", "_blank");
+  });
+});
+```
+
+## Data conventions
+
+In the `Data` object you can store all variables that you want with the struture
+of your choice. But there are some special variables that Lume understand (See
+[Standard variables documentation](../creating-pages/page-data.md#standard-variables))
+and other variables considered good practices or common conventions. This is a
+list of all of them:
+
+<!-- deno-fmt-ignore-start -->
+[url](../creating-pages/urls.md) `string`
+: Created by Lume automatically if it's missing.
+
+[date](../creating-pages/page-data.md#date) `Date`
+: Created by Lume automatically if it's missing.
+
+basename `string`
+: Created by Lume automatically if it's missing. *Only Lume 2*.
+
+[tags](../creating-pages/tags.md) `string[]`
+: Normalized by Lume automatically. Used to assign tags or to pages.
+
+[draft](../creating-pages/page-data.md#tags) `boolean`
+: If it's `true`, the page will be ignored. Use `LUME_DRAFT=true` to show draft pages.
+
+[renderOrder](../core/render-order.md) `number`
+: To configure the rendering order of a page.
+
+content `string | Uint8Array | function | object`
+: The raw content of the page.
+
+children `string | Uint8Array | function | object`
+: The rendered content before being wrapped into layouts.
+
+[layout](../creating-pages/layouts.md) `string`
+: The layout file used to render the page.
+
+[templateEngine](../core/multiple-template-engines.md) `string | string[]`
+: Configure different templates engines to render the page.
+
+[mergedKeys](../core/merged-keys.md) `Record<string, "array" | "stringArray" | "object">`
+: Configure how some data keys will be merged with the parent data.
+
+[onDemand](../../plugins/on_demand.md) `boolean`
+: Whether render this page on demand or not.
+
+lang `string`
+: The language of the page.
+
+type `string`
+: The type of the page (post, article, etc). Used to group pages in different collections.
+
+id `string | number`
+: The id of the page. Used to identify a page inside a type.
+
+[comp](../core/components.md) `object`
+: The components available for this page (from `_components` folders).
+
+page `Page`
+: The current `Page` instance.
+
+[alternates](../../plugins/multilanguage.md) `Data[]`
+: Other pages with the same content translated to other languages.
+
+[search](../core/searching.md#searching-pages) `Searcher`
+: An utility class to search pages and files.
+
+[paginate](../core/searching.md#pagination) `function`
+: A function to paginate the result of searching pages.
