@@ -24,6 +24,10 @@
     overflow-y: auto;
     max-height: calc(100vh - 110px);
   }
+
+  .button.is-codesandbox {
+    margin-top: 2em;
+  }
 }
 .doc-navbar-section {
   border-top: 1px solid var(--color-background-2);

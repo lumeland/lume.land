@@ -6,7 +6,8 @@
   justify-content: center;
   text-align: center;
   border: 0;
-  height: 2em;
+  gap: .6em;
+  min-height: 2em;
   padding: 0 .6em;
   font: var(--text-caption-bold);
   border-radius: var(--border-radius-small);
@@ -29,6 +30,22 @@
   &.is-big {
     height: 3em;
     padding: 0 1em;
+  }
+
+  &.is-codesandbox {
+    --color: var(--color-white);
+    --color-hover: var(--color-white);
+    --background: var(--color-black-100);
+    --background-hover: var(--color-black-240);
+    border: solid 1px #fff2;
+    display: flex;
+    padding: 1em .6em;
+
+    svg {
+      fill: currentColor;
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &.is-primary {
