@@ -181,6 +181,16 @@ const tags = search.tags();
 const tags = search.values("tags");
 ```
 
+The filter `data` was removed:
+
+```njk
+<!-- Lume 1 -->
+{% for article in search.pages("type=article") | data %}
+
+<!-- Lume 2 -->
+{% for article in search.pages("type=article") %}
+```
+
 ## JSX plugin
 
 The global object `window.React` was removed. If you have problems compiling
