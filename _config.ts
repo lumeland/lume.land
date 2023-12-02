@@ -8,7 +8,6 @@ import minifyHTML from "lume/plugins/minify_html.ts";
 import postcss from "lume/plugins/postcss.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import metas from "lume/plugins/metas.ts";
-import vento from "lume/plugins/vento.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.1.0/toc/mod.ts";
 import analyze, {
   mergeDefaults,
@@ -18,20 +17,16 @@ import ventoLang from "https://deno.land/x/vento@v0.8.1/highlightjs-vento.js";
 
 const markdown = {
   plugins: [toc],
-  keepDefaultPlugins: true,
   options: {
     linkify: true,
   },
-};
-const search = {
-  returnPageData: true,
 };
 
 const site = lume(
   {
     location: new URL("https://lume.land"),
   },
-  { markdown, search },
+  { markdown },
 );
 
 site
@@ -49,7 +44,6 @@ site
   .use(postcss())
   .use(inline())
   .use(metas())
-  .use(vento())
   .use(esbuild({
     extensions: [".js"],
   }))
@@ -66,52 +60,54 @@ site
     (path) => path.endsWith(".png") || path.endsWith(".jpg"),
   )
   .filter("slice", (arr, length) => arr.slice(0, length))
-  .process([".html"], (page) => {
-    const doc = page.document!;
-    const blocks = doc.querySelectorAll("lume-code");
+  .process([".html"], (pages) => {
+    for (const page of pages) {
+      const doc = page.document!;
+      const blocks = doc.querySelectorAll("lume-code");
 
-    blocks.forEach((block, i) => {
-      const pres = (block as unknown as HTMLElement).querySelectorAll(
-        ":scope > pre",
-      );
+      blocks.forEach((block, i) => {
+        const pres = block.querySelectorAll(
+          ":scope > pre",
+        );
 
-      const menu = doc.createElement("ul");
-      menu.setAttribute("role", "tablist");
-      menu.setAttribute("aria-label", "Code Tabs");
-      menu.classList.add("lume-code-menu");
+        const menu = doc.createElement("ul");
+        menu.setAttribute("role", "tablist");
+        menu.setAttribute("aria-label", "Code Tabs");
+        menu.classList.add("lume-code-menu");
 
-      pres.forEach((pre, j) => {
-        const title = pre.querySelector("code")!.getAttribute("title")!;
+        pres.forEach((pre, j) => {
+          const title = pre.querySelector("code")!.getAttribute("title")!;
 
-        const li = doc.createElement("li");
-        li.setAttribute("role", "presentation");
+          const li = doc.createElement("li");
+          li.setAttribute("role", "presentation");
 
-        const button = doc.createElement("button");
-        button.setAttribute("role", "tab");
-        button.setAttribute("aria-selected", j === 0 ? true : false);
-        button.setAttribute("aria-controls", `panel-${i + 1}-${j + 1}`);
-        button.setAttribute("id", `tab-${i + 1}-${j + 1}`);
-        button.setAttribute("tabindex", j === 0 ? 0 : -1);
-        button.innerText = title;
-        button.classList.add("lume-code-tab");
+          const button = doc.createElement("button");
+          button.setAttribute("role", "tab");
+          button.setAttribute("aria-selected", j === 0 ? "true" : "false");
+          button.setAttribute("aria-controls", `panel-${i + 1}-${j + 1}`);
+          button.setAttribute("id", `tab-${i + 1}-${j + 1}`);
+          button.setAttribute("tabindex", j === 0 ? "0" : "-1");
+          button.innerText = title;
+          button.classList.add("lume-code-tab");
 
-        if (j > 0) {
-          pre.setAttribute("hidden", "true");
-        } else {
-          button.classList.add("is-active");
-        }
+          if (j > 0) {
+            pre.setAttribute("hidden", "true");
+          } else {
+            button.classList.add("is-active");
+          }
 
-        pre.setAttribute("role", "tabpanel");
-        pre.setAttribute("aria-labelledby", `tab-${i + 1}-${j + 1}`);
-        pre.setAttribute("id", `panel-${i + 1}-${j + 1}`);
-        pre.setAttribute("tabindex", "0");
+          pre.setAttribute("role", "tabpanel");
+          pre.setAttribute("aria-labelledby", `tab-${i + 1}-${j + 1}`);
+          pre.setAttribute("id", `panel-${i + 1}-${j + 1}`);
+          pre.setAttribute("tabindex", "0");
 
-        li.append(button);
-        menu.appendChild(li);
+          li.append(button);
+          menu.appendChild(li);
+        });
+
+        (block as unknown as HTMLElement).prepend(menu as unknown as Node);
       });
-
-      (block as unknown as HTMLElement).prepend(menu as unknown as Node);
-    });
+    }
   })
   .use(minifyHTML());
 

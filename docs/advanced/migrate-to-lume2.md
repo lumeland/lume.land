@@ -1,7 +1,7 @@
 ---
 url: false
-title: Upgrade to Lume 2
-description: Guide to upgrade your project from Lume 1 to Lume 2
+title: Migrate to Lume 2
+description: Guide to migrate your project from Lume 1 to Lume 2
 ---
 
 ## Change your (pre)processors
