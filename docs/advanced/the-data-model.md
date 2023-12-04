@@ -5,7 +5,7 @@ description: Understanding the Lume data model for pages
 
 ## The content
 
-When Lume loads a page, all it's content is converted to a `Data` object. This
+When Lume loads a page, all its content is converted to a `Data` object. This
 object may have the `content` variable, with the file content. For example, the
 following markdown file:
 
@@ -52,7 +52,7 @@ variable:
 }
 ```
 
-If you use JavaScript modules to your pages, they are also translated to this
+If you use JavaScript modules for your pages, they are also translated to this
 model. For example:
 
 ```js
@@ -114,7 +114,7 @@ is converted to:
 }
 ```
 
-I this example there's no `content` variable and that is fine. The `content`
+In this example, there's no `content` variable and that is fine. The `content`
 variable is only a convention used by formats that can export a nameless
 variable, like the default exports in ES modules or files with front matter and
 a content below.
@@ -128,7 +128,7 @@ automatically 3 variables:
 - `date`: Define the date of the page.
 - `basename`: Define the basename of the page (only in Lume 2).
 
-You can define the `url` as a absolute or relative paths or even a function
+You can define the `url` as a absolute or relative path or even a function
 ([see URLs documentation](../creating-pages/urls.md) for more info). Lume will
 resolve this value to a string, and if the url is `false`, the page is ignored.
 
@@ -141,7 +141,7 @@ resolve it, using the file creation date as a fallback.
 The `basename` is like the filename. It can be used to change the last part of
 the URL.
 
-For example, the following markdown file saved in the
+For example, the following markdown file is saved in the
 `posts/2023-11-30_hello-world.md` file:
 
 ```md
@@ -251,9 +251,9 @@ This will generate the three following pages:
 ## Preprocessors
 
 If you've defined [a preprocessor](../core/processors.md#preprocess) in your
-`_config` file, it will be executed at this point. It allows to modify the
+`_config` file, will be executed at this point. It allows modification of the
 `Data` object before rendering. The preprocessors receive the `Page` instance
-and you can access to the data of the page with the `Page.data` property.
+and you can access the data of the page with the `Page.data` property.
 
 ```js
 // _config.js
@@ -309,8 +309,9 @@ site.process([".html"], (page) => {
 
 ## Data conventions
 
-In the `Data` object you can store all variables that you want with the struture
-of your choice. But there are some special variables that Lume understand (See
+In the `Data` object you can store all variables that you want with the
+structure of your choice. But there are some special variables that Lume
+understands (See
 [Standard variables documentation](../creating-pages/page-data.md#standard-variables))
 and other variables considered good practices or common conventions. This is a
 list of all of them:
@@ -344,7 +345,7 @@ children `string | Uint8Array | function | object`
 : The layout file used to render the page.
 
 [templateEngine](../core/multiple-template-engines.md) `string | string[]`
-: Configure different templates engines to render the page.
+: Configure different template engines to render the page.
 
 [mergedKeys](../core/merged-keys.md) `Record<string, "array" | "stringArray" | "object">`
 : Configure how some data keys will be merged with the parent data.
@@ -371,7 +372,7 @@ page `Page`
 : Other pages with the same content translated to other languages.
 
 [search](../core/searching.md#searching-pages) `Searcher`
-: An utility class to search pages and files.
+: A utility class to search pages and files.
 
 [paginate](../core/searching.md#pagination) `function`
 : A function to paginate the result of searching pages.
