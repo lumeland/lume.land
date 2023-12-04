@@ -59,12 +59,14 @@ As `loadPages()` is intended to generate `.html` pages, the given extension
 pretty urls).
 
 Keep in mind that the `content` field of the returned `Data` object is used for
-the resulting page's content:
+the resulting page's content, as shown in the following example.
 
 Considering this TOML:
 ```toml
 foo = 'bar'
 ```
+The following page loader will result in a HTML file with the content
+`<h1>bar</h1>`:
 ```js
 site.loadPages([".toml"], async path => {
   const content = await Deno.readTextFile(path);
@@ -74,8 +76,6 @@ site.loadPages([".toml"], async path => {
   };
 });
 ```
-
-This will result in a HTML file with the following content: `<h1>bar</h1>`.
 
 You may want to load TOML files, process them and export as `.toml` files, not
 `.html` files. To do that, you can use `loadAssets()`:
