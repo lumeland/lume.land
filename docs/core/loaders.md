@@ -11,10 +11,10 @@ or plain text.
 ## Creating a loader
 
 Creating a custom loader is really easy: you only have to create a function that
-reads the content of a file and returns an object with that content.
+reads the content of a file and returns [a data object](../advanced/the-data-model.md).
 
 Let's say you want to add support for the `toml` format, using the
-[encoding/toml](https://deno.land/std/encoding#toml) Deno std module:
+[toml Deno std module](https://deno.land/std/toml/mod.ts):
 
 ```js
 import { parse } from "https://deno.land/std/encoding/toml.ts";
@@ -49,9 +49,9 @@ Now, any `*.toml` file in your site will be loaded and used to render a page.
 For example, the file `/about-us.toml` would be loaded and saved as
 `/about-us/index.html`.
 
-You could have realized that `loadPage()` is intended to generate `.html` pages.
-So the `.toml` extension is removed and replaced by `.html` (or `/index.html`
-for pretty urls).
+As `loadPages()` is intended to generate `.html` pages, the given extension
+(here `.toml`) is removed and replaced by `.html` (or `/index.html` for
+pretty urls).
 
 You may want to load TOML files, process them and export as `.toml` files, not
 `.html` files. To do that, you can use `loadAssets()`:
