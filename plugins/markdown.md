@@ -130,7 +130,7 @@ delimited by two triple-dashed lines with YAML code:
 ```yaml
 ---
 title: Welcome to my page
-layout: layouts/main.njk
+layout: layouts/main.vto
 ---
 
 # Welcome
@@ -141,13 +141,13 @@ I hope you like it!
 
 The Markdown code is stored in the `content` variable:
 
-```html
+```vento
 <html>
   <head>
     <title>{{ title }}</title>
   </head>
   <body>
-    {{ content | safe }}
+    {{ content }}
   </body>
 </html>
 ```
@@ -158,10 +158,10 @@ The Markdown plugin also registers the `md` filter that renders any string value
 as Markdown and outputs an HTML fragment. The filter also accepts an argument to
 render the Markdown in _inline_ mode.
 
-```html
+```vento
 <!-- Render to HTML code -->
-<div>{{ text | md | safe }}</div>
+<div>{{ text |> md }}</div>
 
 <!-- Single line rendering, without the paragraph wrap: -->
-<p>{{ text | md(true) | safe }}</p>
+<p>{{ text |> md(true) }}</p>
 ```

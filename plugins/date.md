@@ -12,8 +12,8 @@ This plugin registers the `date` filter, which allows manipulating and
 formatting a datetime value in different locales. It uses the
 [date-fns](https://date-fns.org/) library under the hood.
 
-```html
-<time>{{ createdAt | date }}</time>
+```vento
+<time>{{ createdAt |> date }}</time>
 ```
 
 ## Installation
@@ -38,8 +38,8 @@ argument to set a different format. See the
 [`date-fns` documentation](https://date-fns.org/v2.22.0/docs/format) for more
 info.
 
-```html
-<time>{{ createdAt | date('MM/dd/yyyy') }}</time>
+```vento
+<time>{{ createdAt |> date('MM/dd/yyyy') }}</time>
 ```
 
 There are some predefined formats that you can use:
@@ -53,9 +53,9 @@ There are some predefined formats that you can use:
 | `HUMAN_DATE`     | `PPP`                      |
 | `HUMAN_DATETIME` | `PPPppp`                   |
 
-```html
+```vento
 <time datetime="{{ createdAt | date }}">
-  {{ createdAt | date('HUMAN_DATE') }}
+  {{ createdAt |> date('HUMAN_DATE') }}
 </time>
 ```
 
@@ -72,8 +72,8 @@ site.use(date({
 }));
 ```
 
-```html {title=".njk"}
-<time>{{ createdAt | date('MY_FORMAT') }}</time>
+```vento {title=".vto"}
+<time>{{ createdAt |> date('MY_FORMAT') }}</time>
 ```
 
 </lume-code>
@@ -96,8 +96,8 @@ site.use(date({
 
 Use the second argument to set the locale:
 
-```html
-<time datetime="{{ createdAt | date }}">
+```vento
+<time datetime="{{ createdAt |> date }}">
   {{ createdAt | date("HUMAN_DATE", "gl") }}
 </time>
 ```

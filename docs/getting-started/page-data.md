@@ -11,7 +11,7 @@ define a variable with the name `title`:
 
 ```yml { title="index.md" }
 ---
-layout: layout.njk
+layout: layout.vto
 title: This is my website
 ---
 # Welcome to my website
@@ -29,7 +29,7 @@ html code:
 
 <lume-code>
 
-```html { title="_includes/layout.njk" }
+```vento { title="_includes/layout.vto" }
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +37,7 @@ html code:
   <title>{{ title }}</title>
 </head>
 <body>
-  {{ content | safe }}
+  {{ content }}
 </body>
 </html>
 ```

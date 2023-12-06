@@ -103,6 +103,12 @@ const site = lume({
 });
 ```
 
+### includes
+
+It's a special folder used by default by the template engines and other
+processors (like sass or postcss) to look for the included files. By default is
+`_includes`.
+
 ## Server options
 
 The `server` key contains the configuration for the local server. It has the

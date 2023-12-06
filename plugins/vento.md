@@ -16,18 +16,7 @@ pages and layouts.
 
 ## Installation
 
-Import this plugin in your `_config.ts` file to use it:
-
-```js
-import lume from "lume/mod.ts";
-import vento from "lume/plugins/vento.ts";
-
-const site = lume();
-
-site.use(vento(/* Options */));
-
-export default site;
-```
+This plugin is installed by default. 🎉
 
 ## Creating layouts
 

@@ -20,6 +20,10 @@ Now, use it in your templates:
 
 <lume-code>
 
+```vento{title=Vento}
+<h1>{{ title |> uppercase }}</h1>
+```
+
 ```html{title=Nunjucks}
 <h1>{{ title | uppercase }}</h1>
 ```
@@ -52,8 +56,8 @@ Lume includes the following convenient pre-installed filters:
 
 - **md**: Allows to render Markdown content to HTML.
   [More info](../../plugins/markdown.md#md-filter)
-- **njk**: Allows to render Nunjucks content to HTML.
-  [More info](../../plugins/nunjucks.md#njk-filter)
+- **vto**: Allows to render Vento content to HTML.
+  [More info](../../plugins/vento.md#vto-filter)
 - **url / htmlUrl**: Allows to normalize URLs. [More info](../../plugins/url.md)
 
 ## Helpers

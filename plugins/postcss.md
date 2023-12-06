@@ -103,15 +103,15 @@ export default site;
 This plugin also registers the `postcss` filter so you can transform CSS code in
 the template engines. For example:
 
-```html
-{% set css %}
+```vento
+{{ set css }}
   body::after {
     content: "Hello, the CSS world!";
   }
-{% endset %}
+{{ /set }}
 
 <style>
-  {{- css | postcss | safe -}}
+  {{ css |> postcss }}
 </style>
 ```
 

@@ -23,22 +23,22 @@ This post has two tags, one used to identify the type of page (post) and another
 with the topic (ssg). To collect all pages tagged as `post` in the layouts, use
 the `search` object:
 
-```html
+```vento
 <ul>
-  {% for post in search.pages("post") %}
-  <li>{{ post.data.title }}</li>
-  {% endfor %}
+  {{ for post of search.pages("post") }}
+  <li>{{ post.title }}</li>
+  {{ /for }}
 </ul>
 ```
 
 And to get all pages tagged as `post` and `ssg` add the two tags names separated
 with a space:
 
-```html
+```vento
 <ul>
-  {% for post in search.pages("post ssg") %}
-  <li>{{ post.data.title }}</li>
-  {% endfor %}
+  {{ for post of search.pages("post ssg") }}
+  <li>{{ post.title }}</li>
+  {{ /for }}
 </ul>
 ```
 

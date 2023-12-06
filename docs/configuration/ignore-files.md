@@ -34,3 +34,8 @@ site.ignore((path) => {
   return path.match(/^\/draft\/.*\.md$/) !== null;
 });
 ```
+
+## Draft files
+
+Pages with the `draft` value as `true` are ignored by Lume unless the
+environment variable `LUME_DRAFTS` is set to `true`.

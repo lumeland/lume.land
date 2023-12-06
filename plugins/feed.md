@@ -57,14 +57,15 @@ site.use(feed({
   info: {
     title: "My blog", // The feed title
     description: "Where I put my thoughts", // The feed subtitle
-    date: new Date(), // The publish date
+    published: new Date(), // The publishing date
     lang: "en", // The language of the feed
     generator: true, // Set `true` to automatically generate the "Lume {version}"
   },
   items: {
     title: "=title", // The title of every item
     description: "=excerpt", // The description of every item
-    date: "=date", // The published date of every item
+    published: "=date", // The publishing date of every item
+    updated: undefined, // The last update of every item
     content: "=children", // The content of every item
     lang: "=lang", // The language of every item
   },
@@ -90,7 +91,7 @@ site.use(feed({
   items: {
     title: "=title",
     description: "=excerpt",
-    date: "=date",
+    published: "=date",
     content: "$.post-content", // Use the content of .post-content element
     lang: "=lang",
   },

@@ -13,11 +13,11 @@ The function `search.pages()` returns an array of pages you can filter and sort.
 For example, to search pages having the variable `category` set to `music`, use
 the following code:
 
-```html
+```vento
 <ul>
-  {% for page in search.pages("category=music") %}
-  <li>{{ page.data.title }}</li>
-  {% endfor %}
+  {{ for page of search.pages("category=music") }}
+  <li>{{ page.title }}</li>
+  {{ /for }}
 </ul>
 ```
 
@@ -51,7 +51,7 @@ export default function* ({ search }) {
     const results = pages.splice(0, 10);
 
     yield {
-      layout: "layouts/post-list.njk",
+      layout: "layouts/post-list.vto",
       url: `/music/page-${currentPage}/`,
       results,
       pagination: {
@@ -68,7 +68,7 @@ export default function* ({ search }) {
 
 In this example we have selected all pages to generate a page for each 10
 results with the urls `/music/page-1/`, `/music/page-2/`, `/music/page-3/`, etc.
-Every page uses the layout `layouts/post-list.njk` that will receive, among
+Every page uses the layout `layouts/post-list.vto` that will receive, among
 others, the variables `results` (with the array of results to show in this page)
 and `pagination` (with some interesting info like the current page number or the
 total results).
@@ -78,7 +78,7 @@ exposes the `paginate` helper to ease this process. The previous example can be
 done in this simpler way:
 
 ```js
-export const layout = "layouts/post-list.njk";
+export const layout = "layouts/post-list.vto";
 
 export default function* ({ search, paginate }) {
   const musicPages = search.pages("category=music");

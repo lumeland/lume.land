@@ -18,9 +18,9 @@ generating the CSS code needed. It also processes the `.css` files to apply the
 
 <lume-code>
 
-```html{title=hello.njk}
+```vento{title=hello.vto}
 ---
-layout: layout.njk
+layout: layout.vto
 ---
 <h1 class="bg-purple-500">Hello world</h1>
 </style>

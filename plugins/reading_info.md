@@ -35,7 +35,7 @@ standard function to count the words, using the page variable `lang` to detect
 the language. The data is stored in the variable `readingInfo`, so you can use
 it in your templates in this way:
 
-```html
+```vento
 <p>{{ readingInfo.words }} words</p>
 <p>{{ readingInfo.minutes }} min read</p>
 ```

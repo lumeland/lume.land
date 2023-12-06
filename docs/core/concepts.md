@@ -27,7 +27,7 @@ example:
 6. Save the output file as `/my-page/index.html`.
 
 By default, Lume interprets the following formats as regular page files, so they
-are loaded, processed and exported to `dest` folder: `.md`, `.markdown`, `.njk`,
+are loaded, processed and exported to `dest` folder: `.md`, `.markdown`, `.vto`,
 `.page.json`, `.page.js`, `.page.ts` and `.yaml`. Use `site.loadPages()` to add
 additional extensions:
 
@@ -95,23 +95,13 @@ site.copy([".pdf"]);
 ## Includes
 
 Are files loaded by the pages, for example, the layouts or templates. By
-default, they are placed in the `_includes` folder, but you can configure it.
-
-```ts
-// Save the layouts files of nunjucks in the "/njk/" directory
-site.includes([".njk"], "/njk/");
-```
+default, they are placed in the `_includes` folder, but you can configure it in
+the [config file](../configuration/config-file.md#includes).
 
 ## Components
 
 By default are saved in the `_components` folder and store reusable pieces of
-code that you can use in your templates. You can load additional components with
-`site.loadComponents()` function. [See more about components](./components.md)
-
-```ts
-// Load jsx components
-site.loadComponents([".jsx"], jsxLoader, jsxRenderer);
-```
+code that you can use in your templates.
 
 ## Plugins
 

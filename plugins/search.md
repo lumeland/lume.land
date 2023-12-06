@@ -25,33 +25,33 @@ To search by tags, just include the tag names as the first argument, separated
 by spaces. For example, to search all pages containing the tags `post` and
 `html`, you would execute `search.pages("post html")`:
 
-```html
+```vento
 <ul>
-  {% for post in search.pages("post html") %}
-  <li>{{ post.data.title }}</li>
-  {% endfor %}
+  {{ for post of search.pages("post html") }}
+  <li>{{ post.title }}</li>
+  {{ /for }}
 </ul>
 ```
 
 You can use quotes to search for tags containing spaces. For example to search
 by the tags `post` and `static site generator`:
 
-```html
+```vento
 <ul>
-  {% for post in search.pages("post 'static site generator'") %}
-  <li>{{ post.data.title }}</li>
-  {% endfor %}
+  {{ for post of search.pages("post 'static site generator'") }}
+  <li>{{ post.title }}</li>
+  {{ /for }}
 </ul>
 ```
 
 Use the exclamation mark to search pages that doesn't contain a specific tag.
 For example, to search pages with the tag "post" not containing the tag "html":
 
-```html
+```vento
 <ul>
-  {% for post in search.pages("post !html") %}
-  <li>{{ post.data.title }}</li>
-  {% endfor %}
+  {{ for post of search.pages("post !html") }}
+  <li>{{ post.title }}</li>
+  {{ /for }}
 </ul>
 ```
 
@@ -60,11 +60,11 @@ For example, to search pages with the tag "post" not containing the tag "html":
 The second argument is the value used to sort. By default, the pages are sorted
 by `date`, but you can use any field. For example, if you want to sort by title:
 
-```html
+```vento
 <ul>
-  {% for post in search.pages("post html", "title") %}
-  <li>{{ post.data.title }}</li>
-  {% endfor %}
+  {{ for post of search.pages("post html", "title") }}
+  <li>{{ post.title }}</li>
+  {{ /for }}
 </ul>
 ```
 
@@ -74,19 +74,19 @@ Note: You can use dot notation to sort by any subfield. For example:
 Sorting allows specifying multiple fields. For example let's sort by the "order"
 and "title" fields:
 
-```html
-{% for post in search.pages("post html", "order title") %}
+```vento
+{{ for post of search.pages("post html", "order title") }}
   ...
-{% endfor %}
+{{ /for }}
 ```
 
 By default, sort is ascendening, but this can be changed by appending `=desc` to
 the field name:
 
-```html
-{% for post in search.pages("post html", "order=asc title=desc") %}
+```vento
+{{ for post of search.pages("post html", "order=asc title=desc") }}
   ...
-{% endfor %}
+{{ /for }}
 ```
 
 ### Limit the results
@@ -95,16 +95,16 @@ The third argument of `search.pages()` allows limiting the number of results.
 You can use a positive number to return the first `n` results or a negative
 number to return the last `n` results:
 
-```html
+```vento
 <!-- Get the 3 first values -->
-{% for post in search.pages("post html", "order title", 3) %}
+{{ for post of search.pages("post html", "order title", 3) }}
   ...
-{% endfor %}
+{{ /for }}
 
 <!-- Get the 3 last values -->
-{% for post in search.pages("post html", "order title", -3) %}
+{{ for post of search.pages("post html", "order title", -3) }}
   ...
-{% endfor %}
+{{ /for }}
 ```
 
 ### Filtering by a field
@@ -113,12 +113,12 @@ You can filter pages not only by tags but also by any other field that you want.
 For example, to search all pages with the value `menu` as `true`, simply include
 the query `menu=true`:
 
-```html
-{% for option in search.pages("menu=true") %}
-<a href="{{ option.data.url }}">
-  {{ option.data.title }}
+```vento
+{{ for option of search.pages("menu=true") }}
+<a href="{{ option.url }}">
+  {{ option.title }}
 </a>
-{% endfor %}
+{{ /for }}
 ```
 
 The available operators for the conditions are:
@@ -141,12 +141,12 @@ You can use the dot notation and even combine queries with tags. For example,
 let's say you want to select all pages with the value `taxonomy.category=sport`
 and with the tag `football`:
 
-```html
-{% for post in search.pages("taxonomy.category=sport football") %}
-<a href="{{ post.data.url }}">
-  {{ post.data.title }}
+```vento
+{{ for post of search.pages("taxonomy.category=sport football") }}
+<a href="{{ post.url }}">
+  {{ post.title }}
 </a>
-{% endfor %}
+{{ /for }}
 ```
 
 ### Negative conditions
@@ -175,30 +175,6 @@ OR conditions can be used with other fields. For example, to search pages with
 titles containing the words "html", "css" or "javascript":
 `search.pages("title*=html|css|javascript")`.
 
-## The `data` filter
-
-In most cases, you don't need the `Page` instance, only the `data` object of the
-pages. So you can use the `data` filter to return only these objects. So instead
-of this:
-
-```html
-{% for post in search.pages("category=lume"]) %}
-<a href="{{ post.data.url }}">
-  {{ post.data.title }}
-</a>
-{% endfor %}
-```
-
-You can do this:
-
-```html
-{% for post in search.pages("category=lume"]) | data %}
-<a href="{{ post.url }}">
-  {{ post.title }}
-</a>
-{% endfor %}
-```
-
 ## Search one page
 
 The function `search.page()` is very similar to `search.pages()` but only
@@ -212,20 +188,20 @@ that we have the functions `search.previousPage()` and `search.nextPage()`. The
 syntax is the same as `search.pages()`, but the first argument is the URL of the
 current page. Let's see an example:
 
-```html
+```vento
 <h2>More articles tagged as "html"</h2>
 
-{% set post = search.previousPage(url, "html") %}
+{{ set post = search.previousPage(url, "html") }}
 
-{% if post %}
-  <a href="{{ post.data.url }}" rel="prev">← {{ post.data.title }}</a>
-{% endif %}
+{{ if post }}
+  <a href="{{ post.url }}" rel="prev">← {{ post.title }}</a>
+{{ /for }}
 
-{% set post = search.nextPage(url, "html") %}
+{{ set post = search.nextPage(url, "html") }}
 
-{% if post %}
-  <a href="{{ post.data.url }}" rel="next">{{ post.data.title }} →</a>
-{% endif %}
+{{ if post }}
+  <a href="{{ post.url }}" rel="next">{{ post.title }} →</a>
+{{ /for }}
 ```
 
 ## Get all values of a key
@@ -234,25 +210,21 @@ The function `values()` returns all values found for a specific key, removing
 duplicates. For example, let's say your pages have the variable `author` and you
 want to list all authors:
 
-```html
+```vento
 <strong>List of authors:</strong>
 
 <ul>
-  {% for author in search.values("author") %}
+  {{ for author of search.values("author") }}
   <li>
     {{ author }}
   </li>
-  {% endfor %}
+  {{ /for }}
 </ul>
 ```
 
 Use the second argument to filter the pages to get the values. For example, to
 get the authors of pages in the category `sport`:
-`search.values("author", "category=sport")`
-
-There's the function `search.tags()` for backward compatibility. It's the
-equivalent of using `search.values("tags")`, to return all tags found in some
-pages.
+`search.values("author", "category=sport")`.
 
 ## Searching data
 
@@ -260,8 +232,8 @@ The function `data` returns the data associated with any file or directory in
 the source directory. This is useful to get the data stored in any `_data` of
 any directory. For example:
 
-```html
-{% set companyData = search.data("about/the-company") %}
+```vento
+{{ set companyData = search.data("about/the-company") }}
 ```
 
 ## Search files
@@ -270,64 +242,14 @@ The function `files()` allows to search any file that will be copied to the
 `dest` folder and returns its URL. It accepts an regular expression or a string
 with a glob expression. For example, to search all CSS files:
 
-```html
+```vento
 This site uses the following CSS files:
 
 <ul>
-  {% for file in search.files("*.css") %}
+  {{ for file of search.files("*.css") }}
   <a href="{{ file }}">
     {{ file }}
   </a>
-  {% endfor %}
+  {{ /for }}
 </ul>
-```
-
-## Configuration
-
-If you want to change the default configuration, use the second argument of
-`lume()` function in your `_config.ts` file.
-
-```ts
-import lume from "lume/mod.ts";
-
-// Search plugin configuration
-const search = {/* your config here */};
-
-// Apply the plugin config
-const site = lume({}, { search });
-```
-
-### returnPageData
-
-Use this option to return only the `page.data` object instead the page instance.
-Probably this is what you want and will make your code shorter.
-
-It's disabled by default due compatibility with the old behavior but in the
-future Lume 2.0 **it will be the default behavior**.
-
-```ts
-import lume from "lume/mod.ts";
-
-const search = { returnPageData: true };
-const site = lume({}, { search });
-```
-
-Once configured, the following code:
-
-```html
-{% for article in search.pages("type=article", "date=desc") %}
-<a href="{{ article.data.url }}">
-  <h1>{{ article.data.title }}</h1>
-</a>
-{% endfor %}
-```
-
-must be changed to:
-
-```html
-{% for article in search.pages("type=article", "date=desc") %}
-<a href="{{ article.url }}">
-  <h1>{{ article.title }}</h1>
-</a>
-{% endfor %}
 ```

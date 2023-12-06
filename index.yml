@@ -24,6 +24,15 @@ usage:
       - Ordes
       - Cedeira
       ```
+      ```vento { title="page.vto" }
+      <h1>{{ title }}</h1>
+
+      <ul>
+        {{ for item of items }}
+        <li>{{ item }}</li>
+        {{ /for }}
+      </ul>
+      ```
       ```html { title="page.njk" }
       <h1>{{ title }}</h1>
 
@@ -31,15 +40,6 @@ usage:
         {% for item in items %}
         <li>{{ item }}</li>
         {% endfor %}
-      </ul>
-      ```
-      ```html { title="page.vto" }
-      <h1>{{ title }}</h1>
-
-      <ul>
-        {{ for item of items }}
-        <li>{{ item }}</li>
-        {{ /for }}
       </ul>
       ```
       ```html { title="page.liquid" }

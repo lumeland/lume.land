@@ -22,23 +22,11 @@ const site = lume(
     /** The default includes path */
     includes: "_includes",
 
-    /**
-     * Set `true` to enable the `dev` mode
-     * @deprecated (will be removed in Lume 2)
-     */
-    dev: false,
-
     /** The site location (used to generate final urls) */
     location: new URL("https://localhost:3000"),
 
     /** Set true to generate pretty urls (`/about-me/`) */
     prettyUrls: true,
-
-    /**
-     * Set `true` to skip logs
-     * @deprecated (will be removed in Lume 2)
-     */
-    quiet: false,
 
     /** The local server options */
     server: {
@@ -130,24 +118,6 @@ site.loadPages(extensions, loader, engine);
 /** Register an assets page loader */
 site.loadAssets(extensions, loader);
 
-/**
- * Register a component loader
- * @deprecated (will be removed in Lume 2)
- */
-site.loadComponents(extensions, loader, engine);
-
-/**
- * Register a custom includes folder path for some extensions
- * @deprecated (will be removed in Lume 2)
- */
-site.includes(extensions, path);
-
-/**
- * Register a template engine for some extensions
- * @deprecated (will be removed in Lume 2)
- */
-site.engine(extensions, engine);
-
 /** Register a preprocessor */
 site.preprocess(extensions, fn);
 
@@ -192,12 +162,6 @@ site.scopedUpdates(...scopes);
 
 /** Define a remote file */
 site.remoteFile(filename, url);
-
-/**
- * Save the content of a file in the cache
- * @deprecated (will be removed in Lume 2)
- */
-site.cacheFile(filename, data);
 ```
 
 ## Lume functions

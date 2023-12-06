@@ -15,7 +15,7 @@ with the `layout` and `title` variables and some markdown below:
 
 ```yml {title=second-page.md}
 ---
-layout: layout.njk
+layout: layout.vto
 title: My second page
 ---
 # Another page
