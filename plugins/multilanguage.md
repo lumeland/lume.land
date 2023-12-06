@@ -319,7 +319,7 @@ showing how to apply multilanguage:
 
 <lume-code>
 
-```js {title=paginate.tmpl.js}
+```js {title=paginate.page.js}
 export const layout = "layouts/my-layout.njk";
 
 export default function* ({ search, paginate }) {

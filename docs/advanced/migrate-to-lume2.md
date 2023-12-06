@@ -29,16 +29,16 @@ site.processAll([".html"], fn);
 site.process([".html"], fn);
 ```
 
-## Change `.tmpl.*` pages
+## Change `.page.*` pages
 
 The subextension `tmpl` for TypeScript/JavaScript pages was changed to `page`
 and it's no longer required for layouts. This structure in Lume 1:
 
 ```txt
-_includes/layout.tmpl.js
+_includes/layout.page.js
 _components/button.js
 _data.js
-index.tmpl.js
+index.page.js
 ```
 
 In Lume 2 becomes to:
@@ -51,14 +51,14 @@ index.page.js
 ```
 
 [This is a simple script](https://gist.github.com/oscarotero/c6404f36530cf989ec1ba65b75d41e9c)
-to rename the files automatically. To keep using `.tmpl` as the subextension,
+to rename the files automatically. To keep using `.page` as the subextension,
 you can edit the option `pageSubExtension` to the `module` and `json` plugins:
 
 ```js
 import lume from "lume/mod.ts";
 
-const modules = { pageSubExtension: ".tmpl" };
-const json = { pageSubExtension: ".tmpl" };
+const modules = { pageSubExtension: ".page" };
+const json = { pageSubExtension: ".page" };
 
 const site = lume({}, { modules, json });
 

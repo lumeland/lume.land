@@ -28,7 +28,7 @@ example:
 
 By default, Lume interprets the following formats as regular page files, so they
 are loaded, processed and exported to `dest` folder: `.md`, `.markdown`, `.njk`,
-`.tmpl.json`, `.tmpl.js`, `.tmpl.ts` and `.yaml`. Use `site.loadPages()` to add
+`.page.json`, `.page.js`, `.page.ts` and `.yaml`. Use `site.loadPages()` to add
 additional extensions:
 
 ```ts

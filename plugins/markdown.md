@@ -71,16 +71,10 @@ import emoji from "npm:markdown-it-emoji";
 // Set the markdown plugins
 const markdown = {
   plugins: [emoji],
-  keepDefaultPlugins: true,
 };
 
 const site = lume({}, { markdown });
 ```
-
-The `keepDefaultPlugins` option keeps the two default plugins installed by
-default by Lume (`markdown-it-deflist` and `markdown-it-attrs`). Set it to
-`false` (or don't set it at all) to replace the defaults with your specified
-plugins.
 
 You can pass options to your markdown-it plugins using an array with
 `[plugin, options]` signature. Example:
@@ -91,8 +85,10 @@ import footnote from "npm:markdown-it-footnote";
 
 // Pass options to markdown-it plugins
 const markdown = {
-  plugins: [[anchor, { level: 2 }], footnote],
-  keepDefaultPlugins: true,
+  plugins: [
+    [anchor, { level: 2 }],
+    footnote,
+  ],
 };
 
 const site = lume({}, { markdown });

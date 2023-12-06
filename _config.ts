@@ -115,6 +115,7 @@ site.script("plugin-docs", [
   "deno doc --json https://deno.land/x/lume/plugins/feed.ts",
 ]);
 site.data("scheme", async (mod: string) => {
+  return [];
   try {
     const url = `https://deno.land/x/lume@v1.19.4/${mod}`;
     const { defaults } = await import(url);

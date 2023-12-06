@@ -66,18 +66,21 @@ want to transform (bundle, minify...) and save them while keeping the same
 extension, instead of renaming them to `html`.
 
 **Note:** you can't use the same extension to generate pages and assets, so a
-way to have support for both is adding a sub-extension (like `tmpl`) for pages.
+way to have support for both is adding a sub-extension (like `.page`) for pages.
 Example:
 
 ```js
-// Use *.html.toml extension for pages
-site.loadPages([".html.toml"], tomlLoader);
+// Use "*.page.toml" to load pages.
+site.loadPages([".toml"], {
+  loader: tomlLoader,
+  pageSubExtension: ".page",
+});
 
-// And any other *.toml files for assets
+// Use "*.toml" to load assets
 site.loadAssets([".toml"], tomlLoader);
 ```
 
-This is the same strategy used for JavaScript/TypeScript modules (`*.tmpl.js`
+This is the same strategy used for JavaScript/TypeScript modules (`*.page.js`
 for pages and `*.js` for JavaScript assets).
 
 The `textLoader` is used by default if you don't pass any loader. For example:
@@ -87,23 +90,20 @@ The `textLoader` is used by default if you don't pass any loader. For example:
 
 Lume supports several template engines to render your pages, like Nunjucks, Pug
 or Eta. It's easy to extend this support for more template engines: you only
-need to create a class extending the
-[`Engine` interface](https://doc.deno.land/https://deno.land/x/lume/core.ts/~/Engine).
-Let's see an example using
-[handlebars](https://github.com/handlebars-lang/handlebars.js):
+need to create a class implementing the `Lume.Engine` interface. Let's see an
+example using [handlebars](https://github.com/handlebars-lang/handlebars.js):
 
 ```ts
 import HandlebarsJS from "https://dev.jspm.io/handlebars@4.7.6";
-import { Data, Engine } from "lume/core.ts";
 
-export default class HandlebarsEngine implements Engine {
-  /** Render the content (sync or async) */
-  render(content: string, data: Data): string {
+export default class HandlebarsEngine implements Lume.Engine {
+  /** Render the content */
+  render(content, data) {
     return this.renderSync(content, data, filename);
   }
 
-  /** Render sync (used only for components) */
-  renderSync(content: string, data: Data): string {
+  /** Render for components */
+  renderComponent(content: string, data) {
     const template = HandlebarsJS.compile(content);
     return template(data);
   }
@@ -123,7 +123,10 @@ function:
 import textLoader from "lume/loaders/text.ts";
 import HandlebarsEngine from "./handlebars-engine.ts";
 
-site.loadPages([".hbs"], textLoader, new HandlebarsEngine(site));
+site.loadPages([".hbs"], {
+  loader: textLoader,
+  engine: new HandlebarsEngine(site),
+});
 ```
 
 Now, all files with the `.hbs` extension will be loaded using the `textLoader`

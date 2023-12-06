@@ -30,10 +30,10 @@ in the output of the site build:
 
 ## Pretty URLs
 
-By default, all HTML pages will generate _pretty URLs_ (URLs without the `.html`
-extension). This means that, instead of `/about-us.html`, the URL is
-`/about-us/`. This is done by saving all files as `index.html` and creating all
-directories as needed.
+By default, all HTML pages (except `/404.html`) will generate _pretty URLs_
+(URLs without the `.html` extension). This means that, instead of
+`/about-us.html`, the URL is `/about-us/`. This is done by saving all files as
+`index.html` and creating all directories as needed.
 
 If you want to disable it, set `prettyUrls` to `false` in
 [config file](../configuration/config-file.md#prettyurls), so you will have
@@ -46,6 +46,21 @@ something like this:
     └── doc1.md     => /documentation/doc1.html
     └── doc2.md     => /documentation/doc2.html
 ```
+
+### 404.html
+
+The page `/404.html` is a special case and pretty URLs are not applied here. The
+reason is most servers and static hostings like
+[Vercel](https://vercel.com/guides/custom-404-page#static-site-generator-(ssg)),
+[Netlify](https://docs.netlify.com/routing/redirects/redirect-options/#custom-404-page-handling),
+[GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+and others are configured by default to serve the `/404.html` page if the
+requested file doesn't exist. It's almost a standard when serving static sites.
+
+Pretty URLs option would convert the 404 page to `/404/index.html`, and this
+conflicts which conflicts with this standard way to serve 404 pages, so this is
+why it's disabled. Note that you can change this behavior by explicitly setting
+the `url` variable in the front matter of the page.
 
 ## Page date
 

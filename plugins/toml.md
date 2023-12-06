@@ -29,7 +29,7 @@ export default site;
 
 ### Create pages
 
-Create a file with the extension `.toml` in your `src` folder. For example:
+Create a file with the extension `.page.toml` in your `src` folder. For example:
 
 ```toml
 title = "Welcome to my page"

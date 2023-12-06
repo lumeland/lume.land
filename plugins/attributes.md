@@ -31,7 +31,7 @@ link:
 <a {{ link | attr | safe }}>Hello</a>
 ```
 
-```js { title=".tmpl.js" }
+```js { title=".page.js" }
 const link = {
   title: "Go to GitHub"
   href: "https://github.com"
@@ -63,7 +63,7 @@ styles:
 <a class="{{ styles | class }}">Hello</a>
 ```
 
-```js { title=".tmpl.js" }
+```js { title=".page.js" }
 const styles = [
   "btn",
   "btn-primary",

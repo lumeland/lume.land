@@ -44,7 +44,7 @@ This is the page content
 }
 ```
 
-```js { title="page.tmpl.js" }
+```js { title="page.page.js" }
 export const title = "This is the title";
 export const url = "custom-url.html";
 
@@ -58,7 +58,7 @@ In the examples above, all pages contain two variables: `title` and `url`.
 In the formats with front matter (like Markdown and Nunjucks), the content is
 defined below the front matter. Formats that don't use front matter export the
 content as the `content` variable or, optionally, as a default export (like in
-`page.tmpl.js`).
+`page.page.js`).
 
 ## Standard variables
 

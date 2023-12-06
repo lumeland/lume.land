@@ -62,7 +62,7 @@ usage:
         </>;
       }
       ```
-      ```js { title="page.tmpl.js" }
+      ```js { title="page.page.js" }
       export default function ({ title, items }) {
         return `
         <h1>${ title }</h1>
@@ -73,7 +73,7 @@ usage:
         `;
       }
       ```
-      ```ts { title="page.tmpl.ts" }
+      ```ts { title="page.page.ts" }
       interface Data {
         title: string;
         items: string[];

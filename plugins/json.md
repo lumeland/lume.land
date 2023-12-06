@@ -38,7 +38,7 @@ export default site;
 
 ### Create pages
 
-Create a file with the extension `.tmpl.json` or `.tmpl.jsonc` in your `src`
+Create a file with the extension `.page.json` or `.page.jsonc` in your `src`
 folder. For example:
 
 ```json

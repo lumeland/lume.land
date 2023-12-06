@@ -108,6 +108,13 @@ const site = lume({
 The `server` key contains the configuration for the local server. It has the
 following options:
 
+### root
+
+Set the root folder for the server. By default it's the same directory as
+`dest`. The only use case in which you may want to change this is if your `dest`
+folder is, for example `_site/blog` and you want to expose the `blog` folder
+when serving the site because all urls start with `/blog/`.
+
 ### port
 
 By default, the local server uses port `3000`. Use this option to set a

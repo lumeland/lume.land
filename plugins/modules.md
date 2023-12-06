@@ -18,26 +18,6 @@ create pages, layouts, and data files.
 
 This plugin is installed by default. 🎉
 
-## Configuration
-
-If you want to change the default configuration, use the second argument of
-`lume()` function in your `_config.ts` file.
-
-For example, to use a different extension than `.tmpl.js` and `.tmpl.ts` to
-generate pages, edit the `pageExtensions` property:
-
-```ts
-import lume from "lume/mod.ts";
-
-// Modules plugin configuration
-const modules = {
-  pagesExtensions: [".page.js", ".page.ts"],
-};
-
-// Apply the plugin config
-const site = lume({}, { modules });
-```
-
 ## Creating _data files
 
 Create `_data.js` or `_data/*.js` (or the TypeScript equivalent `_data.ts` or
@@ -59,7 +39,7 @@ export const users = [
 ## Creating pages
 
 To create pages using JavaScript or TypeScript, create a file with the extension
-`.tmpl.js` or `.tmpl.ts` (the `.tmpl` subextension is required to differentiate
+`.page.js` or `.page.ts` (the `.page` subextension is required to differentiate
 JavaScript/TypeScript files that generate HTML pages from other JavaScript files
 to be executed in the browser). To export the variables, use named exports and
 to export the main content you can use the default export.
@@ -89,8 +69,8 @@ JavaScript/TypeScript allows generating multiple pages from the same file. See
 
 ## Creating layouts
 
-It's possible to create layouts using JavaScript/TypeScript. Just create
-`.tmpl.js` or `.tmpl.ts` files inside the `_includes` directory.
+It's possible to create layouts using JavaScript/TypeScript. Just create `.js`
+or `.ts` files inside the `_includes` directory.
 
 ```js
 export default ({ title, content }, filters) =>

@@ -45,7 +45,7 @@ in the layouts:
 
 <lume-code>
 
-```js {title="pages.tmpl.js"}
+```js {title="pages.page.js"}
 export default function* () {
   yield {
     url: "/page-1/",
@@ -88,7 +88,7 @@ define it once instead of duplicating it in every yielded page:
 
 <lume-code>
 
-```js {title="pages.tmpl.js"}
+```js {title="pages.page.js"}
 export const layout = "layouts/article.njk";
 
 export default function* () {
