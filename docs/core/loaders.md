@@ -11,12 +11,8 @@ or plain text.
 ## Creating a loader
 
 Creating a custom loader is really easy: you only have to create a function that
-reads the content of a file and returns a [Data](https://deno.land/x/lume/core.ts?s=Data)
-object.
-
-The `Data` object represents the resulting page's
-[data](https://lume.land/docs/creating-pages/page-data/), so in addition to its
-builtin properties like `content`, it accepts any arbitrary data.
+reads the content of a file and returns a
+[data](https://lume.land/docs/creating-pages/page-data/) object.
 
 Let's say you want to add support for the `toml` format, using the
 [toml](https://deno.land/std/toml/mod.ts) Deno std module:
@@ -52,30 +48,12 @@ site.loadPages([".toml"], tomlLoader);
 
 Now, any `*.toml` file in your site will be loaded and used to render a page.
 For example, the file `/about-us.toml` would be loaded and saved as
-`/about-us/index.html`.
+`/about-us/index.html`. You can also [pass a (custom) template engine](#template-engines)
+that will be used for rendering it.
 
 As `loadPages()` is intended to generate `.html` pages, the given extension
 (here `.toml`) is removed and replaced by `.html` (or `/index.html` for
 pretty urls).
-
-Keep in mind that the `content` field of the returned `Data` object is used for
-the resulting page's content, as shown in the following example.
-
-Considering this TOML:
-```toml
-foo = 'bar'
-```
-The following page loader will result in a HTML file with the content
-`<h1>bar</h1>`:
-```js
-site.loadPages([".toml"], async path => {
-  const content = await Deno.readTextFile(path);
-  const tomlData = parse(content);
-  return {
-    content: `<h1>${tomlData.foo}</h1>`
-  };
-});
-```
 
 You may want to load TOML files, process them and export as `.toml` files, not
 `.html` files. To do that, you can use `loadAssets()`:
