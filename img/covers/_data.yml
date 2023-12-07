@@ -1,4 +1,3 @@
-imagick:
-  - resize: [480, 360]
-    cropCenter: [480, 270]
+transformImages:
+  - resize: [480, 270]
     format: webp

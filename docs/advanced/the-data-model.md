@@ -42,9 +42,9 @@ Now the title is added to the page data:
 ```
 
 This model is the same for any file that Lume can load. Even for images: let's
-say you have the [imagick](../../plugins/imagick.md) plugin to load and
-transform the data. The file content is loaded and stored in the `content`
-variable:
+say you have the [transform_images](../../plugins/transform_images.md) plugin to
+load and transform the data. The file content is loaded and stored in the
+`content` variable:
 
 ```js
 {

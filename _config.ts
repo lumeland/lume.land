@@ -3,7 +3,8 @@ import codeHighlight from "lume/plugins/code_highlight.ts";
 import inline from "lume/plugins/inline.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import esbuild from "lume/plugins/esbuild.ts";
-import imagick from "lume/plugins/imagick.ts";
+import transformImages from "lume/plugins/transform_images.ts";
+import favicon from "lume/plugins/favicon.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import postcss from "lume/plugins/postcss.ts";
 import sitemap from "lume/plugins/sitemap.ts";
@@ -42,19 +43,14 @@ site
     },
   }))
   .use(postcss())
+  .use(favicon())
   .use(inline())
   .use(metas())
   .use(esbuild({
     extensions: [".js"],
   }))
   .use(resolveUrls())
-  .use(imagick({
-    functions: {
-      cropCenter(image, width: number, height: number) {
-        image.crop(width, height, 5);
-      },
-    },
-  }))
+  .use(transformImages())
   .use(sitemap())
   .scopedUpdates(
     (path) => path.endsWith(".png") || path.endsWith(".jpg"),

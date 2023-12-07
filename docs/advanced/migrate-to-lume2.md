@@ -1,5 +1,4 @@
 ---
-url: false
 title: Migrate to Lume 2
 description: Guide to migrate your project from Lume 1 to Lume 2
 ---
@@ -135,7 +134,50 @@ LUME_DRAFTS=true deno task lume
 LUME_LOG=critical deno task lume
 ```
 
-## Nunjucks
+## Imagick plugin
+
+The `imagick` plugin was replaced with `transform_images`:
+
+```js
+// Lume 1
+import imagick from "lume/plugins/imagick.ts";
+
+site.use(imagick());
+
+// Lume 2
+import transformImages from "lume/plugins/transform_images.ts";
+
+site.use(transformImages());
+```
+
+Both plugins works similarly but the data key used is different:
+
+```yml
+# Lume 1
+imagick:
+  - format: webp
+    resize: [100, 200]
+
+# Lume 2
+transformImages:
+  - format: webp
+    resize: [100, 200]
+```
+
+## Picture plugin
+
+The picture plugin uses the new `transform_images` plugin under the hood, so the
+HTML attribute name has changed to `transform-images`:
+
+```html
+<!-- Lume 1 -->
+<img src="/flowers.jpg" imagick="avif jpg 600">
+
+<!-- Lume 2 -->
+<img src="/flowers.jpg" transform-images="avif jpg 600">
+```
+
+## Nunjucks plugin
 
 If you're using Nunjucks templates, import the plugin in your _config.ts file:
 
@@ -149,7 +191,7 @@ site.use(nunjucks());
 export default site;
 ```
 
-## Vento
+## Vento plugin
 
 This plugin is enabled by default. If you're using this template engine, remove
 the import in your _config file.
@@ -183,7 +225,7 @@ const tags = search.values("tags");
 
 The filter `data` was removed:
 
-```njk
+```html
 <!-- Lume 1 -->
 {% for article in search.pages("type=article") | data %}
 
@@ -357,7 +399,7 @@ export default function (data: PageData, helpers: PageHelpers) {
 In Lume 2:
 
 ```ts
-export default function (data: Lume.PageData, helpers: Lume.PageHelpers) {
+export default function (data: Lume.Data, helpers: Lume.Helpers) {
   return `<h1>${data.title}</h1>`;
 }
 ```

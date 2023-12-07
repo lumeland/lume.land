@@ -51,14 +51,14 @@ radar).
 
 Image
 : There's the
-[imagick plugin](../../plugins/imagick.md) for that.
+[Transform_images plugin](../../plugins/transform_images.md) for that.
 
 Cache assets
 : There isn't a plugin for that.
 
 RSS
 : There's the
-[FEED plugin](../../plugins/feed.md) for that.
+[Feed plugin](../../plugins/feed.md) for that.
 
 Syntax Highlighting
 : There's the

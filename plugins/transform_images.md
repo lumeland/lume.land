@@ -1,20 +1,19 @@
 ---
-title: Imagick
-description: Image manipulation using Imagick
-mod: plugins/imagick.ts
+title: Transform Images
+description: Image manipulation plugin using Sharp
+mod: plugins/transform_images.ts
 tags:
   - images
 ---
 
 ## Description
 
-Use the `imagick` plugin to process image files using the
-[magick-wasm](https://github.com/dlemstra/magick-wasm) library, a powerful image
-manipulation library with support for over 100 major file formats. With this
-plugin, you can resize, rotate, and convert any image to other formats.
+Use the `transform_images` plugin to process image files using the
+[sharp](https://sharp.pixelplumbing.com/) library. With this plugin, you can
+resize, rotate, and convert any image to other formats.
 
 The plugin reads the data assigned to the image files (specifically the
-`imagick` key) to know how to transform the image.
+`transformImages` key) to know how to transform the image.
 
 ## Installation
 
@@ -22,11 +21,11 @@ Import this plugin in your `_config.ts` file to use it:
 
 ```js
 import lume from "lume/mod.ts";
-import imagick from "lume/plugins/imagick.ts";
+import transformImages from "lume/plugins/transform_images.ts";
 
 const site = lume();
 
-site.use(imagick(/* Options */));
+site.use(transformImages(/* Options */));
 
 export default site;
 ```
@@ -39,7 +38,7 @@ file inside this folder with the following code:
 <lume-code>
 
 ```yml { title="/img/_data.yml" }
-imagick:
+transformImages:
   resize: [200, 200]
   format: webp
 ```
@@ -57,7 +56,7 @@ configuration to different formats:
 <lume-code>
 
 ```yml { title="/img/_data.yml" }
-imagick:
+transformImages:
   resize: [200, 200]
   format: [webp, jpg]
 ```
@@ -73,7 +72,7 @@ design, for example), use an array of transforms. Make sure to include the
 <lume-code>
 
 ```yml { title="/img/_data.yml" }
-imagick:
+transformImages:
   - resize: [200, 200]
     suffix: -small
     format: [webp, jpg]
@@ -102,7 +101,7 @@ In the following example, the images containing `-cover` will be resized to
 <lume-code>
 
 ```yml { title="/img/_data.yml" }
-imagick:
+transformImages:
   - resize: [1000, 1000]
     matches: -cover
 
@@ -120,28 +119,25 @@ or a valid string that can be used to create a RegExp instance.
 
 By default, the following functions are available:
 
-- **resize:** Accepts two numbers for `width` and `height` or one number that
-  will be used for `width` and `height`.
-- **crop:** Accepts two numbers for `width` and `height` or one number that will
-  be used for `width` and `height`.
-- **blur:** Accepts two numbers for `radius` and `sigma`.
-- **sharpen:** Accepts two numbers for `radius` and `sigma`.
-- **rotate:** Accepts one number for `degrees`.
-- **autoOrient:** No argument is needed.
+- **resize:** Accepts two numbers for `width` and `height` and optionally an
+  object with the resize options. See
+  [sharp resize api](https://sharp.pixelplumbing.com/api-resize) for more info.
+- **blur:** Accepts a number for `sigma`.
+- **rotate:** Accepts a number for `degrees`.
 
 You can add more custom functions in the `_config` file. For example:
 
 ```js
 import lume from "lume/mod.ts";
-import imagick from "lume/plugins/imagick.ts";
+import transformImages from "lume/plugins/transform_images.ts";
 
 const site = lume();
 
-site.use(imagick({
+site.use(transformImages({
   functions: {
     resizeBlur(img, size) {
       img.resize(size, size);
-      img.blur(10, 5);
+      img.blur(10);
     },
   },
 }));
@@ -152,7 +148,7 @@ export default site;
 Now you can use this function in your _data files:
 
 ```yml { title="/img/_data.yml" }
-imagick:
+transformImages:
   resizeBlur: 20
   format: webp
 ```
@@ -164,11 +160,11 @@ build speed. If you want to disable the cache, set its option to `false`.
 
 ```js
 import lume from "lume/mod.ts";
-import imagick from "lume/plugins/imagick.ts";
+import transformImages from "lume/plugins/transform_images.ts";
 
 const site = lume();
 
-site.use(imagick({
+site.use(transformImages({
   cache: false, // Disable cache
 }));
 
@@ -176,4 +172,4 @@ export default site;
 ```
 
 This option allows customizing the cache folder. For example:
-`cache: "_imagick-cache"`.
+`cache: "_image-cache"`.
