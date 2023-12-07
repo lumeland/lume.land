@@ -46,7 +46,12 @@ export default site;
     "serve": "deno task lume -s"
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.15.2/"
+    "lume/": "https://deno.land/x/lume@v2.0.0/"
+  },
+  "compilerOptions": {
+    "types": [
+      "lume/types.ts"
+    ]
   }
 }
 ```
@@ -103,7 +108,6 @@ to define this variable:
 
 ```json
 {
-  "importMap": "import_map.json",
   "tasks": {
     "lume": "DENO_DIR=_vendor echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
     "build": "deno task lume",
