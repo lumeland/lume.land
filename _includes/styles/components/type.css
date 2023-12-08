@@ -60,6 +60,7 @@
       vertical-align: top;
       font-size: inherit;
       max-width: 100%;
+      max-height: 200px;
     }
 
     & code {
