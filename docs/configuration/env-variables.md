@@ -10,27 +10,27 @@ Lume has the following environment variables that you can use with
 <!-- deno-fmt-ignore-start -->
 `LUME_DRAFTS`
 : All pages with the variable `draft: true` are ignored by Lume.
-With this variable you can configure Lume to export the draft variables too.
-Useful for development environments.
+  With this variable you can configure Lume to export the draft variables too.
+  Useful for development environments.
 
-```
-LUME_DRAFTS=true deno task lume
-```
+  ```
+  LUME_DRAFTS=true deno task lume
+  ```
 
 `LUME_LOGS`
 : Lume uses the following log levels: `DEBUG`, `INFO`, `WARNING`,
-`ERROR` and `CRITICAL`. By default is `INFO`, you can change it with this
-environment variable to have more or less details of the build process. For
-example, to only show critical errors, hiding everything else:
+  `ERROR` and `CRITICAL`. By default is `INFO`, you can change it with this
+  environment variable to have more or less details of the build process. For
+  example, to only show critical errors, hiding everything else:
 
-```
-LUME_LOGS=critical deno task lume
-```
+  ```
+  LUME_LOGS=critical deno task lume
+  ```
 
 `LUME_NOCACHE`
 : Lume has a cache for [remote files](../core/remote-files.md),
-so they are downloaded only once. Use this environment variable to disable it.
+  so they are downloaded only once. Use this environment variable to disable it.
 
-```
-LUME_NOCACHE=true deno task lume
-```
+  ```
+  LUME_NOCACHE=true deno task lume
+  ```
