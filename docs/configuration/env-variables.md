@@ -16,14 +16,14 @@ Useful for development environments.
 LUME_DRAFTS=true deno task lume
 ```
 
-`LUME_LOG`
+`LUME_LOGS`
 : Lume uses the following log levels: `DEBUG`, `INFO`, `WARNING`,
 `ERROR` and `CRITICAL`. By default is `INFO`, you can change it with this
 environment variable to have more or less details of the build process. For
 example, to only show critical errors, hiding everything else:
 
 ```
-LUME_LOG=critical deno task lume
+LUME_LOGS=critical deno task lume
 ```
 
 `LUME_NOCACHE`

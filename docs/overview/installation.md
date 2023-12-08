@@ -89,7 +89,7 @@ This creates the `lume` command:
   example, `lume -s` will run `deno task lume -s`.
 - The CLI command has also some useful shorcuts like `--drafts` (to create the
   `LUME_DRAFTS=true` environment variable) and `--debug`, `--info`, `--warning`,
-  `--error` and `--critical` to change the `LUME_LOG` environment variable.
+  `--error` and `--critical` to change the `LUME_LOGS` environment variable.
 
 ## Update Lume
 

@@ -131,7 +131,7 @@ deno task lume --quiet
 
 # Lume 2
 LUME_DRAFTS=true deno task lume
-LUME_LOG=critical deno task lume
+LUME_LOGS=critical deno task lume
 ```
 
 ## Imagick plugin
