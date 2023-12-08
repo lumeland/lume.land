@@ -48,12 +48,13 @@ site.loadPages([".toml"], tomlLoader);
 
 Now, any `*.toml` file in your site will be loaded and used to render a page.
 For example, the file `/about-us.toml` would be loaded and saved as
-`/about-us/index.html`. You can also [pass a (custom) template engine](#template-engines)
-that will be used for rendering it.
+`/about-us/index.html`. You can also
+[pass a (custom) template engine](#template-engines) that will be used for
+rendering it.
 
 As `loadPages()` is intended to generate `.html` pages, the given extension
-(here `.toml`) is removed and replaced by `.html` (or `/index.html` for
-pretty urls).
+(here `.toml`) is removed and replaced by `.html` (or `/index.html` for pretty
+urls).
 
 You may want to load TOML files, process them and export as `.toml` files, not
 `.html` files. To do that, you can use `loadAssets()`:

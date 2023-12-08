@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@94d820f51527e126a87910c400aa52fd991ed470/"
+    "lume/": "https://deno.land/x/lume@v1.19.4/"
   },
   "lock": false,
   "compilerOptions": {
