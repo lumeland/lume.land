@@ -25,7 +25,7 @@ const markdown = {
 
 const site = lume(
   {
-    location: new URL("https://lume.land"),
+    location: new URL("https://v1.lume.land"),
   },
   { markdown, search: { returnPageData: true } },
 );
