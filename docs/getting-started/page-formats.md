@@ -1,6 +1,6 @@
 ---
 title: Other page formats
-description: Creating pages with Nunjucks, JavaScript and other formats
+description: Creating pages with Vento, JavaScript and other formats
 order: 6
 ---
 
@@ -9,18 +9,18 @@ convenient way for text-based sites like blogs or documentation. But you may
 want to create a complex page with small texts, images, videos, animations, etc.
 Every page has its own format.
 
-## Create pages with Nunjucks
+## Create pages with Vento
 
-Nunjucks, the format we have used to create layouts in the previous examples,
-can also be used to create pages directly. You only have to create a file with
-the `.njk` extension. For example:
+Vento, the format we have used to create layouts in the previous examples, can
+also be used to create pages directly. You only have to create a file with the
+`.vto` extension. For example:
 
 <lume-code>
 
-```html {title="nunjucks-page.njk"}
+```vento {title="nunjucks-page.vto"}
 ---
 title: Welcome to my page
-layout: layout.njk
+layout: layout.vto
 links:
   - text: My Twitter
     url: https://twitter.com/misteroom
@@ -34,13 +34,13 @@ links:
   </header>
 
   <ul>
-    {% for link in links %}
+    {{ for link of links }}
     <li>
       <a href="{{ link.url }}">
         {{ link.text }}
       </a>
     </li>
-    {% endfor %}
+    {{ /for }}
   </ul>
 </article>
 ```
@@ -56,18 +56,17 @@ variables `title` and `links`).
 ## Create pages in JavaScript
 
 JavaScript can be useful for complex pages requiring some logic before
-rendering. You have to create a file with the extension `.tmpl.js`. The `.tmpl`
+rendering. You have to create a file with the extension `.page.js`. The `.page`
 sub-extension is required to distinguish the JavaScript files to generate static
-pages from other JavaScript files destined to the executed in the browser
-("tmpl" is for "template").
+pages from other JavaScript files destined to the executed in the browser.
 
 The previous Nunjucks example in JavaScript is:
 
 <lume-code>
 
-```js { title="complex-page.tmpl.js" }
+```js { title="complex-page.page.js" }
 export const title = "Welcome to my page";
-export const layout = "layout.njk";
+export const layout = "layout.vto";
 export const links = [
   {
     text: "My Twitter",
@@ -115,3 +114,8 @@ default (like [Nunjucks](/plugins/nunjucks.md), [YAML](/plugins/yaml.md),
 [Modules](/plugins/modules.md) etc) and others need to be installed in your
 `_config.ts` file (like [Eta](/plugins/eta.md), [JSX](/plugins/jsx.md),
 [Liquid](/plugins/liquid.md) or [Pug](/plugins/pug.md)).
+
+## Data model
+
+If you want to better understand how Lume load the pages, go to
+[`Data` model](../advanced/the-data-model.md) page.

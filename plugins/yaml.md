@@ -45,7 +45,7 @@ This format can also be used to create pages; just add a file with the `.yml` or
 
 ```yaml
 title: Welcome to my page
-layout: layouts/main.njk
+layout: layouts/main.vto
 intro: |
   This is my first post using lume
   I hope you like it!
@@ -62,7 +62,7 @@ sections:
 
 You will need a layout to render this page and generate the HTML:
 
-```html
+```vento
 <html>
   <head>
     <title>{{ title }}</title>
@@ -73,13 +73,13 @@ You will need a layout to render this page and generate the HTML:
       <p>{{ intro }}</p>
     </header>
 
-    {% for section in sections %}
+    {{ for section of sections }}
     <section>
       <h2>{{ section.title }}</h2>
       <img src="{{ section.image }}">
       <p>{{ section.text }}</p>
     </section>
-    {% endfor %}
+    {{ /for }}
   </body>
 </html>
 ```

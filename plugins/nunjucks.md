@@ -2,7 +2,7 @@
 title: Nunjucks
 description: Use the Nunjucks template engine to create pages and layouts.
 mod: plugins/nunjucks.ts
-enabled: true
+enabled: false
 tags:
   - template_engine
 ---
@@ -15,32 +15,18 @@ to create pages and layouts.
 
 ## Installation
 
-This plugin is installed by default. 🎉
+Import this plugin in your `_config.ts` file to use it:
 
-## Configuration
+```js
+import lume from "lume/mod.ts";
+import nunjucks from "lume/plugins/nunjucks.ts";
 
-If you want to change the default configuration, use the second argument of
-`lume()` function in your `_config.ts` file.
+const site = lume();
 
-For example, let's
-[configure nunjucks](https://mozilla.github.io/nunjucks/api.html#configure) and
-change the default folder of the `_includes`:
+site.use(nunjucks(/* Options */));
 
-```ts
-// Nunjucks plugin configuration
-const nunjucks = {
-  includes: "_layouts",
-  options: {
-    throwOnUndefined: true,
-  },
-};
-
-// Apply the plugin config
-const site = lume({}, { nunjucks });
+export default site;
 ```
-
-Now, Lume will search the `.njk` templates in the directory `_layouts` instead
-of `_includes`.
 
 ## Creating layouts
 
@@ -97,3 +83,26 @@ This plugin exposes the following hooks:
 You can use the
 [Nunjucks extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks)
 for syntax highlight and some useful snippets.
+
+## Async mode
+
+Lume file loader is asynchronous, meaning that files imported by Nunjucks must
+use the async API (`asyncEach` instead of `for` etc). For example, the following
+code won't work:
+
+```html
+{% if includeHeader %}
+  {% include "header.njk" %}
+{% endif %}
+```
+
+You have to use the async mode:
+
+```html
+{% ifAsync includeHeader %}
+  {% include "header.njk" %}
+{% endif %}
+```
+
+More info about
+[Asynchronous support for Nunjucks](https://mozilla.github.io/nunjucks/api.html#asynchronous-support)

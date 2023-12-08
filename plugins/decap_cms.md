@@ -1,15 +1,15 @@
 ---
-title: Netlify CMS
-description: Run Netlify CMS to update the site content
-mod: plugins/netlify_cms.ts
+title: Decap CMS
+description: Run Decap CMS to update the site content
+mod: plugins/decap_cms.ts
 tags:
   - utils
 ---
 
 ## Description
 
-This plugin generates the code to run [Netlify CMS](https://www.netlifycms.org/)
-and update the site content in a faster and easier way in both local and remote
+This plugin generates the code to run [Decap CMS](https://decapcms.org/) and
+update the site content in a faster and easier way in both local and remote
 environments. By default the CMS is accesible at the `/admin/` path, but you can
 change it in the `path` option.
 
@@ -19,24 +19,23 @@ Import this plugin in your `_config.ts` file to use it:
 
 ```js
 import lume from "lume/mod.ts";
-import netlifyCMS from "lume/plugins/netlify_cms.ts";
+import decapCMS from "lume/plugins/decap_cms.ts";
 
 const site = lume();
 
-site.use(netlifyCMS(/* Options */));
+site.use(decapCMS(/* Options */));
 
 export default site;
 ```
 
 ## Usage
 
-Create the data file `/_data/netlify_cms.yml` in the root of your project. See
-the
-[configuration options in the Netlify CMS site](https://www.netlifycms.org/docs/configuration-options/).
+Create the data file `/_data/decap_cms.yml` in the root of your project. See the
+[configuration options in the Decap CMS site](https://decapcms.org/docs/configuration-options/).
 
 <lume-code>
 
-```yml {title="/_data/netlify_cms.yml"}
+```yml {title="/_data/decap_cms.yml"}
 backend:
   name: git-gateway
   branch: master
@@ -61,7 +60,7 @@ collections:
 
 </lume-code>
 
-This creates the `netlify_cms` key with the configuration of the CMS. Note that
+This creates the `decap_cms` key with the configuration of the CMS. Note that
 it's not required to be a yaml file; you can use any data format (JSON,
 JavaScript module, TypeScript module, etc). This plugin will generate the pages
 `/admin/index.html` and `/admin/config.yml` to run the CMS.
@@ -74,7 +73,7 @@ default. This means that after running `lume --serve`, you can go to
 of your site.
 
 Keep in mind that local mode runs
-`deno run --allow-read --allow-net=0.0.0.0 --allow-write --allow-env npm:netlify-cms-proxy-server`
+`deno run --allow-read --allow-net=0.0.0.0 --allow-write --allow-env npm:decap-server`
 to start the local proxy server for the CMS. You can change this command with
 `proxyCommand` option or disable the local mode, by setting `local: false` in
 the plugin configuration.

@@ -8,8 +8,10 @@ A processor is a function to transform the content of pages just **after the
 page is rendered**. Let's see an example of a processor to minify HTML pages:
 
 ```js
-function minifyHTML(page) {
-  page.content = minify(page.content);
+function minifyHTML(pages) {
+  for (const page of pages) {
+    page.content = minify(page.content);
+  }
 }
 ```
 
@@ -24,43 +26,50 @@ Now, all HTML pages are minified.
 
 ## The page object
 
-As you can see in the previous example, the function receives an object with the
-page (or asset). This object has not only the page content but much more data:
+As you can see in the previous example, the function receives an array of
+objects with the pages. The page object has not only the page content but much
+more data:
 
 ```js
-function process(page) {
-  page.content; // The content of the page
-  page.document; // The parsed HTML code, to use the DOM API
-  page.src; // The info about the source file of this page
-  page.data; // All data available for this page (front matter merged with _data)
+function process(pages) {
+  for (const page of pages) {
+    page.content; // The content of the page
+    page.document; // The parsed HTML code, to use the DOM API
+    page.src; // The info about the source file of this page
+    page.data; // All data available for this page (front matter merged with _data)
+  }
 }
 ```
 
-For example, let's say you only want to minify the pages where the value
-`minify` is `true`:
+For example, let's say you only want to minify the pages with the value `minify`
+is `true`:
 
 ```js
-site.process([".html"], (page) => {
-  if (page.data.minify) {
-    page.content = minify(page.content);
+site.process([".html"], (pages) => {
+  for (const page of pages) {
+    if (page.data.minify) {
+      page.content = minify(page.content);
+    }
   }
 });
 ```
 
 ## Using the DOM API
 
-You can use the **DOM API** (provided by
+You can use the **DOM API** (powered by
 [deno-dom](https://github.com/b-fuze/deno-dom)) with methods like
 `querySelector`, `setAttribute`, etc to modify HTML code. For example, let's
 create a processor to add automatically the `alt` attribute to all images:
 
 ```js
-site.process([".html"], (page) => {
-  page.document?.querySelectorAll("img").forEach((img) => {
-    if (!img.hasAttribute("alt")) {
-      img.setAttribute("alt", "This is a random alt");
+site.process([".html"], (pages) => {
+  for (const page of pages) {
+    for (const img of page.document.querySelectorAll("img")) {
+      if (!img.hasAttribute("alt")) {
+        img.setAttribute("alt", "This is a random alt");
+      }
     }
-  });
+  }
 });
 ```
 
@@ -70,12 +79,14 @@ For non-HTML pages (like CSS or JavaScript files), you can use the processors to
 compile CSS, minify JavaScript code or minify images.
 
 ```js
-site.process([".js"], function (page) {
-  page.content = myBundler(page.content);
+site.process([".js"], function (pages) {
+  for (const page of pages) {
+    page.content = myBundler(page.content);
 
-  // Append .min to the filename
-  // so it will be saved as example.min.js
-  page.data.url = page.data.url.replace(/\.js$/, ".min.js");
+    // Append .min to the filename
+    // so it will be saved as example.min.js
+    page.data.url = page.data.url.replace(/\.js$/, ".min.js");
+  }
 });
 ```
 
@@ -93,46 +104,56 @@ executed before rendering.
 Let's create a preprocessor to include a variable with the source filename:
 
 ```js
-site.preprocess(
-  [".html"],
-  (page) => page.data.filename = page.src.path + page.src.ext,
-);
-```
-
-## Create or remove pages dynamically
-
-Some processors can generate additional pages (or remove them). The second
-argument of the (pre)processors contains an array with all pages that are being
-processed. You can modify this array to add pages dynamically. For example:
-
-```js
-import { Page } from "lume/core/filesystem.ts";
-
-site.process([".css"], (page, pages) => {
-  // Minify the css content
-  const { code, map } = myCssMinifier(page.content);
-
-  // Update the page content
-  page.content = code;
-
-  // Create a new page with the source map
-  const url = page.data.url + ".map";
-  pages.push(Page.create(url, map));
+site.preprocess([".html"], (pages) => {
+  for (const page of pages) {
+    page.data.filename = page.src.path + page.src.ext,
+  }
 });
 ```
 
-### Remove pages dynamically
+## Create pages dynamically
 
-If a processor returns `false`, the page is removed from the build process. This
-allows to creating a processor to filter only some pages:
+Some processors can generate additional pages (or remove them). The second
+argument of the (pre)processors contains an array with all pages that are being
+processed. You can modify this array to add or remove pages dynamically. For
+example:
+
+```js
+import { Page } from "lume/core/file.ts";
+
+site.process([".css"], (pages, allPages) => {
+  for (const page of pages) {
+    // Minify the css content
+    const { code, map } = myCssMinifier(page.content);
+
+    // Update the page content
+    page.content = code;
+
+    // Create a new page with the source map
+    const pageMap = Page.create({
+      url: page.data.url + ".map",
+      content: map,
+    });
+
+    // Add the page to the site
+    allPages.push(pageMap);
+  }
+});
+```
+
+## Remove pages dynamically
+
+To remove a page dynamically you have to remove it from the array of pages in
+the second argument:
 
 ```ts
 // Remove all html pages with the language = "en"
-site.process([".html"], (page) => {
-  const language = page.data.lang;
-
-  if (language === "en") {
-    return false;
+site.process([".html"], (pages, allPages) => {
+  for (const page of pages) {
+    if (page.data.lang === "en") {
+      // Search the page in allPages array and remove it
+      allPages.splice(allPages.indexOf(page), 1);
+    }
   }
 });
 ```
@@ -141,7 +162,7 @@ site.process([".html"], (page) => {
 
 Both processors and preprocessors are tied to file extensions (`.html`, `.js`
 etc). To decide if a page must use a registered processor or preprocessor, Lume
-searches the extension of the input file (like `.md` or `.njk`) or the output
+searches the extension of the input file (like `.md` or `.vto`) or the output
 file (like `.html` or `.css`).
 
 Another interesting thing is they are executed in the same order as they are
@@ -156,19 +177,4 @@ first argument:
 
 ```js
 site.process("*", processAllPages);
-```
-
-## Process all pages
-
-`site.process` and `site.preprocess` functions works at page level. They only
-process a page each time. If you need to run the processor only once to all
-pages, there's the `site.processAll` and `site.preprocessAll`. They are very
-similar but they are executed only once and receives an array of all pages in
-the first argument:
-
-```js
-site.processAll([".html"], (pages) => {
-  pages.forEach((page) => my_processor(page));
-  console.log(`Processed ${pages.length} HTML pages!`);
-});
 ```

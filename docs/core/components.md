@@ -32,9 +32,9 @@ create `_components` directories in different sub-directories to make them
 available only to specific pages. To create a new component, just create a file
 in this directory with the name of your component and the extension of the
 template engine you want to use. For example, a component in Nunjucks that
-renders a button could be stored in `_components/button.njk`:
+renders a button could be stored in `_components/button.vto`:
 
-```html
+```vento
 <button class="button">{{ text }}</button>
 ```
 
@@ -43,9 +43,9 @@ configure a different variable name in `_config.ts`). It's a global variable
 that contains all components. In our example, we can render the button component
 with the `comp.button()` function:
 
-```html
+```vento
 <h1>Welcome to my site.</h1>
-{{ comp.button({ text: "Login" }) | safe }}
+{{ comp.button({ text: "Login" }) }}
 ```
 
 Note that the component accepts an object with the properties. This component is
@@ -58,6 +58,13 @@ export default function ({ comp }) {
   ${comp.button({ text: "Login" })}
 `;
 }
+```
+
+Nunjucks templates:
+
+```html
+<h1>Welcome to my site.</h1>
+{{ comp.button({ text: "Login" }) | safe }}
 ```
 
 Eta templates:
@@ -83,14 +90,26 @@ export default function ({ comp }) {
 
 ### Nested components in Nunjucks
 
-In Nunjucks you can nest components in this way:
+In Vento you can nest components in this way:
+
+```vento
+{{ comp Container }}
+  Content of the Container component
+
+  {{ comp Button }}
+    This is a button inside the Container component
+  {{ /comp }}
+{{ /comp }}
+```
+
+In Nunjucks it's very similar:
 
 ```html
 {% comp "Container" %}
   Content of the Container component
 
   {% comp "Button" %}
-  This is a button inside the Container component
+    This is a button inside the Container component
   {% endcomp %}
 {% endcomp %}
 ```
@@ -99,12 +118,12 @@ The content of the components are passed in the `content` key:
 
 <lume-code>
 
-```html {title="_components/container.njk"}
-<section class="container">{{ content | safe }}</section>
+```vento {title="_components/container.vto"}
+<section class="container">{{ content }}</section>
 ```
 
-```html {title="_components/button.njk"}
-<button>{{ content | safe }}</button>
+```vento {title="_components/button.vto"}
+<button>{{ content }}</button>
 ```
 
 </lume-code>
@@ -117,7 +136,7 @@ Components can export CSS and JS code. To do that, the component needs to export
 In our example, we may want to apply some styles to the button. In a Nunjucks
 template, the way to export data is using a front matter:
 
-```html
+```vento
 ---
 css: |
   .button {
@@ -137,7 +156,7 @@ CSS and JS code that you only need.
 ## Organize your components
 
 Components can be saved in subdirectories. For example, the `button` component
-could be saved in the `ui` subdirectory (`_components/ui/button.njk` in your
+could be saved in the `ui` subdirectory (`_components/ui/button.vto` in your
 `src` folder). In this case, you can access this component with
 `comp.ui.button()`.
 
@@ -195,6 +214,6 @@ site.component("ui", {
 
 Now, you can use the component as always:
 
-```html
-{{ comp.ui.button({ text: "Login" }) | safe }}
+```vento
+{{ comp.ui.button({ text: "Login" }) }}
 ```

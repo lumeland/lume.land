@@ -57,12 +57,12 @@ In addition to the JavaScript loader and processor, this plugin also registers
 the `terser` filter so you can transform JavaScript code in the template
 engines. For example:
 
-```html
-{% set js %}
+```vento
+{{ set js }}
   console.log("Hello, the JavaScript world!");
-{% endset %}
+{{ /set }}
 
 <script type="module">
-  {{- js | terser | safe -}}
+  {{ js |> terser }}
 </script>
 ```

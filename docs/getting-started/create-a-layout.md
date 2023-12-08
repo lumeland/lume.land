@@ -22,14 +22,13 @@ create a fully complete web page.
 
 ## Create a layout
 
-Create a new directory `_includes` and the file `layout.njk` inside it. The
-`.njk` extension is for [Nunjucks](https://mozilla.github.io/nunjucks/): a
-template engine supported by default by Lume. Insert the following code in the
-file:
+Create a new directory `_includes` and the file `layout.vto` inside it. The
+`.vto` extension is for [Vento](https://vento.js.org/): a template engine
+supported by default by Lume. Insert the following code in the file:
 
 <lume-code>
 
-```html {Title="_includes/layout.njk}
+```html {Title="_includes/layout.vto}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +36,7 @@ file:
   <title>My first page</title>
 </head>
 <body>
-  {{ content | safe }}
+  {{ content }}
 </body>
 </html>
 ```
@@ -45,25 +44,24 @@ file:
 </lume-code>
 
 This layout has the `HTML` code needed to build the whole page. The tag
-`{{ content | safe }}` is the placeholder used to insert the page content
-defined in `index.md`.
+`{{ content }}` is the placeholder used to insert the page content defined in
+`index.md`.
 
-Go to
-[Nunjucks documentation](https://mozilla.github.io/nunjucks/templating.html) to
-know more about its syntax. {.tip}
+Go to [Vento documentation](https://vento.js.org/) to know more about its
+syntax. {.tip}
 
 ## Assign the layout to the page
 
 Now let's configure the page (`index.md`) to use the layout just created. We
 have to create a _front matter_: a block delimited by two triple-dashed lines
 containing [YAML](https://yaml.org/) code. In this block, we define the variable
-`layout` with the value `layout.njk` (the name of the layout file).
+`layout` with the value `layout.vto` (the name of the layout file).
 
 <lume-code>
 
 ```yml {title="index.md"}
 ---
-layout: layout.njk
+layout: layout.vto
 ---
 # Welcome to my website
 
@@ -75,7 +73,7 @@ I hope you enjoy it.
 
 </lume-code>
 
-Lume will compile the markdown code and use the `layout.njk` file as the page
+Lume will compile the markdown code and use the `layout.vto` file as the page
 layout.
 
 The directory `_includes` is a special directory that Lume understands. You

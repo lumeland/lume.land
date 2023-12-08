@@ -22,6 +22,33 @@ When confirmed, Lume will automatically create a `_config.ts` file in your
 project. You're now ready to start creating files using the `.ts` and `.tsx`
 extensions.
 
+Lume also creates the `deno.json` file importing the Lume types using the
+`compilerOptions.types` array.
+
+```json
+{
+  "imports": {
+    "lume/": "https://deno.land/x/lume/"
+  },
+  "tasks": {
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "build": "deno task lume",
+    "serve": "deno task lume -s"
+  },
+  "compilerOptions": {
+    "types": [
+      "lume/types.ts"
+    ]
+  }
+}
+```
+
+The `lume/types.ts` file exposes the global namespace `Lume` that you can use in
+your TypeScript files.
+
+[Go to Overview of TypeScript in Deno](https://docs.deno.com/runtime/manual/advanced/typescript/overview)
+for more info. {.tip}
+
 ### JSX Plugins
 
 To create pages and layouts with JSX, you can either use the Lume
@@ -36,114 +63,22 @@ To create pages and layouts with JSX, you can either use the Lume
 - Additionally, [configure](https://lint.deno.land/) and enable Deno's built-in
   [code linter](https://deno.land/manual@v1.25.1/tools/linter).
 
-## TypeScript configuration
-
-TypeScript in Deno comes with a lot of different options but works out of the
-box. If you want to specify
-[compiler options](https://deno.land/manual@v1.25.1/typescript/configuration#how-deno-uses-a-configuration-file),
-the recommended way is to use `compilerOptions` within the projects `deno.json`
-or `deno.jsonc` file.
-
-[Go to Overview of TypeScript in Deno](https://deno.land/manual@v1.25.1/typescript/overview)
-for more info. {.tip}
-
-### JSX Plugin configuration
-
-We recommend configuring the JSX import source using an import map.
-
-[Go to Using an import map](https://deno.land/manual@v1.25.1/jsx_dom/jsx#using-an-import-map)
-for more info about using JSX in Deno. {.tip}
-
-#### Example configurations
-
-Example configuration using Lume with TypeScript and [JSX](/plugins/jsx/)
-(React) plugin.
-
-<lume-code>
-
-```json {title="deno.json"}
-{
-  "importMap": "import_map.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "npm:react"
-  }
-}
-```
-
-</lume-code>
-
-Example configuration using Lume with TypeScript and
-[JSX Preact](/plugins/jsx_preact/) plugin.
-
-<lume-code>
-
-```json {title="deno.json"}
-{
-  "importMap": "import_map.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "npm:preact"
-  }
-}
-```
-
-</lume-code>
-
 ## TypeScript in Templates
-
-You can import, use and extend Lume's built-in types within your TypeScript
-files. For the most common use case these are the following `interfaces`.
-
-```ts
-// Page specific interfaces
-import type { Page, PageData } from "lume/core.ts";
-
-// Helper function specific interface
-import type { PageHelpers } from "lume/core.ts";
-```
-
-[Go to source code](https://github.com/lumeland/lume/blob/master/core.ts) for
-more info about the `PageData` interface. {.tip}
-
-### Extending Lume's Types
-
-To use custom types with Lume, extend the existing interfaces with
-custom-defined properties.
-
-<lume-code>
-
-```ts {title="types.ts"}
-import type { Page, PageData } from "lume/core.ts";
-
-// To handle all types in one place, use re-export
-export type { PageHelpers } from "lume/core.ts";
-
-// Example interface for `custom.tsx` PageData
-export interface CustomPageData extends PageData {
-  // Define your own properties
-  readingTime?: string;
-}
-
-// Create a new interface for `custom.tsx`
-export interface CustomPage extends Page {
-  data: CustomPageData;
-}
-```
-
-</lume-code>
 
 Example of using the custom types in your template files.
 
 <lume-code>
 
 ```ts {title="custom.tsx"}
-import type { CustomPageData, PageHelpers } from "./types.ts";
+interface CustomPageData extends Lume.PageData {
+  // Define your own properties
+  readingTime?: string;
+}
 
-// TypeScript is aware of `readingTime`
 export default (
   { children, date, readingTime, title }: CustomPageData, 
-  filters: PageHelpers) => {
+  filters: Lume.PageFilters
+  ) => {
   return (
     <article>
       <header>
@@ -160,7 +95,3 @@ export default (
 ```
 
 </lume-code>
-
-To overwrite the default `Page | Page[]` interface, assign your custom interface
-when dealing with type `Page` e.g.
-`search.pages("type=post", "date=desc") as CustomPage[]`. {.tip}

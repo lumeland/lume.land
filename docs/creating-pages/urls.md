@@ -121,3 +121,44 @@ title: This is a title
 url: false # Ignore this page for now
 ---
 ```
+
+## Basename
+
+As of Lume v2, the new variable `basename` is introduced to better customize the
+URL generation. It's a special value affecting to the page or directory where
+it's defined, and allows to change how the name of the file/directory is
+reflected to the final URL.
+
+If the `basename` is defined in a `_data.*` file, it affects to the directory
+where the _data file is. For example, let's say we have the following file:
+
+```txt
+/blog/posts/hello-world.md
+```
+
+This file is exported with the URL `/blog/posts/hello-world/`. If we want to
+replace the part `/posts/` to `/articles/`, we can create a `_data.yml` file in
+the `/blog/posts` folder with the following code:
+
+```yml
+basename: articles
+```
+
+Now, this folder will use the name `articles` for the URL generation, so the
+final URL of the file is `/blog/articles/hello-world/`.
+
+You can set the `basename` variable to empty to don't use the folder name in the
+final URL:
+
+```yml
+basename: ""
+```
+
+The final URL of the file is now `/blog/hello-word/`, the `/post/` part was
+removed. You can also remove the previous folder with:
+
+```yml
+basename: "../"
+```
+
+The final URL of the file is now `/hello-world/`.

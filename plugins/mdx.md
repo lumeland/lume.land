@@ -48,7 +48,7 @@ plugin, add the following to your `deno.json` file:
 
 MDX uses Remark and Rehype under the hood, so you can add additional plugins. By
 default it uses the _GitHub-flavored markdown_, but you can use the
-`remarkPlugins` and `rehypePlugins` options to add more:
+`remarkPlugins`, `recmaPlugins` and `rehypePlugins` options to add more:
 
 ```js
 import lume from "lume/mod.ts";

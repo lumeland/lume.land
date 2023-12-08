@@ -8,7 +8,7 @@ tags:
 
 ## Description
 
-The `slugify_urls` plugin converts all URLs in your HTML documents by removing
+The `slugify_urls` plugin converts all URLs in your pages and files by removing
 or replacing potentially conflicting characteres like accents, spaces, etc.
 
 Once enabled, all output paths are **automatically slugified:** the spaces are

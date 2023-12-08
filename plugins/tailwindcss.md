@@ -44,10 +44,10 @@ file with the following code:
 @tailwind utilities;
 ```
 
-Reference it in your main html file (index.html, main.njk, etc.) :
+Reference it in your main html file (index.html, main.vto, etc.) :
 
-```html
-// index.html | main.njk | else
+```vento
+// index.html | main.vto | else
 <!doctype html>
 <html>
   <head>
@@ -114,8 +114,8 @@ site.use(tailwindcss({
 
 In your html, you should use the `prose` class.
 
-```html
+```vento
 <article class="prose">
-  {{ content | safe }}
+  {{ content }}
 </article>
 ```

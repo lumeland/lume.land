@@ -87,31 +87,31 @@ example in Nunjucks:
 
 <lume-code>
 
-```html{title="menu.njk"}
+```vento{title="menu.vto"}
 <ul class="menu">
-  {% asyncEach item in nav.menu().children %}
+  {{ for item of nav.menu().children }}
     <li>
-      {% include "templates/menu_item.njk" %}
+      {{ include "templates/menu_item.vto" }}
     </li>
-  {% endeach %}
+  {{ /for }}
 </ul>
 ```
 
-```html{title="menu_item.njk"}
-{% if item.data %}
+```vento{title="menu_item.vto"}
+{{ if item.data }}
   <a href="{{ item.data.url }}">
     {{ item.data.title }}
   </a>
-{% else %}
+{{ else }}
   <span>{{ item.slug }}</span>
-{% endif %}
+{{ /if }}
 
 <ul>
-  {% asyncEach item in item.children %}
+  {{ for item of item.children }}
   <li>
-    {% include "templates/menu_item.njk" %}
+    {{ include "templates/menu_item.vto" }}
   </li>
-  {% endeach %}
+  {{ /for }}
 </ul>
 ```
 
@@ -168,18 +168,18 @@ following breadcrumb data:
 We can use this data to generate the breadcrumb with the following Nunjucks
 code:
 
-```html
+```vento
 <ul>
-  {% for item in nav.breadcrumb("/articles/second-article/chapter-2") %}
+  {{ for item of nav.breadcrumb("/articles/second-article/chapter-2") }}
   <li>
-    {% if item.data %}
+    {{ if item.data }}
       <a href="{{ item.data.url }}">
         {{ item.data.title }}
       </a>
-    {% else %}
+    {{ else }}
       <span>{{ item.slug }}</span>
-    {% endif %}
+    {{ /if }}
   </li>
-  {% endfor %}
+  {{ /for }}
 </ul>
 ```

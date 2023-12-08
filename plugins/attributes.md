@@ -16,7 +16,7 @@ Provide a convenient way to work with HTML attributes.
 
 <lume-code>
 
-```yml { title=".njk" }
+```yml { title=".vto" }
 ---
 link:
   title: Go to GitHub
@@ -31,7 +31,7 @@ link:
 <a {{ link | attr | safe }}>Hello</a>
 ```
 
-```js { title=".tmpl.js" }
+```js { title=".page.js" }
 const link = {
   title: "Go to GitHub"
   href: "https://github.com"
@@ -53,17 +53,17 @@ To work with HTML class names:
 
 <lume-code>
 
-```yml { title=".njk" }
+```yml { title=".vto" }
 ---
 styles:
   - btn
   - btn-primary
 ---
 
-<a class="{{ styles | class }}">Hello</a>
+<a class="{{ styles |> class }}">Hello</a>
 ```
 
-```js { title=".tmpl.js" }
+```js { title=".page.js" }
 const styles = [
   "btn",
   "btn-primary",

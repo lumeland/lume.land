@@ -103,10 +103,23 @@ const site = lume({
 });
 ```
 
+### includes
+
+It's a special folder used by default by the template engines and other
+processors (like sass or postcss) to look for the included files. By default is
+`_includes`.
+
 ## Server options
 
 The `server` key contains the configuration for the local server. It has the
 following options:
+
+### root
+
+Set the root folder for the server. By default it's the same directory as
+`dest`. The only use case in which you may want to change this is if your `dest`
+folder is, for example `_site/blog` and you want to expose the `blog` folder
+when serving the site because all urls start with `/blog/`.
 
 ### port
 

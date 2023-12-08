@@ -42,9 +42,9 @@ Now the title is added to the page data:
 ```
 
 This model is the same for any file that Lume can load. Even for images: let's
-say you have the [imagick](../../plugins/imagick.md) plugin to load and
-transform the data. The file content is loaded and stored in the `content`
-variable:
+say you have the [transform_images](../../plugins/transform_images.md) plugin to
+load and transform the data. The file content is loaded and stored in the
+`content` variable:
 
 ```js
 {
@@ -330,7 +330,7 @@ basename `string`
 : Normalized by Lume automatically. Used to assign tags or to pages.
 
 [draft](../creating-pages/page-data.md#tags) `boolean`
-: If it's `true`, the page will be ignored. Use `LUME_DRAFT=true` to show draft pages.
+: If it's `true`, the page will be ignored. Use the env variable `LUME_DRAFT=true` to show draft pages.
 
 [renderOrder](../core/render-order.md) `number`
 : To configure the rendering order of a page.

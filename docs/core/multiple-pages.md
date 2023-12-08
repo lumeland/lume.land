@@ -45,38 +45,38 @@ in the layouts:
 
 <lume-code>
 
-```js {title="pages.tmpl.js"}
+```js {title="pages.page.js"}
 export default function* () {
   yield {
     url: "/page-1/",
-    layout: "layouts/article.njk",
+    layout: "layouts/article.vto",
     title: "Article 1",
     body: "Welcome to the article 1",
   };
   yield {
     url: "/page-2/",
-    layout: "layouts/article.njk",
+    layout: "layouts/article.vto",
     title: "Article 2",
     body: "Welcome to the article 2",
   };
   yield {
     url: "/page-3/",
-    layout: "layouts/article.njk",
+    layout: "layouts/article.vto",
     title: "Article 3",
     body: "Welcome to the article 3",
   };
 }
 ```
 
-```html {title=_includes/layouts/article.njk}
+```vento {title=_includes/layouts/article.vto}
 ---
-layout: layouts/base.njk
+layout: layouts/base.vto
 ---
 
 <article>
   <h1>{{ title }}</h1>
   <div>
-    {{ body | md | safe }}
+    {{ body |> md }}
   </div>
 </article>
 ```
@@ -88,8 +88,8 @@ define it once instead of duplicating it in every yielded page:
 
 <lume-code>
 
-```js {title="pages.tmpl.js"}
-export const layout = "layouts/article.njk";
+```js {title="pages.page.js"}
+export const layout = "layouts/article.vto";
 
 export default function* () {
   yield {
@@ -110,15 +110,15 @@ export default function* () {
 }
 ```
 
-```html {title=_includes/layouts/article.njk}
+```vento {title=_includes/layouts/article.vto}
 ---
-layout: layouts/base.njk
+layout: layouts/base.vto
 ---
 
 <article>
   <h1>{{ title }}</h1>
   <div>
-    {{ body | md | safe }}
+    {{ body |> md }}
   </div>
 </article>
 ```
@@ -134,7 +134,7 @@ Database or an API:
 ```js
 import database from "./my-database.ts";
 
-export const layout = "layouts/article.njk";
+export const layout = "layouts/article.vto";
 
 export default function* () {
   const articles = database.query("select * from articles");

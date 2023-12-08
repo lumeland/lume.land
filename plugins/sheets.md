@@ -56,21 +56,21 @@ In the `first` sheet mode, only the first sheet found in the document is
 returned, even if it contains more. For example a file stored in
 `_data/people.xlsx` containing two sheets, only the first one is returned:
 
-```html
+```vento
 <table>
   <tr>
-    {% for key, column in people[0] %}
+    {{ for key, column of people[0] }}
       <th>{{ key }}</th>
-    {% endfor %}
+    {{ /for }}
   </tr>
 
-  {% for row in people %}
+  {{ for row of people }}
     <tr>
-      {% for key, column in row %}
+      {{ for key, column of row }}
         <td>{{ column }}</td>
-      {% endfor %}
+      {{ /for }}
     </tr>
-  {% endfor %}
+  {{ /for }}
 </table>
 ```
 
@@ -82,23 +82,23 @@ document and you have to use the sheet name to access to its content.
 For example, if the file `_data/people.xlsx` contains the sheets "Women" and
 "Men", you can access to the data in this way:
 
-```html
+```vento
 <h1>Women</h1>
 <ul>
-  {% for person in people["Women"] %}
+  {{ for person of people["Women"] }}
     <li>
       {{ person.name }} - {{ person.surname }}
     </li>
-  {% endfor %}
+  {{ /for }}
 </ul>
 
 <h1>Men</h1>
 <ul>
-  {% for person in people["Men"] %}
+  {{ for person of people["Men"] }}
     <li>
       {{ person.name }} - {{ person.surname }}
     </li>
-  {% endfor %}
+  {{ /for }}
 </ul>
 ```
 

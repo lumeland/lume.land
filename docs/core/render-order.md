@@ -10,7 +10,7 @@ The most typical example is with auto-generated pages. Let's say you have a page
 that generates multiple pages dynamically using data from an external API:
 
 ```js
-export const layout = "layouts/api.njk";
+export const layout = "layouts/api.vto";
 
 const response = await fetch("https://my-api.com/data.json");
 const data = await response.json();
@@ -35,7 +35,7 @@ To list and paginate all these auto-generated pages, you may want to create
 something like this:
 
 ```js
-export const layout = "layouts/api-pagination.njk";
+export const layout = "layouts/api-pagination.vto";
 
 export default function* ({ search, paginate }) {
   const items = search.pages("type=api");
@@ -62,7 +62,7 @@ change the `renderOrder` of the pagination script to a value greater than 0, for
 example, `1`:
 
 ```js
-export const layout = "layouts/api-pagination.njk";
+export const layout = "layouts/api-pagination.vto";
 
 // Changed this to render this page after the others
 export const renderOrder = 1;

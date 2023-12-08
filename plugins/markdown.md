@@ -71,16 +71,10 @@ import emoji from "npm:markdown-it-emoji";
 // Set the markdown plugins
 const markdown = {
   plugins: [emoji],
-  keepDefaultPlugins: true,
 };
 
 const site = lume({}, { markdown });
 ```
-
-The `keepDefaultPlugins` option keeps the two default plugins installed by
-default by Lume (`markdown-it-deflist` and `markdown-it-attrs`). Set it to
-`false` (or don't set it at all) to replace the defaults with your specified
-plugins.
 
 You can pass options to your markdown-it plugins using an array with
 `[plugin, options]` signature. Example:
@@ -91,8 +85,10 @@ import footnote from "npm:markdown-it-footnote";
 
 // Pass options to markdown-it plugins
 const markdown = {
-  plugins: [[anchor, { level: 2 }], footnote],
-  keepDefaultPlugins: true,
+  plugins: [
+    [anchor, { level: 2 }],
+    footnote,
+  ],
 };
 
 const site = lume({}, { markdown });
@@ -134,7 +130,7 @@ delimited by two triple-dashed lines with YAML code:
 ```yaml
 ---
 title: Welcome to my page
-layout: layouts/main.njk
+layout: layouts/main.vto
 ---
 
 # Welcome
@@ -145,13 +141,13 @@ I hope you like it!
 
 The Markdown code is stored in the `content` variable:
 
-```html
+```vento
 <html>
   <head>
     <title>{{ title }}</title>
   </head>
   <body>
-    {{ content | safe }}
+    {{ content }}
   </body>
 </html>
 ```
@@ -162,10 +158,10 @@ The Markdown plugin also registers the `md` filter that renders any string value
 as Markdown and outputs an HTML fragment. The filter also accepts an argument to
 render the Markdown in _inline_ mode.
 
-```html
+```vento
 <!-- Render to HTML code -->
-<div>{{ text | md | safe }}</div>
+<div>{{ text |> md }}</div>
 
 <!-- Single line rendering, without the paragraph wrap: -->
-<p>{{ text | md(true) | safe }}</p>
+<p>{{ text |> md(true) }}</p>
 ```

@@ -1,4 +1,4 @@
-imagick:
+transformImages:
   - resize: [100, 100]
     format: webp
   - resize: [200, 200]

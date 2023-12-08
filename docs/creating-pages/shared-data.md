@@ -93,15 +93,15 @@ via `users` variable and documents via `documents.one`, `documents.two` and
 
 <lume-code>
 
-```html {title="page.njk"}
+```vento {title="page.vto"}
 <h2>Documents</h2>
 
 <ul>
-{% for doc in documents %}
+{{ for doc of documents }}
   <li>
-      {{ doc.title }}
+    {{ doc.title }}
   </li>
-{% endfor %}
+{{ /for }}
 </ul>
 ```
 

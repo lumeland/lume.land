@@ -30,7 +30,7 @@ export default site;
 
 Due to the
 [automatic alternate links generating](#automatic-rel%3Dalternate-links), the
-plugin must be registered after all URL modifers to work probably.
+plugin must be registered after all URL modifiers to work probably.
 
 ```js
 import lume from "lume/mod.ts";
@@ -40,7 +40,7 @@ import multilanguage from "lume/plugins/multilanguage.ts";
 site.use(basePath()); // modify url
 site.use(multilanguage({
   languages: ["en", "gl", "es"],
-})); // use the modify url
+}));
 // site.use(basePath()); // this modification will not be applied
 
 export default site;
@@ -48,8 +48,9 @@ export default site;
 
 ## Create pages in multiple languages
 
-This plugin uses the `id` variable to detect the different translations of the
-same page. For example, let's say we have the following two pages:
+This plugin uses the variable `id` (combined with `type` if it's defined) to
+detect the different translations of the same page. For example, let's say we
+have the following two pages:
 
 ```yml
 ---
@@ -72,7 +73,8 @@ url: /acerca-de-min/
 ```
 
 The plugin interprets these two pages as the same content but in different
-languages, because they have the same id (`about`).
+languages, because they have the same id (`about`) and the same `type`
+(undefined).
 
 The pages will be exported as `/en/about-me/`, `/gl/acerca-de-min/`. Note that
 the `/en/` and `/gl/` prefixes are automatically added.
@@ -125,15 +127,15 @@ menu to change the language of the current page. This is an example in nunjucks:
 
 <lume-code>
 
-```html {title=_includes/layout.njk}
+```vento {title=_includes/layout.vto}
 <ul class="languages">
-{% for alt in alternates %}
+{{ for alt of alternates }}
   <li>
-    <a href="{{ alt.url }}" {% if alt.lang == lang %}aria-current="page"{% endif %}>
+    <a href="{{ alt.url }}" {{ if alt.lang == lang }}aria-current="page"{{ /if }}>
       {{ alt.title }} ({{ alt.lang }})
     </a>
   </li>
-{% endfor %}
+{{ /for }}
 </ul>
 ```
 
@@ -161,28 +163,34 @@ This code outputs something like:
 </ul>
 ```
 
-## Multilanguage data
+### Sitemap
 
-### Language suffixes
+The [Sitemap plugin](./sitemap.md) is compatible with this plugin, so the
+generated sitemap will contain the translated versions of the pages.
+
+## Multilanguage data
 
 With this plugin, you can have your data in different languages that will be
 correctly resolved according to the language of each page. For example, let's
-say we have the following `_data.yml` file:
+say we have the following `_data.yml` file for our site with the languages `en`,
+`gl` and `es`:
 
 ```yml
 site_name: The Óscar's blog
-site_name.gl: O blog de Óscar
-site_name.es: El blog de Óscar
+gl:
+  site_name: O blog de Óscar
+es:
+  site_name: El blog de Óscar
 ```
 
-The variable `site_name` has a different value for each language. Any variable
-ending with a dot following by one of the languages defined in the `_config`
-file is considered a translation. We can use the `site_name` variable in our
-pages and the value will be different depending on the page's language:
+The variable `site_name` has a different value for the languages `gl` and `es`.
+Any variable stored inside a variable named like one of the available languages,
+is considered a translation. We can use the `site_name` variable in our pages
+and the value will be different depending on the page's language:
 
 <lume-code>
 
-```html{title="english"}
+```vento{title="english"}
 ---
 lang: en
 ---
@@ -190,7 +198,7 @@ lang: en
 <h1>{{ site_name }}</h1> <!-- Outputs: The Óscar blog -->
 ```
 
-```html{title="galician"}
+```vento{title="galician"}
 ---
 lang: gl
 ---
@@ -198,7 +206,7 @@ lang: gl
 <h1>{{ site_name }}</h1> <!-- Outputs: O blog de Óscar -->
 ```
 
-```html{title="spanish"}
+```vento{title="spanish"}
 ---
 lang: es
 ---
@@ -208,43 +216,21 @@ lang: es
 
 </lume-code>
 
-It's possible to translate variables inside objects and arrays. In the following
-example, the `title` value inside the `links` array is different for each
-language.
+It's also possible to use objects to replace specific inner values. For example:
 
 ```yml
-site_name: The Óscar's blog
-site_name.gl: O blog de Óscar
-site_name.es: El blog de Óscar
+site:
+  name: The Óscar's blog
+  logo: /logo.png
 
-links:
-  - title: My personal site
-    title.gl: O meu sitio persoal # The link title in galician
-    title.es: Mi sitio personal # The link title in spanish
-    url: https://oscarotero.com
-
-  - title: Lume
-    url: https://lume.land
-```
-
-### Language root variables
-
-In addition to the suffixes, another way to define different data per language
-is by creating a root variable with the language code. This can be more useful
-in some cases. For example:
-
-```yml
-en:
-  site_name: The Óscar's blog
-  subtitle: My personal opinions
-
+# Translate only site.name, but leave site.logo as is
 gl:
-  site_name: O blog de Óscar
-  subtitle: As miñas opinións persoais
+  site:
+    name: O blog de Óscar
 
 es:
-  site_name: El blog de Óscar
-  subtitle: Mis opiniones personales
+  site:
+    name: El blog de Óscar
 ```
 
 ## Multilanguage pages from a single file
@@ -259,7 +245,7 @@ to an array with the available languages. For example:
 # This page is in 3 different languages: English, Galician, and Spanish.
 lang: [en, gl, es]
 title: About me
-layout: base-layout.njk
+layout: base-layout.vto
 ```
 
 </lume-code>
@@ -273,41 +259,27 @@ each page with the language code:
 /es/about-me/index.html
 ```
 
-We can use the language suffixes to assign different data per language:
+We can assign different data per language:
 
 <lume-code>
 
 ```yml {title=about-me.yml}
 lang: [en, gl, es]
 
-title: About me # The default title
-title.gl: Acerca de min # The title in galician
-title.es: Acerca de mí # The title in spanish
-
-layout: base-layout.njk # Common value for all languages
-```
-
-</lume-code>
-
-### Customize the URLs
-
-You can customize the URLs of the multilanguage pages by adding the language
-suffix to the `url` variable:
-
-<lume-code>
-
-```yml {title=about-me.yml}
-lang: [en, gl, es]
-
+# Common values for all languages
+layout: base-layout.vto
 title: About me
-title.gl: Sobre min
-title.es: Acerca de mí
+url: /about-me/
 
-layout: base-layout.njk
+# Galician translations
+gl:
+  title: Acerca de min
+  url: /sobre-min/
 
-url.en: /about-me/
-url.gl: /sobre-min/
-url.es: /acerca-de-mi/
+# Spanish translations
+es:
+  title: Acerca de mí
+  url: /acerca-de-mi/
 ```
 
 </lume-code>
@@ -319,8 +291,8 @@ showing how to apply multilanguage:
 
 <lume-code>
 
-```js {title=paginate.tmpl.js}
-export const layout = "layouts/my-layout.njk";
+```js {title=paginate.page.js}
+export const layout = "layouts/my-layout.vto";
 
 export default function* ({ search, paginate }) {
   const langs = ["gl", "en"];

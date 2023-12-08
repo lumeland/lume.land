@@ -37,15 +37,14 @@ configure the JSX transform:
 
 ```json {title="deno.json"}
 {
-  "importMap": "import_map.json",
-  "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
-    "build": "deno task lume",
-    "serve": "deno task lume -s"
-  },
+  // ...
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:react"
+    "jsxImportSource": "npm:react",
+    "types": [
+      "lume/types.ts",
+      "https://unpkg.com/@types/react@18.2.37/index.d.ts"
+    ]
   }
 }
 ```
@@ -64,7 +63,7 @@ ability to export JSX code in the default export:
 
 ```jsx
 export const title = "Welcome to my page";
-export const layout = "layouts/main.njk";
+export const layout = "layouts/main.vto";
 
 export default (data) => (
   <>
@@ -74,7 +73,7 @@ export default (data) => (
 );
 ```
 
-Note that this page uses the `layouts/main.njk` layout to wrap the content (you
+Note that this page uses the `layouts/main.vto` layout to wrap the content (you
 can mix different template languages like Nunjucks and JSX)
 
 ## Creating layouts

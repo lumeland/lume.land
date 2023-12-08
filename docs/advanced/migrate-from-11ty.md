@@ -38,7 +38,7 @@ differences can help.
 - In Lume, all data files are `_data.*` or `_data/*`. In Eleventy
   [there are different ways to place data](https://www.11ty.dev/docs/data-template-dir/),
   and `_data/*` is only used for global data.
-- To paginate in Lume, you have to create a `.tmpl.js` or `.tmpl.ts` file
+- To paginate in Lume, you have to create a `.page.js` or `.page.ts` file
   exporting a generator ([more info](../core/searching.md#pagination)). There's no way to
   do it using the front matter, like in Eleventy.
 - The event `beforeWatch` in Eleventy is named `beforeUpdate` in Lume.
@@ -51,14 +51,14 @@ radar).
 
 Image
 : There's the
-[imagick plugin](../../plugins/imagick.md) for that.
+[Transform_images plugin](../../plugins/transform_images.md) for that.
 
 Cache assets
 : There isn't a plugin for that.
 
 RSS
 : There's the
-[FEED plugin](../../plugins/feed.md) for that.
+[Feed plugin](../../plugins/feed.md) for that.
 
 Syntax Highlighting
 : There's the
