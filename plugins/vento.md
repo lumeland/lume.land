@@ -2,7 +2,7 @@
 title: Vento
 description: Use the Vento template engine to create pages and layouts.
 mod: plugins/vento.ts
-enabled: false
+enabled: true
 tags:
   - template_engine
 ---
