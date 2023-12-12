@@ -61,11 +61,11 @@ extension to your site. This format works exactly the same as
 [JavaScript/TypeScript files](./modules.md), but with the addition of the
 ability to export JSX code in the default export:
 
-```jsx
+```tsx
 export const title = "Welcome to my page";
 export const layout = "layouts/main.vto";
 
-export default (data) => (
+export default (data: Lume.Data, helpers: Lume.Helpers) => (
   <>
     <h1>{data.title}</h1>
     <p>This is my first post using lume. I hope you like it!</p>
@@ -84,8 +84,8 @@ content instead of `content`. The difference is that `content` is a string and
 cannot be easily used in JSX because it's escaped, and `children` is the JSX
 object un-rendered.
 
-```jsx
-export default ({ title, children }) => (
+```tsx
+export default ({ title, children }: Lume.Data, helpers: Lume.Helpers) => (
   <html>
     <head>
       <title>{title}</title>
