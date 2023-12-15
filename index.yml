@@ -374,6 +374,14 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://www.youtube.com/watch?v=5lj0kCmC7L8
+      author: CloudCannon
+      avatar: /img/avatars/testimonials/cloudcannon.webp
+      date: December 13, 2023
+      text: "Lume, the static site generator for Deno – Static Feedback #12"
+      cover: /img/covers/video_static_feedback.webp
+      type: video
+
     - url: https://cuscuz.in/@jedi/110823341110394415
       author: Thiago Jedi (@jedi@cuscuz.in)
       avatar: /img/avatars/testimonials/jedithiago.webp
