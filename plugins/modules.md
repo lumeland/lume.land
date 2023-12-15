@@ -54,7 +54,9 @@ export default "This is my first post using lume. I hope you like it!";
 The default export can be a function. It will be executed by passing all the
 available data in the first argument and the filters in the second argument:
 
-```js
+<lume-code>
+
+```js { title="page.js" }
 export const title = "Welcome to my page";
 export const layout = "layouts/main.vto";
 
@@ -64,6 +66,18 @@ export default (data, filters) =>
   <a href="${filters.url("/")}">Back to home</a>`;
 ```
 
+```TypeScript { title="page.ts" }
+export const title = "Welcome to my page";
+export const layout = "layouts/main.vto";
+
+export default (data: Lume.Data, helpers: Lume.Helpers) =>
+  `<h1>${data.title}</h1>
+  <p>This is my first post using lume. I hope you like it!</p>
+  <a href="${filters.url("/")}">Back to home</a>`;
+```
+
+</lume-code>
+
 JavaScript/TypeScript allows generating multiple pages from the same file. See
 [Pagination](./paginate.md) for more info.
 
@@ -72,7 +86,9 @@ JavaScript/TypeScript allows generating multiple pages from the same file. See
 It's possible to create layouts using JavaScript/TypeScript. Just create `.js`
 or `.ts` files inside the `_includes` directory.
 
-```js
+<lume-code>
+
+```js { title="layout.js" }
 export default ({ title, content }, filters) =>
   `<html>
     <head>
@@ -83,6 +99,20 @@ export default ({ title, content }, filters) =>
     </body>
   </html>`;
 ```
+
+```TypeScript { title="layout.ts" }
+export default ({ title, content }: Lume.Data, helpers: Lume.Helpers) =>
+  `<html>
+    <head>
+      <title>${title}</title>
+    </head>
+    <body>
+      ${content}
+    </body>
+  </html>`;
+```
+
+</lume-code>
 
 ## Configure VSCode
 
