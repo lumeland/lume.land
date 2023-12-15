@@ -315,6 +315,11 @@ support:
       img: /img/avatars/supporters/feedpixel.webp
       amount: 1
       recurrent: true
+    - name: Victor Freire
+      url: https://opencollective.com/victor-freire
+      img: /img/avatars/supporters/victorfreire.webp
+      amount: 5
+      recurrent: true
   past_title: Lovely past sponsors
   past_sponsors:
     - name: Androw Nash
@@ -355,8 +360,6 @@ support:
       img: /img/avatars/supporters/aiotter.webp
       amount: 1
       recurrent: true
-
-
 
   contribute:
     title: How to contribute?

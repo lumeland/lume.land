@@ -403,7 +403,7 @@
   margin-bottom: var(--row-gap-1);
 
   & > li {
-    margin-right: -25px;
+    margin-right: -20px;
 
     &:hover {
       z-index: 1;
@@ -419,6 +419,7 @@
     display: block;
     border: solid 4px var(--color-background);
     object-fit: cover;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.05);
   }
 
   &.is-past > li {
