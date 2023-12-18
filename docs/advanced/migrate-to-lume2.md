@@ -34,10 +34,10 @@ The subextension `tmpl` for TypeScript/JavaScript pages was changed to `page`
 and it's no longer required for layouts. This structure in Lume 1:
 
 ```txt
-_includes/layout.page.js
+_includes/layout.tmpl.js
 _components/button.js
 _data.js
-index.page.js
+index.tmpl.js
 ```
 
 In Lume 2 becomes to:
