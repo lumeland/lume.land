@@ -112,7 +112,7 @@ site.script("plugin-docs", [
 ]);
 site.data("scheme", async (mod: string) => {
   try {
-    const url = `https://deno.land/x/lume@v2.0.0/${mod}`;
+    const url = `https://deno.land/x/lume@v2.0.1/${mod}`;
     const { defaults } = await import(url);
     const { Options } = await analyze(url, { maxDepth: 2, private: false });
 

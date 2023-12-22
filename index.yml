@@ -320,6 +320,11 @@ support:
       img: /img/avatars/supporters/victorfreire.webp
       amount: 5
       recurrent: true
+    - name: Miguel Pinto
+      url: https://opencollective.com/miguel-pinto2
+      img: /img/avatars/supporters/miguelpinto.webp
+      amount: 1
+      recurrent: true
   past_title: Lovely past sponsors
   past_sponsors:
     - name: Androw Nash
