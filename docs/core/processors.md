@@ -121,8 +121,8 @@ example:
 ```js
 import { Page } from "lume/core/file.ts";
 
-site.process([".css"], (pages, allPages) => {
-  for (const page of pages) {
+site.process([".css"], (filteredPages, allPages) => {
+  for (const page of filteredPages) {
     // Minify the css content
     const { code, map } = myCssMinifier(page.content);
 
@@ -148,8 +148,8 @@ the second argument:
 
 ```ts
 // Remove all html pages with the language = "en"
-site.process([".html"], (pages, allPages) => {
-  for (const page of pages) {
+site.process([".html"], (filteredPages, allPages) => {
+  for (const page of filteredPages) {
     if (page.data.lang === "en") {
       // Search the page in allPages array and remove it
       allPages.splice(allPages.indexOf(page), 1);
