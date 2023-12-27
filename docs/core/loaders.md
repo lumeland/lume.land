@@ -102,7 +102,7 @@ import HandlebarsJS from "https://dev.jspm.io/handlebars@4.7.6";
 export default class HandlebarsEngine implements Lume.Engine {
   /** Render the content */
   render(content, data) {
-    return this.renderSync(content, data, filename);
+    return this.renderComponent(content, data, filename);
   }
 
   /** Render for components */
