@@ -40,4 +40,4 @@ plugins:
 
   - title: Shikiji
     description: Plugin to use the Shikiji library for syntax highlight.
-    url: https://deno.land/x/furiouzz@0.0.5/lume/shikiji-plugin/README.md
+    url: https://deno.land/x/lume_shikiji@0.0.1
