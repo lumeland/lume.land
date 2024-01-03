@@ -49,7 +49,7 @@ outside the `_includes` directory.
 
 The Vento plugin also registers the `vto` filter, to render any string value as
 a Vento template and output it as HTML. The filter accepts an object with data.
-For example, to render Vento code inside a Nunjucks template:
+For example:
 
 ```html
 ---
@@ -59,7 +59,7 @@ text: "Hello {{ username }}"
 ---
 
 <!-- Render a string -->
-<div>{{ text | vto(data) | safe }}<div>
+<div>{{ text |> vto(data) }}<div>
 ```
 
 ## Configure VSCode
