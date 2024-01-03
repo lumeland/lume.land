@@ -12,7 +12,7 @@ install:
 usage:
   - title: Supports any template engine
     description: |
-      Create pages using Markdown, Nunjucks, Liquid, JSX, TSX, JavaScript, TypeScript, Pug, Eta… or add your own engine easily.
+      Create pages using Markdown, Vento, Nunjucks, Liquid, JSX, TSX, JavaScript, TypeScript, Pug, Eta… or add your own engine easily.
     code: |
       <lume-code>
 
@@ -160,15 +160,21 @@ usage:
       <lume-code>
 
       ```js { title="Process assets" }
-      site.process([".css"], (file) => {
-        file.content = customTransform(file.content);
+      site.process([".css"], (files) => {
+        for (const file of files) {
+          file.content = customTransform(file.content);
+        }
       })
       ```
       ```js { title="DOM API" }
-      site.process([".html"], (page) => {
-        page.document.querySelectorAll("h1", (title) => {
-          title.innerText = title.innerText.toUpperCase();
-        })
+      site.process([".html"], (pages) => {
+        for (const page of pages) {
+          const externalLinks = page.document.querySelectorAll('a[href^="http"]');
+
+          externalLinks.forEach((link) => {
+            link.setAttribute("target", "_blank");
+          });
+        }
       })
       ```
 
@@ -180,15 +186,13 @@ usage:
     code: |
       <lume-code>
 
-      ```js { title="Script creation" }
+      ```js { title="Scripts and events" }
+      // Create a script and run it after build
       site.script("deploy", "rsync -r _site/ user@host.com:/site");
-      ```
-      ```js { title="Events" }
       site.addEventListener("afterBuild", "deploy");
+
+      // Or run arbitrary code
       site.addEventListener("afterBuild", () => console.log("site build"));
-      ```
-      ```sh { title="Script runner" }
-      lume run deploy
       ```
 
       </lume-code>
@@ -208,7 +212,7 @@ usage:
       ```
       ```ts { title="_config.ts (with plugins)" }
       import lume from "lume/mod.ts";
-      import parcelCSS from "lume/plugins/parcel_css.ts";
+      import lightningcss from "lume/plugins/lightningcss.ts";
       import esbuild from "lume/plugins/esbuild.ts";
       import svgo from "lume/plugins/svgo.ts";
       import jsx from "lume/plugins/jsx.ts";
@@ -216,7 +220,7 @@ usage:
 
       const site = lume();
 
-      site.use(parcelCSS())
+      site.use(lightningcss())
           .use(esbuild())
           .use(svgo())
           .use(jsx())
@@ -384,6 +388,15 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://twitter.com/DogaArmangil/status/1742463592115368416
+      author: Doğa Armangil (@DogaArmangil)
+      avatar: /img/avatars/testimonials/doga.webp
+      date: January 3, 2024
+      text: |
+        𝗟𝘂𝗺𝗲 for <a href="https://twitter.com/deno_land">@deno_land</a> is probably the best <a href="https://twitter.com/hashtag/StaticSiteGenerator">#StaticSiteGenerator</a> ATM.<br><br>V2 is out now with Vento as the default template engine. <br><br>Vento is an improvement over Nunjucks (still available as a plugin):<br><br>
+        ➜ JavaScript &amp; async support,<br>
+        ➜ Less boilerplate.
+
     - url: https://www.youtube.com/watch?v=5lj0kCmC7L8
       author: CloudCannon
       avatar: /img/avatars/testimonials/cloudcannon.webp

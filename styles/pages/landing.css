@@ -243,6 +243,8 @@
     margin-top: 0;
     margin-bottom: var(--row-gap-1);
     max-width: var(--max-width);
+    text-align: center;
+    padding: var(--row-gap-0) 0;
   }
 
   & > * {
@@ -263,6 +265,10 @@
   & > li {
     padding-bottom: var(--row-gap-0);
     break-inside: avoid;
+  }
+
+  @media (max-width: 700px) {
+    max-width: 500px;
   }
 }
 .landing-testimonials-article,
