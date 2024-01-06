@@ -12,7 +12,7 @@ You can override this default behaviour with the `templateEngine` option. Any
 page having this variable will use it to decide the template engine instead of
 the extension.
 
-The following example is an `.md` file but it is configured to use Nunjucks to
+The following example is an `.md` file but it is configured to use Vento to
 render (instead of Markdown).
 
 ```yml
@@ -24,7 +24,7 @@ templateEngine: vto
 # Hello world
 ```
 
-A typical example is a file using Markdown to render HTML but Nunjucks to insert
+A typical example is a file using Markdown to render HTML but Vento to insert
 variables or includes. To do that, you can use an array to add several engines:
 
 ```yml
