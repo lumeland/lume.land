@@ -87,7 +87,7 @@ example:
         └── three.js
 ```
 
-In this example, the data stored in the file `_/data/users.json` can be accessed
+In this example, the data stored in the file `_data/users.json` can be accessed
 via `users` variable and documents via `documents.one`, `documents.two` and
 `documents.three`. To use this data in your pages:
 
