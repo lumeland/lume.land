@@ -3,6 +3,10 @@ title: Migrate to Lume 2
 description: Guide to migrate your project from Lume 1 to Lume 2
 ---
 
+This page is a brief to-do list of the main changes to make in order to migrate
+a site from Lume 1 to Lume 2. You have a more detailed description
+[in the announcement post](https://lume.land/blog/posts/lume-2/).
+
 ## Change your (pre)processors
 
 In Lume 2, processors and preprocessors receive an array with all pages:
@@ -30,7 +34,7 @@ site.process([".html"], fn);
 
 ## Change `.page.*` pages
 
-The subextension `tmpl` for TypeScript/JavaScript pages was changed to `page`
+The subextension `.tmpl` for TypeScript/JavaScript pages was changed to `.page`
 and it's no longer required for layouts. This structure in Lume 1:
 
 ```txt
@@ -179,7 +183,9 @@ HTML attribute name has changed to `transform-images`:
 
 ## Nunjucks plugin
 
-If you're using Nunjucks templates, import the plugin in your _config.ts file:
+Lume 1.x enabled the nunjucks plugin by default. It is an optional plugin in
+Lume 2.x If you're using Nunjucks templates, import the plugin in your
+_config.ts file:
 
 ```ts
 import lume from "lume/mod.ts";
@@ -252,7 +258,7 @@ your JSX pages, configure the JSX transformer in the `deno.json` file:
 
 ## Slugify URLs plugin
 
-If you're using the `slugify_urls` plugin, it slugify also the files copied with
+If you're using the `slugify_urls` plugin, it also slugifies files copied with
 `site.copy()`. To disable it:
 
 ```js
@@ -290,7 +296,8 @@ site.use(windiCSS());
 site.use(unoCSS());
 ```
 
-> The UnoCSS plugin is not a 1:1 substitute of windiCSS.
+> The UnoCSS plugin is not a 1:1 substitute of windiCSS. There's a comparison
+> [in this link](https://unocss.dev/presets/wind#differences-from-windi-css)
 
 ## Feed plugin
 
