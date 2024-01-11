@@ -13,6 +13,13 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Charles Burgess
+    img: /img/showcase/cvburgess.webp
+    url: https://cvburgess.com/
+    description: |
+      Personal site of Charles Burgess
+    code: https://github.com/Xe/site
+
   - title: Xe Iaso
     img: /img/showcase/xeiaso.webp
     url: https://xeiaso.net/
