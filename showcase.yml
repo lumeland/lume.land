@@ -13,6 +13,13 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Newton Investment Partners
+    img: /img/showcase/newtoninvestment.webp
+    url: https://newtoninvestment.jp/
+    description: |
+      Multilanguage corporative site for Newton Investment Partners
+    code: https://github.com/eSolia/newtoninvestment.jp
+
   - title: Charles Burgess
     img: /img/showcase/cvburgess.webp
     url: https://cvburgess.com/
