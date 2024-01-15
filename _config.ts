@@ -105,14 +105,18 @@ site
       });
     }
   })
-  .use(minifyHTML());
+  .use(minifyHTML({
+    options: {
+      minify_css: false, // https://github.com/wilsonzlin/minify-html/issues/173
+    },
+  }));
 
 site.script("plugin-docs", [
   "deno doc --json https://deno.land/x/lume/plugins/feed.ts",
 ]);
 site.data("scheme", async (mod: string) => {
   try {
-    const url = `https://deno.land/x/lume@v2.0.1/${mod}`;
+    const url = `https://deno.land/x/lume@v2.0.3/${mod}`;
     const { defaults } = await import(url);
     const { Options } = await analyze(url, { maxDepth: 2, private: false });
 
