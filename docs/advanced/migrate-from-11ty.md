@@ -1,6 +1,7 @@
 ---
 title: Migrate from Eleventy
 description: How to migrate your project from Eleventy to Lume.
+url: false
 ---
 <!-- deno-fmt-ignore-file -->
 
