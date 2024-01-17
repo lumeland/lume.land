@@ -12,6 +12,11 @@ This plugin works exactly like [JSX](./jsx.md) but using
 [Preact](https://preactjs.com/) (a 3kb React alternative with the same API but
 faster and lighter) to render the JSX.
 
+Note that this plugin only provides JSX support to generate the pages at
+building time. This means that client-side properties like `onClick` won't work.
+If you want to use React for creating code for the browser (like SPAs), use the
+[ESbuild](./esbuild.md) plugin.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:

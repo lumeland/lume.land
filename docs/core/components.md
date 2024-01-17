@@ -88,7 +88,25 @@ export default function ({ comp }) {
 }
 ```
 
-### Nested components in Nunjucks
+Note that components created with text-based template engines (like Vento or
+Nunjucks) won't work as expected inside JSX templates because the HTML code will
+be escaped. To fix it you have to use the `dangerouslySetInnerHTML` property:
+
+```jsx
+export default function ({ comp }) {
+  // comp.Button is a Vento component: it returns a string, not a JSX element.
+  return (
+    <>
+      <h1>Welcome to my site.</h1>
+      <div
+        dangerouslySetInnerHTML={{ __html: <comp.Button text="Login" /> }}
+      />
+    </>
+  );
+}
+```
+
+### Nested components
 
 In Vento you can nest components in this way:
 
@@ -114,7 +132,7 @@ In Nunjucks it's very similar:
 {% endcomp %}
 ```
 
-The content of the components are passed in the `content` key:
+The content of the components are passed throught the `content` variable:
 
 <lume-code>
 

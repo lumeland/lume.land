@@ -13,6 +13,11 @@ a template language to create and render HTML code, very popular in some
 frameworks, like React. This plugin adds support for `JSX / TSX` to create pages
 and layouts, using `React` for rendering.
 
+Note that this plugin only provides JSX support to generate the pages at
+building time. This means that client-side properties like `onClick` won't work.
+If you want to use React for creating code for the browser (like SPAs), use the
+[ESbuild](./esbuild.md) plugin.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
