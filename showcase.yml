@@ -13,6 +13,13 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Morphopoiesis
+    img: /img/showcase/morphopoiesis.webp
+    url: https://morphopoiesis.art/
+    description: |
+      Notebook about Generative Art
+    code: https://github.com/ruigil/morphopoiesis.art
+
   - title: Newton Investment Partners
     img: /img/showcase/newtoninvestment.webp
     url: https://newtoninvestment.jp/
