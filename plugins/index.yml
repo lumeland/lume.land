@@ -41,3 +41,7 @@ plugins:
   - title: Shikiji
     description: Plugin to use the Shikiji library for syntax highlight.
     url: https://deno.land/x/lume_shikiji@0.0.1
+
+  - title: Fluent for Lume
+    description: A Fluent wrapper to help you easily build multilingual site with Lume 
+    url: https://deno.land/x/lume_fluent
