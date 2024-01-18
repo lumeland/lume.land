@@ -1,8 +1,10 @@
 <svg width="204" height="204" viewBox="0 0 204 204" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
   path { fill: black }
+  rect { fill: white }
   @media (prefers-color-scheme: dark) {
     path { fill: white }
+    rect { fill: black }
   }
 </style>
 <g clip-path="url(#clip0_347_441)">
@@ -13,7 +15,7 @@
 </g>
 <defs>
 <clipPath id="clip0_347_441">
-<rect width="204" height="204" fill="white"/>
+<rect width="204" height="204"/>
 </clipPath>
 </defs>
 </svg>
