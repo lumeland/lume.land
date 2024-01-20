@@ -17,7 +17,7 @@ also be used to create pages directly. You only have to create a file with the
 
 <lume-code>
 
-```vento {title="nunjucks-page.vto"}
+```vento {title="vento-page.vto"}
 ---
 title: Welcome to my page
 layout: layout.vto
@@ -47,8 +47,8 @@ links:
 
 </lume-code>
 
-This is an example of a page using Nunjucks. Like markdown, it can contain a
-front matter to store the page data, that is used to render the Nunjucks code.
+This is an example of a page using Vento. Like markdown, it can contain a
+front matter to store the page data, that is used to render the Vento code.
 Note that it has the `layout` variable so the result of rendering this page will
 be passed to the layout in the `content` variable (along with the other
 variables `title` and `links`).
@@ -60,7 +60,7 @@ rendering. You have to create a file with the extension `.page.js`. The `.page`
 sub-extension is required to distinguish the JavaScript files to generate static
 pages from other JavaScript files destined to the executed in the browser.
 
-The previous Nunjucks example in JavaScript is:
+The previous Vento example in JavaScript is:
 
 <lume-code>
 
@@ -98,7 +98,7 @@ export default function ({ title, links }) {
 
 </lume-code>
 
-As you can see, the variables exported in the front matter in the Nunjucks
+As you can see, the variables exported in the front matter in the Vento
 example are now exported as named ES modules.
 
 The default export is a function that returns the page content. The first
