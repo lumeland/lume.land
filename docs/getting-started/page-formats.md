@@ -47,11 +47,11 @@ links:
 
 </lume-code>
 
-This is an example of a page using Vento. Like markdown, it can contain a
-front matter to store the page data, that is used to render the Vento code.
-Note that it has the `layout` variable so the result of rendering this page will
-be passed to the layout in the `content` variable (along with the other
-variables `title` and `links`).
+This is an example of a page using Vento. Like markdown, it can contain a front
+matter to store the page data, that is used to render the Vento code. Note that
+it has the `layout` variable so the result of rendering this page will be passed
+to the layout in the `content` variable (along with the other variables `title`
+and `links`).
 
 ## Create pages in JavaScript
 
@@ -98,8 +98,8 @@ export default function ({ title, links }) {
 
 </lume-code>
 
-As you can see, the variables exported in the front matter in the Vento
-example are now exported as named ES modules.
+As you can see, the variables exported in the front matter in the Vento example
+are now exported as named ES modules.
 
 The default export is a function that returns the page content. The first
 argument contains all available data for this page (not only the same variables

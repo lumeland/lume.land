@@ -13,6 +13,13 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Daniel Saunders
+    img: /img/showcase/daniel-saunders.webp
+    url: https://daniel-saunders.com/
+    description: |
+      Personal site of Daniel, a web designer in Los Angeles.
+    code: https://github.com/dsaunders88/ds-blog-lume
+
   - title: Morphopoiesis
     img: /img/showcase/morphopoiesis.webp
     url: https://morphopoiesis.art/

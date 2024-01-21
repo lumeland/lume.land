@@ -388,6 +388,13 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://daniel-saunders.com/posts/notes/new-site-design-for-2024/
+      author: Daniel Saunders (daniel-saunders.com)
+      avatar: /img/avatars/testimonials/daniel_saunders.webp
+      date: January 20, 2024
+      text: New Site Design for 2024
+      type: article
+
     - url: https://twitter.com/DogaArmangil/status/1742463592115368416
       author: Doğa Armangil (@DogaArmangil)
       avatar: /img/avatars/testimonials/doga.webp
