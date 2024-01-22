@@ -83,7 +83,7 @@ Some interesting things:
   `/articles/second-page/chapter-2/`) that do have the `data` value.
 
 You can use this object in your templates to build a menu recursively. For
-example in Nunjucks:
+example in Vento:
 
 <lume-code>
 
@@ -165,7 +165,7 @@ following breadcrumb data:
 ]
 ```
 
-We can use this data to generate the breadcrumb with the following Nunjucks
+We can use this data to generate the breadcrumb with the following Vento
 code:
 
 ```vento
