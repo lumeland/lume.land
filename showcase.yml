@@ -39,7 +39,7 @@ sites:
     url: https://cvburgess.com/
     description: |
       Personal site of Charles Burgess
-    code: https://github.com/Xe/site
+    code: https://github.com/cvburgess/cvburgess.com
 
   - title: Xe Iaso
     img: /img/showcase/xeiaso.webp
