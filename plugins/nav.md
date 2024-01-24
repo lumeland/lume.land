@@ -165,8 +165,7 @@ following breadcrumb data:
 ]
 ```
 
-We can use this data to generate the breadcrumb with the following Vento
-code:
+We can use this data to generate the breadcrumb with the following Vento code:
 
 ```vento
 <ul>

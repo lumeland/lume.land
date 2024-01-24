@@ -334,6 +334,12 @@ support:
       img: /img/avatars/supporters/esolia.webp
       amount: 10
       recurrent: true
+    - name: Kevin Tortolini
+      url: https://opencollective.com/guest-16a5e928
+      img: /img/avatars/supporters/kevintortolini.webp
+      amount: 5
+      recurrent: true
+
   past_title: Lovely past sponsors
   past_sponsors:
     - name: Androw Nash
