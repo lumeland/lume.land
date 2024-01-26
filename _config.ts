@@ -14,7 +14,7 @@ import analyze, {
   mergeDefaults,
 } from "https://deno.land/x/aldara@v0.1.1/mod.ts";
 
-import ventoLang from "https://deno.land/x/vento@v0.9.1/highlightjs-vento.js";
+import ventoLang from "https://deno.land/x/vento@v0.10.2/highlightjs-vento.js";
 
 const markdown = {
   plugins: [toc],
