@@ -304,21 +304,6 @@ support:
       img: /img/avatars/supporters/dsaunders.webp
       amount: 1
       recurrent: true
-    - name: smm panel
-      url: https://bulkfollows.com/
-      img: /img/avatars/supporters/bfl.webp
-      amount: 1
-      recurrent: true
-    - name: smm panel
-      url: https://smmlite.com/
-      img: /img/avatars/supporters/sl.webp
-      amount: 1
-      recurrent: true
-    - name: Feedpixel
-      url: https://feedpixel.com/
-      img: /img/avatars/supporters/feedpixel.webp
-      amount: 1
-      recurrent: true
     - name: Victor Freire
       url: https://opencollective.com/victor-freire
       img: /img/avatars/supporters/victorfreire.webp
