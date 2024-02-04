@@ -5,7 +5,7 @@ order: 0
 ---
 
 With LumeCMS you can register different storages to use later to your documents,
-collections and uploads. Use the `app.storage()` function to register a storage
+collections and uploads. Use the `cms.storage()` function to register a storage
 method to your CMS:
 
 ```ts
@@ -18,13 +18,19 @@ cms.storage("name" /* Storage instance */);
 export default cms;
 ```
 
-LumeCMS support the following storage methods:
+LumeCMS support the following storages:
+
+## Lume sites
+
+For sites built with Lume, **you don't have to customize the storage,** because
+Lume automatically register the `src` filesystem storage pointing to the `src`
+folder of your site.
 
 ## File system
 
-To define filesystem storage in your config file, just import the storage class
-and register it with a name. For example, let's register a file system storage
-under the name "my_files":
+To define a filesystem storage in your config file, import the class and
+register it with a name. For example, let's register a file system storage under
+the name "my_files":
 
 ```ts
 import lumeCMS from "lume_cms/mod.ts";
@@ -61,9 +67,9 @@ folder name, so the file system storage is used automatically.
 
 ## KV
 
-[Deno KV](https://docs.deno.com/deploy/kv/manual) is a key-value database built
-directly into the Deno runtime. LumeCMS can use a KV instance as a storage. For
-example:
+[Deno Kv](https://docs.deno.com/deploy/kv/manual) is a key-value database built
+directly into the Deno runtime. LumeCMS can use a `Kv` instance to store
+content. For example:
 
 ```ts
 import lumeCMS from "lume_cms/mod.ts";
@@ -74,7 +80,7 @@ const cms = lumeCMS();
 cms.storage(
   "my_values",
   new Kv({
-    kv: await Deno.openKv(""),
+    kv: await Deno.openKv(),
     prefix: ["site_values"],
   }),
 );
@@ -86,9 +92,9 @@ The `prefix` argument is optional and allow to add a prefix as namespace.
 
 ## GitHub
 
-This storage allows to write and read values directly from a GitHub repository
-using the GitHub API. It's useful if you want to allow people without GitHub
-accounts or permission to edit the data.
+Allows to write and read values directly from a GitHub repository using the
+GitHub API. It's useful if you want to allow people without GitHub accounts or
+permission to edit the data.
 
 ```ts
 import lumeCMS from "lume_cms/mod.ts";

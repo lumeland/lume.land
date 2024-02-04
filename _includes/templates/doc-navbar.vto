@@ -1,6 +1,6 @@
 <nav class="doc-navbar">
   {{ for section of docs_menu }}
-  <details class="doc-navbar-section" {{ if url.includes(section.id) }}open{{ /if }}>
+  <details class="doc-navbar-section" {{ if url.startsWith(`/${main_menu}/${section.id}/`) }}open{{ /if }}>
     <summary>
       <span class="doc-navbar-section-title">{{ section.title }}</span>
     </summary>

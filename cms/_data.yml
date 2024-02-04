@@ -5,3 +5,5 @@ docs_menu:
     id: overview
   - title: Configuration
     id: configuration
+  - title: Fields
+    id: fields
