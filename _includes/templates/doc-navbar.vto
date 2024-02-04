@@ -5,7 +5,7 @@
       <span class="doc-navbar-section-title">{{ section.title }}</span>
     </summary>
     <ul class="doc-navbar-section-links">
-      {{ for page of search.pages("url^=/docs/" + section.id, "order title") }}
+      {{ for page of search.pages(`url^=/${main_menu}/` + section.id, "order title") }}
         <li>
           {{ if page.url == url }}
           <a href="{{ page.url }}" aria-current="page" title="{{ page.description }}">{{ page.title }}</a>

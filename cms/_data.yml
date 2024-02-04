@@ -1,0 +1,7 @@
+layout: layouts/docs.vto
+main_menu: cms
+docs_menu:
+  - title: Overview
+    id: overview
+  - title: Configuration
+    id: configuration
