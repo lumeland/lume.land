@@ -91,7 +91,7 @@ example in Vento:
 <ul class="menu">
   {{ for item of nav.menu().children }}
     <li>
-      {{ include "templates/menu_item.vto" }}
+      {{ include "templates/menu_item.vto" { item } }}
     </li>
   {{ /for }}
 </ul>
@@ -109,7 +109,7 @@ example in Vento:
 <ul>
   {{ for item of item.children }}
   <li>
-    {{ include "templates/menu_item.vto" }}
+    {{ include "templates/menu_item.vto" { item } }}
   </li>
   {{ /for }}
 </ul>

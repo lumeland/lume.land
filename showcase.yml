@@ -145,6 +145,7 @@ sites:
     img: /img/showcase/kille.webp
     url: https://kille.es/
     description: Personal site of Guille Reimunde.
+    code: https://gitlab.com/greim/kille
 
   - title: Exploit Notes
     img: /img/showcase/exploit_notes.webp
