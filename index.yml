@@ -275,11 +275,6 @@ support:
       img: /img/avatars/supporters/emilsadek.webp
       amount: 1
       recurrent: true
-    - name: Hendrik Mans
-      url: https://hendrik.mans.de/
-      img: /img/avatars/supporters/hmans.webp
-      amount: 5
-      recurrent: true
     - name: Romuald Bulyshko
       url: https://r13o.com/
       img: /img/avatars/supporters/romuald.webp
@@ -303,11 +298,6 @@ support:
       url: https://daniel-saunders.com/
       img: /img/avatars/supporters/dsaunders.webp
       amount: 1
-      recurrent: true
-    - name: Victor Freire
-      url: https://opencollective.com/victor-freire
-      img: /img/avatars/supporters/victorfreire.webp
-      amount: 5
       recurrent: true
     - name: Miguel Pinto
       url: https://opencollective.com/miguel-pinto2
@@ -364,6 +354,16 @@ support:
       url: https://aiotter.com/
       img: /img/avatars/supporters/aiotter.webp
       amount: 1
+      recurrent: true
+    - name: Victor Freire
+      url: https://opencollective.com/victor-freire
+      img: /img/avatars/supporters/victorfreire.webp
+      amount: 5
+      recurrent: true
+    - name: Hendrik Mans
+      url: https://hendrik.mans.de/
+      img: /img/avatars/supporters/hmans.webp
+      amount: 5
       recurrent: true
 
   contribute:
