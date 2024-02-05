@@ -5,7 +5,7 @@ order: 3
 ---
 
 Documents allows to define individual files that can be edited directly in the
-CMS. Unlike [collections](collections.md), documents can only be edited, but not
+CMS. Unlike [collections](collections.md), documents can be edited, but not
 removed or create new documents. It's useful if you want to be able to edit
 configuration files, data files or unique pages like the landing page.
 
@@ -18,17 +18,11 @@ To define a document in LumeCMS you need 3 things:
 The function `cms.document()` allows to define a document:
 
 ```ts
-import lumeCMS from "lume_cms/mod.ts";
-
-const cms = lumeCMS();
-
 cms.document("landing-page", "src:index.yml", [
   "title: text",
   "subtitle: text",
   "content: markdown",
 ]);
-
-export default cms;
 ```
 
 In the example above, we have defined the `landing-page` document, that is saved

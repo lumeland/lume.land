@@ -17,16 +17,10 @@ To define a collection in LumeCMS you need 3 things:
 The function `cms.collection()` allows to define a collection:
 
 ```ts
-import lumeCMS from "lume_cms/mod.ts";
-
-const cms = lumeCMS();
-
 cms.collection("posts", "src:posts/*.md", [
   "title: text",
   "content: markdown",
 ]);
-
-export default cms;
 ```
 
 In the example above, we have defined the `posts` collection, using the `src`

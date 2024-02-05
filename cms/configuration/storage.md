@@ -4,9 +4,9 @@ description: Setup different storages for your CMS
 order: 0
 ---
 
-With LumeCMS you can register different storages to use later to your documents,
-collections and uploads. Use the `cms.storage()` function to register a storage
-method to your CMS:
+With LumeCMS you can register different storages to use later for your
+documents, collections and uploads. Use the `cms.storage()` function to register
+a storage method to your CMS:
 
 ```ts
 import lumeCMS from "lume_cms/mod.ts";
@@ -20,17 +20,11 @@ export default cms;
 
 LumeCMS support the following storages:
 
-## Lume sites
-
-For sites built with Lume, **you don't have to customize the storage,** because
-Lume automatically register the `src` filesystem storage pointing to the `src`
-folder of your site.
-
 ## File system
 
 To define a filesystem storage in your config file, import the class and
 register it with a name. For example, let's register a file system storage under
-the name "my_files":
+the name "my_files", pointing to the `./files` folder:
 
 ```ts
 import lumeCMS from "lume_cms/mod.ts";
@@ -65,6 +59,12 @@ export default cms;
 As you can see, if you define a string as the storage, LumeCMS assume it's a
 folder name, so the file system storage is used automatically.
 
+### Lume sites
+
+For sites built with Lume, **you don't need to customize the storage** because
+Lume automatically register the `src` filesystem storage pointing to the `src`
+folder of your site.
+
 ## KV
 
 [Deno Kv](https://docs.deno.com/deploy/kv/manual) is a key-value database built
@@ -81,14 +81,11 @@ cms.storage(
   "my_values",
   new Kv({
     kv: await Deno.openKv(),
-    prefix: ["site_values"],
   }),
 );
 
 export default cms;
 ```
-
-The `prefix` argument is optional and allow to add a prefix as namespace.
 
 ## GitHub
 
