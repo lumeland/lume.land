@@ -115,7 +115,7 @@ to define this variable:
 ```json
 {
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | DENO_DIR=_vendor deno run --unstable -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | DENO_DIR=_vendor deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   }
