@@ -110,10 +110,10 @@ exported by the page, but also other data provided by `_data` files).
 Lume supports several formats to generate pages.
 [Go to the Plugins section](/plugins/?status=all&data_format=on&template_engine=on)
 to see more info about all available formats. Some of them are installed by
-default (like [Nunjucks](/plugins/nunjucks.md), [YAML](/plugins/yaml.md),
+default (like [Vento](/plugins/vento.md), [YAML](/plugins/yaml.md),
 [Modules](/plugins/modules.md) etc) and others need to be installed in your
-`_config.ts` file (like [Eta](/plugins/eta.md), [JSX](/plugins/jsx.md),
-[Liquid](/plugins/liquid.md) or [Pug](/plugins/pug.md)).
+`_config.ts` file (like [Nunjucks](/plugins/nunjucks.md), [Eta](/plugins/eta.md),
+[JSX](/plugins/jsx.md), [Liquid](/plugins/liquid.md) or [Pug](/plugins/pug.md)).
 
 ## Data model
 
