@@ -13,6 +13,13 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
 
+  - title: Nathan Furnal
+    img: /img/showcase/nathanfurnal.webp
+    url: https://nathanfurnal.xyz/
+    description: |
+      Personal blog of Nathan Furnal.
+    code: https://github.com/Nathan-Furnal/blog
+
   - title: Daniel Saunders
     img: /img/showcase/daniel-saunders.webp
     url: https://daniel-saunders.com/
