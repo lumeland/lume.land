@@ -20,6 +20,13 @@ sites:
       Personal blog of Nathan Furnal.
     code: https://github.com/Nathan-Furnal/blog
 
+  - title: LePichu
+    img: /img/showcase/lepichu.webp
+    url: https://lepichudoes.deno.dev/blog/
+    description: |
+      Personal blog Ishat "LePichu" Gupta.
+    code: https://github.com/LePichu/bin_chilling_v2
+
   - title: Daniel Saunders
     img: /img/showcase/daniel-saunders.webp
     url: https://daniel-saunders.com/
