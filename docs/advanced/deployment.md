@@ -168,8 +168,9 @@ jobs:
 
 ## Netlify
 
-[Netlify](https://www.netlify.com/) doesn't include Deno installed by default
-but it's possible to install and use it in the build command.
+According the ["Available software at build time"](https://docs.netlify.com/configure-builds/available-software-at-build-time/#tools) 
+page at Netlify's documentation website, Deno is one of several supported runtimes at build time. In order to build your project, you'll need
+to tell Netlify which command to run at build time, which is `deno task build` in this case. 
 
 Create `netlify.toml` file in your repository with the following code:
 
@@ -178,10 +179,7 @@ Create `netlify.toml` file in your repository with the following code:
 ```toml {title="netlify.toml"}
 [build]
   publish = "_site"
-  command = """
-    curl -fsSL https://deno.land/x/install/install.sh | sh && \
-    /opt/buildhome/.deno/bin/deno task build \
-  """
+  command = "deno task build"
 ```
 
 </lume-code>
