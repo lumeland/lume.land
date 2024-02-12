@@ -12,6 +12,12 @@ sites:
     url: https://lume.land/
     description: This web site.
     code: https://github.com/lumeland/lume.land
+  
+  - title: Clear EVM Wallet Docs
+    img: /img/showcase/clear-wallet-docs.webp
+    url: https://clear-wallet.flashsoft.eu/
+    description: Documentation for open-source Ethereum wallet Clear EVM Wallet
+    code: https://github.com/andrei0x309/docs-clear-wallet
 
   - title: Nathan Furnal
     img: /img/showcase/nathanfurnal.webp
@@ -372,8 +378,3 @@ sites:
     description: Minimalist blog template built for lume 
     code: https://github.com/officialrajdeepsingh/Minimalist-blog
 
-  - title: Clear EVM Wallet Docs
-    img: /img/showcase/clear-wallet-docs.webp
-    url: https://clear-wallet.flashsoft.eu/
-    description: Documentation for open-source Ethereum wallet Clear EVM Wallet
-    code: https://github.com/andrei0x309/docs-clear-wallet
