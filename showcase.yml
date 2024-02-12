@@ -371,3 +371,9 @@ sites:
     url: https://minimalist-blog-x8c5ngg3kzt0.deno.dev/
     description: Minimalist blog template built for lume 
     code: https://github.com/officialrajdeepsingh/Minimalist-blog
+
+  - title: Clear EVM Wallet Docs
+    img: /img/showcase/clear-wallet-docs.webp
+    url: https://clear-wallet.flashsoft.eu/
+    description: Documentation for open-source Ethereum wallet Clear EVM Wallet
+    code: https://github.com/andrei0x309/docs-clear-wallet
