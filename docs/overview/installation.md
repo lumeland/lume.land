@@ -82,7 +82,7 @@ all the time, you can install the [Lume CLI](https://github.com/lumeland/cli)
 script with:
 
 ```sh
-deno install --allow-run --allow-read --name lume --force --reload https://deno.land/x/lume_cli/mod.ts
+deno install --allow-run --allow-env --allow-read --name lume --force --reload https://deno.land/x/lume_cli/mod.ts
 ```
 
 This creates the `lume` command:
