@@ -168,9 +168,12 @@ jobs:
 
 ## Netlify
 
-According the ["Available software at build time"](https://docs.netlify.com/configure-builds/available-software-at-build-time/#tools) 
-page at Netlify's documentation website, Deno is one of several supported runtimes at build time. In order to build your project, you'll need
-to tell Netlify which command to run at build time, which is `deno task build` in this case. 
+According the
+["Available software at build time"](https://docs.netlify.com/configure-builds/available-software-at-build-time/#tools)
+page at Netlify's documentation website, Deno is one of several supported
+runtimes at build time. In order to build your project, you'll need to tell
+Netlify which command to run at build time, which is `deno task build` in this
+case.
 
 Create `netlify.toml` file in your repository with the following code:
 

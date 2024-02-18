@@ -4,9 +4,9 @@ description: Setup different storages for your CMS
 order: 0
 ---
 
-With LumeCMS you can register different storages to use later for your
-documents, collections and uploads. Use the `cms.storage()` function to register
-a storage method to your CMS:
+With LumeCMS you can register different storages to use for your documents,
+collections and uploads. Use the `cms.storage()` function to register a storage
+method:
 
 ```ts
 import lumeCMS from "lume_cms/mod.ts";
@@ -21,6 +21,9 @@ export default cms;
 LumeCMS support the following storages:
 
 ## File system
+
+**Note**: Lume automatically configure the `src` storage pointing to the `src`
+folder. So you don't need to setup a file system storage.{.tip}
 
 To define a filesystem storage in your config file, import the class and
 register it with a name. For example, let's register a file system storage under
@@ -42,7 +45,7 @@ cms.storage(
 export default cms;
 ```
 
-Now we can use the `my_files` storage to read and write content by the CMS.
+The `my_files` storage is now available to read and write content by the CMS.
 Because the file system is the most common way to read and write data, the
 example above can be simplified as following:
 
@@ -58,12 +61,6 @@ export default cms;
 
 As you can see, if you define a string as the storage, LumeCMS assume it's a
 folder name, so the file system storage is used automatically.
-
-### Lume sites
-
-For sites built with Lume, **you don't need to customize the storage** because
-Lume automatically register the `src` filesystem storage pointing to the `src`
-folder of your site.
 
 ## KV
 

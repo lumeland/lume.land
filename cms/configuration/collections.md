@@ -11,7 +11,7 @@ author data files, etc.
 To define a collection in LumeCMS you need 3 things:
 
 - The collection name. For example: "Posts".
-- The storage used to read and write the content.
+- The storage used to read and write the content. Probably "src".
 - The fields used to modify the content.
 
 The function `cms.collection()` allows to define a collection:

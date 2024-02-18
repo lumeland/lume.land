@@ -1,7 +1,7 @@
 ---
 title: Uploads
 description: Setup folders to upload files by the CMS
-order: 4
+order: 6
 ---
 
 Uploads are LumeCMS primitives to configure folders where upload, edit or remove
