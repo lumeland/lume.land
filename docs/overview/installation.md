@@ -93,9 +93,10 @@ This creates the `lume` command:
 - `lume upgrade-cli` will upgrade the Lume CLI script to the latest version.
 - Any other command will be delegated to `deno task lume [...args]`. For
   example, `lume -s` will run `deno task lume -s`.
-- The CLI command has also some useful shorcuts like `--drafts` (to create the
-  `LUME_DRAFTS=true` environment variable) and `--debug`, `--info`, `--warning`,
-  `--error` and `--critical` to change the `LUME_LOGS` environment variable.
+- The CLI command has also some useful shorcuts.
+  You can set the environment variable `LUME_DRAFTS=true` to enable draft
+  page output. Similarly, adjust logging levels using the environment variable
+  `LUME_LOGS` with values `DEBUG`, `INFO`, `WARNING`, `ERROR`, or `CRITICAL`.
 
 ## Update Lume
 
