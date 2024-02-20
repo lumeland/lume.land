@@ -168,6 +168,38 @@ This code outputs something like:
 The [Sitemap plugin](./sitemap.md) is compatible with this plugin, so the
 generated sitemap will contain the translated versions of the pages.
 
+### x-default links
+
+This plugin supports the
+[`x-default` value for unmatches languages](https://developers.google.com/search/docs/specialty/international/localized-versions#xdefault).
+This option is useful to specify a fallback page for users whose language
+settings don't match any of your site's localized version.
+
+- You can link to a language selector page.
+- Or to any of the translated version of the current page.
+
+To generate a `x-default` link, create the `unmatchedLangUrl` value in your
+front matter:
+
+```yml
+lang: gl
+unmatchedLangUrl: /language-selector/
+```
+
+In this example, this page will have a `x-default` link to the
+`/language-selector/` page. You can save this variable in a `_data` file to
+apply this value to all pages.
+
+Alternatively, you can specify one of the available languages as the `x-default`
+language:
+
+```yml
+lang: gl
+unmatchedLangUrl: en
+```
+
+In this example, the `x-default` link will have the URL to the English version.
+
 ## Multilanguage data
 
 With this plugin, you can have your data in different languages that will be
