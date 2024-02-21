@@ -31,14 +31,16 @@ site.use(fff(/* Options */));
 export default site;
 ```
 
-## Example
+## Usage
 
-As an example of what this plugin can do, Lume
-[Data model](../docs/advanced/the-data-model.md) use the variable `date` to save
-the page date. But `date` can have many meanings (creationg date, last update
-date, published date, etc). FFF standard defines three date variables:
-`created`, `updated` and `published`, so the plugin will create one of these
-variables from the `date` variable:
+The plugin can modify the page data using the
+[Flavor Transform feature](https://fff.js.org/concepts/flavor-transform.html).
+
+As an example, Lume [Data model](../docs/advanced/the-data-model.md) use the
+variable `date` to save the page date. But `date` can have many meanings
+(creationg date, last update date, published date, etc). FFF standard defines
+three date variables: `created`, `updated` and `published` and it will create
+one of these variables from the `date` variable:
 
 ```js
 site.use(fff({

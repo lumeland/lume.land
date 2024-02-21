@@ -11,7 +11,7 @@ tags:
 The `slugify_urls` plugin converts all URLs in your pages and files by removing
 or replacing potentially conflicting characteres like accents, spaces, etc.
 
-Once enabled, all output paths are **automatically slugified:** the spaces are
+Once enabled, the output paths are **automatically slugified:** the spaces are
 replaced with `-`, characters like `ñ` or `á` are replaced by ASCII equivalents
 (`n` and `a`), and converted to lower case:
 
@@ -36,10 +36,30 @@ export default site;
 
 ## Configuration
 
-You can configure the slugifier in your `_config.js` file with the following
-options:
+By default, **only HTML pages are slugified**. If you want to apply the plugin
+to other files, like jpg images, use the `extensions` option:
 
 ```js
+site.use(slugifyUrls({
+  extensions: [".html", ".jpg"],
+}));
+```
+
+Or set a `*` to slugify all files:
+
+```js
+site.use(slugifyUrls({
+  extensions: "*",
+}));
+```
+
+### Slugify options
+
+You can configure the slugifier with the following options:
+
+```js
+/* Default options */
+
 site.use(slugifyUrls({
   lowercase: true, // Converts all characters to lowercase
   alphanumeric: true, // Replace non-alphanumeric characters with their equivalent. Example: ñ to n.

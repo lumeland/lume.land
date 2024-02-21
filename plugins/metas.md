@@ -134,4 +134,5 @@ As of Lume 1.17.0 is possible to use CSS selectors using the `$` prefix:
 ```yml
 metas:
   title: "$ h1" # Use the content of the first <h1> element
+  image: "$ img.cover attr(src)" # Use the src attribute of img.cover element
 ```

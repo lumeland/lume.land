@@ -11,10 +11,10 @@ This plugin creates automatically images with the content of your pages. It
 works great combined with [metas](./metas.md) plugin to create Open Graph meta
 tags.
 
-It uses [Satori library](https://github.com/vercel/satori) to render the pages
-and convert the HTML code to SVG and [Sharp](https://sharp.pixelplumbing.com/)
-to convert the SVG to png. The URL of the image generated is saved in the
-`metas.image` variable, so it's detected by `metas` plugin.
+The library [Satori](https://github.com/vercel/satori) is used to generate the
+SVG images (that are then converted to PNG with
+[Sharp](https://sharp.pixelplumbing.com/)). The URL of the image generated is
+saved in the `metas.image` variable, so it's detected by `metas` plugin.
 
 ## Installation
 
@@ -40,13 +40,13 @@ content with the variable `openGraphLayout`. For example:
 
 ```yml
 ---
-openGraphLayout: /layouts/og.jsx
+openGraphLayout: /layouts/og_images.jsx
 ---
 ```
 
-Like the `layout` variable, used to render a page and generate the HTML, the
+As `layout` variable is used to render a page and generate the HTML, the
 `openGraphLayout` is used to render the page and generate the Open Graph image.
-You can use `_data` files to configure the same layout to all pages or different
+You can use `_data` files to set the same layout to all pages or different
 layouts per directory.
 
 ### Satory library
@@ -88,7 +88,7 @@ export default function ({ title, description }) {
 }
 ```
 
-As you can see the layout is similar to a standard JSX layout in Lume. The page
+As you can see, the layout is similar to a standard JSX layout in Lume. The page
 data is passed in the first argument so you can use the title, description or
 any other variable to generate the image.
 
@@ -97,7 +97,7 @@ See the documentation for a
 by Satory.
 
 You can [use the Playground](https://og-playground.vercel.app/) for testing and
-design experimentation.
+experimentation.
 
 ### Fonts and configuration
 
@@ -139,8 +139,8 @@ site.use(openGraphImages({
 
 ### Output
 
-The output images have the same URL as the HTML pages but with the `.png`
-extension. For example:
+The output images have the same path as the HTML pages but with the `.png`
+extension instead of `.html`. For example:
 
 - The page `/example.html` generates the image `/example.png`.
 - The page `/example/` generates the image `/example/index.png`.

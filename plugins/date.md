@@ -86,8 +86,8 @@ You can configure them in `_config.ts` by importing them from npm:
 
 ```js
 import date from "lume/plugins/date.ts";
-import gl from "npm:date-fns/locale/gl/index.js";
-import es from "npm:date-fns/locale/es/index.js";
+import { gl } from "npm:date-fns/locale/gl";
+import { es } from "npm:date-fns/locale/es";
 
 site.use(date({
   locales: { gl, es },
