@@ -8,9 +8,9 @@ tags:
 
 ## Description
 
-This plugin allows to create redirections from one page to other. It's
-compatible with different configurations methods like Netlify, Vercel, JSON or
-HTML pages with `http-equiv="refresh"` meta tags.
+This plugin allows to create redirections from one page to other. It can output
+Netlify and Vercel config files, JSON and HTML pages with `http-equiv="refresh"`
+meta tags.
 
 ## Installation
 
@@ -33,50 +33,42 @@ Let's say you have the following page in your site:
 
 ```yml
 ---
-url: /articles/hi/
+url: /articles/hello/
 ---
-
-# Welcome!
 ```
 
-At some point, you decide to change the url to simply `/hi/`. All urls to the
-`/articles/hi/` will be broken and the SEO ranking lost. To avoid that, you can
-create a redirection from the old url to the new one, so both links will work
-fine. To do that, you only have to create the `oldUrl` variable with the
-previous url:
+At some point, you decide to change the url to simply `/hello/`. All urls to
+`/articles/hello/` will be broken and the SEO ranking lost. To avoid that, you
+can create a redirection from the old url to the new one, so both links will
+work fine. You only have to create the `oldUrl` variable with the previous url:
 
 ```yml
 ---
-url: /hi/
-oldUrl: /articles/hi/
+url: /hello/
+oldUrl: /articles/hello/
 ---
-
-# Welcome!
 ```
 
-It's also possible to define several old urls with an array, if you changed the
-page url several times:
+Use an array to specify more than one old URL:
 
 ```yml
 ---
-url: /hi/
+url: /hello/
 oldUrl:
-  - /articles/hi/
-  - /articles/older-url/
+  - /articles/hello/
+  - /articles/older-hello/
 ---
-
-# Welcome!
 ```
 
 The plugin will generate automatically the redirections from the old page(s) to
-the new one. There are 4 different methods that you can configure with the
-`output` variable:
+the new one. There are 4 different output methods:
 
 - **html:** It's the default value. It creates an html page for each old url
-  with a `<meta http-equiv="refresh" content="0; url=...">` tag to redirect to
-  the new url.
+  with a `<meta http-equiv="refresh" content="0; url="...">` tag. This method
+  doesn't require any server configuration.
 - **json:** To create the `_redirects.json` JSON file with all redirects,
-  compatible with the [redirects](../docs/core/server.md#redirects) middleware.
+  compatible with the [redirects](../docs/core/server.md#redirects) middleware,
+  which works on Deno Deploy.
 - **netlify:** To create (or update) a `_redirects` file,
   [compatible with Netlify](https://docs.netlify.com/routing/redirects/).
 - **vercel:** To create (or update) the
