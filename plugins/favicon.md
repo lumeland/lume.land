@@ -12,12 +12,12 @@ This plugin reads a file (by default `/favicon.svg`) and generates the following
 files:
 
 - `/favicon.ico`
-- `/favicon-16.png`
-- `/favicon-32.png`
 - `/apple-touch-icon.png`
 
 It also add the `<link>` elements to all HTML pages to configure the favicons
-properly.
+properly, following the
+[Definitive edition of "How to Favicon" in 2023](https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7)
+article to give priority to SVG format.
 
 ## Installation
 
