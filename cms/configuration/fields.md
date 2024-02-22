@@ -9,8 +9,8 @@ Fields define the data type and interface used for the entries inside
 
 All fields must have a name and a type.
 
-- `name`: Defines the entry name used to store the value.
-- `type`: Defines the data format and interface used in the CMS frontend.
+- `name`: The name of the variable used to store the value in the document.
+- `type`: The data format and interface used in the CMS frontend.
 
 Let's say we have the following markdown document:
 
@@ -29,7 +29,7 @@ This document has three fields:
 - The `date` which is a date time.
 - The `content` which is a markdown content.
 
-We can configure LumeCMS to edit this page in this way:
+To configure LumeCMS to edit this page:
 
 ```ts
 cms.document("happy-2024", "src:happy-2024.yml", [
@@ -62,6 +62,17 @@ cms.document("happy-2024", "src:happy-2024.yml", [
 ]);
 ```
 
+The string notation allow to define a value as required with an exclamation
+mark:
+
+```ts
+cms.document("happy-2024", "src:happy-2024.yml", [
+  "title: text!", // This value is required
+  "date: datetime",
+  "content: markdown",
+]);
+```
+
 ## Common field options
 
 Fields can have other options to validate or customize some aspects. The
@@ -69,7 +80,7 @@ following options are available in all fields:
 
 <!-- deno-fmt-ignore-start -->
 name (required)
-: The field name. Used for the property name used to store the value.
+: Used for the variable name where the value is stored.
 
 type (required)
 : The field type. Every field type has a different UI and can transform the value before save it.
@@ -81,10 +92,12 @@ description
 : An optional description that will be visible next to the label in the UI.
 
 value
-: The default value of this field if it's not defined. It's used when creating new documents in a collection.
+: The default value of this field if it's not defined. It's used to create new documents in a collection with some predefined values.
 
 attributes
 : An object with extra attributes to pass to the input in the UI. This allows to set HTML validation attributes like `required`, `min`, `max`, `maxlength`, `pattern`, etc.
+
+<!-- deno-fmt-ignore-end -->
 
 This is an example of fields with some extra options:
 
@@ -97,8 +110,8 @@ This is an example of fields with some extra options:
     description: "It will be visible in the browser tab",
     attributes: {
       required: true,
-      maxlength: 100
-    }
+      maxlength: 100,
+    },
   },
   {
     name: "date",
@@ -107,15 +120,16 @@ This is an example of fields with some extra options:
     value: new Date(),
     description: "Set a future date if you want to publish it later",
     attributes: {
-      placeholder: "For example: 2024-01-01 00:00:01"
-    }
+      placeholder: "For example: 2024-01-01 00:00:01",
+    },
   },
   {
     name: "content",
     type: "markdown",
     label: "Page content",
     value: "Write **markdown** code here",
-    description: `<a target="_blank" href="https://www.markdownguide.org">More info about markdown syntax</a>`,
-  }
-]
+    description:
+      `<a target="_blank" href="https://www.markdownguide.org">More info about markdown syntax</a>`,
+  },
+];
 ```

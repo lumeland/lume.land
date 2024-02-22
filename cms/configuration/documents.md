@@ -6,8 +6,8 @@ order: 3
 
 Documents allows to define individual files that can be edited directly in the
 CMS. Unlike [collections](collections.md), documents can be edited, but not
-removed or create new documents. It's useful if you want to be able to edit
-configuration files, data files or unique pages like the landing page.
+removed or created. It's useful if you want to be able to edit configuration
+files, data files or unique pages like the landing page.
 
 To define a document in LumeCMS you need 3 things:
 

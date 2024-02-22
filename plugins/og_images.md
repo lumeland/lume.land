@@ -1,6 +1,7 @@
 ---
 title: OG images
 description: Plugin to create Open Graph images automatically
+mod: plugins/og_images.ts
 tags:
   - images
 ---

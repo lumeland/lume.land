@@ -28,5 +28,4 @@ storage (selecting all `.md` files inside the `posts` folder). The third
 argument is the list of fields for this collection. See
 [fields documentation](./fields.md) for more info about this value.
 
-Once created this collection, the user can create, edit and remove posts. All
-the content will be stored in the `src:posts` folder as markdown documents.
+Collections can create, edit and remove documents.

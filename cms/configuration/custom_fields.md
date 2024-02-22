@@ -11,8 +11,8 @@ which makes very easy to extend it with new fields.
 To define a new field, use the `cms.field()` function with the field definition,
 which is an object with the following values:
 
-- **tag**: The tag name of the custom element used in the UI.
-- **jsImport**: The JavaScript file where the custom element is defined. This
+- **tag**: The tag name of the custom element used in the HTML code.
+- **jsImport**: The URL of the JavaScript file with the custom element. This
   file will be loaded in the HTML.
 - **transformData**: (Optional) A function to transform the value received by
   the web component before save it.
@@ -33,12 +33,11 @@ cms.field({
 
 ## Creating a custom element
 
-When a custom element is created for a new field, is recommended to extend the
-`Field` class from LumeCMS, which provides some basic features that you will
-need:
+When a custom element is created, it's recommended to extend the `Field` class
+from LumeCMS, which provides some basic features that you will need.
 
 ```js
-import { Field } from "lume_cms/static/components/field.js";
+import { Field } from "lume_cms/components/field.js";
 
 customElements.define(
   "percentage-field",
@@ -50,8 +49,8 @@ customElements.define(
 );
 ```
 
-The `init()` function will be executed when the component is inserted in the
-DOM. The `Field` class also provides the following properties:
+The `init()` function will be executed the first time the component is inserted
+in the DOM. The `Field` class also provides the following properties:
 
 - **schema:** The options of the field (name, label, description, attributes,
   etc).
@@ -90,8 +89,8 @@ creates a new DOM element and append it to the element passed in the first
 argument. The example above can be improved in this way:
 
 ```js
-import { Field } from "lume_cms/static/components/field.js";
-import { push } from "lume_cms/static/components/utils.js";
+import { Field } from "lume_cms/components/field.js";
+import { push } from "lume_cms/components/utils.js";
 
 customElements.define(
   "percentage-field",

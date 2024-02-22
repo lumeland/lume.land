@@ -1,9 +1,9 @@
 ---
 title: LumeCMS
-description: LumeCSM is a CMS for static sites.
+description: LumeCMS is a CMS to manage the content of any site.
 ---
 
-LumeCMS is a Deno native CMS to easily manage the content of static sites.
+LumeCMS is a Deno native CMS to easily manage the content of any website.
 Despite its name, it can be used not only for Lume sites, but also for any other
 static site generator like Eleventy, Hugo, Jekyll, etc.
 

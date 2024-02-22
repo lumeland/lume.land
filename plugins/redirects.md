@@ -1,6 +1,7 @@
 ---
 title: Redirects
 description: To create redirections from one page to other
+# mod: plugins/redirects.ts
 tags:
   - utils
   - urls
