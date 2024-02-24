@@ -23,7 +23,7 @@ To add LumeCMS to your site, create the `_cms.ts` configuration file with the
 following structure:
 
 ```ts
-import lumeCMS from "lume/deps/cms.ts";
+import lumeCMS from "lume/cms.ts";
 
 const cms = lumeCMS();
 
