@@ -33,10 +33,10 @@ export default cms;
 ```
 
 Go to configuration section to learn how to configure LumeCMS with
-[storage](../configuration/storage.md),
-[collections](../configuration/collections.md),
-[documents](../configuration/documents.md) and
-[uploads](../configuration/uploads.md).
+[storage](./configuration/storage.md),
+[collections](./configuration/collections.md),
+[documents](./configuration/documents.md) and
+[uploads](./configuration/uploads.md).
 
 ## Run in localhost
 
