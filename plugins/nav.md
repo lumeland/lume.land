@@ -107,9 +107,9 @@ example in Vento:
 {{ /if }}
 
 <ul>
-  {{ for item of item.children }}
+  {{ for child of item.children }}
   <li>
-    {{ include "templates/menu_item.vto" { item } }}
+    {{ include "templates/menu_item.vto" { item: child } }}
   </li>
   {{ /for }}
 </ul>
