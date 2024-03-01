@@ -97,6 +97,9 @@ value
 attributes
 : An object with extra attributes to pass to the input in the UI. This allows to set HTML validation attributes like `required`, `min`, `max`, `maxlength`, `pattern`, etc.
 
+init
+: A function that will be invoked before showing this field in the front-end. It allows to change the field configuration dynamically. More info below.
+
 <!-- deno-fmt-ignore-end -->
 
 This is an example of fields with some extra options:
@@ -133,3 +136,42 @@ This is an example of fields with some extra options:
   },
 ];
 ```
+
+## The `init` function
+
+The `init` function allows to dynamically change the configuration of any field
+everytime it is used. Let's see the following example:
+
+```js
+{
+  name: "password",
+  type: "text",
+  init(field) {
+    field.value = generateRandomPassword();
+  }
+}
+```
+
+Here we have defined a `text` field to store a password. The default value is
+generated dynamically everytime this field is used in a collection or document.
+
+Lume adapter stores the `lume` instance in the
+[`data` option](./options.md#data) automatically. You can access to this object
+to modify the field configuration using the site data. For example:
+
+```js
+{
+  name: "tags",
+  type: "list",
+  init(field) {
+    const lume = field.data.lume;
+    const allTags = lume.search.values("tags");
+    field.options = allTags;
+  }
+}
+```
+
+In this example, we are using the
+[Search.values](../../plugins/search.md#get-all-values-of-a-key) function to get
+all tags used in the website and configure the
+[available options](../fields/list.md#options) of the field.

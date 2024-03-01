@@ -29,3 +29,17 @@ argument is the list of fields for this collection. See
 [fields documentation](./fields.md) for more info about this value.
 
 Collections can create, edit and remove documents.
+
+You can include a short description that will be visible in the UI with the
+format `name: description`. For example:
+
+```ts
+cms.collection(
+  "posts: Here you add, edit or delete the posts of your blog",
+  "src:posts/*.md",
+  [
+    "title: text",
+    "content: markdown",
+  ],
+);
+```

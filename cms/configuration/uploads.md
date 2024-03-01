@@ -21,3 +21,13 @@ cms.upload("images", "src:images");
 
 In the example above, we have defined the `images` upload folder, pointing to
 the `images` folder in the `src` storage.
+
+You can include a short description that will be visible in the UI with the
+format `name: description`. For example:
+
+```ts
+cms.upload(
+  "images: Here you can manage all images of your posts",
+  "src:images",
+);
+```
