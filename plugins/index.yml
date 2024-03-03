@@ -46,6 +46,6 @@ plugins:
     description: A Fluent wrapper to help you easily build multilingual site with Lume 
     url: https://deno.land/x/lume_fluent
 
-  - title: Glow your Lume syntax!
-    description: Glow Syntax Highlighter for your Lume site!
+  - title: 🌟 Glow your Lume syntax!
+    description: Glow Syntax Highlighter for your Lume site! The lightweight code highlighter you ever need!
     url: https://deno.land/x/lume_glow
