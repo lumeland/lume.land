@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
   
+  - title: RGBCube
+    img: /img/showcase/rgbcube.webp
+    url: https://rgbcu.be/
+    description: The official website and link portal of RGBCube and his work.
+    code: https://github.com/RGBCube/Site
+  
   - title: Clear EVM Wallet Docs
     img: /img/showcase/clear-wallet-docs.webp
     url: https://clear-wallet.flashsoft.eu/
