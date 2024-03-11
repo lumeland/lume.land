@@ -26,7 +26,7 @@ the CMS:
       name: "title",
       type: "object",
       fields: [
-        "text: string"
+        "text: text"
       ]
     },
     {
