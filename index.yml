@@ -315,7 +315,7 @@ support:
       amount: 5
       recurrent: true
     - name: Pavel Zinoviev
-      url: https://opencollective.com/pavel-zinoviev
+      url: https://mastodon.social/@pavelzinoviev
       img: /img/avatars/supporters/pavelzinoviev.webp
       amount: 3
       recurrent: true
