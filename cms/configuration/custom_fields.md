@@ -14,19 +14,21 @@ which is an object with the following values:
 - **tag**: The tag name of the custom element used in the HTML code.
 - **jsImport**: The URL of the JavaScript file with the custom element. This
   file will be loaded in the HTML.
-- **transformData**: (Optional) A function to transform the value received by
-  the web component before save it.
+- **applyChanges**: A function to store the new value received by the web
+  component in the document object before store it.
 - **init**: (Optional) A function to initialize every instance of the field.
 
 For example, let's create a new field for percentages, that only accepts numbers
 between 0-100:
 
 ```js
-cms.field({
+cms.field("percentage", {
   tag: "percentage-field",
   jsImport: "https://example.com/custom-fields/percentage-field.js",
-  transformData(value) {
-    return value ? Number(value) : undefined;
+  applyChanges(data, changes, field) {
+    const { name } = field;
+    const value = changes[name];
+    data[name] value ? Number(value) : undefined;
   },
 });
 ```
