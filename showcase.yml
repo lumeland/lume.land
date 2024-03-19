@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
   
+  - title: TRG23
+    img: /img/showcase/trg23.webp
+    url: https://trg23.netlify.app/
+    description: An event about technology and business in Madrid, Spain.
+    code: https://github.com/tarugoconf/TRG23
+  
   - title: RGBCube
     img: /img/showcase/rgbcube.webp
     url: https://rgbcu.be/
