@@ -4,7 +4,7 @@ export default (request: Request) => {
   const agent = headers.get("user-agent");
 
   if (!accept?.includes("text/html") && !isOpenGraphUA(agent)) {
-    return Response.redirect("https://deno.land/x/deno_init/mod.ts", 301);
+    return Response.redirect("https://deno.land/x/lume_init/mod.ts", 301);
   }
 };
 
