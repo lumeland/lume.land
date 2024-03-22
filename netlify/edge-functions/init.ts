@@ -1,10 +1,17 @@
-export default (request: Request) => {
+export default async (request: Request) => {
   const { headers } = request;
   const accept = headers.get("accept");
   const agent = headers.get("user-agent");
 
   if (!accept?.includes("text/html") && !isOpenGraphUA(agent)) {
-    return Response.redirect("https://deno.land/x/lume_init/mod.ts", 301);
+    const res = await fetch(
+      `https://cdn.deno.land/lume_init/meta/versions.json`,
+    );
+    const versions = await res.json();
+    return Response.redirect(
+      `https://deno.land/x/lume_init@${versions.latest}/mod.ts`,
+      301,
+    );
   }
 };
 
