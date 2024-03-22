@@ -13,7 +13,7 @@ instructions if you don't have it installed yet.
 To setup Lume in your project folder, run the following command:
 
 ```sh
-deno run -Ar https://deno.land/x/lume/init.ts
+deno run -Ar https://lume.land
 ```
 
 This command creates the following files:
@@ -87,9 +87,8 @@ deno install --allow-run --allow-env --allow-read --name lume --force --reload h
 
 This creates the `lume` command:
 
-- `lume init` will run the command
-  `deno run -Ar https://deno.land/x/lume/init.ts` to initialize Lume in the
-  current directory.
+- `lume init` will run the command `deno run -Ar https://lume.land` to
+  initialize Lume in the current directory.
 - `lume upgrade-cli` will upgrade the Lume CLI script to the latest version.
 - Any other command will be delegated to `deno task lume [...args]`. For
   example, `lume -s` will run `deno task lume -s`.
