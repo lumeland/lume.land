@@ -62,45 +62,12 @@
     vertical-align: middle;
     margin-right: .5em;
   }
-}
-.landing-install-code {
-  display: flex;
-  margin: 5px 0;
+  .terminal {
+    margin: 5px 0;
+  };
 
-  & pre {
-    width: 100%;
-    max-width: 432px;
-    background: var(--color-black-140);
-    color: var(--color-white);
-    padding: 20px 25px;
-    border-radius: var(--border-radius) 0 0 var(--border-radius);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, .1);
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-}
-.landing-install-cta {
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  background: var(--color-primary);
-  color: var(--color-background);
-  padding: 0 20px;
-  font: var(--text-body-bold);
-  letter-spacing: var(--text-body-spacing);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  transition: background var(--animation-duration);
-
-  & svg,
-  & path {
-    fill: currentColor
-  }
-
-  &:hover {
-    background: var(--color-primary-1);
+  .terminal pre {
+    max-width: 400px;
   }
 }
 

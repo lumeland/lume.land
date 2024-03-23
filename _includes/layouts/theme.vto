@@ -1,0 +1,97 @@
+---
+layout: ./base.vto
+page_css: theme.css
+---
+
+<main class="theme">
+  <div class="theme-info">
+    <nav class="theme-back">
+      <a href="/themes/">← Back to themes</a>
+    </nav>
+    <header class="theme-header">
+      <h1 class="theme-title">
+      {{ title }}
+
+      {{ if it.module.cms }}
+      <span class="tag is-small">Has CMS</span>
+      {{ /if }}
+      </h1>
+
+      <p class="theme-author">
+        By <a href="{{ author.url }}">{{ author.name }}</a>
+      </p>
+
+      <div class="theme-description">
+        {{ description |> md }}
+      </div>
+    </header>
+
+    <div class="theme-install">
+      <p>Create project with this theme:</p>
+      <div class="terminal">
+        <pre><code>deno run -Ar https://lume.land --theme={{ id }}</code></pre>
+      </div>
+    </div>
+
+    <div class="theme-buttons">
+      <a class="button is-primary is-big" href="{{ demo }}" target="_blank">
+        Open a live demo ↗
+      </a>
+      <a class="button is-secondary is-big" href="{{ repo }}" target="_blank">
+        See code ↗
+      </a>
+    </div>
+  </div>
+
+  <lume-devices class="theme-preview">
+    <form class="theme-preview-bar">
+      <div class="theme-preview-toggle">
+        <label>
+          <input type="radio" checked name="device" value="desktop">
+          <img src="/icons/desktop.svg" alt="Desktop" width="24" inline>
+        </label>
+        <label>
+          <input type="radio" name="device" value="mobile">
+          <img src="/icons/device-mobile.svg" alt="Mobile" width="24" inline>
+        </label>
+      </div>
+
+      <div class="theme-preview-toggle">
+        <label>
+          <input type="radio" checked name="theme" value="light">
+          <img src="/icons/sun-dim.svg" alt="Light theme" width="24" inline>
+        </label>
+        <label>
+          <input type="radio" name="theme" value="dark">
+          <img src="/icons/moon.svg" alt="Dark theme" width="24" inline>
+        </label>
+      </div>
+    </form>
+
+    {{ for screen of screens }}
+    <figure>
+      <div class="device" data-device="desktop" data-theme="light">
+        <img class="" src="https://lumeland.github.io/themes{{ screen.desktop }}">
+      </div>
+
+      {{ if screen.desktop_dark }}
+      <div class="device" data-device="desktop" data-theme="dark">
+        <img src="https://lumeland.github.io/themes{{ screen.desktop_dark }}">
+      </div>
+      {{ /if }}
+
+      {{ if screen.mobile }}
+      <div class="device" data-device="mobile" data-theme="light">
+        <img src="https://lumeland.github.io/themes{{ screen.mobile }}">
+      </div>
+      {{ /if }}
+
+      {{ if screen.mobile_dark }}
+      <div class="device" data-device="mobile" data-theme="dark">
+        <img src="https://lumeland.github.io/themes{{ screen.mobile_dark }}">
+      </div>
+      {{ /if }}
+    </figure>
+    {{ /for }}
+  </lume-devices>
+</main>

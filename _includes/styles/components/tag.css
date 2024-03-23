@@ -17,4 +17,5 @@
   box-sizing: border-box;
   vertical-align: middle;
   flex: 0 0 auto;
+  border: solid 1px var(--color-background-2);
 }

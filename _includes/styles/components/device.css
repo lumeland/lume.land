@@ -1,0 +1,44 @@
+.device {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -10px #0003;
+  border-radius: var(--border-radius);
+  border: solid 1px var(--color-background-2);
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  &[data-device="desktop"] {
+    img {
+      margin-top: 40px
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 88px;
+      height: 100%;
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="54" height="14" viewBox="0 0 54 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="7" fill="%23FF5533"/><circle cx="27" cy="7" r="7" fill="%23E6CF5C"/><circle cx="47" cy="7" r="7" fill="%237ACC52"/></svg>');
+      background-repeat: no-repeat;
+      background-position: 16px 14px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 100px;
+      right: 10px;
+      height: 20px;
+      background-color: var(--color-background-2);
+      border-radius: var(--border-radius-small);
+    }
+  }
+
+  &[data-device="mobile"] {
+    max-width: 320px;
+  }
+}

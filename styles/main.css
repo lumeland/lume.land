@@ -4,7 +4,9 @@
 @import "styles/components/navbar.css";
 @import "styles/components/footer.css";
 @import "styles/components/code.css";
+@import "styles/components/terminal.css";
 @import "styles/components/toc.css";
 @import "styles/components/site.css";
 @import "styles/components/tip.css";
 @import "styles/components/type.css";
+@import "styles/components/device.css";

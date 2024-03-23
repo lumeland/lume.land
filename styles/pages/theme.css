@@ -1,0 +1,115 @@
+.theme {
+  max-width: var(--max-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: var(--row-gap-1);
+  column-gap: var(--margin);
+  align-items: start;
+  justify-content: center;
+  padding: var(--row-gap-1) var(--margin);
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 520px 1fr;
+  }
+}
+
+.theme-info {
+  display: grid;
+  row-gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 32em;
+
+  @media (min-width: 1200px) {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+.theme-back {
+  margin-bottom: .5rem;
+  font: var(--text-caption);
+
+  a {
+    text-decoration: none;
+    color: var(--color-foreground-1);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.theme-title {
+  font: var(--text-heading);
+  letter-spacing: var(--text-heading-spacing);
+  margin: 0;
+}
+.theme-author {
+  font: var(--text-caption);
+  margin: 0;
+}
+.theme-description {
+  font: var(--text-body);
+  color: var(--color-foreground-1);
+  letter-spacing: var(--text-body-spacing);
+  line-height: 1.4;
+  margin-top: 1.5em;
+  
+  p {
+    margin: .5em 0;
+  }
+}
+.theme-install {
+  margin-top: var(--row-gap-1);
+
+  p {
+    margin: 0 0 .5em;
+    color: var(--color-foreground-1);
+  }
+}
+.theme-buttons {
+  display: flex;
+  column-gap: 1rem;
+}
+.theme-preview {
+  display: grid;
+  row-gap: 2rem;
+
+  figure {
+    width: clamp(100%, calc(50vw - 80px), 1000px);
+    margin: 0;
+  }
+}
+
+.theme-preview-bar {
+  display: flex;
+  column-gap: 2rem;
+}
+.theme-preview-toggle {
+  border: solid 1px var(--color-background-3);
+  display: flex;
+  border-radius: var(--border-radius-small);
+  overflow: hidden;
+
+  input {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    padding: 8px;
+
+    &:hover {
+      background: var(--color-background-1);
+    }
+    &:has(input:checked) {
+      background: var(--color-background-3);
+      svg {
+        fill: var(--color-foreground);
+      }
+    }
+  }
+  svg {
+    display: block;
+    fill: var(--color-foreground-1);
+  }
+}

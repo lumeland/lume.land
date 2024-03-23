@@ -28,6 +28,7 @@
     letter-spacing: var(--text-body-spacing);
     color: var(--color-foreground-1);
     text-align: center;
+    text-wrap: balance;
   }
 }
 
