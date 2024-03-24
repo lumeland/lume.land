@@ -8,6 +8,7 @@ export default async (request: Request) => {
       `https://cdn.deno.land/lume_init/meta/versions.json`,
     );
     const versions = await res.json();
+    console.log(request);
     return Response.redirect(
       `https://deno.land/x/lume_init@${versions.latest}/mod.ts`,
       301,
