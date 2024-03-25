@@ -384,6 +384,15 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://desu.social/@pixel/112155492135005017
+      author: Andy (@pixel@desu.social)
+      avatar: /img/avatars/testimonials/pixel.webp
+      date: March 25, 2024
+      text: |
+        Once again big thanks to <a href="https://pony.social/@cadey">@cadey</a> for showing me <a href="https://fosstodon.org/@lume">@lume</a>.<br>
+        <br>
+        Out of all static site builders I used in the past few years, this was the most smooth and pleasant experience of building a website. :pixel_love:
+
     - url: https://daniel-saunders.com/posts/notes/new-site-design-for-2024/
       author: Daniel Saunders (daniel-saunders.com)
       avatar: /img/avatars/testimonials/daniel_saunders.webp
