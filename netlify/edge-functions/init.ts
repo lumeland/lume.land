@@ -1,9 +1,7 @@
 export default async (request: Request) => {
-  const { headers } = request;
-  const accept = headers.get("accept");
-  const agent = headers.get("user-agent");
+  const agent = request.headers.get("user-agent").toLowerCase();
 
-  if (!accept?.includes("text/html") && !isOpenGraphUA(agent)) {
+  if (agent.startsWith("deno")) {
     const res = await fetch(
       `https://cdn.deno.land/lume_init/meta/versions.json`,
     );
@@ -17,11 +15,3 @@ export default async (request: Request) => {
 };
 
 export const config = { path: "/" };
-
-function isOpenGraphUA(header: string | null): boolean {
-  if (!header) {
-    return false;
-  }
-
-  return header.startsWith("Twitterbot") || header.startsWith("Slackbot");
-}
