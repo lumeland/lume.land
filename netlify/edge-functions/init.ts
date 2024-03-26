@@ -1,7 +1,7 @@
 export default async (request: Request) => {
-  const agent = request.headers.get("user-agent").toLowerCase();
+  const agent = request.headers.get("user-agent") || "";
 
-  if (agent.startsWith("deno")) {
+  if (agent.toLowerCase().startsWith("deno")) {
     const res = await fetch(
       `https://cdn.deno.land/lume_init/meta/versions.json`,
     );
