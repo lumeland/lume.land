@@ -28,3 +28,16 @@ site.use(filterPages({
 
 export default site;
 ```
+
+## Limiting which files to test
+
+By default the plugin tests all output files: not only 'pages' but also assets like `.css`. You can control this with the `extensions` option which specifies the extensions to apply to:
+
+```js
+site.use(filterPages({
+  extensions: [".html", ".json"],
+  fn: (page) => page.data.ignored !== true,
+}));
+```
+
+This will only test output files with the extensions `.html` or `.json`, all other pages will not be tested.
