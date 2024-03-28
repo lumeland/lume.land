@@ -13,7 +13,7 @@ instructions if you don't have it installed yet.
 To setup Lume in your project folder, run the following command:
 
 ```sh
-deno run -Ar https://lume.land
+deno run -A https://lume.land/init.ts
 ```
 
 This command creates the following files:
@@ -47,7 +47,7 @@ export default site;
 ```json {title="deno.json"}
 {
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   },

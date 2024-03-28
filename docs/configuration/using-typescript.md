@@ -31,7 +31,7 @@ Lume also creates the `deno.json` file importing the Lume types using the
     "lume/": "https://deno.land/x/lume/"
   },
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   },

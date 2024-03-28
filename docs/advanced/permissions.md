@@ -17,7 +17,7 @@ script to run Lume:
 {
   "importMap": "import_map.json",
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   }
@@ -38,7 +38,7 @@ This is an example of a Lume task with some permissions configured:
 {
   "importMap": "import_map.json",
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable --allow-net --allow-read=./ --allow-write=./_site -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --allow-net --allow-read=./ --allow-write=./_site -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   }

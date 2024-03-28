@@ -15,7 +15,7 @@ creating a deno task in the `deno.json` file:
   "tasks": {
     "build": "deno task lume",
     "serve": "deno task lume -s",
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "deploy": "deno task build && rsync -r _site/ user@my-site.com:~/www"
   }
 }
