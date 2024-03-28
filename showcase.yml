@@ -139,23 +139,11 @@ sites:
     description: Cultural association that brings together and promotes Galician content on the internet.
     code: https://github.com/pvillaverde/web-obradoiro-dixital-galego
 
-  - title: Lume Dark Material
-    img: /img/showcase/dark_material.webp
-    url: https://angeldollface.art/lume-dark-material/
-    description: 'A simple material-design inspired theme'
-    code: https://github.com/angeldollface/lume-dark-material
-
   - title: Universo Reich
     img: /img/showcase/universo-reich.webp
     url: https://escoladeartelugo.com/universo-reich/
     description: Collaborative and educational project about Steve Reich.
 
-  - title: Angel Dollface
-    img: /img/showcase/angeldollface.webp
-    url: https://angeldollface.art/
-    description: Personal website of Angel Dollface.
-    code: https://github.com/angeldollface/angeldollface.github.io
-  
   - title: Lume Theme Shiraha
     img: /img/showcase/lume_theme_shiraha.webp
     url: https://importantimport.github.io/lume_theme_shiraha/
