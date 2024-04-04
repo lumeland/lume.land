@@ -87,7 +87,7 @@ values are:
 ### draft
 
 The draft variable mark this page as draft, which means it will ignored unless
-the environment variable `LUME_DRAFT` is defined as `"true"`.
+the environment variable `LUME_DRAFTS` is defined as `"true"`.
 
 ### layout
 

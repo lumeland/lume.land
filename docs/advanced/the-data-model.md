@@ -330,7 +330,7 @@ basename `string`
 : Normalized by Lume automatically. Used to assign tags or to pages.
 
 [draft](../creating-pages/page-data.md#tags) `boolean`
-: If it's `true`, the page will be ignored. Use the env variable `LUME_DRAFT=true` to show draft pages.
+: If it's `true`, the page will be ignored. Use the env variable `LUME_DRAFTS=true` to show draft pages.
 
 [renderOrder](../core/render-order.md) `number`
 : To configure the rendering order of a page.
