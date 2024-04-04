@@ -38,9 +38,9 @@ plugins:
     description: Inclusive Language plugin for Lume 
     url: https://deno.land/x/lume_plugin_inclusive_language
 
-  - title: Shikiji
-    description: Plugin to use the Shikiji library for syntax highlight.
-    url: https://deno.land/x/lume_shikiji@0.0.1
+  - title: Shiki
+    description: Plugin to use the Shiki library for syntax highlight.
+    url: https://deno.land/x/lume_shiki
 
   - title: Fluent for Lume
     description: A Fluent wrapper to help you easily build multilingual site with Lume 
