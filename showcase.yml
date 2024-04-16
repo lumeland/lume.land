@@ -13,6 +13,12 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
   
+  - title: X's weird webspace
+    img: /img/showcase/x.webp
+    url: https://xtrm.me/
+    description: Personal website of X
+    code: https://codeberg.org/xtrm/website
+
   - title: TRG23
     img: /img/showcase/trg23.webp
     url: https://trg23.netlify.app/
