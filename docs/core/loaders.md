@@ -101,12 +101,12 @@ import HandlebarsJS from "https://dev.jspm.io/handlebars@4.7.6";
 
 export default class HandlebarsEngine implements Lume.Engine {
   /** Render the content */
-  render(content, data) {
+  render(content: string, data: Record<string, unknown>, filename: string) {
     return this.renderComponent(content, data, filename);
   }
 
   /** Render for components */
-  renderComponent(content: string, data) {
+  renderComponent(content: string, data: Record<string, unknown>, filename: string) {
     const template = HandlebarsJS.compile(content);
     return template(data);
   }
@@ -123,7 +123,7 @@ To use this template engine, pass it as the third argument of the `loadPages`
 function:
 
 ```ts
-import textLoader from "lume/loaders/text.ts";
+import textLoader from "lume/core/loaders/text.ts";
 import HandlebarsEngine from "./handlebars-engine.ts";
 
 site.loadPages([".hbs"], {
