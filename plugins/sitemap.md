@@ -48,6 +48,8 @@ site.use(sitemap({
 }));
 ```
 
+To define the URL, it uses the location defined in the [config file](../docs/configuration/config-file.md#location).
+
 ## Multilanguage
 
 It's possible generate sitemaps for sites with multiple languages using the
