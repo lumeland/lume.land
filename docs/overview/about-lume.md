@@ -20,7 +20,6 @@ flexible.
 - **It's Deno:** Forget about managing thousands of packages in `node_modules`
   or complex bundlers. Lume only installs what you need. Clean, fast and secure.
 
-## Do you want to create a blog?
+## Launch fast with Lume Themes
 
-Try the [base-blog](https://github.com/lumeland/base-blog) template repository,
-ready to start a blog in seconds.
+Want to skip the setup? Try [Lume Themes](/themes) and go live in seconds.
