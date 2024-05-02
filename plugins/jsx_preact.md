@@ -41,12 +41,7 @@ configure the JSX transform:
 
 ```json {title="deno.json"}
 {
-  "importMap": "import_map.json",
-  "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
-    "build": "deno task lume",
-    "serve": "deno task lume -s"
-  },
+  // ...
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "npm:preact"

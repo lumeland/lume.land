@@ -46,10 +46,7 @@ configure the JSX transform:
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "npm:react",
-    "types": [
-      "lume/types.ts",
-      "https://unpkg.com/@types/react@18.2.37/index.d.ts"
-    ]
+    "jsxImportSourceTypes": "npm:@types/react"
   }
 }
 ```
