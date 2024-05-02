@@ -9,10 +9,10 @@ tags:
 
 ## Description
 
-[Vento](https://vento.js.org/) is a template language created by
-the same creator as Lume (Óscar Otero) and inspired by other popular template
-engines like Nunjucks, Liquid or Eta. This plugin allows you to use it to create
-pages and layouts.
+[Vento](https://vento.js.org/) is a template language created by the same
+creator as Lume (Óscar Otero) and inspired by other popular template engines
+like Nunjucks, Liquid or Eta. This plugin allows you to use it to create pages
+and layouts.
 
 ## Installation
 

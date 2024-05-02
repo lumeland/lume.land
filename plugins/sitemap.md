@@ -48,7 +48,8 @@ site.use(sitemap({
 }));
 ```
 
-To define the URL, it uses the location defined in the [config file](../docs/configuration/config-file.md#location).
+To define the URL, it uses the location defined in the
+[config file](../docs/configuration/config-file.md#location).
 
 ## Multilanguage
 

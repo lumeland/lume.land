@@ -106,7 +106,11 @@ export default class HandlebarsEngine implements Lume.Engine {
   }
 
   /** Render for components */
-  renderComponent(content: string, data: Record<string, unknown>, filename: string) {
+  renderComponent(
+    content: string,
+    data: Record<string, unknown>,
+    filename: string,
+  ) {
     const template = HandlebarsJS.compile(content);
     return template(data);
   }
