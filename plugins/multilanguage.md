@@ -165,24 +165,23 @@ This code outputs something like:
 
 ### Link to a page in current language
 
-The easiest way to get the URL of a specific page in the current language is to use the [tags](../docs/creating-pages/tags.md) and [search.page()](../plugins/search.md#search-one-page) using a unique tag with current lang as a filter.
+The easiest way to get the URL of a specific page in the current language is to use the [id](#create-pages-in-multiple-languages) and [search.page()](../plugins/search.md#search-one-page) with current lang as a filter.
 
 <lume-code>
 
 ```vento{title="index.vto"}
 ---
-tags: ['home']
+id: home
 ---
 
 {{ set about = search.page('id=about lang=' + lang) }}
 
 <a href="{{ about.url }}">About</a> <!-- This will always output the URL translated in the current lang -->
-
 ```
 
 ```vento{title="about.vto"}
 ---
-tags: ['about']
+id: about
 ---
 
 <p>This is an About page</p>
