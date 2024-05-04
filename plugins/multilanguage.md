@@ -163,6 +163,33 @@ This code outputs something like:
 </ul>
 ```
 
+### Link to a page in current language
+
+The easiest way to get the URL of a specific page in the current language is to use the [id](#create-pages-in-multiple-languages) and [search.page()](../plugins/search.md#search-one-page) with current lang as a filter.
+
+<lume-code>
+
+```vento{title="index.vto"}
+---
+id: home
+---
+
+{{ set about = search.page('id=about lang=' + lang) }}
+
+<a href="{{ about.url }}">About</a> <!-- This will always output the URL translated in the current lang -->
+```
+
+```vento{title="about.vto"}
+---
+id: about
+---
+
+<p>This is an About page</p>
+```
+
+</lume-code>
+
+
 ### Sitemap
 
 The [Sitemap plugin](./sitemap.md) is compatible with this plugin, so the
@@ -315,6 +342,8 @@ es:
 ```
 
 </lume-code>
+
+This only works at page level.{.tip}
 
 ## Multilanguage + pagination
 
