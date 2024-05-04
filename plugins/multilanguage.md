@@ -174,7 +174,7 @@ The easiest way to get the URL of a specific page in the current language is to 
 tags: ['home']
 ---
 
-{{ set about = search.page('about lang=' + lang) }}
+{{ set about = search.page('id=about lang=' + lang) }}
 
 <a href="{{ about.url }}">About</a> <!-- This will always output the URL translated in the current lang -->
 
