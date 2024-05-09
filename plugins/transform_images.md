@@ -50,6 +50,19 @@ This file assigns this data to all image pages in this folder and subfolders
 `_data` files). The plugin will read the data, resize all images to 200x200, and
 convert them to webp format.
 
+To transform the images to 200px width preserving the aspect ratio, use only one
+value:
+
+<lume-code>
+
+```yml { title="/img/_data.yml" }
+transformImages:
+  resize: [200] # Set 200px width, calculate the height automatically
+  format: webp
+```
+
+</lume-code>
+
 The `format` value can be an array of values, in order to output the same file
 configuration to different formats:
 

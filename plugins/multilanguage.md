@@ -165,7 +165,10 @@ This code outputs something like:
 
 ### Link to a page in current language
 
-The easiest way to get the URL of a specific page in the current language is to use the [id](#create-pages-in-multiple-languages) and [search.page()](../plugins/search.md#search-one-page) with current lang as a filter.
+The easiest way to get the URL of a specific page in the current language is to
+use the [id](#create-pages-in-multiple-languages) and
+[search.page()](../plugins/search.md#search-one-page) with current lang as a
+filter.
 
 <lume-code>
 
@@ -188,7 +191,6 @@ id: about
 ```
 
 </lume-code>
-
 
 ### Sitemap
 
