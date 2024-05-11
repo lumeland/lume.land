@@ -8,7 +8,7 @@ The function `cms.storage()` allows to register different storages to save the
 site data. When a storage is registered, it must have a name that will be used
 later in your documents, collections and uploads.
 
-LumeCMS supports the following storages:
+LumeCMS supports several types of storages.
 
 ## File system
 
@@ -94,3 +94,17 @@ cms.storage(
 
 export default cms;
 ```
+
+### Generate a GitHub access token
+
+1. Log into [GitHub](https://github.com) and make sure you have permissions to
+   manage the repository.
+2. Go to
+   [Fine-grained tokens](https://github.com/settings/tokens?type=beta "Settings > Developer settings > Personal access tokens > Fine-grained tokens")
+   and press **Generate new token**.
+3. Set a name and expiration date for the token.
+4. In _Repository access_ section, select **Only select repositories** and add
+   the repository that you want to manage.
+5. Open _Repository permissions_ and select **Read and write** access level in
+   the **Contents** section.
+6. Press the **Generate token**.
