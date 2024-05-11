@@ -1,7 +1,7 @@
 ---
 title: FFF
 description: Converts the data structure to FFF
-# mod: plugins/fff.ts
+mod: plugins/fff.ts
 tags:
   - data_format
   - utils
