@@ -12,7 +12,7 @@ The field of type `file` is used to upload and store files. It display a
 {
   name: "image",
   type: "file",
-  uploads: "src:images",
+  uploads: "uploads",
 }
 ```
 
@@ -24,7 +24,22 @@ info), this field has the following options:
 
 ### uploads
 
-The storage method used to store the file. It's a string with the format
-`storage:directory`. For example, if you have a storage registered with the name
-`src` and want to save the files in the `images` subdirectory, the value is
-`src:images`.
+The name of the
+[upload method used to store the file](../configuration/uploads.md). It's a
+string with the format `upload_name:directory`. For example, if you have an
+Upload registered with the name `images` and want to save the files in the
+`posts` subdirectory, the value is `images:posts`.
+
+If it's not provided, the **first upload** value registered will be used. For
+example:
+
+```ts
+// Register the "images" upload
+cms.upload("images", "src:images");
+
+cms.document("homepage", "src:index.yml", [
+  "title: text",
+  "content: markdown",
+  "cover: file", // The `images` upload is used by default
+]);
+```
