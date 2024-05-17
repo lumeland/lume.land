@@ -6,6 +6,9 @@ tags:
   - template_engine
 ---
 
+This plugin is deprecated. [Nunjucks](./nunjucks.md) is recommended as a
+replacement. {.tip}
+
 ## Description
 
 [Liquid](https://liquidjs.com/) is a simple, expressive, and safe template
@@ -74,3 +77,24 @@ text: "Hello {{ username }}"
 You can use the
 [Liquid extension for VS Code](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid)
 for syntax highlight and some useful snippets.
+
+## Liquid is deprecated
+
+Liquidjs is a great library but it has a limitation incompatible with Lume:
+[it's not possible to invoke functions](https://github.com/harttle/liquidjs/discussions/580).
+This is very unfortunate because it's not possible to use the
+[`search` helper](../docs/core/searching.md) inside a liquid template to loop
+through the pages. For example, the following code doesn't work:
+
+```html
+<ul>
+  {% for item in search.pages('post') %}
+    <li>{{item.title}}</li>
+  {% endfor %}
+</ul>
+```
+
+Lume has support for Nunjucks which is a good replacement because has a very
+similar syntax to Liquid and allows you to run functions, I decided to deprecate
+the Liquid plugin. It will still be available in Lume 2 but probably be removed
+in Lume 3 (in the distant future).

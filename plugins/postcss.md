@@ -28,22 +28,18 @@ export default site;
 
 ## PostCSS Plugins
 
-PostCSS uses the following plugins by default:
-
-- [postcss-nesting](https://github.com/lumeland/postcss-nesting) to give support
-  to nested rules.
-- [postcss_autoprefixer](https://deno.land/x/postcss_autoprefixer) to add
-  automatically the vendor prefixes.
+PostCSS has [postcss_autoprefixer](https://deno.land/x/postcss_autoprefixer)
+plugin enabled by default to add automatically the vendor prefixes.
 
 Use the property `plugins` add more plugins. For example, to use the
-[font-format-keywords](https://deno.land/x/postcss_font_format_keywords) plugin:
+[postcss-nesting](https://www.npmjs.com/package/postcss-nesting) plugin:
 
 ```js
 import postcss from "lume/plugins/postcss.ts";
-import postcssFontFormatKeywords from "https://deno.land/x/postcss_font_format_keywords/mod.js";
+import nesting from "npm:postcss-nesting";
 
 site.use(postcss({
-  plugins: [postcssFontFormatKeywords()],
+  plugins: [nesting()],
 }));
 ```
 

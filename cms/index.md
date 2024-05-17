@@ -19,11 +19,21 @@ See more info in the [announcement post](https://lume.land/blog/posts/lume-cms/)
 
 ## Installation
 
-To add LumeCMS to your site, create the `_cms.ts` configuration file with the
-following structure:
+To add LumeCMS to your site add the `lume/cms/` entry to your import map:
+
+```json
+{
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v2.1.4/",
+    "lume/cms": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.4.1/"
+  }
+}
+```
+
+And create the `_cms.ts` configuration file with the following structure:
 
 ```ts
-import lumeCMS from "lume/cms.ts";
+import lumeCMS from "lume/cms/mod.ts";
 
 const cms = lumeCMS();
 

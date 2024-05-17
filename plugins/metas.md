@@ -136,3 +136,29 @@ metas:
   title: "$ h1" # Use the content of the first <h1> element
   image: "$ img.cover attr(src)" # Use the src attribute of img.cover element
 ```
+
+## Additional values
+
+As of Lume 2.2, any additional value is used to create a custom `<meta>` tag.
+For example the following `metas` object has additional `twitter:*` keys:
+
+```yml
+title: Lume is awesome
+author: Dark Vader
+metas:
+  title: =title
+  "twitter:label1": Reading time
+  "twitter:data1": 1 minute
+  "twitter:label2": Written by
+  "twitter:data1": =author
+```
+
+This configuration generates the following code:
+
+```html
+<meta name="title" content="Lume is awesome">
+<meta name="twitter:label1" content="Reading time">
+<meta name="twitter:data1" content="1 minute">
+<meta name="twitter:label2" content="Written by">
+<meta name="twitter:data2" content="Dark Vader">
+```

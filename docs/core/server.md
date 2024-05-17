@@ -166,6 +166,19 @@ To implement a live-reload in the browser after file changes. It's used by Lume
 in the `--serve` mode. See the
 [available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/reload.ts/~/Options).
 
+### shutdown
+
+Useful to show a page while your site is shutted down. All request to HTML pages
+returns the content of the `/503.html` file and the `503` status code. It also
+sends the `Retry-After` header.
+
+```js
+server.use(shutdown({
+  page: "/maintenance.html", // The page to show. /503.html by default.
+  retryAfter: 60 * 60, // The Retry-After header content in seconds. 24 hours by default.
+}));
+```
+
 ### www
 
 This middleware redirects from `www.` domains to non-www domain (or viceversa).

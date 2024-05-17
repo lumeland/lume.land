@@ -56,28 +56,82 @@ export default site;
 
 ## Themes
 
-You may need to load the CSS file of the color theme. The simplest way to load a
-theme is import it from a CDN in your CSS files. For example:
-
-```css
-@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css";
-```
-
-As an alternative, you can define the CSS file it as a
-[remote file](../docs/core/remote-files.md):
+To properly highlight the syntax of your code, you need CSS code compatible with
+Highlight.js classes. This library provides some
+[pre-made themes](https://highlightjs.org/examples) that you can download
+automatically with the `theme` option:
 
 ```ts
-// Define the _includes/css/code.css file as a remote file
-site.remoteFile(
-  "_includes/css/code.css",
-  "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css",
-);
+import lume from "lume/mod.ts";
+import highlight from "lume/plugins/code_highlight.ts";
+
+const site = lume();
+
+site.use(highlight({
+  theme: {
+    name: "atom-one-dark", // The theme name to download
+    path: "/css/code_theme.css", // The destination filename
+  },
+}));
+
+site.copy("/css/code_theme.css"); // Copy the css file to dest.
+
+export default site;
 ```
 
-```ts
-/* Import the _includes/css/code.css (needs postCSS plugin) */
-@import "css/code.css";
+Internally, the file is downloaded
+[as a remote file](../docs/core/remote-files.md). So you have to copy it.
+
+If you're using a CSS plugin like [postcss](./postcss.md) or
+[lightningcss](./lightningcss.md), you can define the destination filename to
+the _includes folder and import it from your CSS code. For example:
+
+<lume-code>
+
+```ts{title="_config.ts"}
+import lume from "lume/mod.ts";
+import highlight from "lume/plugins/code_highlight.ts";
+
+const site = lume();
+
+site.use(highlight({
+  theme: {
+    name: "atom-one-dark",
+    path: "/_includes/css/code_theme.css",
+  },
+}));
+
+export default site;
 ```
 
-Test [all available themes](https://highlightjs.org/static/demo/) in the demo
-page. {.tip}
+```css{title="styles.css"}
+/* Import the file _includes/css/code_theme.css */
+@import "css/code_theme.css";
+```
+
+</lume-code>
+
+If you want to use different themes (for example for dark and light mode), you
+can provide an array of themes:
+
+```ts{title="_config.ts"}
+import lume from "lume/mod.ts";
+import highlight from "lume/plugins/code_highlight.ts";
+
+const site = lume();
+
+site.use(highlight({
+  theme: [
+    {
+      name: "atom-one-light",
+      path: "/_includes/css/code_light.css",
+    },
+    {
+      name: "atom-one-dark",
+      path: "/_includes/css/code_dark.css",
+    },
+  ]
+}));
+
+export default site;
+```

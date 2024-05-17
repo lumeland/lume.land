@@ -76,6 +76,11 @@ site.addEventListener("afterUpdate", (event) => {
 });
 ```
 
+## afterLoad
+
+Event triggered after all files in the source folder are loaded (but not
+processed). It allows to do low-level operations like renaming files, etc.
+
 ## beforeRender
 
 This event is triggered just after all pages are loaded but before they are

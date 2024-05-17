@@ -68,6 +68,7 @@ site.use(feed({
     updated: undefined, // The last update of every item
     content: "=children", // The content of every item
     lang: "=lang", // The language of every item
+    image: "=cover", // The image of the item
   },
 }));
 ```

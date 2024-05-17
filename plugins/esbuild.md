@@ -56,17 +56,19 @@ site.use(esbuild({
 
 ## ESM
 
-This plugin converts any module imported from `npm` to `esm.sh`. For example,
-the following code:
+This plugin converts any module imported from `npm:` or `jsr:` to `esm.sh`. For
+example, the following code:
 
 ```js
 import classNames from "npm:classnames";
+import { concat } from "jsr:@std/bytes/concat";
 ```
 
 is converted to:
 
 ```js
 import classNames from "https://esm.sh/classnames";
+import { concat } from "https://esm.sh/classnames/jsr/@std/bytes/concat";
 ```
 
 You can use the `esm` key to add parameters to some packages. See the
