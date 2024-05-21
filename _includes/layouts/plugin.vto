@@ -17,14 +17,6 @@ page_css: docs.css
       {{ description |> md }}
 
       {{ include "templates/toc.vto" }}
-
-      {{ if it.docs }}
-      <div class="doc-cta">
-        <a href="https://doc.deno.land/https/deno.land/x/lume/{{ docs }}" class="button is-primary is-big">
-          See available Options in Deno Doc
-        </a>
-      </div>
-    {{ /if }}
     </header>
 
     <div class="doc-body">
