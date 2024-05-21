@@ -86,8 +86,10 @@ site.loadAssets([".toml"], tomlLoader);
 This is the same strategy used for JavaScript/TypeScript modules (`*.page.js`
 for pages and `*.js` for JavaScript assets).
 
-The `textLoader` is used by default if you don't pass any loader. For example:
-`site.loadPages([".html"])` or `site.loadAssets([".css", ".js"])`. {.tip}
+> [!note]
+>
+> The `textLoader` is used by default if you don't pass any loader. For example:
+> `site.loadPages([".html"])` or `site.loadAssets([".css", ".js"])`.
 
 ## Template engines
 
@@ -139,5 +141,7 @@ site.loadPages([".hbs"], {
 Now, all files with the `.hbs` extension will be loaded using the `textLoader`
 and rendered using the Handlebars engine.
 
-This is a very basic implementation only as an example. You can see the code of
-the available template engines in Lume for real examples. {.tip}
+> [!note]
+>
+> This is a very basic implementation only as an example. You can see the code
+> of the available template engines in Lume for real examples.

@@ -48,7 +48,9 @@ If your filter is asynchronous, set `true` as the third argument:
 site.filter("async_filter", async (value) => value, true);
 ```
 
-Not all template engines support async filters. {.tip}
+> [!warning]
+>
+> Not all template engines support async filters.
 
 ### Builtin filters
 
@@ -105,5 +107,7 @@ Hello, {{ user.name }}
 
 </lume-code>
 
-Note: The method `filter()` is just a shortcut of `helper()` with
-`{ type: "filter" }`. {.tip}
+> [!note]
+>
+> The method `filter()` is just a shortcut of `helper()` with
+> `{ type: "filter" }`.

@@ -52,5 +52,7 @@ the CSS file and use the HTML5 doctype.
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.css">
 ```
 
-See [Browser usage](https://katex.org/docs/browser.html) in the KaTeX site
-documentation for more info. {.tip}
+> [!note]
+>
+> See [Browser usage](https://katex.org/docs/browser.html) in the KaTeX site
+> documentation for more info.

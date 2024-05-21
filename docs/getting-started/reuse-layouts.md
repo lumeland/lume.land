@@ -29,10 +29,12 @@ This is getting better!
 
 Go to `http://localhost:3000/second-page/` in your browser to see the new page.
 
-The URL of the page depends on the file name of the markdown file:
-`/second-page.md` will generate the url `/second-page/` path.
-[Go to the Page files documentation](/docs/creating-pages/page-files.md) to know
-more {.tip}
+> [!note]
+>
+> The URL of the page depends on the file name of the markdown file:
+> `/second-page.md` will generate the url `/second-page/` path.
+> [Go to the Page files documentation](/docs/creating-pages/page-files.md) to
+> know more
 
 This new page uses the same `layout` as the first page but with a different
 title and content.

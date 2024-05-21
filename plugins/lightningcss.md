@@ -70,6 +70,8 @@ site.use(lightningCss({
 export default site;
 ```
 
-The `version()` function is provided to convert a semver version to single
-24-bit number as used by lightningcss.
-[More info](https://github.com/parcel-bundler/lightningcss#from-node) {.tip}
+> [!tip]
+>
+> The `version()` function is provided to convert a semver version to single
+> 24-bit number as used by lightningcss.
+> [More info](https://github.com/parcel-bundler/lightningcss#from-node)

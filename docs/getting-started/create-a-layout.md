@@ -47,8 +47,10 @@ This layout has the `HTML` code needed to build the whole page. The tag
 `{{ content }}` is the placeholder used to insert the page content defined in
 `index.md`.
 
-Go to [Vento documentation](https://vento.js.org/) to know more about its
-syntax. {.tip}
+> [!note]
+>
+> Go to [Vento documentation](https://vento.js.org/) to know more about its
+> syntax.
 
 ## Assign the layout to the page
 
@@ -76,5 +78,7 @@ I hope you enjoy it.
 Lume will compile the markdown code and use the `layout.vto` file as the page
 layout.
 
-The directory `_includes` is a special directory that Lume understands. You
-don't need to include it in the `layout` variable. {.tip}
+> [!note]
+>
+> The directory `_includes` is a special directory that Lume understands. You
+> don't need to include it in the `layout` variable.

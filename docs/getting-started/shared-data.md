@@ -57,6 +57,8 @@ This is getting better!
 
 </lume-code>
 
-`_data` files (and `_data` folders) are a very powerful feature of Lume.
-[See shared data documentation](/docs/creating-pages/shared-data.md) for more
-examples. {.tip}
+> [!tip]
+>
+> `_data` files (and `_data` folders) are a very powerful feature of Lume.
+> [See shared data documentation](/docs/creating-pages/shared-data.md) for more
+> examples.

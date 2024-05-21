@@ -46,8 +46,10 @@ Lume also creates the `deno.json` file importing the Lume types using the
 The `lume/types.ts` file exposes the global namespace `Lume` that you can use in
 your TypeScript files.
 
-[Go to Overview of TypeScript in Deno](https://docs.deno.com/runtime/manual/advanced/typescript/overview)
-for more info. {.tip}
+> [!note]
+>
+> [Go to Overview of TypeScript in Deno](https://docs.deno.com/runtime/manual/advanced/typescript/overview)
+> for more info.
 
 ### JSX Plugins
 

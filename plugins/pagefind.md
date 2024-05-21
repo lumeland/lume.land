@@ -88,8 +88,10 @@ in your CSS files:
 }
 ```
 
-See the [Pagefind UI docs](https://pagefind.app/docs/ui/) for more customization
-options {.tip}
+> [!note]
+>
+> See the [Pagefind UI docs](https://pagefind.app/docs/ui/) for more
+> customization options.
 
 ### Disable the UI component
 
@@ -141,5 +143,7 @@ Alternatively, you can selectively ignore content by setting the
 attribute on a HTML element. And `data-pagefind-ignore="all"` to also ignore its
 children.
 
-See the [Pagefind indexing docs](https://pagefind.app/docs/indexing/) for more
-info. {.tip}
+> [!note]
+>
+> See the [Pagefind indexing docs](https://pagefind.app/docs/indexing/) for more
+> info.

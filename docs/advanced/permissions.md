@@ -44,7 +44,3 @@ This is an example of a Lume task with some permissions configured:
   }
 }
 ```
-
-It seems this method
-[has some issues with NPM modules](https://github.com/denoland/deno/issues/16218),
-so for now, it only works in Lume v1.11.x {.tip}

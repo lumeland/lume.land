@@ -21,7 +21,9 @@ deno task lume
 This command compiles your documents to HTML and save them into the dest
 directory (usually `_site`).
 
-There's the `deno task build` task as an alias.{.tip}
+> [!tip]
+>
+> There's the `deno task build` task as an alias.
 
 ## Start a local server
 
@@ -32,7 +34,9 @@ local server by adding the `--serve` (or `-s`) argument:
 deno task lume --serve
 ```
 
-There's the `deno task serve` task as an alias.{.tip}
+> [!tip]
+>
+> There's the `deno task serve` task as an alias.
 
 This command initializes a **local web server** and starts **watching changes**
 of your site. So after changing anything, Lume will rebuild the site and reload

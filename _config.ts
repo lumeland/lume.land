@@ -13,11 +13,12 @@ import toc from "https://deno.land/x/lume_markdown_plugins@v0.6.0/toc/mod.ts";
 import analyze, {
   mergeDefaults,
 } from "https://deno.land/x/aldara@v0.1.3/mod.ts";
+import { alert } from "npm:@mdit/plugin-alert@0.8.0";
 
 import ventoLang from "https://deno.land/x/vento@v0.10.2/highlightjs-vento.js";
 
 const markdown = {
-  plugins: [toc],
+  plugins: [toc, alert],
   options: {
     linkify: true,
   },

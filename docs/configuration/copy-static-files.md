@@ -31,6 +31,11 @@ site.copy("static-files/favicons/favicon.ico", "favicon.ico");
 site.copy("assets", ".");
 ```
 
+> [!note]
+>
+> Is not possible to copy files outside the `src` directory. For example
+> `site.copy("../folder");` is not allowed.
+
 ## Ignored files
 
 Note that the ignore settings explained in [Ignore files](./ignore-files.md) are
@@ -83,8 +88,10 @@ site.copy("static", (file) => file.toLowerCase());
 site.copy([".jpg", ".gif", ".png"], (file) => "/img" + file);
 ```
 
-The copied files are not processed, even if they have known extensions like
-`.md`, `.vto`, etc. {.tip}
+> [!warning]
+>
+> The copied files are not processed, even if they have known extensions like
+> `.md`, `.vto`, etc.
 
 ## Copy remaining files
 

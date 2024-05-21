@@ -37,9 +37,11 @@ additional extensions:
 site.loadPages([".foo"]);
 ```
 
-If you're using any plugin to provide support for a new template engine, like
-[pug](../../plugins/pug.md) or [eta](../../plugins/eta.md), you don't need to
-run `site.loadPages()` because the plugin does it for you. {.tip}
+> [!note]
+>
+> If you're using any plugin to provide support for a new template engine, like
+> [pug](../../plugins/pug.md) or [eta](../../plugins/eta.md), you don't need to
+> run `site.loadPages()` because the plugin does it for you.
 
 ### Asset pages
 
@@ -60,10 +62,12 @@ configure Lume to load some extensions as page assets. For example:
 site.loadAssets([".css"]);
 ```
 
-If you're using any plugin to process assets, like
-[postcss](../../plugins/postcss.md), [esbuild](../../plugins/esbuild.md) or
-[svgo](../../plugins/svgo.md), don't need to run `site.loadAssets()` because the
-plugin does it for you. {.tip}
+> [!note]
+>
+> If you're using any plugin to process assets, like
+> [postcss](../../plugins/postcss.md), [esbuild](../../plugins/esbuild.md) or
+> [svgo](../../plugins/svgo.md), don't need to run `site.loadAssets()` because
+> the plugin does it for you.
 
 ## Data files
 

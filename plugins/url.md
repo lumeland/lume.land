@@ -29,8 +29,10 @@ want to generate absolute URLs.
 <a href="{{ '/about-us' |> url(true) }}">
 ```
 
-If you don't want to use this filter everywhere, you may be interested in the
-[Base path plugin](./base_path.md) {.tip}
+> [!tip]
+>
+> If you don't want to use this filter everywhere, you may be interested in the
+> [Base path plugin](./base_path.md).
 
 ### Urls from source files
 

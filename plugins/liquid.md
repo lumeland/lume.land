@@ -6,8 +6,10 @@ tags:
   - template_engine
 ---
 
-This plugin is deprecated. [Nunjucks](./nunjucks.md) is recommended as a
-replacement. {.tip}
+> [!warning]
+>
+> This plugin is deprecated. [Nunjucks](./nunjucks.md) is recommended as a
+> replacement.
 
 ## Description
 

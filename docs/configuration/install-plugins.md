@@ -21,5 +21,7 @@ site.use(svgo());
 export default site;
 ```
 
-[Go to Plugins](/plugins/) to explore the available plugins and read the
-specific documentation. {.tip}
+> [!note]
+>
+> [Go to Plugins](/plugins/) to explore the available plugins and read the
+> specific documentation.

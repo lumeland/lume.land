@@ -117,8 +117,10 @@ pages. For example:
 </html>
 ```
 
-The attribute `lang` is inserted automatically in the `html` element if it's
-missing.{.tip}
+> [!note]
+>
+> The attribute `lang` is inserted automatically in the `html` element if it's
+> missing.
 
 ### Create a language switcher menu
 
@@ -345,7 +347,9 @@ es:
 
 </lume-code>
 
-This only works at page level.{.tip}
+> [!warning]
+>
+> This only works at page level.
 
 ## Multilanguage + pagination
 

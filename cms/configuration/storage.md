@@ -12,8 +12,10 @@ LumeCMS supports several types of storages.
 
 ## File system
 
-**Note**: Lume automatically configure the `src` storage pointing to the `src`
-folder. So you don't need to setup a file system storage.{.tip}
+> [!tip]
+>
+> Lume automatically configure the `src` storage pointing to the `src` folder.
+> So you don't need to setup a file system storage.
 
 To register a filesystem storage, import the class and register it with a name.
 For example, let's register a file system storage under the name "my_files",

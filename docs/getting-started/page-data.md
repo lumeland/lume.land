@@ -47,5 +47,7 @@ html code:
 The `<title>` tag has the `{{ title }}` placeholder used to insert the value of
 the variable `title`.
 
-[Go to Page data documentation](/docs/creating-pages/page-data.md) for more info
-about page data. {.tip}
+> [!note]
+>
+> [Go to Page data documentation](/docs/creating-pages/page-data.md) for more
+> info about page data.

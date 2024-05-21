@@ -17,13 +17,15 @@ includes, macros, etc). The Lume components have the following advantages:
   the only way to hot-reload components without stopping and restarting the
   local server.
 
-Note that **Lume components are not run in the browser**. They are intended to
-generate static HTML code on building time.
-
-For interactive client-side components (with `onclick` callbacks and similar
-stuff) you may want to use the [esbuild plugin](../../plugins/esbuild.md) to
-compile your JavaScript code. But the code architecture is up to you (**Lume is
-not a frontend framework**).{.tip}
+> [!warning]
+>
+> **Lume components don't run in the browser**. They are intended to generate
+> static HTML code on building time.
+>
+> For interactive client-side components (with `onclick` callbacks and similar
+> stuff) you may want to use the [esbuild plugin](../../plugins/esbuild.md) to
+> compile your JavaScript code. But the code architecture is up to you (**Lume
+> is not a frontend framework**).
 
 ## Create your own components
 

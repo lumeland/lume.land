@@ -51,8 +51,10 @@ configure the JSX transform:
 
 </lume-code>
 
-[Go to Using TypeScript](/docs/configuration/using-typescript/) for more info
-about using TypeScript with Lume. {.tip}
+> [!tip]
+>
+> [Go to Using TypeScript](/docs/configuration/using-typescript/) for more info
+> about using TypeScript with Lume.
 
 ## Creating pages
 
@@ -97,5 +99,7 @@ export default ({ title, children }: Lume.Data, helpers: Lume.Helpers) => (
 );
 ```
 
-Lume will automatically add the missing `<!DOCTYPE html>` to the generated
-`.html` pages. {.tip}
+> [!tip]
+>
+> Lume will automatically add the missing `<!DOCTYPE html>` to the generated
+> `.html` pages.

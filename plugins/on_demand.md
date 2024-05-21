@@ -18,7 +18,9 @@ scenarios:
 
 Lume can generate pages on demand for these cases.
 
-Note: This plugin only works with [Deno Deploy](https://deno.com/deploy).{.tip}
+> [!important]
+>
+> This plugin only works with [Deno Deploy](https://deno.com/deploy).
 
 ## Installation
 

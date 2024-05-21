@@ -84,10 +84,12 @@ site:
 The `object` merge mode is not recursive; it only works with the first-level
 properties. A recursive option may be added in the future.
 
-The `mergedKeys` variable is also merged with other `mergedKeys` variables in
-subfolders and pages and using always the `object` mode. This means that you can
-define this variable in the root `_data` file of the site and override it in
-specific subfolders. {.tip}
+> [!note]
+>
+> The `mergedKeys` variable is also merged with other `mergedKeys` variables in
+> subfolders and pages and using always the `object` mode. This means that you
+> can define this variable in the root `_data` file of the site and override it
+> in specific subfolders.
 
 ## array mode
 
@@ -174,8 +176,10 @@ category:
   - "404"
 ```
 
-For backward compatibility, Lume assigns the `stringArray` merge mode to the key
-`tags` automatically. {.tip}
+> [!note]
+>
+> For backward compatibility, Lume assigns the `stringArray` merge mode to the
+> key `tags` automatically.
 
 As of Lume 1.19, it's possible to configure the merged keys strategy from the
 `_config.ts` file:

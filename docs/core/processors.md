@@ -90,9 +90,11 @@ site.process([".js"], function (pages) {
 });
 ```
 
-Make sure the file extension that you want to process is previously loaded. See
-[Loaders](loaders.md) for more information about how to register a new loader.
-{.tip}
+> [!warning]
+>
+> Make sure the file extension that you want to process is previously loaded.
+> See [Loaders](loaders.md) for more information about how to register a new
+> loader.
 
 ## Preprocess
 

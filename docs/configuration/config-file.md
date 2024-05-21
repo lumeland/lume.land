@@ -37,9 +37,11 @@ const site = lume({
 });
 ```
 
-You can override the value from the CLI with `--src`, which is useful if you
-have different sites in the same directory. For example:
-`deno task lume --src=./src` {.tip}
+> [!tip]
+>
+> You can override the value from the CLI with `--src`, which is useful if you
+> have different sites in the same directory. For example:
+> `deno task lume --src=./src`
 
 ### dest
 
@@ -52,9 +54,11 @@ const site = lume({
 });
 ```
 
-You can override the value from the CLI with `--dest`, which is useful if you
-want to generate the site without overriding the previous one. For
-example:`deno task lume --dest=./output` { .tip }
+> [!tip]
+>
+> You can override the value from the CLI with `--dest`, which is useful if you
+> want to generate the site without overriding the previous one. For
+> example:`deno task lume --dest=./output`
 
 ### emptyDest
 
@@ -88,9 +92,11 @@ const site = lume({
 This value is ignored by the local server (started with `lume --serve`), which
 always uses `http://localhost:3000` (or the defined port if you change it).
 
-You can override the value from the CLI with `--location`, which is useful if
-you want to build and deploy the site to different locations. For example:
-`deno task lume --location=https://my-site.com/blog/` { .tip }
+> [!tip]
+>
+> You can override the value from the CLI with `--location`, which is useful if
+> you want to build and deploy the site to different locations. For example:
+> `deno task lume --location=https://my-site.com/blog/`
 
 ### prettyUrls
 
@@ -134,8 +140,10 @@ const site = lume({
 });
 ```
 
-This value can be overridden from CLI with `--port`. For example:
-`deno task lume --serve --port=8888` {.tip}
+> [!tip]
+>
+> This value can be overridden from CLI with `--port`. For example:
+> `deno task lume --serve --port=8888`
 
 ### page404
 
@@ -164,8 +172,10 @@ const site = lume({
 });
 ```
 
-This value can be set from CLI with `--open` or `-o`. For example:
-`deno task lume --serve --open` {.tip}
+> [!tip]
+>
+> This value can be set from CLI with `--open` or `-o`. For example:
+> `deno task lume --serve --open`
 
 ### middlewares
 
@@ -208,8 +218,10 @@ const site = lume({
 });
 ```
 
-There are some files and directories that are automatically ignored by the
-watcher, like `.git` or `.DS_Store`. {.tip}
+> [!note]
+>
+> There are some files and directories that are automatically ignored by the
+> watcher, like `.git` or `.DS_Store`.
 
 ## Components options
 

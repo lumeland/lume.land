@@ -36,8 +36,10 @@ export default function ({ myNumber, randomNumber }) {
 
 </lume-code>
 
-Note that page data have priority over global data. If a page has a variable
-with the same name as a global variable, the page variable will be used. {.tip}
+> [!note]
+>
+> Page data have priority over global data. If a page has a variable with the
+> same name as a global variable, the page variable will be used.
 
 ## Context data
 

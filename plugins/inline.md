@@ -40,8 +40,10 @@ included in the HTML. For example:
 
 </lume-code>
 
-The source file must be exported to the `dest` directory; there's no support for
-external URLs. {.tip}
+> [!warning]
+>
+> The source file must be exported to the `dest` directory; there's no support
+> for external URLs.
 
 ## Installation
 

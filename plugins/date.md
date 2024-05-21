@@ -102,5 +102,6 @@ Use the second argument to set the locale:
 </time>
 ```
 
-The first locale set in the `_config.js` is also used as the default locale.
-{.tip}
+> [!important]
+>
+> The first locale set in the `_config.js` is also used as the default locale.
