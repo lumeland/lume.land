@@ -143,7 +143,9 @@
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
     margin-top: 2.5em;
-    margin-bottom: .5em;
+    margin-bottom: .75em;
+    padding-bottom: .25em;
+    border-bottom: solid 1px var(--color-background-2);
 
     &:first-child {
       margin-top: 0;
