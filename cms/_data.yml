@@ -5,3 +5,5 @@ docs_menu:
     id: configuration
   - title: Fields
     id: fields
+  - title: Deployment
+    id: deployment
