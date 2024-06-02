@@ -1,7 +1,7 @@
 ---
-title: Deploy in a VPS
-description: How to setup LumeCMS in a VPS with live preview and versioning.
-order: 1
+title: Deploy on a VPS
+description: How to setup LumeCMS on a VPS with live preview and versioning.
+order: 2
 ---
 
 The best experience using LumeCMS is when it's connected to Lume, so it can
