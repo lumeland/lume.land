@@ -42,15 +42,6 @@ usage:
         {% endfor %}
       </ul>
       ```
-      ```html { title="page.liquid" }
-      <h1>{{ title }}</h1>
-
-      <ul>
-        {{ for item in items }}
-        <li>{{ item }}</li>
-        {{ /for }}
-      </ul>
-      ```
       ```jsx { title="page.jsx" }
       export default function ({ title, items }) {
         return <>
