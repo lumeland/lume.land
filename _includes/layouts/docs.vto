@@ -16,6 +16,20 @@ page_css: docs.css
 
     <div class="doc-body">
       {{ content }}
+
+      {{ if related }}
+      <nav class="doc-related" label="Related content">
+        <h2>Related to this</h2>
+        <ul>
+          {{ for item of related }}
+          <li>
+            {{ set p = search.data(item) }}
+            <a href="{{ p.url }}">{{ p.title }}</a>
+          </li>
+          {{ /for }}
+        </ul>
+      </nav>
+      {{ /if }}
     </div>
 
     <footer class="doc-footer">

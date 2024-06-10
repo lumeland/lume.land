@@ -1,7 +1,10 @@
 ---
 title: Render order
 description: Configure the rendering order of the pages
-order: 12
+order: 9
+related:
+  - /docs/core/multiple-pages/
+  - /docs/core/searching/
 ---
 
 In Lume all pages are rendered at the same time. This works well in most cases,

@@ -2,6 +2,9 @@
 title: Create multiple pages
 description: Generators allows to create multiple pages from an unique source file
 order: 8
+related:
+  - /docs/core/searching/
+  - /docs/core/render-order/
 ---
 
 It's possible with Lume to generate more than one page from the same source

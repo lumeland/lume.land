@@ -2,6 +2,11 @@
 title: Search and paginate
 description: Using the search and paginate helper to create dynamic pages.
 order: 8
+related:
+  - /docs/core/multiple-pages/
+  - /docs/core/render-order/
+  - /plugins/search/
+  - /plugins/paginate/
 ---
 
 The variables `search` and `paginate` are global functions that allow searching

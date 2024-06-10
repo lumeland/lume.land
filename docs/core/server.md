@@ -1,7 +1,7 @@
 ---
 title: Server
 description: Set up a server for your site.
-order: 8
+order: 10
 ---
 
 Lume includes a `Server` class used to run a HTTP server. You can use this class

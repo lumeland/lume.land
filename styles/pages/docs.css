@@ -265,3 +265,14 @@
     }
   }
 }
+.doc-related {
+  margin-top: var(--row-gap-1); 
+
+  h2 {
+    font: var(--text-body-bold);
+  }
+
+  ul {
+    font: var(--text-caption);
+  }
+}
