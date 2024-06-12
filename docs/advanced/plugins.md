@@ -163,3 +163,41 @@ site.use(openSource());
 
 export default site;
 ```
+
+## Publishing plugins
+
+If you created a plugin and want to let other people use it, it's
+straightforward thanks to HTTP imports and native TypeScript support by Deno.
+You only need to make your code accessible through an HTTP URL.
+
+This is a list of recommendations:
+
+- Use `lume/` specifier to import modules from Lume. For example, let's say your
+  plugin uses the `merge` util. Instead of importing the full URL like this:
+
+```js
+import { merge } from "https://deno.land/x/lume@v2.2.0/core/utils/object.ts";
+```
+
+It's better to use the `lume/` specifier:
+
+```js
+import { merge } from "lume/core/utils/object.ts";
+```
+
+This avoids duplicated versions of Lume loaded by the project because the
+`lume/` specifier is configured in the import maps (remember to include this
+entry in your import maps).
+
+- Use an HTTP package registry, like `deno.land/x`. Alternatively, you can use
+  [jsDelivr](https://www.jsdelivr.com/) to serve files from GitHub repositories
+  and ensure reliability (they are permanently cached
+  [even if the GitHub repository is deleted](https://www.jsdelivr.com/github)).
+  [JSR](https://jsr.io/) is not recommended due to not supporting HTTP imports,
+  buggy import maps behavior, and code changes made automatically by the
+  platform that can cause unexpected bugs.
+
+- Once your plugin is published, please let us know. You can create a PR to
+  [awesome-lume repository](https://github.com/lumeland/awesome-lume). We can
+  also include it in the [Community plugins](https://lume.land/plugins/) section
+  of the website.
