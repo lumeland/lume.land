@@ -16,12 +16,12 @@ sites:
   - title: 1A Insecure Network
     img: /img/showcase/1a-insec.webp
     url: https://www.1a-insec.net/
-    description: Personal website by iacore
+    description: The info distro site by Locria Cyber.
   
   - title: X's weird webspace
     img: /img/showcase/x.webp
     url: https://xtrm.me/
-    description: Personal website of X
+    description: Personal website of X.
     code: https://codeberg.org/xtrm/website
 
   - title: TRG23
@@ -39,7 +39,7 @@ sites:
   - title: Clear EVM Wallet Docs
     img: /img/showcase/clear-wallet-docs.webp
     url: https://clear-wallet.flashsoft.eu/
-    description: Documentation for open-source Ethereum wallet Clear EVM Wallet
+    description: Documentation for open-source Ethereum wallet Clear EVM Wallet.
     code: https://github.com/andrei0x309/docs-clear-wallet
 
   - title: Nathan Furnal
@@ -67,40 +67,40 @@ sites:
     img: /img/showcase/morphopoiesis.webp
     url: https://morphopoiesis.art/
     description: |
-      Notebook about Generative Art
+      Notebook about Generative Art.
     code: https://github.com/ruigil/morphopoiesis.art
 
   - title: Newton Investment Partners
     img: /img/showcase/newtoninvestment.webp
     url: https://newtoninvestment.jp/
     description: |
-      Multilanguage corporative site for Newton Investment Partners
+      Multilanguage corporative site for Newton Investment Partners.
     code: https://github.com/eSolia/newtoninvestment.jp
 
   - title: Charles Burgess
     img: /img/showcase/cvburgess.webp
     url: https://cvburgess.com/
     description: |
-      Personal site of Charles Burgess
+      Personal site of Charles Burgess.
     code: https://github.com/cvburgess/cvburgess.com
 
   - title: Xe Iaso
     img: /img/showcase/xeiaso.webp
     url: https://xeiaso.net/
     description: |
-      Personal site and portfolio of Xe Iaso
+      Personal site and portfolio of Xe Iaso.
     code: https://github.com/Xe/site
 
   - title: 2100Finance
     img: /img/showcase/2100finance.webp
     url: https://www.2100finance.com/
     description: |
-      Personal finance: savings, debt, credit, investing, retirement planning
+      Personal finance: savings, debt, credit, investing, retirement planning.
 
   - title: CloudCannon documentation
     img: /img/showcase/cloudcannon.webp
     url: https://cloudcannon.com/documentation/
-    description: Platform documentation for CloudCannon
+    description: Platform documentation for CloudCannon.
     code: https://github.com/CloudCannon/platform-documentation
 
   - title: Nonwiz's Homepage
@@ -164,7 +164,7 @@ sites:
   - title: Lume Deno Template
     img: /img/showcase/LumeTemplate.webp
     url: https://lume-deno-template.deno.dev/
-    description: Another Lume Template/ With CSS & Blog (MD) Support
+    description: Another Lume Template/ With CSS & Blog (MD) Support.
     code: https://github.com/ArnavK-09/lume-deno-template
 
   - title: Candela
@@ -181,7 +181,7 @@ sites:
   - title: Exploit Notes
     img: /img/showcase/exploit_notes.webp
     url: https://exploit-notes.hdks.org/
-    description: A sticky notes for pentesting. 
+    description: A sticky notes for pentesting.
     code: https://github.com/hideckies/exploit-notes
 
   - title: Open Innovations Weeknotes
@@ -193,13 +193,13 @@ sites:
   - title: Hypermedia Systems
     img: /img/showcase/hypermedia_systems.webp
     url: https://hypermedia.systems/
-    description: A book on building Hypermedia Driven Applications with htmx and Hyperview
+    description: A book on building Hypermedia Driven Applications with htmx and Hyperview.
     code: https://hypermedia.systems/
 
   - title: Val Packett
     img: /img/showcase/val-packett.webp
     url: https://val.packett.cool/
-    description: The website of Val Packett
+    description: The website of Val Packett.
     code: https://codeberg.org/valpackett/val.packett.cool
 
   - title: Qworum
@@ -236,7 +236,7 @@ sites:
   - title: Reese Schultz
     img: /img/showcase/reese.webp
     url: https://reese.codes/
-    description: Reese's website about programming. 
+    description: Reese's website about programming.
     code: https://github.com/reeseschultz/reese.codes
 
   - title: Achraf Garai
@@ -254,7 +254,7 @@ sites:
   - title: Badger
     img: /img/showcase/getbadger.webp
     url: https://getbadger.io/
-    description: Landing of a SEO reporting tool
+    description: Landing of a SEO reporting tool.
     code: https://github.com/marketgoo/badger-landing
 
   - title: Tarugo22
@@ -380,12 +380,12 @@ sites:
   - title: GK Neumann website
     img: /img/showcase/neumann-tokyo.webp
     url: https://en.neumann.tokyo
-    description: The corporate website of GK Neumann in Japan
+    description: The corporate website of GK Neumann in Japan.
     code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
 
   - title: minimalist blog template
     img: /img/showcase/minimalist-blog-image.webp
     url: https://minimalist-blog-x8c5ngg3kzt0.deno.dev/
-    description: Minimalist blog template built for lume 
+    description: Minimalist blog template built for lume .
     code: https://github.com/officialrajdeepsingh/Minimalist-blog
 
