@@ -13,6 +13,11 @@ sites:
     description: This web site.
     code: https://github.com/lumeland/lume.land
   
+  - title: 1A Insecure Network
+    img: /img/showcase/1a-insec.webp
+    url: https://www.1a-insec.net/
+    description: Personal website by iacore
+  
   - title: X's weird webspace
     img: /img/showcase/x.webp
     url: https://xtrm.me/
