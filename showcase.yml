@@ -10,382 +10,382 @@ sites:
   - title: Lume
     img: /img/showcase/lume.webp
     url: https://lume.land/
-    description: This web site.
+    description: This web site
     code: https://github.com/lumeland/lume.land
   
   - title: 1A Insecure Network
     img: /img/showcase/1a-insec.webp
     url: https://www.1a-insec.net/
-    description: The info distro site by Locria Cyber.
+    description: The info distro site by Locria Cyber
   
   - title: X's weird webspace
     img: /img/showcase/x.webp
     url: https://xtrm.me/
-    description: Personal website of X.
+    description: Personal website of X
     code: https://codeberg.org/xtrm/website
 
   - title: TRG23
     img: /img/showcase/trg23.webp
     url: https://trg23.netlify.app/
-    description: An event about technology and business in Madrid, Spain.
+    description: An event about technology and business in Madrid, Spain
     code: https://github.com/tarugoconf/TRG23
   
   - title: RGBCube
     img: /img/showcase/rgbcube.webp
     url: https://rgbcu.be/
-    description: The official website and link portal of RGBCube and his work.
+    description: The official website and link portal of RGBCube and his work
     code: https://github.com/RGBCube/Site
   
   - title: Clear EVM Wallet Docs
     img: /img/showcase/clear-wallet-docs.webp
     url: https://clear-wallet.flashsoft.eu/
-    description: Documentation for open-source Ethereum wallet Clear EVM Wallet.
+    description: Documentation for open-source Ethereum wallet Clear EVM Wallet
     code: https://github.com/andrei0x309/docs-clear-wallet
 
   - title: Nathan Furnal
     img: /img/showcase/nathanfurnal.webp
     url: https://nathanfurnal.xyz/
     description: |
-      Personal blog of Nathan Furnal.
+      Personal blog of Nathan Furnal
     code: https://github.com/Nathan-Furnal/blog
 
   - title: LePichu
     img: /img/showcase/lepichu.webp
     url: https://lepichudoes.deno.dev/blog/
     description: |
-      Personal blog Ishat "LePichu" Gupta.
+      Personal blog Ishat "LePichu" Gupta
     code: https://github.com/LePichu/bin_chilling_v2
 
   - title: Daniel Saunders
     img: /img/showcase/daniel-saunders.webp
     url: https://daniel-saunders.com/
     description: |
-      Personal site of Daniel, a web designer in Los Angeles.
+      Personal site of Daniel, a web designer in Los Angeles
     code: https://github.com/dsaunders88/ds-blog-lume
 
   - title: Morphopoiesis
     img: /img/showcase/morphopoiesis.webp
     url: https://morphopoiesis.art/
     description: |
-      Notebook about Generative Art.
+      Notebook about Generative Art
     code: https://github.com/ruigil/morphopoiesis.art
 
   - title: Newton Investment Partners
     img: /img/showcase/newtoninvestment.webp
     url: https://newtoninvestment.jp/
     description: |
-      Multilanguage corporative site for Newton Investment Partners.
+      Multilanguage corporative site for Newton Investment Partners
     code: https://github.com/eSolia/newtoninvestment.jp
 
   - title: Charles Burgess
     img: /img/showcase/cvburgess.webp
     url: https://cvburgess.com/
     description: |
-      Personal site of Charles Burgess.
+      Personal site of Charles Burgess
     code: https://github.com/cvburgess/cvburgess.com
 
   - title: Xe Iaso
     img: /img/showcase/xeiaso.webp
     url: https://xeiaso.net/
     description: |
-      Personal site and portfolio of Xe Iaso.
+      Personal site and portfolio of Xe Iaso
     code: https://github.com/Xe/site
 
   - title: 2100Finance
     img: /img/showcase/2100finance.webp
     url: https://www.2100finance.com/
     description: |
-      Personal finance: savings, debt, credit, investing, retirement planning.
+      Personal finance: savings, debt, credit, investing, retirement planning
 
   - title: CloudCannon documentation
     img: /img/showcase/cloudcannon.webp
     url: https://cloudcannon.com/documentation/
-    description: Platform documentation for CloudCannon.
+    description: Platform documentation for CloudCannon
     code: https://github.com/CloudCannon/platform-documentation
 
   - title: Nonwiz's Homepage
     img: /img/showcase/nonwiz.webp
     url: https://nonwiz.dev
-    description: Minimalist blog inspired by Sakura and classless css.
+    description: Minimalist blog inspired by Sakura and classless css
     code: https://github.com/nonwiz/nonwiz
 
   - title: Studio Kingdom
     img: /img/showcase/studio_kingdom.webp
     url: https://studiokingdom.co.kr/en/
-    description: A mobile game company based in Korea.
+    description: A mobile game company based in Korea
 
   - title: Dev Radar
     img: /img/showcase/dev_radar.webp
     url: https://dev-radar.com/
-    description: An AI-powered news aggregator that helps you stay up to date with the latest trends in software development.
+    description: An AI-powered news aggregator that helps you stay up to date with the latest trends in software development
     code: https://github.com/lfarroco/news-radar
 
   - title: IBM Deep Search
     img: /img/showcase/deep_search.webp
     url: https://ds4sd.github.io/
-    description: Landing page for the IBM Deep Search project.
+    description: Landing page for the IBM Deep Search project
     code: https://github.com/DS4SD/DS4SD.github.io
 
   - title: LEEDS 2023 Data
     img: /img/showcase/leeds_2023_data.webp
     url: https://data.leeds2023.co.uk/
-    description: Microsite to display data about the LEEDS 2023 Year of Culture.
+    description: Microsite to display data about the LEEDS 2023 Year of Culture
     code: https://github.com/open-innovations/leeds-2023
 
   - title: Bible Stories
     img: /img/showcase/biblestories.webp
     url: https://biblestories.org/
-    description: The bible as short stories. Jump in, read a story and share it. 
+    description: The bible as short stories. Jump in, read a story and share it
     code: https://github.com/leighmcculloch/biblestories.org
 
   - title: Dom's Homepage
     img: /img/showcase/dominick_cc.webp
     url: https://dominick.cc/
-    description: The personal site of Dominick Peluso.
+    description: The personal site of Dominick Peluso
     code: https://github.com/dominickp/dom-deno
 
   - title: Obradoiro Dixital Galego
     img: /img/showcase/obradoiro-dixital-galego.webp
     url: https://obradoirodixitalgalego.gal/
-    description: Cultural association that brings together and promotes Galician content on the internet.
+    description: Cultural association that brings together and promotes Galician content on the internet
     code: https://github.com/pvillaverde/web-obradoiro-dixital-galego
 
   - title: Universo Reich
     img: /img/showcase/universo-reich.webp
     url: https://escoladeartelugo.com/universo-reich/
-    description: Collaborative and educational project about Steve Reich.
+    description: Collaborative and educational project about Steve Reich
 
   - title: Lume Theme Shiraha
     img: /img/showcase/lume_theme_shiraha.webp
     url: https://importantimport.github.io/lume_theme_shiraha/
-    description: '❄️ Material 3-inspired Lume Blog Theme.'
+    description: '❄️ Material 3-inspired Lume Blog Theme'
     code: https://github.com/importantimport/lume_theme_shiraha
 
   - title: Lume Deno Template
     img: /img/showcase/LumeTemplate.webp
     url: https://lume-deno-template.deno.dev/
-    description: Another Lume Template/ With CSS & Blog (MD) Support.
+    description: Another Lume Template/ With CSS & Blog (MD) Support
     code: https://github.com/ArnavK-09/lume-deno-template
 
   - title: Candela
     img: /img/showcase/candela.webp
     url: https://help.candela.com/
-    description: Documentation site for a boat.
+    description: Documentation site for a boat
 
   - title: Kille
     img: /img/showcase/kille.webp
     url: https://kille.es/
-    description: Personal site of Guille Reimunde.
+    description: Personal site of Guille Reimunde
     code: https://gitlab.com/greim/kille
 
   - title: Exploit Notes
     img: /img/showcase/exploit_notes.webp
     url: https://exploit-notes.hdks.org/
-    description: A sticky notes for pentesting.
+    description: A sticky notes for pentesting
     code: https://github.com/hideckies/exploit-notes
 
   - title: Open Innovations Weeknotes
     img: /img/showcase/weeknotes.webp
     url: https://weeknotes.open-innovations.org/
-    description: A site to hold weeknotes for the Open Innovations team.
+    description: A site to hold weeknotes for the Open Innovations team
     code: https://github.com/open-innovations/weeknotes
 
   - title: Hypermedia Systems
     img: /img/showcase/hypermedia_systems.webp
     url: https://hypermedia.systems/
-    description: A book on building Hypermedia Driven Applications with htmx and Hyperview.
+    description: A book on building Hypermedia Driven Applications with htmx and Hyperview
     code: https://hypermedia.systems/
 
   - title: Val Packett
     img: /img/showcase/val-packett.webp
     url: https://val.packett.cool/
-    description: The website of Val Packett.
+    description: The website of Val Packett
     code: https://codeberg.org/valpackett/val.packett.cool
 
   - title: Qworum
     img: /img/showcase/qworum.webp
     url: https://qworum.net
-    description: A software product site.
+    description: A software product site
     code: https://github.com/doga/qworum-website
 
   - title: "Theme: Simple Blog"
     url: https://lumeland.github.io/theme-simple-blog/
-    description: Official theme to start a Blog.
+    description: Official theme to start a Blog
     code: https://github.com/lumeland/theme-simple-blog
 
   - title: "Theme: Simple Wiki"
     url: https://lumeland.github.io/theme-simple-wiki/
-    description: Official theme to start Wiki.
+    description: Official theme to start Wiki
     code: https://github.com/lumeland/theme-simple-wiki
 
   - title: Base Blog
     url: https://lumeland.github.io/base-blog/
-    description: A starter template to build a blog.
+    description: A starter template to build a blog
     code: https://github.com/lumeland/base-blog
 
   - title: Muse Blog
     url: https://lume-blog-muse.pages.dev/
-    description: A starter template to build a blog for musicians.
+    description: A starter template to build a blog for musicians
     code: https://github.com/NeroBlackstone/lume-blog-muse
 
   - title: Todo App
     url: https://lumeland.github.io/react-todo/
-    description: Example of a React app with bundled and minified `tsx` code.
+    description: Example of a React app with bundled and minified `tsx` code
     code: https://github.com/lumeland/react-todo
 
   - title: Reese Schultz
     img: /img/showcase/reese.webp
     url: https://reese.codes/
-    description: Reese's website about programming.
+    description: Reese's website about programming
     code: https://github.com/reeseschultz/reese.codes
 
   - title: Achraf Garai
     img: /img/showcase/achrafgarai.webp
     url: https://achrafgarai.github.io/Portfolio/
-    description: A personal portfolio website of Achraf Garai.
+    description: A personal portfolio website of Achraf Garai
     code: https://github.com/AchrafGarai/Portfolio
 
   - title: OAK Studio
     img: /img/showcase/oak.webp
     url: https://oakstudio.co/
-    description: A creative agency based in Bartlesville, Oklahoma.
+    description: A creative agency based in Bartlesville, Oklahoma
     code: https://github.com/bradeneast/oakstudio.co
 
   - title: Badger
     img: /img/showcase/getbadger.webp
     url: https://getbadger.io/
-    description: Landing of a SEO reporting tool.
+    description: Landing of a SEO reporting tool
     code: https://github.com/marketgoo/badger-landing
 
   - title: Tarugo22
     img: /img/showcase/tarugo22.webp
     url: https://tarugoconf.com/
-    description: An event about technology and business in Madrid, Spain.
+    description: An event about technology and business in Madrid, Spain
     code: https://github.com/tarugoconf/tarugo22
   
   - title: NM type
     img: /img/showcase/nmtype.webp
     url: https://nmtype.com/
-    description: A type foundry based in Sweden and Spain.
+    description: A type foundry based in Sweden and Spain
 
   - title: Braden East
     img: /img/showcase/bradeneast.webp
     url: https://bradeneast.com/
-    description: The personal site of Branden East.
+    description: The personal site of Branden East
     code: https://github.com/bradeneast/bradeneast.com
 
   - title: jQuery Cheat Sheet
     img: /img/showcase/jquery.webp
     url: https://oscarotero.com/jquery/
-    description: An interactive reference for all versions of jQuery.
+    description: An interactive reference for all versions of jQuery
     code: https://github.com/oscarotero/jquery-cheatsheet
   
   - title: jrson
     img: /img/showcase/jrson.webp
     url: https://jrson.me/
-    description: The personal blog of jrson.
+    description: The personal blog of jrson
     code: https://github.com/jrson83/jrson.me
   
   - title: Tobias Schmidt
     img: /img/showcase/tobias.webp
     url: https://tobiasschmidt.me/
-    description: The personal blog of Tobias Schmidt.
+    description: The personal blog of Tobias Schmidt
     code: https://github.com/tobiasschmidt89/tobiasschmidt.me
 
   - title: Notion enhancer
     img: /img/showcase/notion-enhancer.webp
     url: https://notion-enhancer.github.io/
-    description: An enhancer/customiser for the all-in-one productivity workspace notion.so.
+    description: An enhancer/customiser for the all-in-one productivity workspace notion.so
     code: https://github.com/notion-enhancer/notion-enhancer.github.io
 
   - title: Hyro
     img: /img/showcase/hyro.webp
     url: https://hyro.pages.dev/
-    description: Personal website by Hyro.
+    description: Personal website by Hyro
     code: https://github.com/xHyroM/xHyroM
 
   - title: Missing style
     img: /img/showcase/missing_style.webp
     url: https://missing.style/
-    description: Website for missing.css, a base style sheet solution.
+    description: Website for missing.css, a base style sheet solution
     code: https://github.com/bigskysoftware/missing
 
   - title: Biber
     img: /img/showcase/biber.webp
     url: https://biber.denizaksimsek.com/
-    description: Website of Biber the cat.
+    description: Website of Biber the cat
 
   - title: Exact Report Generator
     url: https://exact-report-generator.vercel.app/
-    description: A tool to create financial reports.
+    description: A tool to create financial reports
     code: https://github.com/WilcoKruijer/ExactReportGenerator
 
   - title: Macadam Grinding
     url: https://macadamgrinding.com/
-    description: A blog about cycling by Isaac Tait.
+    description: A blog about cycling by Isaac Tait
     code: https://github.com/Isaac-Tait/macadamGrinding_denoStyle
 
   - title: Ensino
     url: https://laurarubio.net/
-    description: A collection of resources for Galego teachers by Laura Rubio.
+    description: A collection of resources for Galego teachers by Laura Rubio
     code: https://github.com/laura-rubio/ensino
 
   - title: Kusaeni
     img: /img/showcase/kusaeni.webp
     url: https://kusaeni.com/
-    description: The personal blog of Kusaeni.
+    description: The personal blog of Kusaeni
     code: https://notabug.org/kuspoes/kusaicom
 
   - title: Deniz Akşimşek
     img: /img/showcase/denizaksimsek.webp
     url: https://denizaksimsek.com/
-    description: Personal website with webmentions, intl, backlinks and post timestamps pulled from git.
+    description: Personal website with webmentions, intl, backlinks and post timestamps pulled from git
     code: https://github.com/dz4k/denizaksimsek.com
 
   - title: Fabon
     url: https://www.fabon.info/
-    description: The personal website of Fabon.
+    description: The personal website of Fabon
     code: https://github.com/fabon-f/website
 
   - title: Better Know Canvas
     #img: /img/showcase/canvas.webp
     url: https://canvas.rocks/
-    description: A collection of advanced web graphics tutorials by Fernando Serboncini.
+    description: A collection of advanced web graphics tutorials by Fernando Serboncini
     code: https://github.com/fserb/bkc
 
   - title: DenissB
     img: /img/showcase/denissb.webp
     url: https://denissb.github.io/
-    description: A personal website of a web developer.
+    description: A personal website of a web developer
     code: https://github.com/denissb/denissb.github.io
 
   - title: Johan Brook
     img: /img/showcase/johan.webp
     url: https://johanbrook.com
-    description: The personal website and blog of Johan.
+    description: The personal website and blog of Johan
     code: https://github.com/johanbrook/johanbrook.com
 
   - title: aiotter
     img: /img/showcase/aiotter.webp
     url: https://aiotter.com/
-    description: The technical blog of Yuto Oguchi.
+    description: The technical blog of Yuto Oguchi
     code: https://github.com/aiotter/blog
 
   - title: Velociraptor
     img: /img/showcase/velociraptor.webp
     url: https://velociraptor.run/
-    description: The documentation of Velociraptor script runner for Deno.
+    description: The documentation of Velociraptor script runner for Deno
     code: https://github.com/jurassiscripts/velociraptor-dot-run
 
   - title: GK Neumann website
     img: /img/showcase/neumann-tokyo.webp
     url: https://en.neumann.tokyo
-    description: The corporate website of GK Neumann in Japan.
+    description: The corporate website of GK Neumann in Japan
     code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
 
   - title: minimalist blog template
     img: /img/showcase/minimalist-blog-image.webp
     url: https://minimalist-blog-x8c5ngg3kzt0.deno.dev/
-    description: Minimalist blog template built for lume .
+    description: Minimalist blog template built for lume
     code: https://github.com/officialrajdeepsingh/Minimalist-blog
 
