@@ -17,7 +17,7 @@ includes, macros, etc). The Lume components have the following advantages:
   the only way to hot-reload components without stopping and restarting the
   local server.
 
-> [!warning]
+> [!important]
 >
 > **Lume components don't run in the browser**. They are intended to generate
 > static HTML code on building time.
