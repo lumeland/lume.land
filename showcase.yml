@@ -12,6 +12,12 @@ sites:
     url: https://lume.land/
     description: This web site
     code: https://github.com/lumeland/lume.land
+
+  - title: Andy's Curate's Egg
+    img: /img/showcase/andys-curates-egg.webp
+    url: https://andy-preston.github.io/
+    description: Minimal / Simplistic / Bare-Bones developer's blog
+    code: https://github.com/andy-preston/andy-preston.github.io/    
   
   - title: 1A Insecure Network
     img: /img/showcase/1a-insec.webp
@@ -382,9 +388,3 @@ sites:
     url: https://en.neumann.tokyo
     description: The corporate website of GK Neumann in Japan
     code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
-
-  - title: Andy's Curate's Egg
-    img: /img/showcase/andys-curates-egg.webp
-    url: https://andy-preston.github.io/
-    description: Minimal / Simplistic / Bare-Bones developer's blog
-    code: https://github.com/andy-preston/andy-preston.github.io/
