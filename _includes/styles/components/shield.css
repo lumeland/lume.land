@@ -1,0 +1,27 @@
+lume-shield {
+  display: inline-flex;
+  align-items: baseline;
+  column-gap: .5em;
+  background-color: var(--color-black-240);
+  color: var(--color-white);
+  padding-left: 1em;
+  font: var(--text-caption-mini);
+  border-radius: var(--border-radius-small);
+  overflow: hidden;
+
+  span {
+    padding: .25em 1em .25em .5em;
+    background-color: var(--color, mediumpurple);
+  }
+}
+
+a:has(lume-shield) {
+  text-decoration: none;
+
+  &:hover lume-shield {
+    background-color: var(--color-black-140);
+    span {
+      background-color: color-mix(in srgb, var(--color), black 10%);
+    }
+  }
+}

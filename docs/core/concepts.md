@@ -62,7 +62,9 @@ configure Lume to load some extensions as page assets. For example:
 site.loadAssets([".css"]);
 ```
 
-For assets that require special handling, such as binary files (e.g., `.webp`), you need to specify the loader when calling `site.loadAssets()`. If no loader is specified, Lume defaults to using the text loader.
+For assets that require special handling, such as binary files (e.g., `.webp`),
+you need to specify the loader when calling `site.loadAssets()`. If no loader is
+specified, Lume defaults to using the text loader.
 
 ```ts
 // Load binary files
