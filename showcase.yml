@@ -383,9 +383,8 @@ sites:
     description: The corporate website of GK Neumann in Japan
     code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
 
-  - title: minimalist blog template
-    img: /img/showcase/minimalist-blog-image.webp
-    url: https://minimalist-blog-x8c5ngg3kzt0.deno.dev/
-    description: Minimalist blog template built for lume
-    code: https://github.com/officialrajdeepsingh/Minimalist-blog
-
+  - title: Andy's Curate's Egg
+    img: /img/showcase/andys-curates-egg.png
+    url: https://andy-preston.github.io/
+    description: Minimal / Simplistic / Bare-Bones developer's blog
+    code: https://github.com/andy-preston/andy-preston.github.io/
