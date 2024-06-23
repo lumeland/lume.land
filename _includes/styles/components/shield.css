@@ -1,4 +1,5 @@
 lume-shield {
+  --color: mediumpurple;
   display: inline-flex;
   align-items: baseline;
   column-gap: .5em;
@@ -11,7 +12,7 @@ lume-shield {
 
   span {
     padding: .25em 1em .25em .5em;
-    background-color: var(--color, mediumpurple);
+    background-color: var(--color);
   }
 }
 
