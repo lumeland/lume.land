@@ -384,7 +384,7 @@ sites:
     code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
 
   - title: Andy's Curate's Egg
-    img: /img/showcase/andys-curates-egg.png
+    img: /img/showcase/andys-curates-egg.webp
     url: https://andy-preston.github.io/
     description: Minimal / Simplistic / Bare-Bones developer's blog
     code: https://github.com/andy-preston/andy-preston.github.io/
