@@ -8,8 +8,25 @@
     padding: 15px 60px 15px 20px;
     border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, .1);
-    scrollbar-width: none;
     position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100px;
+      background: linear-gradient(to right, transparent, var(--color-black-140) 50%);
+    }
+    
+    & code {
+      scrollbar-width: none;
+      display: block;
+      overflow-x: auto;
+    }
 
     &::-webkit-scrollbar {
       display: none;
@@ -25,18 +42,19 @@
   position: absolute;
   right: 12px;
   top: 12px;
+  z-index: 2;
 
   button {
     padding: 4px;
     border-radius: var(--border-radius-small);
     border: none;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, .1);
-    background: none;
+    background: var(--color-black-140);
     color: var(--color-black-860);
     cursor: pointer;
 
     &:hover {
-      background: #FFF3;
+      background: var(--color-black-240);
     }
   }
 
