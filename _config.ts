@@ -15,7 +15,6 @@ import analyze, {
   mergeDefaults,
 } from "https://deno.land/x/aldara@v0.1.3/mod.ts";
 import { alert } from "npm:@mdit/plugin-alert@0.8.0";
-
 import ventoLang from "https://deno.land/x/vento@v0.10.2/highlightjs-vento.js";
 
 const markdown = {
@@ -120,7 +119,7 @@ site.script("plugin-docs", [
 ]);
 site.data("scheme", async (mod: string) => {
   try {
-    const url = `https://deno.land/x/lume@v2.2.0/${mod}`;
+    const url = `https://deno.land/x/lume@v2.2.2/${mod}`;
     const { defaults } = await import(url);
     const { Options } = await analyze(url, { maxDepth: 2, private: false });
 
