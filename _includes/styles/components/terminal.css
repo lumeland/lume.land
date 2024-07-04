@@ -81,7 +81,7 @@
 .terminal-cta {
   border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
   background: var(--color-primary);
-  color: var(--color-background);
+  color: white;
   padding: 0 15px;
   font: var(--text-body-bold);
   letter-spacing: var(--text-body-spacing);

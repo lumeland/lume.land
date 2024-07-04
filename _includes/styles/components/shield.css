@@ -1,28 +1,30 @@
 lume-shield {
-  --color: mediumpurple;
-  display: inline-flex;
-  align-items: baseline;
-  column-gap: .5em;
-  background-color: var(--color-black-240);
-  color: var(--color-white);
-  padding-left: 1em;
+  --color: var(--color-primary);
+  display: inline-block;
   font: var(--text-caption-mini);
   border-radius: var(--border-radius-small);
   overflow: hidden;
+  margin-right: .25em;
 
   span {
     padding: .25em 1em .25em .5em;
     background-color: var(--color);
   }
-}
 
-a:has(lume-shield) {
-  text-decoration: none;
+  a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: baseline;
+    column-gap: .5em;
+    background-color: var(--color-black-180);
+    color: var(--color-white);
+    padding-left: 1em;
 
-  &:hover lume-shield {
-    background-color: var(--color-black-140);
-    span {
-      background-color: color-mix(in srgb, var(--color), black 10%);
+    &:hover {
+      background-color: var(--color-black-140);
+      span {
+        background-color: color-mix(in srgb, var(--color), black 10%);
+      }
     }
   }
 }
