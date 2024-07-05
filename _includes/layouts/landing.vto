@@ -23,7 +23,22 @@ page_css: landing.css
       <lume-shield data-name="denoland/lume"></lume-shield>
       <lume-shield style="--color:mediumpurple" data-name="jsdelivr/lumeland/cms"></lume-shield>
     </div>
+
+    <div class="landing-header-companies">
+      {{ companies.title |> md }}
+
+      <ul>
+        {{ for item of companies.items }}
+        <li>
+          <a href="{{ item.url }}" title="{{ item.name }}">
+            {{ item.logo }}
+          </a>
+        </li>
+        {{ /for }}
+      </ul>
+    </div>
   </header>
+
 
   <section class="landing-usage">
   {{ for block of usage }}

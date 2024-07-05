@@ -31,7 +31,7 @@
   @media (min-width: 1000px) {
     display: grid;
     grid-template-columns: minmax(620px, 1fr) 1fr;
-    grid-template-areas: "title fire" "install fire";
+    grid-template-areas: "title fire" "install fire" "companies companies";
     row-gap: var(--row-gap-0);
   }
 }
@@ -45,6 +45,50 @@
   @media (min-width: 1000px) {
     font-size: min(2.5vw, 30px);
   }
+}
+.landing-header-companies {
+  grid-area: companies;
+  color: var(--color-foreground-1);
+  --logo-color: currentColor;
+  --logo-color-black: black;
+  --logo-color-white: white;
+  text-align: center;
+  font: var(--text-caption);
+  border-top: solid 1px var(--color-background-2);
+  padding-top: var(--row-gap-1);
+  margin-top: var(--row-gap-1);
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    display: block;
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 0;
+    padding: 0;
+    column-gap: 40px;
+    row-gap: 30px;
+  }
+}
+:root[data-theme='dark'] .landing-header-companies {
+  --logo-color-black: black;
+  --logo-color-white: var(--color-black-650);
+}
+:root[data-theme='light'] .landing-header-companies {
+  --logo-color-black: var(--color-black-240);
+  --logo-color-white: white;
 }
 
 /** Install */
