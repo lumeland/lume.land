@@ -140,6 +140,7 @@ server.use(redirects({
       code: 302,
     },
   },
+  strict: false, // configure whether distinguish the trailing slash or not (true by default)
 }));
 ```
 

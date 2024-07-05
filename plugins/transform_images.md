@@ -15,6 +15,13 @@ resize, rotate, and convert any image to other formats.
 The plugin reads the data assigned to the image files (specifically the
 `transformImages` key) to know how to transform the image.
 
+> [!note]
+>
+> This plugin supports the formats `jpeg`, `jp2`, `png`, `webp`, `gif`, `avif`,
+> `heif` and `tiff`.
+>
+> `jxl` is not supported at the moment.
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:

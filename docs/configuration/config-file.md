@@ -109,6 +109,15 @@ const site = lume({
 });
 ```
 
+### caseSensitiveUrls
+
+Lume prevents to save two pages with the same URL. By default pages with the
+same name but different case are considered the same page, for example
+`/about-us/` and `/About-Us/`. This behavior matches with the file system of
+Windows and MacOS that are case insensitive. You can set this option to `true`
+to make it case sensitive, so both pages would be considered different. Note
+that this behavior is only compabible with Linux.
+
 ### includes
 
 It's a special folder used by default by the template engines and other
