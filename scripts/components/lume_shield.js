@@ -5,8 +5,8 @@ export default class LumeShield extends HTMLElement {
     if (data) {
       const name = this.dataset.visibleName || data.name;
       this.innerHTML = `
-      <a href="${data.packageUrl}">
-        ${name}<span>${data.version}</span>
+      <a href="${data.url}">
+        ${name}<span>${data.version.replace(/^v/, "")}</span>
       </a>`;
     }
   }
