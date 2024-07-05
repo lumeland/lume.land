@@ -380,6 +380,13 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://open-innovations.org/blog/2024-07-05-building-the-general-election-hexmaps
+      author: Giles Dring
+      avatar: /img/avatars/testimonials/gdring.webp
+      date: July 5, 2024
+      text: Building the General Election Hexmaps
+      type: article
+
     - url: https://desu.social/@pixel/112155492135005017
       author: Andy (@pixel@desu.social)
       avatar: /img/avatars/testimonials/pixel.webp
