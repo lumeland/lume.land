@@ -294,6 +294,12 @@
     margin: 0;
     font: var(--text-caption);
   }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: .5em 0;
+  }
 }
 .landing-testimonials-article {
   & h3 {

@@ -380,6 +380,12 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://twitter.com/deno_land/status/1810751631707029829
+      author: Deno (@deno_land)
+      avatar: /img/avatars/testimonials/deno.webp
+      date: July 9, 2024
+      text: we improved our core web vitals drastically with one simple trick💡️<br><br>not using client-side rendering<br><br>(we moved our docs from docusaurus to <a href="https://lume.land">lume.land</a>) <img src="/img/covers/core_web_vitals.webp">
+
     - url: https://open-innovations.org/blog/2024-07-05-building-the-general-election-hexmaps
       author: Giles Dring
       avatar: /img/avatars/testimonials/gdring.webp
@@ -574,20 +580,8 @@ testimonials:
       date: June 26, 2021
       text: tapi sekarang sih pengennya pakai lumeland <a href="https://t.co/v6konf7O0Z">https://t.co/v6konf7O0Z</a>
 
-    - url: https://twitter.com/deno_land/status/1571469733093851140
-      author: Deno (@deno_land)
-      avatar: /img/avatars/testimonials/deno.webp
-      date: September 18, 2022
-      text: Lume static site generator <a href="https://t.co/Lr9GTGUOlB">https://t.co/Lr9GTGUOlB</a>
-
     - url: https://twitter.com/fserb/status/1390404312581410817
       author: Fernando Serboncini (@fserb)
       avatar: /img/avatars/testimonials/fserb.webp
       date: May 6, 2021
       text: Personally I migrated from Jekyll to Eleventy to Lume (<a href="https://t.co/aSHo422kxJ">https://t.co/aSHo422kxJ</a>). And I love it. Github pages is fine, if you are building it yourself (not relying on Github&#39;s MD parser).
-
-    - url: https://twitter.com/brianleroux/status/1337081772278870016
-      author: Brian LeRoux (@brianleroux)
-      avatar: /img/avatars/testimonials/brianleroux.webp
-      date: December 10, 2020
-      text: Lume…another Static Site Generator (SSG) but this time built on Deno. 🔥🦖 <br><br>Love the logo. <a href="https://t.co/ajHHcXMnfq">https://t.co/ajHHcXMnfq</a>
