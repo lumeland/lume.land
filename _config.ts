@@ -114,12 +114,9 @@ site
     },
   }));
 
-site.script("plugin-docs", [
-  "deno doc --json https://deno.land/x/lume/plugins/feed.ts",
-]);
 site.data("scheme", async (mod: string) => {
   try {
-    const url = `https://deno.land/x/lume@v2.2.2/${mod}`;
+    const url = `https://deno.land/x/lume@v2.2.3/${mod}`;
     const { defaults } = await import(url);
     const { Options } = await analyze(url, { maxDepth: 2, private: false });
 
