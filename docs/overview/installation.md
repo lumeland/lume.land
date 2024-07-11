@@ -64,7 +64,7 @@ export default site;
 
 </lume-code>
 
-Now you can use [Deno's tasks](https://deno.land/manual/tools/task_runner) to
+Now you can use [Deno's tasks](https://docs.deno.com/runtime/manual/tools/task_runner/) to
 run Lume in any environment. The command `deno task lume` runs Lume and you can
 add additional arguments. For example `deno task lume -s` runs Lume, open a
 local web server and start watching the changes.
