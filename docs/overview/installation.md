@@ -87,7 +87,7 @@ deno install --allow-run --allow-env --allow-read --name lume --force --reload h
 
 This creates the `lume` command:
 
-- `lume init` will run the command `deno run -Ar https://lume.land` to
+- `lume init` will run the command `deno run -A https://lume.land/init.ts` to
   initialize Lume in the current directory.
 - `lume upgrade-cli` will upgrade the Lume CLI script to the latest version.
 - Any other command will be delegated to `deno task lume [...args]`. For
