@@ -6,7 +6,7 @@ description: Configure the Deno's permissions for Lume
 Deno has a permission system that allows configuring the access to different
 APIs like environment variables, filesystem reads or writes, net access, etc.
 See the
-[Deno's permissions manual](https://deno.land/manual/getting_started/permissions)
+[Deno's permissions manual](https://docs.deno.com/runtime/manual/basics/permissions/)
 for more info.
 
 Lume is executed by default with the `-A` flag (or `--allow-all`), allowing all

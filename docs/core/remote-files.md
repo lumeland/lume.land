@@ -73,33 +73,26 @@ theme. As an example, see the
 
 ## Limits of the remote files
 
-Remote files work fine in the following cases:
-
-- To copy static files (with `site.copy()`)
-- To load pages and assets.
-- To load layouts defined with the `layout` property of the pages.
-- To load `_data` files and folders.
-- To load `_components` files.
-- Some processors like `esbuild` and `postcss` have support for remote files.
-
-But there are some scenarios that remote files don't work or work in a limited
-way:
-
-### Including templates
+Remote files work in most cases, because they are integrated natively in Lume's
+file system
 
 Some template engines have their own way of loading templates. For example, Pug
 uses `extends "filename"`, Vento uses `{{ include "filename" }}`, Liquid and
 Nunjucks use `{% include "filename" %}`, etc.
 
-Some engines allow configuring how to load these files (so they can use the Lume
-reader), but others don't.
+The template engines [Eta](../../plugins/eta.md),
+[Liquid](../../plugins/liquid.md) and [Pug](../../plugins/pug.md) don't allow to
+customize the way to load the files, and cannot use Lume file system, hence they
+cannot include remote files. If you want to use remote templates,
+[Vento](../../plugins/vento.md) or [Nunjucks](../../plugins/nunjucks.md) are
+good options.
 
 ### Cache files
 
 As of Lume 1.17.4, files are automatically cached using the
-[Web Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache), so it's
-only requested the first time and then network access is no longer needed. It's
-possible to disable the cache for a specific file by removing the cached
+[Web Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache), so they
+are requested only the first time and then network access is no longer needed.
+It's possible to disable the cache for a specific file by removing the cached
 response before the build. For example:
 
 ```ts
@@ -110,7 +103,15 @@ const cache = await caches.open("lume_remote_files");
 await cache.delete("https://example.com/theme/styles.css");
 ```
 
+If you don't want to cache the remote files, use the `LUME_NOCACHE=true`
+environment variable. For example:
+
+```
+LUME_NOCACHE=true deno task serve
+```
+
 ### Import modules
 
 JavaScript/TypeScript modules imported as `import foo from "./filename.ts"` are
-not managed by Lume reader, but you can use import maps for a similar behavior.
+not managed by Lume file system, but you can use import maps for a similar
+behavior.

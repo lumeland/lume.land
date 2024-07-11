@@ -17,13 +17,15 @@ This is a high-level description of how Lume builds your site. When you run
    - Skip files and folders starting with `_`, `.` or ignored with
      `site.ignore()`.
    - If the file
-     [`must be copied statically`](../configuration/copy-static-files.md),
+     [must be copied statically](../configuration/copy-static-files.md),
      calculate the source and destination paths.
    - If the name of the file is `_data` or is inside a `_data` folder, is shared
      data.
    - If the file is inside a `_components` folder, it is a component.
    - If it has a known extension, it's a page.
-   - Otherwise, ignore it.
+   - Otherwise, ignore it (or copy it if
+     [`copyRemainingFiles`](../configuration/copy-static-files.md#copy-remaining-files)
+     is enabled).
 6. Dispatch the [event](../core/events.md) `beforeRender`.
 7. Group all pages by [`renderOrder` value](../core/render-order.md) and sort
    them.
@@ -50,5 +52,6 @@ exactly the same, but the successive changes have some differences:
 - Only the files with changes are reloaded.
 - Steps 4 to 10 are exactly the same. All pages (not only the modified ones) are
   re-rendered. This is because a change in one file can affect many pages, so we
-  have to render all pages again.
+  have to render all pages again. See
+  [scoped updated](../core/scoped-updates.md) to learn how to configure this.
 - Only the pages that have changed their content are saved in `dest`.

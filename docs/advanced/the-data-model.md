@@ -314,7 +314,7 @@ structure of your choice. But there are some special variables that Lume
 understands (See
 [Standard variables documentation](../creating-pages/page-data.md#standard-variables))
 and other variables considered good practices or common conventions. This is a
-list of all of them:
+list with all of them:
 
 <!-- deno-fmt-ignore-start -->
 [url](../creating-pages/urls.md) `string`
@@ -323,8 +323,8 @@ list of all of them:
 [date](../creating-pages/page-data.md#date) `Date`
 : Created by Lume automatically if it's missing.
 
-basename `string`
-: Created by Lume automatically if it's missing. *Only Lume 2*.
+[basename](../creating-pages/urls.md#basename) `string`
+: Created by Lume automatically if it's missing.
 
 [tags](../creating-pages/tags.md) `string[]`
 : Normalized by Lume automatically. Used to assign tags or to pages.

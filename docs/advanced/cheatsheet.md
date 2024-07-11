@@ -112,8 +112,9 @@ site.script(name, commandOrFunction);
 /** Register a data loader */
 site.loadData(extensions, loader);
 
-/** Register a HTML page loader, optionally a template engine */
-site.loadPages(extensions, loader, engine);
+/** Register a HTML page loader and other options */
+site.loadPages(extensions, loader);
+site.loadPages(extensions, options);
 
 /** Register an assets page loader */
 site.loadAssets(extensions, loader);
@@ -121,14 +122,8 @@ site.loadAssets(extensions, loader);
 /** Register a preprocessor */
 site.preprocess(extensions, fn);
 
-/** Register a preprocessor passing all matched pages */
-site.preprocessAll(extensions, fn);
-
 /** Register a processor */
 site.process(extensions, fn);
-
-/** Register a processor passing all matched pages */
-site.processAll(extensions, fn);
 
 /** Register a template filter */
 site.filter(name, fn, async = false);

@@ -90,11 +90,11 @@ site.process([".js"], function (pages) {
 });
 ```
 
-> [!warning]
+> [!note]
 >
 > Make sure the file extension that you want to process is previously loaded.
-> See [Loaders](loaders.md) for more information about how to register a new
-> loader.
+> See [how to load assets](./concepts.md#asset-pages) for more information about
+> how to register a new loader.
 
 ## Preprocess
 
@@ -115,10 +115,9 @@ site.preprocess([".html"], (pages) => {
 
 ## Create pages dynamically
 
-Some processors can generate additional pages (or remove them). The second
-argument of the (pre)processors contains an array with all pages that are being
-processed. You can modify this array to add or remove pages dynamically. For
-example:
+Processors can generate additional pages (or remove them). The second argument
+of the (pre)processors contains an array with all pages of the site. You can
+modify this array to add or remove pages dynamically. For example:
 
 ```js
 import { Page } from "lume/core/file.ts";

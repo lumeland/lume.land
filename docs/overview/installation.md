@@ -64,10 +64,11 @@ export default site;
 
 </lume-code>
 
-Now you can use [Deno's tasks](https://docs.deno.com/runtime/manual/tools/task_runner/) to
-run Lume in any environment. The command `deno task lume` runs Lume and you can
-add additional arguments. For example `deno task lume -s` runs Lume, open a
-local web server and start watching the changes.
+Now you can use
+[Deno's tasks](https://docs.deno.com/runtime/manual/tools/task_runner/) to run
+Lume in any environment. The command `deno task lume` runs Lume and you can add
+additional arguments. For example `deno task lume -s` runs Lume, open a local
+web server and start watching the changes.
 
 The tasks `build` (to build the website) and `serve` (to build and start a local
 server) are just shortcuts to the main `lume` task with additional arguments.

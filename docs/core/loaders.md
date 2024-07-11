@@ -125,7 +125,7 @@ export default class HandlebarsEngine implements Lume.Engine {
 }
 ```
 
-To use this template engine, pass it as the third argument of the `loadPages`
+To use this template engine, pass it to the options argument of the `loadPages`
 function:
 
 ```ts

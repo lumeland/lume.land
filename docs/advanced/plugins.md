@@ -3,8 +3,8 @@ title: Creating plugins
 description: Guide to create your own plugins to extend Lume
 ---
 
-Lume is a static site generator that can be extended easily by adding more
-[loaders](../core/loaders.md), [engines](../core/loaders.md#template-engines),
+Lume can be extended easily by adding more [loaders](../core/loaders.md),
+[engines](../core/loaders.md#template-engines),
 [processors](../core/processors.md) etc. Plugins provide an easy interface to
 extend Lume without writing too much code in the `_config.ts` file.
 
@@ -28,8 +28,10 @@ function addBanner(content: string): string {
   return $banner + "\n" + content;
 }
 
-site.process([".css"], (page) => {
-  page.content = addBanner(page.content as string);
+site.process([".css"], (pages) => {
+  for (const page of pages) {
+    page.content = addBanner(page.content as string);
+  }
 });
 
 export default site;
@@ -52,8 +54,10 @@ export default function (options: Options) {
   }
 
   return (site: Site) => {
-    site.process([".css"], (page) => {
-      page.content = addBanner(page.content as string);
+    site.process([".css"], (pages) => {
+      for (const page of pages) {
+        page.content = addBanner(page.content as string);
+      }
     });
   };
 }
@@ -193,11 +197,10 @@ entry in your import maps).
   [jsDelivr](https://www.jsdelivr.com/) to serve files from GitHub repositories
   and ensure reliability (they are permanently cached
   [even if the GitHub repository is deleted](https://www.jsdelivr.com/github)).
-  [JSR](https://jsr.io/) is not recommended due to not supporting HTTP imports,
-  buggy import maps behavior, and code changes made automatically by the
-  platform that can cause unexpected bugs.
 
-- Once your plugin is published, please let us know. You can create a PR to
-  [awesome-lume repository](https://github.com/lumeland/awesome-lume). We can
-  also include it in the [Community plugins](https://lume.land/plugins/) section
-  of the website.
+- [JSR](https://jsr.io/) is **not recommended** due to not supporting HTTP
+  imports, buggy import maps behavior, and code changes made automatically by
+  the platform that can cause unexpected bugs.
+
+- Once your plugin is published, please let us know!!. You can create a PR to
+  [awesome-lume repository](https://github.com/lumeland/awesome-lume).
