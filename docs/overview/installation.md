@@ -26,7 +26,7 @@ where you can customize the site build.
 
 `deno.json`
 : The
-[Deno's configuration file](https://deno.land/manual/getting_started/configuration_file).
+[Deno's configuration file](https://docs.deno.com/runtime/manual/getting_started/configuration_file/).
 It includes the import map and some tasks to run Lume. You can also configure
 other features of Deno like TypeScript, formatter, linter, etc.
 
