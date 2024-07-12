@@ -6,8 +6,8 @@ order: 6
 
 Lume is built on top of Deno so it has native support for
 [TypeScript](https://www.typescriptlang.org/) and comes with built-in types for
-core features and plugins. It also creates the `deno.json` file importing the Lume types using the
-`compilerOptions.types` array.
+core features and plugins. It also creates the `deno.json` file importing the
+Lume types using the `compilerOptions.types` array.
 
 ```json
 {
@@ -43,7 +43,8 @@ To create pages and layouts with TSX, you can either use the Lume
 
 ## TypeScript in Templates
 
-`Lume` global namespace has the `Lume.Data` and `Lume.Helpers` interfaces that you can use in your pages. For example:
+`Lume` global namespace has the `Lume.Data` and `Lume.Helpers` interfaces that
+you can use in your pages. For example:
 
 <lume-code>
 
@@ -67,7 +68,7 @@ Or extend the interface with your own types, for example:
 <lume-code>
 
 ```ts {title="custom.tsx"}
-  // Your own interface
+// Your own interface
 interface MyData {
   description?: string;
 }
