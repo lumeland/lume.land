@@ -195,13 +195,13 @@ current page. Let's see an example:
 
 {{ if post }}
   <a href="{{ post.url }}" rel="prev">← {{ post.title }}</a>
-{{ /for }}
+{{ /if }}
 
 {{ set post = search.nextPage(url, "html") }}
 
 {{ if post }}
   <a href="{{ post.url }}" rel="next">{{ post.title }} →</a>
-{{ /for }}
+{{ /if }}
 ```
 
 ## Get all values of a key
