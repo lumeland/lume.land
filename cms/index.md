@@ -25,7 +25,7 @@ To add LumeCMS to your site add the `lume/cms/` entry to your import map:
 {
   "imports": {
     "lume/": "https://deno.land/x/lume@v2.1.4/",
-    "lume/cms": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.4.1/"
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.4.1/"
   }
 }
 ```
