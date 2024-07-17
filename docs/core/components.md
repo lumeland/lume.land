@@ -134,7 +134,7 @@ In Nunjucks it's very similar:
 {% endcomp %}
 ```
 
-The content of the components are passed throught the `content` variable:
+The content of the components are passed through the `content` variable:
 
 <lume-code>
 

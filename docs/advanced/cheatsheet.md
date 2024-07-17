@@ -3,7 +3,7 @@ title: Cheat sheet
 description: All configuration options in a simple page
 ---
 
-## Lume instantation
+## Lume instantiation
 
 These are all available options (and the default values) when create a new site:
 

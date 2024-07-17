@@ -50,7 +50,7 @@ something like this:
 ### 404.html
 
 The page `/404.html` is a special case and pretty URLs are not applied here. The
-reason is most servers and static hostings like
+reason is most servers and static hosting websites like
 [Vercel](https://vercel.com/guides/custom-404-page#static-site-generator-(ssg)),
 [Netlify](https://docs.netlify.com/routing/redirects/redirect-options/#custom-404-page-handling),
 [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
