@@ -169,7 +169,7 @@ in the `--serve` mode. See the
 
 ### shutdown
 
-Useful to show a page while your site is shutted down. All request to HTML pages
+Useful to show a page while your site is shut down. All request to HTML pages
 returns the content of the `/503.html` file and the `503` status code. It also
 sends the `Retry-After` header.
 
@@ -182,7 +182,7 @@ server.use(shutdown({
 
 ### www
 
-This middleware redirects from `www.` domains to non-www domain (or viceversa).
+This middleware redirects from `www.` domains to non-www domain (or vice versa).
 
 ```js
 server.use(www({
