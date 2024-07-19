@@ -154,7 +154,7 @@ This is converted to:
 {
   url: "/posts/hello-world/",
   date: Date("2023-11-30 00:00:00"),
-  basename: "hello-word",
+  basename: "hello-world",
   content: "Hello **world**"
 }
 ```
@@ -178,7 +178,7 @@ Is converted to:
 {
   url: "/posts/hello-world/",
   date: Date("2023-11-30 00:00:00"),
-  basename: "hello-word",
+  basename: "hello-world",
   content: "Hello **world**",
   search: Searcher(),
   paginate: Paginate(),
