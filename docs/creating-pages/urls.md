@@ -154,7 +154,7 @@ final URL:
 basename: ""
 ```
 
-The final URL of the file is now `/blog/hello-word/`, the `/post/` part was
+The final URL of the file is now `/blog/hello-world/`, the `/post/` part was
 removed. You can also remove the previous folder with:
 
 ```yml
