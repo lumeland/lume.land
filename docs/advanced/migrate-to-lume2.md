@@ -247,7 +247,7 @@ your JSX pages, configure the JSX transformer in the `deno.json` file:
 ```json
 {
   "compilerOptions": {
-    "jsx": "react-js",
+    "jsx": "react-jsx",
     "jsxImportSource": "npm:react",
     "types": [
       "https://unpkg.com/@types/react@18.2.37/index.d.ts"
