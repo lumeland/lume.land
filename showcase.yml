@@ -13,6 +13,11 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Adilah Raazali
+    img: /img/showcase/adilahraazali.webp
+    url: https://www.adilahraazali.com/
+    description: Personal site that talks about takaful.
+
   - title: Deno Docs
     img: /img/showcase/deno-docs.webp
     url: https://docs.deno.com/
