@@ -330,6 +330,11 @@ support:
       img: /img/avatars/supporters/pavelzinoviev.webp
       amount: 3
       recurrent: true
+    - name: SMM OWL
+      url: https://opencollective.com/smm-owl
+      img: /img/avatars/supporters/smmowl.webp
+      amount: 1
+      recurrent: true
 
   past_title: Lovely past sponsors
   past_sponsors:
