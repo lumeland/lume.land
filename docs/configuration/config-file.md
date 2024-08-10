@@ -124,8 +124,9 @@ It's a special folder used by default by the template engines and some
 processors (like sass or postcss) to look for the included files. By default is
 `_includes` and this value is relative to the `src` folder.
 
-As an example, if the `src` folder is `./src` and the includes folder is configured
-to `_includes`, Lume will look for the included files at `./src/_includes/`.
+As an example, if the `src` folder is `./src` and the includes folder is
+configured to `_includes`, Lume will look for the included files at
+`./src/_includes/`.
 
 ## Server options
 
