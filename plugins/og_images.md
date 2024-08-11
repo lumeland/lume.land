@@ -15,7 +15,8 @@ tags.
 The library [Satori](https://github.com/vercel/satori) is used to generate the
 SVG images (that are then converted to PNG with
 [Sharp](https://sharp.pixelplumbing.com/)). The URL of the image generated is
-saved in the `metas.image` variable, so it's detected by `metas` plugin.
+saved in the `metas.image` variable, so it's detected by `metas` plugin (that
+must be added after `og_images`).
 
 ## Installation
 
