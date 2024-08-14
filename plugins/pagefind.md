@@ -147,3 +147,18 @@ children.
 >
 > See the [Pagefind indexing docs](https://pagefind.app/docs/indexing/) for more
 > info.
+
+## Permissions
+
+Lume is executed by default with
+[all permissions](../docs/advanced/permissions.md). If you prefer not to grant
+all permissions and configure specific permission for this plugin:
+
+- `--allow-run` To run the pagefind binary file. It's downloaded automatically
+  by the NPM package and its path depends on the username, version and platform.
+  If you want to explicitly pass it, you need to check where the binary file was
+  dowloaded.
+
+For example for the username "oscarotero" on macOS and Pagefind 1.1.0, it would
+be
+`--allow-run=/Users/oscarotero/Library/Caches/deno/npm/registry.npmjs.org/@pagefind/darwin-x64/1.1.0/bin/pagefind_extended`

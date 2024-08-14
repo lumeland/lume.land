@@ -199,8 +199,9 @@ entry in your import maps).
   [even if the GitHub repository is deleted](https://www.jsdelivr.com/github)).
 
 - [JSR](https://jsr.io/) is **not recommended** due to not supporting HTTP
-  imports, buggy import maps behavior, and code changes made automatically by
-  the platform that can cause unexpected bugs.
+  imports (it's not possible to import Lume types), buggy import maps behavior,
+  and code changes made automatically by the platform that can cause unexpected
+  bugs.
 
 - Once your plugin is published, please let us know!!. You can create a PR to
   [awesome-lume repository](https://github.com/lumeland/awesome-lume).

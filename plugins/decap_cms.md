@@ -77,3 +77,15 @@ Keep in mind that local mode runs
 to start the local proxy server for the CMS. You can change this command with
 `proxyCommand` option or disable the local mode, by setting `local: false` in
 the plugin configuration.
+
+## Permissions
+
+Lume is executed by default with
+[all permissions](../docs/advanced/permissions.md). If you want to configure the
+permission, this plugin needs the following:
+
+- `--allow-run=npm:decap-server`
+- `--allow-net=0.0.0.0`
+- `--allow-env`
+- `--allow-read`
+- `--allow-write`
