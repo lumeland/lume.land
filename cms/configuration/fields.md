@@ -100,6 +100,9 @@ attributes
 init
 : A function that will be invoked before showing this field in the front-end. It allows to change the field configuration dynamically. More info below.
 
+mode
+: Some fields like `date` and `datetime` have different behaviors depending on the mode. See the documentation of the fields for more info.
+
 <!-- deno-fmt-ignore-end -->
 
 This is an example of fields with some extra options:
