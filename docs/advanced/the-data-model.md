@@ -258,9 +258,11 @@ and you can access the data of the page with the `Page.data` property.
 ```js
 // _config.js
 
-site.preprocess([".html"], (page) => {
-  const data = page.data; // Get the Data object
-  data.title += " - My site name"; // Modify the title variable
+site.preprocess([".html"], (pages) => {
+  for (const page of pages) {
+    const data = page.data; // Get the Data object
+    data.title += " - My site name"; // Modify the title variable
+  }
 });
 ```
 
