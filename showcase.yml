@@ -13,6 +13,11 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Commonhaus Foundation
+    img: /img/showcase/commonhaus.webp
+    url: https://www.commonhaus.org/
+    description: Non-profit organization dedicated to the sustainability of open source libraries and frameworks.
+
   - title: Adilah Raazali
     img: /img/showcase/adilahraazali.webp
     url: https://www.adilahraazali.com/
@@ -21,7 +26,7 @@ sites:
   - title: Deno Docs
     img: /img/showcase/deno-docs.webp
     url: https://docs.deno.com/
-    description: Deno documentation site
+    description: Official Deno documentation site
     code: https://github.com/denoland/deno-docs
 
   - title: Andy's Curate's Egg
