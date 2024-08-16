@@ -17,6 +17,7 @@ sites:
     img: /img/showcase/commonhaus.webp
     url: https://www.commonhaus.org/
     description: Non-profit organization dedicated to the sustainability of open source libraries and frameworks.
+    code: https://github.com/commonhaus/commonhaus.github.io
 
   - title: Adilah Raazali
     img: /img/showcase/adilahraazali.webp
