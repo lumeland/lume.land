@@ -1,6 +1,6 @@
 ---
 title: Archetypes
-description: Scripts to create a templates for new content. 
+description: Scripts to create a templates for new content.
 order: 13
 ---
 

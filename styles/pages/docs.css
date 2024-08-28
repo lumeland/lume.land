@@ -19,6 +19,8 @@
   position: sticky;
   top: 100px;
   align-self: start;
+  scrollbar-color: var(--color-foreground-1) var(--color-background);
+  scrollbar-width: thin;
 
   @media (min-width: 900px) {
     overflow-y: auto;
