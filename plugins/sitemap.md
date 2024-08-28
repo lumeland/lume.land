@@ -51,6 +51,37 @@ site.use(sitemap({
 To define the URL, it uses the location defined in the
 [config file](../docs/configuration/config-file.md#location).
 
+### lastmod value
+
+By default, the plugin uses the value of the `date` variable for `lastmod`. This
+variable can mean anything, but it is not necessarily the last modification
+date. If you want to use the last modification time of the page file, you can
+create a preprocessor like this:
+
+```js
+// Create the lastmod variable with the mtime of the file
+site.preprocess([".html"], (pages) => {
+  for (const page of pages) {
+    const info = page.src.entry?.getInfo();
+    page.data.lastmod = info?.mtime;
+  }
+});
+
+// Configure the plugin to use the variable
+site.use(sitemap({
+  lastmod: "lastmod",
+}));
+```
+
+> [!note]
+>
+> `mtime` is not a reliable value. In some CI environments, it's the present
+> time (the moment where the file is created after cloning the repo, instead of
+> when this file content was modified for the last time). Alternatively, you can
+> use [Git Last Updated](../docs/creating-pages/page-data.md#date) value, but it
+> doesn't work for CI like GitHub Actions, because the repository is cloned
+> without the history (only the last commit).
+
 ## Multilanguage
 
 It's possible generate sitemaps for sites with multiple languages using the
