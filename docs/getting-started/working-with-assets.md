@@ -94,10 +94,8 @@ export default site;
 
 </lume-code>
 
-After editing the `_config.ts` we need to stop the server (with `Ctrl + C`) and
-start it again `deno task serve` because Lume cannot reload it dynamically (this
-is something that will fixed soon). Now you should see the `styles.css` file in
-the `_dest` folder and the styles are applied to all HTML pages.
+Now you should see the `styles.css` file in the `_dest` folder and the styles
+are applied to all HTML pages.
 
 > [!tip]
 >

@@ -43,27 +43,22 @@ The object returned by `nav.menu()` would be like this:
 
 ```js
 {
-  slug: "",
-  data: Data,
+  data: { basename: "", ...Data },
   children: [
     {
-      slug: "articles",
-      data: Data,
+      data: { basename: "articles", ...Data },
       children: [
         {
-          slug: "first-article",
-          data: Data,
+          data: { basename: "first-article", ...Data },
         },
         {
-          slug: "second-article",
+          data: { basename: "second-article" },
           children: [
             {
-              slug: "chapter-1",
-              data: Data,
+              data: { basename: "chapter-1", ...Data },
             },
             {
-              slug: "chapter-2",
-              data: Data,
+              data: { basename: "chapter-2", ...Data },
             },
           ],
         },
@@ -77,7 +72,7 @@ Some interesting things:
 
 - The `data` property contains the page data object. So you can access to any
   page variable like `data.title` or `data.url`.
-- The item with the slug `second-article` doesn't have the `data` value because
+- The item with the basename `second-article` doesn't have more data because
   there isn't any page with the url `/articles/second-article/`. Note that there
   are pages inside this url (`/articles/second-page/chapter-1/` and
   `/articles/second-page/chapter-2/`) that do have the `data` value.
@@ -98,12 +93,12 @@ example in Vento:
 ```
 
 ```vento{title="menu_item.vto"}
-{{ if item.data }}
+{{ if item.data.url }}
   <a href="{{ item.data.url }}">
     {{ item.data.title }}
   </a>
 {{ else }}
-  <span>{{ item.slug }}</span>
+  <span>{{ item.data.basename }}</span>
 {{ /if }}
 
 <ul>
@@ -134,6 +129,68 @@ pages, sorted by URL:
 
 ```js
 nav.menu("/", "lang=en", "url=asc");
+```
+
+### Export to JSON
+
+The menu can be exported to JSON, useful to work with it in the frontend:
+
+```js
+const menu = nav.menu();
+JSON.stringify(menu);
+```
+
+### Next and previous pages
+
+Use the functions `nav.nextPage()` and `nav.previousPage()` to return the next
+and previous page of the menu relative to the current page.
+
+For example, let's say we have the following tree structure created with
+`nav.menu()`:
+
+```txt
+docs
+  |__ getting-started
+        |__ installation
+        |__ configuration
+  |__ plugins
+        |__ prettier
+```
+
+The function `nav.nextPage()` returns the next page relative to the provided
+URL. For example:
+
+```js
+const nextPage = nav.nextPage("/docs/getting-started/installation/");
+console.log(nextPage.url); // /docs/getting-started/configuration/
+```
+
+If the page is the last sibling of the current section, it returns the first
+page of the next section:
+
+```js
+const nextPage = nav.nextPage("/docs/getting-started/configuration/");
+console.log(nextPage.url); // /docs/plugins/
+```
+
+If the current section has children, it returns the first child:
+
+```js
+const nextPage = nav.nextPage("/docs/plugins/");
+console.log(nextPage.url); // /docs/plugins/prettier/
+```
+
+The `nav.previousPage()` works similarly but in reverse order.
+
+The first argument of these functions is the URL you want to use as current.
+Next arguments are the same as `nav.menu()`, so you can configure the base path,
+query and sort options to match the menu:
+
+```js
+nav.menu("/", "lang=en", "url=asc");
+
+nav.nextPage(url, "/", "lang=en", "url=asc");
+nav.previousPage(url, "/", "lang=en", "url=asc");
 ```
 
 ## Breadcrumbs

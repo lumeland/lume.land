@@ -83,9 +83,6 @@ the content is stored.
 > Processors are one of the most powerful features of Lume. You can learn more
 > in the [processors documentation](../core/processors.md).
 
-To test this code, stop the Lume web server (`Ctrl + C`) and restart again
-(`deno task serve`). Now your CSS code should be minified.
-
 As you can see, loading and processing files in Lume requires more work and
 understanding of how Lume works under the hood than copying them. Fortunately,
 Lume has a powerful plugin system that hides all this complexity and makes these

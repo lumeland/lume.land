@@ -89,6 +89,18 @@ the field name:
 {{ /for }}
 ```
 
+As of Lume 2.3.0 there are two new sorting options, useful for strings with
+accents or different cases: the `asc-locale` and `desc-locale`. Under the hood,
+it uses the
+[localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare)
+comparison method, so these options must be used only with strings.
+
+```vento
+{{ for post of search.pages("post html", "order=asc title=desc-locale") }}
+  ...
+{{ /for }}
+```
+
 ### Limit the results
 
 The third argument of `search.pages()` allows limiting the number of results.
