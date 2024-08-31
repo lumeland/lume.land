@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Shrutarshi Basu
+    img: /img/showcase/basus.webp
+    url: https://basus.me/
+    description: Personal site of Shrutarshi Basu
+    code: https://github.com/basus/v4.basus.me
+
   - title: Commonhaus Foundation
     img: /img/showcase/commonhaus.webp
     url: https://www.commonhaus.org/

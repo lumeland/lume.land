@@ -4,10 +4,9 @@ description: Welcome to Lume, the static site generator for Deno.
 order: 0
 ---
 
-**Lume** (pronounced `/lume/`
-[🔈](https://ilg.usc.es/pronuncia/?l=2&ficha=35660)) is the
-[Galician](https://en.wikipedia.org/wiki/Galician_language) word for _fire_ but
-also a static site generator for [Deno](https://deno.land/).
+**Lume** (pronounced `/lume/` [🔈](https://ilg.usc.es/pronuncia/mp3/l/1833.mp3))
+is the [Galician](https://en.wikipedia.org/wiki/Galician_language) word for
+_fire_ but also a static site generator for [Deno](https://deno.land/).
 
 It's inspired by other static site generators, such as
 [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/) or
