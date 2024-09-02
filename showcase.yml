@@ -13,6 +13,18 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Prisme Analytics
+    img: /img/showcase/prismeanalytics.webp
+    url: https://www.prismeanalytics.com/
+    description: Prisme Analytics landing page.
+    code: https://github.com/prismelabs/prismeanalytics.com
+
+  - title: Negrel's Homepage on the World Wide Web
+    img: /img/showcase/negrel_dev.webp
+    url: https://www.negrel.dev/
+    description: Personal site of Alexandre Negrel
+    code: https://github.com/negrel/negrel.dev
+
   - title: Shrutarshi Basu
     img: /img/showcase/basus.webp
     url: https://basus.me/
