@@ -42,14 +42,16 @@ Example with the default options:
 site.use(esbuild({
   extensions: [".ts", ".js"],
   options: {
+    plugins: [],
     bundle: true,
     format: "esm",
     minify: true,
     keepNames: true,
     platform: "browser",
     target: "esnext",
-    incremental: true,
     treeShaking: true,
+    outdir: "./",
+    outbase: ".",
   },
 }));
 ```
