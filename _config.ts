@@ -115,7 +115,7 @@ site
 
 site.data("scheme", async (mod: string) => {
   try {
-    const url = `https://deno.land/x/lume@v2.3.0/${mod}`;
+    const url = `https://deno.land/x/lume@v2.3.1/${mod}`;
     const { defaults } = await import(url);
     const { Options } = await analyze(url, { maxDepth: 2, private: false });
 
