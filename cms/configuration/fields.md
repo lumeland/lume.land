@@ -122,7 +122,7 @@ This is an example of fields with some extra options:
   {
     name: "date",
     type: "datetime",
-    label: "Published date",
+    label: "Created date",
     value: new Date(),
     description: "Set a future date if you want to publish it later",
     attributes: {
