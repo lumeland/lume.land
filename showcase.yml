@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Frank Harris
+    img: /img/showcase/hirefrank.webp
+    url: https://hirefrank.com/
+    description: Personal site of Frank Harris
+    code: https://github.com/hirefrank/www
+
   - title: Prisme Analytics
     img: /img/showcase/prismeanalytics.webp
     url: https://www.prismeanalytics.com/
