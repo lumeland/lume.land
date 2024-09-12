@@ -15,6 +15,19 @@ The field of type `datetime` is used to store date values. It display a
 }
 ```
 
+Set a default value to store automatically the current datetime when creating a
+new document:
+
+```ts
+{
+  name: "created_at",
+  type: "datetime",
+  init(field) {
+    field.value = new Date();
+  }
+}
+```
+
 ## Available options
 
 This field only has
