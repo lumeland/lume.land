@@ -273,6 +273,10 @@
   margin-top: 0;
   margin-bottom: 0;
 
+  a {
+    color: var(--color-foreground-1);
+  }
+
   & > li {
     padding-bottom: var(--row-gap-0);
     break-inside: avoid;
@@ -304,9 +308,11 @@
 .landing-testimonials-article {
   & h3 {
     margin: 0;
+    letter-spacing: var(--text-body-spacing);
 
     & a {
       text-decoration: none;
+      color: var(--color-foreground);
       &:hover {
         color: var(--color-foreground);
       }

@@ -7,8 +7,8 @@ body {
   color: var(--color-foreground);
   background-color: var(--color-background);
   margin: 0;
-  /* -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility; */
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   display: grid;
   min-height: 100vh;
   min-width: 320px;

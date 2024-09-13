@@ -18,7 +18,7 @@
   --text-body-size: clamp(16px, 4vw, 20px);
   --text-body: var(--text-body-size)/1.65 var(--font-ui);
   --text-body-bold: 600 var(--text-body-size)/1.6 var(--font-ui);
-  --text-body-spacing: -0.02em;
+  --text-body-spacing: -0.015em;
   --text-caption: 15px/1.6 var(--font-ui);
   --text-caption-bold: 600 15px/1.6 var(--font-ui);
   --text-caption-mini: 13px/1.6 var(--font-ui);
