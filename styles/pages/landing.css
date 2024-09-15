@@ -195,14 +195,14 @@
   align-items: center;
   column-gap: var(--column-gap-0);
   margin: 0 auto;
-  margin-bottom: clamp(20px, 5vh, 40px);
+  margin-bottom: 20px;
   max-width: var(--max-width);
   padding-left: var(--margin);
   padding-right: var(--margin);
 }
 .landing-examples-sites {
   margin: 0;
-  padding: var(--row-gap-0) var(--margin);
+  padding: var(--row-gap-0) 0;
   display: flex;
   column-gap: var(--column-gap-1);
   overflow-x: auto;
@@ -211,6 +211,13 @@
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  > :first-child {
+    margin-left: max(50% - var(--max-width) / 2, var(--margin));
+  }
+  > :last-child {
+    margin-right: max(50% - var(--max-width) / 2, var(--margin));
   }
 
   & > figure,
