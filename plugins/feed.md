@@ -52,7 +52,7 @@ available options:
 site.use(feed({
   output: ["/posts.rss", "/posts.json"], // The file or files that must be generated
   query: "type=post", // Select only pages of type=post
-  sort: "date=desc", // To sort by data in ascendent order
+  sort: "date=desc", // To sort by date in descending order
   limit: 10, // To show only the 10 first results
   info: {
     title: "My blog", // The feed title
