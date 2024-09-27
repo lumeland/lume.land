@@ -78,9 +78,24 @@ site.use(sitemap({
 > `mtime` is not a reliable value. In some CI environments, it's the present
 > time (the moment where the file is created after cloning the repo, instead of
 > when this file content was modified for the last time). Alternatively, you can
-> use [Git Last Updated](../docs/creating-pages/page-data.md#date) value, but it
-> doesn't work for CI like GitHub Actions, because the repository is cloned
-> without the history (only the last commit).
+> use [Git Last Updated](../docs/creating-pages/page-data.md#date) value:
+>
+> ```js
+> import { getGitDate } from "lume/core/utils/date.ts";
+> site.preprocess([".html"], (pages) => {
+>    for (const page of pages) {
+>      const { entry } = page.src;
+>      page.data.lastmod = getGitDate("modified", entry.src);
+>   }
+> });
+> ```
+>
+> However, this requires the CI/CD environment to perform a deep clone,
+> instead of a shallow clone only fetching the last commit.
+> For example, Netlify and DigitalOcean perform a deep clone by default,
+> while Vercel and Render can only perform a shallow clone.
+> Cloudflare Pages, GitHub Pages, and GitLab Pages perform a shallow clone by default,
+> but they can be configured to perform a deep clone instead.
 
 ## Multilanguage
 
