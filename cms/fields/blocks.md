@@ -6,7 +6,11 @@ description: Field to use Gutenberg blocks
 The field of type `blocks` is used to store HTML blocks using
 [Gutenberg editor](https://wordpress.org/gutenberg/).
 
-This field is **disabled by default** and it's not yet stable. To enable it:
+> [!note]
+>
+> This field is **disabled by default** and it's not yet stable.
+
+To enable it:
 
 ```ts
 import lumeCMS from "lume/cms/mod.ts";

@@ -35,15 +35,15 @@ cms.field("percentage", {
 
 ## Creating a custom element
 
-When a custom element is created, it's recommended to extend the `Field` class
-from LumeCMS, which provides some basic features that you will need.
+When a custom element is created, it's recommended to extend the `Component`
+class from LumeCMS, which provides some basic features that you will need.
 
 ```js
-import { Field } from "lume_cms/components/field.js";
+import { Component } from "lume_cms/components/component.js";
 
 customElements.define(
   "percentage-field",
-  class extends Field {
+  class extends Component {
     init() {
       // Here your code
     }
@@ -52,7 +52,7 @@ customElements.define(
 ```
 
 The `init()` function will be executed the first time the component is inserted
-in the DOM. The `Field` class also provides the following properties:
+in the DOM. The following properties are also available:
 
 - **schema:** The options of the field (name, label, description, attributes,
   etc).
@@ -65,7 +65,7 @@ To create the percentage field:
 ```js
 customElements.define(
   "percentage-field",
-  class extends Field {
+  class extends Component {
     init() {
       // Get the field info
       const { schema, value, namePrefix } = this;
@@ -91,12 +91,12 @@ creates a new DOM element and append it to the element passed in the first
 argument. The example above can be improved in this way:
 
 ```js
-import { Field } from "lume_cms/components/field.js";
+import { Component } from "lume_cms/components/component.js";
 import { push } from "lume_cms/components/utils.js";
 
 customElements.define(
   "percentage-field",
-  class extends Field {
+  class extends Component {
     init() {
       // Get the field info
       const { schema, value, namePrefix } = this;
