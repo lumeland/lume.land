@@ -31,7 +31,7 @@ The public base path of the CMS. Lume adapter set this value to `/admin`.
 ## site
 
 This is an object to configure the CMS website. You can assign a name, a
-description and an URL that will be visible in the homepage:
+description, URL and a body, that will be visible in the homepage:
 
 ```js
 import lumeCMS from "lume/cms.ts";
@@ -41,6 +41,9 @@ const cms = lumeCMS({
     name: "My blog CMS",
     description: "Here I can edit the content of my blog",
     url: "https://myblog.com",
+    body: `
+    <p>Long text, for instructions or other content that you want to make it visible in the homepage</p>
+    `,
   },
 });
 ```
