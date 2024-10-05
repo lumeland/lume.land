@@ -4,7 +4,8 @@ main_menu: plugins
 description: |
   **Lume** has a powerful plugin system to extend its functionality with new
   features and support for more formats.
-
+  
+  Plugin that is not indispensable or can be slow for very large sites won't be installed by default.
 plugins:
   - title: lume_cleancss
     description: Use CleanCSS to minify CSS with structural optimization.
