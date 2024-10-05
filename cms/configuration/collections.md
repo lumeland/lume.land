@@ -99,7 +99,7 @@ cms.collection({
   name: "posts",
   store: "src:posts/*.md",
   fields: [
-    "title: text",
+    "title: text!",
     "content: markdown",
   ],
   nameField: "title",
@@ -109,6 +109,28 @@ cms.collection({
 To generate the filename, the spaces are converted to hyphens and the `/`
 character is removed. For example, the title `A/B testing` will generate the
 file `ab-testing.md`.
+
+Use a function for more advanced name generation:
+
+```ts
+cms.collection({
+  name: "posts",
+  store: "src:posts/*.md",
+  fields: [
+    "title: text!",
+    "author: text!",
+    "content: markdown",
+  ],
+  nameField(data) {
+    return `${data.title} - ${data.author}`;
+  },
+});
+```
+
+> [!note]
+>
+> It's recommended to configure the fields used to generate the file path as
+> "required", to avoid errors caused by empty values.
 
 ### create & delete
 
