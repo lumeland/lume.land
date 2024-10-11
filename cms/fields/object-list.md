@@ -28,6 +28,34 @@ the CMS:
 }
 ```
 
+## Store arrays without keys
+
+Let's say you have a document with a list of objects, for example:
+
+```yml
+- name: Óscar
+  surname: Otero
+- name: Laura
+  surname: Rubio
+```
+
+This document doesn't have a key to store this list. To configure LumeCMS to
+store the data in this way, use `[]` as the field name:
+
+```ts
+{
+  name: "[]",
+  type: "object-list",
+  fields: [
+    "name: text",
+    "surname: text",
+  ]
+}
+```
+
+This is special name to make LumeCMS to don't create the key but store directly
+the array of content.
+
 ## Available options
 
 This field only accept the options `name`, `type`, `label` and `description`

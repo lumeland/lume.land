@@ -34,10 +34,8 @@ Add a file with `.njk` extension in the `_includes` directory. Use the _front
 matter_ to set data to the template.
 
 ```html
----
-title: Welcome to my page
-intro: This is my first post using Lume. I hope you like it!
----
+--- title: Welcome to my page intro: This is my first post using Lume. I hope
+you like it! ---
 
 <html>
   <head>
@@ -91,17 +89,13 @@ use the async API (`asyncEach` instead of `for` etc). For example, the following
 code won't work:
 
 ```html
-{% if includeHeader %}
-  {% include "header.njk" %}
-{% endif %}
+{% if includeHeader %} {% include "header.njk" %} {% endif %}
 ```
 
 You have to use the async mode:
 
 ```html
-{% ifAsync includeHeader %}
-  {% include "header.njk" %}
-{% endif %}
+{% ifAsync includeHeader %} {% include "header.njk" %} {% endif %}
 ```
 
 More info about

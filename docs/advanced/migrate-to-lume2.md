@@ -175,10 +175,10 @@ HTML attribute name has changed to `transform-images`:
 
 ```html
 <!-- Lume 1 -->
-<img src="/flowers.jpg" imagick="avif jpg 600">
+<img src="/flowers.jpg" imagick="avif jpg 600" />
 
 <!-- Lume 2 -->
-<img src="/flowers.jpg" transform-images="avif jpg 600">
+<img src="/flowers.jpg" transform-images="avif jpg 600" />
 ```
 
 ## Nunjucks plugin

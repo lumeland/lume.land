@@ -27,7 +27,7 @@
 }
 
 .theme-back {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font: var(--text-caption);
 
   a {
@@ -54,16 +54,16 @@
   letter-spacing: var(--text-body-spacing);
   line-height: 1.4;
   margin-top: 1.5em;
-  
+
   p {
-    margin: .5em 0;
+    margin: 0.5em 0;
   }
 }
 .theme-install {
   margin-top: var(--row-gap-1);
 
   p {
-    margin: 0 0 .5em;
+    margin: 0 0 0.5em;
     color: var(--color-foreground-1);
   }
 }

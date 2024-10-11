@@ -23,11 +23,11 @@ plugins:
     url: https://deno.land/x/lume_publish
 
   - title: lume-plugins
-    description: Collection of lume.land plugins 
+    description: Collection of lume.land plugins
     url: https://github.com/DrSensor/lume-plugins
 
   - title: oi-lume-charts
-    description: Lume Plugin that enables charting 
+    description: Lume Plugin that enables charting
     url: https://github.com/open-innovations/oi-lume-charts
 
   - title: serea
@@ -35,7 +35,7 @@ plugins:
     url: https://github.com/idris-maps/serea
 
   - title: Inclusive language
-    description: Inclusive Language plugin for Lume 
+    description: Inclusive Language plugin for Lume
     url: https://deno.land/x/lume_plugin_inclusive_language
 
   - title: Shiki
@@ -43,7 +43,7 @@ plugins:
     url: https://deno.land/x/lume_shiki
 
   - title: Fluent for Lume
-    description: A Fluent wrapper to help you easily build multilingual site with Lume 
+    description: A Fluent wrapper to help you easily build multilingual site with Lume
     url: https://deno.land/x/lume_fluent
 
   - title: 🌟 Glow your Lume syntax!

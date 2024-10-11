@@ -58,13 +58,13 @@ sites:
     img: /img/showcase/andys-curates-egg.webp
     url: https://andy-preston.github.io/
     description: Minimal / Simplistic / Bare-Bones developer's blog
-    code: https://github.com/andy-preston/andy-preston.github.io/    
-  
+    code: https://github.com/andy-preston/andy-preston.github.io/
+
   - title: 1A Insecure Network
     img: /img/showcase/1a-insec.webp
     url: https://www.1a-insec.net/
     description: the info distro site by Locria Cyber
-  
+
   - title: X's weird webspace
     img: /img/showcase/x.webp
     url: https://xtrm.me/
@@ -76,13 +76,13 @@ sites:
     url: https://trg23.netlify.app/
     description: An event about technology and business in Madrid, Spain
     code: https://github.com/tarugoconf/TRG23
-  
+
   - title: RGBCube
     img: /img/showcase/rgbcube.webp
     url: https://rgbcu.be/
     description: The official website and link portal of RGBCube and his work
     code: https://github.com/RGBCube/Site
-  
+
   - title: Clear EVM Wallet Docs
     img: /img/showcase/clear-wallet-docs.webp
     url: https://clear-wallet.flashsoft.eu/
@@ -205,7 +205,7 @@ sites:
   - title: Lume Theme Shiraha
     img: /img/showcase/lume_theme_shiraha.webp
     url: https://importantimport.github.io/lume_theme_shiraha/
-    description: '❄️ Material 3-inspired Lume Blog Theme'
+    description: "❄️ Material 3-inspired Lume Blog Theme"
     code: https://github.com/importantimport/lume_theme_shiraha
 
   - title: Lume Deno Template
@@ -309,7 +309,7 @@ sites:
     url: https://tarugoconf.com/
     description: An event about technology and business in Madrid, Spain
     code: https://github.com/tarugoconf/tarugo22
-  
+
   - title: NM type
     img: /img/showcase/nmtype.webp
     url: https://nmtype.com/
@@ -326,13 +326,13 @@ sites:
     url: https://oscarotero.com/jquery/
     description: An interactive reference for all versions of jQuery
     code: https://github.com/oscarotero/jquery-cheatsheet
-  
+
   - title: jrson
     img: /img/showcase/jrson.webp
     url: https://jrson.me/
     description: The personal blog of jrson
     code: https://github.com/jrson83/jrson.me
-  
+
   - title: Tobias Schmidt
     img: /img/showcase/tobias.webp
     url: https://tobiasschmidt.me/

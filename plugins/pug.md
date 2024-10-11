@@ -39,13 +39,13 @@ intro: This is my first post using Lume. I hope you like it!
 
 doctype html
 html
-  head
-    title= title
+head
+title= title
 
-  body
-    include partials/nav.pug
+body
+include partials/nav.pug
 
-    p= title
+p= title
 ```
 
 Note that the paths passed to `include` are relative to `_includes` directory.

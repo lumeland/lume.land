@@ -155,17 +155,19 @@ everytime it is used. Let's see the following example:
 Here we have defined a `text` field to store a password. The default value is
 generated dynamically everytime this field is used in a collection or document.
 
-Lume adapter stores the `lume` instance in the
-[`data` option](./options.md#data) automatically. You can access to this object
-to modify the field configuration using the site data. For example:
+The second argument of the `init` function is an object with the CMS content
+(all collections, documents, uploads, etc). This object also contains the
+[data](./options.md#data) variable passed in the configuration. Due Lume adapter
+stores the `site` instance in this object automatically, it's possible to modify
+the field configuration using the site data. For example:
 
 ```js
 {
   name: "tags",
   type: "list",
-  init(field) {
-    const lume = field.data.lume;
-    const allTags = lume.search.values("tags");
+  init(field, { data }) {
+    const site = data.site;
+    const allTags = site.search.values("tags");
     field.options = allTags;
   }
 }

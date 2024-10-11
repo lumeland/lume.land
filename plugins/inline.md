@@ -15,13 +15,13 @@ included in the HTML. For example:
 <lume-code>
 
 ```html {title="Input"}
-<link rel="stylesheet" href="/css/my-styles.css" inline>
+<link rel="stylesheet" href="/css/my-styles.css" inline />
 
 <script src="/js/my-scripts.js" inline></script>
 
-<img src="/img/avatar.png" inline>
+<img src="/img/avatar.png" inline />
 
-<img src="/img/logo.svg" inline>
+<img src="/img/logo.svg" inline />
 ```
 
 ```html {title="Output"}
@@ -33,7 +33,7 @@ included in the HTML. For example:
   // Content of /js/my-scripts.js
 </script>
 
-<img src="data:image/png;base64,...">
+<img src="data:image/png;base64,..." />
 
 <svg>...</svg>
 ```
@@ -69,14 +69,20 @@ are replaced by the `<svg>` element. The new `<svg>` elements will keep the same
 For example, this image:
 
 ```html
-<img src="icon.svg" class="icon" id="icon-1" inline>
+<img src="icon.svg" class="icon" id="icon-1" inline />
 ```
 
 Will become:
 
 ```html
-<svg width="180px" height="180px" xmlns="http://www.w3.org/2000/svg" class="icon" id="icon-1">
-...
+<svg
+  width="180px"
+  height="180px"
+  xmlns="http://www.w3.org/2000/svg"
+  class="icon"
+  id="icon-1"
+>
+  ...
 </svg>
 ```
 

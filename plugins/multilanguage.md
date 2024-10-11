@@ -104,7 +104,7 @@ inserts automatically the
 pages. For example:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>About me</title>

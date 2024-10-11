@@ -6,9 +6,9 @@
   justify-content: center;
   text-align: center;
   border: 0;
-  gap: .6em;
+  gap: 0.6em;
   min-height: 2em;
-  padding: 0 .6em;
+  padding: 0 0.6em;
   font: var(--text-caption-bold);
   border-radius: var(--border-radius-small);
   cursor: pointer;
@@ -39,7 +39,7 @@
     --background-hover: var(--color-black-240);
     border: solid 1px #fff2;
     display: flex;
-    padding: 1em .6em;
+    padding: 1em 0.6em;
 
     svg {
       fill: currentColor;
@@ -79,7 +79,7 @@
   &:disabled {
     cursor: default;
     background: none;
-    opacity: .1;
+    opacity: 0.1;
   }
 
   &.has-icon {
@@ -106,7 +106,7 @@
   justify-content: center;
   text-align: center;
   border: solid 1px var(--color-background-3);
-  padding: 0 .6em;
+  padding: 0 0.6em;
   font: var(--text-callout);
   border-radius: var(--border-radius-small);
   cursor: pointer;

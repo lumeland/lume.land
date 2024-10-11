@@ -85,20 +85,20 @@ to:
 ```html
 <html>
   <head>
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Oscar's blog">
-    <meta property="og:locale" content="en">
-    <meta property="og:title" content="Hello world">
-    <meta property="og:description" content="My first post">
-    <meta property="og:url" content="http://example.com/">
-    <meta property="og:image" content="http://example.com/hello-world.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@misteroom">
-    <meta itemprop="name" content="Hello world">
-    <meta itemprop="description" content="My first post">
-    <meta itemprop="image" content="http://example.com/hello-world.png">
-    <meta name="description" content="My first post">
-    <meta name="generator" content="Lume v1.10.1">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Oscar's blog" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:title" content="Hello world" />
+    <meta property="og:description" content="My first post" />
+    <meta property="og:url" content="http://example.com/" />
+    <meta property="og:image" content="http://example.com/hello-world.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@misteroom" />
+    <meta itemprop="name" content="Hello world" />
+    <meta itemprop="description" content="My first post" />
+    <meta itemprop="image" content="http://example.com/hello-world.png" />
+    <meta name="description" content="My first post" />
+    <meta name="generator" content="Lume v1.10.1" />
   </head>
   <body>
     <p>This is my first post</p>
@@ -156,9 +156,9 @@ metas:
 This configuration generates the following code:
 
 ```html
-<meta name="title" content="Lume is awesome">
-<meta name="twitter:label1" content="Reading time">
-<meta name="twitter:data1" content="1 minute">
-<meta name="twitter:label2" content="Written by">
-<meta name="twitter:data2" content="Dark Vader">
+<meta name="title" content="Lume is awesome" />
+<meta name="twitter:label1" content="Reading time" />
+<meta name="twitter:data1" content="1 minute" />
+<meta name="twitter:label2" content="Written by" />
+<meta name="twitter:data2" content="Dark Vader" />
 ```

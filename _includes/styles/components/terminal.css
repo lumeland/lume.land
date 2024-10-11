@@ -7,7 +7,7 @@
     color: var(--color-black-860);
     padding: 15px 60px 15px 20px;
     border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, .1);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
 
@@ -19,9 +19,13 @@
       right: 0;
       height: 100%;
       width: 100px;
-      background: linear-gradient(to right, transparent, var(--color-black-140) 50%);
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--color-black-140) 50%
+      );
     }
-    
+
     & code {
       scrollbar-width: none;
       display: block;
@@ -48,7 +52,7 @@
     padding: 4px;
     border-radius: var(--border-radius-small);
     border: none;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, .1);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
     background: var(--color-black-140);
     color: var(--color-black-860);
     cursor: pointer;
@@ -65,10 +69,10 @@
     display: flex;
     align-items: center;
     top: 0;
-    right: calc(100% + .5em);
+    right: calc(100% + 0.5em);
     color: var(--color-black-140);
     background: var(--color-black-860);
-    padding: .5em;
+    padding: 0.5em;
     border-radius: var(--border-radius-small);
     animation: showcopy 2s;
   }
@@ -92,7 +96,7 @@
 
   & svg,
   & path {
-    fill: currentColor
+    fill: currentColor;
   }
 
   &:hover {

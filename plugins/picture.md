@@ -37,7 +37,7 @@ Create an `<img>` element with the `transform-images` attribute containing all
 the desired formats and sizes for the image:
 
 ```html
-<img src="/flowers.jpg" transform-images="avif webp jpg 300@2">
+<img src="/flowers.jpg" transform-images="avif webp jpg 300@2" />
 ```
 
 The `transform-images` attribute of this image contains the formats (`avif`,
@@ -47,9 +47,15 @@ output HTML code is:
 
 ```html
 <picture>
-  <source srcset="/flowers-300w.avif, /flowers-300w@2.avif 2x" type="image/avif">
-  <source srcset="/flowers-300w.webp, /flowers-300w@2.webp 2x" type="image/webp">
-  <img src="/flowers-300w.jpg" srcset="/flowers-300w@2.jpg 2x">
+  <source
+    srcset="/flowers-300w.avif, /flowers-300w@2.avif 2x"
+    type="image/avif"
+  />
+  <source
+    srcset="/flowers-300w.webp, /flowers-300w@2.webp 2x"
+    type="image/webp"
+  />
+  <img src="/flowers-300w.jpg" srcset="/flowers-300w@2.jpg 2x" />
 </picture>
 ```
 
@@ -68,12 +74,12 @@ want to keep clean.
 ```html
 <div transform-images="avif webp jpg 300@2">
   <!-- All images inside will be transformed -->
-  <img src="/flowers.jpg">
+  <img src="/flowers.jpg" />
 
   <!-- You can override the value for a specific image -->
-  <img src="/flowers.jpg" transform-images="avif jpg 600">
+  <img src="/flowers.jpg" transform-images="avif jpg 600" />
 
   <!-- This one is not tranformed because the value is empty -->
-  <img src="/flowers.jpg" transform-images="">
+  <img src="/flowers.jpg" transform-images="" />
 </div>
 ```

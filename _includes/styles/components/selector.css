@@ -23,7 +23,7 @@
   max-width: 100%;
 
   &:hover {
-      background-color: var(--color-background-1);
-      border-color: var(--color-background-2);
+    background-color: var(--color-background-1);
+    border-color: var(--color-background-2);
   }
 }

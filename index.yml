@@ -168,7 +168,7 @@ usage:
       ```
 
       </lume-code>
-  
+
   - title: Process HTML pages and assets
     description: |
       Processors can compile and optimize assets like CSS or JavaScript. They can also transform the HTML code using the DOM API.
@@ -539,14 +539,14 @@ testimonials:
       avatar: /img/avatars/testimonials/freelance.webp
       date: August 10, 2022
       text: |
-        OK, falling in love with <a href="https://twitter.com/deno_land">@deno_land</a> and the Lume SSG. So nice not having to worry about node_modules 😄 
+        OK, falling in love with <a href="https://twitter.com/deno_land">@deno_land</a> and the Lume SSG. So nice not having to worry about node_modules 😄
 
     - url: https://twitter.com/Microflash/status/1551599531615473665
       author: Naiyer Asif نیر آصف (@Microflash)
       avatar: /img/avatars/testimonials/naiyer.webp
       date: July 25, 2022
       text: |
-        I recently redesigned my site (<a href="https://t.co/n9FcC2ATtp">https://t.co/n9FcC2ATtp</a>) with Lume: a lovely static site generator built by <a href="https://twitter.com/misteroom?ref_src=twsrc%5Etfw">@misteroom</a>. Easy, simple and fast to work with. Definitely worth checking out if you&#39;re a fan of 11ty on Node.js. 
+        I recently redesigned my site (<a href="https://t.co/n9FcC2ATtp">https://t.co/n9FcC2ATtp</a>) with Lume: a lovely static site generator built by <a href="https://twitter.com/misteroom?ref_src=twsrc%5Etfw">@misteroom</a>. Easy, simple and fast to work with. Definitely worth checking out if you&#39;re a fan of 11ty on Node.js.
 
     - url: https://twitter.com/tarugoconf/status/1543881979426381824
       author: Tarugoconf (@tarugoconf)

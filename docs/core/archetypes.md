@@ -104,7 +104,7 @@ export default function () {
 ```yml {title="/pages/example.json"}
 {
   "title": "Title content",
-  "content": "Page content"
+  "content": "Page content",
 }
 ```
 

@@ -96,7 +96,7 @@
 
   & .button {
     --color: black;
-  
+
     /* Colors */
     &.is-color-lemonchiffon {
       --background: lemonchiffon;
@@ -199,6 +199,6 @@
     font: var(--text-caption-bold);
     letter-spacing: 0;
     display: block;
-    margin: .3em 0;
+    margin: 0.3em 0;
   }
 }

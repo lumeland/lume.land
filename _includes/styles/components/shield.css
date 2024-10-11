@@ -4,10 +4,10 @@ lume-shield {
   font: var(--text-caption-mini);
   border-radius: var(--border-radius-small);
   overflow: hidden;
-  margin-right: .25em;
+  margin-right: 0.25em;
 
   span {
-    padding: .25em 1em .25em .5em;
+    padding: 0.25em 1em 0.25em 0.5em;
     background-color: var(--color);
   }
 
@@ -15,7 +15,7 @@ lume-shield {
     text-decoration: none;
     display: inline-flex;
     align-items: baseline;
-    column-gap: .5em;
+    column-gap: 0.5em;
     background-color: var(--color-black-180);
     color: var(--color-white);
     padding-left: 1em;

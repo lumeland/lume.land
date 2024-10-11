@@ -125,13 +125,8 @@ In Vento you can nest components in this way:
 In Nunjucks it's very similar:
 
 ```html
-{% comp "Container" %}
-  Content of the Container component
-
-  {% comp "Button" %}
-    This is a button inside the Container component
-  {% endcomp %}
-{% endcomp %}
+{% comp "Container" %} Content of the Container component {% comp "Button" %}
+This is a button inside the Container component {% endcomp %} {% endcomp %}
 ```
 
 The content of the components are passed through the `content` variable:

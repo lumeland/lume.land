@@ -39,14 +39,14 @@ same layout on all pages so we only need to edit the layout file to include a
 ```html {title="_includes/layout.vto"}
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <meta charset="UTF-8">
- <title>{{ title }}</title>
- <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
- {{ content }}
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    {{ content }}
+  </body>
 </html>
 ```
 

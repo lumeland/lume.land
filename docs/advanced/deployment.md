@@ -40,7 +40,7 @@ name: Publish on GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
   contents: read
@@ -62,14 +62,14 @@ jobs:
 
       - name: Build site
         run: deno task build
-      
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: '_site'
+          path: "_site"
 
       - name: Deploy to GitHub Pages
         id: deployment
@@ -137,7 +137,7 @@ name: Publish on Deno Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -257,7 +257,7 @@ frontend:
   artifacts:
     baseDirectory: /_site
     files:
-      - '**/*'
+      - "**/*"
   cache:
     paths: []
 ```

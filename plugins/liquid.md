@@ -37,10 +37,8 @@ Add a file with `.liquid` extension in the `_includes` directory. Use the _front
 matter_ to set data for the template.
 
 ```html
----
-title: Welcome to my page
-intro: This is my first post using Lume. I hope you like it!
----
+--- title: Welcome to my page intro: This is my first post using Lume. I hope
+you like it! ---
 
 <html>
   <head>
@@ -91,7 +89,7 @@ through the pages. For example, the following code doesn't work:
 ```html
 <ul>
   {% for item in search.pages('post') %}
-    <li>{{item.title}}</li>
+  <li>{{item.title}}</li>
   {% endfor %}
 </ul>
 ```

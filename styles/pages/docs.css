@@ -8,7 +8,7 @@
   column-gap: var(--column-gap-2);
   row-gap: var(--row-gap-2);
   justify-content: space-between;
-  
+
   @media (min-width: 900px) {
     grid-template-columns: 275px minmax(0, 1fr);
     grid-template-areas: "sidebar content";
@@ -42,7 +42,7 @@
     border-radius: var(--border-radius);
 
     &::-webkit-details-marker {
-        display: none;
+      display: none;
     }
   }
   &[open] .doc-navbar-section-title {
@@ -72,7 +72,8 @@
     opacity: 0.5;
     width: 30px;
     height: 30px;
-    background: url('data:image/svg+xml;charset=UTF-8,<svg width="31" height="31" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg"><path d="M10.337 4.793a1 1 0 0 1 1.32-.083l.094.083 10 10a1 1 0 0 1 .083 1.32l-.083.094-10 10a1 1 0 0 1-1.497-1.32l.083-.094L19.63 15.5l-9.292-9.293a1 1 0 0 1-.083-1.32l.083-.094Z" fill="%23999"/></svg>') no-repeat center center;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg width="31" height="31" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg"><path d="M10.337 4.793a1 1 0 0 1 1.32-.083l.094.083 10 10a1 1 0 0 1 .083 1.32l-.083.094-10 10a1 1 0 0 1-1.497-1.32l.083-.094L19.63 15.5l-9.292-9.293a1 1 0 0 1-.083-1.32l.083-.094Z" fill="%23999"/></svg>')
+      no-repeat center center;
     background-size: 20px 20px;
     transition: transform var(--animation-duration);
   }
@@ -89,7 +90,7 @@
 
   & a {
     display: block;
-    padding: .5em .5em .5em 35px;
+    padding: 0.5em 0.5em 0.5em 35px;
     color: var(--color-foreground-1);
     text-decoration: none;
     border-radius: var(--border-radius-small);
@@ -132,7 +133,7 @@
     font: var(--text-body);
     letter-spacing: var(--text-body-spacing);
     color: var(--color-foreground-1);
-    margin: .3em 0 0;
+    margin: 0.3em 0 0;
   }
 }
 .doc-body {
@@ -145,8 +146,8 @@
     font: var(--text-title);
     letter-spacing: var(--text-title-spacing);
     margin-top: 2.5em;
-    margin-bottom: .75em;
-    padding-bottom: .25em;
+    margin-bottom: 0.75em;
+    padding-bottom: 0.25em;
     border-bottom: solid 1px var(--color-background-2);
 
     &:first-child {
@@ -158,7 +159,7 @@
     font: var(--text-body-bold);
     letter-spacing: var(--text-body-spacing);
     margin-top: 2.5em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 
     &:first-child {
       margin-top: 0;
@@ -168,7 +169,7 @@
     a::before {
       content: "¶";
       color: transparent;
-      font-size: .8em;
+      font-size: 0.8em;
       position: absolute;
       margin-left: -1em;
       margin-top: 4px;
@@ -193,7 +194,7 @@
     float: right;
     display: flex;
     align-items: center;
-    column-gap: .5em;
+    column-gap: 0.5em;
   }
   & h2 + h3 {
     margin-top: 0;
@@ -205,10 +206,10 @@
 
   & code {
     background: var(--color-background-1);
-    padding: 0 .3em;
+    padding: 0 0.3em;
     border-radius: var(--border-radius-small);
     border: solid 1px var(--color-background-2);
-    margin: 0 .2em;
+    margin: 0 0.2em;
   }
 
   & pre code {
@@ -217,7 +218,7 @@
 
   & p,
   & li {
-    margin: .5em 0;
+    margin: 0.5em 0;
   }
 
   & lume-code,
@@ -268,7 +269,7 @@
   }
 }
 .doc-related {
-  margin-top: var(--row-gap-1); 
+  margin-top: var(--row-gap-1);
 
   h2 {
     font: var(--text-body-bold);

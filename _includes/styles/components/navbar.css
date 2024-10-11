@@ -66,7 +66,10 @@
     white-space: nowrap;
 
     &:hover {
-      background-image: linear-gradient(var(--color-foreground), var(--color-foreground));
+      background-image: linear-gradient(
+        var(--color-foreground),
+        var(--color-foreground)
+      );
       background-repeat: no-repeat;
       background-size: calc(100% - 2em) 1px;
       background-position: center bottom;
@@ -96,6 +99,7 @@
   }
 
   .DocSearch-Container {
-    position: fixed !important; /* This overrides the docsearch modal `position: absolute`, fixes position issue on chrome (mobile) */
+    position: fixed
+      !important; /* This overrides the docsearch modal `position: absolute`, fixes position issue on chrome (mobile) */
   }
 }
