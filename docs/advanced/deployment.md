@@ -185,11 +185,11 @@ Create `netlify.toml` file in your repository with the following code:
   command = "deno task build"
 ```
 
-```toml To use Deno 2
+```toml {title="Latest version of Deno"}
 [build]
   publish = "_site"
   command = """
-  curl -fsSL https://deno.land/install.sh | sh \
+  curl -fsSL https://deno.land/install.sh | sh && \
   /opt/buildhome/.deno/bin/deno task build \
 """
 ```
