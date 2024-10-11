@@ -185,6 +185,15 @@ Create `netlify.toml` file in your repository with the following code:
   command = "deno task build"
 ```
 
+```toml To use Deno 2
+[build]
+  publish = "_site"
+  command = """
+  curl -fsSL https://deno.land/install.sh | sh \
+  /opt/buildhome/.deno/bin/deno task build \
+"""
+```
+
 </lume-code>
 
 ## Vercel
