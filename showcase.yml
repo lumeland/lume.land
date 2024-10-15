@@ -13,6 +13,18 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Segundo Fdez
+    img: /img/showcase/segundofdez.webp
+    url: https://segundofdez.com/
+    description: Personal site of the designer Segundo Fdez
+    code: https://github.com/segundofdez/segundofdez.com
+
+  - title: Sond3
+    img: /img/showcase/sond3.webp
+    url: https://www.sond3.com/
+    description: Design studio based on Lugo (Galicia)
+    code: https://github.com/sond3/www.sond3.com
+
   - title: Frank Harris
     img: /img/showcase/hirefrank.webp
     url: https://hirefrank.com/
