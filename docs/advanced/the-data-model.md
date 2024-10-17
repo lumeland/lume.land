@@ -133,8 +133,8 @@ You can define the `url` as a absolute or relative path or even a function
 resolve this value to a string, and if the url is `false`, the page is ignored.
 
 The `date` variable can be defined
-[in the filename](http://localhost:3000/docs/creating-pages/page-files/#page-date)
-(like `2023-11-30_hello-world.md`), using
+[in the filename](../creating-pages/page-files.md#page-date) (like
+`2023-11-30_hello-world.md`), using
 [a page variable](../creating-pages/page-data.md#date), etc. Lume will try to
 resolve it, using the file creation date as a fallback.
 

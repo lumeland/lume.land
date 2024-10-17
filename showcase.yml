@@ -41,7 +41,6 @@ sites:
     img: /img/showcase/negrel_dev.webp
     url: https://www.negrel.dev/
     description: Personal site of Alexandre Negrel
-    code: https://github.com/negrel/negrel.dev
 
   - title: Shrutarshi Basu
     img: /img/showcase/basus.webp
@@ -129,12 +128,12 @@ sites:
       Notebook about Generative Art
     code: https://github.com/ruigil/morphopoiesis.art
 
-  - title: Newton Investment Partners
-    img: /img/showcase/newtoninvestment.webp
-    url: https://newtoninvestment.jp/
+  - title: Japan Activation Capital
+    img: /img/showcase/jac.webp
+    url: https://japanactivationcapital.com/
     description: |
-      Multilanguage corporative site for Newton Investment Partners
-    code: https://github.com/eSolia/newtoninvestment.jp
+      Multilanguage corporative site for Japan Activation Capital
+    code: https://github.com/eSolia/japanactivationcapital.com
 
   - title: Charles Burgess
     img: /img/showcase/cvburgess.webp

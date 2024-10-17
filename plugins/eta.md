@@ -9,9 +9,8 @@ tags:
 ## Description
 
 [Eta](https://eta.js.org/) is a JavaScript template engine with a syntax very
-similar to EJS but with
-[some differences](https://eta.js.org/docs/about/eta-vs-ejs). This plugin allows
-using this template engine to create pages and layouts.
+similar to EJS. This plugin allows using this template engine to create pages
+and layouts.
 
 ## Installation
 
