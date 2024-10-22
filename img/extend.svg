@@ -1,0 +1,18 @@
+<svg width="401" height="401" viewBox="0 0 401 401" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_180_24)">
+<circle cx="200.99" cy="200.811" r="200" fill="url(#paint0_angular_180_24)"/>
+<circle cx="200.99" cy="200.811" r="124.999" fill="#BF4040"/>
+<g style="mix-blend-mode:multiply">
+<circle cx="200.99" cy="200.811" r="54" fill="#BF4040"/>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_angular_180_24" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200.99 200.811) rotate(90) scale(200)">
+<stop stop-color="#BF4040"/>
+<stop offset="1" stop-color="#FBDB90"/>
+</radialGradient>
+<clipPath id="clip0_180_24">
+<rect width="401" height="401" fill="white"/>
+</clipPath>
+</defs>
+</svg>

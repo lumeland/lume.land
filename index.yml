@@ -248,20 +248,20 @@ usage:
       </lume-code>
 
 features:
-  - title: It's Deno!
-    img: /icons/deno.svg
-    description: Forget about managing thousands of packages in node_modules or complex bundlers. Lume only installs what you need. Clean, fast and secure.
+  - title: HTTP imports
+    img: /img/http-imports.svg
+    description: Forget about the node_modules folder. Lume uses Deno and HTTP imports to download only what you use. Clean, fast and secure.
 
   - title: Zero runtime overhead
-    img: /icons/stack.svg
+    img: /img/zero-runtime.svg
     description: Lume only exports your code. It doesn't generate any extra client-side JavaScript code.
 
   - title: Deploy anywhere
-    img: /icons/deploy.svg
+    img: /img/deploy.svg
     description: Static sites can be hosted (for free) anywhere GitHub/GitLab Pages, Deno Deploy, Vercel, Netlify… [Explore ways to deploy](/docs/advanced/deployment.md)
 
   - title: Easy to extend
-    img: /icons/extend.svg
+    img: /img/extend.svg
     description: Want to use a new template engine or use a new JavaScript compiler? Lume allows you to use whatever you want. [Explore the official plugins](/plugins/)
 
 examples:
@@ -334,6 +334,11 @@ support:
       url: https://opencollective.com/smm-owl
       img: /img/avatars/supporters/smmowl.webp
       amount: 1
+      recurrent: true
+    - name: famebot
+      url: https://opencollective.com/famebot
+      img: /img/avatars/supporters/famebot.webp
+      amount: 10
       recurrent: true
 
   past_title: Lovely past sponsors
