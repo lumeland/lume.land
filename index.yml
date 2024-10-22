@@ -250,7 +250,7 @@ usage:
 features:
   - title: HTTP imports
     img: /img/http-imports.svg
-    description: Forget about the node_modules folder. Lume uses Deno and HTTP imports to download only what you use. Clean, fast and secure.
+    description: Forget about installing dependencies in the node_modules folder. Lume is built with [Deno](https://deno.com/) and HTTP modules to download only what you use. Clean, fast and secure.
 
   - title: Zero runtime overhead
     img: /img/zero-runtime.svg
