@@ -40,7 +40,7 @@ import rehypeRemoveComments from 'npm:rehype-remove-comments@5';
 const site = lume();
 
 site.use(remark({
-  remarkPlugins: [allyEmoji]
+  remarkPlugins: [a11yEmoji],
   rehypePlugins: [rehypeRemoveComments]
 }));
 
