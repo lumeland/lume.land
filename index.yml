@@ -248,9 +248,9 @@ usage:
       </lume-code>
 
 features:
-  - title: HTTP imports
+  - title: HTTPS imports
     img: /img/http-imports.svg
-    description: Forget about a node_modules folder with thousands of dependencies. Lume is built with [Deno](https://deno.com/) and HTTP modules to download only what you use. Clean, fast and secure.
+    description: Forget about a node_modules folder with thousands of dependencies. Lume is built with [Deno](https://deno.com/) and HTTPS imports to download only what you use. Clean, fast and secure.
 
   - title: Zero runtime overhead
     img: /img/zero-runtime.svg
