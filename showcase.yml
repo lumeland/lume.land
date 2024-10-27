@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: pixeldesu
+    img: /img/showcase/pixeldesu.webp
+    url: https://pixelde.su
+    description: Personal site of Andreas Nedbal
+    code: https://github.com/pixeldesu/pixelde.su
+
   - title: Segundo Fdez
     img: /img/showcase/segundofdez.webp
     url: https://segundofdez.com/
