@@ -272,30 +272,11 @@ sites:
     description: A software product site
     code: https://github.com/doga/qworum-website
 
-  - title: "Theme: Simple Blog"
-    url: https://lumeland.github.io/theme-simple-blog/
-    description: Official theme to start a Blog
-    code: https://github.com/lumeland/theme-simple-blog
-
-  - title: "Theme: Simple Wiki"
-    url: https://lumeland.github.io/theme-simple-wiki/
-    description: Official theme to start Wiki
-    code: https://github.com/lumeland/theme-simple-wiki
-
-  - title: Base Blog
-    url: https://lumeland.github.io/base-blog/
-    description: A starter template to build a blog
-    code: https://github.com/lumeland/base-blog
-
   - title: Muse Blog
+    img: /img/showcase/muse.webp
     url: https://lume-blog-muse.pages.dev/
     description: A starter template to build a blog for musicians
     code: https://github.com/NeroBlackstone/lume-blog-muse
-
-  - title: Todo App
-    url: https://lumeland.github.io/react-todo/
-    description: Example of a React app with bundled and minified `tsx` code
-    code: https://github.com/lumeland/react-todo
 
   - title: Reese Schultz
     img: /img/showcase/reese.webp
@@ -380,16 +361,19 @@ sites:
     description: Website of Biber the cat
 
   - title: Exact Report Generator
+    img: /img/showcase/report-generator.webp
     url: https://exact-report-generator.vercel.app/
     description: A tool to create financial reports
     code: https://github.com/WilcoKruijer/ExactReportGenerator
 
   - title: Macadam Grinding
+    img: /img/showcase/macadamgrinding.webp
     url: https://macadamgrinding.com/
     description: A blog about cycling by Isaac Tait
     code: https://github.com/Isaac-Tait/macadamGrinding_denoStyle
 
   - title: Ensino
+    img: /img/showcase/ensino.webp
     url: https://laurarubio.net/
     description: A collection of resources for Galego teachers by Laura Rubio
     code: https://github.com/laura-rubio/ensino
@@ -407,12 +391,13 @@ sites:
     code: https://github.com/dz4k/denizaksimsek.com
 
   - title: Fabon
+    img: /img/showcase/fabon.webp
     url: https://www.fabon.info/
     description: The personal website of Fabon
     code: https://github.com/fabon-f/website
 
   - title: Better Know Canvas
-    #img: /img/showcase/canvas.webp
+    img: /img/showcase/canvas.rocks.webp
     url: https://canvas.rocks/
     description: A collection of advanced web graphics tutorials by Fernando Serboncini
     code: https://github.com/fserb/bkc

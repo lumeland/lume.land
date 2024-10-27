@@ -11,7 +11,6 @@ page_css: showcase.css
 
   <ul class="showcase-sites">
     {{ for site of sites }}
-    {{ if site.img }}
     <li>
       <figure class="site">
         <a href="{{ site.url }}" class="site-image">
@@ -32,30 +31,6 @@ page_css: showcase.css
         </figcaption>
       </figure>
     </li>
-    {{ /if }}
     {{ /for }}
   </ul>
-
-  <section class="showcase-more">
-    <h2>More examples</h2>
-
-    <ul>
-      {{ for site of sites }}
-      {{ if !site.img }}
-      <li class="site-description">
-        <p>
-          <a href="{{ site.url }}" class="site-name">
-            {{ site.title }}
-          </a>
-          {{ if site.code }}
-            <a class="button is-secondary is-small" href="{{ site.code }}">View code</a>
-          {{ /if }}
-        </p>
-
-        {{ site.description |> md }}
-      </li>
-      {{ /if }}
-      {{ /for }}
-    </ul>
-  </section>
 </main>
