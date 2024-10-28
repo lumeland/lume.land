@@ -422,7 +422,7 @@
     margin-bottom: var(--row-gap-0);
   }
 
-  @media (min-width: 650px) {
+  @media (min-width: 750px) {
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: var(--column-gap-3);
@@ -462,8 +462,22 @@
     margin-right: -15px;
   }
 }
+.landing-support-contributors {
+  padding: 0;
+  margin: 0;
+
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: inherit;
+  }
+}
 .landing-support-contribute {
-  @media (min-width: 650px) {
+  margin-top: var(--row-gap-2);
+
+  @media (min-width: 750px) {
+    margin-top: 0;
     grid-column: 2;
     grid-row: 2;
   }

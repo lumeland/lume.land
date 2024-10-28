@@ -34,14 +34,14 @@ Use the `remarkPlugins` and `rehypePlugins` to configure additional plugins:
 ```js
 import lume from "lume/mod.ts";
 import remark from "lume/plugins/remark.ts";
-import a11yEmoji from 'npm:@fec/remark-a11y-emoji';
-import rehypeRemoveComments from 'npm:rehype-remove-comments@5';
+import a11yEmoji from "npm:@fec/remark-a11y-emoji";
+import rehypeRemoveComments from "npm:rehype-remove-comments@5";
 
 const site = lume();
 
 site.use(remark({
   remarkPlugins: [a11yEmoji],
-  rehypePlugins: [rehypeRemoveComments]
+  rehypePlugins: [rehypeRemoveComments],
 }));
 
 export default site;
