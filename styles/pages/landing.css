@@ -250,7 +250,11 @@
 /** Testimonials */
 .landing-testimonials {
   grid-column: 1 / -1;
-  background: var(--color-background-1);
+  background: radial-gradient(
+    farthest-side,
+    var(--color-background-1) 75%,
+    var(--color-background)
+  ) no-repeat;
   padding-top: var(--row-gap-1);
   padding-bottom: var(--row-gap-1);
 
@@ -298,7 +302,7 @@
   margin: 0;
   background: var(--color-background);
   padding: 1.5em;
-  color: var(--color-foreground);
+  color: var(--color-foreground-1);
 
   & p {
     margin: 0;
