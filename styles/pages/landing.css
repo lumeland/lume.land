@@ -251,12 +251,20 @@
 .landing-testimonials {
   grid-column: 1 / -1;
   background: radial-gradient(
-    farthest-side,
+    circle farthest-side,
     var(--color-background-1) 75%,
     var(--color-background)
   ) no-repeat;
   padding-top: var(--row-gap-1);
   padding-bottom: var(--row-gap-1);
+
+  @media (width > 2000px) {
+    background: radial-gradient(
+      closest-side,
+      var(--color-background-1) 75%,
+      var(--color-background)
+    ) no-repeat;
+  }
 
   & h2 {
     font: var(--text-title);
