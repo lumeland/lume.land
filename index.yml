@@ -286,11 +286,6 @@ support:
       img: /img/avatars/supporters/emilsadek.webp
       amount: 1
       recurrent: true
-    - name: Romuald Bulyshko
-      url: https://r13o.com/
-      img: /img/avatars/supporters/romuald.webp
-      amount: 5
-      recurrent: true
     - name: Chad Henry
       url: https://simplerethink.com/
       img: /img/avatars/supporters/chadhenry.webp
@@ -376,6 +371,12 @@ support:
     - name: Jon Paul Uritis
       url: https://jonpauluritis.com/
       img: /img/avatars/supporters/jppope.webp
+    - name: Romuald Bulyshko
+      url: https://r13o.com/
+      img: /img/avatars/supporters/romuald.webp
+    - name: Noah Altunian
+      url: https://altun.cc/
+      img: /img/avatars/supporters/naltun.webp
 
   contributors_title: And built by the following people
 
