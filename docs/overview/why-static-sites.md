@@ -22,7 +22,7 @@ websites. We believe that most websites existing today could be perfectly static
 sites and this would make them better. Why static sites are a better choice in
 most cases?
 
-### Pricing
+### It's cheaper
 
 Unless you have a big site with millions of visits, hosting a static site is
 very cheap or even free. There are many hosting services with generous free
