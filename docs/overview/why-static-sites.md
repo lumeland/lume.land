@@ -47,10 +47,10 @@ scripts, authentication, or XSS vulnerabilities.
 ### Almost no maintenance
 
 A static site can live forever without any kind of maintenance (i.e. the
-database is down, need to update plugins and other dependencies, etc). You can
-upload a static site and forget about it for years. As long as browsers continue
-to exist and support HTML, CSS, and JavaScript, your static website will
-continue working like the first day (or even better because browsers are
+database is down, the need to update plugins and other dependencies, etc). You
+can upload a static site and forget about it for years. As long as browsers
+continue to exist and support HTML, CSS, and JavaScript, your static website
+will continue working like the first day (or even better because browsers are
 improving over time).
 
 ### Own your content
@@ -86,3 +86,60 @@ option in the future like [Astro](https://astro.build/),
 generators and want to switch to Lume. The effort needed to change from one
 static site generator to another is much lower than the effort required to
 change the dynamic site generator (i.e. from WordPress to Drupal).
+
+## What if some dynamism is needed?
+
+There are some dynamic features that you may want in your website. Does it mean
+that you must switch to a dynamic site? Depending on the feature, some
+alternatives can be implemented in static sites:
+
+### Search
+
+Searching is a basic feature of any website. Fortunately, it's possible to have
+a good search engine on your static site. There are some options:
+
+- [Pagefind](https://pagefind.app/) is a fast search library for static sites.
+  And Lume [has a plugin](../../plugins/pagefind.md) to use it.
+- For advanced use cases, you can use a third-party service like
+  [Algolia](https://www.algolia.com/) or [Orama](https://orama.com/).
+- A very basic implementation is using a search engine like Google or DuckDuckGo
+  to show results limited to a specific domain. For example, search by JSX in
+  lume.land site in [DuckDuckGo](https://duckduckgo.com/?q=jsx+site%3Alume.land)
+  or [Google](https://www.google.com/search?q=jsx%20site%3Alume.land).
+
+### Comments
+
+There are different options to manage comments in static sites:
+
+- Use the Fediverse.
+  [mastodon-comments](https://github.com/oom-components/mastodon-comments) is a
+  clever way to show comments on your posts without implementing a comment
+  system but using the Fediverse.
+- Use GitHub discussions: If you have a technical blog and most of your users
+  have an account on GitHub, you can use a solution like
+  [giscus](https://giscus.app/) that uses GitHub discussions as a comment
+  system.
+- Use 3rd pary services like [Discus](https://disqus.com/).
+
+### Forms
+
+There are hundreds of solutions to include forms on your website. From free and
+simple tools like [Google Forms](https://docs.google.com/forms/) or
+[Static Forms](https://www.staticforms.xyz/) to more advanced tools like
+[Typeform](https://www.typeform.com/).
+
+### CMS
+
+One of the main issues of static sites was they are not easy to update by
+non-technical people. Fortunately, this is not true anymore. There are plenty of
+CMS for static sites, some recommendations:
+
+- [LumeCMS](../../cms/index.md) can be a good solution, especially if your site
+  is built with Lume (although it can work with any static site).
+- [DecapCMS](https://decapcms.org/) is an open-source CMS that can be used with
+  any static site generator. Lume [has a plugin](../../plugins/decap_cms.md) to
+  use it easier.
+- [CloudCannon](https://cloudcannon.com/) is a CMS service for static sites.
+  It's ideal if you need advanced features for publishers.
+  [It supports Lume,](https://cloudcannon.com/lume-cms/) among many other static
+  site generators.
