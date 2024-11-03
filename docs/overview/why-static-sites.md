@@ -148,7 +148,7 @@ CMS for static sites, some recommendations:
 - [DecapCMS](https://decapcms.org/) is an open-source CMS that can be used with
   any static site generator. Lume [has a plugin](../../plugins/decap_cms.md) to
   use it easier.
-- [CloudCannon](https://cloudcannon.com/) is a CMS service for static sites.
-  It's ideal if you need advanced features for publishers.
+- [CloudCannon](https://cloudcannon.com/) is a CMS as a service for static
+  sites. It's ideal if you need advanced features for publishers.
   [It supports Lume,](https://cloudcannon.com/lume-cms/) among many other static
   site generators.
