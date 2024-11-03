@@ -119,7 +119,7 @@ There are different options to manage comments in static sites:
   have an account on GitHub, you can use a solution like
   [giscus](https://giscus.app/) that uses GitHub discussions as a comment
   system.
-- Use 3rd pary services like [Discus](https://disqus.com/).
+- Use 3rd party services like [Discus](https://disqus.com/).
 
 ### Forms
 
