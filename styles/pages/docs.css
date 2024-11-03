@@ -233,6 +233,13 @@
   & dd + dt {
     margin-top: 1em;
   }
+  blockquote {
+    font: var(--text-caption);
+    border-left: solid 4px var(--color-background-3);
+    background-color: var(--color-background-1);
+    margin-left: 0;
+    padding: 1em 1em 1em 2em;
+  }
 }
 .doc-footer {
   padding: var(--row-gap-0) 0;
