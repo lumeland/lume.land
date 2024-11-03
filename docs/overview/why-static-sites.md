@@ -34,7 +34,7 @@ $5/month in Digital Ocean, Hetzner, etc.
 ### Portability
 
 Deploying a static site can't be easier. Due they are only static files, you
-only have to upload these files to the server, using git, ssh, ftp, or your
+only have to upload these files to the server, using git, rsync, ftp, or your
 favorite tool. It's even possible to compress a static site into a zip file and
 send it by email or messaging.
 
