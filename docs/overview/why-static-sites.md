@@ -122,7 +122,8 @@ There are different options to manage comments in static sites:
 - Use the Fediverse.
   [mastodon-comments](https://github.com/oom-components/mastodon-comments) is a
   clever way to show comments on your posts without implementing a comment
-  system but using the Fediverse.
+  system but using Mastodon and other similar platforms compatible with the
+  Fediverse.
 - Use GitHub discussions: If you have a technical blog and most of your users
   have an account on GitHub, you can use a solution like
   [giscus](https://giscus.app/) that uses GitHub discussions as a comment
