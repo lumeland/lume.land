@@ -44,6 +44,14 @@ Because there's no logic in the server, static sites are much more secure than
 dynamic sites. There are no endpoints to exploit, like configuration files, PHP
 scripts, authentication, or XSS vulnerabilities.
 
+### Performance
+
+Static sites tend to be more performant than dynamic sites, at least as far as
+the backend is concerned. The reason is the server only has to deliver the files
+as they are, without any additional process, which is really fast. And if you're
+using a CDN with replicated content in different parts of the world, and with
+proper cache header, your site will be lightning fast.
+
 ### Almost no maintenance
 
 A static site can live forever without any kind of maintenance (i.e. the
