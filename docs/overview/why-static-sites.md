@@ -89,11 +89,12 @@ easy to switch from a static site generator to another.
 
 Lume can be your current site generator, but maybe you want to switch to other
 option in the future like [Astro](https://astro.build/),
-[Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/) or
-[Eleventy](https://www.11ty.dev/). Or vice versa, you may use one of these site
-generators and want to switch to Lume. The effort needed to change from one
-static site generator to another is much lower than the effort required to
-change a dynamic site generator (i.e. from WordPress to Drupal).
+[Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/),
+[Eleventy](https://www.11ty.dev/) or
+[any other](https://jamstack.org/generators/). Or vice versa, you may use one of
+these site generators and want to switch to Lume. The effort needed to change
+from one static site generator to another is much lower than the effort required
+to change a dynamic site generator (i.e. from WordPress to Drupal).
 
 ## What if some dynamism is needed?
 
@@ -152,3 +153,4 @@ CMS for static sites, some recommendations:
   sites. It's ideal if you need advanced features for publishers.
   [It supports Lume,](https://cloudcannon.com/lume-cms/) among many other static
   site generators.
+- [See more CMS in this list](https://jamstack.org/headless-cms/).
