@@ -34,15 +34,15 @@ $5/month in Digital Ocean, Hetzner, etc.
 ### Portability
 
 Deploying a static site can't be easier. Due they are only static files, you
-only have to upload these files to the server, using git, rsync, ftp, or your
-favorite tool. It's even possible to compress a static site into a zip file and
-send it by email or messaging.
+only have to upload these files to the server, using `git`, `rsync`, `ftp`, or
+your favorite tool. It's even possible to compress a static site into a zip file
+and send it by email or messaging!
 
 ### Security
 
 Because there's no logic in the server, static sites are much more secure than
 dynamic sites. There are no endpoints to exploit, like configuration files, PHP
-scripts, authentication, or XSS vulnerabilities.
+scripts, or XSS vulnerabilities.
 
 ### Performance
 
@@ -54,24 +54,24 @@ proper cache header, your site will be lightning fast.
 
 ### Almost no maintenance
 
-A static site can live forever without any kind of maintenance (i.e. the
-database is down, the need to update plugins and other dependencies, etc). You
-can upload a static site and forget about it for years. As long as browsers
-continue to exist and support HTML, CSS, and JavaScript, your static website
-will continue working like the first day (or even better because browsers are
-improving over time).
+A static site can live forever without any kind of maintenance (there's no
+database to restart, plugins to update, etc). You can upload a static site and
+forget about it for years. As long as browsers continue to exist and support
+HTML, CSS, and JavaScript, your static website will continue working like the
+first day (or even better because browsers are improving over time).
 
 ### Own your content
 
 In most static site generators, like Lume, the content is not stored in a remote
-database guarded by a company, but in files inside your repo, with formats like
-Markdown, YAML, or JSON. This makes your content completely accessible to you,
-and you can do whatever you want with it, like modify, export, move it, etc.
+database guarded by a private company, but in files inside your repo, with
+formats like Markdown, YAML, or JSON that you can open with any text editor.
+This makes your content completely accessible to you, and you can do whatever
+you want with it, like modify, export, move, reuse, etc.
 
 ### Better for Web sustainability
 
 If you care about the environment (you should), static sites are the preferred
-format for your web due to their lower emissions. According to the
+format for the web due to their lower emissions. According to the
 [Web Sustainability Guidelines](https://w3c.github.io/sustyweb/#success-criterion-static-vs-dynamic-human-testable):
 
 > If choosing a code generation tool, use a Static Site Generator in preference
@@ -83,7 +83,7 @@ format for your web due to their lower emissions. According to the
 
 ### No vendor lock-in
 
-Many site generators have a similar way of working: you store your content in a
+Most static site generators have a similar flow: you store your content in a
 format like markdown and they convert the content into web pages. This makes it
 easy to switch from a static site generator to another.
 
@@ -93,7 +93,7 @@ option in the future like [Astro](https://astro.build/),
 [Eleventy](https://www.11ty.dev/). Or vice versa, you may use one of these site
 generators and want to switch to Lume. The effort needed to change from one
 static site generator to another is much lower than the effort required to
-change the dynamic site generator (i.e. from WordPress to Drupal).
+change a dynamic site generator (i.e. from WordPress to Drupal).
 
 ## What if some dynamism is needed?
 
