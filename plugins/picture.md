@@ -4,6 +4,7 @@ description: Create responsive images using the Transform Images plugin
 mod: plugins/picture.ts
 tags:
   - images
+  - optimization
 ---
 
 ## Description

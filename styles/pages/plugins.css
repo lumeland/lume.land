@@ -113,6 +113,9 @@
     &.is-color-lightskyblue {
       --background: lightskyblue;
     }
+    &.is-color-seagreen {
+      --background: seagreen;
+    }
     &.is-color-lightgreen {
       --background: lightgreen;
     }
@@ -147,6 +150,10 @@
   &.is-color-gold {
     --background-active: gold;
     --accent: gold;
+  }
+  &.is-color-seagreen {
+    --background-active: seagreen;
+    --accent: seagreen;
   }
   &.is-color-lightskyblue {
     --background-active: lightskyblue;

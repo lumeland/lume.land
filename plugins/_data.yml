@@ -7,6 +7,9 @@ tags_info:
   html:
     name: HTML
     color: tomato
+  template_engine:
+    name: Template engine
+    color: lightgreen
   images:
     name: Images
     color: violet
@@ -16,9 +19,9 @@ tags_info:
   styles:
     name: Styles
     color: lightskyblue
-  template_engine:
-    name: Template engine
-    color: lightgreen
+  optimization:
+    name: Optimization
+    color: seagreen
   urls:
     name: URLs
     color: pink

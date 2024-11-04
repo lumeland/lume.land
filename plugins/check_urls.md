@@ -3,7 +3,7 @@ title: Check URLs
 description: Automatically check the URLs of your site to detect broken links
 tags:
   - urls
-  - utils
+  - optimization
 ---
 
 ## Description
