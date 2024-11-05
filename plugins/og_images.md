@@ -51,7 +51,7 @@ As `layout` variable is used to render a page and generate the HTML, the
 You can use `_data` files to set the same layout to all pages or different
 layouts per directory.
 
-### Satory library
+### Satori library
 
 **Satori** is the library used to generate the images and
 [only accepts JSX elements](https://github.com/vercel/satori?tab=readme-ov-file#jsx)
@@ -96,7 +96,7 @@ any other variable to generate the image.
 
 See the documentation for a
 [complete list of all CSS properties and HTML elements supported](https://github.com/vercel/satori?tab=readme-ov-file#documentation)
-by Satory.
+by Satori.
 
 You can [use the Playground](https://og-playground.vercel.app/) for testing and
 experimentation.
