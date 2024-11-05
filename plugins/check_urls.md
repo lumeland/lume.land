@@ -62,3 +62,30 @@ site.use(checkUrls({
 >
 > This option can make the build slower, specially if you have many external
 > links, so probably it's a good idea to enable it only occasionally.
+
+## Output
+
+By default, the broken links found are shown in the console. Use the `output`
+option to export the list of broken links to a JSON file:
+
+```js
+site.use(checkUrls({
+  external: true,
+  output: "_broken_links.json",
+}));
+```
+
+Or use a function for a custom output:
+
+```js
+site.use(checkUrls({
+  external: true,
+  output: (brokenLinks) => {
+    console.log(`${brokenLinks.size} broken links found!`);
+  },
+}));
+```
+
+The `brokenLinks` argument is of type `Map<string, Set<string>>`: the map keys
+are the broken links found, and the `Set<string>` the pages where every broken
+link has found.
