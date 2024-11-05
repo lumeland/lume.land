@@ -21,6 +21,8 @@ keyword of every page and the supported values are:
 - `icon`: The logotype or icon of the site.
 - `keywords`: An array of keywords.
 - `twitter`: The twitter username.
+- `fediverse`: The fediverse handler
+  [for author atribution](https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/).
 - `color`: The color theme of the website.
 - `robots`: Configuration for search engines (a boolean to enable/disable or a
   string with a custom value).
@@ -53,6 +55,7 @@ values.
 metas:
   site: Oscar's blog
   twitter: "@misteroom"
+  fediverse: "@misteroom@mastodon.gal"
   icon: /img/icon.png
   lang: en
   generator: true
@@ -94,6 +97,7 @@ to:
     <meta property="og:image" content="http://example.com/hello-world.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@misteroom" />
+    <meta name="fediverse:creator" content="@misteroom@mastodon.gal" />
     <meta itemprop="name" content="Hello world" />
     <meta itemprop="description" content="My first post" />
     <meta itemprop="image" content="http://example.com/hello-world.png" />
@@ -136,6 +140,17 @@ metas:
   title: "$ h1" # Use the content of the first <h1> element
   image: "$ img.cover attr(src)" # Use the src attribute of img.cover element
 ```
+
+As of Lume 2.4.0 is possible to use different fallbacks separated with `||`:
+
+```yml
+metas:
+  title: "=title || $ h1 || Default title"
+```
+
+In the example above, the plugin will try to get the value from the `title`
+variable, if it doesn't exist, get the value from the `h1` CSS selector, and if
+it doesn't exist, use the `Default title` value.
 
 ## Additional values
 

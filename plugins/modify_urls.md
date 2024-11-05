@@ -8,7 +8,7 @@ tags:
 
 ## Description
 
-The `modify_urls` plugin modifies all URLs in your HTML documents using a
+The `modify_urls` plugin modifies all URLs in your HTML & CSS documents using a
 function. It's used internally by other plugins like
 [resolve_urls](resolve_urls.md), [relative_urls](relative_urls.md) and
 [base_path](base_path.md), but you can use it to modify URLs using a custom
@@ -52,3 +52,24 @@ The plugin will search all URLs in your HTML documents (elements with `href`,
 `src`, `srcset`, and `imagesrcset` attributes) and invoke the callback for every
 URL found. The callback has two arguments: the URL and the `Page` instance where
 that URL was found.
+
+## Modify URLs inside CSS files
+
+By default, the plugin only checks HTML pages. You can use the `extensions`
+option to extend it to `.css` files.
+
+```js
+site.use(modifyUrls({
+  extensions: [".html", ".css"], // Modify URLs inside HTML and CSS files
+  fn: (url) => url.toLowerCase(),
+}));
+```
+
+> [!important]
+>
+> Keep in mind that Lume only processes files that are loaded. To transform CSS
+> files they must be loaded before. If you're using any styling plugin like
+> [`postcss`](./postcss.md), [`lightningcss`](./lightningcss.md), or
+> [`sass`](./sass.md), you don't need to do anything. But if you are copying the
+> css files with `site.copy([".css"])` or `site.copy("/styles")` they won't be
+> processed. To fix it, you have to use `site.loadAssets([".css"])`.

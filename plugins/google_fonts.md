@@ -62,3 +62,45 @@ body {
 
 This is useful to be able to change the font of the site without modifying the
 CSS code.
+
+## Configure the output code
+
+This plugin outputs the CSS code with the `@font-face` declarations to the
+`/fonts.css` file by default. You can configure a different file name with the
+`cssFile` option:
+
+```js
+site.use(googleFonts({
+  cssFile: "styles.css",
+  fonts:
+    "https://fonts.google.com/share?selection.family=Playfair+Display:ital,wght@0,400..900;1,400..900",
+}));
+```
+
+In this example, the `@font-face` declarations are generated into the
+`styles.css` file. If the file already exists, the code is appended to the file
+content. If you want to insert the code in a different place, use the
+`placeholder` option.
+
+```js
+site.use(googleFonts({
+  cssFile: "styles.css",
+  placeholder: "/* google-fonts */",
+  fonts:
+    "https://fonts.google.com/share?selection.family=Playfair+Display:ital,wght@0,400..900;1,400..900",
+}));
+```
+
+Then, in your CSS file, add the placeholder in the place you want to insert the
+code, for example:
+
+```css
+/* google-fonts */
+
+body {
+  color: blue;
+}
+```
+
+The `/* google-fonts */` placeholder will be replaced by the `@font-face`
+declarations.
