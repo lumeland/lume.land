@@ -1,6 +1,7 @@
 ---
 title: Gzip
 description: Compress the files using gzip algorithm
+mod: plugins/gzip.ts
 tags:
   - optimization
 ---

@@ -1,6 +1,7 @@
 ---
 title: Relative URLs
 description: Convert all URLs to relative.
+mod: plugins/relative_urls.ts
 tags:
   - urls
 ---

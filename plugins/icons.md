@@ -1,6 +1,7 @@
 ---
 title: Icons
 description: Import icons from the most popular icon libraries
+mod: plugins/icons.ts
 tags:
   - images
 ---

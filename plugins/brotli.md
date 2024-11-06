@@ -1,6 +1,7 @@
 ---
 title: Brotli
 description: Compress the files using Brotli algorithm
+mod: plugins/brotli.ts
 tags:
   - optimization
 ---
