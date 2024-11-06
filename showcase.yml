@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: FlutterBy
+    img: /img/showcase/flutterby.webp
+    url: https://flutterby.philhawksworth.dev/
+    description: An animated icon for your Bluesky profile link
+    code: https://github.com/philhawksworth/bluesky-flutterby
+
   - title: pixeldesu
     img: /img/showcase/pixeldesu.webp
     url: https://pixelde.su
