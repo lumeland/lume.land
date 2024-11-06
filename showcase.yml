@@ -225,12 +225,6 @@ sites:
     url: https://escoladeartelugo.com/universo-reich/
     description: Collaborative and educational project about Steve Reich
 
-  - title: Lume Theme Shiraha
-    img: /img/showcase/lume_theme_shiraha.webp
-    url: https://importantimport.github.io/lume_theme_shiraha/
-    description: "❄️ Material 3-inspired Lume Blog Theme"
-    code: https://github.com/importantimport/lume_theme_shiraha
-
   - title: Lume Deno Template
     img: /img/showcase/LumeTemplate.webp
     url: https://lume-deno-template.deno.dev/
