@@ -4,6 +4,7 @@ description: Bundle JavaScript, TypeScript and JSX files using esbuild library.
 mod: plugins/esbuild.ts
 tags:
   - javascript
+  - optimization
 ---
 
 ## Description

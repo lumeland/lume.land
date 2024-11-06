@@ -244,6 +244,8 @@ files.
 - **variable:** The variable name used to access to the loaded components.
 - **cssFile:** The file name to export the CSS code of the components.
 - **jsFile:** The file name to export the JS code of the components.
+- **placeholder:** A string used as placeholder to replace the content with the
+  css or js code.
 
 ```js
 import lume from "lume/mod.ts";

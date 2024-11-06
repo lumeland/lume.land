@@ -4,7 +4,7 @@ description: Generate a sitemap automatically for your site
 mod: plugins/sitemap.ts
 tags:
   - nav
-  - utils
+  - optimization
 ---
 
 ## Description

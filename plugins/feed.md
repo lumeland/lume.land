@@ -60,6 +60,8 @@ site.use(feed({
     published: new Date(), // The publishing date
     lang: "en", // The language of the feed
     generator: true, // Set `true` to automatically generate the "Lume {version}"
+    authorName: "Óscar Otero", // The author of the site
+    authorUrl: "https://oscarotero.com", // The URL of the author
   },
   items: {
     title: "=title", // The title of every item
@@ -69,6 +71,8 @@ site.use(feed({
     content: "=children", // The content of every item
     lang: "=lang", // The language of every item
     image: "=cover", // The image of the item
+    authorName: "=author.name", // The author of the article
+    authorUrl: "=author.url", // The URL of the author
   },
 }));
 ```
@@ -98,6 +102,11 @@ site.use(feed({
   },
 }));
 ```
+
+As of Lume 2.4, it's possible to define fallbacks for every value. For example:
+`=title || $h1 || Default title` will try to get the value from the `title`
+variable, if it doesn't exist, get the value from the `h1` CSS selector, and if
+it doesn't exist, use the `Default title` value.
 
 If you want to create more than one feed, just use the plugin once per feed:
 

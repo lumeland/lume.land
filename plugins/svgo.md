@@ -4,6 +4,7 @@ description: Optimize SVG files with SVGO
 mod: plugins/svgo.ts
 tags:
   - images
+  - optimization
 ---
 
 ## Description

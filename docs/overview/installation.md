@@ -75,32 +75,10 @@ server) are just shortcuts to the main `lume` task with additional arguments.
 
 Run `deno task lume -h` to see the instructions.
 
-## Setup Lume CLI on your computer
-
-Lume uses Deno task to work, so you need to type always
-`deno task lume [...args]`, which is a bit verbose. To avoid typing `deno task`
-all the time, you can install the [Lume CLI](https://github.com/lumeland/cli)
-script with:
-
-```sh
-deno install --allow-run --allow-env --allow-read --name lume --force --reload --global https://deno.land/x/lume_cli/mod.ts
-```
-
-This creates the `lume` command:
-
-- `lume init` will run the command `deno run -A https://lume.land/init.ts` to
-  initialize Lume in the current directory.
-- `lume upgrade-cli` will upgrade the Lume CLI script to the latest version.
-- Any other command will be delegated to `deno task lume [...args]`. For
-  example, `lume -s` will run `deno task lume -s`.
-- The CLI command has also some useful shortcuts like `--drafts` (to create the
-  `LUME_DRAFTS=true` environment variable) and `--debug`, `--info`, `--warning`,
-  `--error` and `--critical` to change the `LUME_LOGS` environment variable.
-
 ## Update Lume
 
-The task `deno task lume upgrade` (or `lume upgrade` on Lume CLI) upgrades the
-Lume version used in your project folder to the latest version.
+The task `deno task lume upgrade` upgrades the Lume version used in your project
+folder to the latest version.
 
 Use the argument `--dev` to upgrade to the latest development version (the last
 commit in the [Github repository](https://github.com/lumeland/lume)). It's

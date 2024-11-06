@@ -4,6 +4,7 @@ description: Inline CSS, JavaScript, SVG, and images in the HTML.
 mod: plugins/inline.ts
 tags:
   - html
+  - optimization
 ---
 
 ## Description

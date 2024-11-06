@@ -1,6 +1,7 @@
 ---
 title: Relative URLs
 description: Convert all URLs to relative.
+mod: plugins/relative_urls.ts
 tags:
   - urls
 ---
@@ -47,3 +48,14 @@ example:
 
 This plugin changes not only the `<a>` elements, but any element with the `href`
 attribute (`link`, `area`) or `src` (`img`, `video`, `audio`, etc).
+
+## Modify URLs inside CSS files
+
+By default, the plugin only checks HTML pages. You can use the `extensions`
+option to extend it to `.css` files.
+
+```js
+site.use(relativeUrls({
+  extensions: [".html", ".css"], // Fix URLs inside HTML and CSS files
+}));
+```

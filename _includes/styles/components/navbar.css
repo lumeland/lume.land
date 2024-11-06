@@ -45,8 +45,8 @@
   overflow-x: auto;
   flex: 1 1 auto;
   width: 0;
-  -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
+  scrollbar-color: var(--color-background-3) var(--color-background);
   will-change: scroll-position;
 
   & li {

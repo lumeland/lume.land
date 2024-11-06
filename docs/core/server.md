@@ -124,6 +124,16 @@ directoryIndex for folders. It's used by Lume in the `--serve` mode. See the
 To build and serve dynamic pages on demand. See the
 [available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/on_demand.ts/~/Options).
 
+### precompress
+
+To serve precompressed files (in Brotli or Gzip). For example, `index.html.br`
+or `index.html.gz` instead of `index.html`. See
+[Brotli](../../plugins/brotli.md) and [Gzip](../../plugins/gzip.md) plugins to
+know how to create the precompressed files.
+
+See the
+[available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/precompress.ts/~/Options).
+
 ### redirects
 
 Middleware to configure a list of redirects of some paths. Example:

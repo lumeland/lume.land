@@ -4,6 +4,7 @@ description: Transform and minify your CSS files with Lightning CSS.
 mod: plugins/lightningcss.ts
 tags:
   - styles
+  - optimization
 ---
 
 ## Description
