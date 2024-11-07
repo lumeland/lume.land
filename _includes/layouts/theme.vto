@@ -51,11 +51,11 @@ page_css: theme.css
       <div class="theme-preview-toggle">
         <label>
           <input type="radio" checked name="device" value="desktop">
-          <img src="/icons/desktop.svg" alt="Desktop" width="24" inline>
+          <img src="{{ "desktop:regular" |> icon("phosphor") }}" alt="Desktop" width="24" inline>
         </label>
         <label>
           <input type="radio" name="device" value="mobile">
-          <img src="/icons/device-mobile.svg" alt="Mobile" width="24" inline>
+          <img src="{{ "device-mobile" |> icon("phosphor") }}" alt="Mobile" width="24" inline>
         </label>
       </div>
 
@@ -63,11 +63,11 @@ page_css: theme.css
       <div class="theme-preview-toggle">
         <label>
           <input type="radio" checked name="theme" value="light">
-          <img src="/icons/sun-dim.svg" alt="Light theme" width="24" inline>
+          <img src="{{ "sun-dim" |> icon("phosphor") }}" alt="Light theme" width="24" inline>
         </label>
         <label>
           <input type="radio" name="theme" value="dark">
-          <img src="/icons/moon.svg" alt="Dark theme" width="24" inline>
+          <img src="{{ "moon" |> icon("phosphor") }}" alt="Dark theme" width="24" inline>
         </label>
       </div>
       {{ else }}

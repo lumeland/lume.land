@@ -25,7 +25,7 @@ page_css: docs.css
           Options
           <a class="header-aside-link" target="_blank" href="https://deno.land/x/lume/{{ it.mod }}?s=Options">
             See on deno.land
-            <img width="20" height="20" src="/icons/arrow-square-out.svg" inline>
+            <img width="20" height="20" src="{{ "arrow-square-out" |> icon("phosphor") }} inline>
           </a>
         </h2>
         {{ include "templates/type.vto" {options: await scheme(mod)} }}

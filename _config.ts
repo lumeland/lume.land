@@ -1,5 +1,7 @@
 import lume from "lume/mod.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
+import icons from "lume/plugins/icons.ts";
+import googleFonts from "lume/plugins/google_fonts.ts";
 import inline from "lume/plugins/inline.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import esbuild from "lume/plugins/esbuild.ts";
@@ -45,6 +47,10 @@ site
   .use(postcss({
     plugins: [nesting()],
   }))
+  .use(googleFonts({
+    fonts: "https://fonts.google.com/share?selection.family=Epilogue:ital,wght@0,100..900;1,100..900|Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900|JetBrains+Mono:ital,wght@0,100..800;1,100..800",
+    cssFile: "styles/critical.css",
+  }))
   .use(favicon())
   .use(inline())
   .use(metas())
@@ -54,6 +60,7 @@ site
   .use(resolveUrls())
   .use(transformImages())
   .use(sitemap())
+  .use(icons())
   .scopedUpdates(
     (path) => path.endsWith(".png") || path.endsWith(".jpg"),
   )

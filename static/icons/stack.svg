@@ -1,9 +1,0 @@
-<svg width="97" height="97" viewBox="0 0 97 97" xmlns="http://www.w3.org/2000/svg">
-  <g fill="none" fill-rule="evenodd">
-    <path d="M.5.5h96v96H.5z"/>
-    <path fill="#BF4040" fill-rule="nonzero" d="m12.5 30.5 36 21 36-21-36-21z"/>
-    <path class="ico-stroke" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m12.5 66.5 36 21 36-21"/>
-    <path class="ico-stroke" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m12.5 48.5 36 21 36-21"/>
-    <path stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m12.5 30.5 36 21 36-21-36-21z"/>
-  </g>
-</svg>
