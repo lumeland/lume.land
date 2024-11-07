@@ -48,8 +48,9 @@ site
     plugins: [nesting()],
   }))
   .use(googleFonts({
-    fonts: "https://fonts.google.com/share?selection.family=Epilogue:ital,wght@0,100..900;1,100..900|Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900|JetBrains+Mono:ital,wght@0,100..800;1,100..800",
-    cssFile: "styles/critical.css",
+    fonts:
+      "https://fonts.google.com/share?selection.family=Epilogue:ital,wght@0,100..900;1,100..900|Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900|JetBrains+Mono:ital,wght@0,100..800;1,100..800",
+    cssFile: "/styles/main.css",
   }))
   .use(favicon())
   .use(inline())
@@ -122,7 +123,7 @@ site
 
 site.data("scheme", async (mod: string) => {
   try {
-    const url = `https://deno.land/x/lume@v2.4.0/${mod}`;
+    const url = `https://deno.land/x/lume@v2.4.1/${mod}`;
     const { defaults } = await import(url);
     const { Options } = await analyze(url, { maxDepth: 2, private: false });
 
