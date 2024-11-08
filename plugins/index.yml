@@ -51,3 +51,7 @@ plugins:
   - title: 🌟 Glow your Lume syntax!
     description: Glow Syntax Highlighter for your Lume site! The lightweight code highlighter you ever need!
     url: https://deno.land/x/lume_glow
+
+  - title: Kroki Plugin for Lume
+    description: Transform textual descriptions within code blocks into diagrams using Kroki.
+    url: https://code.fosterhangdaan.com/foster/lume-plugin-kroki
