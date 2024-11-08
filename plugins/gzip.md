@@ -48,6 +48,6 @@ Many other web servers have the option to serve precompressed files, for example
 [Nginx](https://nginx.org/en/docs/http/ngx_http_gzip_static_module.html),
 [Caddy](https://caddyserver.com/docs/caddyfile/directives/file_server#precompressed),
 or frameworks like
-[Hono](https://hono.dev/docs/getting-started/,deno#precompressed),
+[Hono](https://hono.dev/docs/getting-started/deno#precompressed),
 [Fastify](https://github.com/fastify/fastify-static?tab=readme-ov-file#precompressed),
 or [Koa](https://github.com/koajs/static?tab=readme-ov-file#options).

@@ -439,15 +439,6 @@ testimonials:
       cover: /img/covers/video_static_feedback.webp
       type: video
 
-    - url: https://cuscuz.in/@jedi/110823341110394415
-      author: Thiago Jedi (@jedi@cuscuz.in)
-      avatar: /img/avatars/testimonials/jedithiago.webp
-      date: August 3, 2023
-      text: |
-        Aliás, tenho que reforçar o quão feliz eu estou com o Lume como sistema para gerir o meu blog. Sem falar o quanto que [@deno_land](https://fosstodon.org/@deno_land) evoluiu desde que eu fiz a migração.
-
-        Recomendo a todos que utilizam o Github Pages ou outro sistema de hospedagem de páginas estáticas.
-
     - url: https://thomasorus.com/from-static-site-generator-to-static-site-processor.html
       author: Thomasorus (thomasorus.com)
       avatar: /img/avatars/testimonials/thomasorus.webp
