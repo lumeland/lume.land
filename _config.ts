@@ -67,7 +67,7 @@ site
     external: true,
     ignore: [
       "/blog/",
-    ]
+    ],
   }))
   .scopedUpdates(
     (path) => path.endsWith(".png") || path.endsWith(".jpg"),

@@ -56,24 +56,22 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Deno environment
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: v1.x
+        uses: denoland/setup-deno@v2
 
       - name: Build site
         run: deno task build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "_site"
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
 ```
 
 ## GitLab Pages
@@ -151,9 +149,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Deno environment
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: v1.x
+        uses: denoland/setup-deno@v2
 
       - name: Build site
         run: deno task build
