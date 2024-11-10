@@ -21,7 +21,7 @@ tags_info:
     color: lightskyblue
   optimization:
     name: Optimization
-    color: seagreen
+    color: mediumseagreen
   urls:
     name: URLs
     color: pink

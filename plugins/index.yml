@@ -3,9 +3,12 @@ title: Plugins
 main_menu: plugins
 description: |
   **Lume** has a powerful plugin system to extend its functionality with new
-  features and support for more formats.
+  features and support for more formats. Some basic are installed by default.
 
-  Some indispensable plugins are installed by default.
+community:
+  title: From the community
+  description: |
+    Learn [how to create plugins your own plugins](/docs/advanced/plugins/).
 
 plugins:
   - title: lume_cleancss
@@ -55,3 +58,15 @@ plugins:
   - title: Kroki Plugin for Lume
     description: Transform textual descriptions within code blocks into diagrams using Kroki.
     url: https://code.fosterhangdaan.com/foster/lume-plugin-kroki
+
+  - title: Lume duck
+    description: Plugin to use DuckDB data in Lume
+    url: https://jsr.io/@dringtech/lume-duck
+
+  - title: Icon icons
+    description: Plugins to work with different icon collections in Lume.
+    url: https://github.com/lumeland/icon-plugins
+
+  - title: Lume Openring
+    description:  A Lume plugin that fetches articles from other blogs to be linked on your site.
+    url: https://github.com/pixeldesu/lume_openring

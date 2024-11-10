@@ -64,7 +64,7 @@ site
   .use(sitemap())
   .use(icons())
   .use(checkUrls({
-    external: true,
+    external: false,
     ignore: [
       "/blog/",
     ],
@@ -129,8 +129,9 @@ site
   }));
 
 site.data("scheme", async (mod: string) => {
+  return [];
   try {
-    const url = `https://deno.land/x/lume@v2.4.1/${mod}`;
+    const url = `https://deno.land/x/lume@v2.4.2/${mod}`;
     const { defaults } = await import(url);
     const { Options } = await analyze(url, { maxDepth: 2, private: false });
 

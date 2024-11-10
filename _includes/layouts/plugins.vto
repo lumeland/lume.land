@@ -13,8 +13,8 @@ page_css: plugins.css
     <form class="plugins-filter">
       <select name="status" class="selector">
         <option value="all">All plugins</option>
-        <option value="enabled">Enabled by default</option>
-        <option value="disabled">Disabled by default</option>
+        <option value="enabled">Installed by default</option>
+        <option value="disabled">Not installed by default</option>
       </select>
 
       {{ for id, info of tags_info }}
@@ -48,10 +48,17 @@ page_css: plugins.css
       </li>
       {{ /for }}
     </ul>
+
+    <footer class="plugins-empty" hidden>
+      <p>No plugins with these filters.</p>
+    </footer>
   </lume-filter>
 
   <section class="plugins-more">
-    <h2>🔥🔥 From the community 🔥🔥</h2>
+    <header>
+      <h2>{{ community.title }}</h2>
+      {{ community.description |> md }}
+    </header>
 
     <ul>
       {{ for plugin of plugins }}

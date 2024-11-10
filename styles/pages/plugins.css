@@ -113,8 +113,8 @@
     &.is-color-lightskyblue {
       --background: lightskyblue;
     }
-    &.is-color-seagreen {
-      --background: seagreen;
+    &.is-color-mediumseagreen {
+      --background: mediumseagreen;
     }
     &.is-color-lightgreen {
       --background: lightgreen;
@@ -151,9 +151,9 @@
     --background-active: gold;
     --accent: gold;
   }
-  &.is-color-seagreen {
-    --background-active: seagreen;
-    --accent: seagreen;
+  &.is-color-mediumseagreen {
+    --background-active: mediumseagreen;
+    --accent: mediumseagreen;
   }
   &.is-color-lightskyblue {
     --background-active: lightskyblue;
@@ -184,22 +184,35 @@
   margin-left: auto;
   margin-right: auto;
 
-  & h2 {
-    font: var(--text-title);
-    letter-spacing: var(--text-title-spacing);
-    margin: 0 0 var(--row-gap-1);
+  > header {
     text-align: center;
+    margin: 0 0 var(--row-gap-1);
+
+    h2 {
+      font: var(--text-title);
+      letter-spacing: var(--text-title-spacing);
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      font: var(--text-body);
+      letter-spacing: var(--text-body-spacing);
+      color: var(--color-foreground-1);
+    }
   }
 
   & ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 280px);
-    column-gap: var(--column-gap-1);
-    row-gap: var(--row-gap-0);
-    justify-content: center;
+    column-gap: var(--column-gap-2);
+    column-width: 200px;
+
+    > li {
+      break-inside: avoid;
+      margin-bottom: var(--row-gap-1);
+    }
   }
 
   & .plugin-name {
@@ -207,5 +220,18 @@
     letter-spacing: 0;
     display: block;
     margin: 0.3em 0;
+  }
+}
+
+.plugins-empty {
+  font: var(--text-heading);
+  letter-spacing: var(--text-heading-spacing);
+  text-align: center;
+  text-wrap: balance;
+  color: var(--color-background-3);
+  padding: var(--row-gap-2) var(--column-gap-2);
+
+  p {
+    margin: 0;
   }
 }

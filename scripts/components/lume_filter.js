@@ -2,8 +2,8 @@ export default class LumeFilter extends HTMLElement {
   connectedCallback() {
     const form = this.querySelector("form");
     const items = this.querySelectorAll(":scope > ul > li");
-
-    const init = new URLSearchParams(window.location.search);
+    const emptyState = this.querySelector(":scope > footer");
+    const init = new URLSearchParams(location.search);
 
     for (const key of init.keys()) {
       const input = form[key];
@@ -53,6 +53,8 @@ export default class LumeFilter extends HTMLElement {
         tags.push(name);
       }
 
+      let empty = true;
+
       items.forEach((item) => {
         switch (status) {
           case "enabled":
@@ -70,8 +72,14 @@ export default class LumeFilter extends HTMLElement {
         }
 
         item.hidden = tags.length &&
-          tags.every((tag) => !item.dataset.tags.split(",").includes(tag));
+          !tags.every((tag) => item.dataset.tags.split(",").includes(tag));
+        
+        if (!item.hidden) {
+          empty = false;
+        }
       });
+
+      emptyState.hidden = !empty;
     }
   }
 }
