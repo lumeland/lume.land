@@ -129,7 +129,6 @@ site
   }));
 
 site.data("scheme", async (mod: string) => {
-  return [];
   try {
     const url = `https://deno.land/x/lume@v2.4.2/${mod}`;
     const { defaults } = await import(url);
