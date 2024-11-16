@@ -5,7 +5,7 @@ description: All configuration options in a simple page
 
 ## Lume instantiation
 
-These are all available options (and the default values) when create a new site:
+These are all available options (and the default values) when creating a new site:
 
 ```js
 const site = lume(
@@ -13,10 +13,10 @@ const site = lume(
     /** The path of the site source */
     src: "./",
 
-    /** The path of the built destination */
+    /** The path of the build destination */
     dest: "./_site",
 
-    /** Whether the empty folder should be emptied before the build */
+    /** Whether the destination folder (defined in `dest`) should be emptied before the build */
     emptyDest: true,
 
     /** The default includes path */
