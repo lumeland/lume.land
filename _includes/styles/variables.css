@@ -48,7 +48,9 @@
   --color-black-180: hsl(280deg, 10%, 18%);
   --color-black-140: hsl(280deg, 10%, 14%);
   --color-black-100: hsl(280deg, 10%, 10%);
+  --color-black-70: hsl(280deg, 10%, 7%);
   --color-black-100-alpha: hsla(280deg, 10%, 10%, 0.9);
+  --color-black-70-alpha: hsla(280deg, 10%, 7%, 0.9);
   --color-yellow-800: hsl(50deg, 80%, 80%);
   --color-yellow-750: hsl(50deg, 80%, 75%);
   --color-yellow-200: hsl(50deg, 80%, 20%);
@@ -108,8 +110,8 @@
   --color-primary-1: var(--color-red-400);
   --color-foreground: var(--color-white);
   --color-foreground-1: var(--color-black-800);
-  --color-background: var(--color-black-100);
-  --color-background-a: var(--color-black-100-alpha);
+  --color-background: var(--color-black-70);
+  --color-background-a: var(--color-black-70-alpha);
   --color-background-1: var(--color-black-140);
   --color-background-2: var(--color-black-180);
   --color-background-3: var(--color-black-240);
