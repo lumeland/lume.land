@@ -19,6 +19,12 @@ sites:
     description: An animated icon for your Bluesky profile link
     code: https://github.com/philhawksworth/bluesky-flutterby
 
+  - title: Limettte
+    img: /img/showcase/limette.webp
+    url: https://limette.dev
+    description: The framework for Deno and Web Components
+    code: https://github.com/limettejs/website
+
   - title: pixeldesu
     img: /img/showcase/pixeldesu.webp
     url: https://pixelde.su
