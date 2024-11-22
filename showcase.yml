@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Limettte
+    img: /img/showcase/limette.webp
+    url: https://limette.dev
+    description: The framework for Deno and Web Components
+    code: https://github.com/limettejs/website
+
   - title: FlutterBy
     img: /img/showcase/flutterby.webp
     url: https://flutterby.philhawksworth.dev/
