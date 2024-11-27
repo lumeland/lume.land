@@ -5,8 +5,8 @@ order: 8
 ---
 
 Components are template pieces that you can use in other templates. Some
-template engines like Nunjucks, Pug or Liquid have ways to reuse codes (like
-includes, macros, etc). The Lume components have the following advantages:
+template engines like Vento, Nunjucks, Pug or Liquid have ways to reuse codes
+(like includes, macros, etc). The Lume components have the following advantages:
 
 - They are template engine agnostic. For example, you can create your components
   in JSX or JavaScript and use them in Nunjucks.
@@ -33,8 +33,8 @@ Components are stored in the `_components` directory. Like with `_data`, you can
 create `_components` directories in different sub-directories to make them
 available only to specific pages. To create a new component, just create a file
 in this directory with the name of your component and the extension of the
-template engine you want to use. For example, a component in Nunjucks that
-renders a button could be stored in `_components/button.vto`:
+template engine you want to use. For example, a component in Vento that renders
+a button could be stored in `_components/button.vto`:
 
 ```vento
 <button class="button">{{ text }}</button>
@@ -60,6 +60,13 @@ export default function ({ comp }) {
   ${comp.button({ text: "Login" })}
 `;
 }
+```
+
+Vento templates:
+
+```html
+<h1>Welcome to my site.</h1>
+{{ comp.button({ text: "Login" }) }}
 ```
 
 Nunjucks templates:
