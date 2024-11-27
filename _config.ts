@@ -13,6 +13,7 @@ import nesting from "npm:postcss-nesting";
 import sitemap from "lume/plugins/sitemap.ts";
 import metas from "lume/plugins/metas.ts";
 import checkUrls from "lume/plugins/check_urls.ts";
+import ogImages from "lume/plugins/og_images.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.6.0/toc/mod.ts";
 import analyze, {
   mergeDefaults,
@@ -55,6 +56,7 @@ site
   }))
   .use(favicon())
   .use(inline())
+  .use(ogImages())
   .use(metas())
   .use(esbuild({
     extensions: [".js"],

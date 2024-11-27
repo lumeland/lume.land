@@ -68,5 +68,5 @@ plugins:
     url: https://github.com/lumeland/icon-plugins
 
   - title: Lume Openring
-    description:  A Lume plugin that fetches articles from other blogs to be linked on your site.
+    description: A Lume plugin that fetches articles from other blogs to be linked on your site.
     url: https://github.com/pixeldesu/lume_openring

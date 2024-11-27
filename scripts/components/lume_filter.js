@@ -73,7 +73,7 @@ export default class LumeFilter extends HTMLElement {
 
         item.hidden = tags.length &&
           !tags.every((tag) => item.dataset.tags.split(",").includes(tag));
-        
+
         if (!item.hidden) {
           empty = false;
         }

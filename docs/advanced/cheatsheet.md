@@ -5,7 +5,8 @@ description: All configuration options in a simple page
 
 ## Lume instantiation
 
-These are all available options (and the default values) when creating a new site:
+These are all available options (and the default values) when creating a new
+site:
 
 ```js
 const site = lume(
