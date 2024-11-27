@@ -13,6 +13,11 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Rubén Prol
+    img: /img/showcase/rubenprol.webp
+    url: https://rubenprol.gal/
+    description: Personal site of Rubén Prol, typographer and lettering draftsman
+
   - title: Limettte
     img: /img/showcase/limette.webp
     url: https://limette.dev
