@@ -28,7 +28,7 @@ link:
     - link-external
 ---
 
-<a {{ link | attr | safe }}>Hello</a>
+<a {{ link |> attr |> safe }}>Hello</a>
 ```
 
 ```js { title=".page.js" }
