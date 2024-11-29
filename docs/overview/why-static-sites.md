@@ -111,10 +111,25 @@ a good search engine on your static site. There are some options:
   And Lume [has a plugin](../../plugins/pagefind.md) to use it.
 - For advanced use cases, you can use a third-party service like
   [Algolia](https://www.algolia.com/) or [Orama](https://orama.com/).
-- A very basic implementation is using a search engine like Google or DuckDuckGo
-  to show results limited to a specific domain. For example, search by JSX in
-  lume.land site in [DuckDuckGo](https://duckduckgo.com/?q=jsx+site%3Alume.land)
-  or [Google](https://www.google.com/search?q=jsx%20site%3Alume.land).
+- A very basic implementation is using a search engine like DuckDuckGo to show
+  results limited to a specific domain. The hidden input named sites allows us
+  to restrict the DuckDuckGo query to a specific domain.
+
+  ```html
+  <form role="search" action="https://duckduckgo.com" method="GET">
+    <label>Search in lume.land <input type="search" name="q"></label>
+    <input type="hidden" name="sites" value="lume.land">
+    <button>Search</button>
+  </form>
+  ```
+
+  Try it now:
+
+  <form role="search" action="https://duckduckgo.com" method="GET">
+    <label>Search in lume.land <input type="search" name="q"></label>
+    <input type="hidden" name="sites" value="lume.land">
+    <button>Search</button>
+  </form>
 
 ### Comments
 
