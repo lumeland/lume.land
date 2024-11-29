@@ -1,6 +1,7 @@
 ---
 title: Check URLs
 description: Automatically check the URLs of your site to detect broken links
+mod: plugins/check_urls.ts
 tags:
   - urls
   - optimization
