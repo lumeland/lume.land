@@ -11,9 +11,6 @@ export default function ({ title, description, url }) {
         alignItems: "flex-start",
         justifyContent: "center",
         backgroundColor: "#121014",
-        color: "#fff",
-        fontSize: 64,
-        fontWeight: 600,
         padding: 50,
       }}
     >
@@ -37,12 +34,25 @@ export default function ({ title, description, url }) {
           </path>
         </g>
       </svg>
-      <div style={{ marginTop: 40 }}>{title}</div>
+      <div
+        style={{
+          marginTop: 40,
+          color: "#fff",
+          fontSize: 72,
+          fontWeight: 600,
+          lineHeight: 1,
+          letterSpacing: "-1px",
+        }}
+      >
+        {title}
+      </div>
       <div
         style={{
           color: "#a8a2ab",
-          fontSize: 32,
+          fontSize: 40,
           fontWeight: 400,
+          marginTop: 10,
+          lineHeight: 1.4,
         }}
       >
         {description}
@@ -50,7 +60,7 @@ export default function ({ title, description, url }) {
       <div
         style={{
           color: "#e05252",
-          fontSize: 18,
+          fontSize: 24,
           fontWeight: 400,
           marginTop: "auto",
         }}

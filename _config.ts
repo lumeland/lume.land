@@ -131,8 +131,12 @@ site
   }));
 
 site.data("scheme", async (mod: string) => {
+  if (site.options.location.hostname === "localhost") {
+    return [];
+  }
+
   try {
-    const url = `https://deno.land/x/lume@v2.4.2/${mod}`;
+    const url = import.meta.resolve(`lume/${mod}`);
     const { defaults } = await import(url);
     const { Options } = await analyze(url, { maxDepth: 2, private: false });
 
