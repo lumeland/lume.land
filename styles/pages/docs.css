@@ -241,6 +241,37 @@
     padding: 1em 1em 1em 2em;
   }
 }
+.doc-footer-edit {
+  display: flex;
+  justify-content: right;
+}
+.doc-edit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.4em 0.8em;
+  font: var(--text-caption);
+  color: var(--color-foreground-1);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: all var(--animation-duration);
+  line-height: 1;
+
+  & svg {
+    transition: all var(--animation-duration);
+    display: block;
+    margin-top: -0.1em;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+    background: var(--color-background-1);
+
+    & svg {
+      stroke: var(--color-primary);
+    }
+  }
+}
 .doc-footer {
   padding: var(--row-gap-0) 0;
   border-top: solid 1px var(--color-background-2);
