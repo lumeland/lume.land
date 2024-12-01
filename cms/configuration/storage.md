@@ -22,7 +22,7 @@ For example, let's register a file system storage under the name "my_files",
 pointing to the `./files` folder:
 
 ```ts
-import lumeCMS, { Fs } from "lume/cms.ts";
+import lumeCMS, { Fs } from "lume/cms/mod.ts";
 
 const cms = lumeCMS();
 const root = Deno.cwd() + "/files";
@@ -37,7 +37,7 @@ Because the file system is the most common way to read and write data, the
 example above can be simplified as following:
 
 ```ts
-import lumeCMS from "lume/cms.ts";
+import lumeCMS from "lume/cms/mod.ts";
 
 const cms = lumeCMS();
 
@@ -59,7 +59,8 @@ directly into the Deno runtime. LumeCMS can use a `Kv` instance to store
 content. For example:
 
 ```ts
-import lumeCMS, { Kv } from "lume/cms.ts";
+import lumeCMS from "lume/cms/mod.ts";
+import Kv from "lume/cms/storage/kv.ts";
 
 const cms = lumeCMS();
 const kv = await Deno.openKv();
@@ -76,7 +77,8 @@ GitHub API. It's useful if you want to allow people without GitHub accounts or
 permission to edit the site data.
 
 ```ts
-import lumeCMS, { GitHub } from "lume/cms.ts";
+import lumeCMS from "lume/cms/mod.ts";
+import GitHub from "lume/cms/storage/github.ts";
 import { Octokit } from "npm:octokit";
 
 const cms = lumeCMS();

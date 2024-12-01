@@ -7,7 +7,7 @@ order: 0
 LumeCMS instantation accepts an object with some configuration options:
 
 ```js
-import lumeCMS from "lume/cms.ts";
+import lumeCMS from "lume/cms/mod.ts";
 
 const cms = lumeCMS({
   /* Options */
@@ -34,7 +34,7 @@ This is an object to configure the CMS website. You can assign a name, a
 description, URL and a body, that will be visible in the homepage:
 
 ```js
-import lumeCMS from "lume/cms.ts";
+import lumeCMS from "lume/cms/mod.ts";
 
 const cms = lumeCMS({
   site: {
