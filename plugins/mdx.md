@@ -40,7 +40,7 @@ plugin, add the following to your `deno.json` file:
 ```json
 "compilerOptions": {
   "jsx": "react-jsx",
-  "jsxImportSource": "npm:react"
+  "jsxImportSource": "npm:preact"
 }
 ```
 
