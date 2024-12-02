@@ -94,7 +94,7 @@ export default site;
 
 </lume-code>
 
-Now you should see the `styles.css` file in the `_dest` folder and the styles
+Now you should see the `styles.css` file in the `_site` folder and the styles
 are applied to all HTML pages.
 
 > [!tip]
