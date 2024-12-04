@@ -77,7 +77,7 @@ export default (data: Lume.Data, helpers: Lume.Helpers) => (
 );
 ```
 
-Note that this page uses the `layouts/main.vto` layout to wrap the content (you
+Note that this page uses the `layouts/main.vto` Vento layout to wrap the content (you
 can mix different template languages like Nunjucks and JSX)
 
 ## Creating layouts

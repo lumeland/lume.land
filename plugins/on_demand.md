@@ -148,7 +148,7 @@ export default site;
 ```
 
 Now, the on-demand pages will have the `params` key with the search params
-values. For example, in a Nunjucks page:
+values. For example, in a Vento page:
 
 ```vento
 ---

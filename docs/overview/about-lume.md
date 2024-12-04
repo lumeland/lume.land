@@ -14,7 +14,7 @@ It's inspired by other static site generators, such as
 flexible.
 
 - It supports **multiple file formats**, like `markdown`, `yaml`, `JavaScript`,
-  `typescript`, `jsx` and `nunjucks`, and it's easy to extend with more.
+  `typescript`, `jsx`, `vento` and `nunjucks`, and it's easy to extend with more.
 - You can hook **processors** to manipulate `html` and assets, like `css` or
   `js`.
 - **It's Deno:** Forget about managing thousands of packages in `node_modules`

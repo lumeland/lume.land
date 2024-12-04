@@ -93,7 +93,7 @@ for pages and `*.js` for JavaScript assets).
 
 ## Template engines
 
-Lume supports several template engines to render your pages, like Nunjucks, Pug
+Lume supports several template engines to render your pages, like Vento, Nunjucks, Pug
 or Eta. It's easy to extend this support for more template engines: you only
 need to create a class implementing the `Lume.Engine` interface. Let's see an
 example using [handlebars](https://github.com/handlebars-lang/handlebars.js):

@@ -125,7 +125,7 @@ pages. For example:
 ### Create a language switcher menu
 
 The plugin also exposes the `alternates` variable, that you can use to build a
-menu to change the language of the current page. This is an example in nunjucks:
+menu to change the language of the current page. This is an example in Vento:
 
 <lume-code>
 
