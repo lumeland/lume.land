@@ -44,5 +44,5 @@ cms.document({
     "subtitle: text",
     "content: markdown",
   ]
-);
+});
 ```
