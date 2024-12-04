@@ -1,6 +1,6 @@
 /** @jsxImportSource npm:react@18.2.0 */
 
-export default function ({ title, description, url }) {
+export default function ({ title, description }) {
   return (
     <div
       style={{
@@ -11,7 +11,7 @@ export default function ({ title, description, url }) {
         alignItems: "flex-start",
         justifyContent: "center",
         backgroundColor: "#121014",
-        padding: 50,
+        padding: "50px 100px",
       }}
     >
       <svg
@@ -41,7 +41,7 @@ export default function ({ title, description, url }) {
           fontSize: 72,
           fontWeight: 600,
           lineHeight: 1,
-          letterSpacing: "-1px",
+          letterSpacing: "-1.5px",
         }}
       >
         {title}
@@ -49,23 +49,13 @@ export default function ({ title, description, url }) {
       <div
         style={{
           color: "#a8a2ab",
-          fontSize: 40,
+          fontSize: 36,
           fontWeight: 400,
-          marginTop: 10,
+          marginTop: 40,
           lineHeight: 1.4,
         }}
       >
         {description}
-      </div>
-      <div
-        style={{
-          color: "#e05252",
-          fontSize: 24,
-          fontWeight: 400,
-          marginTop: "auto",
-        }}
-      >
-        {`https://lume.land${url}`}
       </div>
     </div>
   );
