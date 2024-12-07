@@ -34,7 +34,7 @@ object with `label` and `value` properties. Example:
 ```ts
 {
   name: "status",
-  type: "select",
+  type: "radio",
   options: [
     "enabled",
     "disabled",
