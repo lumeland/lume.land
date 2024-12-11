@@ -23,7 +23,9 @@ keyword of every page and the supported values are:
 - `twitter`: The twitter username.
 - `fediverse`: The fediverse handler
   [for author atribution](https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/).
-- `color`: The color theme of the website.
+- `color`: The color theme of the website. It can be a string with a single
+  color (like `#fff`) or an array of two colors for light and dark mode (i.e.
+  `["white", "black"]`).
 - `robots`: Configuration for search engines (a boolean to enable/disable or a
   string with a custom value).
 - `generator`: The software that generated the page (Lume v1.x). It can be true

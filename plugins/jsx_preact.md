@@ -75,8 +75,8 @@ export default (data: Lume.Data, helpers: Lume.Helpers) => (
 );
 ```
 
-Note that this page uses the `layouts/main.vto` Vento layout to wrap the content. (You
-can mix different template languages like Nunjucks and JSX.)
+Note that this page uses the `layouts/main.vto` Vento layout to wrap the
+content. (You can mix different template languages like Nunjucks and JSX.)
 
 ## Creating layouts
 
@@ -103,3 +103,42 @@ export default ({ title, children }: Lume.Data, helpers: Lume.Helpers) => (
 >
 > Lume will automatically add the missing `<!DOCTYPE html>` to the generated
 > `.html` pages.
+
+## Components
+
+You can create [Lume components](../docs/core/components.md) in JSX creating
+files in the `_components` folder. For example:
+
+<lume-code>
+
+```jsx{title="_components/button.tsx"}
+export default function ({ children }) {
+  return (
+    <button className="my-button">
+      {children}
+    </button>
+  );
+}
+```
+
+</lume-code>
+
+To render the component in your templates use the `comp` variable:
+
+<lume-code>
+
+```jsx{title="_includes/layout.tsx"}
+export default function ({ comp }) {
+  return (<comp.Button>Click me!</comp.Button>);
+}
+```
+
+</lume-code>
+
+> [!important]
+>
+> Importing a component with `import Button from "./_components/button.ts"`
+> doesn't work for live-reloading due a limitation of Deno that
+> [cannot update any imported module](https://github.com/denoland/deno/issues/8327)
+> without restarting the entire process. So it's highly recomendable to use the
+> `comp` variable to consume components and mitigate this limitation.

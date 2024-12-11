@@ -55,10 +55,10 @@ export default () => "<p>This is the page content</p>";
 
 In the examples above, all pages contain two variables: `title` and `url`.
 
-In the formats with front matter (like Markdown, Vento and Nunjucks), the content is
-defined below the front matter. Formats that don't use front matter export the
-content as the `content` variable or, optionally, as a default export (like in
-`page.page.js`).
+In the formats with front matter (like Markdown, Vento and Nunjucks), the
+content is defined below the front matter. Formats that don't use front matter
+export the content as the `content` variable or, optionally, as a default export
+(like in `page.page.js`).
 
 ## Standard variables
 

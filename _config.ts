@@ -14,6 +14,7 @@ import sitemap from "lume/plugins/sitemap.ts";
 import metas from "lume/plugins/metas.ts";
 import checkUrls from "lume/plugins/check_urls.ts";
 import ogImages from "lume/plugins/og_images.ts";
+import { env } from "lume/core/utils/env.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.6.0/toc/mod.ts";
 import analyze, {
   mergeDefaults,
@@ -131,7 +132,7 @@ site
   }));
 
 site.data("scheme", async (mod: string) => {
-  if (site.options.location.hostname === "localhost") {
+  if (env("LUME_LIVE_RELOAD")) {
     return [];
   }
 
