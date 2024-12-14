@@ -5,38 +5,26 @@
       <span>lume</span>
     </a>
 
-    <ul class="navbar-menu">
-      <li>
-        <a href="/docs/overview/about-lume/" {{ if it.main_menu == "docs" }}class="is-selected"{{ /if }}>
-          Documentation
-        </a>
-      </li>
-      <li>
-        <a href="/cms/" {{ if it.main_menu == "cms" }}class="is-selected"{{ /if }}>
-          CMS
-        </a>
-      </li>
-      <li>
-        <a href="/showcase/" {{ if it.main_menu == "showcase" }}class="is-selected"{{ /if }}>
-          Showcase
-        </a>
-      </li>
-      <li>
-        <a href="/themes/" {{ if it.main_menu == "themes" }}class="is-selected"{{ /if }}>
-          Themes
-        </a>
-      </li>
-      <li>
-        <a href="/plugins/" {{ if it.main_menu == "plugins" }}class="is-selected"{{ /if }}>
-          Plugins
-        </a>
-      </li>
-      <li>
-        <a href="/blog/">
-          Blog
-        </a>
-      </li>
-    </ul>
+    <lume-menu class="navbar-menu">
+      <a href="/docs/overview/about-lume/" {{ if it.main_menu == "docs" }}class="is-selected"{{ /if }}>
+        Documentation
+      </a>
+      <a href="/cms/" {{ if it.main_menu == "cms" }}class="is-selected"{{ /if }}>
+        CMS
+      </a>
+      <a href="/showcase/" {{ if it.main_menu == "showcase" }}class="is-selected"{{ /if }}>
+        Showcase
+      </a>
+      <a href="/themes/" {{ if it.main_menu == "themes" }}class="is-selected"{{ /if }}>
+        Themes
+      </a>
+      <a href="/plugins/" {{ if it.main_menu == "plugins" }}class="is-selected"{{ /if }}>
+        Plugins
+      </a>
+      <a href="/blog/">
+        Blog
+      </a>
+    </lume-menu>
     <div class="navbar-search" id="search">Search</div>
   </div>
 </nav>
