@@ -76,10 +76,25 @@ export default class MenuSelector extends HTMLElement {
     const button = this.shadowRoot.querySelector(".menu-selector-button");
     const list = this.shadowRoot.querySelector(".menu-selector-list");
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (ev) => {
       const expanded = button.ariaExpanded === "true" ? "false" : "true";
       button.ariaExpanded = expanded;
       list.hidden = expanded === "false";
+      ev.stopPropagation();
+    });
+
+    this.ownerDocument.body.addEventListener("click", () => {
+      setTimeout(() => {
+        button.ariaExpanded = "false";
+        list.hidden = true;
+      }, 10);
+    });
+
+    this.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape") {
+        button.ariaExpanded = "false";
+        list.hidden = true;
+      }
     });
 
     this.update();
