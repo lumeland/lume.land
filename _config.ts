@@ -129,7 +129,11 @@ site
     options: {
       minify_css: false, // https://github.com/wilsonzlin/minify-html/issues/173
     },
-  }));
+  }))
+  .remoteFile(
+    "scripts/components/lume_menu.js",
+    "https://cdn.jsdelivr.net/npm/@oom/horizontal-menu@0.1.0/src/menu.js",
+  );
 
 site.data("scheme", async (mod: string) => {
   if (env("LUME_LIVE_RELOAD")) {
