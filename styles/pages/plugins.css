@@ -38,6 +38,10 @@
   justify-content: center;
   column-gap: 5px;
   row-gap: 5px;
+
+  .selector {
+    max-width: 200px;
+  }
 }
 
 .plugins-list {

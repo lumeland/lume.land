@@ -1,4 +1,4 @@
-export default class LumeCode extends HTMLElement {
+export default class LumeControls extends HTMLElement {
   connectedCallback() {
     const buttons = this.querySelectorAll("button");
     const carousel = document.querySelector(this.getAttribute("target"));

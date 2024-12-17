@@ -36,7 +36,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 280px);
+  grid-template-columns: repeat(auto-fill, 260px);
   column-gap: var(--column-gap-1);
   row-gap: var(--row-gap-2);
   justify-content: center;

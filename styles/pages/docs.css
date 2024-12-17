@@ -10,7 +10,7 @@
   justify-content: space-between;
 
   @media (min-width: 900px) {
-    grid-template-columns: 275px minmax(0, 1fr);
+    grid-template-columns: 275px minmax(0, 1000px);
     grid-template-areas: "sidebar content";
   }
 }

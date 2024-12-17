@@ -5,7 +5,7 @@
   column-gap: var(--margin);
   grid-template-columns: 0 minmax(0, var(--max-width)) 0;
   justify-content: space-between;
-  padding: var(--row-gap-2) 0 var(--row-gap-4);
+  padding: 0 0 var(--row-gap-4);
 
   & > * {
     grid-column: 2;
@@ -15,6 +15,7 @@
 /** Header */
 .landing-header {
   position: relative;
+  padding-top: var(--row-gap-2);
 
   & h1 {
     font: var(--text-display);
@@ -29,9 +30,12 @@
   }
 
   @media (min-width: 1000px) {
+    padding-top: 0;
     display: grid;
     grid-template-columns: minmax(620px, 1fr) 1fr;
-    grid-template-areas: "title fire" "install fire" "companies companies";
+    grid-template-rows: var(--row-gap-2) auto auto auto;
+    grid-template-areas:
+      ". fire" "title fire" "install fire" "companies companies";
     row-gap: var(--row-gap-0);
   }
 }
@@ -43,7 +47,7 @@
   justify-self: center;
 
   @media (min-width: 1000px) {
-    font-size: min(2.5vw, 30px);
+    font-size: min(2.5vw, 40px);
   }
 }
 .landing-header-companies {
@@ -120,12 +124,14 @@
   font: var(--text-caption);
   color: var(--color-foreground-1);
   max-width: 30em;
+  text-wrap: pretty;
 
   & h2 {
     font: var(--text-title);
     color: var(--color-foreground);
     letter-spacing: var(--text-title-spacing);
     margin: 0;
+    text-wrap: balance;
   }
 }
 @media (max-width: 799px) {
@@ -137,7 +143,7 @@
 @media (min-width: 800px) {
   .landing-usage {
     display: grid;
-    grid-template-columns: 275px minmax(0, 800px);
+    grid-template-columns: 350px minmax(0, 950px);
     justify-content: space-between;
     row-gap: var(--row-gap-2);
     column-gap: var(--column-gap-2);
@@ -250,6 +256,8 @@
 /** Testimonials */
 .landing-testimonials {
   grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
   background: radial-gradient(
     circle farthest-side,
     var(--color-background-1) 75%,
@@ -264,6 +272,8 @@
       var(--color-background-1) 75%,
       var(--color-background)
     ) no-repeat;
+    background-size: 1500px 100%;
+    background-position: center;
   }
 
   & h2 {
@@ -277,10 +287,8 @@
   }
 
   & > * {
-    padding-left: var(--margin);
-    padding-right: var(--margin);
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0;
+    grid-column: 2;
   }
 }
 .landing-testimonials-quotes {
@@ -301,7 +309,8 @@
   }
 
   @media (max-width: 700px) {
-    max-width: 500px;
+    width: min(100%, 450px);
+    justify-self: center;
   }
 }
 .landing-testimonials-article,

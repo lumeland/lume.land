@@ -16,13 +16,7 @@ lume-code {
     margin: 0;
     background: var(--color-background-2);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    overflow-x: auto;
     column-gap: 1px;
-
-    & li {
-      margin: 0;
-      white-space: nowrap;
-    }
   }
 
   & .lume-code-menu::before {
@@ -38,6 +32,21 @@ lume-code {
   }
 }
 
+lume-code-menu::part(dropdown-button) {
+  border-radius: 50%;
+  cursor: pointer;
+}
+lume-code-menu::part(dropdown-button):hover {
+  background-color: var(--color-background-1);
+}
+lume-code-menu::part(dropdown-links) {
+  background-color: var(--color-background-2);
+  top: 100%;
+  right: 0;
+  padding: 2px;
+  box-shadow: 0 5px 10px #0003;
+}
+
 .lume-code-tab {
   --background: var(--color-background-2);
   --background-hover: var(--color-background-3);
@@ -47,6 +56,7 @@ lume-code {
   border-radius: 0;
   padding: 10px 1em;
   font: var(--text-caption);
+  text-align: left;
   cursor: pointer;
   transition-property: background-color, color;
   transition-duration: var(--animation-duration);
