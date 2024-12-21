@@ -117,7 +117,7 @@ is converted to:
 In this example, there's no `content` variable and that is fine. The `content`
 variable is only a convention used by formats that can export a nameless
 variable, like the default exports in ES modules or files with front matter and
-a content below.
+content below.
 
 ## Extra variables
 
@@ -138,8 +138,8 @@ The `date` variable can be defined
 [a page variable](../creating-pages/page-data.md#date), etc. Lume will try to
 resolve it, using the file creation date as a fallback.
 
-The `basename` is like the filename. It can be used to change the last part of
-the URL.
+[The `basename`](../creating-pages/urls.md#basename) is like the filename. It
+can be used to change the last part of the URL.
 
 For example, the following markdown file is saved in the
 `posts/2023-11-30_hello-world.md` file:
@@ -162,14 +162,14 @@ This is converted to:
 ## Data inheritance
 
 Once a page is loaded, converted to `Data` and the special variables `url`,
-`date` and `basename` are assigned, it will be merged with other data defined in
+`date` and `basename` are assigned, it's merged with other data defined in
 [`_data` files](../creating-pages/shared-data.md). Components stored in the
 `_components` folders are added to the page under the `comp` variable. Other
 variables defined by plugins like [`search`](../../plugins/search.md) or
 [`paginate`](../../plugins/paginate.md) are added too. So the markdown file:
 
 ```md
-Hello world
+Hello **world**
 ```
 
 Is converted to:
@@ -211,7 +211,7 @@ export default function* () {
 }
 ```
 
-This will generate the three following pages:
+That generates the three following pages:
 
 ```js
 {
@@ -250,10 +250,10 @@ This will generate the three following pages:
 
 ## Preprocessors
 
-If you've defined [a preprocessor](../core/processors.md#preprocess) in your
-`_config` file, will be executed at this point. It allows modification of the
-`Data` object before rendering. The preprocessors receive the `Page` instance
-and you can access the data of the page with the `Page.data` property.
+If you've defined [any preprocessor](../core/processors.md#preprocess) in your
+`_config` file, it's executed at this point. Preprocessors allow modification of
+the `Data` object before rendering. The preprocessors receive the `Page`
+instance and the `Data` object is stored in the `Page.data` property.
 
 ```js
 // _config.js
@@ -268,9 +268,9 @@ site.preprocess([".html"], (pages) => {
 
 ## Rendering
 
-This is the process of rendering the `Data` object (and `Data.content` if it's
-defined) and saving the result in the `page.content` variable. Anything defined
-in the `Data` object is available in the template engine as a variable.
+This is the process of rendering the `Data` object and saving the result in the
+`Page.content` property. Any variable defined in the `Data` object will be
+available in the template engine.
 
 ```vento
 <!-- Render the title variable -->
