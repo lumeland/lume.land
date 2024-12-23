@@ -1,49 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
-  <script type="text/javascript">
-    const root = document.firstElementChild;
-    const mediaQuery = "(prefers-color-scheme: dark)";
-    const mediaMatch = window.matchMedia;
-    const currentMode = mediaMatch(mediaQuery).matches;
-
-    const storeTheme = (targetTheme) => {
-      if ("boolean" === typeof targetTheme) {
-        targetTheme = targetTheme ? "dark" : "light";
-      }
-      root.setAttribute("data-theme", targetTheme);
-      localStorage.setItem("data-theme", targetTheme);
-    };
-
-    const storedTheme = ("data-theme" in localStorage)
-      ? localStorage.getItem("data-theme")
-      : currentMode;
-
-    storedTheme && storeTheme(storedTheme);
-  </script>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Lume</title>
-
     <meta name="color-scheme" content="light dark">
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <script>
+      const root = document.documentElement;
 
+      const mediaQuery = "(prefers-color-scheme: dark)";
+      const mediaMatch = window.matchMedia(mediaQuery);
+
+      const getCurrentMode = () => mediaMatch.matches ? "dark" : "light";
+
+      const storeTheme = (theme) => {
+        const targetTheme = typeof theme === "boolean"
+          ? (theme ? "dark" : "light")
+          : theme;
+        root.setAttribute("data-theme", targetTheme);
+        localStorage.setItem("data-theme", targetTheme);
+      };
+
+      const storedTheme = localStorage.getItem("data-theme") || getCurrentMode();
+      storeTheme(storedTheme);
+
+      mediaMatch.addEventListener("change", (e) => storeTheme(e.matches));
+
+      window.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("switch-theme").addEventListener("click", () => {
+          const currentTheme = localStorage.getItem("data-theme") === "light" ||
+            getComputedStyle(root).getPropertyValue("color-scheme") === "light";
+          storeTheme(!currentTheme);
+        });
+      }, false);
+    </script>
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="canonical" href="{{ url |> url(true) }}">
-    
     {{ if it.page_css }}
       <link rel="stylesheet" href="/styles/pages/{{ page_css }}">
     {{ /if }}
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3.8.2/dist/style.css" integrity="sha256-mMegR8+wGCs9rK2gg5ZlMPiSipjaS2CzJdGoKXvmQf0=" crossorigin="anonymous">
     <script src="/main.js" type="module"></script>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3.2.1/dist/style.css"
-      integrity="sha256-brWyd+lKlaU/B5Lhqd/FUXyZQu4rVmbFRsP2E8S2CLw="
-      crossorigin="anonymous">
+    <link rel="canonical" href="{{ url |> url(true) }}">
   </head>
   <body>
     {{ include "templates/navbar.vto" }}
@@ -52,23 +52,9 @@
     </div>
     {{ include "templates/footer.vto" }}
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.2.1/dist/umd/index.js"
-      integrity="sha256-7XYP2JLQrbyOqBKrAn8sT3l8PG/v2j6C3A5EyBDp9to="
-      crossorigin="anonymous" defer></script>
-      
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.8.2/dist/umd/index.js" integrity="sha256-7XH628BCm5WvlJW3EiICy595nR7Rigf/DwCJS2e+KHA=" crossorigin="anonymous"></script>
+    <script>
       window.addEventListener('DOMContentLoaded', () => {
-        document.getElementById("switch-theme").addEventListener("click", (event) => {
-          const currentTheme =
-            localStorage.getItem("data-theme") == "light" || (getComputedStyle(root).getPropertyValue("color-scheme") == "light");
-          storeTheme(!!currentTheme);
-        });
-
-        mediaMatch(mediaQuery).addEventListener("change", (event) => {
-          storeTheme(event.matches);
-        });
-
         docsearch({
           appId: "O7U42EOTRQ",
           apiKey: "bcb89a19824e0100724bc16011dea6f8",
