@@ -34,7 +34,7 @@ want to generate absolute URLs.
 > If you don't want to use this filter everywhere, you may be interested in the
 > [Base path plugin](./base_path.md).
 
-### Urls from source files
+### URLs from source files
 
 Use the character `~` to use the source file name instead of the final URL. The
 plugin automatically will detect the final URL for you. This is useful for

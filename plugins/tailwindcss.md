@@ -65,7 +65,7 @@ This plugin accepts a configuration object with the available options:
 
 - `options`: Configuration object for Tailwind where you can define themes,
   plugins, etc. See the
-  [Tailwind docs for more info](https://tailwindcss.com/docs/configuration)
+  [Tailwind docs for more info](https://tailwindcss.com/docs/configuration).
 - `extensions`: The file extensions that Tailwind will be analyze to extract the
   css classes. By default is `[".html"]` but you can JavaScript or JSX to
   extract class names from your client-side components.

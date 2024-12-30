@@ -33,15 +33,15 @@ site.copy("assets", ".");
 
 > [!note]
 >
-> Is not possible to copy files outside the `src` directory. For example
+> It is not possible to copy files outside the `src` directory. For example
 > `site.copy("../folder");` is not allowed. There are some reasons for this:
 >
 > - It makes the watcher more complicated because it has to watch different
->   folders
+>   folders.
 > - It's insecure, because it reads files outside of the current directory.
-> - It can breaks the build, because the `src` folder can be changed at any time
+> - It can break the build, because the `src` folder can be changed at any time
 >   (`deno task build --src=other-folder`) which could change the resolution of
->   this folder
+>   this folder.
 
 ## Ignored files
 
@@ -63,7 +63,7 @@ If you need to copy a file starting with `.` or `_`, you have to configure it
 explicitly:
 
 ```js
-// Copy a underscored file
+// Copy an underscored file
 site.copy("_headers");
 ```
 

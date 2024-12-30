@@ -34,7 +34,7 @@ export default site;
 
 ## UI Component
 
-To add the search component in your site, just create a element with the
+To add the search component in your site, just create an element with the
 `search` id. The plugin automatically generate the HTML code to import the
 JavaScript and CSS styles in any page containing this element.
 
