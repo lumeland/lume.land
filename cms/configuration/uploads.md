@@ -8,7 +8,7 @@ Uploads are LumeCMS primitives to configure folders where upload, edit or remove
 files. It allows to explore these files in the interface and even preview the
 content.
 
-To define a upload element in LumeCMS you need 2 things:
+To define an upload element in LumeCMS you need 2 things:
 
 - The upload name. For example: "Images".
 - The storage used to read and write the content.

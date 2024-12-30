@@ -30,7 +30,7 @@ export default site;
 ## Usage
 
 It uses the
-[`Int.Segmenter`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter)
+[`Intl.Segmenter`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter)
 standard function to count the words, using the page variable `lang` to detect
 the language. The data is stored in the variable `readingInfo`, so you can use
 it in your templates in this way:

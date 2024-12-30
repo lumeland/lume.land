@@ -9,7 +9,7 @@ Fortunately, you won't need to do this very often, because many common
 operations that you may want to do are already implemented in Lume in the form
 of [plugins](/plugins/).
 
-Plugins provide a extremely simple interface to configure Lume to perform
+Plugins provide an extremely simple interface to configure Lume to perform
 operations like [transpile JavaScript](../../plugins/esbuild.md),
 [transform images](../../plugins/transform_images.md),
 [generate site maps](../../plugins/sitemap.md), etc. Plugins cover the common

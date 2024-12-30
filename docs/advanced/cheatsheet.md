@@ -101,7 +101,7 @@ const site = lume(
 All available functions to configure the site build:
 
 ```js
-/** Register a event listener */
+/** Register an event listener */
 site.addEventListener(eventType, fn);
 
 /** Register a plugin */

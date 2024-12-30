@@ -108,7 +108,7 @@ Let's create a preprocessor to include a variable with the source filename:
 ```js
 site.preprocess([".html"], (pages) => {
   for (const page of pages) {
-    page.data.filename = page.src.path + page.src.ext,
+    page.data.filename = page.src.path + page.src.ext;
   }
 });
 ```

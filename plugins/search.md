@@ -251,7 +251,7 @@ any directory. For example:
 ## Search files
 
 The function `files()` allows to search any file that will be copied to the
-`dest` folder and returns its URL. It accepts an regular expression or a string
+`dest` folder and returns its URL. It accepts a regular expression or a string
 with a glob expression. For example, to search all CSS files:
 
 ```vento

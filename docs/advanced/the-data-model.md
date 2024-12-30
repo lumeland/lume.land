@@ -128,7 +128,7 @@ automatically 3 variables:
 - `date`: Define the date of the page.
 - `basename`: Define the basename of the page (only in Lume 2).
 
-You can define the `url` as a absolute or relative path or even a function
+You can define the `url` as an absolute or relative path or even a function
 ([see URLs documentation](../creating-pages/urls.md) for more info). Lume will
 resolve this value to a string, and if the url is `false`, the page is ignored.
 

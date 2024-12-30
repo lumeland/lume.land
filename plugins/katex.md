@@ -1,6 +1,6 @@
 ---
-title: Katex
-description: TeX math rendering in html
+title: KaTeX
+description: TeX math rendering in HTML
 mod: plugins/katex.ts
 tags:
   - html
@@ -20,7 +20,7 @@ c = \pm\sqrt{a^2 + b^2}
 ```
 </pre></code>
 
-Or addign the `language-math` directly to the html element containing the code:
+Or adding the `language-math` directly to the HTML element containing the code:
 
 ```html
 <p class="language-math">
