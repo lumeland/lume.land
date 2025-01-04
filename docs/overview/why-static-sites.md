@@ -83,9 +83,10 @@ format for the web due to their lower emissions. According to the
 
 ### No vendor lock-in
 
-Most static site generators have a similar flow: you store your content in a
-format like markdown and they convert the content into web pages. This makes it
-easy to switch from a static site generator to another.
+Most static site generators have a similar flow: you store your content in simple
+formats like markdown files that are converted to web pages. This philosofy of
+[*file over app*](https://stephango.com/file-over-app) makes it easy to switch
+from a static site generator to another.
 
 Lume can be your current site generator, but maybe you want to switch to other
 option in the future like [Astro](https://astro.build/),
