@@ -154,6 +154,28 @@ server.use(redirects({
 }));
 ```
 
+### router
+
+Simple router built with
+[URLPattern](https://developer.mozilla.org/en-US/docs/Web/API/URLPattern)
+standard. The first argument of the router handler function is an object with
+all captured variables in the path, and the `request` instance:
+
+```js
+import Router from "lume/middlewares/router.ts";
+
+const router = new Router();
+
+router.get("/search/:id", ({ id, request }) => {
+  const { searchParams } = new URL(request.url);
+
+  const query = searchParams.get("query");
+  return new Response(`Searching by ${query} in the file ${id}`);
+});
+
+server.use(router.middleware());
+```
+
 ### serve_folder
 
 Middleware to add additional folders to the server. Useful to serve more static
