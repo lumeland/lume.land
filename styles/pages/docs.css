@@ -188,14 +188,6 @@
     color: inherit;
     text-decoration: none;
   }
-  & .header-aside-link {
-    font: var(--text-caption-bold);
-    letter-spacing: var(--text-body-spacing);
-    float: right;
-    display: flex;
-    align-items: center;
-    column-gap: 0.5em;
-  }
   & h2 + h3 {
     margin-top: 0;
   }
