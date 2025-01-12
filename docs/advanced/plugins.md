@@ -25,7 +25,7 @@ const site = lume();
 
 function addBanner(content: string): string {
   const banner = "/* © This code belongs to ACME inc. */";
-  return $banner + "\n" + content;
+  return banner + "\n" + content;
 }
 
 site.process([".css"], (pages) => {
@@ -50,7 +50,7 @@ interface Options {
 export default function (options: Options) {
   function addBanner(content: string): string {
     const banner = `/* ${options.message} */`;
-    return $banner + "\n" + content;
+    return banner + "\n" + content;
   }
 
   return (site: Site) => {
@@ -103,7 +103,7 @@ interface Options {
 export default function (options: Options) {
   function addBanner(content: string): string {
     const banner = `/* ${options.message} */`;
-    return $banner + "\n" + content;
+    return banner + "\n" + content;
   }
 
   return (site: Site) => {
