@@ -108,11 +108,27 @@ declarations.
 
 ## Specifying Subsets
 
-By default, the plugin downloads all available subsets of the font. If you know you won't need certain subsets, you can specify which you _do_ need in your config. Google Fonts shows the subset names in the css it provides, such as [here](https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap) and [here](https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap), and you can specify an array of the subsets you want as follows (shortened for brevity): 
+By default, the plugin downloads all available subsets of the font. If you know
+you won't need certain subsets, you can specify which you _do_ need in your
+config. Google Fonts shows the subset names in the css it provides, such as
+[here](https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap)
+and
+[here](https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap),
+and you can specify an array of the subsets you want as follows (shortened for
+brevity):
 
 ```js
 site.use(googleFonts({
-  subsets: ["latin", "latin-ext","[2]","[3]","[4]",..."[117]","[118]","[119]"],
+  subsets: [
+    "latin",
+    "latin-ext",
+    "[2]",
+    "[3]",
+    "[4]",
+    ..."[117]",
+    "[118]",
+    "[119]",
+  ],
   cssFile: "styles.css",
   placeholder: "/* lume-google-fonts-here */",
   fonts: {
@@ -126,4 +142,7 @@ site.use(googleFonts({
 }));
 ```
 
-Non CJK fonts will typically have subsets like "latin", "latin-ext", "cyrillic" or "vietnamese", whicle CJK fonts like the above-mentioned "Zen Maru Gothic" Japanese font, have many subsets corresponding to the wide range of Unicode characters used in the contained syllabaries and kanji character sets. 
+Non CJK fonts will typically have subsets like "latin", "latin-ext", "cyrillic"
+or "vietnamese", whicle CJK fonts like the above-mentioned "Zen Maru Gothic"
+Japanese font, have many subsets corresponding to the wide range of Unicode
+characters used in the contained syllabaries and kanji character sets.

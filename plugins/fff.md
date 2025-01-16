@@ -39,9 +39,9 @@ The plugin can modify the page data using the
 
 As an example, Lume's [Data model](../docs/advanced/the-data-model.md) uses the
 variable `date` to save the page date. But `date` can have many meanings
-(creation date, last updated date, published date, etc). The FFF standard defines
-three date variables: `created`, `updated` and `published` and it will create
-one of these variables from the `date` variable:
+(creation date, last updated date, published date, etc). The FFF standard
+defines three date variables: `created`, `updated` and `published` and it will
+create one of these variables from the `date` variable:
 
 ```js
 site.use(fff({

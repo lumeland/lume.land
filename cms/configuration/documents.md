@@ -43,6 +43,6 @@ cms.document({
     "title: text",
     "subtitle: text",
     "content: markdown",
-  ]
+  ],
 });
 ```
