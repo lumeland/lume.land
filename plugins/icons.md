@@ -128,7 +128,7 @@ name
 
 ```js
 site.use(icons({
-  catalog: [
+  catalogs: [
     {
       id: "my-library",
       src: "https://my-cdn.com/icons/{name}-{variant}.svg",
