@@ -64,6 +64,24 @@ cms.collection({
 });
 ```
 
+### label
+
+The visible name of this collection in the menu. If it's not defined, the `name`
+value is used.
+
+```ts
+cms.collection({
+  name: "posts",
+  label: "Your posts!"
+  description: "To create, edit or delete the posts of the blog",
+  store: "src:posts/*.md",
+  fields: [
+    "title: text",
+    "content: markdown",
+  ],
+});
+```
+
 ### url
 
 The `url` option allows to set a preview URL of the collection. It's used for
@@ -87,12 +105,15 @@ cms.collection({
 });
 ```
 
-### nameField
+### documentName
 
 To create a new item in the collection, we have to specify the file path (for
 example: `/new-post.md`). This option allows to generate the name automatically
-using the value of a field. For example, we can use the title field to generate
-the file name of the new posts:
+using the value of any field.
+
+Use the syntax `{varname}` in the pattern to use any value to generate the
+filename. For example, we can use the title field to generate the file name of
+the new posts:
 
 ```ts
 cms.collection({
@@ -102,7 +123,7 @@ cms.collection({
     "title: text!",
     "content: markdown",
   ],
-  nameField: "title",
+  documentName: "{title}.md",
 });
 ```
 
@@ -121,8 +142,8 @@ cms.collection({
     "author: text!",
     "content: markdown",
   ],
-  nameField(data) {
-    return `${data.title} - ${data.author}`;
+  documentName(data) {
+    return `${data.title}-${data.author}.md`;
   },
 });
 ```
@@ -131,6 +152,32 @@ cms.collection({
 >
 > It's recommended to configure the fields used to generate the file path as
 > "required", to avoid errors caused by empty values.
+
+### documentLabel
+
+This function customize the document's labels. The label is the visible name of
+every document that is used in the list of documents of the collection.
+
+This is an example to remove the `.md` extension:
+
+```ts
+cms.collection({
+  name: "posts",
+  store: "src:posts/*.md",
+  fields: [
+    "title: text!",
+    "author: text!",
+    "content: markdown",
+  ],
+  documentLabel(name) {
+    return name.replace(".md", "");
+  },
+});
+```
+
+If it's not specified, a default function is used to remove the extension,
+convert hyphens to spaces and apply other small tweaks. For example, the
+document name `/this-is-a-page.md` is converted to the label `This is a page`.
 
 ### create & delete
 

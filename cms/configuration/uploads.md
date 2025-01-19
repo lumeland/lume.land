@@ -22,12 +22,60 @@ cms.upload("images", "src:images");
 In the example above, we have defined the `images` upload folder, pointing to
 the `images` folder in the `src` storage.
 
-You can include a short description that will be visible in the UI with the
-format `name: description`. For example:
+## Extra options
+
+For additional options, use an object like this:
 
 ```ts
-cms.upload(
-  "images: Here you can manage all images of your posts",
-  "src:images",
-);
+cms.upload({
+  name: "images",
+  description: "Here you can manage all images of your posts",
+  store: "src:images",
+});
+```
+
+In addition to `name`, `description` and `store`, uploads have the following
+options:
+
+### label
+
+The visible name of this upload option in the menu. If it's not defined, the
+`name` value is used.
+
+```ts
+cms.upload({
+  name: "images",
+  label: "Posts' images",
+  description: "Here you can manage all images of your posts",
+  store: "src:images",
+});
+```
+
+### publicPath
+
+Used if the public path of the image (once the site is built) is not the same as
+the image in the source folder. For example, if the files are saved in `/assets`
+but they are moved to the root folder:
+
+```ts
+cms.upload({
+  name: "images",
+  store: "src:images",
+  publicPath: "/",
+});
+```
+
+With this configuration, the file `/assets/favicon.ico` will has the public path
+`/favicon.ico`.
+
+### listed
+
+Set to `false` to don't list this upload entry in the CMS homepage.
+
+```ts
+cms.upload({
+  name: "images",
+  store: "src:images",
+  listed: false, // Hide from the main menu.
+});
 ```

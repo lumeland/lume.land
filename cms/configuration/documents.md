@@ -37,7 +37,45 @@ For additional options, use an object like this:
 ```ts
 cms.document({
   name: "landing-page",
+  store: "src:index.yml",
+  fields: [
+    "title: text",
+    "subtitle: text",
+    "content: markdown",
+  ],
+});
+```
+
+In addition to `name`, `store` and `fields`, documents have the following
+options:
+
+### description
+
+It allows to insert a description below the document name:
+
+```ts
+cms.document({
+  name: "landing-page",
   description: "Edit the content of the landing page",
+  store: "src:index.yml",
+  fields: [
+    "title: text",
+    "subtitle: text",
+    "content: markdown",
+  ],
+});
+```
+
+### label
+
+The visible name of this document in the menu. If it's not defined, the `name`
+value is used.
+
+```ts
+cms.document({
+  name: "landing-page",
+  label: "This is your homepage",
+  description: "Edit the content of the home page",
   store: "src:index.yml",
   fields: [
     "title: text",
