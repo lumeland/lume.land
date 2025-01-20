@@ -57,7 +57,7 @@ plugins:
 
   - title: Kroki Plugin for Lume
     description: Transform textual descriptions within code blocks into diagrams using Kroki.
-    url: https://code.fosterhangdaan.com/foster/lume-plugin-kroki
+    url: https://code.hangdaan.com/foster/lume-plugin-kroki
 
   - title: Lume duck
     description: Plugin to use DuckDB data in Lume
