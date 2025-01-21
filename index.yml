@@ -401,6 +401,12 @@ support:
 testimonials:
   title: What people say?
   quotes:
+    - url: https://x.com/kamilogorek/status/1881632439388532799
+      author: Kamil Ogórek (@kamilogorek)
+      avatar: /img/avatars/testimonials/kamilogorek.webp
+      date: January 21, 2024
+      text: It's been a long time since I found something that'd bring me so much joy to work with as <a href="https://t.co/cFid8CTRYh">lume.land</a> by <a href="https://twitter.com/misteroom">@misteroom</a>. What a marvelous piece of software. Everything just works, all commonly used scenarios are covered, and whole documentation is just on point. Love it.
+
     - url: https://twitter.com/deno_land/status/1810751631707029829
       author: Deno (@deno_land)
       avatar: /img/avatars/testimonials/deno.webp
