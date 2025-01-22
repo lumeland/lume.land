@@ -32,9 +32,21 @@ export default site;
 
 This plugin accepts a configuration object. The available options are:
 
-- `extensions`: Array with the extensions of the files that will be minified. By
+- `extensions`: An array with the extensions of the files that will be minified. By
   default it is `[".html"]`, but you can include also `.css` and `.js` to minify
   these files.
-- `options`: The available options for `minify-html`. See
-  [the documentation](https://doc.deno.land/https://deno.land/x/lume/deps/minify_html.ts/~/Options)
-  for more info.
+- `options`: An object with the available options for `minify-html`.
+
+For example: 
+
+```js
+site.use(minifyHTML({
+  extensions: [".html", ".js"],
+  options: {
+    minify_js: true,
+    keep_spaces_between_attributes: true,
+    keep_closing_tags: true,
+    keep_html_and_head_opening_tags: true,
+  },
+}));
+```
