@@ -41,7 +41,7 @@ const site = lume();
 
 site.use(remark({
   remarkPlugins: [a11yEmoji],
-  rehypePlugins: [rehypeRemoveComments],
+  rehypePlugins: [[rehypeRemoveComments, { removeConditional: true }]],
 }));
 
 export default site;
