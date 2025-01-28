@@ -32,12 +32,12 @@ export default site;
 
 This plugin accepts a configuration object. The available options are:
 
-- `extensions`: An array with the extensions of the files that will be minified. By
-  default it is `[".html"]`, but you can include also `.css` and `.js` to minify
-  these files.
+- `extensions`: An array with the extensions of the files that will be minified.
+  By default it is `[".html"]`, but you can include also `.css` and `.js` to
+  minify these files.
 - `options`: An object with the available options for `minify-html`.
 
-For example: 
+For example:
 
 ```js
 site.use(minifyHTML({

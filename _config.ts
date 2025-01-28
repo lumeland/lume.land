@@ -84,6 +84,19 @@ site
   .remoteFile(
     "scripts/components/lume_menu.js",
     "https://cdn.jsdelivr.net/npm/@oom/horizontal-menu@0.1.0/src/menu.js",
+  )
+  .remoteFile(
+    "static/docsearch/index.js",
+    "https://cdn.jsdelivr.net/npm/@docsearch/js@3.8.2/dist/umd/index.js",
+  )
+  .remoteFile(
+    "static/docsearch/style.css",
+    "https://cdn.jsdelivr.net/npm/@docsearch/css@3.8.2/dist/style.css",
+  )
+  .copy("img/contrib.svg")
+  .remoteFile(
+    "img/contrib.svg",
+    "https://contrib.rocks/image?repo=lumeland/lume",
   );
 
 site.data("scheme", async (mod: string) => {
