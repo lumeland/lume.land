@@ -411,7 +411,7 @@ testimonials:
       author: Deno (@deno_land)
       avatar: /img/avatars/testimonials/deno.webp
       date: July 9, 2024
-      text: we improved our core web vitals drastically with one simple trick💡️<br><br>not using client-side rendering<br><br>(we moved our docs from docusaurus to <a href="https://lume.land">lume.land</a>) <img src="/img/covers/core_web_vitals.webp">
+      text: we improved our core web vitals drastically with one simple trick💡️<br><br>not using client-side rendering<br><br>(we moved our docs from docusaurus to <a href="https://lume.land">lume.land</a>) <img src="/img/covers/core_web_vitals.webp" width="480" height="270" alt="Chart showing how all urls are now good">
 
     - url: https://open-innovations.org/blog/2024-07-05-building-the-general-election-hexmaps
       author: Giles Dring
