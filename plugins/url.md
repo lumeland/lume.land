@@ -73,3 +73,11 @@ text: 'Go to <a href="/">Homepage</a>'
 ---
 <div>{{ text | htmlUrl | safe }}</div>
 ```
+
+## Example
+
+As a good SEO practice, you can consider adding a canonical URL to your `<head>` section (e.g. in a `base.vto` template) like this: 
+
+```vento
+<link rel="canonical" href="{{ url |> url(true) }}">
+```
