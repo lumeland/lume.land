@@ -301,12 +301,6 @@ sites:
     description: A personal portfolio website of Achraf Garai
     code: https://github.com/AchrafGarai/Portfolio
 
-  - title: OAK Studio
-    img: /img/showcase/oak.webp
-    url: https://oakstudio.co/
-    description: A creative agency based in Bartlesville, Oklahoma
-    code: https://github.com/bradeneast/oakstudio.co
-
   - title: Badger
     img: /img/showcase/getbadger.webp
     url: https://getbadger.io/
