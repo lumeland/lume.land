@@ -24,7 +24,7 @@ const site = lume(
     includes: "_includes",
 
     /** The site location (used to generate final urls) */
-    location: new URL("https://localhost:3000"),
+    location: new URL("http://localhost"),
 
     /** Set true to generate pretty urls (`/about-me/`) */
     prettyUrls: true,
