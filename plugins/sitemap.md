@@ -51,6 +51,16 @@ site.use(sitemap({
 To define the URL, it uses the location defined in the
 [config file](../docs/configuration/config-file.md#location).
 
+In addition to setting `indexable=true`, you can update the `query` option to also exclude certain paths, for example a custom admin path you have set for decapCMS:
+
+```js
+query: "indexable=true url!=/ABC123/"  
+```
+
+> [!important]
+> 
+> The query url search is case-sensitive, so be sure to confirm the case of the URL when you specify it.
+
 ### lastmod value
 
 By default, the plugin uses the value of the `date` variable for `lastmod`. This
