@@ -51,6 +51,6 @@ Go to configuration section to learn how to configure LumeCMS with
 ## Run in localhost
 
 Run `deno task lume cms` to run the CMS in localhost (or `lume cms` if you're on
-Lume CLI). Lume automatically detects the `_cms.ts` configuration, build your
-site and connect it to the CMS. Now, you can edit the content in the CMS and
+Lume CLI). Lume automatically detects the `_cms.ts` configuration, builds your
+site and connects it to the CMS. Now, you can edit the content in the CMS and
 preview the results in your site in real time.
