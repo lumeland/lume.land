@@ -43,10 +43,20 @@ and sorted by URL. You can setup a different configuration:
 ```js
 site.use(sitemap({
   filename: "my-sitemap.xml", // to change the sitemap filename
-  query: "indexable=true", // Select only pages with the indexable attribute as true
+  query: "", // empty by default. You can use a query to filter some pages
   sort: "date=desc", // To sort by data in ascendent order
 }));
 ```
+
+To filter pages with the query, take a look at the [search plugin](./search.md) documentation, but here are some examples:
+
+- `indexable=true` To include only pages with the value `indexable` as true.
+- `!url^=/super-secret/` To include all pages but those URLs that start with `/super-secret/`
+- `indexable=true !url^=/super-secret/` A combination of both
+
+> [!important]
+> 
+> The query url search is case-sensitive, so be sure to confirm the case of any URL when you specify it.
 
 To define the URL, it uses the location defined in the
 [config file](../docs/configuration/config-file.md#location).
