@@ -132,6 +132,10 @@
     &.is-color-mediumpurple {
       --background: mediumpurple;
     }
+    &.is-color-rebeccapurple {
+      --background: rebeccapurple;
+      --color: white;
+    }
   }
 }
 
@@ -178,6 +182,11 @@
   &.is-color-mediumpurple {
     --background-active: mediumpurple;
     --accent: mediumpurple;
+  }
+  &.is-color-rebeccapurple {
+    --color-active: white;
+    --background-active: rebeccapurple;
+    --accent: rebeccapurple;
   }
 }
 

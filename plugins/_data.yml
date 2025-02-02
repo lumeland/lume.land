@@ -18,13 +18,16 @@ tags_info:
     color: gold
   styles:
     name: Styles
-    color: lightskyblue
+    color: rebeccapurple
   optimization:
     name: Optimization
     color: mediumseagreen
   urls:
     name: URLs
     color: pink
+  middleware:
+    name: Middleware
+    color: lightskyblue
   nav:
     name: Navigation
     color: mediumpurple

@@ -9,7 +9,7 @@ to start your own server, for example, to serve the static files in **Deno
 Deploy**. Let's see a basic example of a server:
 
 ```ts
-import Server from "https:/deno.land/x/lume/core/server.ts";
+import Server from "lume/core/server.ts";
 
 const server = new Server({
   port: 8000,
@@ -57,170 +57,15 @@ magic here.
 Lume provides some middlewares for common use cases:
 
 ```ts
-import Server from "https:/deno.land/x/lume/core/server.ts";
-import expires from "https:/deno.land/x/lume/middlewares/expires.ts";
+import Server from "lume/core/server.ts";
+import expires from "lume/middlewares/expires.ts";
 
-const server = new Server({
-  port: 8000,
-  root: `${Deno.cwd()}/_site`,
-});
+const server = new Server();
 
 server.use(expires());
 
 server.start();
-
-console.log("Listening on http://localhost:8000");
 ```
 
-### basic_auth
-
-Implements the
-[basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication)
-method to access to the site:
-
-```js
-server.use(basicAuth({
-  users: {
-    "user": "password",
-  },
-}));
-```
-
-### cache_busting
-
-Cache busting is a way to tell the browser that some static files like CSS
-styles or JavaScript code have changed, in order to use the new version instead
-of the locally cached version. It consists of including the number version in
-the file path. For example `/styles.css` becomes `/v234/styles.css`.
-[More info](https://www.keycdn.com/support/what-is-cache-busting).
-
-This middleware implements cache busting, so all requests with paths starting
-with `/v{numbers}` will remove this part so the real file will be served.
-
-### expires
-
-It's a middleware to include the `Expires` header in the response for better
-caching. See the
-[available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/expires.ts/~/Options).
-
-### logger
-
-To show in the console the HTTP requests/responses served. It's used by Lume in
-the `--serve` mode.
-
-### no_cache
-
-Modify the responses to disable the browser cache. It's used by Lume in the
-`--serve` mode.
-
-### not_found
-
-To show a not-found page on 404 errors. Optionally it can create a
-directoryIndex for folders. It's used by Lume in the `--serve` mode. See the
-[available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/not_found.ts/~/Options).
-
-### on_demand
-
-To build and serve dynamic pages on demand. See the
-[available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/on_demand.ts/~/Options).
-
-### precompress
-
-To serve precompressed files (in Brotli or Gzip). For example, `index.html.br`
-or `index.html.gz` instead of `index.html`. See
-[Brotli](../../plugins/brotli.md) and [Gzip](../../plugins/gzip.md) plugins to
-know how to create the precompressed files.
-
-See the
-[available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/precompress.ts/~/Options).
-
-### redirects
-
-Middleware to configure a list of redirects of some paths. Example:
-
-```js
-server.use(redirects({
-  redirects: {
-    "/from/": "/to/",
-    "/from2/": "/to2/",
-
-    // Use an object to configure the status code. (301 by default)
-    "/from3/": {
-      to: "/to2/",
-      code: 302,
-    },
-  },
-  strict: false, // configure whether distinguish the trailing slash or not (true by default)
-}));
-```
-
-### router
-
-Simple router built with
-[URLPattern](https://developer.mozilla.org/en-US/docs/Web/API/URLPattern)
-standard. The first argument of the router handler function is an object with
-all captured variables in the path, and the `request` instance:
-
-```js
-import Router from "lume/middlewares/router.ts";
-
-const router = new Router();
-
-router.get("/search/:id", ({ id, request }) => {
-  const { searchParams } = new URL(request.url);
-
-  const query = searchParams.get("query");
-  return new Response(`Searching by ${query} in the file ${id}`);
-});
-
-server.use(router.middleware());
-```
-
-### serve_folder
-
-Middleware to add additional folders to the server. Useful to serve more static
-files stored in a different place.
-
-```js
-server.use(serve_folder({
-  root: "./other-folder",
-}));
-
-// Serve the files in this folder only if they don't exist in the main folder.
-server.use(serve_folder({
-  root: "./fallback-files",
-  after: true,
-}));
-```
-
-### reload
-
-To implement a live-reload in the browser after file changes. It's used by Lume
-in the `--serve` mode. See the
-[available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/reload.ts/~/Options).
-
-### shutdown
-
-Useful to show a page while your site is shut down. All request to HTML pages
-returns the content of the `/503.html` file and the `503` status code. It also
-sends the `Retry-After` header.
-
-```js
-server.use(shutdown({
-  page: "/maintenance.html", // The page to show. /503.html by default.
-  retryAfter: 60 * 60, // The Retry-After header content in seconds. 24 hours by default.
-}));
-```
-
-### www
-
-This middleware redirects from `www.` domains to non-www domain (or vice versa).
-
-```js
-server.use(www({
-  add: false, // false to remove, true to add it.
-}));
-```
-
-See the
-[available options in Deno Doc](https://doc.deno.land/https://deno.land/x/lume/middlewares/www.ts/~/Options).
+Go to [Plugins/middleware](/plugins/?status=all&middleware=on) for a list of all
+middlewares provided by Lume.
