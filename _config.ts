@@ -106,10 +106,10 @@ site.data("scheme", async (mod: string) => {
 
   try {
     const url = import.meta.resolve(`lume/${mod}`);
-    const { defaults } = await import(url);
+    const imported = await import(url);
     const { Options } = await analyze(url, { maxDepth: 2, private: false });
 
-    mergeDefaults(Options, defaults);
+    mergeDefaults(Options, imported.defaults ?? {});
     return Options.children;
   } catch (error) {
     console.log(`Error generating the documentation for ${mod}`);
