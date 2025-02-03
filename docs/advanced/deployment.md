@@ -225,7 +225,7 @@ file in your repository with the following code:
 ## Cloudflare Pages
 
 To deploy your Lume site with [Cloudflare Pages](https://pages.cloudflare.com/),
-configure the build command as follow:
+configure the build command as follows:
 
 ```sh
 curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno task build
@@ -236,7 +236,7 @@ Remember to configure the output directory to `_site`.
 ## Render
 
 To deploy your Lume site with [Render](https://render.com/), create a new
-_Static Site_ project and configure the build command as follow:
+_Static Site_ project and configure the build command as follows:
 
 ```sh
 curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/render/.deno/bin/deno task build
