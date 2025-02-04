@@ -33,8 +33,8 @@ $5/month in Digital Ocean, Hetzner, etc.
 
 ### Portability
 
-Deploying a static site can't be easier. Due they are only static files, you
-only have to upload these files to the server, using `git`, `rsync`, `ftp`, or
+Deploying a static site couldn't be easier. Because they are static files, you
+only have to upload these files to the server using `git`, `rsync`, `ftp`, or
 your favorite tool. It's even possible to compress a static site into a zip file
 and send it by email or messaging!
 
@@ -85,10 +85,10 @@ format for the web due to their lower emissions. According to the
 
 Most static site generators have a similar flow: you store your content in
 simple formats like markdown files that are converted to web pages. This
-philosofy of [_file over app_](https://stephango.com/file-over-app) makes it
-easy to switch from a static site generator to another.
+philosophy of [_file over app_](https://stephango.com/file-over-app) makes it
+easy to switch from one static site generator to another.
 
-Lume can be your current site generator, but maybe you want to switch to other
+Lume can be your current site generator, but maybe you want to switch to another
 option in the future like [Astro](https://astro.build/),
 [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/),
 [Eleventy](https://www.11ty.dev/) or
@@ -118,8 +118,8 @@ a good search engine on your static site. There are some options:
 
   ```html
   <form role="search" action="https://duckduckgo.com" method="GET">
-    <label>Search in lume.land <input type="search" name="q"></label>
-    <input type="hidden" name="sites" value="lume.land">
+    <label>Search in lume.land <input type="search" name="q" /></label>
+    <input type="hidden" name="sites" value="lume.land" />
     <button>Search</button>
   </form>
   ```
@@ -156,7 +156,7 @@ simple tools like [Google Forms](https://docs.google.com/forms/) or
 
 ### CMS
 
-One of the main issues of static sites was they are not easy to update by
+In the past, one of the main issues of static sites was that they were not easy to update by
 non-technical people. Fortunately, this is not true anymore. There are plenty of
 CMS for static sites, some recommendations:
 
