@@ -40,7 +40,7 @@ export default site;
 > 
 > site.use(basePath()); // modify url must be before
 > site.use(multilanguage({
-    languages: ["en", "gl", "es"],
+>   languages: ["en", "gl", "es"],
 > }));
 > 
 > export default site;
