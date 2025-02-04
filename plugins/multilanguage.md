@@ -28,23 +28,23 @@ site.use(multilanguage({
 export default site;
 ```
 
-Due to the
-[automatic alternate links generating](#automatic-rel%3Dalternate-links), the
-plugin must be registered after all URL modifiers to work probably.
-
-```js
-import lume from "lume/mod.ts";
-import basePath from "lume/plugins/base_path.ts";
-import multilanguage from "lume/plugins/multilanguage.ts";
-
-site.use(basePath()); // modify url
-site.use(multilanguage({
-  languages: ["en", "gl", "es"],
-}));
-// site.use(basePath()); // this modification will not be applied
-
-export default site;
-```
+> [!important]
+> 
+> To work properly, this plugin must be registered after other plugins that
+> modify the URLs of the pages (for example, [`basePath`](./base_path.md):
+>
+> ```js
+> import lume from "lume/mod.ts";
+> import basePath from "lume/plugins/base_path.ts";
+> import multilanguage from "lume/plugins/multilanguage.ts";
+> 
+> site.use(basePath()); // modify url must be before
+> site.use(multilanguage({
+    languages: ["en", "gl", "es"],
+> }));
+> 
+> export default site;
+> ```
 
 ## Create pages in multiple languages
 
