@@ -118,8 +118,8 @@ a good search engine on your static site. There are some options:
 
   ```html
   <form role="search" action="https://duckduckgo.com" method="GET">
-    <label>Search in lume.land <input type="search" name="q" /></label>
-    <input type="hidden" name="sites" value="lume.land" />
+    <label>Search in lume.land <input type="search" name="q"></label>
+    <input type="hidden" name="sites" value="lume.land">
     <button>Search</button>
   </form>
   ```
