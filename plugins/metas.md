@@ -8,11 +8,11 @@ tags:
 
 ## Description
 
-This plugin generates `<meta>` tags in your HTML pages for Open graph, Twitter
+This plugin generates `<meta>` tags in your HTML pages for Open Graph, Twitter
 cards, Schema.org, and SEO purposes. The data must be defined in the `metas`
 keyword of every page and the supported values are:
 
-- `type`: The page type (by default is `website`).
+- `type`: The page type (the default is `website`).
 - `site`: The name of the site.
 - `title`: The title of the page, article, post, etc.
 - `lang`: The language of the page.
@@ -22,7 +22,7 @@ keyword of every page and the supported values are:
 - `keywords`: An array of keywords.
 - `twitter`: The twitter username.
 - `fediverse`: The fediverse handler
-  [for author atribution](https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/).
+  [for author attribution](https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/).
 - `color`: The color theme of the website. It can be a string with a single
   color (like `#fff`) or an array of two colors for light and dark mode (i.e.
   `["white", "black"]`).
@@ -135,7 +135,7 @@ metas:
   description: "=intro.text"
 ```
 
-As of Lume 1.17.0 is possible to use CSS selectors using the `$` prefix:
+As of Lume 1.17.0, it is possible to use CSS selectors using the `$` prefix:
 
 ```yml
 metas:
@@ -143,7 +143,7 @@ metas:
   image: "$ img.cover attr(src)" # Use the src attribute of img.cover element
 ```
 
-As of Lume 2.4.0 is possible to use different fallbacks separated with `||`:
+As of Lume 2.4.0, it is possible to use different fallbacks separated with `||`:
 
 ```yml
 metas:
