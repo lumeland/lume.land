@@ -99,7 +99,7 @@ language.
 ### Automatic rel=alternate links
 
 Because this plugin detects the different language version for every page, it
-inserts automatically the
+automatically inserts the
 `<link rel="alternate" hreflang="{lang}" href="{url}" />` elements in each
 pages. For example:
 
@@ -124,8 +124,8 @@ pages. For example:
 
 ### Create a language switcher menu
 
-The plugin also exposes the `alternates` variable, that you can use to build a
-menu to change the language of the current page. This is an example in Vento:
+The plugin also exposes the `alternates` variable that you can use to build a
+menu to change the language of the current page. Here’s an example in Vento:
 
 <lume-code>
 
@@ -196,20 +196,20 @@ id: about
 
 ### Sitemap
 
-The [Sitemap plugin](./sitemap.md) is compatible with this plugin, so the
+The [Sitemap plugin](./sitemap.md) is compatible with this plugin, which means the
 generated sitemap will contain the translated versions of the pages.
 
 ### x-default links
 
 This plugin supports the
 [`x-default` value for unmatches languages](https://developers.google.com/search/docs/specialty/international/localized-versions#xdefault).
-This option is useful to specify a fallback page for users whose language
+This option is useful when you need to specify a fallback page for users whose language
 settings don't match any of your site's localized version.
 
 - You can link to a language selector page.
 - Or to any of the translated version of the current page.
 
-To generate a `x-default` link, create the `unmatchedLangUrl` value in your
+To generate a `x-default` link, set a value for `unmatchedLangUrl` in your
 front matter:
 
 ```yml
@@ -247,7 +247,7 @@ es:
 ```
 
 The variable `site_name` has a different value for the languages `gl` and `es`.
-Any variable stored inside a variable named like one of the available languages,
+Any variable stored inside a variable named like one of the available languages
 is considered a translation. We can use the `site_name` variable in our pages
 and the value will be different depending on the page's language:
 
@@ -299,7 +299,7 @@ es:
 ## Multilanguage pages from a single file
 
 With this plugin it's possible to export the same page multiple times, once per
-language. To configure a page as multilanguage, just set in the `lang` variable
+language. To configure a page as multilanguage, just set the `lang` variable
 to an array with the available languages. For example:
 
 <lume-code>
@@ -349,12 +349,11 @@ es:
 
 > [!warning]
 >
-> This only works at page level.
+> This only works at the page level.
 
 ## Multilanguage + pagination
 
-If your site is using the [paginate plugin](./paginate.md), this is an example
-showing how to apply multilanguage:
+Here’s an example on how to add multilanguage support to your site if you’re using the [paginate plugin](./paginate.md):
 
 <lume-code>
 
