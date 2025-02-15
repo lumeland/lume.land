@@ -1,6 +1,6 @@
 ---
 title: Not found
-description: Middleware to show the a custom page on 404 errors.
+description: Middleware to show a custom page on 404 errors.
 mod: middlewares/not_found.ts
 tags:
   - middleware
@@ -8,12 +8,12 @@ tags:
 
 ## Description
 
-This middleware shows a not-found page on 404 errors. Optionally it can create a
-directoryIndex for folders.
+This middleware shows a not-found page on 404 errors. Optionally, it can create a
+`directoryIndex` for folders.
 
 ## Installation
 
-This middeware must be used with the
+This middleware must be used with
 [Lume's HTTP Server](../docs/core/server.md). To use it in production, you need
 a host running a Deno server, like [Deno Deploy](https://deno.com/deploy).
 
@@ -34,5 +34,5 @@ server.start();
 
 ### Local development
 
-This middleware is used by default by Lume in the `--serve` mode with the
+This middleware is used by default by Lume in [`--serve`](../docs/overview/command-line/#start-a-local-server) mode with the
 [value of the `page404` option](../docs/configuration/config-file.md#page404).
