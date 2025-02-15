@@ -436,3 +436,9 @@ sites:
     url: https://en.neumann.tokyo
     description: The corporate website of GK Neumann in Japan
     code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
+
+  - title: Masashi Kawafuji
+    img: /img/showcase/masashikawafuji.webp
+    url: https://kawafuji.dev/
+    description: The personal blog of Masashi Kawafuji
+    code: https://github.com/m-kawafuji/kawafuji.dev
