@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Masashi Kawafuji
+    img: /img/showcase/masashikawafuji.webp
+    url: https://kawafuji.dev/
+    description: The personal blog of Masashi Kawafuji
+    code: https://github.com/m-kawafuji/kawafuji.dev
+
   - title: Rubén Prol
     img: /img/showcase/rubenprol.webp
     url: https://rubenprol.gal/
@@ -436,9 +442,3 @@ sites:
     url: https://en.neumann.tokyo
     description: The corporate website of GK Neumann in Japan
     code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
-
-  - title: Masashi Kawafuji
-    img: /img/showcase/masashikawafuji.webp
-    url: https://kawafuji.dev/
-    description: The personal blog of Masashi Kawafuji
-    code: https://github.com/m-kawafuji/kawafuji.dev
