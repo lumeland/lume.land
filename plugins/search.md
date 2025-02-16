@@ -16,10 +16,12 @@ useful to build menus or other navigation stuff.
 
 This plugin is installed by default. 🎉
 
-## Searching pages
+## Search pages
 
 The function `search.pages()` returns an array of pages that you can filter and
 sort.
+
+### Search by tags
 
 To search by tags, just include the tag names as the first argument, separated
 by spaces. For example, to search all pages containing the tags `post` and
@@ -55,7 +57,7 @@ For example, to search pages with the tag "post" not containing the tag "html":
 </ul>
 ```
 
-## Sort pages
+### Sort the results
 
 The second argument is the value used to sort. By default, the pages are sorted
 by `date`, but you can use any field. For example, if you want to sort by title:
@@ -127,6 +129,16 @@ the query `menu=true`:
 
 ```vento
 {{ for option of search.pages("menu=true") }}
+<a href="{{ option.url }}">
+  {{ option.title }}
+</a>
+{{ /for }}
+```
+
+Another common example is to list all pages from a directory:
+
+```vento
+{{ for option of search.pages("url^=/blog/") }}
 <a href="{{ option.url }}">
   {{ option.title }}
 </a>
@@ -238,7 +250,7 @@ Use the second argument to filter the pages to get the values. For example, to
 get the authors of pages in the category `sport`:
 `search.values("author", "category=sport")`.
 
-## Searching data
+## Search data
 
 The function `data` returns the data associated with any file or directory in
 the source directory. This is useful to get the data stored in any `_data` of
