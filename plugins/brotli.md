@@ -6,11 +6,11 @@ tags:
   - optimization
 ---
 
-Brotli is a lossless data compression algorithm developed by Google and primary
+Brotli is a lossless data compression algorithm developed by Google and primarily
 used by web servers and CDNs to compress the HTTP content. It's used as an
 alternative to gzip on the web as it provides better overall compression.
 
-This plugin creates a precompressed version of your files, for example, in
+This plugin creates a precompressed version of your files. For example, in
 addition to `/index.html`, it creates a compressed version at `/index.html.br`.
 
 ## Installation
@@ -28,22 +28,24 @@ site.use(brotli());
 export default site;
 ```
 
-By default only some text-based formats like `.html`, `.css`, `.js`, `.svg`,
+By default, only some text-based formats like `.html`, `.css`, `.js`, `.svg`,
 `.json`, etc are compressed. Binary files like images or videos are not
 compressed because most of them have their own compression. Use the `extensions`
 option to configure which extensions do you want to compress:
 
 ```js
-site.use(brotli({
-  extensions: [".html", ".css"],
-}));
+site.use(
+  brotli({
+    extensions: [".html", ".css"],
+  }),
+);
 ```
 
 ## How to serve precompressed files
 
 If you're on Deno Deploy, you can use the
-[precompress](../docs/core/server.md#precompress) middleware that automatically
-will serve the `.br` version if it's available and the browser supports it.
+[precompress](../plugins/brotli.md) middleware that will automatically
+serve the `.br` version if it's available and the browser supports it.
 
 Many other web servers have the option to serve precompressed files, for example
 [Caddy](https://caddyserver.com/docs/caddyfile/directives/file_server#precompressed),
