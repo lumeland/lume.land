@@ -125,7 +125,7 @@ usage:
 
       </lume-code>
 
-  - title: Store the data in your favorite format
+  - title: Store data in any format
     description: |
       Store your data using static formats like JSON or YAML. Use JavaScript or TypeScript to get the data from a Database or API.
     code: |
@@ -258,7 +258,7 @@ features:
 
   - title: Deploy anywhere
     img: /img/deploy.svg
-    description: Static sites can be hosted (for free) anywhere GitHub/GitLab Pages, Deno Deploy, Vercel, Netlify… [Explore ways to deploy](/docs/advanced/deployment.md)
+    description: Static sites can be hosted (for free) anywhere. GitHub/GitLab Pages, Deno Deploy, Vercel, Netlify… [Explore ways to deploy](/docs/advanced/deployment.md)
 
   - title: Easy to extend
     img: /img/extend.svg
@@ -391,15 +391,15 @@ support:
   contribute:
     title: How to contribute?
     description: |
-      - Star the [repo in GitHub](https://github.com/lumeland/lume) or vote in [Product Hunt](https://www.producthunt.com/posts/lume-2).
+      - Star the [repo on GitHub](https://github.com/lumeland/lume) or vote on [Product Hunt](https://www.producthunt.com/posts/lume-2).
       - Support this project by [sponsoring its creator](https://github.com/sponsors/oscarotero) or [the project](https://opencollective.com/lume).
       - Fork the repo and [contribute](https://github.com/lumeland/lume/graphs/contributors) fixing bugs or adding new features.
-      - Help to [improve the docs](https://github.com/lumeland/lume.land).
-      - Spread to the world your love for Lume in a tweet, post or any kind of publication (and let me know, [so I can include it in this page](#testimonials))
-      - Get help and propose ideas [at Discord](https://discord.gg/YbTmpACHWB).
+      - Help us [improve the docs](https://github.com/lumeland/lume.land).
+      - Spread your love for Lume in a tweet, post or any kind of publication (and let us know, [so I can include it in this page](#testimonials))
+      - Get help and propose ideas [on Discord](https://discord.gg/YbTmpACHWB).
 
 testimonials:
-  title: What people say?
+  title: What do people say about Lume?
   quotes:
     - url: https://x.com/kamilogorek/status/1881632439388532799
       author: Kamil Ogórek (@kamilogorek)
