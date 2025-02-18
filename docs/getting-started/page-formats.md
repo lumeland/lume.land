@@ -5,15 +5,15 @@ order: 6
 ---
 
 We have seen how to create pages from Markdown files in Lume. This is a
-convenient way for text-based sites like blogs or documentation. But you may
-want to create a complex page with small texts, images, videos, animations, etc.
+convenient format for text-based sites like blogs or documentation, but you may
+want to create a complex page with small text, images, videos, animations, etc.
 Every page has its own format.
 
 ## Create pages with Vento
 
 Vento, the format we have used to create layouts in the previous examples, can
-also be used to create pages directly. You only have to create a file with the
-`.vto` extension. For example:
+also be used to create pages directly. You simply create a file with the `.vto`
+extension. For example:
 
 <lume-code>
 
@@ -47,18 +47,18 @@ links:
 
 </lume-code>
 
-This is an example of a page using Vento. Like markdown, it can contain a front
-matter to store the page data, that is used to render the Vento code. Note that
-it has the `layout` variable so the result of rendering this page will be passed
-to the layout in the `content` variable (along with the other variables `title`
-and `links`).
+This is an example of a page using Vento. Like markdown, it can contain front
+matter to store the page data, which is used to render the Vento code. Note that
+it has the `layout` variable, so the result of rendering this page will be
+passed to the layout in the `content` variable (along with the other variables
+`title` and `links`).
 
-## Create pages in JavaScript
+## Create pages with JavaScript
 
 JavaScript can be useful for complex pages requiring some logic before
 rendering. You have to create a file with the extension `.page.js`. The `.page`
-sub-extension is required to distinguish the JavaScript files to generate static
-pages from other JavaScript files destined to the executed in the browser.
+sub-extension is required to distinguish JavaScript files that generate static
+pages from other JavaScript files destined to be run in the browser.
 
 The previous Vento example in JavaScript is:
 
@@ -111,12 +111,12 @@ Lume supports several formats to generate pages.
 [Go to the Plugins section](/plugins/?status=all&data_format=on&template_engine=on)
 to see more info about all available formats. Some of them are installed by
 default (like [Vento](/plugins/vento.md), [YAML](/plugins/yaml.md),
-[Modules](/plugins/modules.md) etc) and others need to be installed in your
+[Modules](/plugins/modules.md) etc), and others need to be installed in your
 `_config.ts` file (like [Nunjucks](/plugins/nunjucks.md),
-[Eta](/plugins/eta.md), [JSX](/plugins/jsx.md), [Liquid](/plugins/liquid.md) or
+[Eta](/plugins/eta.md), [JSX](/plugins/jsx.md), [Liquid](/plugins/liquid.md), or
 [Pug](/plugins/pug.md)).
 
 ## Data model
 
-If you want to better understand how Lume load the pages, go to
+If you want to better understand how Lume loads pages, go to the
 [`Data` model](../advanced/the-data-model.md) page.

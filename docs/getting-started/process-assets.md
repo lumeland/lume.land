@@ -8,18 +8,18 @@ In [the previous step,](./working-with-assets.md) we learned how to copy files
 to the `_site` folder. We also said that Lume has two ways of working with
 assets and copying them is the easiest.
 
-Copy files is not only the easiest way but also the fastest because Lume doesn't
-need to load the content of the files in memory. It only copies the files to the
-`_site` folder which is a fast operation.
+Copying files is not only the easiest way, but also the fastest since Lume
+doesn't need to load the content of the files in memory. It only copies the
+files to the `_site` folder, which is a fast operation.
 
 The other way to handle assets is by loading them. This is useful if you want to
-modify the content somehow. A typical use case is if we want to transpile the
-content (like loading SASS files and converting them to CSS) or minify them.
+modify the content somehow, such as transpiling (like loading SASS files and
+converting them to CSS) or minifying them.
 
-This is a bit more complex operation because we need to configure Lume to load
-these files (so they will be stored in memory) and tell Lume what we want to do
-with this content once it's loaded. Lume has two functions to do that:
-`loadAssets()` and `process()`.
+This is a more complex operation because we need to configure Lume to load these
+files (so they will be stored in memory) and tell Lume what we want to do with
+this content once it's loaded. Lume has two functions to do that: `loadAssets()`
+and `process()`.
 
 ## Minify CSS code
 

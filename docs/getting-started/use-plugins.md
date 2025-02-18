@@ -24,8 +24,8 @@ use [lightningcss](../../plugins/lightningcss.md) a plugin to use
 minifier, that not only minifies the code but also transforms it to make it
 compatible with all browsers.
 
-To use a plugin in Lume, you have to import it in the `_config.ts` file and use
-it with the `use()` function:
+To use a plugin in Lume, you have to import it in the `_config.ts` file and
+enable it with the `use()` function:
 
 ```js
 import lume from "lume/mod.ts";
@@ -43,6 +43,6 @@ them is hidden behind the plugin. Your `_config.ts` file is now much more clean.
 > [!tip]
 >
 > Plugins are easy to use but also easy to create! Learn
-> [how to create your plugins](../advanced/plugins.md).
+> [how to create your own plugins](../advanced/plugins.md).
 
-[Go to Plugins](/plugins/) to see all official Lume plugins available.
+[Go to Plugins](/plugins/) to see all the official Lume plugins.
