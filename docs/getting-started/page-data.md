@@ -1,6 +1,6 @@
 ---
 title: Add data to your page
-description: Working with front matters to add page data
+description: Working with front matter to add page data
 order: 3
 ---
 
@@ -24,8 +24,8 @@ I hope you enjoy it.
 
 </lume-code>
 
-This variable is accessible by the layout so that it can be inserted into the
-html code:
+This variable is accessible by the layout, so that it can be inserted into the
+generated HTML:
 
 <lume-code>
 
@@ -44,8 +44,8 @@ html code:
 
 </lume-code>
 
-The `<title>` tag has the `{{ title }}` placeholder used to insert the value of
-the variable `title`.
+The `<title>` tag uses the `{{ title }}` placeholder, which is used to insert
+the value of the `title` variable.
 
 > [!note]
 >

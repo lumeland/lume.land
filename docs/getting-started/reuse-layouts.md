@@ -5,7 +5,7 @@ order: 4
 ---
 
 In the [previous step](./page-data.md) we learned to define variables in the
-pages that can be used by the layouts. This allows reusing the same layout for
+pages that can be used by layouts. This allows reusing the same layout for
 multiple pages with different content.
 
 Create the file `second-page.md` in your project directory and add front matter

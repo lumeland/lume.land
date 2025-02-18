@@ -31,7 +31,7 @@ body {
 </lume-code>
 
 Now we need to import this CSS file in all pages. Fortunately, we are using the
-same layout on all pages so we only need to edit the layout file to include a
+same layout on all pages, so we only need to edit the layout file to include a
 `<link rel="stylesheet">` element pointing to our `styles.css` file:
 
 <lume-code>
@@ -52,13 +52,13 @@ same layout on all pages so we only need to edit the layout file to include a
 
 </lume-code>
 
-Now, all pages have the `<link>` element but the styles are not applied. If you
+Now, all pages have the `<link>` element, but the styles are not applied. If you
 inspect the `_site` folder, you won't see the styles.css file there, and the URL
 `http://localhost:3000/styles.css` returns a 404 error.
 
 This is because Lume, by default, only generates HTML pages from files with
 known extensions like `.md`, `.vto`, etc. Other files are ignored. So we need to
-configure Lume to include also the extra files needed.
+configure Lume to also include our assets.
 
 Lume configuration is defined in the `_config.ts` file. When a new Lume project
 is created, this file is very basic and the only thing that it does is import
