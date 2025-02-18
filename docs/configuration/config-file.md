@@ -79,7 +79,7 @@ be built in several steps to prevent running out of memory.
 
 This is the public URL of the site. It's useful to generate absolute URLs or fix
 the relative URLs if your site is published under a subdirectory, for example:
-`https://example.com/project-name/`. It only accepts an
+`https://example.com/project-name/`. It only accepts a
 [URL object](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL), for
 example:
 
@@ -111,12 +111,12 @@ const site = lume({
 
 ### caseSensitiveUrls
 
-Lume prevents to save two pages with the same URL. By default pages with the
-same name but different case are considered the same page, for example
-`/about-us/` and `/About-Us/`. This behavior matches with the file system of
-Windows and MacOS that are case insensitive. You can set this option to `true`
-to make it case sensitive, so both pages would be considered different. Note
-that this behavior is only compatible with Linux.
+Lume prevents saving two pages with the same URL. By default pages with the same
+name but different case are considered the same page, for example `/about-us/`
+and `/About-Us/`. This behavior matches Windows and MacOS' file systems, which
+are case insensitive. You can set this option to `true` to make it case
+sensitive, so both pages would be considered different. Note that this behavior
+is only compatible with Linux.
 
 ### includes
 
