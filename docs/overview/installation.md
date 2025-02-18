@@ -4,7 +4,7 @@ description: How to install and update Lume
 order: 1
 ---
 
-As Lume is run by Deno, read the
+As Lume is built with Deno, read the
 [Deno installation](https://docs.deno.com/runtime/manual#install-deno)
 instructions if you don't have it installed yet.
 
@@ -82,7 +82,7 @@ folder to the latest version.
 
 Use the argument `--dev` to upgrade to the latest development version (the last
 commit in the [Github repository](https://github.com/lumeland/lume)). It's
-useful to test new features of Lume not yet released.
+useful to test new, unreleased Lume features.
 
 ## Vendoring
 
