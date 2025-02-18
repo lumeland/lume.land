@@ -21,7 +21,7 @@ is converted to this object:
 }
 ```
 
-If the file has additional variables, like a front matter, they are added to the
+If the file has additional variables, like front matter, they are added to the
 `Data` object:
 
 ```md
@@ -42,9 +42,9 @@ Now the title is added to the page data:
 ```
 
 This model is the same for any file that Lume can load. Even for images: let's
-say you have the [transform_images](../../plugins/transform_images.md) plugin to
-load and transform the data. The file content is loaded and stored in the
-`content` variable:
+say you have the [transform_images](../../plugins/transform_images.md) plugin
+enabled to load and transform your images. The file content is loaded and stored
+in the `content` variable:
 
 ```js
 {
@@ -121,14 +121,14 @@ content below.
 
 ## Extra variables
 
-Once the file is loaded and converted to the `Data` model, Lume adds
-automatically 3 variables:
+Once the file is loaded and converted to the `Data` model, Lume automatically
+adds 3 variables:
 
-- `url`: Define the output URL of the page.
-- `date`: Define the date of the page.
-- `basename`: Define the basename of the page (only in Lume 2).
+- `url`: Defines the page's output URL.
+- `date`: Defines the page's date.
+- `basename`: Define the page's basename (only in Lume 2).
 
-You can define the `url` as an absolute or relative path or even a function
+You can define the `url` as an absolute or relative path, or even a function
 ([see URLs documentation](../creating-pages/urls.md) for more info). Lume will
 resolve this value to a string, and if the url is `false`, the page is ignored.
 
@@ -161,7 +161,7 @@ This is converted to:
 
 ## Data inheritance
 
-Once a page is loaded, converted to `Data` and the special variables `url`,
+Once a page is loaded, converted to `Data`, and the special variables `url`,
 `date` and `basename` are assigned, it's merged with other data defined in
 [`_data` files](../creating-pages/shared-data.md). Components stored in the
 `_components` folders are added to the page under the `comp` variable. Other
@@ -205,7 +205,7 @@ export default function* () {
   for (const number of numbers) {
     yield {
       url: `/page-${number}/`,
-      content: `This is the page number ${number}`,
+      content: `This is page number ${number}`,
     };
   }
 }
@@ -217,7 +217,7 @@ That generates the three following pages:
 {
   layout: "main.vto",
   url: "/page-1/",
-  content: "This is the page number 1",
+  content: "This is page number 1",
   date: Date(),
   basename: "page-1",
   search: Searcher(),
@@ -228,7 +228,7 @@ That generates the three following pages:
 {
   layout: "main.vto",
   url: "/page-2/",
-  content: "This is the page number 2",
+  content: "This is page number 2",
   date: Date(),
   basename: "page-2",
   search: Searcher(),
@@ -239,7 +239,7 @@ That generates the three following pages:
 {
   layout: "main.vto",
   url: "/page-3/",
-  content: "This is the page number 3",
+  content: "This is page number 3",
   date: Date(),
   basename: "page-3",
   search: Searcher(),
@@ -251,9 +251,9 @@ That generates the three following pages:
 ## Preprocessors
 
 If you've defined [any preprocessor](../core/processors.md#preprocess) in your
-`_config` file, it's executed at this point. Preprocessors allow modification of
-the `Data` object before rendering. The preprocessors receive the `Page`
-instance and the `Data` object is stored in the `Page.data` property.
+`_config` file, they're executed here. Preprocessors allow modification of the
+`Data` object before rendering. The preprocessors receive the `Page` instance
+and the `Data` object is stored in the `Page.data` property.
 
 ```js
 // _config.js
@@ -353,7 +353,7 @@ children `string | Uint8Array | function | object`
 : Configure how some data keys will be merged with the parent data.
 
 [onDemand](../../plugins/on_demand.md) `boolean`
-: Whether render this page on demand or not.
+: Whether to render this page on demand or not.
 
 lang `string`
 : The language of the page.

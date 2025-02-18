@@ -5,22 +5,22 @@ description: All configuration options in a simple page
 
 ## Lume instantiation
 
-These are all available options (and the default values) when creating a new
-site:
+These are all the available options (and their default values) when creating a
+new site:
 
 ```js
 const site = lume(
   {
-    /** The path of the site source */
+    /** Where the site's source is stored */
     src: "./",
 
-    /** The path of the build destination */
+    /** Where the built site will go */
     dest: "./_site",
 
     /** Whether the destination folder (defined in `dest`) should be emptied before the build */
     emptyDest: true,
 
-    /** The default includes path */
+    /** The default includes path, relative to the `src` folder */
     includes: "_includes",
 
     /** The site location (used to generate final urls) */
@@ -29,24 +29,24 @@ const site = lume(
     /** Set true to generate pretty urls (`/about-me/`) */
     prettyUrls: true,
 
-    /** The local server options */
+    /** Local server options(when using `lume --serve`) */
     server: {
       /** The port to listen on */
       port: 3000,
 
-      /** To open the server in a browser */
+      /** Open the server in a browser after starting the server */
       open: false,
 
-      /** The file to serve on 404 error */
+      /** The file to serve when getting a 404 error */
       page404: "/404.html",
 
-      /** Optional middlewares for the server */
+      /** Optional middleware for the server */
       middlewares: [];
     },
 
-    /** The local watcher options */
+    /** Local file watcher options */
     watcher: {
-      /** Paths to ignore by the watcher */
+      /** Paths to ignore */
       ignore: [
         "/.git",
         (path) => path.endsWith("/.DS_Store"),
@@ -56,41 +56,41 @@ const site = lume(
       debounce: 100,
     },
 
-    /** The components options */
+    /** Component options */
     components: {
-      /** The variable name used to access to the components */
+      /** The variable name used to access the components */
       variable: "comp",
 
-      /** The name of the file to save the components css code */
+      /** The name of the file to save component css code to */
       cssFile: "/components.css",
 
-      /** The name of the file to save the components javascript code */
+      /** The name of the file to save component javascript code to */
       jsFile: "/components.js",
     }
   },
   {
-    /** Options for url plugin loaded by default */
+    /** Options for the url plugin, which is loaded by default */
     url: undefined,
 
-    /** Options for json plugin loaded by default */
+    /** Options for the json plugin, which is loaded by default */
     json: undefined,
 
-    /** Options for markdown plugin loaded by default */
+    /** Options for the markdown plugin, which is loaded by default */
     markdown: undefined,
 
-    /** Options for modules plugin loaded by default */
+    /** Options for the modules plugin, which is loaded by default */
     modules: undefined,
 
-    /** Options for nunjucks plugin loaded by default */
+    /** Options for the nunjucks plugin, which is loaded by default */
     nunjucks: undefined,
 
-    /** Options for search plugin loaded by default */
+    /** Options for the search plugin, which is loaded by default */
     search: undefined,
 
-    /** Options for paginate plugin loaded by default */
+    /** Options for the paginate plugin, which is loaded by default */
     paginate: undefined,
 
-    /** Options for yaml plugin loaded by default */
+    /** Options for the yaml plugin, which is loaded by default */
     yaml: undefined,
   }
 )
@@ -98,7 +98,7 @@ const site = lume(
 
 ## Lume site configuration
 
-All available functions to configure the site build:
+All available functions for configuring the site build:
 
 ```js
 /** Register an event listener */
@@ -141,7 +141,7 @@ site.page(pageData, scope = "/");
 /** Register a component */
 site.component(context, component, scope = "/");
 
-/** Configure the strategy to merge a key in the data cascade */
+/** Configure the strategy for merging a specfic key in the data cascade */
 site.mergeKey(key, merge, scope = "/");
 
 /** Copy a static file/folder */
@@ -153,7 +153,7 @@ site.copyRemainingFiles(filter);
 /** Ignore files or folder */
 site.ignore(...paths);
 
-/** Configure independent scopes to optimize the build after updating */
+/** Configure independent scopes to optimize builds when source files update */
 site.scopedUpdates(...scopes);
 
 /** Define a remote file */

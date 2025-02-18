@@ -3,10 +3,9 @@ title: Permissions
 description: Configure the Deno's permissions for Lume
 ---
 
-Deno has a permission system that allows configuring the access to different
-APIs like environment variables, filesystem reads or writes, net access, etc.
-See the
-[Deno's permissions manual](https://docs.deno.com/runtime/manual/basics/permissions/)
+Deno has a permission system that allows configuring access to different APIs
+like environment variables, filesystem reads or writes, net access, etc. See the
+[Deno permissions manual](https://docs.deno.com/runtime/manual/basics/permissions/)
 for more info.
 
 Lume is executed by default with the `-A` flag (or `--allow-all`), allowing all
@@ -24,9 +23,9 @@ script to run Lume:
 }
 ```
 
-This scripts echoes the `import 'lume/cli.ts'` code and then executes it. This
-allows resolving the `lume/cli.ts` module with the import map, so it's possible
-to update Lume just by editing the `import_map.json` file.
+This scripts echoes `import 'lume/cli.ts'` and then executes it. This allows
+resolving the `lume/cli.ts` module with the import map, so it's possible to
+update Lume just by editing the `import_map.json` file.
 
 If you are concerned about the permissions granted to Lume and want to customize
 them, it's possible by replacing `-A` flag with your desired permission flags in
