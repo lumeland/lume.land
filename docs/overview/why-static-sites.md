@@ -6,21 +6,20 @@ order: 0
 
 A static website consists only of static files like HTML, CSS, JavaScript,
 images, etc. It does not use server-side processing, databases, routers, or
-rendering. Everything is pre-built, and your hosting delivers the website files
-to the browsers exactly as they appear on the server.
+rendering. Everything is pre-built, and your host delivers the website files to
+the browsers exactly as they appear on the server.
 
 In contrast, in a dynamic website, every page is generated dynamically by the
-server after any request. This allows to display of different content for each
+server after any request. This allows displaying different content for each
 visit (i.e. users who are logged in might see a different version of the page).
-Dynamic websites need some software installed in the server to work, like a
+Dynamic websites need extra software installed in the server to work, like a
 scripting language (e.g. PHP, JavaScript, Python, or Ruby), a database, etc.
 
 ## Why create static sites?
 
 Lume is a static site generator, which means it can only generate static
-websites. We believe that most websites existing today could be perfectly static
-sites and this would make them better. Why static sites are a better choice in
-most cases?
+websites. We believe that most websites could be perfectly static sites and this
+would make them better. Why are static sites a better choice in most cases?
 
 ### It's cheaper
 
@@ -29,7 +28,7 @@ very cheap or even free. There are many hosting services with generous free
 tiers for static sites like Netlify, Vercel, Cloudflare, Kinsta, etc. See
 [deployment](../advanced/deployment.md) for an extensive list of options. And if
 you decide to self-host your site, there are cheap options for less than
-$5/month in Digital Ocean, Hetzner, etc.
+$5/month on Digital Ocean, Hetzner, etc.
 
 ### Portability
 
@@ -58,15 +57,15 @@ A static site can live forever without any kind of maintenance (there's no
 database to restart, plugins to update, etc). You can upload a static site and
 forget about it for years. As long as browsers continue to exist and support
 HTML, CSS, and JavaScript, your static website will continue working like the
-first day (or even better because browsers are improving over time).
+day it was built (or better, because browsers are always getting better).
 
 ### Own your content
 
 In most static site generators, like Lume, the content is not stored in a remote
-database guarded by a private company, but in files inside your repo, with
-formats like Markdown, YAML, or JSON that you can open with any text editor.
-This makes your content completely accessible to you, and you can do whatever
-you want with it, like modify, export, move, reuse, etc.
+database guarded by a private company, but in files in your repo, with formats
+like Markdown, YAML, or JSON that you can open with any text editor. This makes
+your content completely accessible to you, and you can do whatever you want with
+it, like modify, export, move, reuse, etc.
 
 ### Better for Web sustainability
 
@@ -97,10 +96,10 @@ these site generators and want to switch to Lume. The effort needed to change
 from one static site generator to another is much lower than the effort required
 to change a dynamic site generator (i.e. from WordPress to Drupal).
 
-## What if some dynamism is needed?
+## What if some dynamic content is needed?
 
-There are some dynamic features that you may want in your website. Does it mean
-that you must switch to a dynamic site? Depending on the feature, some
+There are some dynamic features that you may want in your website. Does this
+mean that you must switch to a dynamic site? Depending on the feature, some
 alternatives can be implemented in static sites:
 
 ### Search
@@ -109,7 +108,7 @@ Searching is a basic feature of any website. Fortunately, it's possible to have
 a good search engine on your static site. There are some options:
 
 - [Pagefind](https://pagefind.app/) is a fast search library for static sites.
-  And Lume [has a plugin](../../plugins/pagefind.md) to use it.
+  Lume [has a plugin](../../plugins/pagefind.md) for it.
 - For advanced use cases, you can use a third-party service like
   [Algolia](https://www.algolia.com/) or [Orama](https://orama.com/).
 - A very basic implementation is using a search engine like DuckDuckGo to show
@@ -118,7 +117,7 @@ a good search engine on your static site. There are some options:
 
   ```html
   <form role="search" action="https://duckduckgo.com" method="GET">
-    <label>Search in lume.land <input type="search" name="q"></label>
+    <label>Search lume.land <input type="search" name="q"></label>
     <input type="hidden" name="sites" value="lume.land">
     <button>Search</button>
   </form>
@@ -127,7 +126,7 @@ a good search engine on your static site. There are some options:
   Try it now:
 
   <form role="search" action="https://duckduckgo.com" method="GET">
-    <label>Search in lume.land <input type="search" name="q"></label>
+    <label>Search lume.land <input type="search" name="q"></label>
     <input type="hidden" name="sites" value="lume.land">
     <button>Search</button>
   </form>
@@ -139,11 +138,11 @@ There are different options to manage comments in static sites:
 - Use the Fediverse.
   [mastodon-comments](https://github.com/oom-components/mastodon-comments) is a
   clever way to show comments on your posts without implementing a comment
-  system but using Mastodon and other similar platforms compatible with the
+  system using Mastodon and other similar platforms compatible with the
   Fediverse.
 - Use GitHub discussions: If you have a technical blog and most of your users
   have an account on GitHub, you can use a solution like
-  [giscus](https://giscus.app/) that uses GitHub discussions as a comment
+  [giscus](https://giscus.app/) that uses GitHub Discussions as a comment
   system.
 - Use 3rd party services like [Discus](https://disqus.com/).
 
@@ -156,9 +155,9 @@ simple tools like [Google Forms](https://docs.google.com/forms/) or
 
 ### CMS
 
-In the past, one of the main issues of static sites was that they were not easy to update by
-non-technical people. Fortunately, this is not true anymore. There are plenty of
-CMS for static sites, some recommendations:
+In the past, one of the main issues of static sites was that they were not easy
+for non-technical people to update. Fortunately, this is not true anymore. There
+are plenty of CMS for static sites, and here are some recommendations:
 
 - [LumeCMS](../../cms/index.md) can be a good solution, especially if your site
   is built with Lume (although it can work with any static site).
