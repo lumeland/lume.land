@@ -1,6 +1,6 @@
 ---
 title: Shared data
-description: Add custom data that can be shared by all pages in a directory
+description: Add custom data shared by all pages in a directory
 order: 5
 ---
 
@@ -9,8 +9,8 @@ data accessible by some or all pages. Shared data must be saved in the `_data`
 directory or `_data.*` files with extensions like `.json`, `.yaml`, `.js` or
 `.ts`.
 
-The formats `.json` and `.yaml` are useful for static data. `.js` and `.ts` fit
-better for dynamic data (for example, data fetched from an API or a database):
+`.json` and `.yaml` files are useful for static data, while `.js` and `.ts` fit
+better for dynamic data (such as data fetched from an API or a database):
 
 <lume-code>
 
@@ -48,10 +48,10 @@ export { people };
 
 </lume-code>
 
-## The `_data.*` files
+## `_data.*` files
 
-Any file named as `_data.*` is loaded and its content is accessible by all pages
-in the same directory or subdirectory.
+Any file named `_data.*` is loaded and its content is accessible by all pages in
+the same directory or subdirectory.
 
 ```sh
 ├── _data.yaml      # Data shared with all pages
@@ -66,10 +66,9 @@ in the same directory or subdirectory.
         └── example2.md
 ```
 
-As you can see, the shared data is propagated in a cascade following the
-directory structure. A typical use case is to store those variables that are
-common to all pages in the same directory so you don't have to repeat it for
-every page.
+As you can see, the shared data is propagated through the directory structure. A
+typical use case is to store variables that are common to all pages in the same
+directory, so you don't have to include it on every page.
 
 ## The `_data` directories
 
@@ -122,4 +121,4 @@ export default function ({ documents }) {
 </lume-code>
 
 Like `_data.*` files, you can have `_data` directories in different locations so
-they are shared only with all pages in the same directory or subdirectories.
+they are shared only with pages in the same directory or subdirectories.

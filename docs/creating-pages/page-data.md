@@ -55,10 +55,10 @@ export default () => "<p>This is the page content</p>";
 
 In the examples above, all pages contain two variables: `title` and `url`.
 
-In the formats with front matter (like Markdown, Vento and Nunjucks), the
-content is defined below the front matter. Formats that don't use front matter
-export the content as the `content` variable or, optionally, as a default export
-(like in `page.page.js`).
+In formats with front matter (like Markdown, Vento and Nunjucks), the content is
+defined below the front matter. Formats that don't use front matter export the
+content as the `content` variable or, optionally, as a default export (like in
+`page.page.js`).
 
 ## Standard variables
 
@@ -86,12 +86,12 @@ values are:
 
 ### draft
 
-The draft variable mark this page as draft, which means it will ignored unless
-the environment variable `LUME_DRAFTS` is defined as `"true"`.
+The draft variable marks this page as a draft, which means it will be ignored
+unless the environment variable `LUME_DRAFTS` is set to `"true"`.
 
 ### layout
 
-To define the layout that is used to render the page. See [Layouts](layouts.md)
+Defines the layout that is used to render the page. See [Layouts](layouts.md)
 for more info.
 
 ### tags

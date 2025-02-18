@@ -108,12 +108,13 @@ will be resolved to `/post/My first post/`). And if you are using the
 `slugify_urls` plugin, all output paths are slugified automatically, so the
 final URL would be `/post/my-first-post/`.
 
-Using functions as URLs gives a lot of flexibility to generate the URLs as you
-want.
+Using functions as URLs gives a lot of flexibility to generate URLs exactly the
+way you want.
 
 ## Setting url to `false`
 
-Setting the `url` variable to `false` prevents the page being processed by Lume.
+Setting the `url` variable to `false` prevents the page from being processed by
+Lume.
 
 ```yml
 ---
@@ -124,37 +125,37 @@ url: false # Ignore this page for now
 
 ## Basename
 
-As of Lume v2, the new variable `basename` is introduced to better customize the
-URL generation. It's a special value affecting to the page or directory where
-it's defined, and allows to change how the name of the file/directory is
-reflected to the final URL.
+As of Lume v2, the new variable `basename` is introduced to better customize URL
+generation. It's a special value affecting to the page or directory where it's
+defined, and allows changing how the name of the file/directory affects the
+final URL.
 
-If the `basename` is defined in a `_data.*` file, it affects to the directory
-where the _data file is. For example, let's say we have the following file:
+If the `basename` is defined in a `_data.*` file, it affects the directory where
+the _data file is. For example, let's say we have the following file:
 
 ```txt
 /blog/posts/hello-world.md
 ```
 
 This file is exported with the URL `/blog/posts/hello-world/`. If we want to
-replace the part `/posts/` to `/articles/`, we can create a `_data.yml` file in
-the `/blog/posts` folder with the following code:
+replace the part `/posts/` with `/articles/`, we can create a `_data.yml` file
+in the `/blog/posts` folder with the following code:
 
 ```yml
 basename: articles
 ```
 
-Now, this folder will use the name `articles` for the URL generation, so the
-final URL of the file is `/blog/articles/hello-world/`.
+Now, this folder will use the name `articles` for URL generation, so the final
+URL of the file is `/blog/articles/hello-world/`.
 
-You can set the `basename` variable to empty to don't use the folder name in the
+You can set the `basename` variable to empty to not use the folder name in the
 final URL:
 
 ```yml
 basename: ""
 ```
 
-The final URL of the file is now `/blog/hello-world/`, the `/post/` part was
+The final URL of the file is now `/blog/hello-world/`, with the `/post/` part
 removed. You can also remove the previous folder with:
 
 ```yml
