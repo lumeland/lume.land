@@ -1,13 +1,13 @@
 ---
 title: Render order
-description: Configure the rendering order of the pages
+description: Configure the rendering order of pages
 order: 9
 related:
   - /docs/core/multiple-pages/
   - /docs/core/searching/
 ---
 
-In Lume all pages are rendered at the same time. This works well in most cases,
+In Lume, all pages are rendered at the same time. This works well in most cases,
 but sometimes you want to make sure a page is rendered before or after others.
 The most typical example is with auto-generated pages. Let's say you have a page
 that generates multiple pages dynamically using data from an external API:

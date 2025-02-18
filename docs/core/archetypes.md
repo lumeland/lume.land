@@ -5,11 +5,11 @@ order: 13
 ---
 
 Archetypes are scripts that create new files in your source directory with some
-preconfigured content. A typical example are the posts of a blog: instead of
-creating a new markdown file from scratch every time you want to create a new
-post, you can create and run an archetype to do this job for you.
+preconfigured content. A typical example are posts on a blog: instead of
+creating a markdown file from scratch every time you want to create a new post,
+you can create and run an archetype to do this job for you.
 
-The archetypes in Lume are JavaScript or TypeScript files, stored in the
+Archetypes in Lume are JavaScript or TypeScript files, stored in the
 `_archetypes` directory that default export a function returning an object with
 the path and the content of the file that is going to be created. For example:
 
@@ -57,8 +57,8 @@ object. If the content is an object, it will be converted to a string depending
 on the extension of the path:
 
 - If the `path` has the `yml` or `yaml` extension, the object will be
-  stringified to YAML.
-- If the `path` has the `json` extension, the object will be stringified to
+  stringified as YAML.
+- If the `path` has the `json` extension, the object will be stringified as
   JSON.
 - For other extensions, the object will be converted to frontmatter + text.
 
@@ -85,7 +85,7 @@ content: Page content
 
 </lume-code>
 
-Same example but for JSON conversion:
+Same example, but for JSON conversion:
 
 <lume-code>
 
@@ -110,7 +110,7 @@ export default function () {
 
 </lume-code>
 
-Same example but for any other extension (for example, `md`):
+Same example, but for any other extension (for example, `md`):
 
 <lume-code>
 
@@ -138,8 +138,8 @@ Page content
 
 ## Passing arguments
 
-Arguments allow to pass variables to the archetype to configure how the new
-content is created. For example, we want to create new pages based on the
+Arguments allow passing variables to the archetype to configure how the new
+content is created. For example, if we want to create new pages based on the
 provided title:
 
 ```ts
@@ -161,8 +161,8 @@ export default function (title: string) {
 This function uses the `title` argument to generate the final path and the
 content. Now you can run `deno task lume new page "My first page"` (or
 `lume new page "My first page"` if you're using the Lume CLI), and the new
-`/pages/my-first-page.md` file will be created. Any extra argument passed to the
-CLI command will be passed to the archetype's function.
+`/pages/my-first-page.md` file will be created. Any extra arguments passed to
+the CLI command will be passed to the archetype's function.
 
 ## Multiple files
 

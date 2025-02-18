@@ -1,6 +1,6 @@
 ---
 title: Search and paginate
-description: Using the search and paginate helper to create dynamic pages.
+description: Using the search and paginate helpers to create dynamic pages.
 order: 8
 related:
   - /docs/core/multiple-pages/
@@ -36,8 +36,8 @@ The `search` helper is very powerful and has more interesting features.
 ## Pagination
 
 In Lume [you can create multiple pages using a generator](./multiple-pages.md).
-Pagination is basically the same thing: the creation of multiple pages using the
-result of a search.
+Pagination is basically the same thing: creating multiple pages using the result
+of a search.
 
 Let's say we want to paginate some pages in groups of 10 elements. We could do
 it manually with a generator:

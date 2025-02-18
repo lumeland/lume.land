@@ -21,8 +21,8 @@ server.start();
 console.log("Listening on http://localhost:8000");
 ```
 
-This code starts a local server on the port `8000` and serves the static files
-in the `_site` folder.
+This code starts a local server on port `8000` and serves static files from the
+`_site` folder.
 
 ## Events
 
@@ -34,9 +34,9 @@ server.addEventListener("start", () => {
 });
 ```
 
-## Middlewares
+## Middleware
 
-To customize how the server handles the requests and responses, there's a simple
+To customize how the server handles requests and responses, there's a simple
 middleware system with the following signature:
 
 ```js
@@ -54,7 +54,7 @@ The request and response objects are standard
 [`Response`](https://developer.mozilla.org/docs/Web/API/Response) classes, no
 magic here.
 
-Lume provides some middlewares for common use cases:
+Lume provides some middleware for common use cases:
 
 ```ts
 import Server from "lume/core/server.ts";
@@ -68,4 +68,4 @@ server.start();
 ```
 
 Go to [Plugins/middleware](/plugins/?status=all&middleware=on) for a list of all
-middlewares provided by Lume.
+middleware plugins provided by Lume.

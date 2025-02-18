@@ -4,15 +4,15 @@ description: Overriding the behavior of a template engine
 order: 13
 ---
 
-By default, the template engine used to render a file is decided according to
-the file extension. For example, an `.md` file uses Markdown, `.vto` file uses
-Vento and so on.
+By default, the template engine used to render a file is chosen based on its
+file extension. For example, `.md` files use Markdown, `.vto` files use Vento,
+and so on.
 
 You can override this default behaviour with the `templateEngine` option. Any
-page having this variable will use it to decide the template engine instead of
-the extension.
+page with this variable will use it to choose the template engine instead of the
+extension.
 
-The following example is an `.md` file but it is configured to use Vento to
+The following example is an `.md` file, but it is configured to use Vento to
 render (instead of Markdown).
 
 ```yml

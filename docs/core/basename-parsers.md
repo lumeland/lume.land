@@ -1,15 +1,15 @@
 ---
 title: Basename parsers
-description: Parse the file's basename to extract extra data
+description: Parse file basenames to extract extra data
 order: 10
 ---
 
-When Lume is scanning the source folder, it can extract automaticaly some info
+When Lume is scanning the source folder, it can automatically extract some info
 from the basename of files (the filename after removing the extension) and
 folders.
 
-For example, let's say you want to create the variable `order` to sort the pages
-in a menu. A way to make this variable explicit is to save your pages with the
+For example, let's say you want to create the variable `order` to sort pages in
+a menu. A way to make this variable explicit is to save your pages with the
 `[order].` prefix:
 
 ```txt
@@ -21,8 +21,8 @@ in a menu. A way to make this variable explicit is to save your pages with the
 ```
 
 One of the advantages of making this variable explicit in the filesystem is that
-you can see in your text editor the source files sorted in the same way as they
-will be in the site.
+you can see the source files sorted the same way in your editor as well as on
+the final site.
 
 In Lume, the filename is used by default to generate the final URLs
 ([more info](../creating-pages/page-files.md)), so the page files above
@@ -35,7 +35,7 @@ generates the following URLs:
 /4.advanced/
 ```
 
-That could work but what we really want is to remove the order prefix and store
+That could work, but what we really want is to remove the order prefix and store
 it in the page data. To do that, we can register a basename parser using the
 function `site.parseBasename` in our _config.ts file:
 
@@ -75,13 +75,13 @@ anything, so nothing will be changed.
 > data (a.k.a. the front matter). **The front matter can override a variable
 > defined in the basename parser.**
 
-The `parseBasename` function is used not only for files but also folders. This
-allows to extract values from a folder name and store them as
+The `parseBasename` function is used for both files and folders. This allows
+extracting values from a folder name and storing them as
 [shared data](../creating-pages/shared-data.md), so they are available to all
 pages inside.
 
 ## Extract dates
 
-Lume is configured by default with a basename parser to extract dates from the
+Lume, by default, is configured with a basename parser to extract dates from
 filenames. See [page dates](../creating-pages/page-files.md#page-date) for more
 info.

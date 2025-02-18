@@ -5,13 +5,14 @@ order: 8
 ---
 
 Components are template pieces that you can use in other templates. Some
-template engines like Vento, Nunjucks, Pug or Liquid have ways to reuse codes
-(like includes, macros, etc). The Lume components have the following advantages:
+template engines like Vento, Nunjucks, Pug or Liquid already have ways to reuse
+code (like includes, macros, etc). Lume components have the following
+advantages:
 
 - They are template engine agnostic. For example, you can create your components
   in JSX or JavaScript and use them in Nunjucks.
-- They can generate not only the HTML code but also the CSS and JavaScript code
-  needed on the client side.
+- They don't just generate HTML, but also the CSS and JavaScript needed for them
+  on the client side.
 - They are automatically available everywhere; no need to import them manually.
 - For ESM module-based components (like JavaScript, TypeScript, JSX or TSX) it's
   the only way to hot-reload components without stopping and restarting the
@@ -20,12 +21,12 @@ template engines like Vento, Nunjucks, Pug or Liquid have ways to reuse codes
 > [!important]
 >
 > **Lume components don't run in the browser**. They are intended to generate
-> static HTML code on building time.
+> static HTML code at build time.
 >
 > For interactive client-side components (with `onclick` callbacks and similar
 > stuff) you may want to use the [esbuild plugin](../../plugins/esbuild.md) to
-> compile your JavaScript code. But the code architecture is up to you (**Lume
-> is not a frontend framework**).
+> compile your JavaScript code, but the architecture is up to you. **Lume is not
+> a frontend framework**.
 
 ## Create your own components
 
@@ -41,7 +42,7 @@ a button could be stored in `_components/button.vto`:
 ```
 
 This component is available in your layouts under the `comp` variable (you can
-configure a different variable name in `_config.ts`). It's a global variable
+configure a different variable name in `_config.ts`). This is a global variable
 that contains all components. In our example, we can render the button component
 with the `comp.button()` function:
 
@@ -117,7 +118,7 @@ export default function ({ comp }) {
 
 ### Nested components
 
-In Vento you can nest components in this way:
+In Vento you can nest components like this:
 
 ```vento
 {{ comp Container }}
@@ -152,11 +153,11 @@ The content of the components are passed through the `content` variable:
 
 ## Component assets
 
-Components can export CSS and JS code. To do that, the component needs to export
+Components can export CSS and JS code. To do this, the component needs to export
 `css` or `js` variables.
 
 In our example, we may want to apply some styles to the button. In a Nunjucks
-template, the way to export data is using a front matter:
+template, the way to export data is using front matter:
 
 ```vento
 ---
@@ -171,9 +172,9 @@ css: |
 
 This CSS code will be exported in your `dest` folder in the `/components.css`
 file together with the CSS code of other used components. Note that if the
-component is not used, the CSS code won't be exported. This is an interesting
-feature that allows having a library of many components and only exporting the
-CSS and JS code that you only need.
+component is not used, the CSS code won't be exported. This is a useful feature
+that allows having a library of many components and only exporting the CSS and
+JS code that you only need.
 
 ## Organize your components
 
@@ -234,7 +235,7 @@ site.component("ui", {
 });
 ```
 
-Now, you can use the component as always:
+Now, you can use the component like before:
 
 ```vento
 {{ comp.ui.button({ text: "Login" }) }}
