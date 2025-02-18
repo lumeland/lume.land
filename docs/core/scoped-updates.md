@@ -1,12 +1,12 @@
 ---
 title: Scoped updates
-description: How to optimize the update process in the watch mode.
+description: How to optimize the update process in watch mode.
 order: 11
 ---
 
 In Lume, any change in the watch mode (with `lume --serve` or `lume --watch`),
-**rebuilds the entire site again**. This happens because it's almost impossible
-to know in advance which pages will be affected by a change in any file. For
+**rebuilds the entire site**. This happens because it's almost impossible to
+know in advance which pages will be affected by a change in any file. For
 example:
 
 - A change in a CSS file can affect other CSS files that `@import` it (if you
@@ -18,8 +18,8 @@ Lume is conservative about the updating process to make sure that any change in
 any file will be correctly applied to all pages. This is why the entire site is
 rebuilt after any change.
 
-In large sites or sites with expensive processors (like bundlers) this can
-increase the duration of the update process. There's a way to customize this
+In large sites or sites with expensive processors like bundlers, this can
+increase the duration of the update process. Lume offers a way to customize this
 behavior using **Scoped Updates**. It's a way to define different "scopes"
 (collections of independent files whose changes won't affect other pages).
 

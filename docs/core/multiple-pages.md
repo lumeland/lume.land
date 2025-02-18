@@ -1,14 +1,14 @@
 ---
 title: Create multiple pages
-description: Generators allows to create multiple pages from an unique source file
+description: Generators allow creating multiple pages from one unique source file
 order: 8
 related:
   - /docs/core/searching/
   - /docs/core/render-order/
 ---
 
-It's possible with Lume to generate more than one page from the same source
-file. This is useful to generate pages programmatically using an external source
+It's possible to generate more than one page from the same source file with
+Lume. This is useful to generate pages programmatically using an external source
 like a database or an API.
 
 ## Basic example
@@ -41,7 +41,7 @@ URLs of the pages be unique.
 ## Multiple pages with layouts
 
 Every page is an object with the page data. In the previous example, every page
-has the `url` and `content` properties,to define the content and URL of every
+has the `url` and `content` properties, to define the content and URL of every
 page. If you want to use a layout to generate the page content, you have to
 export the `layout` keyword with the layout name and the data that will be used
 in the layouts:
@@ -156,5 +156,5 @@ generate a new page per article. Each yielded article contains the URL and other
 properties you like (title, category, tag, body, etc.). We are exporting the
 `layout` value so all pages will use the same layout to render.
 
-Another common use case is for pagination. Go to
+Another common use case is pagination. Go to
 [Search and paginate](./searching.md) for more info.

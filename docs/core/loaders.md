@@ -10,8 +10,8 @@ or plain text.
 
 ## Creating a loader
 
-Creating a custom loader is really easy: you only have to create a function that
-reads the content of a file and returns
+Creating a custom loader is really easy: you just have to create a function that
+reads the content of a file and then returns
 [a data object](../advanced/the-data-model.md).
 
 Let's say you want to add support for the `toml` format, using the
@@ -63,10 +63,10 @@ You may want to load TOML files, process them and export as `.toml` files, not
 site.loadAssets([".toml"], tomlLoader);
 ```
 
-Now, the `*.toml` files are loaded and saved as `toml`. The function
-`loadAssets` is useful to load assets files, like `css`, `js`, `svg`, that you
-want to transform (bundle, minify...) and save them while keeping the same
-extension, instead of renaming them to `html`.
+Now, any `*.toml` files are loaded and saved as `toml`. The function
+`loadAssets` is useful for loading static assets like `css`, `js`, and `svg`
+files that you want to transform (bundle, minify...) and save them while keeping
+the same extension, instead of renaming them to `html`.
 
 **Note:** you can't use the same extension to generate pages and assets, so a
 way to have support for both is adding a sub-extension (like `.page`) for pages.
@@ -93,7 +93,7 @@ for pages and `*.js` for JavaScript assets).
 
 ## Template engines
 
-Lume supports several template engines to render your pages, like Vento,
+Lume supports several template engines to render your pages, such as Vento,
 Nunjucks, Pug or Eta. It's easy to extend this support for more template
 engines: you only need to create a class implementing the `Lume.Engine`
 interface. Let's see an example using
@@ -126,7 +126,7 @@ export default class HandlebarsEngine implements Lume.Engine {
 }
 ```
 
-To use this template engine, pass it to the options argument of the `loadPages`
+To use this template engine, pass it in the options argument of the `loadPages`
 function:
 
 ```ts
@@ -139,8 +139,8 @@ site.loadPages([".hbs"], {
 });
 ```
 
-Now, all files with the `.hbs` extension will be loaded using the `textLoader`
-and rendered using the Handlebars engine.
+Now, all files with the `.hbs` extension will be loaded with the `textLoader`
+loader and rendered using the Handlebars engine.
 
 > [!note]
 >

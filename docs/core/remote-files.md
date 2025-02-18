@@ -1,10 +1,10 @@
 ---
 title: Remote files
-description: Load remote files as fallback of missing local files
+description: Load remote files as a fallback of missing local files
 order: 16
 ---
 
-In Lume it's possible to use remote files as if they were local files. To
+In Lume, it's possible to use remote files as if they were local files. To
 configure a remote file, you must set a local name and a remote URL in your
 `_config.ts` file using the `remoteFile()` function. For example:
 
@@ -18,8 +18,8 @@ site.remoteFile("styles.css", "https://example.com/theme/styles.css");
 export default site;
 ```
 
-This indicates to Lume that if the file `styles.css` **doesn't exist locally**
-the remote URL must be used. Note that the file **won't be saved in the project
+This indicates that if the file `styles.css` **doesn't exist locally**, the
+remote URL must be used. Note that the file **won't be saved in the project
 folder**, but it's in memory.
 
 If you want to copy this file statically:
@@ -64,14 +64,14 @@ Page content
 
 ## Override remote files
 
-If a remote file exists locally (in the previous examples: `styles.css` and
-`_includes/layouts/main.vto`) the local file will be used instead of the remote
+If a remote file exists locally(in the previous examples: `styles.css` and
+`_includes/layouts/main.vto`), the local file will be used instead of the remote
 one. This is useful for creating themes with all templates and assets loaded
 remotely but allowing overriding some files locally in order to customize the
 theme. As an example, see the
 [Simple blog theme](https://github.com/lumeland/theme-simple-blog).
 
-## Limits of the remote files
+## Limits of remote files
 
 Remote files work in most cases, because they are integrated natively in Lume's
 file system
@@ -81,11 +81,10 @@ uses `extends "filename"`, Vento uses `{{ include "filename" }}`, Liquid and
 Nunjucks use `{% include "filename" %}`, etc.
 
 The template engines [Eta](../../plugins/eta.md),
-[Liquid](../../plugins/liquid.md) and [Pug](../../plugins/pug.md) don't allow to
-customize the way to load the files, and cannot use Lume file system, hence they
-cannot include remote files. If you want to use remote templates,
-[Vento](../../plugins/vento.md) or [Nunjucks](../../plugins/nunjucks.md) are
-good options.
+[Liquid](../../plugins/liquid.md) and [Pug](../../plugins/pug.md) don't allow
+customizing how they load files, hence they cannot include remote files. If you
+want to use remote templates, [Vento](../../plugins/vento.md) or
+[Nunjucks](../../plugins/nunjucks.md) are good options.
 
 ### Cache files
 
@@ -113,5 +112,5 @@ LUME_NOCACHE=true deno task serve
 ### Import modules
 
 JavaScript/TypeScript modules imported as `import foo from "./filename.ts"` are
-not managed by Lume file system, but you can use import maps for a similar
+not managed by Lume's file system, but you can use import maps for a similar
 behavior.

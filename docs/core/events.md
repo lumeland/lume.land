@@ -1,12 +1,12 @@
 ---
 title: Events
-description: A list of all the events which Lume will dispatch in the lifecycle
+description: A list of all events which Lume will dispatch in its lifecycle
 order: 10
 ---
 
-Lume has an events system to run some code at certain times during the compiling
-process. You can configure those events in the `_config.js` file with the
-function `addEventListener`.
+Lume has an events system to run code at certain times during the compilation
+process. You can configure those events in your configuration file with the
+`addEventListener` function.
 
 ## beforeBuild
 
@@ -31,7 +31,7 @@ site.addEventListener("beforeBuild", () => {
 ## afterBuild
 
 This event is triggered after building the site. Note that if you are watching
-the files with `lume --serve`, this is **only executed once** after the initial
+the files with `lume --serve`, this is **only executed once**, after the initial
 build. Use **afterUpdate** for subsequent changes.
 
 ```js
@@ -44,7 +44,7 @@ site.addEventListener("afterBuild", (event) => {
 
 ## beforeUpdate
 
-This event is triggered every time a change is detected on building the site
+This event is triggered every time a change is detected when building the site
 with `lume --serve`.
 
 ```js
@@ -64,8 +64,7 @@ site.addEventListener("beforeUpdate", () => {
 
 ## afterUpdate
 
-This event is triggered after re-building the site after detecting changes with
-`lume --serve`.
+This event is triggered after re-building the site with `lume --serve`.
 
 ```js
 site.addEventListener("afterUpdate", (event) => {
@@ -79,11 +78,11 @@ site.addEventListener("afterUpdate", (event) => {
 ## afterLoad
 
 Event triggered after all files in the source folder are loaded (but not
-processed). It allows to do low-level operations like renaming files, etc.
+processed). It lets you do low-level operations like renaming files.
 
 ## beforeRender
 
-This event is triggered just after all pages are loaded but before they are
+This event is triggered after all pages are loaded, but before they are
 rendered.
 
 ```js
@@ -95,7 +94,7 @@ site.addEventListener("beforeRender", (event) => {
 
 ## afterRender
 
-This event is triggered just after all pages are rendered but before they are
+This event is triggered after all pages are rendered, but before they are
 processed.
 
 ```js
@@ -106,7 +105,7 @@ site.addEventListener("afterRender", () => {
 
 ## beforeSave
 
-This event is triggered just before saving the generated pages.
+This event is triggered before saving the generated pages.
 
 ```js
 site.addEventListener("beforeSave", () => {
@@ -152,7 +151,7 @@ site.addEventListener("afterBuild", "gzip -r _site site.gz").
 ## Events options
 
 Similar to
-[web APIs](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+[web APIs](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener),
 the third argument of `addEventListener` allows customizing the event listener.
 The available options are:
 
@@ -169,7 +168,7 @@ site.addEventListener("afterUpdate", () => {
 });
 ```
 
-Example of signal usage:
+Example using signals:
 
 ```js
 const controller = new AbortController();

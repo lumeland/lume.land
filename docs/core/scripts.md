@@ -1,6 +1,6 @@
 ---
 title: Scripts
-description: A guide to use Lume as a script runner
+description: Using Lume as a script runner
 order: 11
 ---
 
@@ -17,8 +17,8 @@ Now, you can run this script from the CLI with `lume run deploy`.
 ## Running multiple commands
 
 You can create a script to execute multiple commands, **one after another.**
-There are two ways to do that: by adding more arguments or joining the different
-commands with `&&`. For example:
+There are two ways to do that: either adding more arguments or joining the
+different commands with `&&`. For example:
 
 ```js
 site.script(
@@ -34,7 +34,7 @@ site.script(
 );
 ```
 
-Now, by running `lume run save-site`, these two commands will be executed.
+Now, when you run `lume run save-site`, these two commands will be executed.
 
 If you don't need to execute the commands in series but in **parallel**, use an
 array of commands or the character `&`:
@@ -71,8 +71,7 @@ site.script("compress-and-upload", "compress", "upload");
 
 ## Custom functions
 
-Scripts not only can execute CLI commands but also JavaScript functions. For
-example:
+Scripts can execute both CLI commands and JavaScript functions. For example:
 
 ```js
 site.script("add-date-published", () => {

@@ -1,6 +1,6 @@
 ---
 title: Merged keys
-description: Configure how the data is merged
+description: Configure how data is merged
 order: 12
 ---
 
@@ -27,8 +27,8 @@ files, **in this order of priority**.
 
 ## Object mode merging
 
-On merging variables, **the complete value is overridden**. But you may want to
-merge some values in a different way. For example, let's say we have the
+When merging variables, **the complete value is overridden**. However, you may
+want to merge some values differently. For example, let's say we have the
 following two data files, one in the root and the other in a subfolder. Both
 files have a `site` variable with different values:
 
@@ -50,7 +50,7 @@ site:
 All pages in the subfolder (and sub-subfolders) will have the latest version of
 the variable that has the `author` subkey but missing the `title` value, because
 the whole variable is overridden. You can change this behaviour using the
-special value `mergedKeys`. This value indicates to Lume how to merge some keys:
+special value `mergedKeys`. This value indicates how to merge specific keys:
 
 <lume-code>
 
@@ -70,10 +70,10 @@ site:
 
 </lume-code>
 
-In this example, we are indicating to Lume that the variable `site` must be
-merged using the `object` mode. Now, the result of the variable `site` is an
-object including the properties of the parent variable and only overrides the
-properties with the same name. So the result will be something like this:
+In this example, we are indicating that the variable `site` must be merged using
+the `object` mode. Now, the result of the variable `site` is an object including
+the properties of the parent variable and only overrides the properties with the
+same name. So the result will be something like this:
 
 ```yml
 site:
@@ -87,14 +87,14 @@ properties. A recursive option may be added in the future.
 > [!note]
 >
 > The `mergedKeys` variable is also merged with other `mergedKeys` variables in
-> subfolders and pages and using always the `object` mode. This means that you
-> can define this variable in the root `_data` file of the site and override it
-> in specific subfolders.
+> subfolders and pages using the `object` mode. This means that you can define
+> this variable in the root `_data` file of the site and override it in specific
+> subfolders.
 
 ## array mode
 
 There's another merge mode for arrays. In this mode, the merge result is an
-array with all values found in all `_data` levels. For example:
+array with all values found at all `_data` levels. For example:
 
 <lume-code>
 
@@ -126,12 +126,12 @@ category:
 
 It's an array with all values present in all parent `_data` contexts. The result
 includes only unique values: if the same value is repeated in different `_data`
-contexts, it's included only once in the result.
+contexts, it's only included once in the result.
 
 ## stringArray mode
 
-There's a special case in which you want to make sure that all values of the
-array are strings. Let's see the following example:
+There's a special case where you want to make sure that all values of the array
+are strings. Look at the following example:
 
 <lume-code>
 
