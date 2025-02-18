@@ -59,7 +59,7 @@ site.ignore("/files/pictures/");
 site.copy("/files/");
 ```
 
-If you need to copy a file starting with `.` or `_`, you have to configure it
+If you need to copy a file starting with `.` or `_`, you have to add it
 explicitly:
 
 ```js
@@ -69,8 +69,8 @@ site.copy("_headers");
 
 ## Copy by file extension
 
-An additional way to select files is by extension. Use an array with the
-extensions of the files that you want to copy:
+Another way to select files is by extension. Use an array with the extensions of
+the files that you want to copy:
 
 ```js
 // Copy all image files
@@ -79,13 +79,13 @@ site.copy([".jpg", ".gif", ".png"]);
 
 This will copy all files with the extensions `.jpg`, `.gif` and `.png`, keeping
 the original file structure. For example, the file `/img/pictures/image.jpg`
-will be copied into `_site/img/pictures/image.jpg` location.
+will be copied into `_site/img/pictures/image.jpg`.
 
 ## Customize the destination
 
 For more fine-tuning of the file destination, you can provide a function in the
-second argument that accepts the original file path and must return the
-destination path:
+second argument that accepts the original file path and returns the destination
+path:
 
 ```js
 // Copy all files in the static directory but ensure they are lower case
@@ -102,10 +102,10 @@ site.copy([".jpg", ".gif", ".png"], (file) => "/img" + file);
 
 ## Copy remaining files
 
-Sometimes it's not possible to know in advance all files that must be copied,
+Sometimes it's not possible to know all files that must be copied ahead-of-time,
 because they can be stored in any folder or can have any extension. For example,
-imagine you have a website with articles, and every article is stored in it's
-folder that can contain static files of any extension:
+imagine you have a website with articles, and every article is stored in a
+folder that can contain static files with any extension:
 
 ```txt
 |_ articles/
@@ -122,9 +122,9 @@ folder that can contain static files of any extension:
 
 We cannot do `site.copy("articles")`, because the `index.md` files are inside
 these folders and wouldn't be processed (they would be treated as static files).
-We can select the files by extension with
+We could select the files by extension with
 `site.copy([".jpg", ".pdf", ".gif", ".mp4", ".zip"])` but every time a file with
-a new extension is uploaded to our site, we have to remember to update the
+a new extension is uploaded to our site, we would have to remember to update the
 `_config` file.
 
 For these use cases, there's the `copyRemainingFiles()` function that basically

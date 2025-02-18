@@ -39,5 +39,5 @@ site.ignore((path) => {
 
 ## Draft files
 
-Pages with the `draft` value as `true` are ignored by Lume unless the
+Pages with the `draft` value set to `true` are ignored by Lume unless the
 environment variable `LUME_DRAFTS` is set to `true`.

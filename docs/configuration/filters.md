@@ -85,8 +85,8 @@ The third argument is an object with different properties:
 - `type`: The type of helper. It can be `tag`, `filter` or any other, depending
   on the template engine.
 - `async`: Set `true` to configure the helper as async.
-- `body`: Set `true` to configure that the helper accept a body (supported only
-  by nunjucks custom tags)
+- `body`: Set `true` to configure the helper to accept a body (only supported by
+  nunjucks custom tags)
 
 Example of custom tag with body:
 
@@ -109,5 +109,5 @@ Hello, {{ user.name }}
 
 > [!note]
 >
-> The method `filter()` is just a shortcut of `helper()` with
-> `{ type: "filter" }`.
+> The `filter()` method is just a shortcut to `helper()` with
+> `{ type: "filter" }` added.
