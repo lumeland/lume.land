@@ -1,12 +1,12 @@
 ---
 title: Creating plugins
-description: Guide to create your own plugins to extend Lume
+description: Guide to creating your own plugins for Lume
 ---
 
-Lume can be extended easily by adding more [loaders](../core/loaders.md),
-[engines](../core/loaders.md#template-engines),
-[processors](../core/processors.md) etc. Plugins provide an easy interface to
-extend Lume without writing too much code in the `_config.ts` file.
+Lume can be easily extended by adding more [loaders](../core/loaders.md),
+[engines](../core/loaders.md#template-engines), or
+[processors](../core/processors.md). Plugins provide an easy interface to extend
+Lume without writing too much code in the `_config.ts` file.
 
 A plugin is just a function that receives a lume instance in the first argument,
 in order to configure and register new elements to it.
@@ -63,7 +63,7 @@ export default function (options: Options) {
 }
 ```
 
-And now, we can use it in the `_config.ts` file in this way:
+And now, we can use it in the `_config.ts` file like this:
 
 ```ts
 import lume from "lume/mod.ts";
@@ -79,17 +79,17 @@ export default site;
 ```
 
 Plugins can't do anything that you couldn't do in the `_config.ts` file, but
-they provide a better interface to organize and reuse your code. And better:
-share it with others.
+they provide a better interface to organize, reuse, and even share your code
+with others.
 
-Take a look to the
-[repository of Lume plugins](https://github.com/lumeland/lume/tree/master/plugins)
+Take a look at the
+[Lume plugins repository](https://github.com/lumeland/lume/tree/master/plugins)
 for more advanced examples.
 
 ## Hooks
 
 Some plugins expose _hooks_ that can be invoked by other plugins or in the
-`_config.ts` file. A hook is only a function that can do arbitrary things, like
+`_config.ts` file. A hook is a function that can do arbitrary things, like
 changing a configuration of a plugin. Hooks are stored in `site.hooks`. Let's
 create a hook in our `css_banner` plugin to change the message:
 
@@ -119,7 +119,7 @@ export default function (options: Options) {
 }
 ```
 
-Now the message can be changed after the plugin installation:
+Now the message can be changed after plugin installation:
 
 ```ts
 import lume from "lume/mod.ts";
@@ -171,8 +171,8 @@ export default site;
 ## Publishing plugins
 
 If you created a plugin and want to let other people use it, it's
-straightforward thanks to HTTP imports and native TypeScript support by Deno.
-You only need to make your code accessible through an HTTP URL.
+straightforward thanks to HTTP imports and Deno's native Typescript support. You
+only need to make your code accessible over an HTTP URL.
 
 This is a list of recommendations:
 
@@ -203,5 +203,5 @@ entry in your import maps).
   and code changes made automatically by the platform that can cause unexpected
   bugs.
 
-- Once your plugin is published, please let us know!!. You can create a PR to
+- Once your plugin is published, please let us know! You can create a PR to the
   [awesome-lume repository](https://github.com/lumeland/awesome-lume).

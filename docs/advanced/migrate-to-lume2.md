@@ -4,7 +4,7 @@ description: Guide to migrate your project from Lume 1 to Lume 2
 ---
 
 This page is a brief to-do list of the main changes to make in order to migrate
-a site from Lume 1 to Lume 2. You have a more detailed description
+a site from Lume 1 to Lume 2. There is a more detailed description
 [in the announcement post](https://lume.land/blog/posts/lume-2/).
 
 ## Change your (pre)processors
@@ -34,7 +34,7 @@ site.process([".html"], fn);
 
 ## Change `.page.*` pages
 
-The subextension `.tmpl` for TypeScript/JavaScript pages was changed to `.page`
+The subextension `.tmpl` for TypeScript/JavaScript pages was changed to `.page`,
 and it's no longer required for layouts. This structure in Lume 1:
 
 ```txt
@@ -44,7 +44,7 @@ _data.js
 index.tmpl.js
 ```
 
-In Lume 2 becomes to:
+Becomes this layout in Lume 2:
 
 ```txt
 _includes/layout.js
@@ -54,8 +54,8 @@ index.page.js
 ```
 
 [This is a simple script](https://gist.github.com/oscarotero/c6404f36530cf989ec1ba65b75d41e9c)
-to rename the files automatically. To keep using `.page` as the subextension,
-you can edit the option `pageSubExtension` to the `module` and `json` plugins:
+to rename your files automatically. To keep using `.page` as the subextension,
+you can edit the option `pageSubExtension` in the `module` and `json` plugins:
 
 ```js
 import lume from "lume/mod.ts";
@@ -68,13 +68,12 @@ const site = lume({}, { modules, json });
 export default lume;
 ```
 
-## Changes in URL generation:
+## Changes in URL generation
 
 ### The `url` function
 
-If you're generating the url of the pages with the `url()` function, keep in
-mind that the property `page.src.slug` was removed. Use `page.data.basename`
-instead.
+If you're generating the url of pages with the `url()` function, keep in mind
+that the `page.src.slug` property was removed. Use `page.data.basename` instead.
 
 ```js
 // Lume 1
@@ -85,7 +84,7 @@ export const url = (page) => `/articles/${page.data.basename}/`;
 ```
 
 In Lume 2, the page passed to the function has already the default URL applied,
-which is easier to make small tweaks:
+which makes it easier to do small tweaks:
 
 ```js
 // Only in Lume 2:
@@ -183,9 +182,9 @@ HTML attribute name has changed to `transform-images`:
 
 ## Nunjucks plugin
 
-Lume 1.x enabled the nunjucks plugin by default. It is an optional plugin in
-Lume 2.x If you're using Nunjucks templates, import the plugin in your
-_config.ts file:
+Lume 1.x enabled the nunjucks plugin by default. However, it is an optional
+plugin in Lume 2.x, If you're using Nunjucks templates, import the plugin in
+your _config.ts file:
 
 ```ts
 import lume from "lume/mod.ts";
@@ -204,7 +203,7 @@ the import in your _config file.
 
 ## Searching
 
-The functions `search.page()` and `search.pages()` returns the data object
+The functions `search.page()` and `search.pages()` return the data object
 instead of the page instance:
 
 ```tsx
@@ -219,7 +218,7 @@ for (const data of search.pages("type=article")) {
 }
 ```
 
-The function `search.tags()` was removed. Use `search.values`:
+The function `search.tags()` was removed. Use `search.values()` instead:
 
 ```ts
 // Lume 1
@@ -229,7 +228,7 @@ const tags = search.tags();
 const tags = search.values("tags");
 ```
 
-The filter `data` was removed:
+The `data` filter was removed:
 
 ```html
 <!-- Lume 1 -->
@@ -241,7 +240,7 @@ The filter `data` was removed:
 
 ## JSX plugin
 
-The global object `window.React` was removed. If you have problems compiling
+The `window.React` global object was removed. If you have problems compiling
 your JSX pages, configure the JSX transformer in the `deno.json` file:
 
 ```json
@@ -259,7 +258,7 @@ your JSX pages, configure the JSX transformer in the `deno.json` file:
 ## Slugify URLs plugin
 
 If you're using the `slugify_urls` plugin, it also slugifies files copied with
-`site.copy()`. To disable it:
+`site.copy()`. To disable this behavior:
 
 ```js
 site.use(slugifyUrls({
@@ -269,7 +268,7 @@ site.use(slugifyUrls({
 
 ## Netlify CMS plugin
 
-This plugin was renamed to `decap_cms`. And the `netlifyIdentity` option was
+This plugin was renamed to `decap_cms`, and the `netlifyIdentity` option was
 renamed to `identity`:
 
 ```ts
@@ -297,7 +296,7 @@ site.use(unoCSS());
 ```
 
 > The UnoCSS plugin is not a 1:1 substitute of windiCSS. There's a comparison
-> [in this link](https://unocss.dev/presets/wind#differences-from-windi-css)
+> [here](https://unocss.dev/presets/wind#differences-from-windi-css).
 
 ## Feed plugin
 
@@ -356,9 +355,9 @@ es:
 
 ## Plugins options
 
-The option `keepDefaultPlugins` was renamed to `useDefaultPlugins` that is
-`true` by default. This affects to the plugins `postcss`, `markdown`, `mdx`,
-`remark`.
+The option `keepDefaultPlugins` was renamed to `useDefaultPlugins`, which is set
+to `true` by default. This affects the `postcss`, `markdown`, `mdx`, and
+`remark` plugins.
 
 ```ts
 // Lume 1

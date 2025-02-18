@@ -21,7 +21,7 @@ creating a deno task in the `deno.json` file:
 }
 ```
 
-In addition to the regular Lume task, we have added a new task, named **deploy**
+In addition to the regular Lume tasks, we have added a new task named **deploy**
 that executes two commands: It builds the site and uploads it to the server.
 Now, to build and deploy your site, just run:
 
@@ -32,7 +32,7 @@ deno task deploy
 ## GitHub Pages
 
 To deploy a Lume site using [GitHub Pages](https://pages.github.com/), go to
-Settings > Pages in your repo, configure the source to use GitHub Actions and
+Settings > Pages in your repo, configure the source to use GitHub Actions, then
 create the following workflow:
 
 ```yml
@@ -77,7 +77,7 @@ jobs:
 ## GitLab Pages
 
 To deploy a Lume site using
-[GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/), set a CI/CD
+[GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/), create a CI/CD
 configuration with the following code:
 
 <lume-code>
@@ -107,9 +107,9 @@ argument is not needed if you have defined the
 ## Deno Deploy
 
 [Deno Deploy](https://deno.com/deploy) is a distributed deploy system provided
-by Deno with support for static files. It requires having your repo in GitHub.
+by Deno with support for static files. It requires having your repo on GitHub.
 
-- Sign up in Deno Deploy and create a new project.
+- Sign up to Deno Deploy and create a new project.
 - Configure the Git integration to use the **GitHub Actions** deployment mode.
 - In your repository, you need an entrypoint file to serve the files. Create the
   file `serve.ts` with the following code:
@@ -164,14 +164,14 @@ jobs:
 
 ## Netlify
 
-According the
+According to the
 ["Available software at build time"](https://docs.netlify.com/configure-builds/available-software-at-build-time/#tools)
 page at Netlify's documentation website, Deno is one of several supported
-runtimes at build time. In order to build your project, you'll need to tell
+runtimes when building. In order to build your project, you'll need to tell
 Netlify which command to run at build time, which is `deno task build` in this
 case.
 
-Create `netlify.toml` file in your repository with the following code:
+Create a `netlify.toml` file in your repository with the following code:
 
 <lume-code>
 
@@ -194,7 +194,7 @@ Create `netlify.toml` file in your repository with the following code:
 
 ## Vercel
 
-[Vercel](https://vercel.com/), doesn't have Deno available by default so the
+[Vercel](https://vercel.com/), doesn't have Deno available by default, so the
 build command must install it.
 
 ```sh
@@ -246,7 +246,7 @@ Configure the output directory to `_site`.
 
 ## AWS Amplify
 
-To deploy your Lume site with [AWS Amplify](https://aws.amazon.com/amplify/)
+To deploy your Lume site with [AWS Amplify](https://aws.amazon.com/amplify/),
 create a `amplify.yml` file with the following code:
 
 <lume-code>
@@ -269,16 +269,16 @@ frontend:
 
 </lume-code>
 
-Remember to ignore `amplify.yml` file in the Lume `_config.ts` file. If you
+Remember to ignore the `amplify.yml` file in the Lume `_config.ts` file. If you
 don't want to create this file in your repository, you can configure it in the
 AWS control panel.
 
 ## Kinsta
 
-[Kinsta](https://kinsta.com/) is a hosting service that allows to host
-[up to 100 static sites for free](https://kinsta.com/static-site-hosting/). Due
-Kinsta only has support for Node, to host a Lume site you need to create the
-following `package.json` file:
+[Kinsta](https://kinsta.com/) is a hosting service that allows hosting
+[up to 100 static sites for free](https://kinsta.com/static-site-hosting/).
+Because Kinsta only has support for NodeJS, to host a Lume site you need to
+create the following `package.json` file:
 
 ```json
 {
@@ -291,7 +291,7 @@ following `package.json` file:
 }
 ```
 
-In the project settings, configure the build command to `npm run build` and the
+In the project settings, set the build command to `npm run build` and the
 publish directory to `_site`.
 
 Kinsta provides [this nice template](https://github.com/kinsta/hello-world-lume)
@@ -300,6 +300,6 @@ that you can use.
 ## Surge
 
 [Surge](https://surge.sh/) is a CLI-based static web publishing host with
-unlimited sites and custom domain. To upload your site on Surge, you need to
-install first the CLI tool with `npm install --global surge`. Then, in the
-`_dest` directory, run `surge` to login/register and upload the site.
+unlimited sites and custom domain support. To upload your site on Surge, you
+need to first install the CLI tool with `npm install --global surge`. Then, in
+the `_dest` directory, run `surge` to login/register and upload the site.
