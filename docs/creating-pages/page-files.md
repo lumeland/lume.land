@@ -1,6 +1,6 @@
 ---
 title: Page files
-description: How Lume generate your site based on the source file structure
+description: How Lume generates your site based on the source file structure
 order: 1
 ---
 
@@ -58,9 +58,9 @@ and others are configured by default to serve the `/404.html` page if the
 requested file doesn't exist. It's almost a standard when serving static sites.
 
 Pretty URLs option would convert the 404 page to `/404/index.html`, and this
-conflicts which conflicts with this standard way to serve 404 pages, so this is
-why it's disabled. Note that you can change this behavior by explicitly setting
-the `url` variable in the front matter of the page.
+conflicts with this standard way to serve 404 pages, so this is why it's
+disabled. Note that you can change this behavior by explicitly setting the `url`
+variable in the front matter of the page.
 
 ## Page date
 
@@ -68,7 +68,8 @@ All pages have a `date` variable with the file creation date. This value can be
 used to order the pages (in a blog, for example). If you want to define a
 different date, you can prepend it to the filename using the `yyyy-mm-dd` syntax
 followed by a hyphen `-` or an underscore `_` (or `yyyy-mm-dd-hh-ii-ss` if you
-also need the time). Note that this part is removed in generating the final url:
+also need the time). Note that this part is removed when generating the final
+url:
 
 ```txt
 .

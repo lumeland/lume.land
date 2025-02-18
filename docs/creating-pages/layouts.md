@@ -55,9 +55,9 @@ the title, and `content` with the rendered Markdown content of the page.
 ## Layout data
 
 Layouts can have additional data that will be merged with the data from the
-page. Note that variables defined in the pages have precedence over the
-variables in the layouts. This means that you can set default values in the
-layouts and override them within the pages.
+page. Note that variables defined in pages have precedence over the variables in
+the layouts. This means that you can set default values in the layouts and
+override them within the pages.
 
 A layout can be wrapped around another layout. Just set a `layout` variable in
 the front matter. In the following examples, the layout uses the
