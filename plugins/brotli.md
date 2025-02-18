@@ -44,7 +44,7 @@ site.use(
 ## How to serve precompressed files
 
 If you're on Deno Deploy, you can use the
-[precompress](../plugins/brotli.md) middleware that will automatically
+[precompress](./precompress.md) middleware that will automatically
 serve the `.br` version if it's available and the browser supports it.
 
 Many other web servers have the option to serve precompressed files, for example
