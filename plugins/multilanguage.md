@@ -29,7 +29,7 @@ export default site;
 ```
 
 > [!important]
-> 
+>
 > To work properly, this plugin must be registered after other plugins that
 > modify the URLs of the pages (for example, [`basePath`](./base_path.md):
 >
@@ -37,12 +37,12 @@ export default site;
 > import lume from "lume/mod.ts";
 > import basePath from "lume/plugins/base_path.ts";
 > import multilanguage from "lume/plugins/multilanguage.ts";
-> 
+>
 > site.use(basePath()); // modify url must be before
 > site.use(multilanguage({
 >   languages: ["en", "gl", "es"],
 > }));
-> 
+>
 > export default site;
 > ```
 
@@ -196,21 +196,21 @@ id: about
 
 ### Sitemap
 
-The [Sitemap plugin](./sitemap.md) is compatible with this plugin, which means the
-generated sitemap will contain the translated versions of the pages.
+The [Sitemap plugin](./sitemap.md) is compatible with this plugin, which means
+the generated sitemap will contain the translated versions of the pages.
 
 ### x-default links
 
 This plugin supports the
 [`x-default` value for unmatches languages](https://developers.google.com/search/docs/specialty/international/localized-versions#xdefault).
-This option is useful when you need to specify a fallback page for users whose language
-settings don't match any of your site's localized version.
+This option is useful when you need to specify a fallback page for users whose
+language settings don't match any of your site's localized version.
 
 - You can link to a language selector page.
 - Or to any of the translated version of the current page.
 
-To generate a `x-default` link, set a value for `unmatchedLangUrl` in your
-front matter:
+To generate a `x-default` link, set a value for `unmatchedLangUrl` in your front
+matter:
 
 ```yml
 lang: gl
@@ -299,8 +299,8 @@ es:
 ## Multilanguage pages from a single file
 
 With this plugin it's possible to export the same page multiple times, once per
-language. To configure a page as multilanguage, just set the `lang` variable
-to an array with the available languages. For example:
+language. To configure a page as multilanguage, just set the `lang` variable to
+an array with the available languages. For example:
 
 <lume-code>
 
@@ -353,7 +353,8 @@ es:
 
 ## Multilanguage + pagination
 
-Here’s an example on how to add multilanguage support to your site if you’re using the [paginate plugin](./paginate.md):
+Here’s an example on how to add multilanguage support to your site if you’re
+using the [paginate plugin](./paginate.md):
 
 <lume-code>
 

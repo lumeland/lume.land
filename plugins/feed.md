@@ -59,6 +59,7 @@ site.use(feed({
     description: "Where I put my thoughts", // The feed subtitle
     published: new Date(), // The publishing date
     lang: "en", // The language of the feed
+    hubs: undefined, // The WebSub hubs for the feed
     generator: true, // Set `true` to automatically generate the "Lume {version}"
     authorName: "Óscar Otero", // The author of the site
     authorUrl: "https://oscarotero.com", // The URL of the author

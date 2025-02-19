@@ -103,6 +103,8 @@ This is a list of all available libraries suported out of the box by the plugin:
 | [Sargam](https://sargamicons.com/)                                           | `sargam`                                                                                                       |
 | [Simpleicons](https://simpleicons.org/)                                      | `simpleicons`                                                                                                  |
 | [Tabler](https://tabler.io/icons)                                            | `tabler`                                                                                                       |
+| [Feather icons](https://feathericons.com/)                                   | `feather`                                                                                                      |
+| [Fontawesome](https://fontawesome.com/icons/) (only Free packs)              | `fontawesome`                                                                                                  |
 
 ### Use custom libraries
 
