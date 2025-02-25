@@ -83,7 +83,7 @@ they provide a better interface to organize, reuse, and even share your code
 with others.
 
 Take a look at the
-[Lume plugins repository](https://github.com/lumeland/lume/tree/master/plugins)
+[Lume plugins repository](https://github.com/lumeland/lume/tree/main/plugins)
 for more advanced examples.
 
 ## Hooks
