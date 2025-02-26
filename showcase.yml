@@ -442,3 +442,8 @@ sites:
     url: https://en.neumann.tokyo
     description: The corporate website of GK Neumann in Japan
     code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
+
+  - title: Confeitaria Petúlia
+    img: /img/showcase/petulia.webp
+    url: https://www.petulia.pt
+    description: Portuguese pastry shop website with online store
