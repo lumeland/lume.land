@@ -13,6 +13,11 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Confeitaria Petúlia
+    img: /img/showcase/petulia.webp
+    url: https://www.petulia.pt
+    description: Portuguese pastry shop website with online store
+
   - title: Masashi Kawafuji
     img: /img/showcase/masashikawafuji.webp
     url: https://kawafuji.dev/
@@ -442,8 +447,3 @@ sites:
     url: https://en.neumann.tokyo
     description: The corporate website of GK Neumann in Japan
     code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
-
-  - title: Confeitaria Petúlia
-    img: /img/showcase/petulia.webp
-    url: https://www.petulia.pt
-    description: Portuguese pastry shop website with online store
