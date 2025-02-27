@@ -6,9 +6,9 @@ tags:
   - optimization
 ---
 
-Brotli is a lossless data compression algorithm developed by Google and primarily
-used by web servers and CDNs to compress the HTTP content. It's used as an
-alternative to gzip on the web as it provides better overall compression.
+Brotli is a lossless data compression algorithm developed by Google and
+primarily used by web servers and CDNs to compress the HTTP content. It's used
+as an alternative to gzip on the web as it provides better overall compression.
 
 This plugin creates a precompressed version of your files. For example, in
 addition to `/index.html`, it creates a compressed version at `/index.html.br`.
@@ -43,9 +43,9 @@ site.use(
 
 ## How to serve precompressed files
 
-If you're on Deno Deploy, you can use the
-[precompress](./precompress.md) middleware that will automatically
-serve the `.br` version if it's available and the browser supports it.
+If you're on Deno Deploy, you can use the [precompress](./precompress.md)
+middleware that will automatically serve the `.br` version if it's available and
+the browser supports it.
 
 Many other web servers have the option to serve precompressed files, for example
 [Caddy](https://caddyserver.com/docs/caddyfile/directives/file_server#precompressed),

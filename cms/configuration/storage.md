@@ -73,14 +73,15 @@ export default cms;
 > [!note]
 >
 > If you run into `TypeError: Deno.openKv is not a function`, it means
-> `Deno.openKv() is currently an unstable API`.
-> You need to add the unstable key in deno.json ([info](https://docs.deno.com/runtime/reference/cli/unstable_flags/#configuring-flags-in-deno.json)):
+> `Deno.openKv() is currently an unstable API`. You need to add the unstable key
+> in deno.json
+> ([info](https://docs.deno.com/runtime/reference/cli/unstable_flags/#configuring-flags-in-deno.json)):
+>
 > ```
 > {
 >   "unstable": ["kv"]
 > }
 > ```
-
 
 ## GitHub
 

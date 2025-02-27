@@ -244,6 +244,13 @@ curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/render/.deno/bin/
 
 Configure the output directory to `_site`.
 
+## Statichost
+
+[Statichost](https://www.statichost.eu/) is an European static site hosting with
+Privacy and GDPR-compliancy from the ground up. To upload your site on
+statichost, configure the Docker image to `denoland/deno`, the build command
+`deno task build` and the publish directory to `_site`.
+
 ## AWS Amplify
 
 To deploy your Lume site with [AWS Amplify](https://aws.amazon.com/amplify/),
