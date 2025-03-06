@@ -43,3 +43,26 @@ Set to `false` to disable this option:
   upload: false
 }
 ```
+
+### snippets
+
+An array of custom snippets to insert in the code. Each snippet has a label and
+a value. The value can contain the `{$}` placeholder that will be replaced by
+the currently selected text.
+
+```js
+{
+  name: "content",
+  type: "markdown",
+  snippets: [
+    {
+      label: "copyright"
+      value: "© Acme inc, 2025"
+    },
+    {
+      label: "Keyboard input"
+      value: "<kbd>{$}</kbd>"
+    },
+  ]
+}
+```

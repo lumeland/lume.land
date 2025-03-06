@@ -33,3 +33,21 @@ cms.git({
   prodBranch: "master", // Change the production branch
 });
 ```
+
+## Events
+
+The Git integration triggers the following events that you can listen to perform
+additional code:
+
+- `cms:versionCreated`: A new version was created
+- `cms:versionChanged`: The user switched to a different version
+- `cms:versionPublished`: A version was published
+- `cms:versionDeleted`: A version was deleted
+
+```js
+addEventListener("cms:versionPublished", (ev) => {
+  const { name } = ev.details;
+
+  console.log(`The version ${name} was published`);
+});
+```
