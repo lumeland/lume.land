@@ -33,10 +33,10 @@ export default site;
 This plugin accepts a configuration object. The available options are:
 
 - `extensions`: Array with the extensions of the files that this plugin will
-  load. By default is `[".css"]`. instead of replacing them.
-- `options`: An object with the options for lightning-css.
-- `includes`: The directory to search for the `@import`ed files. By default it
-  is `"_includes"`. Set `false` to disable it.
+  load. The default is `[".css"]`.
+- `options`: An object with the options for Lightning CSS.
+- `includes`: The directory to search for the `@import`ed files. The default
+  is `"_includes"`. Set it to `false` to disable it.
 
 Example with the default configuration:
 
@@ -52,7 +52,6 @@ site.use(lightningCss({
   options: {
     minify: true,
     drafts: {
-      nesting: true,
       customMedia: true,
     },
     targets: {
