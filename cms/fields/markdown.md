@@ -56,11 +56,11 @@ the currently selected text.
   type: "markdown",
   snippets: [
     {
-      label: "copyright"
-      value: "© Acme inc, 2025"
+      label: "copyright",
+      value: "© Acme Inc, 2025"
     },
     {
-      label: "Keyboard input"
+      label: "Keyboard input",
       value: "<kbd>{$}</kbd>"
     },
   ]
