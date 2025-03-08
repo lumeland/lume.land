@@ -35,8 +35,8 @@ This plugin accepts a configuration object. The available options are:
 - `extensions`: Array with the extensions of the files that this plugin will
   load. The default is `[".css"]`.
 - `options`: An object with the options for Lightning CSS.
-- `includes`: The directory to search for the `@import`ed files. The default
-  is `"_includes"`. Set it to `false` to disable it.
+- `includes`: The directory to search for the `@import`ed files. The default is
+  `"_includes"`. Set it to `false` to disable it.
 
 Example with the default configuration:
 
