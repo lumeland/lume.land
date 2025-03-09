@@ -152,6 +152,7 @@ site.use(extractDate());
 ### Google fonts
 
 - The default path to export the CSS of the fonts is `/style.css`.
+- Renamed `folder` option to `fontsFolder`.
 
 ### Inline
 
@@ -205,6 +206,19 @@ site.use(extractDate());
 ### Katex
 
 - The `extension` option was removed.
+- The plugin downloads automatically the CSS and font files required to render
+  the math code (by default to `/style.css` file and `/fonts` folder but it's
+  configurable).
+  ```html
+  <!-- Lume 2 -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.css"
+  >
+
+  <!-- Lume 3 -->
+  <link rel="stylesheet" href="style.css">
+  ```
 
 ### Lightningcss
 
