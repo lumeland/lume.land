@@ -10,6 +10,8 @@ tags:
 ## Description
 
 The Picture plugin creates `<picture>` elements, adding all `<source>` as needed
+or generates the
+[`srcset` property](https://developer.mozilla.org/docs/Web/API/HTMLImageElement/srcset)
 to provide versions in different formats and resolutions for the same image. It
 uses the [`transform_images` plugin](./transform_images.md) under the hood to
 make the transformations.
@@ -62,6 +64,97 @@ output HTML code is:
 
 The plugin not only generates the HTML code but also send to the
 `transform_images` plugin the configuration to generate all these images.
+
+## Sizes
+
+It's possible to create different sizes. Keep in mind that it requires the
+[`sizes` attribute](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes):
+
+```html
+<img
+  sizes="(min-width: 640px) 18rem, 11rem"
+  src="/flowers.jpg"
+  transform-images="avif webp jpg 640 1080"
+>
+```
+
+```html
+<picture>
+  <source
+    srcset="/flowers-640w.avif 640w, /flowers-1080w.avif 1080w"
+    type="image/avif"
+    sizes="(min-width: 640px) 18rem, 11rem"
+  >
+  <source
+    srcset="/flowers-640w.webp 640w, /flowers-1080w.webp 1080w"
+    type="image/webp"
+    sizes="(min-width: 640px) 18rem, 11rem"
+  >
+  <img
+    sizes="(min-width: 640px) 18rem, 11rem"
+    src="/flowers-640w.jpg"
+    srcset="/flowers-1080w.jpg 1080w"
+  >
+</picture>
+```
+
+## Responsive images
+
+You can set the `transform-images` attribute to different sources inside a
+picture to generate responsive images:
+
+```html
+<picture>
+  <!-- version for small devices -->
+  <source
+    srcset="/flowers-detail.jpg"
+    media="(min-width: 600px)"
+    transform-images="avif webp jpg 1000@2"
+  >
+
+  <!-- version for big screens -->
+  <source srcset="/flowers-big.jpg" transform-images="avif webp jpg 1000@2">
+
+  <!-- default image -->
+  <img src="/flowers-mini.jpg" transform-images="300@2">
+</picture>
+```
+
+The plugin generates the following code:
+
+```html
+<picture>
+  <!-- version for small devices -->
+  <source
+    srcset="/flowers-1000w.avif, /flowers-1000w@2.avif 2x"
+    type="image/avif"
+    media="(min-width: 600px)"
+  >
+  <source
+    srcset="/flowers-1000w.webp, /flowers-1000w@2.webp 2x"
+    type="image/webp"
+    media="(min-width: 600px)"
+  >
+  <source
+    srcset="/flowers-1000w.jpg, /flowers-1000w@2.jpg 2x"
+    media="(min-width: 600px)"
+  >
+
+  <!-- version for big screens -->
+  <source
+    srcset="/flowers-1000w.avif, /flowers-1000w@2.avif 2x"
+    type="image/avif"
+  >
+  <source
+    srcset="/flowers-1000w.webp, /flowers-1000w@2.webp 2x"
+    type="image/webp"
+  >
+  <source srcset="/flowers-1000w.jpg, /flowers-1000w@2.jpg 2x">
+
+  <!-- default image -->
+  <img src="/flowers-300w.jpg" srcset="/flowers-300w@2.jpg 2x">
+</picture>
+```
 
 ## Configuring the img container
 
