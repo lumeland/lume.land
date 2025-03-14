@@ -9,7 +9,7 @@ tags:
 
 ## Description
 
-This plugin allows to create redirections from one page to another. It can output
+This plugin allows you to create redirections from one page to another. It can output
 Netlify and Vercel config files, JSON and HTML pages with `http-equiv="refresh"`
 meta tags.
 
