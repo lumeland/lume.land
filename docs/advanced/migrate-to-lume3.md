@@ -268,6 +268,7 @@ site.use(extractDate());
 ### OG images
 
 - The `extension` option was removed.
+- The `satori` option was renamed to `options`.
 - The `cache` option was removed. Use `LUME_NOCACHE=true` env variable to
   disable cache.
 
