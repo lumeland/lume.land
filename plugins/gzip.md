@@ -9,7 +9,7 @@ tags:
 Gzip is a file format that can be used by web servers and CDNs to compress the
 HTTP content.
 
-This plugin creates a precompressed version of your files, for example, in
+This plugin creates a precompressed version of your files. For example, in
 addition to `/index.html`, it creates a compressed version at `/index.html.gz`.
 
 ## Installation
@@ -27,22 +27,23 @@ site.use(gzip());
 export default site;
 ```
 
-By default only some text-based formats like `.html`, `.css`, `.js`, `.svg`,
+By default, only some text-based formats like `.html`, `.css`, `.js`, `.svg`,
 `.json`, etc are compressed. Binary files like images or videos are not
 compressed because most of them have their own compression. Use the `extensions`
 option to configure which extensions do you want to compress:
 
 ```js
-site.use(gzip({
-  extensions: [".html", ".css"],
-}));
+site.use(
+  gzip({
+    extensions: [".html", ".css"],
+  }),
+);
 ```
 
 ## How to serve precompressed files
 
 If you're on Deno Deploy, you can use the
-[precompress](../docs/core/server.md#precompress) middleware that automatically
-will serve the `.br` version if it's available and the browser supports it.
+[precompress](./precompress.md) middleware that will automatically serve the `.gz` version if it's available and the browser supports it.
 
 Many other web servers have the option to serve precompressed files, for example
 [Nginx](https://nginx.org/en/docs/http/ngx_http_gzip_static_module.html),
