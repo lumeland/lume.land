@@ -8,7 +8,7 @@ description: |
 community:
   title: From the community
   description: |
-    Learn [how to create plugins your own plugins](/docs/advanced/plugins/).
+    Learn [how to create your own plugins](/docs/advanced/plugins/)
 
 plugins:
   - title: lume_cleancss
