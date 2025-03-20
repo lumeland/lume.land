@@ -1,12 +1,13 @@
 ---
 title: Installation
-description: How to install and update Lume
+description: How to install and upgrade Lume
 order: 1
 ---
 
-As Lume is built with Deno, read the
-[Deno installation](https://docs.deno.com/runtime/manual#install-deno)
-instructions if you don't have it installed yet.
+## Prerequisites
+
+Lume is built with Deno, so make sure to have it [installed](https://docs.deno.com/runtime/manual#install-deno)
+if you haven't already done so.
 
 ## Setup Lume
 
@@ -21,12 +22,11 @@ This command creates the following files:
 <!-- deno-fmt-ignore-start -->
 
 `_config.ts`
-: The [Lume configuration file](../configuration/config-file.md),
+: [Lume's configuration file](../configuration/config-file.md),
 where you can customize the site build.
 
 `deno.json`
-: The
-[Deno's configuration file](https://docs.deno.com/runtime/manual/getting_started/configuration_file/).
+: [Deno's configuration file](https://docs.deno.com/runtime/manual/getting_started/configuration_file/).
 It includes the import map and some tasks to run Lume. You can also configure
 other features of Deno like TypeScript, formatter, linter, etc.
 
@@ -67,21 +67,18 @@ export default site;
 Now you can use
 [Deno's tasks](https://docs.deno.com/runtime/manual/tools/task_runner/) to run
 Lume in any environment. The command `deno task lume` runs Lume and you can add
-additional arguments. For example `deno task lume -s` runs Lume, open a local
-web server and start watching the changes.
+additional arguments. For example, `deno task lume -s` runs Lume, opens a local
+web server, and starts watching the changes.
 
 The tasks `build` (to build the website) and `serve` (to build and start a local
-server) are just shortcuts to the main `lume` task with additional arguments.
+server) are just shortcuts to the main `lume` task with additional arguments. Run `deno task lume -h` to see all commands and options.
 
-Run `deno task lume -h` to see the instructions.
-
-## Update Lume
+## Upgrade Lume
 
 The task `deno task lume upgrade` upgrades the Lume version used in your project
 folder to the latest version.
 
-Use the argument `--dev` to upgrade to the latest development version (the last
-commit in the [Github repository](https://github.com/lumeland/lume)). It's
+Use the argument `--dev` to upgrade to the latest development version (the most recent commit in the [GitHub repository](https://github.com/lumeland/lume)). It's
 useful to test new, unreleased Lume features.
 
 ## Vendoring
@@ -100,7 +97,7 @@ to define this variable:
 }
 ```
 
-Now, when you run any Lume task, all Deno dependencies will be downloaded into
+Now when you run any Lume task, all Deno dependencies will be downloaded into
 the `_vendor` folder.
 
 ## Visual Studio Code configuration
