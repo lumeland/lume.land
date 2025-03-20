@@ -76,11 +76,12 @@ site.use(slugifyUrls({
     "œ": "oe",
 }));
 ```
+
 ### Use in templates
 
-Slugify registers itself as a filter, so you can use it in templates
-where you need to link to things that may contain problematic characters, 
-like `tag` and `author` pages in generated archives.
+Slugify registers itself as a filter, so you can use it in templates where you
+need to link to things that may contain problematic characters, like `tag` and
+`author` pages in generated archives.
 
 Just use it like any other filter, an example using Vento:
 
@@ -88,5 +89,4 @@ Just use it like any other filter, an example using Vento:
 <a href="/archive/tag/{{ tag.name |> slugify }}">{{ tag.name }}</a>
 ```
 
-Which you'd also do for `author`, or anything else that needs to be 
-slugified.
+Which you'd also do for `author`, or anything else that needs to be slugified.

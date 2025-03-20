@@ -260,6 +260,17 @@ site.use(extractDate());
 ### Multilanguage
 
 - The `extension` option was removed.
+- Pages with generators and an array of languages are now correctly handled.
+
+  ```js
+  export const lang = ["en", "gl"];
+
+  export default function* ({ lang }) {
+    console.log(lang);
+    // Lume 2: ["en", "gl"]
+    // Lume 3: "en" and "gl" in two different calls
+  }
+  ```
 
 ### Nav
 

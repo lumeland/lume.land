@@ -6,8 +6,9 @@ order: 1
 
 ## Prerequisites
 
-Lume is built with Deno, so make sure to have it [installed](https://docs.deno.com/runtime/manual#install-deno)
-if you haven't already done so.
+Lume is built with Deno, so make sure to have it
+[installed](https://docs.deno.com/runtime/manual#install-deno) if you haven't
+already done so.
 
 ## Setup Lume
 
@@ -71,15 +72,17 @@ additional arguments. For example, `deno task lume -s` runs Lume, opens a local
 web server, and starts watching the changes.
 
 The tasks `build` (to build the website) and `serve` (to build and start a local
-server) are just shortcuts to the main `lume` task with additional arguments. Run `deno task lume -h` to see all commands and options.
+server) are just shortcuts to the main `lume` task with additional arguments.
+Run `deno task lume -h` to see all commands and options.
 
 ## Upgrade Lume
 
 The task `deno task lume upgrade` upgrades the Lume version used in your project
 folder to the latest version.
 
-Use the argument `--dev` to upgrade to the latest development version (the most recent commit in the [GitHub repository](https://github.com/lumeland/lume)). It's
-useful to test new, unreleased Lume features.
+Use the argument `--dev` to upgrade to the latest development version (the most
+recent commit in the [GitHub repository](https://github.com/lumeland/lume)).
+It's useful to test new, unreleased Lume features.
 
 ## Vendoring
 

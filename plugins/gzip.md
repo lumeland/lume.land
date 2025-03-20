@@ -42,8 +42,9 @@ site.use(
 
 ## How to serve precompressed files
 
-If you're on Deno Deploy, you can use the
-[precompress](./precompress.md) middleware that will automatically serve the `.gz` version if it's available and the browser supports it.
+If you're on Deno Deploy, you can use the [precompress](./precompress.md)
+middleware that will automatically serve the `.gz` version if it's available and
+the browser supports it.
 
 Many other web servers have the option to serve precompressed files, for example
 [Nginx](https://nginx.org/en/docs/http/ngx_http_gzip_static_module.html),
