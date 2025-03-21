@@ -119,7 +119,7 @@ usage:
       <ul>
       <% for (const item of items) { %>
         <li><%= item %></li>
-      <% }) %>
+      <% } %>
       </ul>
       ```
 
