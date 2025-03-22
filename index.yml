@@ -401,6 +401,15 @@ support:
 testimonials:
   title: What do people say about Lume?
   quotes:
+    - url: https://bsky.app/profile/muens.io/post/3lkv56jbbjk2k
+      author: Philipp (@muens.io)
+      avatar: /img/avatars/testimonials/muensio.webp
+      date: March 21, 2025
+      text: |
+        Just ported my personal website (muens.io) from Astro to <a href="https://bsky.app/profile/lume.land">@lume.land</a> and boy what a delightful experience that was.<br><br>
+        So if you haven't checked lume.land already, then I highly encourage you to do so!<br><br>
+        Also Deno is an absolutely amazing JavaScript Runtime you should take a look at as well.
+
     - url: https://x.com/kamilogorek/status/1881632439388532799
       author: Kamil Ogórek (@kamilogorek)
       avatar: /img/avatars/testimonials/kamilogorek.webp
