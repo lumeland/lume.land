@@ -415,7 +415,18 @@ site.use(extractDate());
 
 ### Tailwind
 
-- Upgraded to Tailwind v4.
+- Upgraded to Tailwind v4. See
+  [Upgrade guide](https://tailwindcss.com/docs/upgrade-guide) to know how to
+  migrate your CSS code. For example:
+  ```css
+  /* Lume 2 (with Tailwind 3) */
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  /* Lume 3 (with Tailwind 4) */
+  @import "tailwindcss";
+  ```
 - The `extension` option was removed.
 - The plugin no longer depends on `postcss`:
   ```js
@@ -426,8 +437,8 @@ site.use(extractDate());
   // Lume 3
   site.use(tailwind()); // No longer requires postcss
   ```
-- This plugin no longer load all `.css` files. Use `site.add()` to include only
-  the files that you want to process.
+- This plugin no longer load all `.css` files. Use `site.add()` to include the
+  CSS files that you want to process.
   ```js
   // Lume 2
   site.use(tailwind());
