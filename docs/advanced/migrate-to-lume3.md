@@ -203,6 +203,19 @@ site.use(extractDate());
   }
   ```
 
+- Lume pages created with JSX and TSX now use the `.page` subextension by
+  default. For example, the page `/index.tsx` must be renamed to
+  `/index.page.tsx`. This allows to better differentiate between Lume pages
+  (`.page.tsx`) and JSX files for the browser. If you don't need this
+  differentiation and want to keep the same behavior of Lume 2, configure the
+  plugin to don't use the subextension:
+
+  ```js
+  site.use(jsx({
+    pageSubExtension: "", // to remove the default .page subextension
+  }));
+  ```
+
 ### Katex
 
 - The `extension` option was removed.
