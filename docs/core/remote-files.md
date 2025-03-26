@@ -89,10 +89,9 @@ Some template engines have their own way of loading templates. For example, Pug
 uses `extends "filename"`, Vento uses `{{ include "filename" }}`, Liquid and
 Nunjucks use `{% include "filename" %}`, etc.
 
-The template engines [Eta](../../plugins/eta.md),
-[Liquid](../../plugins/liquid.md) and [Pug](../../plugins/pug.md) don't allow
-customizing how they load files, hence they cannot include remote files. If you
-want to use remote templates, [Vento](../../plugins/vento.md) or
+The template engines [Eta](../../plugins/eta.md) and [Pug](../../plugins/pug.md)
+don't allow customizing how they load files, hence they cannot include remote
+files. If you want to use remote templates, [Vento](../../plugins/vento.md) or
 [Nunjucks](../../plugins/nunjucks.md) are good options.
 
 ### Cache files

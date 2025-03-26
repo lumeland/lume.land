@@ -109,6 +109,40 @@ const site = lume({
 });
 ```
 
+### cssFile
+
+Lume components and some plugins (like katex, prism, or google fonts) can
+generate CSS code. This option allows to configure globally the filename used to
+output that code.
+
+```ts
+const site = lume({
+  cssFile: "/style.css", // This is the default value
+});
+```
+
+### jsFile
+
+Lume components can generate JavaScript code. This option allows to configure
+globally the filename used to output that code.
+
+```ts
+const site = lume({
+  jsFile: "/script.css", // This is the default value
+});
+```
+
+### fontsFolder
+
+Some plugins like Google Fonts or Katex can output font files. This option
+allows to configure globally the folder where these files are saved.
+
+```ts
+const site = lume({
+  fontsFolder: "/fonts", // This is the default value
+});
+```
+
 ### caseSensitiveUrls
 
 Lume prevents saving two pages with the same URL. By default pages with the same

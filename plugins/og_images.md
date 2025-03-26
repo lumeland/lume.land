@@ -54,12 +54,26 @@ layouts per directory.
 ### Satori library
 
 **Satori** is the library used to generate the images and
-[only accepts JSX elements](https://github.com/vercel/satori?tab=readme-ov-file#jsx)
-(or React-elements-like objects). For example:
+[only accepts JSX elements](https://github.com/vercel/satori?tab=readme-ov-file#jsx),
+so make sure you have SSX configured correctly in `deno.json`:
+
+<lume-code>
+
+```json {title="deno.json"}
+{
+  // ...
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "npm:@lumeland/ssx"
+  }
+}
+```
+
+</lume-code>
+
+Now, you can create the layout to generate the images. For example:
 
 ```jsx
-/** @jsxImportSource npm:react@18.2.0 */
-
 export default function ({ title, description }) {
   return (
     <div
@@ -112,7 +126,7 @@ import { read } from "lume/core/utils/read.ts";
 
 /** Example with the default values */
 site.use(openGraphImages({
-  satori: {
+  options: {
     width: 1200,
     height: 600,
     fonts: [

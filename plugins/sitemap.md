@@ -82,7 +82,7 @@ site.preprocess([".html"], (pages) => {
 
 // Configure the plugin to use the variable
 site.use(sitemap({
-  lastmod: "lastmod",
+  lastmod: "=lastmod",
 }));
 ```
 

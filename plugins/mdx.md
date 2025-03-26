@@ -15,33 +15,17 @@ extension.
 
 ## Installation
 
-The MDX plugin depends on a JSX plugin to work. Use it together with
-[jsx](./jsx.md) or [jsx_preact](./jsx_preact.md) plugin depending on whether you
-want to use React or Preact.
-
-This is an example with Preact:
+Import this plugin in your `_config.ts` file to use it:
 
 ```js
 import lume from "lume/mod.ts";
-import jsx from "lume/plugins/jsx_preact.ts";
 import mdx from "lume/plugins/mdx.ts";
 
 const site = lume();
 
-site.use(jsx());
 site.use(mdx(/* Options */));
 
 export default site;
-```
-
-By default, Deno uses React to render JSX. If you want to use the `jsx_preact`
-plugin, add the following to your `deno.json` file:
-
-```json
-"compilerOptions": {
-  "jsx": "react-jsx",
-  "jsxImportSource": "npm:preact"
-}
 ```
 
 ## Plugins
@@ -53,13 +37,11 @@ default it uses the _GitHub-flavored markdown_, but you can use the
 ```js
 import lume from "lume/mod.ts";
 import mdx from "lume/plugins/mdx.ts";
-import jsx from "lume/plugins/jsx.ts";
 import a11yEmoji from 'npm:@fec/remark-a11y-emoji';
 import rehypeRemoveComments from 'npm:rehype-remove-comments@5';
 
 const site = lume();
 
-site.use(jsx());
 site.use(mdx({
   remarkPlugins: [allyEmoji]
   rehypePlugins: [rehypeRemoveComments]
@@ -88,6 +70,11 @@ This is a markdown file with the title **{ title }**.
 <Image alt="foo" />
 ```
 
+> [!note]
+>
+> If you want to use JSX components, you need to install the
+> [JSX plugin](./jsx.md).
+
 MDX is designed to work with JSX components. If you use a component that returns
 the HTML code as string (for example a nunjucks component) it will be escaped.
 To avoid that, you have to use the `dangerouslySetInnerHTML` attribute.
@@ -115,11 +102,9 @@ For example, to convert all `h1` to `h2`:
 ```js
 import lume from "lume/mod.ts";
 import mdx from "lume/plugins/mdx.ts";
-import jsx from "lume/plugins/jsx.ts";
 
 const site = lume();
 
-site.use(jsx());
 site.use(mdx({
   components: {
     h1: "h2",

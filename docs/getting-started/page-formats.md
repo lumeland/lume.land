@@ -113,8 +113,7 @@ to see more info about all available formats. Some of them are installed by
 default (like [Vento](/plugins/vento.md), [YAML](/plugins/yaml.md),
 [Modules](/plugins/modules.md) etc), and others need to be installed in your
 `_config.ts` file (like [Nunjucks](/plugins/nunjucks.md),
-[Eta](/plugins/eta.md), [JSX](/plugins/jsx.md), [Liquid](/plugins/liquid.md), or
-[Pug](/plugins/pug.md)).
+[Eta](/plugins/eta.md), [JSX](/plugins/jsx.md), or [Pug](/plugins/pug.md)).
 
 ## Data model
 

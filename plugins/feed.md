@@ -104,7 +104,7 @@ site.use(feed({
 }));
 ```
 
-As of Lume 2.4, it's possible to define fallbacks for every value. For example:
+It's also possible to define fallbacks for every value. For example:
 `=title || $h1 || Default title` will try to get the value from the `title`
 variable, if it doesn't exist, get the value from the `h1` CSS selector, and if
 it doesn't exist, use the `Default title` value.
@@ -120,5 +120,30 @@ site.use(feed({
 site.use(feed({
   output: "/articles.rss",
   // Articles feed configuration
+}));
+```
+
+## Dynamic configuration
+
+Sometimes you want to generate feeds based on data you don't know in advance.
+For example, let's say you want to create a RSS feed per tag of your blog. In
+these cases you can use a function that returns an array of configurations
+dynamically:
+
+```ts
+site.use(feed(() => {
+  // Get all tags used in the site
+  const tags = site.search.values("tag");
+
+  // Return a configuration object per tag:
+  return tags.map((tag) => {
+    return {
+      output: `/tag/${tag}.xml`,
+      query: tag,
+      info: {
+        title: `Posts with the tag "${tag}"`,
+      },
+    };
+  });
 }));
 ```

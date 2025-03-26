@@ -22,6 +22,7 @@ import sass from "lume/plugins/sass.ts";
 const site = lume();
 
 site.use(sass(/* Options */));
+site.add("style.scss"); //Add the entry point(s)
 
 export default site;
 ```

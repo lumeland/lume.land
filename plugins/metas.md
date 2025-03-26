@@ -28,8 +28,8 @@ keyword of every page and the supported values are:
   `["white", "black"]`).
 - `robots`: Configuration for search engines (a boolean to enable/disable or a
   string with a custom value).
-- `generator`: The software that generated the page (Lume v1.x). It can be true
-  to autogenerate or a string with a custom value.
+- `generator`: The software that generated the page (Lume vx.x). It's `true` by
+  default. You can set a string with a custom value or `false` to disable it.
 
 ## Installation
 

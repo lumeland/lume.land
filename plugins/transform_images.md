@@ -33,6 +33,7 @@ import transformImages from "lume/plugins/transform_images.ts";
 const site = lume();
 
 site.use(transformImages(/* Options */));
+site.add("/img"); // Add all image files
 
 export default site;
 ```
@@ -176,20 +177,5 @@ transformImages:
 ## Cache
 
 This plugin saves the transformed images in the `_cache` folder to improve the
-build speed. If you want to disable the cache, set its option to `false`.
-
-```js
-import lume from "lume/mod.ts";
-import transformImages from "lume/plugins/transform_images.ts";
-
-const site = lume();
-
-site.use(transformImages({
-  cache: false, // Disable cache
-}));
-
-export default site;
-```
-
-This option allows customizing the cache folder. For example:
-`cache: "_image-cache"`.
+build speed. If you don't want to use the cache, use the `LUME_NOCACHE=true`
+environment variable.
