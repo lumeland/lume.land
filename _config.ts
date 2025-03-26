@@ -40,8 +40,11 @@ site
   .ignore("CONTRIBUTING.md")
   .ignore("README.md")
   .ignore("scripts")
-  .copy("static", ".")
-  .copy("_redirects")
+  .add("static", ".")
+  .add("_redirects")
+  .add("img")
+  .add("styles")
+  .add("main.js")
   .use(codeHighlight({
     languages: {
       vento: ventoLang,
@@ -56,7 +59,6 @@ site
     cssFile: "/styles/main.css",
   }))
   .use(favicon())
-  .use(inline())
   .use(ogImages())
   .use(metas())
   .use(esbuild({
@@ -66,6 +68,7 @@ site
   .use(transformImages())
   .use(sitemap())
   .use(icons())
+  .use(inline())
   .use(checkUrls({
     external: false,
     ignore: [
@@ -93,7 +96,6 @@ site
     "static/docsearch/style.css",
     "https://cdn.jsdelivr.net/npm/@docsearch/css@3.8.2/dist/style.css",
   )
-  .copy("img/contrib.svg")
   .remoteFile(
     "img/contrib.svg",
     "https://contrib.rocks/image?repo=lumeland/lume",

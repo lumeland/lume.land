@@ -16,16 +16,13 @@ This is a high-level description of how Lume builds your site. When you run
    extension, like `.md`, `.vto`, etc.
    - Skip files and folders starting with `_`, `.`, or ignored with
      `site.ignore()`.
-   - If the file
-     [must be copied statically](../configuration/copy-static-files.md),
-     calculate the source and destination paths.
    - If the name of the file is `_data` or is inside a `_data` folder, it is
      shared data.
    - If the file is inside a `_components` folder, it is a component.
    - If it has a known extension, it's a page.
-   - Otherwise, ignore it (or copy it if
-     [`copyRemainingFiles`](../configuration/copy-static-files.md#copy-remaining-files)
-     is enabled).
+   - If the file [must be added](../configuration/add-files.md), calculate the
+     source and destination paths.
+   - Otherwise, ignore it.
 6. Dispatch the `beforeRender` [event](../core/events.md).
 7. Group all pages by [`renderOrder` value](../core/render-order.md) and sort
    them.

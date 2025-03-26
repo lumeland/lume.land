@@ -10,10 +10,9 @@ etc.) and using layouts to add the remaining HTML code.
 
 However, sites have more files than just HTML pages. We need CSS for styling,
 JavaScript for interaction, images, videos, etc. These files are known as
-"assets" and Lume has two ways to handle them. Let's start with the simplest
-one: copy them.
+"assets" and we need to configure Lume to add them.
 
-## Copying assets
+## Add files
 
 Let's say we want to apply some styles to our site. Create the file
 `/styles.css` with some CSS code:
@@ -78,7 +77,7 @@ export default site;
 
 The `site` variable is the Lume instance responsible for building our site. It
 contains several functions to configure how our site is built, and one of these
-functions is `copy()` which allows us to define the files we want to copy.
+functions is `add()` which allows us to define the files we want to add.
 
 <lume-code>
 
@@ -87,7 +86,7 @@ import lume from "lume/mod.ts";
 
 const site = lume();
 
-site.copy("/styles.css");
+site.add("/styles.css");
 
 export default site;
 ```
@@ -99,6 +98,6 @@ are applied to all HTML pages.
 
 > [!tip]
 >
-> The `copy()` function is very powerful, it allows you to copy files by name or
-> extension, copy folders, change the output name, etc. See the
-> [`copy` documentation](../configuration/copy-static-files.md) to learn more.
+> The `add()` function is very powerful, it allows you to add files by name or
+> extension, add folders, change the output name, etc. See the
+> [`add` documentation](../configuration/add-files.md) to learn more.

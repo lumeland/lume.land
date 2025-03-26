@@ -54,29 +54,16 @@ take `my-styles.css` as an example:
 3. Run processors
 4. Save the output file as `/my-styles.css`.
 
-Lume doesn't load any assets by default. Use the function `site.loadAssets()` to
+Lume doesn't load any assets by default. Use the function `site.add()` to
 configure Lume to load some extensions as page assets. For example:
 
 ```ts
-// Load .css files
-site.loadAssets([".css"]);
+// Add .css files
+site.add([".css"]);
+
+// Add all files from the "/static/" directory
+site.add("static");
 ```
-
-For assets that require special handling, such as binary files (e.g., `.webp`),
-you need to specify the loader when calling `site.loadAssets()`. If no loader is
-specified, Lume defaults to using the text loader.
-
-```ts
-// Load binary files
-site.loadAssets([".webp"], binaryLoader);
-```
-
-> [!note]
->
-> If you're using any plugin to process assets, like
-> [postcss](../../plugins/postcss.md), [esbuild](../../plugins/esbuild.md) or
-> [svgo](../../plugins/svgo.md), then you don't need to run `site.loadAssets()`
-> because the plugin will do it for you.
 
 ## Data files
 
@@ -88,21 +75,6 @@ additional data formats, use `site.loadData()` function:
 ```ts
 // Load .toml files
 site.loadData([".toml"], tomlLoader);
-```
-
-## Static files
-
-These are files that are exported to the `dest` folder but don't need to be
-processed, so Lume doesn't load the content, but only copies them. They are
-copied as-is using the `site.copy()` function.
-[See more about copy](../configuration/copy-static-files.md).
-
-```ts
-// Copy all files from the "/static/" directory
-site.copy("static");
-
-// Copy .pdf files
-site.copy([".pdf"]);
 ```
 
 ## Includes

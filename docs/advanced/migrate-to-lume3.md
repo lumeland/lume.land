@@ -1,7 +1,6 @@
 ---
 title: Migrate to Lume 3
 description: Guide to migrate your project from Lume 2 to Lume 3
-draft: true
 ---
 
 This page is a brief to-do list of the main changes to make in order to migrate

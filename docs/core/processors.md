@@ -10,7 +10,7 @@ rendered**. Let's see an example of a processor to minify HTML pages:
 ```js
 function minifyHTML(pages) {
   for (const page of pages) {
-    page.content = minify(page.content);
+    page.text = minify(page.text);
   }
 }
 ```
@@ -33,7 +33,9 @@ content, as well as much more data:
 ```js
 function process(pages) {
   for (const page of pages) {
-    page.content; // The content of the page
+    page.text; // The content of the page (as string)
+    page.bytes; // The content of the page (as Uint8Array)
+    page.content; // The content of the page (as string or Uint8Array)
     page.document; // The parsed HTML code, to use the DOM API
     page.src; // The info about the source file of this page
     page.data; // All data available for this page (front matter merged with _data)
@@ -48,7 +50,7 @@ For example, let's say you only want to minify the pages where the value
 site.process([".html"], (pages) => {
   for (const page of pages) {
     if (page.data.minify) {
-      page.content = minify(page.content);
+      page.text = minify(page.text);
     }
   }
 });
@@ -81,7 +83,7 @@ compile CSS, minify JavaScript code or minify images.
 ```js
 site.process([".js"], function (pages) {
   for (const page of pages) {
-    page.content = myBundler(page.content);
+    page.text = myBundler(page.text);
 
     // Append .min to the filename
     // so it will be saved as example.min.js
@@ -89,12 +91,6 @@ site.process([".js"], function (pages) {
   }
 });
 ```
-
-> [!note]
->
-> Make sure the file extension that you want to process is previously loaded.
-> See [how to load assets](./concepts.md#asset-pages) for more information about
-> how to register a new loader.
 
 ## Preprocess
 
@@ -108,7 +104,7 @@ Let's create a preprocessor to include a variable with the source filename:
 ```js
 site.preprocess([".html"], (pages) => {
   for (const page of pages) {
-    page.data.filename = page.src.path + page.src.ext;
+    page.data.filename = page.sourcePath;
   }
 });
 ```
@@ -125,10 +121,10 @@ import { Page } from "lume/core/file.ts";
 site.process([".css"], (filteredPages, allPages) => {
   for (const page of filteredPages) {
     // Minify the css content
-    const { code, map } = myCssMinifier(page.content);
+    const { code, map } = myCssMinifier(page.text);
 
     // Update the page content
-    page.content = code;
+    page.text = code;
 
     // Create a new page with the source map
     const pageMap = Page.create({
@@ -178,4 +174,10 @@ first argument:
 
 ```js
 site.process("*", processAllPages);
+```
+
+This is also equivalent to omit the first argument:
+
+```js
+site.process(processAllPages);
 ```

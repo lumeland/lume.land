@@ -22,14 +22,23 @@ This indicates that if the file `styles.css` **doesn't exist locally**, the
 remote URL must be used. Note that the file **won't be saved in the project
 folder**, but it's in memory.
 
-If you want to copy this file statically:
+If you want to add this file to your site:
 
 ```js
-site.copy("styles.css");
+site.add("styles.css");
 ```
 
 Because the file doesn't exist in your local folder, Lume will download the file
 from the URL and save it in the dest folder.
+
+> [!note]
+>
+> An easier way to add remote files is passing the URL directly to the `add()`
+> function. For example:
+>
+> ```
+> site.add("https://example.com/theme/styles.css", "styles.css")
+> ```
 
 The `postcss` plugin supports Lume's remote files, so you can import this file
 in your CSS with:
@@ -88,7 +97,7 @@ want to use remote templates, [Vento](../../plugins/vento.md) or
 
 ### Cache files
 
-As of Lume 1.17.4, files are automatically cached using the
+Files are automatically cached using the
 [Web Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache), so they
 are requested only the first time and then network access is no longer needed.
 It's possible to disable the cache for a specific file by removing the cached

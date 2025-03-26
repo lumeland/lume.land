@@ -120,9 +120,9 @@ is only compatible with Linux.
 
 ### includes
 
-It's a special folder used by default by the template engines and some
-processors (like sass or postcss) to look for the included files. By default is
-`_includes` and this value is relative to the `src` folder.
+It's a special folder used by default by the template engines and some plugins
+(like sass or postcss) to look for the included files. By default is `_includes`
+and this value is relative to the `src` folder.
 
 As an example, if the `src` folder is `./src` and the includes folder is
 configured to `_includes`, Lume will look for the included files at
@@ -160,17 +160,9 @@ const site = lume({
 
 ### page404
 
-This option allows configuring the HTML page to displayed for 404 errors. By
+This option allows configuring the HTML page displayed for 404 errors. By
 default it is `/404.html`. If you are building a SPA with dynamic URLs, you may
 want to change it to `/index.html`.
-
-```ts
-const site = lume({
-  server: {
-    page404: "./not-found.html",
-  },
-});
-```
 
 ### open
 
@@ -238,10 +230,9 @@ const site = lume({
 
 ## Components options
 
-The `components` object allows to configure the components load and output
-files.
+The `components` object allows to configure the output files of
+[Lume components](../core/components.md).
 
-- **variable:** The variable name used to access to the loaded components.
 - **cssFile:** The file name to export the CSS code of the components.
 - **jsFile:** The file name to export the JS code of the components.
 - **placeholder:** A string used as placeholder to replace the content with the
@@ -252,7 +243,6 @@ import lume from "lume/mod.ts";
 
 const site = lume({
   components: {
-    variable: "comp",
     cssFile: "/components.css",
     jsFile: "/components.js",
   },

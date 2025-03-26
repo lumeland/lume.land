@@ -4,7 +4,7 @@ description: How to use Lume plugins for common tasks
 order: 9
 ---
 
-In the previous step, we learned how Lume can load assets and process them.
+In the previous step, we learned how Lume can add files and process them.
 Fortunately, you won't need to do this very often, because many common
 operations that you may want to do are already implemented in Lume in the form
 of [plugins](/plugins/).
@@ -32,13 +32,15 @@ import lume from "lume/mod.ts";
 import lightningCSS from "lume/plugins/lightningcss.ts";
 
 const site = lume();
+
+site.add("/styles.css");
 site.use(lightningCSS());
 
 export default site;
 ```
 
-That's all! All the logic to configure Lume to load `.css` files and process
-them is hidden behind the plugin. Your `_config.ts` file is now much more clean.
+That's all! All the logic to configure Lume to process `.css` files is hidden
+behind the plugin. Your `_config.ts` file is now much more clean.
 
 > [!tip]
 >
