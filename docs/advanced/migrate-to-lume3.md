@@ -91,24 +91,44 @@ const site = lume({
 
 ## Plugins order
 
-In Lume 3, the order of the plugins matter. For example, in Lume 2 the `sitemap`
-plugin is executed always at the end:
+In Lume 3, the order of the plugins matter.
+
+In the following example, the `prism` plugin is registered after `brotli`. In
+Lume 2 the `brotli` plugin is executed always at the end of the build, no matter
+in what order it has been registered.
 
 ```js
 // Lume 2
-site.use(sitemap()); // Executed always at the end of the build
-site.use(basePath()); // Executed during the build (before sitemap)
+site.use(brotli()); // Executed always at the end of the build
+
+// Executed during the build
+site.use(prism({
+  theme: [{
+    name: "tomorrow",
+    cssFile: "css/prism.css",
+  }],
+}));
 ```
 
-In Lume 3 almost all plugins are executed in the same position they are
-registered, so if you have some issue upgrading from Lume 2 to Lume 3, make sure
-the order of the plugins is correct:
+In Lume 3 (almost) all plugins are executed in the same position they are
+registered. In the example, due `brotli` is executed before `prism`, the CSS
+file doesn't exist yet, and the HTML files haven't been processed yet by Prism.
+To fix it, change the plugins order:
 
 ```js
-// Lume 3
-site.use(basePath()); // Executed in 1st position
-site.use(sitemap()); // Executed in 2nd position (after basePath)
+// Process the HTML code and generate the CSS file
+site.use(prism({
+  theme: [{
+    name: "tomorrow",
+    cssFile: "css/prism.css",
+  }],
+}));
+
+site.use(brotli()); // Compress the HTML and CSS
 ```
+
+If you have some issue upgrading from Lume 2 to Lume 3, make sure the order of
+the plugins is correct:
 
 ## Dates in filepaths
 
