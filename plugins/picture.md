@@ -18,7 +18,7 @@ make the transformations.
 
 ## Installation
 
-Import this plugin in your `_config.ts` file to use it and register it before
+Import this plugin in your `_config.ts` file to use it and make sure to register it **exactly** above
 `transform_images`:
 
 ```js
@@ -62,8 +62,8 @@ output HTML code is:
 </picture>
 ```
 
-The plugin not only generates the HTML code but also send to the
-`transform_images` plugin the configuration to generate all these images.
+The plugin not only generates the HTML code but also sends the configuration
+to the `transform_images` plugin to generate all these images.
 
 ## Sizes
 
@@ -161,8 +161,8 @@ The plugin generates the following code:
 If the `transform-images` attribute is assigned to a HTML element that is not an
 image, the plugin will search for all `img` elements found inside that element.
 This is useful if you don't want to include this attribute in every `<img>`
-element, because you want to avoid repetition if all images has the same
-configuration, or the html content is generated from markdown content that you
+element, because you want to avoid repetition if all images have the same
+configuration, or the HTML content is generated from markdown content that you
 want to keep clean.
 
 ```html
