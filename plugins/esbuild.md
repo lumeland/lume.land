@@ -23,6 +23,7 @@ import esbuild from "lume/plugins/esbuild.ts";
 const site = lume();
 
 site.use(esbuild(/* Options */));
+site.add("script.ts"); //Add the files to process
 
 export default site;
 ```
@@ -32,95 +33,52 @@ export default site;
 The available options are:
 
 - **extensions**: Array with the extensions of the files that this plugin will
-  handle. By default it is `[".js", ".ts"]`.
+  handle. By default it is `[".js", ".ts", ".jsx", ".tsx"]`.
 - **options**: The options to pass to the esbuild library.
   [See the esbuild documentation](https://esbuild.github.io/api/#simple-options).
-- **esm**: Options to pass to requests to `esm.sh`.
+- **denoConfig**: Options to pass to Deno to resolve the NPM and JSR
+  dependencies.
 
-Example with the default options:
+## denoConfig
+
+If you need to specify an import map or compile JSX files, it's recomended to
+create a `deno.json` file with the front-end configuration, that can be used by
+the plugin and the code editor.
+
+For example, let's say your project has the following structure:
 
 ```js
+|_ deno.json
+|_ _config.ts
+|_ app/
+  |_ deno.json
+  |_ main.tsx
+  |_ components/
+    |_ button.tsx
+    |_ header.tsx
+```
+
+The root of your project has the files that you already know: `deno.json` to
+configure Deno and `_config.ts` to configure Lume. The `app` folder has the code
+that need to be processed by esbuild. But the Deno configuration may be
+different (you may want to place there an import map with all npm dependencies,
+or configure a different JSX library to frontend, like React or Preact). So we
+have another `deno.json` file there.
+
+Now, you have to configure the plugin to load this deno config, that will be
+used to resolve the dependencies and compile the JSX files (The plugin uses the
+official [esbuild-deno-loader](https://jsr.io/@luca/esbuild-deno-loader) under
+the hood).
+
+Because we want to use `main.tsx` as the entry point, only this file needs to be
+added. The plugin can will resolve and include all imports.
+
+```js
+site.add("app/main.tsx");
 site.use(esbuild({
-  extensions: [".ts", ".js"],
-  options: {
-    plugins: [],
-    bundle: true,
-    format: "esm",
-    minify: true,
-    keepNames: true,
-    platform: "browser",
-    target: "esnext",
-    treeShaking: true,
-    outdir: "./",
-    outbase: ".",
-  },
+  denoConfig: "app/deno.json",
 }));
 ```
-
-## ESM
-
-This plugin converts any module imported from `npm:` or `jsr:` to `esm.sh`. For
-example, the following code:
-
-```js
-import classNames from "npm:classnames";
-import { concat } from "jsr:@std/bytes/concat";
-```
-
-is converted to:
-
-```js
-import classNames from "https://esm.sh/classnames";
-import { concat } from "https://esm.sh/classnames/jsr/@std/bytes/concat";
-```
-
-You can use the `esm` key to add parameters to some packages. See the
-[esm.sh docs](https://esm.sh/#docs) for more info.
-
-For example, let's say you are using
-[react-table](https://www.npmjs.com/package/react-table) in your code, that is a
-CJS package.
-
-```js
-import { useTable } from "npm:react-table";
-```
-
-ESM.sh not always can resolve modules from CJS to ESM, so you may get an error
-like `react-table not provide an export named useTable`. You can specify the
-export names to this package with the `cjsExports` parameter:
-
-```js
-site.use(esbuild({
-  extensions: [".jsx"],
-  esm: {
-    cjsExports: {
-      "react-table": ["useTable"],
-    },
-  },
-}));
-```
-
-The available options for `esm` are:
-
-- `cjsExports`: To specify the modules exported by a CJS package.
-- `dev`: To include the `?dev` flag to all packages. Example:
-  ```js
-  site.use(esbuild({
-    esm: {
-      dev: true,
-    },
-  }));
-  ```
-- `deps`: To specify the dependencies of a specific package.
-  ```js
-  site.use(esbuild({
-    esm: {
-      deps: {
-        swr: "react@17.0.2",
-      },
-    },
-  }));
-  ```
 
 ## Hooks
 

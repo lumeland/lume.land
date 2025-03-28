@@ -59,14 +59,3 @@ Prepending the `/blog/` prefix:
 ```html
 <a href="/blog/articles/my-second-article/">Go to the second article</a>
 ```
-
-## Modify URLs inside CSS files
-
-By default, the plugin only checks HTML pages. You can use the `extensions`
-option to extend it to `.css` files.
-
-```js
-site.use(basePath({
-  extensions: [".html", ".css"], // Fix URLs inside HTML and CSS files
-}));
-```

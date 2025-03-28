@@ -53,8 +53,9 @@ export default site;
     "serve": "deno task lume -s"
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.0.0/"
+    "lume/": "https://deno.land/x/lume@v3.0.0/"
   },
+  "unstable": ["temporal"],
   "compilerOptions": {
     "types": [
       "lume/types.ts"

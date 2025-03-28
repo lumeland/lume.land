@@ -37,9 +37,21 @@ your TypeScript files.
 
 ### TSX pages
 
-To create pages and layouts with TSX, you can either use the Lume
-[JSX](/plugins/jsx/) ([React](https://reactjs.org/)) or
-[JSX Preact](/plugins/jsx_preact/) ([Preact](https://preactjs.com/)) plugins.
+To create pages and layouts with TSX, you can either the Lume
+[JSX](/plugins/jsx/) plugin and configure the `deno.json` file:
+
+```jsonc
+{
+  // ...other configuration
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "npm:@lumeland/ssx",
+    "types": [
+      "lume/types.ts"
+    ]
+  }
+}
+```
 
 ## TypeScript in Templates
 
@@ -48,7 +60,7 @@ that you can use in your pages. For example:
 
 <lume-code>
 
-```ts {title="index.tsx"}
+```tsx {title="index.tsx"}
 export default (data: Lume.Data, filters: Lume.Helpers) => {
   const { title, date } = data;
 
@@ -67,7 +79,7 @@ You can also extend the interface with your own types, for example:
 
 <lume-code>
 
-```ts {title="custom.tsx"}
+```tsx {title="custom.tsx"}
 // Your own interface
 interface MyData {
   description?: string;

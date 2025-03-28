@@ -49,8 +49,8 @@ something like this:
 
 ### 404.html
 
-The page `/404.html` is a special case and pretty URLs are not applied here. The
-reason is most servers and static hosting websites like
+The page `/404.html` is a special case and the pretty URLs configuration is not
+applied here. The reason is most servers and static hosting websites like
 [Vercel](https://vercel.com/guides/custom-404-page#static-site-generator-(ssg)),
 [Netlify](https://docs.netlify.com/routing/redirects/redirect-options/#custom-404-page-handling),
 [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
@@ -61,34 +61,6 @@ Pretty URLs option would convert the 404 page to `/404/index.html`, and this
 conflicts with this standard way to serve 404 pages, so this is why it's
 disabled. Note that you can change this behavior by explicitly setting the `url`
 variable in the front matter of the page.
-
-## Page date
-
-All pages have a `date` variable with the file creation date. This value can be
-used to order the pages (in a blog, for example). If you want to define a
-different date, you can prepend it to the filename using the `yyyy-mm-dd` syntax
-followed by a hyphen `-` or an underscore `_` (or `yyyy-mm-dd-hh-ii-ss` if you
-also need the time). Note that this part is removed when generating the final
-url:
-
-```txt
-.
-├── index.md                          => /index.html
-└── posts
-    └── 2020-06-21_hello-world.md     => /posts/hello-world/index.html
-    └── 2020-06-22_my-second-post.md  => /posts/my-second-post/index.html
-```
-
-Dates can be defined in folders, so it's shared by all pages inside:
-
-```txt
-.
-├── index.md                          => /index.html
-└── posts
-    └── 2020-06-21_hello-world/
-        └── index.md     => /posts/hello-world/index.html
-        └── other.md     => /posts/hello-world/other/index.html
-```
 
 ## Changing the output URL
 

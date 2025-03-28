@@ -23,6 +23,7 @@ import postcss from "lume/plugins/postcss.ts";
 const site = lume();
 
 site.use(postcss(/* Options */));
+site.add("style.css"); //Add the entry point(s)
 
 export default site;
 ```

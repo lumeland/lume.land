@@ -50,29 +50,17 @@ site:
 All pages in the subfolder (and sub-subfolders) will have the latest version of
 the variable that has the `author` subkey but missing the `title` value, because
 the whole variable is overridden. You can change this behaviour using the
-special value `mergedKeys`. This value indicates how to merge specific keys:
+`mergeKey()` configuration function in the `_config.ts` file:
 
-<lume-code>
+```ts
+//_config.ts
 
-```yml {title="/_data.yml"}
-mergedKeys:
-  site: object
-
-site:
-  title: My humble site
-  author: Oscar Otero
+site.mergeKey("site", "object");
 ```
 
-```yml {title="/subfolder/_data.yml"}
-site:
-  author: Laura Rubio
-```
-
-</lume-code>
-
-In this example, we are indicating that the variable `site` must be merged using
-the `object` mode. Now, the result of the variable `site` is an object including
-the properties of the parent variable and only overrides the properties with the
+We are indicating that the variable `site` must be merged using the `object`
+mode. Now, the result of the variable `site` is an object including the
+properties of the parent variable and only overrides the properties with the
 same name. So the result will be something like this:
 
 ```yml
@@ -81,27 +69,28 @@ site:
   author: Laura Rubio
 ```
 
-The `object` merge mode is not recursive; it only works with the first-level
-properties. A recursive option may be added in the future.
-
 > [!note]
 >
-> The `mergedKeys` variable is also merged with other `mergedKeys` variables in
-> subfolders and pages using the `object` mode. This means that you can define
-> this variable in the root `_data` file of the site and override it in specific
-> subfolders.
+> The `object` merge mode is not recursive; it only works with the first-level
+> properties. A recursive option may be added in the future.
 
 ## array mode
 
 There's another merge mode for arrays. In this mode, the merge result is an
-array with all values found at all `_data` levels. For example:
+array with all values found at all `_data` levels. Let's configure Lume to use
+this strategy for the `category` key:
+
+```ts
+//_config.ts
+
+site.mergeKey("category", "array");
+```
+
+Now, let's say we have the following data structure:
 
 <lume-code>
 
 ```yml {title="/_data.yml"}
-mergedKeys:
-  category: array
-
 category:
   - programming
   - deno
@@ -136,9 +125,6 @@ are strings. Look at the following example:
 <lume-code>
 
 ```yml {title="/_data.yml"}
-mergedKeys:
-  category: array
-
 category:
   - errors
   - 404
@@ -163,9 +149,10 @@ As you can see, the value `404` is duplicated, once as a number and again as a
 string. To prevent this behavior, you may want to convert all values to strings
 to remove duplicates. Instead of `array`, use the `stringArray` mode:
 
-```yml
-mergedKeys:
-  category: stringArray
+```ts
+//_config.ts
+
+site.mergeKey("category", "stringArray");
 ```
 
 Now, the result of this merge is:
@@ -178,14 +165,4 @@ category:
 
 > [!note]
 >
-> For backward compatibility, Lume assigns the `stringArray` merge mode to the
-> key `tags` automatically.
-
-As of Lume 1.19, it's possible to configure the merged keys strategy from the
-`_config.ts` file:
-
-```ts
-//_config.ts
-
-site.mergeKey("category", "stringArray");
-```
+> Lume assigns the `stringArray` merge mode to the key `tags` by default.

@@ -41,24 +41,24 @@ a button could be stored in `_components/button.vto`:
 <button class="button">{{ text }}</button>
 ```
 
-This component is available in your layouts under the `comp` variable (you can
-configure a different variable name in `_config.ts`). This is a global variable
-that contains all components. In our example, we can render the button component
-with the `comp.button()` function:
+This component is available in your layouts under the `comp` variable. This is a
+global variable that contains all components. In our example, we can render the
+button component with the `comp.button()` function:
 
 ```vento
 <h1>Welcome to my site.</h1>
 {{ comp.button({ text: "Login" }) }}
 ```
 
-Note that the component accepts an object with the properties. This component is
-available in any other template engine. For example, JavaScript:
+Note that the component is an **async function** that accepts an object with the
+properties. This component is available in any other template engine. For
+example, JavaScript:
 
 ```js
-export default function ({ comp }) {
+export default async function ({ comp }) {
   return `
   <h1>Welcome to my site.</h1>
-  ${comp.button({ text: "Login" })}
+  ${await comp.button({ text: "Login" })}
 `;
 }
 ```
@@ -74,18 +74,17 @@ Nunjucks templates:
 
 ```html
 <h1>Welcome to my site.</h1>
-{{ comp.button({ text: "Login" }) | safe }}
+{{ comp.button({ text: "Login" }) | await | safe }}
 ```
 
 Eta templates:
 
 ```html
 <h1>Welcome to my site.</h1>
-<%= comp.button({ text: "Login" }) %>
+<%= await comp.button({ text: "Login" }) %>
 ```
 
-Lume components can be used like React components if you're using the JSX
-plugin:
+Lume components can be used like JSX components if you're using the JSX plugin:
 
 ```jsx
 export default function ({ comp }) {
@@ -100,7 +99,7 @@ export default function ({ comp }) {
 
 Note that components created with text-based template engines (like Vento or
 Nunjucks) won't work as expected inside JSX templates because the HTML code will
-be escaped. To fix it you have to use the `dangerouslySetInnerHTML` property:
+be escaped. To fix it you have to wrap the string in a `{ __html: "" }` object:
 
 ```jsx
 export default function ({ comp }) {
@@ -108,9 +107,9 @@ export default function ({ comp }) {
   return (
     <>
       <h1>Welcome to my site.</h1>
-      <div
-        dangerouslySetInnerHTML={{ __html: <comp.Button text="Login" /> }}
-      />
+      <div>
+        {{ __html: <comp.Button text="Login" /> }}
+      <div/>
     </>
   );
 }
@@ -175,6 +174,8 @@ file together with the CSS code of other used components. Note that if the
 component is not used, the CSS code won't be exported. This is a useful feature
 that allows having a library of many components and only exporting the CSS and
 JS code that you only need.
+
+TODO: folder-components
 
 ## Organize your components
 

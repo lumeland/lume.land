@@ -53,7 +53,9 @@ you like it! ---
 Creating pages is the same as creating layouts; just place the `.njk` file
 outside the `_includes` directory.
 
-## njk filter
+## Registered filters
+
+### njk
 
 The Nunjucks plugin also registers the `njk` filter, to render any string value
 as a Nunjucks template and output it as HTML. The filter accepts an object with
@@ -68,6 +70,15 @@ text: "Hello {{ username }}"
 
 <!-- Render a string -->
 <div>{{ text | njk(data) | safe }}<div>
+```
+
+### await
+
+The `await` filter is registered to run async functions inside Nunjucks
+templates. It's useful to run components:
+
+```html
+<div>{{ comp.button({ text: "Click here" }) | async | safe }}</div>
 ```
 
 ## Hooks

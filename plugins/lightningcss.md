@@ -24,6 +24,7 @@ import lightningCss from "lume/plugins/lightningcss.ts";
 const site = lume();
 
 site.use(lightningCss(/* Options */));
+site.add("style.css"); //Add the entry point(s)
 
 export default site;
 ```
@@ -47,7 +48,6 @@ import lightningCss, { version } from "lume/plugins/lightningcss.ts";
 const site = lume();
 
 site.use(lightningCss({
-  extensions: [".css"],
   includes: "_includes",
   options: {
     minify: true,
