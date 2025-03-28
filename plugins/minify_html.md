@@ -33,20 +33,9 @@ export default site;
 This plugin accepts a configuration object. The available options are:
 
 - `extensions`: An array with the extensions of the files that will be minified.
-  By default it is `[".html"]`, but you can include also `.css` and `.js` to
-  minify these files.
+  By default it is `[".html"]`.
 - `options`: An object with the available options for `minify-html`.
 
-For example:
-
-```js
-site.use(minifyHTML({
-  extensions: [".html", ".js"],
-  options: {
-    minify_js: true,
-    keep_spaces_between_attributes: true,
-    keep_closing_tags: true,
-    keep_html_and_head_opening_tags: true,
-  },
-}));
-```
+If you need to minify CSS and / or JS files, it's recommended that you use 
+plugins specifically for those instead, like [LightningCSS](/plugins/lightningcss/) 
+and [Terser](/plugins/terser/) respectively.
