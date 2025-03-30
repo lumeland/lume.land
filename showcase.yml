@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: GMX.css
+    img: /img/showcase/gmxcss.webp
+    url: https://w3teal.github.io/gmx.css/
+    description: A demo website of GMX.css components.
+    code: https://github.com/w3teal/gmx.css
+
   - title: Confeitaria Petúlia
     img: /img/showcase/petulia.webp
     url: https://www.petulia.pt
