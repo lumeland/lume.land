@@ -60,7 +60,7 @@ rendering. You have to create a file with the extension `.page.js`. The `.page`
 sub-extension is required to distinguish JavaScript files that generate static
 pages from other JavaScript files destined to be run in the browser.
 
-The previous Vento example in JavaScript is:
+Here's the previous Vento example in JavaScript:
 
 <lume-code>
 
@@ -108,7 +108,7 @@ exported by the page, but also other data provided by `_data` files).
 ## More formats
 
 Lume supports several formats to generate pages.
-[Go to the Plugins section](/plugins/?status=all&data_format=on&template_engine=on)
+[Go to the Plugins section](/plugins/?status=all&template_engine=on)
 to see more info about all available formats. Some of them are installed by
 default (like [Vento](/plugins/vento.md), [YAML](/plugins/yaml.md),
 [Modules](/plugins/modules.md) etc), and others need to be installed in your
