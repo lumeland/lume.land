@@ -108,9 +108,9 @@ exported by the page, but also other data provided by `_data` files).
 ## More formats
 
 Lume supports several formats to generate pages.
-[Go to the Plugins section](/plugins/?status=all&template_engine=on)
-to see more info about all available formats. Some of them are installed by
-default (like [Vento](/plugins/vento.md), [YAML](/plugins/yaml.md),
+[Go to the Plugins section](/plugins/?status=all&template_engine=on) to see more
+info about all available formats. Some of them are installed by default (like
+[Vento](/plugins/vento.md), [YAML](/plugins/yaml.md),
 [Modules](/plugins/modules.md) etc), and others need to be installed in your
 `_config.ts` file (like [Nunjucks](/plugins/nunjucks.md),
 [Eta](/plugins/eta.md), [JSX](/plugins/jsx.md), [Liquid](/plugins/liquid.md), or

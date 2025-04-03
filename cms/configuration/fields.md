@@ -177,3 +177,31 @@ In this example, we are using the
 [Search.values](../../plugins/search.md#get-all-values-of-a-key) function to get
 all tags used in the website and configure the
 [available options](../fields/list.md#options) of the field.
+
+As of v0.11.0 the third argument of `init` contains the data of the current
+document, or `undefined` if the document doesn't exist (it's a new insert). This
+allows to customize the field configuration based on the document's data that is
+being edited. For example:
+
+```js
+{
+  name: "tags",
+  type: "list",
+  init(field, { data }, docData) {
+    const site = data.site;
+
+    // We are editing a document, so we can access to the data:
+    if (docData) {
+      const { lang } = docData
+
+      const allTags = site.search.values(`tags lang=${lang}`);
+      field.options = allTags;
+
+    // It's a new document, we don't know the language yet.
+    } else {
+      const allTags = site.search.values("tags");
+      field.options = allTags;
+    }
+  }
+}
+```

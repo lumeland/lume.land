@@ -36,6 +36,7 @@ This plugin accepts a configuration object. The available options are:
   By default it is `[".html"]`.
 - `options`: An object with the available options for `minify-html`.
 
-If you need to minify CSS and / or JS files, it's recommended that you use 
-plugins specifically for those instead, like [LightningCSS](/plugins/lightningcss/) 
-and [Terser](/plugins/terser/) respectively.
+If you need to minify CSS and / or JS files, it's recommended that you use
+plugins specifically for those instead, like
+[LightningCSS](/plugins/lightningcss/) and [Terser](/plugins/terser/)
+respectively.

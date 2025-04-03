@@ -18,8 +18,8 @@ make the transformations.
 
 ## Installation
 
-Import this plugin in your `_config.ts` file to use it and make sure to register it **exactly** above
-`transform_images`:
+Import this plugin in your `_config.ts` file to use it and make sure to register
+it **exactly** above `transform_images`:
 
 ```js
 import lume from "lume/mod.ts";
@@ -62,8 +62,8 @@ output HTML code is:
 </picture>
 ```
 
-The plugin not only generates the HTML code but also sends the configuration
-to the `transform_images` plugin to generate all these images.
+The plugin not only generates the HTML code but also sends the configuration to
+the `transform_images` plugin to generate all these images.
 
 ## Sizes
 
