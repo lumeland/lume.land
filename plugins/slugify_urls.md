@@ -77,6 +77,23 @@ site.use(slugifyUrls({
 }));
 ```
 
+### Transliteration
+
+You can configure transliteration libraries to convert characteres from
+languages like Chinesse, Japanesse, Korean, etc to ASCII:
+
+```js
+import unidecode from "npm:unidecode@1.1.0";
+import jaconv from "npm:jaconv@1.0.4";
+
+site.use(slugifyUrls({
+  transliterate: {
+    zh: unidecode, // transliteration for Chinesse
+    ja: jaconv.toHebon, // transliteration for Japanesse
+  },
+}));
+```
+
 ### Use in templates
 
 Slugify registers itself as a filter, so you can use it in templates where you

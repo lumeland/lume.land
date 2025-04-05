@@ -47,7 +47,7 @@ site.loadPages([".toml"], tomlLoader);
 ```
 
 Now, any `*.toml` file in your site will be loaded and used to render a page.
-For example, the file `/about-us.toml` would be loaded and saved as
+For example, the file `/about-us.toml` will be loaded and saved as
 `/about-us/index.html`. You can also
 [pass a (custom) template engine](#template-engines) that will be used for
 rendering it.
@@ -55,41 +55,6 @@ rendering it.
 As `loadPages()` is intended to generate `.html` pages, the given extension
 (here `.toml`) is removed and replaced by `.html` (or `/index.html` for pretty
 urls).
-
-You may want to load TOML files, process them and export as `.toml` files, not
-`.html` files. To do that, you can use `loadAssets()`:
-
-```js
-site.loadAssets([".toml"], tomlLoader);
-```
-
-Now, any `*.toml` files are loaded and saved as `toml`. The function
-`loadAssets` is useful for loading static assets like `css`, `js`, and `svg`
-files that you want to transform (bundle, minify...) and save them while keeping
-the same extension, instead of renaming them to `html`.
-
-**Note:** you can't use the same extension to generate pages and assets, so a
-way to have support for both is adding a sub-extension (like `.page`) for pages.
-Example:
-
-```js
-// Use "*.page.toml" to load pages.
-site.loadPages([".toml"], {
-  loader: tomlLoader,
-  pageSubExtension: ".page",
-});
-
-// Use "*.toml" to load assets
-site.loadAssets([".toml"], tomlLoader);
-```
-
-This is the same strategy used for JavaScript/TypeScript modules (`*.page.js`
-for pages and `*.js` for JavaScript assets).
-
-> [!note]
->
-> The `textLoader` is used by default if you don't pass any loader. For example:
-> `site.loadPages([".html"])` or `site.loadAssets([".css", ".js"])`.
 
 ## Template engines
 
@@ -105,15 +70,6 @@ import HandlebarsJS from "https://dev.jspm.io/handlebars@4.7.6";
 export default class HandlebarsEngine implements Lume.Engine {
   /** Render the content */
   render(content: string, data: Record<string, unknown>, filename: string) {
-    return this.renderComponent(content, data, filename);
-  }
-
-  /** Render for components */
-  renderComponent(
-    content: string,
-    data: Record<string, unknown>,
-    filename: string,
-  ) {
     const template = HandlebarsJS.compile(content);
     return template(data);
   }
@@ -144,5 +100,5 @@ loader and rendered using the Handlebars engine.
 
 > [!note]
 >
-> This is a very basic implementation only as an example. You can see the code
-> of the available template engines in Lume for real examples.
+> This is a very basic implementation only for illustration purposes. You can
+> see the code of the available template engines in Lume for real examples.

@@ -38,9 +38,10 @@ layout: layout.vto
 
 </lume-code>
 
-The generated CSS code is output to the `unocss.css` file. You can customize the
-filename with the `cssFile` option, or set `false` to inline the code in the
-HTML pages using `<style>` elements.
+The plugin uses the global
+[`cssFile`](../docs/configuration/config-file.md#cssfile) option to output the
+generated CSS code. You can use the `cssFile` option to change the filename, or
+set `false` to inline the code in the HTML pages using `<style>` elements.
 
 ## Installation
 
@@ -53,6 +54,7 @@ import unocss from "lume/plugins/unocss.ts";
 const site = lume();
 
 site.use(unocss(/* Options */));
+site.add("style.css"); //Add the entry point(s)
 
 export default site;
 ```
