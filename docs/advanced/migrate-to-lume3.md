@@ -10,18 +10,22 @@ a site from Lume 2 to Lume 3. There is a more detailed description
 ## Deno configuration
 
 Lume 3 uses `Temporal` API which is unstable in Deno. Edit the `deno.json` file
-to enable it. It's also recommended to set `@lumeland/ssx` as the JSX import
-source because it's used by some plugins like `JSX`, `MDX` and `og_images`:
+to enable it.
+
+It's also recommended to add the `lume/jsx-runtime` entry to the `imports` map,
+pointed to [the `ssx` library](https://deno.land/x/ssx) because it's used by
+plugins like `JSX`, `MDX` and `og_images`:
 
 ```json
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.0/"
+    "lume/": "https://deno.land/x/lume@v3.0.0/",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.8/jsx-runtime.ts"
   },
   "unstable": ["temporal"],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:@lumeland/ssx",
+    "jsxImportSource": "lume",
     "types": [
       "lume/types.ts"
     ]
