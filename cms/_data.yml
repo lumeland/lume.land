@@ -1,9 +1,2 @@
 layout: layouts/docs.vto
 main_menu: cms
-docs_menu:
-  - title: Configuration
-    id: configuration
-  - title: Fields
-    id: fields
-  - title: Deployment
-    id: deployment

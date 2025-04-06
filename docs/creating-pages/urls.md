@@ -36,6 +36,7 @@ individually. For example:
 title: My first post
 url: /posts/welcome/
 ---
+Post content
 ```
 
 In this example, the `url` value changes the output file name:
@@ -49,8 +50,9 @@ Note that manually defining the URL of a page means that the `prettyUrls` option
 
 ```yml
 # Use a trailing / to create pretty urls.
-# For example, this outputs /posts/welcome/index.html
+# For example, the following two values are equivalents:
 url: /posts/welcome/
+url: /posts/welcome/index.html
 
 # This outputs /posts/welcome (a file without extension)
 url: /posts/welcome
@@ -76,6 +78,16 @@ source file is saved but adding `welcome` in the last part of the URL.
 
 ```txt
 /posts/my-first-post.md  =>  /posts/welcome/index.html
+```
+
+The `basename` variable is another way to modify the last part of the URL that
+respects the pretty URLs configuration:
+
+```yml
+---
+title: My first post
+basename: welcome
+---
 ```
 
 Using `../welcome/` as URL will also remove the last directory.
@@ -105,8 +117,8 @@ returns the title of the page as a relative URL, for example ,`./My first post/`
 
 Because the URL is relative, the current directory is appended automatically (it
 will be resolved to `/post/My first post/`). And if you are using the
-`slugify_urls` plugin, all output paths are slugified automatically, so the
-final URL would be `/post/my-first-post/`.
+[`slugify_urls` plugin](../../plugins/slugify_urls.md), all output paths are
+slugified automatically, so the final URL would be `/post/my-first-post/`.
 
 Using functions as URLs gives a lot of flexibility to generate URLs exactly the
 way you want.
@@ -125,10 +137,9 @@ url: false # Ignore this page for now
 
 ## Basename
 
-As of Lume v2, the new variable `basename` is introduced to better customize URL
-generation. It's a special value affecting to the page or directory where it's
-defined, and allows changing how the name of the file/directory affects the
-final URL.
+The variable `basename` allows to customize the URL generation. It's a special
+value affecting to the page or directory where it's defined, and allows changing
+how the name of the file/directory affects the final URL.
 
 If the `basename` is defined in a `_data.*` file, it affects the directory where
 the _data file is. For example, let's say we have the following file:

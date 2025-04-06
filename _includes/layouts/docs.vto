@@ -42,7 +42,7 @@ page_css: docs.css
     </div>
     <footer class="doc-footer">
       <ul class="doc-pagination">
-        {{- set previousPost = search.previousPage(url, "url^=/docs/", "section_order order title") }}
+        {{- set previousPost = nav.previousPage(url, `url^=/${main_menu}/`, "order basename") }}
         {{- if previousPost }}
         <li class="is-prev">
           <a href="{{ previousPost.url }}" rel="prev">
@@ -52,7 +52,7 @@ page_css: docs.css
         </li>
         {{ /if }}
 
-        {{- set nextPost = search.nextPage(url, "url^=/docs/", "section_order order title") }}
+        {{- set nextPost = nav.nextPage(url, `url^=/${main_menu}/`, "order basename") }}
         {{- if nextPost }}
         <li class="is-next">
           <a href="{{ nextPost.url }}" rel="next">

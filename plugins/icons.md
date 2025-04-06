@@ -88,6 +88,7 @@ This is a list of all available libraries suported out of the box by the plugin:
 | [Ant](https://ant.design/components/icon)                                    | `ant`                                                                                                          |
 | [Bootstrap](https://icons.getbootstrap.com/)                                 | `bootstrap`                                                                                                    |
 | [Boxicons](https://boxicons.com/)                                            | `boxicons`                                                                                                     |
+| [CSS*GG](https://css.gg/)                                                    | `cssgg`                                                                                                        |
 | [Fluent](https://react.fluentui.dev/?path=/docs/icons-catalog--docs)         | `fluent`                                                                                                       |
 | [Heroicons](https://heroicons.com/)                                          | `heroicons`                                                                                                    |
 | [Iconoir](https://iconoir.com/)                                              | `iconoir`                                                                                                      |
@@ -99,6 +100,7 @@ This is a list of all available libraries suported out of the box by the plugin:
 | [Octicons](https://primer.style/foundations/icons)                           | `octicons`                                                                                                     |
 | [Openmoji](https://openmoji.org/)                                            | `openmoji`                                                                                                     |
 | [Phosphor](https://phosphoricons.com/)                                       | `phosphor`                                                                                                     |
+| [Radix icons](https://www.radix-ui.com/icons)                                | `radix`                                                                                                        |
 | [Remix icons](https://remixicon.com/)                                        | `remix`                                                                                                        |
 | [Sargam](https://sargamicons.com/)                                           | `sargam`                                                                                                       |
 | [Simpleicons](https://simpleicons.org/)                                      | `simpleicons`                                                                                                  |

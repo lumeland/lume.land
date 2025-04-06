@@ -8,9 +8,10 @@ tags:
 
 ## Description
 
-The `relative_urls` plugin converts all URLs in your HTML documents to relative,
-so you can publish the same site under different domains, subdirectories, or
-even protocols (like opening the site from the filesystem under `file://`).
+The `relative_urls` plugin converts all URLs in your HTML and CSS files to
+relative, so you can publish the same site under different domains,
+subdirectories, or even protocols (like opening the site from the filesystem
+under `file://`).
 
 ## Installation
 
@@ -47,15 +48,5 @@ example:
 </lume-code>
 
 This plugin changes not only the `<a>` elements, but any element with the `href`
-attribute (`link`, `area`) or `src` (`img`, `video`, `audio`, etc).
-
-## Modify URLs inside CSS files
-
-By default, the plugin only checks HTML pages. You can use the `extensions`
-option to extend it to `.css` files.
-
-```js
-site.use(relativeUrls({
-  extensions: [".html", ".css"], // Fix URLs inside HTML and CSS files
-}));
-```
+attribute (`link`, `area`) or `src` (`img`, `video`, `audio`, etc). It also
+detect `@import` and `url()` functions in CSS files.

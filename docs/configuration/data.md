@@ -17,7 +17,7 @@ site.data("randomNumber", function () {
 });
 ```
 
-Now, this data is available in your pages, layouts and components:
+Now, these variables are available in your pages, layouts and components:
 
 <lume-code>
 
@@ -43,8 +43,7 @@ export default function ({ myNumber, randomNumber }) {
 
 ## Context data
 
-Use the third argument to assign a data value to a specific directory. For
-example:
+Use the third argument to assign a data value to a specific path. For example:
 
 ```js
 // Set the layout value to the directory /pages

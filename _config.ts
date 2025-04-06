@@ -14,6 +14,7 @@ import sitemap from "lume/plugins/sitemap.ts";
 import metas from "lume/plugins/metas.ts";
 import checkUrls from "lume/plugins/check_urls.ts";
 import ogImages from "lume/plugins/og_images.ts";
+import nav from "lume/plugins/nav.ts";
 import { env } from "lume/core/utils/env.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.6.0/toc/mod.ts";
 import analyze, {
@@ -40,8 +41,12 @@ site
   .ignore("CONTRIBUTING.md")
   .ignore("README.md")
   .ignore("scripts")
-  .copy("static", ".")
-  .copy("_redirects")
+  .add("static", ".")
+  .add("_redirects")
+  .add("img")
+  .add("styles")
+  .add("main.js")
+  .use(nav())
   .use(codeHighlight({
     languages: {
       vento: ventoLang,
@@ -56,7 +61,6 @@ site
     cssFile: "/styles/main.css",
   }))
   .use(favicon())
-  .use(inline())
   .use(ogImages())
   .use(metas())
   .use(esbuild({
@@ -66,6 +70,7 @@ site
   .use(transformImages())
   .use(sitemap())
   .use(icons())
+  .use(inline())
   .use(checkUrls({
     external: false,
     ignore: [
@@ -93,7 +98,6 @@ site
     "static/docsearch/style.css",
     "https://cdn.jsdelivr.net/npm/@docsearch/css@3.8.2/dist/style.css",
   )
-  .copy("img/contrib.svg")
   .remoteFile(
     "img/contrib.svg",
     "https://contrib.rocks/image?repo=lumeland/lume",

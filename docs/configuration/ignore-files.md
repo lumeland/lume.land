@@ -4,9 +4,10 @@ description: Configure Lume to ignore some files and folders.
 order: 2
 ---
 
-All files and directories starting with `.` or `_` are automatically ignored by
-Lume. Use the `ignore()` method to ignore other files and folders of your `src`
-folder:
+Lume loads all files with a specific extension like `.md`, `.vto`,
+`.page.{js,ts,json}`, etc, except files and directories starting with `.` or `_`
+which are automatically ignored. Use the `ignore()` method to ignore other files
+and folders in your `src` folder:
 
 ```js
 site.ignore("README.md", "CHANGELOG.md", "node_modules");
@@ -27,8 +28,7 @@ The following paths are **always ignored**, so you don't need to configure them:
 
 ## Ignore function
 
-Starting from Lume `v1.8.0` you can set functions for more advanced filtering.
-Example:
+You can use functions for more advanced filtering. Example:
 
 ```js
 // Ignore all files with ".md" extension inside the "draft" folder

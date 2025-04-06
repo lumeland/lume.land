@@ -23,6 +23,7 @@ import svgo from "lume/plugins/svgo.ts";
 const site = lume();
 
 site.use(svgo(/* Options */));
+site.add([".svg"]); //Add all SVG files to process
 
 export default site;
 ```

@@ -1,18 +1,5 @@
 layout: layouts/docs.vto
 main_menu: docs
-docs_menu:
-  - title: Overview
-    id: overview
-  - title: Configuration
-    id: configuration
-  - title: Getting started
-    id: getting-started
-  - title: Creating pages
-    id: creating-pages
-  - title: Core
-    id: core
-  - title: Advanced
-    id: advanced
 
 extra_menu: |
   <a href="https://codesandbox.io/p/devbox/lume-w56fsc" class="button is-codesandbox" target="_blank">
