@@ -1,11 +1,12 @@
 {
   "imports": {
-    "lume/": "file:///Users/oscarotero/www/lumeland/lume/"
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@784d97efcffd177a1b40bb130e3724534f67686d/",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.8/jsx-runtime.ts"
   },
   "lock": false,
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:@lumeland/ssx",
+    "jsxImportSource": "lume",
     "types": [
       "lume/types.ts"
     ]
@@ -29,5 +30,8 @@
     "exclude": [
       "./_site"
     ]
-  }
+  },
+  "unstable": [
+    "temporal"
+  ]
 }
