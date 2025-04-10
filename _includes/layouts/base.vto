@@ -30,34 +30,30 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
 
-    {{# <link rel="stylesheet" href="/styles/main.css"> #}}
+    <link rel="stylesheet" href="/styles/main.css">
     <link rel="canonical" href="{{ url |> url(true) }}">
     
     {{ if it.page_css }}
-      {{# <link rel="stylesheet" href="/styles/pages/{{ page_css }}"> #}}
+      <link rel="stylesheet" href="/styles/pages/{{ page_css }}">
     {{ /if }}
 
     <script src="/main.js" type="module"></script>
 
-    {{# <link
+    <link
       rel="stylesheet"
       href="/docsearch/style.css"
       integrity="sha256-mMegR8+wGCs9rK2gg5ZlMPiSipjaS2CzJdGoKXvmQf0="
-      crossorigin="anonymous"> #}}
+      crossorigin="anonymous">
   </head>
   <body>
-    <p>
-     Today is the <a href="https://css-naked-day.org/">CSS Naked Day</a>. That's why this site looks so weird!
-    </p>
-    <hr>
     {{ include "templates/navbar.vto" }}
-    <hr>
+
     <div>
       {{ content }}
     </div>
     {{ include "templates/footer.vto" }}
 
-    {{# <script
+    <script
       src="/docsearch/index.js"
       integrity="sha256-7XH628BCm5WvlJW3EiICy595nR7Rigf/DwCJS2e+KHA="
       crossorigin="anonymous"></script>
@@ -82,6 +78,6 @@
           debug: false
         });
       }, false);
-    </script> #}}
+    </script>
   </body>
 </html>
