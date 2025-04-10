@@ -100,6 +100,9 @@ attributes
 init
 : A function that will be invoked before showing this field in the front-end. It allows to change the field configuration dynamically. More info below.
 
+view
+: A string with the name of the view. This is used to group fields by view name and show/hide fields with the same view.
+
 <!-- deno-fmt-ignore-end -->
 
 This is an example of fields with some extra options:

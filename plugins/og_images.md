@@ -12,11 +12,10 @@ This plugin automatically creates images with the content of your pages. It
 works great combined with [metas](./metas.md) plugin to create Open Graph meta
 tags.
 
-[Satori](https://github.com/vercel/satori) is used to generate the
-SVG images (that are then converted to PNG with
-[Sharp](https://sharp.pixelplumbing.com/)). The URL of the image generated is
-saved in the `metas.image` variable, so it's detected by `metas` plugin (that
-must be added after `og_images`).
+[Satori](https://github.com/vercel/satori) is used to generate the SVG images
+(that are then converted to PNG with [Sharp](https://sharp.pixelplumbing.com/)).
+The URL of the image generated is saved in the `metas.image` variable, so it's
+detected by `metas` plugin (that must be added after `og_images`).
 
 ## Installation
 
@@ -47,9 +46,9 @@ openGraphLayout: /layouts/og_images.jsx
 ```
 
 As the `layout` variable is used to render a page and generate the HTML, the
-`openGraphLayout` variable is used to render the page and generate the Open Graph image.
-You can use `_data` files to set the same layout to all pages or different
-layouts per directory.
+`openGraphLayout` variable is used to render the page and generate the Open
+Graph image. You can use `_data` files to set the same layout to all pages or
+different layouts per directory.
 
 ### Satori library
 
@@ -98,8 +97,8 @@ See the documentation for a
 [complete list of all CSS properties and HTML elements supported](https://github.com/vercel/satori?tab=readme-ov-file#documentation)
 by Satori.
 
-You can [use the Vercel OG Image Playground](https://og-playground.vercel.app/) for testing and
-experimentation.
+You can [use the Vercel OG Image Playground](https://og-playground.vercel.app/)
+for testing and experimentation.
 
 ### Fonts and configuration
 

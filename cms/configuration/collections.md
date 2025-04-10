@@ -196,3 +196,32 @@ cms.collection({
   delete: false,
 });
 ```
+
+### views
+
+An array of the views that are visible by default. It's possible to use a
+function to return the array dynamically. For example, you may want to show some
+fields while creating a new document and different fields when editing it:
+
+```ts
+cms.collection({
+  name: "countries",
+  store: "src:countries/*.yml",
+  views(data) {
+    if (data) {
+      // Editing document, show the full view
+      return ["full"];
+    }
+  },
+  fields: [
+    "title: text",
+    {
+      type: "markdown",
+      name: "content",
+      view: "full", // This field is only visible if the "full" view is active
+    },
+  ],
+  create: false,
+  delete: false,
+});
+```
