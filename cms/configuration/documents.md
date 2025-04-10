@@ -84,3 +84,14 @@ cms.document({
   ],
 });
 ```
+
+### url
+
+The `url` option allows to set a preview URL of the document. It's used for
+documents that don't generate a page but their changes can affect to certain
+page that we want to preview.
+
+### views
+
+An array of the views that are visible by default. It's possible to use a
+function to return the array dynamically.
