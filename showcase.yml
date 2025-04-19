@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Will Craft Software
+    img: /img/showcase/will-craft-software.webp
+    url: https://willcraft.software
+    description: The website of Will Craft Software, a software development community
+    code: https://github.com/wewillcraft/wewillcraft.github.io
+
   - title: GMX.css
     img: /img/showcase/gmxcss.webp
     url: https://w3teal.github.io/gmx.css/
