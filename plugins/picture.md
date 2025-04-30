@@ -105,15 +105,15 @@ picture to generate responsive images:
 
 ```html
 <picture>
-  <!-- version for small devices -->
+  <!-- version for big screens -->
   <source
-    srcset="/flowers-detail.jpg"
+    srcset="/flowers-big.jpg"
     media="(min-width: 600px)"
     transform-images="avif webp jpg 1000@2"
   >
 
-  <!-- version for big screens -->
-  <source srcset="/flowers-big.jpg" transform-images="avif webp jpg 1000@2">
+  <!-- version for small screens -->
+  <source srcset="/flowers-detail.jpg" transform-images="avif webp jpg 1000@2">
 
   <!-- default image -->
   <img src="/flowers-mini.jpg" transform-images="300@2">
@@ -124,35 +124,35 @@ The plugin generates the following code:
 
 ```html
 <picture>
-  <!-- version for small devices -->
-  <source
-    srcset="/flowers-1000w.avif, /flowers-1000w@2.avif 2x"
-    type="image/avif"
-    media="(min-width: 600px)"
-  >
-  <source
-    srcset="/flowers-1000w.webp, /flowers-1000w@2.webp 2x"
-    type="image/webp"
-    media="(min-width: 600px)"
-  >
-  <source
-    srcset="/flowers-1000w.jpg, /flowers-1000w@2.jpg 2x"
-    media="(min-width: 600px)"
-  >
-
   <!-- version for big screens -->
   <source
-    srcset="/flowers-1000w.avif, /flowers-1000w@2.avif 2x"
+    srcset="/flowers-big-1000w.avif, /flowers-big-1000w@2.avif 2x"
+    type="image/avif"
+    media="(min-width: 600px)"
+  >
+  <source
+    srcset="/flowers-big-1000w.webp, /flowers-big-1000w@2.webp 2x"
+    type="image/webp"
+    media="(min-width: 600px)"
+  >
+  <source
+    srcset="/flowers-big-1000w.jpg, /flowers-big-1000w@2.jpg 2x"
+    media="(min-width: 600px)"
+  >
+
+  <!-- version for small screens -->
+  <source
+    srcset="/flowers-detail-1000w.avif, /flowers-detail-1000w@2.avif 2x"
     type="image/avif"
   >
   <source
-    srcset="/flowers-1000w.webp, /flowers-1000w@2.webp 2x"
+    srcset="/flowers-detail-1000w.webp, /flowers-detail-1000w@2.webp 2x"
     type="image/webp"
   >
-  <source srcset="/flowers-1000w.jpg, /flowers-1000w@2.jpg 2x">
+  <source srcset="/flowers-detail-1000w.jpg, /flowers-detail-1000w@2.jpg 2x">
 
   <!-- default image -->
-  <img src="/flowers-300w.jpg" srcset="/flowers-300w@2.jpg 2x">
+  <img src="/flowers-mini-300w.jpg" srcset="/flowers-mini-300w@2.jpg 2x">
 </picture>
 ```
 
