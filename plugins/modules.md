@@ -133,5 +133,8 @@ You can use some extensions for VS Code for template string syntax highlight:
   ```js
   import { html } from "utilities.ts";
 
-  export default (params) => html`<p>It's work!</p>`;
+  export default (params) =>
+    html`
+      <p>It's work!</p>
+    `;
   ```

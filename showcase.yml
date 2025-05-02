@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Font Licensing Mess
+    img: /img/showcase/fontlicensingmess.webp
+    url: https://fontlicensingmess.com/
+    description: Independent research project born to shed some light on font licensing.
+    code: https://github.com/oscarotero/fontlicensingmess.com
+
   - title: Will Craft Software
     img: /img/showcase/will-craft-software.webp
     url: https://willcraft.software
