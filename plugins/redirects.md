@@ -67,7 +67,7 @@ the new one. There are 4 different output methods:
 - **html:** It's the default value. It creates an html page for each old URL
   with a `<meta http-equiv="refresh" content="0; url="...">` tag. This method
   doesn't require any server configuration. The generated pages have the
-  variable `isRedirect=true`.
+  variable `unlisted=true`.
 - **json:** To create the `_redirects.json` JSON file with all redirects,
   compatible with the [redirects](../plugins/redirects-middleware.md) middleware
   which works on Deno Deploy.

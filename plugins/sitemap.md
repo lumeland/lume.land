@@ -43,7 +43,7 @@ and sorted by URL. You can setup a different configuration:
 ```js
 site.use(sitemap({
   filename: "my-sitemap.xml", // to change the sitemap filename
-  query: "isRedirect!=true", // by default select all pages but the redirected ones.
+  query: "unlisted!=true", // by default select all pages not marked as unlisted.
   sort: "date=desc", // To sort by data in ascendent order
 }));
 ```
