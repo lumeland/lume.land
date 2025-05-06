@@ -46,37 +46,37 @@ site
   .add("img")
   .add("styles")
   .add("main.js")
-  .use(nav())
   .use(codeHighlight({
     languages: {
       vento: ventoLang,
     },
   }))
-  .use(postcss({
-    plugins: [nesting()],
+  .use(metas())
+  .use(nav())
+  .use(icons())
+  .use(esbuild({
+    extensions: [".js"],
   }))
   .use(googleFonts({
     fonts:
       "https://fonts.google.com/share?selection.family=Epilogue:ital,wght@0,100..900;1,100..900|Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900|JetBrains+Mono:ital,wght@0,100..800;1,100..800",
     cssFile: "/styles/main.css",
   }))
-  .use(favicon())
-  .use(ogImages())
-  .use(metas())
-  .use(esbuild({
-    extensions: [".js"],
+  .use(postcss({
+    plugins: [nesting()],
   }))
   .use(resolveUrls())
-  .use(transformImages())
-  .use(sitemap())
-  .use(icons())
-  .use(inline())
   .use(checkUrls({
     external: false,
     ignore: [
       "/blog/",
     ],
   }))
+  .use(ogImages())
+  .use(favicon())
+  .use(transformImages())
+  .use(inline())
+  .use(sitemap())
   .scopedUpdates(
     (path) => path.endsWith(".png") || path.endsWith(".jpg"),
   )

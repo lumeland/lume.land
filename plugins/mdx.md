@@ -75,25 +75,6 @@ This is a markdown file with the title **{ title }**.
 > If you want to use JSX components, you need to install the
 > [JSX plugin](./jsx.md).
 
-MDX is designed to work with JSX components. If you use a component that returns
-the HTML code as string (for example a nunjucks component) it will be escaped.
-To avoid that, you have to use the `dangerouslySetInnerHTML` attribute.
-
-For example, let's say you have nunjucks component to render a title:
-
-```html
-<!-- comp.title -->
-<h1>{{ text }}</h1>
-```
-
-A way to use it in a mdx file is:
-
-```md
-<div dangerouslySetInnerHTML={
-  { __html: comp.title({ text: "Hello world" }) }
-} />
-```
-
 ### Overwriting components
 
 You can use the `components` option to overwrite or add additional components.

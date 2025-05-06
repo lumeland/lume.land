@@ -1,5 +1,5 @@
 ---
-title: LumeCMS
+#title: LumeCMS
 description: LumeCMS is a CMS to manage the content of any site.
 ---
 

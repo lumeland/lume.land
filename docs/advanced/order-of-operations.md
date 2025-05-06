@@ -31,14 +31,15 @@ This is a high-level description of how Lume builds your site. When you run
      generate all the sub-pages.
    - Calculate the [final url](../creating-pages/urls.md).
    - Run registered [preprocessors](../core/processors.md#preprocess).
-   - Render the page using the assigned
-     [template engine](../core/multiple-template-engines.md) and
-     [layout](../creating-pages/layouts.md).
-9. Dispatch the `afterRender` [event](../core/events.md).
-10. Run registered [processors](../core/processors.md).
-11. Dispatch the `beforeSave` [event](../core/events.md).
-12. Save all pages to the `dest` folder.
-13. Dispatch the `afterBuild` [event](../core/events.md).
+   - Render the page file using the assigned
+     [template engine](../core/multiple-template-engines.md) and store the
+     result in the `children` variable.
+9. Render all pages using the assigned [layout](../creating-pages/layouts.md).
+10. Dispatch the `afterRender` [event](../core/events.md).
+11. Run registered [processors](../core/processors.md).
+12. Dispatch the `beforeSave` [event](../core/events.md).
+13. Save all pages to the `dest` folder.
+14. Dispatch the `afterBuild` [event](../core/events.md).
 
 ## Watch mode
 

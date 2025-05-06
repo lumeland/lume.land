@@ -235,6 +235,20 @@ const site = lume({
 });
 ```
 
+### debugBar
+
+The [debug bar](../core/debugbar.md) is a development toolbar that appears in
+your site while the dev server is running. Use this option to disable it or
+provide a HTTP specifier to use a different web component.
+
+```js
+const site = lume({
+  server: {
+    debugBar: false, // disable the debug bar
+  },
+});
+```
+
 ## Watcher options
 
 The `watcher` key contains an object to configure the file watcher, used to

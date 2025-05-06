@@ -43,9 +43,14 @@ configure the JSX transform:
 ```json {title="deno.json"}
 {
   // ...
+  "imports": {
+    //...
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts"
+  },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:@lumeland/ssx"
+    "jsxImportSource": "lume"
+    //...
   }
 }
 ```

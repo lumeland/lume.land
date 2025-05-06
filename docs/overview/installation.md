@@ -53,12 +53,20 @@ export default site;
     "serve": "deno task lume -s"
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.0/"
+    "lume/": "https://deno.land/x/lume@v3.0.0/",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts"
   },
   "unstable": ["temporal"],
   "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "lume",
     "types": [
       "lume/types.ts"
+    ]
+  },
+  "lint": {
+    "plugins": [
+      "https://deno.land/x/lume@v3.0.0/lint.ts"
     ]
   }
 }
