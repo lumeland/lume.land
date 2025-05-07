@@ -55,10 +55,10 @@ Typically you will want to open the site in your browser so you can start a
 local server by adding the `--serve` (or `-s`) argument:
 
 ```sh
-deno task lume --serve
+deno task lume -s
 
 # or with Lume CLI
-lume --serve
+lume -s
 ```
 
 > [!tip]
@@ -71,10 +71,10 @@ your browser automatically with the new changes. The local server use the port
 `3000` by default but you can change it with the `--port` argument. For example:
 
 ```sh
-deno task lume --serve --port=8000
+deno task lume -s --port=8000
 
 # or with Lume CLI
-lume --serve --port=8000
+lume -s --port=8000
 ```
 
 To watch changes without starting a local server, use the `--watch` argument:

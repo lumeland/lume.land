@@ -58,14 +58,14 @@ const site = lume(
 
     /** Component options */
     components: {
-      /** The variable name used to access the components */
-      variable: "comp",
-
       /** The name of the file to save component css code to */
-      cssFile: "/components.css",
+      cssFile: "/style.css",
 
       /** The name of the file to save component javascript code to */
-      jsFile: "/components.js",
+      jsFile: "/script.js",
+
+      /** Placeholder used to replace with the final content */
+      placeholder: ""
     }
   },
   {
@@ -117,9 +117,6 @@ site.loadData(extensions, loader);
 site.loadPages(extensions, loader);
 site.loadPages(extensions, options);
 
-/** Register an assets page loader */
-site.loadAssets(extensions, loader);
-
 /** Register a preprocessor */
 site.preprocess(extensions, fn);
 
@@ -144,11 +141,8 @@ site.component(context, component, scope = "/");
 /** Configure the strategy for merging a specfic key in the data cascade */
 site.mergeKey(key, merge, scope = "/");
 
-/** Copy a static file/folder */
-site.copy(from, to);
-
-/** Copy the remaining files */
-site.copyRemainingFiles(filter);
+/** Add a file/folder */
+site.add(from, to);
 
 /** Ignore files or folder */
 site.ignore(...paths);
@@ -188,9 +182,6 @@ site.build();
 
 /** Rebuild the site reloading the changed files */
 site.update(changedFiles);
-
-/** Render a single page (used by on_demand plugin) */
-site.renderPage(file, extraData);
 
 /** Returns the final URL of any page/file */
 site.url(path, absolute = false);

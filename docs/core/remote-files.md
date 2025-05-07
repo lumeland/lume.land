@@ -22,14 +22,23 @@ This indicates that if the file `styles.css` **doesn't exist locally**, the
 remote URL must be used. Note that the file **won't be saved in the project
 folder**, but it's in memory.
 
-If you want to copy this file statically:
+If you want to add this file to your site:
 
 ```js
-site.copy("styles.css");
+site.add("styles.css");
 ```
 
 Because the file doesn't exist in your local folder, Lume will download the file
 from the URL and save it in the dest folder.
+
+> [!note]
+>
+> An easier way to add remote files is passing the URL directly to the `add()`
+> function. For example:
+>
+> ```
+> site.add("https://example.com/theme/styles.css", "styles.css")
+> ```
 
 The `postcss` plugin supports Lume's remote files, so you can import this file
 in your CSS with:
@@ -80,15 +89,14 @@ Some template engines have their own way of loading templates. For example, Pug
 uses `extends "filename"`, Vento uses `{{ include "filename" }}`, Liquid and
 Nunjucks use `{% include "filename" %}`, etc.
 
-The template engines [Eta](../../plugins/eta.md),
-[Liquid](../../plugins/liquid.md) and [Pug](../../plugins/pug.md) don't allow
-customizing how they load files, hence they cannot include remote files. If you
-want to use remote templates, [Vento](../../plugins/vento.md) or
+The template engines [Eta](../../plugins/eta.md) and [Pug](../../plugins/pug.md)
+don't allow customizing how they load files, hence they cannot include remote
+files. If you want to use remote templates, [Vento](../../plugins/vento.md) or
 [Nunjucks](../../plugins/nunjucks.md) are good options.
 
 ### Cache files
 
-As of Lume 1.17.4, files are automatically cached using the
+Files are automatically cached using the
 [Web Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache), so they
 are requested only the first time and then network access is no longer needed.
 It's possible to disable the cache for a specific file by removing the cached

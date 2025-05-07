@@ -39,11 +39,7 @@
 
     <script src="/main.js" type="module"></script>
 
-    <link
-      rel="stylesheet"
-      href="/docsearch/style.css"
-      integrity="sha256-mMegR8+wGCs9rK2gg5ZlMPiSipjaS2CzJdGoKXvmQf0="
-      crossorigin="anonymous">
+    <link rel="stylesheet" href="/docsearch/style.css">
   </head>
   <body>
     {{ include "templates/navbar.vto" }}
@@ -53,12 +49,9 @@
     </div>
     {{ include "templates/footer.vto" }}
 
-    <script
-      src="/docsearch/index.js"
-      integrity="sha256-7XH628BCm5WvlJW3EiICy595nR7Rigf/DwCJS2e+KHA="
-      crossorigin="anonymous"></script>
-      
-    <script type="text/javascript">
+    <script type="module" type="text/javascript">
+      import docsearch from "/docsearch/index.js";
+
       window.addEventListener('DOMContentLoaded', () => {
         document.getElementById("switch-theme").addEventListener("click", (event) => {
           const currentTheme =

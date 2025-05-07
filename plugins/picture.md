@@ -30,6 +30,7 @@ const site = lume();
 
 site.use(picture(/* Options */));
 site.use(transformImages());
+site.add("/img"); // Add all image files
 
 export default site;
 ```

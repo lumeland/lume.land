@@ -26,6 +26,7 @@ import terser from "lume/plugins/terser.ts";
 const site = lume();
 
 site.use(terser(/* Options */));
+site.add("script.js"); //Add the files to process
 
 export default site;
 ```

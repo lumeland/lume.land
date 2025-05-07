@@ -10,10 +10,11 @@ tags:
 ## Description
 
 This plugin downloads the optimized font files from Google fonts automatically
-into the `/fonts` directory and generates the `/fonts.css` file with the
-`@font-face` declarations. This allows to self host the webfonts instead of
-using directly the Google Fonts CDN, which is not a good idea, not only for
-privacy and GDPR compliance, but also
+into the [`fontsFolder`](../docs/configuration/config-file.md#fontsfolder)
+directory and output the CSS code with the `@font-face` declarations to the
+[`cssFile`](../docs/configuration/config-file.md#cssfile) file. This allows to
+self host the webfonts instead of using directly the Google Fonts CDN, which is
+not a good idea, not only for privacy and GDPR compliance, but also
 [for performance](https://github.com/HTTPArchive/almanac.httparchive.org/pull/607).
 
 ## Installation
@@ -66,26 +67,27 @@ CSS code.
 
 ## Configure the output code
 
-This plugin outputs the CSS code with the `@font-face` declarations to the
-`/fonts.css` file by default. You can configure a different file name with the
-`cssFile` option:
+This plugin uses the global
+[`fontsFolder`](../docs/configuration/config-file.md#fontsfolder) and
+[`cssFile`](../docs/configuration/config-file.md#cssfile) options to ouput the
+code. But you can configure a different location:
 
 ```js
 site.use(googleFonts({
-  cssFile: "styles.css",
+  cssFile: "fonts.css",
   fonts:
     "https://fonts.google.com/share?selection.family=Playfair+Display:ital,wght@0,400..900;1,400..900",
 }));
 ```
 
 In this example, the `@font-face` declarations are generated into the
-`styles.css` file. If the file already exists, the code is appended to the file
+`fonts.css` file. If the file already exists, the code is appended to the file
 content. If you want to insert the code in a different place, use the
 `placeholder` option.
 
 ```js
 site.use(googleFonts({
-  cssFile: "styles.css",
+  cssFile: "fontss.css",
   placeholder: "/* google-fonts */",
   fonts:
     "https://fonts.google.com/share?selection.family=Playfair+Display:ital,wght@0,400..900;1,400..900",
@@ -129,8 +131,6 @@ site.use(googleFonts({
     "[118]",
     "[119]",
   ],
-  cssFile: "styles.css",
-  placeholder: "/* lume-google-fonts-here */",
   fonts: {
     display:
       "https://fonts.google.com/share?selection.family=Alegreya+Sans+SC:wght@300",

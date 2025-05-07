@@ -16,32 +16,26 @@ generating the CSS code needed.
 
 ## Installation
 
-Tailwind uses Postcss under the hood, so you need to import both plugins in your
-`_config.ts` and use them in this order: Tailwind first, Postcss later. The
-reason is Tailwind need to extract the classes from the HTML pages before
-Postcss processes the CSS files.
+Import this plugin in your `_config.ts` file to use it:.
 
 ```js
 import lume from "lume/mod.ts";
 import tailwindcss from "lume/plugins/tailwindcss.ts";
-import postcss from "lume/plugins/postcss.ts";
 
 const site = lume();
 
 site.use(tailwindcss(/* Options */));
-site.use(postcss());
+site.add("style.css"); //Add the entry point
 
 export default site;
 ```
 
-Note that Tailwind requires the `@tailwind` directives somewhere in your CSS
-code to output the generated code. For example, you can create the `styles.css`
-file with the following code:
+Note that Tailwind requires the `@import "tailwindcss"` code somewhere in your
+CSS code to place the generated code. For example, you can create the
+`style.css` file with the following code:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss"
 ```
 
 Reference it in your main html file (index.html, main.vto, etc.) :
@@ -51,7 +45,7 @@ Reference it in your main html file (index.html, main.vto, etc.) :
 <!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
 ...
 ```
@@ -59,63 +53,30 @@ Reference it in your main html file (index.html, main.vto, etc.) :
 See
 [more info about Tailwind's functions and directives in its documentation page](https://tailwindcss.com/docs/functions-and-directives)
 
-## Configuration
+## Import plugins
 
-This plugin accepts a configuration object with the available options:
+Use the `@plugin` at-rule in the CSS to import plugins. For example to use
+[@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin):
 
-- `options`: Configuration object for Tailwind where you can define themes,
-  plugins, etc. See the
-  [Tailwind docs for more info](https://tailwindcss.com/docs/configuration).
-- `extensions`: The file extensions that Tailwind will be analyze to extract the
-  css classes. By default is `[".html"]` but you can JavaScript or JSX to
-  extract class names from your client-side components.
-
-```ts
-site.use(tailwindcss({
-  // Extract the classes from HTML and JSX files
-  extensions: [".html", ".jsx"],
-
-  // Your Tailwind options, like the theme colors and fonts
-  options: {
-    theme: {
-      colors: {
-        blue: "#1fb6ff",
-        purple: "#7e5bef",
-        pink: "#ff49db",
-      },
-      fontFamily: {
-        sans: ["Graphik", "sans-serif"],
-        serif: ["Merriweather", "serif"],
-      },
-    },
-  },
-}));
+```css
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 ```
 
-### Mix with Markdown: @tailwindcss/typography plugin
-
-[@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) plugin
-is required to apply TailwindCSS styling to markdown files.
-
-```typescript
-import lume from "lume/mod.ts";
-import postcss from "lume/plugins/postcss.ts";
-import tailwindcss from "lume/plugins/tailwindcss.ts";
-import typography from "npm:@tailwindcss/typography";
-
-const site = lume();
-
-site.use(tailwindcss({
-  options: {
-    plugins: [typography],
-  },
-}));
-```
-
-In your html, you should use the `prose` class.
+In your html, you can use the `prose` class.
 
 ```vento
 <article class="prose">
   {{ content }}
 </article>
 ```
+
+> [!note]
+>
+> To import [Daisy UI](https://daisyui.com/), use the `@lumeland/daisyui`
+> version until Deno compatibility
+> [in the official package is fixed](https://github.com/saadeghi/daisyui/issues/3597#issuecomment-2761322079):
+>
+> ```css
+> @plugin "@lumeland/daisyui";
+> ```

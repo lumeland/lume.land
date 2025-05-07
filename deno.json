@@ -1,11 +1,12 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.5.3/"
+    "lume/": "https://deno.land/x/lume@v3.0.0/",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts"
   },
   "lock": false,
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:@lumeland/ssx",
+    "jsxImportSource": "lume",
     "types": [
       "lume/types.ts"
     ]
@@ -23,11 +24,17 @@
       "tags": [
         "recommended"
       ]
-    }
+    },
+    "plugins": [
+      "https://deno.land/x/lume@v3.0.0/lint.ts"
+    ]
   },
   "fmt": {
     "exclude": [
       "./_site"
     ]
-  }
+  },
+  "unstable": [
+    "temporal"
+  ]
 }

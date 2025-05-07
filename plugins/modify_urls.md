@@ -64,12 +64,3 @@ site.use(modifyUrls({
   fn: (url) => url.toLowerCase(),
 }));
 ```
-
-> [!important]
->
-> Keep in mind that Lume only processes files that are loaded. To transform CSS
-> files they must be loaded before. If you're using any styling plugin like
-> [`postcss`](./postcss.md), [`lightningcss`](./lightningcss.md), or
-> [`sass`](./sass.md), you don't need to do anything. But if you are copying the
-> css files with `site.copy([".css"])` or `site.copy("/styles")` they won't be
-> processed. To fix it, you have to use `site.loadAssets([".css"])`.

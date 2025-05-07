@@ -1,6 +1,6 @@
 ---
 title: JSX
-description: Create pages and layouts with JSX (React).
+description: Create pages and layouts with JSX.
 mod: plugins/jsx.ts
 tags:
   - template_engine
@@ -10,13 +10,13 @@ tags:
 
 [JSX](https://facebook.github.io/jsx/) (or the equivalent TSX for TypeScript) is
 a template language to create and render HTML code, very popular in some
-frameworks, like React. This plugin adds support for `JSX / TSX` to create pages
-and layouts, using `React` for rendering.
+frameworks. This plugin adds support for `JSX / TSX` to create pages and
+layouts, using [`SSX`](https://github.com/oscarotero/ssx/) for rendering.
 
 Note that this plugin only provides JSX support to generate the pages at
 building time. This means that client-side properties like `onClick` won't work.
-If you want to use React for creating code for the browser (like SPAs), use the
-[ESbuild](./esbuild.md) plugin.
+If you want to use a JSX library like React, Preact, etc for creating code for
+the browser (like SPAs), use the [ESbuild](./esbuild.md) plugin.
 
 ## Installation
 
@@ -43,10 +43,14 @@ configure the JSX transform:
 ```json {title="deno.json"}
 {
   // ...
+  "imports": {
+    //...
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts"
+  },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:react",
-    "jsxImportSourceTypes": "npm:@types/react"
+    "jsxImportSource": "lume"
+    //...
   }
 }
 ```
@@ -60,8 +64,10 @@ configure the JSX transform:
 
 ## Creating pages
 
-To create a page with this format, just add a file with `.jsx` or `.tsx`
-extension to your site. This format works exactly the same as
+To create a page with this format, just add a file with `.page.jsx` or
+`.page.tsx` extension to your site. The `.page` subextension is required to
+differentiate JSX/TSX files that generate HTML pages from other files to be
+executed in the browser. This format works exactly the same as
 [JavaScript/TypeScript files](./modules.md), but with the addition of the
 ability to export JSX code in the default export:
 
@@ -90,21 +96,19 @@ object un-rendered.
 
 ```tsx
 export default ({ title, children }: Lume.Data, helpers: Lume.Helpers) => (
-  <html>
-    <head>
-      <title>{title}</title>
-    </head>
-    <body>
-      {children}
-    </body>
-  </html>
+  <>
+    {{ __html: "<!DOCTYPE html>" }}
+    <html>
+      <head>
+        <title>{title}</title>
+      </head>
+      <body>
+        {children}
+      </body>
+    </html>
+  </>
 );
 ```
-
-> [!tip]
->
-> Lume will automatically add the missing `<!DOCTYPE html>` to the generated
-> `.html` pages.
 
 ## Components
 
@@ -116,7 +120,7 @@ files in the `_components` folder. For example:
 ```jsx{title="_components/button.tsx"}
 export default function ({ children }) {
   return (
-    <button className="my-button">
+    <button class="my-button">
       {children}
     </button>
   );

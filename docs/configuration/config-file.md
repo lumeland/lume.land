@@ -109,6 +109,40 @@ const site = lume({
 });
 ```
 
+### cssFile
+
+Lume components and some plugins (like katex, prism, or google fonts) can
+generate CSS code. This option allows to configure globally the filename used to
+output that code.
+
+```ts
+const site = lume({
+  cssFile: "/style.css", // This is the default value
+});
+```
+
+### jsFile
+
+Lume components can generate JavaScript code. This option allows to configure
+globally the filename used to output that code.
+
+```ts
+const site = lume({
+  jsFile: "/script.css", // This is the default value
+});
+```
+
+### fontsFolder
+
+Some plugins like Google Fonts or Katex can output font files. This option
+allows to configure globally the folder where these files are saved.
+
+```ts
+const site = lume({
+  fontsFolder: "/fonts", // This is the default value
+});
+```
+
 ### caseSensitiveUrls
 
 Lume prevents saving two pages with the same URL. By default pages with the same
@@ -120,9 +154,9 @@ is only compatible with Linux.
 
 ### includes
 
-It's a special folder used by default by the template engines and some
-processors (like sass or postcss) to look for the included files. By default is
-`_includes` and this value is relative to the `src` folder.
+It's a special folder used by default by the template engines and some plugins
+(like sass or postcss) to look for the included files. By default is `_includes`
+and this value is relative to the `src` folder.
 
 As an example, if the `src` folder is `./src` and the includes folder is
 configured to `_includes`, Lume will look for the included files at
@@ -160,17 +194,9 @@ const site = lume({
 
 ### page404
 
-This option allows configuring the HTML page to displayed for 404 errors. By
+This option allows configuring the HTML page displayed for 404 errors. By
 default it is `/404.html`. If you are building a SPA with dynamic URLs, you may
 want to change it to `/index.html`.
-
-```ts
-const site = lume({
-  server: {
-    page404: "./not-found.html",
-  },
-});
-```
 
 ### open
 
@@ -209,6 +235,20 @@ const site = lume({
 });
 ```
 
+### debugBar
+
+The [debug bar](../core/debugbar.md) is a development toolbar that appears in
+your site while the dev server is running. Use this option to disable it or
+provide a HTTP specifier to use a different web component.
+
+```js
+const site = lume({
+  server: {
+    debugBar: false, // disable the debug bar
+  },
+});
+```
+
 ## Watcher options
 
 The `watcher` key contains an object to configure the file watcher, used to
@@ -238,10 +278,9 @@ const site = lume({
 
 ## Components options
 
-The `components` object allows to configure the components load and output
-files.
+The `components` object allows to configure the output files of
+[Lume components](../core/components.md).
 
-- **variable:** The variable name used to access to the loaded components.
 - **cssFile:** The file name to export the CSS code of the components.
 - **jsFile:** The file name to export the JS code of the components.
 - **placeholder:** A string used as placeholder to replace the content with the
@@ -252,7 +291,6 @@ import lume from "lume/mod.ts";
 
 const site = lume({
   components: {
-    variable: "comp",
     cssFile: "/components.css",
     jsFile: "/components.js",
   },
