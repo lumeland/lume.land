@@ -70,13 +70,3 @@ In your html, you can use the `prose` class.
   {{ content }}
 </article>
 ```
-
-> [!note]
->
-> To import [Daisy UI](https://daisyui.com/), use the `@lumeland/daisyui`
-> version until Deno compatibility
-> [in the official package is fixed](https://github.com/saadeghi/daisyui/issues/3597#issuecomment-2761322079):
->
-> ```css
-> @plugin "@lumeland/daisyui";
-> ```
