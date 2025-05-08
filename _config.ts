@@ -42,6 +42,7 @@ site
   .ignore("README.md")
   .ignore("scripts")
   .add("static", ".")
+  .add("static/.well-known/atproto-did", ".well-known/atproto-did")
   .add("_redirects")
   .add("img")
   .add("styles")
