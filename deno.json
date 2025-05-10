@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.0/",
+    "lume/": "https://deno.land/x/lume@v3.0.1/",
     "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts"
   },
   "lock": false,
@@ -26,7 +26,7 @@
       ]
     },
     "plugins": [
-      "https://deno.land/x/lume@v3.0.0/lint.ts"
+      "https://deno.land/x/lume@v3.0.1/lint.ts"
     ]
   },
   "fmt": {

@@ -121,3 +121,20 @@ site.add("static", (file) => file.toLowerCase());
 // Add all images in the /img/ directory
 site.add([".jpg", ".gif", ".png"], (file) => "/img" + file);
 ```
+
+## Copy files
+
+When a file is added with `site.add()`, its content can be changed during the
+build. For example, if you add a CSS file and use a plugin to process the CSS
+code like [Postcss](../../plugins/postcss.md), the content of the file will be
+processed. If you want to prevent a file to be processed, use the `site.copy()`
+function.
+
+The signature of `site.copy()` is exactly the same as `site.add()`. The only
+difference is the copied files won't be processed.
+
+```js
+site.use(postcss());
+site.add("style.css"); // This file is processed by Postcss
+site.copy("other-style.css"); // This file is copied as is
+```
