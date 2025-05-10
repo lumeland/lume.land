@@ -9,18 +9,19 @@ a site from Lume 2 to Lume 3. There is a more detailed description
 
 ## Deno configuration
 
-Lume 3 uses `Temporal` API which is unstable in Deno. Edit the `deno.json` file
-to enable it.
+Run the following to upgrade to Lume 3:
 
-It's also recommended to add the `lume/jsx-runtime` entry to the `imports` map,
-pointed to [the `ssx` library](https://deno.land/x/ssx) because it's used by
-plugins like `JSX`, `MDX` and `og_images`:
+```sh
+deno task lume upgrade
+```
+
+This script will update your `deno.json` file. You will see something like this:
 
 ```json
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.0/",
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.8/jsx-runtime.ts"
+    "lume/": "https://deno.land/x/lume@v3.0.1/",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts"
   },
   "unstable": ["temporal"],
   "compilerOptions": {
@@ -34,26 +35,33 @@ plugins like `JSX`, `MDX` and `og_images`:
     "build": "deno task lume",
     "serve": "deno task lume -s",
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -"
+  },
+  "lint": {
+    "plugins": [
+      "https://deno.land/x/lume@v3.0.1/lint.ts"
+    ]
   }
 }
 ```
 
+If you're using a different value in the `compilerOptions.jsxImportSource`,
+change it to `lume` to use [`ssx`](https://deno.land/x/ssx), the JSX library
+used by Lume plugins like `JSX`, `MDX` and `og_images`.
+
 ## Add files
 
-In Lume 3, `site.copy()`, `site.loadAssets()` and `site.copyRemainingFiles()`
-were replaced with `site.add()`:
+In Lume 3, `site.loadAssets()` and `site.copyRemainingFiles()` were replaced
+with `site.add()`:
 
 ```js
 // Lume 2
 site.loadAssets([".css"]);
-site.copy("/assets", ".");
 site.copyRemainingFiles(
   (path: string) => path.startsWith("/articles/"),
 );
 
 // Lume 3
 site.add([".css"]);
-site.add("/assets", ".");
 site.add("/articles");
 ```
 
@@ -71,7 +79,7 @@ export default async function ({ comp }) {
 }
 ```
 
-If your're running components in `.njk` files, use the new `await` filter:
+If you're running components in `.njk` files, use the new `await` filter:
 
 ```txt
 {{ comp.button({ text: "Hello world"}) | await | safe }}
@@ -132,7 +140,8 @@ site.use(brotli()); // Compress the HTML and CSS
 ```
 
 If you have some issue upgrading from Lume 2 to Lume 3, make sure the order of
-the plugins is correct:
+the plugins is correct. Lume 3 comes with a lint plugin to check the plugins
+order and warn you.
 
 ## Dates in filepaths
 
