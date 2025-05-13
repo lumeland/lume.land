@@ -338,16 +338,15 @@ export default function* ({ lang }) {
 
 ### Sitemap
 
-Use alias syntax (for consistency with `feed` and `metas` plugins) to define the
-values:
+Similar to the `feed` and `metas` plugins, use alias syntax to define the
+values. To maintain consistency with the `feed` plugin, the values for items
+should now be specified within the `items` object:
 
 ```js
 // Lume 2
 site.use(sitemap({
-  items: {
-    lastmod: "date",
-    priorty: "priority",
-  },
+  lastmod: "date",
+  priorty: "priority",
 }));
 
 // Lume 3
