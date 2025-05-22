@@ -72,7 +72,7 @@ value is used.
 ```ts
 cms.collection({
   name: "posts",
-  label: "Your posts!"
+  label: "Your posts!",
   description: "To create, edit or delete the posts of the blog",
   store: "src:posts/*.md",
   fields: [
