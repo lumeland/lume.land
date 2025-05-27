@@ -25,7 +25,7 @@ To add LumeCMS to your site add the `lume/cms/` entry to your import map:
 {
   "imports": {
     "lume/": "https://deno.land/x/lume@v2.3.2/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.6.3/"
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.11.5/"
   }
 }
 ```
@@ -47,6 +47,11 @@ Go to configuration section to learn how to configure LumeCMS with
 [collections](./configuration/collections.md),
 [documents](./configuration/documents.md) and
 [uploads](./configuration/uploads.md).
+
+### Upgrade
+
+[Run `deno task lume upgrade`](https://lume.land/docs/overview/installation/#upgrade-lume)
+to update both Lume and LumeCMS.
 
 ## Run in localhost
 
