@@ -31,5 +31,4 @@ By default, the field is user-editable. If you want to make it read only:
 
 ## Available options
 
-This field only has
-[the common options](../configuration/fields.md#common-field-options).
+This field only has [the common options](./index.md#common-field-options).

@@ -23,8 +23,8 @@ options. It display a list of `<input type="radio">` in the UI.
 ## Available options
 
 In addition to the common options (see
-[fields documentation](../configuration/fields.md#common-field-options) for more
-info), this field has the following options:
+[fields documentation](./index.md#common-field-options) for more info), this
+field has the following options:
 
 ### options
 

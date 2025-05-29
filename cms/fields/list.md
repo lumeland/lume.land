@@ -29,8 +29,8 @@ See [Object list](./object-list.md) if you need to store a list of objects.
 ## Available options
 
 This field only accept the options `name`, `type`, `label` and `description`
-[from the common options](../configuration/fields.md#common-field-options). It
-also accepts the following options:
+[from the common options](./index.md#common-field-options). It also accepts the
+following options:
 
 ### options
 

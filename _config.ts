@@ -13,6 +13,7 @@ import nesting from "npm:postcss-nesting";
 import sitemap from "lume/plugins/sitemap.ts";
 import metas from "lume/plugins/metas.ts";
 import checkUrls from "lume/plugins/check_urls.ts";
+import redirects from "lume/plugins/redirects.ts";
 import ogImages from "lume/plugins/og_images.ts";
 import nav from "lume/plugins/nav.ts";
 import { env } from "lume/core/utils/env.ts";
@@ -43,6 +44,9 @@ site
   .ignore("scripts")
   .add("static", ".")
   .add("_redirects")
+  .use(redirects({
+    // output: "netlify",
+  }))
   .add("img")
   .add("styles")
   .add("main.js")

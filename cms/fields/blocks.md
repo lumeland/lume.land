@@ -35,5 +35,4 @@ export default cms;
 
 ## Available options
 
-This field only has
-[the common options](../configuration/fields.md#common-field-options).
+This field only has [the common options](./index.md#common-field-options).

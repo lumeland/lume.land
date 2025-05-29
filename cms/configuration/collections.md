@@ -26,7 +26,7 @@ cms.collection("posts", "src:posts/*.md", [
 In the example above, we have defined the `posts` collection, using the `src`
 storage (selecting all `.md` files inside the `posts` folder). The third
 argument is the list of fields for this collection. See
-[fields documentation](./fields.md) for more info about this value.
+[fields documentation](../fields/index.md) for more info about this value.
 
 Collections can create, edit and remove documents.
 

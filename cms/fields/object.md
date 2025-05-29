@@ -28,8 +28,8 @@ Use a `object` field to group the title and subtitle in the CMS:
 ## Available options
 
 This field only accept the options `name`, `type`, `label` and `description`
-[from the common options](../configuration/fields.md#common-field-options). It
-also accept the following extra options:
+[from the common options](./index.md#common-field-options). It also accept the
+following extra options:
 
 ### fields
 

@@ -27,8 +27,8 @@ cms.document("landing-page", "src:index.yml", [
 
 In the example above, we have defined the `landing-page` document, that is saved
 in the `index.yml` file in the `src` storage. In the CMS we can edit the title,
-subtitle and content fields. See [fields documentation](./fields.md) for more
-info about how to configure the document fields.
+subtitle and content fields. See [fields documentation](../fields/index.md) for
+more info about how to configure the document fields.
 
 ## Extra options
 

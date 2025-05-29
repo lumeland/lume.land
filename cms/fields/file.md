@@ -19,8 +19,8 @@ The field of type `file` is used to upload and store files. It display a
 ## Available options
 
 In addition to the common options (see
-[fields documentation](../configuration/fields.md#common-field-options) for more
-info), this field has the following options:
+[fields documentation](./index.md#common-field-options) for more info), this
+field has the following options:
 
 ### upload
 

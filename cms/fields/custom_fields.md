@@ -2,6 +2,7 @@
 title: Custom fields
 description: How to create custom fields
 order: 5
+oldUrl: /cms/configuration/custom_fields/
 ---
 
 In LumeCMS, the fields are standard

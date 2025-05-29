@@ -4,7 +4,17 @@
 
   <details class="doc-navbar-section" {{ if url.startsWith(`/${main_menu}/${section.data.basename}/`) }}open{{ /if }}>
     <summary>
-      <span class="doc-navbar-section-title">{{ section.data.title }}</span>
+      <span class="doc-navbar-section-title">
+        {{ if section.data.url }}
+          {{ if section.data.url == url }}
+          <a href="{{ section.data.url }}" aria-current="page" title="{{ section.data.description }}">{{ section.data.title }}</a>
+          {{ else }}
+          <a href="{{ section.data.url }}" title="{{ section.data.description }}">{{ section.data.title }}</a>
+          {{ /if }}
+        {{ else }}
+          {{ section.data.title }}
+        {{ /if }}
+      </span>
     </summary>
     <ul class="doc-navbar-section-links">
       {{ for page of section.children }}

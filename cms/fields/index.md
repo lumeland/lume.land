@@ -1,11 +1,13 @@
 ---
 title: Fields
 description: List of all fields available by default.
-order: 4
+order: 3
+oldUrl: /cms/configuration/fields/
 ---
 
 Fields define the data type and interface used for the entries inside
-[documents](documents.md) and [collections](collections.md).
+[documents](../configuration/documents.md) and
+[collections](../configuration/collections.md).
 
 All fields must have a name and a type.
 
@@ -98,12 +100,27 @@ attributes
 : An object with extra attributes to pass to the input in the UI. This allows to set HTML validation attributes like `required`, `min`, `max`, `maxlength`, `pattern`, etc.
 
 init
-: A function that will be invoked before showing this field in the front-end. It allows to change the field configuration dynamically. More info below.
+: A function that will be invoked before showing this field in the front-end. It allows to change the field configuration dynamically. [More info below](#the-init-function).
 
 view
 : A string with the name of the view. This is used to group fields by view name and show/hide fields with the same view.
 
+transform
+: A custom function to transform a value before save or update it. For example:
+
+  ```js
+  {
+    name: "code",
+    type: "text",
+    transform(value) {
+      return value?.toUpperCase(); // Ensure the value is stored always in uppper case.
+    }
+  }
+  ```
+
 <!-- deno-fmt-ignore-end -->
+
+## Example
 
 This is an example of fields with some extra options:
 
@@ -160,9 +177,9 @@ generated dynamically everytime this field is used in a collection or document.
 
 The second argument of the `init` function is an object with the CMS content
 (all collections, documents, uploads, etc). This object also contains the
-[data](./options.md#data) variable passed in the configuration. Due Lume adapter
-stores the `site` instance in this object automatically, it's possible to modify
-the field configuration using the site data. For example:
+[data](../configuration/options.md#data) variable passed in the configuration.
+Due Lume adapter stores the `site` instance in this object automatically, it's
+possible to modify the field configuration using the site data. For example:
 
 ```js
 {

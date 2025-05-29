@@ -69,7 +69,7 @@ const cms = lumeCMS({
 
 It's where you can pass arbitrary data to use later inside the fields. Lume
 automatically insert the `lume` instance. More info at
-[Fields configuration](./fields.md#the-init-function)
+[Fields configuration](../fields/index.md#the-init-function)
 
 ## log
 
