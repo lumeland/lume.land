@@ -128,7 +128,7 @@ globally the filename used to output that code.
 
 ```ts
 const site = lume({
-  jsFile: "/script.css", // This is the default value
+  jsFile: "/script.js", // This is the default value
 });
 ```
 
