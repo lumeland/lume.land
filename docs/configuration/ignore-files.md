@@ -41,3 +41,12 @@ site.ignore((path) => {
 
 Pages with the `draft` value set to `true` are ignored by Lume unless the
 environment variable `LUME_DRAFTS` is set to `true`.
+
+## Adding ignored files
+
+If you have a file or folder starting with `_` but don't want to ignore it, use
+the [`site.add()`](./add-files.md) function.
+
+```js
+site.add("/_posts"); // The _posts folder is not ignored
+```
