@@ -32,7 +32,7 @@ In the repository [cms-deploy](https://github.com/lumeland/cms-deploy) there's a
 script to setup LumeCMS automatically. The script does not only install LumeCMS
 but also:
 
-- Install/update the required packages of the OS (Deno, Git, Caddy, etc).
+- Install/update the required packages (Deno, Git, Caddy, etc).
 - Setup a HTTPS server with [Caddy](https://caddyserver.com/) and configures a
   firewall with [ufw](https://en.wikipedia.org/wiki/Uncomplicated_Firewall).
 - Clone the Git repository of the website and configure LumeCMS to push/pull
@@ -42,56 +42,8 @@ but also:
 - Configures a cron to restart the service if the CPU usage is above 95%
   ([see this Deno issue](https://github.com/denoland/deno/issues/23033)).
 
-To execute the script, log in to the server throught SSH and run the following:
-
-```sh
-curl https://lumeland.github.io/cms-deploy/install.sh > install.sh && sh install.sh
-```
-
-This command will download the `install.sh` script from the repository and
-execute it.
-
-> [!note]
->
-> At some points, the script will ask you to confirm some steps (like install
-> packages, etc) that you have to allow.
-
-The installation process will ask you for some info:
-
-<!-- deno-fmt-ignore-start -->
-URL of the repository
-: The SSH URL of the git repository, like `git@github.com:user/repo.git`.
-
-Email
-: It's used for git commits and to create the SSL certificate.
-
-Domain
-: The domain for the CMS, for example `cms.example.com`.
-
-Username
-: It's used to log in the CMS. By default is `admin`
-
-Password
-: The password to access to the CMS.
-<!-- deno-fmt-ignore-end -->
-
-During the process, it will generate a deploy key that you must add to GitHub:
-
-- When you see the key in the terminal, copy it to the clipboard.
-- Go to the GitHub repository: _Settings > Deploy keys > Add deploy key_
-- Paste the key.
-- Check the **Allow write access** option. It's required to push changes to the
-  repository.
-- Once the key is added, press Enter in the terminal to continue the
-  installation.
-
-When the script finishes, you should be able to access to the CMS from your
-browser.
-
-> [!note]
->
-> The first time to access to the CMS may take a little longer because the site
-> is being build and Deno needs to download all dependencies.
+To setup LumeCMS in your VPS, follow the instructions in the
+[README.md file of the repo](https://github.com/lumeland/cms-deploy/blob/main/README.md).
 
 ## Demo
 
