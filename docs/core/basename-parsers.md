@@ -79,9 +79,3 @@ The `parseBasename` function is used for both files and folders. This allows
 extracting values from a folder name and storing them as
 [shared data](../creating-pages/shared-data.md), so they are available to all
 pages inside.
-
-## Extract dates
-
-Lume, by default, is configured with a basename parser to extract dates from
-filenames. See [page dates](../creating-pages/page-files.md#page-date) for more
-info.
