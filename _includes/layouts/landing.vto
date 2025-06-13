@@ -14,14 +14,27 @@ page_css: landing.css
       {{ install.title |> md }}
 
       <div class="terminal">
-        <pre><code>{{ install.code }}<lume-copy class="terminal-copy"><button aria-label="Copy code" data-text="{{ install.code }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"></path></svg></button></lume-copy></code></pre>
-        <a class="terminal-cta" href="{{ install.url }}" aria-label="Continue to Getting Started">
-          <img width="30" height="30" src="{{ "arrow-right" |> icon("phosphor") }}" inline>
+        <pre
+        ><code>{{ install.code }}<lume-copy class="terminal-copy"><button aria-label="Copy code" data-text="{{ install.code }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"></path></svg></button></lume-copy></code></pre>
+        <a
+          class="terminal-cta"
+          href="{{ install.url }}"
+          aria-label="Continue to Getting Started"
+        >
+          <img
+            width="30"
+            height="30"
+            src='{{ "arrow-right" |> icon("phosphor") }}'
+            inline
+          >
         </a>
       </div>
 
       <lume-shield data-name="denoland/lume"></lume-shield>
-      <lume-shield style="--color:mediumpurple" data-name="jsdelivr/lumeland/cms"></lume-shield>
+      <lume-shield
+        style="--color: mediumpurple"
+        data-name="jsdelivr/lumeland/cms"
+      ></lume-shield>
     </div>
 
     <div class="landing-header-companies">
@@ -29,36 +42,34 @@ page_css: landing.css
 
       <ul>
         {{ for item of companies.items }}
-        <li>
-          <a href="{{ item.url }}" title="{{ item.name }}">
-            {{ item.logo }}
-          </a>
-        </li>
+          <li>
+            <a href="{{ item.url }}" title="{{ item.name }}">
+              {{ item.logo }}
+            </a>
+          </li>
         {{ /for }}
       </ul>
     </div>
   </header>
 
-
   <section class="landing-usage">
-  {{ for block of usage }}
-    <div class="landing-usage-text">
-      <h2>{{ block.title }}</h2>
-      {{ block.description |> md }}
-    </div>
-    <div class="landing-usage-code">
-      {{ block.code |> md }}
-    </div>
-  {{ /for }}
+    {{ for block of usage }}
+      <div class="landing-usage-text">
+        <h2>{{ block.title }}</h2> {{ block.description |> md }}
+      </div>
+      <div class="landing-usage-code">
+        {{ block.code |> md }}
+      </div>
+    {{ /for }}
   </section>
 
   <ul class="landing-features">
     {{ for feature of features }}
-    <li>
-      <img src="{{ feature.img }}" inline>
-      <h3>{{ feature.title }}</h3>
-      {{ feature.description |> md }}
-    </li>
+      <li>
+        <img src="{{ feature.img }}" inline>
+        <h3>{{ feature.title }}</h3>
+        {{ feature.description |> md }}
+      </li>
     {{ /for }}
   </ul>
 
@@ -67,34 +78,55 @@ page_css: landing.css
       <h2>{{ examples.title }}</h2>
 
       <lume-carousel-controls target="#examples" class="lume-carousel-buttons">
-        <button value="prev" class="button is-secondary has-icon" aria-label="Previous examples">
-          <img src="{{ "arrow-left" |> icon("phosphor") }}" inline>
+        <button
+          value="prev"
+          class="button is-secondary has-icon"
+          aria-label="Previous examples"
+        >
+          <img src='{{ "arrow-left" |> icon("phosphor") }}' inline>
         </button>
-        <button value="next" class="button is-secondary has-icon" aria-label="Next examples">
-          <img src="{{ "arrow-right" |> icon("phosphor") }}" inline>
+        <button
+          value="next"
+          class="button is-secondary has-icon"
+          aria-label="Next examples"
+        >
+          <img src='{{ "arrow-right" |> icon("phosphor") }}' inline>
         </button>
       </lume-carousel-controls>
     </header>
 
-    <lume-carousel role="region" aria-label="Showcase" tabindex="0" class="landing-examples-sites" id="examples">
+    <lume-carousel
+      role="region"
+      aria-label="Showcase"
+      tabindex="0"
+      class="landing-examples-sites"
+      id="examples"
+    >
       {{ set showcase = search.page("url=/showcase/") }}
       {{ for site of showcase.sites.filter((site) => site.img).slice(0, 8) }}
-      <figure class="site">
-        <a href="{{ site.url }}" class="site-image">
-          <img src="{{ site.img }}" alt="Screenshot of the site" width="300" height="200">
-        </a>
-        <figcaption class="site-description">
-          <p>
-            <a href="{{ site.url }}" class="site-name">
-              {{ site.title }}
-            </a>
-          </p>
+        <figure class="site">
+          <a href="{{ site.url }}" class="site-image">
+            <img
+              src="{{ site.img }}"
+              alt="Screenshot of the site"
+              width="300"
+              height="200"
+            >
+          </a>
+          <figcaption class="site-description">
+            <p>
+              <a href="{{ site.url }}" class="site-name">
+                {{ site.title }}
+              </a>
+            </p>
 
-          {{ site.description |> md }}
-        </figcaption>
-      </figure>
+            {{ site.description |> md }}
+          </figcaption>
+        </figure>
       {{ /for }}
-      <a href="{{ examples.more.href }}" class="landing-examples-cta">{{ examples.more.text }}</a>
+      <a href="{{ examples.more.href }}" class="landing-examples-cta">{{
+        examples.more.text
+      }}</a>
     </lume-carousel>
   </section>
 
@@ -102,46 +134,69 @@ page_css: landing.css
     <h2>{{ testimonials.title }}</h2>
 
     <ul class="landing-testimonials-quotes">
-    {{ for item of testimonials.quotes }}
-      <li>
-        {{ if item.type == "video" }}
-        <figure class="landing-testimonials-cover">
-          <a href="{{ item.url }}" class="is-video">
-            <img src="{{ item.cover }}" alt="{{ item.text }}" width="300" height="200">
-          </a>
-          <figcaption class="landing-testimonial-caption">
-            <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar |> replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
-            <a href="{{ item.url }}">
-              <strong>{{ item.author }}</strong>
-              <time>{{ item.date }}</time>
-            </a>
-          </figcaption>
-        </figure>
-        {{ else if item.type == "article" }}
-        <article class="landing-testimonials-article">
-          <h3><a href="{{ item.url }}">{{ item.text }}</a></h3>
-          <footer class="landing-testimonial-caption">
-            <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar |> replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
-            <a href="{{ item.url }}">
-              <strong>{{ item.author }}</strong>
-              <time>{{ item.date }}</time>
-            </a>
-          </footer>
-        </article>
-        {{ else }}
-        <blockquote class="landing-testimonials-quote">
-          {{ item.text |> md }}
-          <cite class="landing-testimonial-caption">
-            <img src="{{ item.avatar }}" srcset="{{ item.avatar }}, {{ item.avatar |> replace(".webp", "@2x.webp") }} 2x" width="50" height="50" alt="{{ item.author }}">
-            <a href="{{ item.url }}">
-              <strong>{{ item.author }}</strong>
-              <time>{{ item.date }}</time>
-            </a>
-          </cite>
-        </blockquote>
-        {{ /if }}
-      </li>
-    {{ /for }}
+      {{ for item of testimonials.quotes }}
+        <li>
+          {{ if item.type == "video" }}
+            <figure class="landing-testimonials-cover">
+              <a href="{{ item.url }}" class="is-video">
+                <img
+                  src="{{ item.cover }}"
+                  alt="{{ item.text }}"
+                  width="300"
+                  height="200"
+                >
+              </a>
+              <figcaption class="landing-testimonial-caption">
+                <img
+                  src="{{ item.avatar }}"
+                  srcset='{{ item.avatar }}, {{ item.avatar |> replace(".webp", "@2x.webp") }} 2x'
+                  width="50"
+                  height="50"
+                  alt="{{ item.author }}"
+                >
+                <a href="{{ item.url }}">
+                  <strong>{{ item.author }}</strong>
+                  <time>{{ item.date }}</time>
+                </a>
+              </figcaption>
+            </figure>
+          {{ else if item.type == "article" }}
+            <article class="landing-testimonials-article">
+              <h3><a href="{{ item.url }}">{{ item.text }}</a></h3>
+              <footer class="landing-testimonial-caption">
+                <img
+                  src="{{ item.avatar }}"
+                  srcset='{{ item.avatar }}, {{ item.avatar |> replace(".webp", "@2x.webp") }} 2x'
+                  width="50"
+                  height="50"
+                  alt="{{ item.author }}"
+                >
+                <a href="{{ item.url }}">
+                  <strong>{{ item.author }}</strong>
+                  <time>{{ item.date }}</time>
+                </a>
+              </footer>
+            </article>
+          {{ else }}
+            <blockquote class="landing-testimonials-quote">
+              {{ item.text |> md }}
+              <cite class="landing-testimonial-caption">
+                <img
+                  src="{{ item.avatar }}"
+                  srcset='{{ item.avatar }}, {{ item.avatar |> replace(".webp", "@2x.webp") }} 2x'
+                  width="50"
+                  height="50"
+                  alt="{{ item.author }}"
+                >
+                <a href="{{ item.url }}">
+                  <strong>{{ item.author }}</strong>
+                  <time>{{ item.date }}</time>
+                </a>
+              </cite>
+            </blockquote>
+          {{ /if }}
+        </li>
+      {{ /for }}
     </ul>
   </section>
 
@@ -151,22 +206,34 @@ page_css: landing.css
     <div>
       <ul class="landing-support-sponsors">
         {{ for sponsor of support.sponsors }}
-        <li>
-          <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
-            <img src="{{ sponsor.img }}" srcset="{{ sponsor.img }}, {{ sponsor.img |> replace(".webp", "@2x.webp") }} 2x" height="100" width="100" alt="{{ sponsor.name }}">
-          </a>
-        </li>
+          <li>
+            <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
+              <img
+                src="{{ sponsor.img }}"
+                srcset='{{ sponsor.img }}, {{ sponsor.img |> replace(".webp", "@2x.webp") }} 2x'
+                height="100"
+                width="100"
+                alt="{{ sponsor.name }}"
+              >
+            </a>
+          </li>
         {{ /for }}
       </ul>
-      
+
       <h3>{{ support.past_title }}</h3>
       <ul class="landing-support-sponsors is-past">
         {{ for sponsor of support.past_sponsors }}
-        <li>
-          <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
-            <img src="{{ sponsor.img }}" srcset="{{ sponsor.img }}, {{ sponsor.img |> replace(".webp", "@2x.webp") }} 2x" height="60" width="60" alt="{{ sponsor.name }}">
-          </a>
-        </li>
+          <li>
+            <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
+              <img
+                src="{{ sponsor.img }}"
+                srcset='{{ sponsor.img }}, {{ sponsor.img |> replace(".webp", "@2x.webp") }} 2x'
+                height="60"
+                width="60"
+                alt="{{ sponsor.name }}"
+              >
+            </a>
+          </li>
         {{ /for }}
       </ul>
 
@@ -174,10 +241,17 @@ page_css: landing.css
 
       <figure class="landing-support-contributors">
         <a href="https://github.com/lumeland/lume/graphs/contributors">
-          <img width="812" height="404" src="/img/contrib.svg" alt="Grid with all contributors avatars">
+          <img
+            width="812"
+            height="404"
+            src="/img/contrib.svg"
+            alt="Grid with all contributors avatars"
+          >
         </a>
 
-        <figcaption><p>Made with <a href="https://contrib.rocks">contrib.rocks</a>.</p></figcaption>
+        <figcaption>
+          <p>Made with <a href="https://contrib.rocks">contrib.rocks</a>.</p>
+        </figcaption>
       </figure>
     </div>
 

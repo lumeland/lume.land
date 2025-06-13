@@ -23,7 +23,7 @@ page_css: docs.css
       {{ if it.mod }}
         <h2>Options</h2>
 
-        {{ include "templates/type.vto" {options: await scheme(mod)} }}
+        {{ include "templates/type.vto" { options: await scheme(mod) } }}
       {{ /if }}
 
       {{ content }}

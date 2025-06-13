@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Tech It Easy
+    img: /img/showcase/esolia.webp
+    url: https://blog.esolia.pro/
+    description: eSolia IT Tips Blog in English and Japanese
+    code: https://github.com/eSolia/blog.esolia.pro
+
   - title: Font Licensing Mess
     img: /img/showcase/fontlicensingmess.webp
     url: https://fontlicensingmess.com/

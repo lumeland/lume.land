@@ -1,47 +1,54 @@
-{{> function printDef(def) {
-  if (def.type === "array") {
-    if (Array.isArray(def.children)) {
-      return `<em>[${def.children.map((child) => child.type).join(", ")}]</em>`;
+{{>
+  function printDef(def) {
+    if (def.type === "array") {
+      if (Array.isArray(def.children)) {
+        return `<em>[${
+          def.children.map((child) => child.type).join(", ")
+        }]</em>`;
+      }
+      return `<em>${def.children.type}[]</em>`;
+    } else {
+      return `<em>${def.value || def.type}</em>`;
     }
-    return `<em>${def.children.type}[]</em>`;
-  } else {
-    return `<em>${def.value || def.type}</em>`;
   }
-}
 }}
 
 <dl class="type">
   {{ for name, info of options }}
-  {{# {{ JSON.stringify(info)}} #}}
-  <div>
-    <dt class="type-name">
-      <strong>{{ name }}</strong>
-      {{ if info.type === "union" }}
-        {{ info.children.map(printDef).join(" ")}}
-      {{ else }}
-        {{ printDef(info) }}
-      {{ /if }}
-    </dt>
-    <dd class="type-details">
-      {{ info.description |> md |> replace("<style>", "style") }}
-      
-      {{ if info.see }}
-        <p>See <a href="{{ info.see }}">{{ info.see }}</a></p>
-      {{ /if }}
+    {{# {{ JSON.stringify(info)}} #}}
+    <div>
+      <dt class="type-name">
+        <strong>{{ name }}</strong>
+        {{ if info.type === "union" }}
+          {{ info.children.map(printDef).join(" ") }}
+        {{ else }}
+          {{ printDef(info) }}
+        {{ /if }}
+      </dt>
+      <dd class="type-details">
+        {{ info.description |> md |> replace("<style>", "style") }}
 
-      {{ if info.default !== undefined && !["{}", "[]"].includes(JSON.stringify(info.default)) }}
-        <strong>Default:</strong>
-        <pre><code class="language-js hljs">{{
+        {{ if info.see }}
+          <p>See <a href="{{ info.see }}">{{ info.see }}</a></p>
+        {{ /if }}
+
+        {{
+          if info.default !== undefined && !["{}", "[]"].includes(JSON.stringify(info.default))
+        }}
+          <strong>Default:</strong>
+          <pre
+          >
+<code class="language-js hljs">{{
           typeof info.default === "string" && info.default.startsWith("`")
           ? info.default.slice(1, -1)
           : Deno.inspect(info.default)
           }}</code></pre>
-      {{ /if }}
+        {{ /if }}
 
-      {{ if info.type === "object" && info.children }}
-        {{ include "./type.vto" { options: info.children } }}
-      {{ /if }}
-    </dd>
-  </div>
+        {{ if info.type === "object" && info.children }}
+          {{ include "./type.vto" { options: info.children } }}
+        {{ /if }}
+      </dd>
+    </div>
   {{ /for }}
 </dl>

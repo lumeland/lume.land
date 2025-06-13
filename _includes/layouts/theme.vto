@@ -10,11 +10,11 @@ page_css: theme.css
     </nav>
     <header class="theme-header">
       <h1 class="theme-title">
-      {{ title }}
+        {{ title }}
 
-      {{ if it.module.cms }}
-      <span class="tag is-small">Has CMS</span>
-      {{ /if }}
+        {{ if it.module.cms }}
+          <span class="tag is-small">Has CMS</span>
+        {{ /if }}
       </h1>
 
       <p class="theme-author">
@@ -32,7 +32,8 @@ page_css: theme.css
       <p>Create project with this theme:</p>
       <div class="terminal">
         {{ set code = `deno run -A https://lume.land/init.ts --theme=${id}` }}
-        <pre><code>{{ code }}</code><lume-copy class="terminal-copy"><button aria-label="Copy code" data-text="{{ code }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"></path></svg></button></lume-copy></pre>
+        <pre
+        ><code>{{ code }}</code><lume-copy class="terminal-copy"><button aria-label="Copy code" data-text="{{ code }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"></path></svg></button></lume-copy></pre>
       </div>
     </div>
 
@@ -51,54 +52,81 @@ page_css: theme.css
       <div class="theme-preview-toggle">
         <label>
           <input type="radio" checked name="device" value="desktop">
-          <img src="{{ "desktop:regular" |> icon("phosphor") }}" alt="Desktop" width="24" inline>
+          <img
+            src='{{ "desktop:regular" |> icon("phosphor") }}'
+            alt="Desktop"
+            width="24"
+            inline
+          >
         </label>
         <label>
           <input type="radio" name="device" value="mobile">
-          <img src="{{ "device-mobile" |> icon("phosphor") }}" alt="Mobile" width="24" inline>
+          <img
+            src='{{ "device-mobile" |> icon("phosphor") }}'
+            alt="Mobile"
+            width="24"
+            inline
+          >
         </label>
       </div>
 
       {{ if screens.some((s) => s.desktop_dark || s.mobile_dark) }}
-      <div class="theme-preview-toggle">
-        <label>
-          <input type="radio" checked name="theme" value="light">
-          <img src="{{ "sun-dim" |> icon("phosphor") }}" alt="Light theme" width="24" inline>
-        </label>
-        <label>
-          <input type="radio" name="theme" value="dark">
-          <img src="{{ "moon" |> icon("phosphor") }}" alt="Dark theme" width="24" inline>
-        </label>
-      </div>
+        <div class="theme-preview-toggle">
+          <label>
+            <input type="radio" checked name="theme" value="light">
+            <img
+              src='{{ "sun-dim" |> icon("phosphor") }}'
+              alt="Light theme"
+              width="24"
+              inline
+            >
+          </label>
+          <label>
+            <input type="radio" name="theme" value="dark">
+            <img
+              src='{{ "moon" |> icon("phosphor") }}'
+              alt="Dark theme"
+              width="24"
+              inline
+            >
+          </label>
+        </div>
       {{ else }}
-      <input type="hidden" name="theme" value="light">
+        <input type="hidden" name="theme" value="light">
       {{ /if }}
     </form>
 
     {{ for screen of screens }}
-    <figure>
-      <div class="device" data-device="desktop" data-theme="light">
-        <img class="" src="https://lumeland.github.io/themes{{ screen.desktop }}">
-      </div>
+      <figure>
+        <div class="device" data-device="desktop" data-theme="light">
+          <img
+            class=""
+            src="https://lumeland.github.io/themes{{ screen.desktop }}"
+          >
+        </div>
 
-      {{ if screen.desktop_dark }}
-      <div class="device" data-device="desktop" data-theme="dark">
-        <img src="https://lumeland.github.io/themes{{ screen.desktop_dark }}">
-      </div>
-      {{ /if }}
+        {{ if screen.desktop_dark }}
+          <div class="device" data-device="desktop" data-theme="dark">
+            <img
+              src="https://lumeland.github.io/themes{{ screen.desktop_dark }}"
+            >
+          </div>
+        {{ /if }}
 
-      {{ if screen.mobile }}
-      <div class="device" data-device="mobile" data-theme="light">
-        <img src="https://lumeland.github.io/themes{{ screen.mobile }}">
-      </div>
-      {{ /if }}
+        {{ if screen.mobile }}
+          <div class="device" data-device="mobile" data-theme="light">
+            <img src="https://lumeland.github.io/themes{{ screen.mobile }}">
+          </div>
+        {{ /if }}
 
-      {{ if screen.mobile_dark }}
-      <div class="device" data-device="mobile" data-theme="dark">
-        <img src="https://lumeland.github.io/themes{{ screen.mobile_dark }}">
-      </div>
-      {{ /if }}
-    </figure>
+        {{ if screen.mobile_dark }}
+          <div class="device" data-device="mobile" data-theme="dark">
+            <img
+              src="https://lumeland.github.io/themes{{ screen.mobile_dark }}"
+            >
+          </div>
+        {{ /if }}
+      </figure>
     {{ /for }}
   </lume-devices>
 </main>

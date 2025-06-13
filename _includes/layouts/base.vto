@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
   <script type="text/javascript">
     const root = document.firstElementChild;
@@ -27,12 +27,20 @@
 
     <meta name="color-scheme" content="light dark">
 
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link
+      rel="preconnect"
+      href="https://cdn.jsdelivr.net"
+      crossorigin="anonymous"
+    >
+    <link
+      rel="dns-prefetch"
+      href="https://cdn.jsdelivr.net"
+      crossorigin="anonymous"
+    >
 
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="canonical" href="{{ url |> url(true) }}">
-    
+
     {{ if it.page_css }}
       <link rel="stylesheet" href="/styles/pages/{{ page_css }}">
     {{ /if }}
@@ -52,12 +60,18 @@
     <script type="module" type="text/javascript">
       import docsearch from "/docsearch/index.js";
 
-      window.addEventListener('DOMContentLoaded', () => {
-        document.getElementById("switch-theme").addEventListener("click", (event) => {
-          const currentTheme =
-            localStorage.getItem("data-theme") == "light" || (getComputedStyle(root).getPropertyValue("color-scheme") == "light");
-          storeTheme(!!currentTheme);
-        });
+      window.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("switch-theme").addEventListener(
+          "click",
+          (event) => {
+            const currentTheme =
+              localStorage.getItem("data-theme") == "light" ||
+              (getComputedStyle(root).getPropertyValue(
+                "color-scheme",
+              ) == "light");
+            storeTheme(!!currentTheme);
+          },
+        );
 
         mediaMatch(mediaQuery).addEventListener("change", (event) => {
           storeTheme(event.matches);
@@ -68,7 +82,7 @@
           apiKey: "bcb89a19824e0100724bc16011dea6f8",
           indexName: "lume",
           container: document.getElementById("search"),
-          debug: false
+          debug: false,
         });
       }, false);
     </script>

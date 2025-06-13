@@ -5,32 +5,37 @@ page_css: showcase.css
 
 <main class="showcase">
   <header class="showcase-header">
-    <h1>{{ title }}</h1>
-    {{ description |> md }}
+    <h1>{{ title }}</h1> {{ description |> md }}
   </header>
 
   <ul class="showcase-sites">
     {{ for site of sites }}
-    <li>
-      <figure class="site">
-        <a href="{{ site.url }}" class="site-image">
-          <img src="{{ site.img }}" alt="Screenshot of the site" width="300" height="200">
-        </a>
-        <figcaption class="site-description">
-          <p>
-            {{ if site.code }}
-              <a class="button is-secondary is-small" href="{{ site.code }}">View code</a>
-            {{ /if }}
+      <li>
+        <figure class="site">
+          <a href="{{ site.url }}" class="site-image">
+            <img
+              src="{{ site.img }}"
+              alt="Screenshot of the site"
+              width="300"
+              height="200"
+            >
+          </a>
+          <figcaption class="site-description">
+            <p>
+              {{ if site.code }}
+                <a class="button is-secondary is-small" href="{{ site.code }}"
+                >View code</a>
+              {{ /if }}
 
-            <a href="{{ site.url }}" class="site-name">
-              {{ site.title }}
-            </a>
-          </p>
+              <a href="{{ site.url }}" class="site-name">
+                {{ site.title }}
+              </a>
+            </p>
 
-          {{ site.description |> md }}
-        </figcaption>
-      </figure>
-    </li>
+            {{ site.description |> md }}
+          </figcaption>
+        </figure>
+      </li>
     {{ /for }}
   </ul>
 </main>

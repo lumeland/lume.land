@@ -5,27 +5,29 @@ page_css: themes.css
 
 <main class="themes">
   <header class="themes-header">
-    <h1>{{ title }}</h1>
-    {{ description |> md }}
+    <h1>{{ title }}</h1> {{ description |> md }}
   </header>
 
   <ul class="themes-list">
     {{ for theme of search.pages("url^=/theme/", "title") }}
-    <li>
-      <figure class="site">
-        <a href="{{ theme.url }}" class="site-image">
-          <img src="https://lumeland.github.io/themes{{ theme.screens[0]?.desktop }}">
-        </a>
-        <figcaption class="site-description">
-          <p>
-            <a class="site-name" href="{{ theme.url }}">{{ theme.name }}</a>
-            {{ if theme.module.cms }}
-            <span class="tag is-small">Has CMS</span>
-            {{ /if }}
-          </p>
+      <li>
+        <figure class="site">
+          <a href="{{ theme.url }}" class="site-image">
+            <img
+              src="https://lumeland.github.io/themes{{ theme.screens[0]?.desktop }}"
+            >
+          </a>
+          <figcaption class="site-description">
+            <p>
+              <a class="site-name" href="{{ theme.url }}">{{ theme.name }}</a>
+              {{ if theme.module.cms }}
+                <span class="tag is-small">Has CMS</span>
+              {{ /if }}
+            </p>
 
-          {{ theme.description |> md }}
-        </figcaption>
+            {{ theme.description |> md }}
+          </figcaption>
+        </figure>
       </li>
     {{ /for }}
   </ul>

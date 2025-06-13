@@ -3,13 +3,17 @@
     {{ for page of search.pages("url^=/tutorial/", "step") }}
       <li>
         {{ if page.url == url }}
-        <a href="{{ page.url }}" aria-current="page" title="{{ page.description }}">
-          {{ page.step }}. {{ page.title }}
-        </a>
+          <a
+            href="{{ page.url }}"
+            aria-current="page"
+            title="{{ page.description }}"
+          >
+            {{ page.step }}. {{ page.title }}
+          </a>
         {{ else }}
-        <a href="{{ page.url }}" title="{{ page.description }}">
-          {{ page.step }}. {{ page.title }}
-        </a>
+          <a href="{{ page.url }}" title="{{ page.description }}">
+            {{ page.step }}. {{ page.title }}
+          </a>
         {{ /if }}
       </li>
     {{ /for }}
