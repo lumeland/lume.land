@@ -121,3 +121,8 @@ If you use Visual Studio Code, it's highly recommended to install the
 
 There's a [Deno plugin](https://plugins.jetbrains.com/plugin/14382-deno/) for
 WebStorm that you can install if you use this IDE.
+
+## Zed editor configuration
+
+If you use [Zed](https://zed.dev/) editor, follow instructions for configuring 
+[Deno](https://zed.dev/docs/languages/deno) for your project.
