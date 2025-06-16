@@ -13,6 +13,11 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: c0de.wtf
+    img: /img/showcase/c0dewtf.webp
+    url: https://c0de.wtf
+    description: Personal website from a developer
+
   - title: Tech It Easy
     img: /img/showcase/esolia.webp
     url: https://blog.esolia.pro/
