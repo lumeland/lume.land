@@ -81,7 +81,7 @@ Eta templates:
 
 ```html
 <h1>Welcome to my site.</h1>
-<%= await comp.button({ text: "Login" }) %>
+<%~ await comp.button({ text: "Login" }) %>
 ```
 
 Lume components can be used like JSX components if you're using the JSX plugin:
