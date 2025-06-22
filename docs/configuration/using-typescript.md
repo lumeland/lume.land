@@ -37,8 +37,8 @@ your TypeScript files.
 
 ### TSX pages
 
-To create pages and layouts with TSX, you can either the Lume
-[JSX](/plugins/jsx/) plugin and configure the `deno.json` file:
+To create pages and layouts with TSX, you can use the Lume [JSX](/plugins/jsx/)
+plugin and configure the `deno.json` file:
 
 ```jsonc
 {
