@@ -124,5 +124,5 @@ WebStorm that you can install if you use this IDE.
 
 ## Zed editor configuration
 
-If you use [Zed](https://zed.dev/) editor, follow instructions for configuring 
+If you use [Zed](https://zed.dev/) editor, follow instructions for configuring
 [Deno](https://zed.dev/docs/languages/deno) for your project.

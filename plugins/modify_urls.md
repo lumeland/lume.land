@@ -49,18 +49,8 @@ export default site;
 ```
 
 The plugin will search all URLs in your HTML documents (elements with `href`,
-`src`, `srcset`, and `imagesrcset` attributes) and invoke the callback for every
-URL found. The callback has two arguments: the URL and the `Page` instance where
-that URL was found.
-
-## Modify URLs inside CSS files
-
-By default, the plugin only checks HTML pages. You can use the `extensions`
-option to extend it to `.css` files.
-
-```js
-site.use(modifyUrls({
-  extensions: [".html", ".css"], // Modify URLs inside HTML and CSS files
-  fn: (url) => url.toLowerCase(),
-}));
-```
+`src`, `srcset`, and `imagesrcset` attributes) and CSS files (like `url()`
+functions and `@import ...` at-rules) and invoke the callback for every URL
+found. The callback has two arguments: the URL and the `Page` instance where
+that URL was found. If the URL has found in a HTML document, the element
+containing the URL (link, image, etc) is passed as the third argument.
