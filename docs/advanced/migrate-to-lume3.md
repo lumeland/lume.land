@@ -21,7 +21,7 @@ This script will update your `deno.json` file. You will see something like this:
 {
   "imports": {
     "lume/": "https://deno.land/x/lume@v3.0.1/",
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts"
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.10/jsx-runtime.ts"
   },
   "unstable": ["temporal"],
   "compilerOptions": {

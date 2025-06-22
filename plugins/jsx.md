@@ -45,7 +45,7 @@ configure the JSX transform:
   // ...
   "imports": {
     //...
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts"
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.10/jsx-runtime.ts"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
