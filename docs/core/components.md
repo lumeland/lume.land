@@ -58,6 +58,10 @@ Components are **case insensitive**, so `comp.button`, `comp.Button` or
 {{ await comp.Button({ text: "Login" }) }}
 ```
 
+Components can be saved in subdirectories. For example, the `button` component
+could be saved in the `ui` subdirectory (`_components/ui/button.vto`). In this
+case, you can access this component with `comp.ui.button`.
+
 The component is an **async function** that accepts an object with the
 properties. This component is available in any other template engine. For
 example, JavaScript:
@@ -225,13 +229,6 @@ export default async function ({ comp }) {
 }
 ```
 
-## Organize your components
-
-Components can be saved in subdirectories. For example, the `button` component
-could be saved in the `ui` subdirectory (`_components/ui/button.vto` in your
-`src` folder). In this case, you can access this component with
-`comp.ui.button()` or `<comp.ui.button>` in JSX.
-
 ## Component assets
 
 Components can export CSS and JS code. To do this, the component needs to export
@@ -251,7 +248,7 @@ css: |
 <button class="button">{{ text }}</button>
 ```
 
-This CSS code will be exported in your `dest` folder in the `/style.css` file
+This CSS code will be exported to your `dest` folder in the `/style.css` file
 (or other [configured file](../configuration/config-file.md#components-options))
 together with the CSS code of other used components. Note that if the component
 is not used, **the CSS code won't be exported**. This is a useful feature that

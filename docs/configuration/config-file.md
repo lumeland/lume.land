@@ -291,8 +291,8 @@ import lume from "lume/mod.ts";
 
 const site = lume({
   components: {
-    cssFile: "/components.css",
-    jsFile: "/components.js",
+    cssFile: "/style.css",
+    jsFile: "/script.js",
   },
 });
 
