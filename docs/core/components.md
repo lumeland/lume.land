@@ -11,8 +11,9 @@ advantages:
 
 - They are template engine agnostic. For example, you can create your components
   in JSX or JavaScript and use them in Nunjucks.
-- They don't just generate HTML, but also the CSS and JavaScript needed for them
-  on the client side.
+- They don't just output HTML, but can content the CSS and JavaScript needed on
+  the client side. And the CSS and JS code is output only if the component is
+  used.
 - They are automatically available everywhere; no need to import them manually.
 - For ESM module-based components (like JavaScript, TypeScript, JSX or TSX) it's
   the only way to hot-reload components without stopping and restarting the
@@ -47,10 +48,17 @@ button component with the `comp.button()` function:
 
 ```vento
 <h1>Welcome to my site.</h1>
-{{ comp.button({ text: "Login" }) }}
+{{ await comp.button({ text: "Login" }) }}
 ```
 
-Note that the component is an **async function** that accepts an object with the
+Components are **case insensitive**, so `comp.button`, `comp.Button` or
+`comp.BuTtOn` returns the same component:
+
+```vento
+{{ await comp.Button({ text: "Login" }) }}
+```
+
+The component is an **async function** that accepts an object with the
 properties. This component is available in any other template engine. For
 example, JavaScript:
 
@@ -67,7 +75,7 @@ Vento templates:
 
 ```html
 <h1>Welcome to my site.</h1>
-{{ comp.button({ text: "Login" }) }}
+{{ await comp.button({ text: "Login" }) }}
 ```
 
 Nunjucks templates:
@@ -84,6 +92,8 @@ Eta templates:
 <%~ await comp.button({ text: "Login" }) %>
 ```
 
+### JSX
+
 Lume components can be used like JSX components if you're using the JSX plugin:
 
 ```jsx
@@ -97,66 +107,138 @@ export default function ({ comp }) {
 }
 ```
 
-Note that components created with text-based template engines (like Vento or
-Nunjucks) won't work as expected inside JSX templates because the HTML code will
-be escaped. To fix it you have to wrap the string in a `{ __html: "" }` object:
+Like any JSX component, you can pass children to the component.
 
 ```jsx
 export default function ({ comp }) {
-  // comp.Button is a Vento component: it returns a string, not a JSX element.
+  return <comp.title>This is a title</comp.title>;
+}
+```
+
+The children content is passed as `children` and `content` properties (both are
+equivalent):
+
+```jsx
+// _components/title.tsx
+
+export default function title({ children }) {
+  return <h1>{children}</h1>;
+}
+```
+
+## Nested components
+
+You can nest components inside other components. In JSX this is easy:
+
+```jsx
+export default function ({ comp }) {
   return (
-    <>
-      <h1>Welcome to my site.</h1>
-      <div>
-        {{ __html: <comp.Button text="Login" /> }}
-      <div/>
-    </>
+    <comp.container>
+      Content of the Container component
+      <comp.button>This is a button inside a container</comp.button>
+    </comp.container>
   );
 }
 ```
 
-### Nested components
+### Vento
 
-In Vento you can nest components like this:
+In other template engines like Vento, due the components are functions, it's
+possible to pass the content in this way:
 
 ```vento
-{{ comp Container }}
+{{ await comp.container({
+  content: `
+    Content of the Container component
+    ${await comp.button({ content: "This is a button inside a container" })}
+    `
+}) }}
+```
+
+But this way to consume components is not very practical. To make this easier,
+Vento has the `comp` special tag that allows to consume components similarly to
+JSX:
+
+```vento
+{{ comp container }}
   Content of the Container component
 
-  {{ comp Button }}
+  {{ comp button }}
     This is a button inside the Container component
   {{ /comp }}
 {{ /comp }}
 ```
 
-In Nunjucks it's very similar:
+The `comp` tag allows to add extra atributes using an object next to the
+component name:
 
-```html
-{% comp "Container" %} Content of the Container component {% comp "Button" %}
-This is a button inside the Container component {% endcomp %} {% endcomp %}
+```vento
+{{ comp button { type: "submit" } }} 
+  This is a button of type "submit"
+{{ /comp }}
 ```
 
 The content of the components are passed through the `content` variable:
 
 <lume-code>
 
-```vento {title="_components/container.vto"}
-<section class="container">{{ content }}</section>
-```
-
 ```vento {title="_components/button.vto"}
-<button>{{ content }}</button>
+<button type="{{ type }}">{{ content }}</button>
 ```
 
 </lume-code>
+
+### Nunjucks
+
+Nunjucks has a very similar tag:
+
+```txt
+{% comp "Container" %}
+  Content of the Container component
+
+  {% comp "Button" %}
+    This is a button inside the Container component
+  {% endcomp %}
+{% endcomp %}
+```
+
+## Components inside components
+
+Components receive automatically the `comp` property. This allows to invoke
+components inside other components. Let's say we want to create the `search`
+component that uses `button` internally. This is an example using a JSX
+template:
+
+```jsx
+// _components/search.jsx
+
+export default async function ({ comp }) {
+  return (
+  <form class="search">
+    <label>
+      Search:
+      <input type="search" name="q">
+    </label>
+    <comp.Button>Submit</comp.Button>
+  </form>
+  );
+}
+```
+
+## Organize your components
+
+Components can be saved in subdirectories. For example, the `button` component
+could be saved in the `ui` subdirectory (`_components/ui/button.vto` in your
+`src` folder). In this case, you can access this component with
+`comp.ui.button()` or `<comp.ui.button>` in JSX.
 
 ## Component assets
 
 Components can export CSS and JS code. To do this, the component needs to export
 `css` or `js` variables.
 
-In our example, we may want to apply some styles to the button. In a Nunjucks
-template, the way to export data is using front matter:
+In our example, we may want to apply some styles to the button. In a Vento
+template, the way to export data is using the front matter:
 
 ```vento
 ---
@@ -169,62 +251,42 @@ css: |
 <button class="button">{{ text }}</button>
 ```
 
-This CSS code will be exported in your `dest` folder in the `/components.css`
-file together with the CSS code of other used components. Note that if the
-component is not used, the CSS code won't be exported. This is a useful feature
-that allows having a library of many components and only exporting the CSS and
-JS code that you only need.
+This CSS code will be exported in your `dest` folder in the `/style.css` file
+(or other [configured file](../configuration/config-file.md#components-options))
+together with the CSS code of other used components. Note that if the component
+is not used, **the CSS code won't be exported**. This is a useful feature that
+allows having a library of many components and only exporting the CSS and JS
+code that you only need.
 
-TODO: folder-components
+### Folder components
 
-## Organize your components
+To make easier to create components with CSS and JS, it's possible to create a
+component in a folder, with the CSS and JS code in different files. To do that,
+you have to use the following structure:
 
-Components can be saved in subdirectories. For example, the `button` component
-could be saved in the `ui` subdirectory (`_components/ui/button.vto` in your
-`src` folder). In this case, you can access this component with
-`comp.ui.button()`.
-
-## Components inside components
-
-Components can use other components internally. Let's say we want to create the
-`search` component that uses `button` internally. Let's see an example using a
-JS template:
-
-```js
-// _components/search.js
-
-export const css = `
-.search {
-  background: gray;
-  padding: 20px;
-}
-`;
-
-export const js = `
-import from "js/search.js"
-`;
-
-export default function ({ comp }) {
-  return `
-<form class="search">
-  <label>
-    Search:
-    <input type="search" name="q">
-  </label>
-  ${comp.button({ text: "Submit" })}
-</form>
-`;
-}
+```txt
+|_ _components/
+    |_ button/
+        |_ comp.vto
+        |_ style.css
+        |_ script.js
 ```
 
-In this example, the component exports CSS and JS code in addition to the HTML
-code.
+Any folder containing a `comp.*` file will be loaded as a component using the
+folder name as the component name, and the `style.css` and `script.js` files
+will be loaded as the CSS and JavaScript code for the component. This makes the
+creation of components more ergonomic, especially for cases with a lot of CSS
+and JS code.
+
+Additionally, it's possible to add a `script.ts` file instead of `script.js` to
+use TypeScript. Lume will compile it to JavaScript automatically.
 
 ## Register components from the _config file
 
 In addition to the `_components` folder, you can register components dynamically
-in the `_config` file with the function `site.component()`. This function takes
-two arguments: the component context and the component object:
+in the `_config` file with the function `site.component()`, which is useful for
+plugins. This function takes two arguments: the component context and the
+component object:
 
 ```ts
 site.component("ui", {
@@ -236,7 +298,7 @@ site.component("ui", {
 });
 ```
 
-Now, you can use the component like before:
+Now, you can use the component like this:
 
 ```vento
 {{ comp.ui.button({ text: "Login" }) }}

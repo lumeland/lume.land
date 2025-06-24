@@ -36,8 +36,7 @@
           if info.default !== undefined && !["{}", "[]"].includes(JSON.stringify(info.default))
         }}
           <strong>Default:</strong>
-          <pre
-          >
+          <pre>
 <code class="language-js hljs">{{
           typeof info.default === "string" && info.default.startsWith("`")
           ? info.default.slice(1, -1)
