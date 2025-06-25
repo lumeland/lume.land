@@ -60,11 +60,14 @@ Components are **case insensitive**, so `comp.button`, `comp.Button` or
 
 Components can be saved in subdirectories. For example, the `button` component
 could be saved in the `ui` subdirectory (`_components/ui/button.vto`). In this
-case, you can access this component with `comp.ui.button`.
+case, you can access this component with `comp.ui.button()`.
 
 The component is an **async function** that accepts an object with the
-properties. This component is available in any other template engine. For
-example, JavaScript:
+properties. This component is available in all template engines.
+
+### JS/TS templates:
+
+Example of using the `button` component in a JavaScript page:
 
 ```js
 export default async function ({ comp }) {
@@ -75,21 +78,28 @@ export default async function ({ comp }) {
 }
 ```
 
-Vento templates:
+More info at [Modules plugin documentation](../../plugins/modules.md#components)
+
+### Vento templates
 
 ```html
 <h1>Welcome to my site.</h1>
 {{ await comp.button({ text: "Login" }) }}
 ```
 
-Nunjucks templates:
+More info at [Vento plugin documentation](../../plugins/vento.md#components)
+
+### Nunjucks templates:
 
 ```html
 <h1>Welcome to my site.</h1>
 {{ comp.button({ text: "Login" }) | await | safe }}
 ```
 
-Eta templates:
+More info at
+[Nunjucks plugin documentation](../../plugins/nunjucks.md#components)
+
+### Eta templates:
 
 ```html
 <h1>Welcome to my site.</h1>
@@ -129,6 +139,8 @@ export default function title({ children }) {
   return <h1>{children}</h1>;
 }
 ```
+
+More info at [JSX plugin documentation](../../plugins/jsx.md#components)
 
 ## Nested components
 
@@ -172,25 +184,6 @@ JSX:
   {{ /comp }}
 {{ /comp }}
 ```
-
-The `comp` tag allows to add extra atributes using an object next to the
-component name:
-
-```vento
-{{ comp button { type: "submit" } }} 
-  This is a button of type "submit"
-{{ /comp }}
-```
-
-The content of the components are passed through the `content` variable:
-
-<lume-code>
-
-```vento {title="_components/button.vto"}
-<button type="{{ type }}">{{ content }}</button>
-```
-
-</lume-code>
 
 ### Nunjucks
 

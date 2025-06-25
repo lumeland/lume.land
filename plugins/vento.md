@@ -62,6 +62,57 @@ text: "Hello {{ username }}"
 <div>{{ text |> vto(data) }}<div>
 ```
 
+## Components
+
+[Lume's components](../docs/core/components.md) are accessible through the
+variable `comp`.
+
+```vento
+{{ await comp.button({ content: "Click here" }) }}
+```
+
+The `await` keyword is optional, Vento adds it automatically if it's missing:
+
+```vento
+{{ comp.button({ content: "Click here" }) }}
+```
+
+### comp tag
+
+The `comp` special tag allows to use components similar to JSX. This is useful
+for composability:
+
+```vento
+{{ comp button }}Click here{{ /comp }}
+```
+
+For additional properties use an object next to the component name:
+
+```vento
+{{ comp button { type: "submit" } }}Click here{{ /comp }}
+```
+
+Like with JSX, use a `/` at the end to auto-close the tag:
+
+```vento
+{{ comp button { type: "submit", content: "Click here" } /}}
+```
+
+Which is equivalent to simply call the function:
+
+```vento
+{{ comp.button({ type: "submit", content: "Click here" }) }}
+```
+
+This is an example of a composition with different components:
+
+```vento
+{{ comp button { type: "submit" } }}
+  {{ comp.icon({ name: "arrow-right" }) }}
+  Click here
+{{ /comp }}
+```
+
 ## Configure VSCode
 
 You can use the

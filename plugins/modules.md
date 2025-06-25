@@ -114,6 +114,45 @@ export default ({ title, content }: Lume.Data, helpers: Lume.Helpers) =>
 
 </lume-code>
 
+## Components
+
+You can create [Lume components](../docs/core/components.md) in JS or TS
+creating files in the `_components` folder. For example:
+
+<lume-code>
+
+```jsx{title="_components/button.ts"}
+export default function ({ content }) {
+  return `
+    <button class="my-button">
+      ${content}
+    </button>
+  `;
+}
+```
+
+</lume-code>
+
+To render the component in your templates use the `comp` variable:
+
+<lume-code>
+
+```jsx{title="_includes/layout.tsx"}
+export default async function ({ comp }) {
+  return await comp.button({ content: "Click me!"});
+}
+```
+
+</lume-code>
+
+> [!important]
+>
+> Importing a component with `import Button from "./_components/button.ts"`
+> doesn't work for live-reloading due a limitation of Deno that
+> [cannot update any imported module](https://github.com/denoland/deno/issues/8327)
+> without restarting the entire process. So it's highly recomendable to use the
+> `comp` variable to consume components and mitigate this limitation.
+
 ## Configure VSCode
 
 You can use some extensions for VS Code for template string syntax highlight:

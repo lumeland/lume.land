@@ -143,7 +143,7 @@ export default function ({ comp }) {
 
 > [!important]
 >
-> Importing a component with `import Button from "./_components/button.ts"`
+> Importing a component with `import Button from "./_components/button.tsx"`
 > doesn't work for live-reloading due a limitation of Deno that
 > [cannot update any imported module](https://github.com/denoland/deno/issues/8327)
 > without restarting the entire process. So it's highly recomendable to use the
