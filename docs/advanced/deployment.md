@@ -310,3 +310,10 @@ that you can use.
 unlimited sites and custom domain support. To upload your site on Surge, you
 need to first install the CLI tool with `npm install --global surge`. Then, in
 the `_dest` directory, run `surge` to login/register and upload the site.
+
+## Clever Cloud
+
+[Clever Cloud](https://www.clever-cloud.com/) is an European Platform as a
+Service that allows to host Lume projects among other popular frameworks.
+[Follow the instructions](https://www.clever-cloud.com/developers/guides/lume-deno/)
+in the documentation site.
