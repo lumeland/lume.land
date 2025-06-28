@@ -216,6 +216,7 @@
     border-radius: var(--border-radius-small);
     border: solid 1px var(--color-background-2);
     margin: 0 0.2em;
+    word-wrap: break-word;
   }
 
   & pre code {
