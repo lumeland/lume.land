@@ -13,7 +13,6 @@ a menu. A way to make this variable explicit is to save your pages with the
 `[order].` prefix:
 
 ```txt
-.
 ├── 1.welcome.md
 ├── 2.introduction.md
 ├── 3.the-basics.md

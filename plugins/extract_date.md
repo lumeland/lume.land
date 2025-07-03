@@ -19,7 +19,6 @@ also need the time). Note that this part is removed when generating the final
 url:
 
 ```txt
-.
 ├── index.md                          => /index.html
 └── posts
     └── 2020-06-21_hello-world.md     => /posts/hello-world/index.html

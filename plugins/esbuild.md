@@ -47,15 +47,15 @@ the plugin and the code editor.
 
 For example, let's say your project has the following structure:
 
-```js
-|_ deno.json
-|_ _config.ts
-|_ app/
-  |_ deno.json
-  |_ main.tsx
-  |_ components/
-    |_ button.tsx
-    |_ header.tsx
+```txt
+├── deno.json
+├── _config.ts
+└── app
+    ├── deno.json
+    ├── main.tsx
+    └── components
+        ├── button.tsx
+        └── header.tsx
 ```
 
 The root of your project has the files that you already know: `deno.json` to

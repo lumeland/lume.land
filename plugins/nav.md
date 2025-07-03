@@ -150,11 +150,11 @@ For example, let's say we have the following tree structure created with
 
 ```txt
 docs
-  |__ getting-started
-        |__ installation
-        |__ configuration
-  |__ plugins
-        |__ prettier
+  ├── getting-started
+  │   ├── installation
+  │   └── configuration
+  └── plugins
+      └── prettier
 ```
 
 The function `nav.nextPage()` returns the next page relative to the provided

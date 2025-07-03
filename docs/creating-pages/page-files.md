@@ -11,7 +11,6 @@ with a suitable filename and `.md` as the extension. Lume will load these files
 and generate HTML pages with them:
 
 ```txt
-.
 ├── index.md     => /index.html
 ├── about.md     => /about/index.html
 └── contact.md   => /contact/index.html
@@ -21,7 +20,6 @@ You can organize the pages into subdirectories, and this structure will be used
 in the output of the site build:
 
 ```txt
-.
 ├── index.md        => /index.html
 └── documentation
     └── doc1.md     => /documentation/doc1/index.html

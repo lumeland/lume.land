@@ -53,7 +53,7 @@ export { people };
 Any file named `_data.*` is loaded and its content is accessible by all pages in
 the same directory or subdirectory.
 
-```sh
+```txt
 ├── _data.yaml      # Data shared with all pages
 ├── index.md
 └── documentation

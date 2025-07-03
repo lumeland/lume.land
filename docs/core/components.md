@@ -255,11 +255,11 @@ component in a folder, with the CSS and JS code in different files. To do that,
 you have to use the following structure:
 
 ```txt
-|_ _components/
-    |_ button/
-        |_ comp.vto
-        |_ style.css
-        |_ script.js
+_components
+  └── button
+      ├── comp.vto
+      ├── style.css
+      └── script.js
 ```
 
 Any folder containing a `comp.*` file will be loaded as a component using the
