@@ -33,11 +33,13 @@ The function `nav.menu()` returns a tree object with the complete site structure
 using the pages' URLs to define the hierarchy. For example, let's say our site
 exports the following pages:
 
-- `/`
-- `/articles/`
-- `/articles/first-article/`
-- `/articles/second-article/chapter-1/`
-- `/articles/second-article/chapter-2/`
+```txt
+/
+/articles/
+/articles/first-article/
+/articles/second-article/chapter-1/
+/articles/second-article/chapter-2/
+```
 
 The object returned by `nav.menu()` would be like this:
 
