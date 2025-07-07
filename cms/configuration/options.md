@@ -24,6 +24,13 @@ This is the root directory of the site you want to edit. Lume automatically set
 this value to the `src` folder. It's used to file system storage
 [when it's defined as a string](./storage.md#file-system).
 
+> [!note]
+>
+> If you do not specify a `root` option, the CMS will use `Deno.cwd()` to get
+> the current working directory. Some Deno platforms (like Netlify edge-functions)
+> do not support Deno file system access and will fatally error when `Deno.cwd()`
+> is executed. Provide an empty string `""` as the root option to avoid this.
+
 ### basePath
 
 The public base path of the CMS. Lume adapter set this value to `/admin`.
