@@ -13,6 +13,8 @@ files:
 
 - `/favicon.ico`
 - `/apple-touch-icon.png`
+- In addition, if the input file is SVG, then it will also be included as a
+  favicon
 
 It also add the `<link>` elements to all HTML pages to configure the favicons
 properly, following the

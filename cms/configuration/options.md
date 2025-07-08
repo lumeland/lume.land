@@ -27,9 +27,10 @@ this value to the `src` folder. It's used to file system storage
 > [!note]
 >
 > If you do not specify a `root` option, the CMS will use `Deno.cwd()` to get
-> the current working directory. Some Deno platforms (like Netlify edge-functions)
-> do not support Deno file system access and will fatally error when `Deno.cwd()`
-> is executed. Provide an empty string `""` as the root option to avoid this.
+> the current working directory. Some Deno platforms (like Netlify
+> edge-functions) do not support Deno file system access and will fatally error
+> when `Deno.cwd()` is executed. Provide an empty string `""` as the root option
+> to avoid this.
 
 ### basePath
 
