@@ -179,7 +179,7 @@ If it's not specified, a default function is used to remove the extension,
 convert hyphens to spaces and apply other small tweaks. For example, the
 document name `/this-is-a-page.md` is converted to the label `This is a page`.
 
-### create & delete
+### create, delete & rename
 
 Useful if you don't want to create and/or delete items in the collection
 (because it has a fixed length).
@@ -194,6 +194,26 @@ cms.collection({
   ],
   create: false,
   delete: false,
+});
+```
+
+The `rename` option prevents to change the file name of a collection's item. Set
+`false` to hide completely the text input with the filename. And if the
+`documentName` option is defined, it's hidden also in the document creation:
+
+```ts
+cms.collection({
+  name: "posts",
+  store: "src:posts/*.md",
+  fields: [
+    "title: text!",
+    "author: text!",
+    "content: markdown",
+  ],
+  documentName(data) {
+    return `${data.title}-${data.author}.md`;
+  },
+  rename: false, // hide the text input with the filename
 });
 ```
 
