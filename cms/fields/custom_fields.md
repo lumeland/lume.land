@@ -52,16 +52,26 @@ customElements.define(
 );
 ```
 
-The `init()` function will be executed the first time the component is inserted
-in the DOM. The following properties are also available:
+The `init()` function is executed the first time the component is inserted in
+the DOM. The following properties are also available:
 
-- **schema:** The options of the field (name, label, description, attributes,
-  etc).
+- **schema:** The field options (name, label, description, attributes, etc).
 - **value:** The field value.
 - **namePrefix:** The prefix of the name attribute. Any form element generated
   by the component **must have this prefix followed by a dot**.
+- **isNew:** It's `true` if we are creating a new element (instead of editing).
 
-To create the percentage field:
+As of version 0.12.2, this custom element need also the following properties:
+
+- `currentValue`: A property returning the current value of the field. It's used
+  to maintain the same value when the field is duplicated in the UI.
+- `update(schema, value)`: A function to update the field with a new state
+  coming from the backend after saving the data. For example, you might have a
+  field with the [`transform` option](./index.md#common-field-options) to
+  transform the value before saving it (like converting it to upper case). This
+  function allows to reflect this change in the UI.
+
+This is how our percentage field would looks:
 
 ```js
 customElements.define(
@@ -69,55 +79,91 @@ customElements.define(
   class extends Component {
     init() {
       // Get the field info
-      const { schema, value, namePrefix } = this;
+      const { schema, value, namePrefix, isNew } = this;
 
       // Generate the name of the input and the id
       const name = `${namePrefix}.${schema.name}`;
       const id = `field_${name}`;
 
+      // Calculate the value of the input.
+      // If `isNew` is true, we use schema.value as the default value.
+      const val = isNew ? value ?? schema.value : value;
+
       // Print the HTML code
       this.innerHTML = `
       <label for="${id}">${schema.label}</label>
-      <input id="${id}" type="number" value="${value}" min=0 max=100 name="${name}>
+      <input id="${id}" type="number" value="${val}" min=0 max=100 name="${name}>
     `;
+    }
+
+    // Return the current value of this field
+    get currentValue() {
+      return this.querySelector("input").value;
+    }
+
+    // Update the field with a new state
+    update(schema, value) {
+      const input = this.querySelector("input");
+
+      // Update the input value
+      input.value = value ?? null;
+
+      // Update the label value
+      // since it could be changed from backend
+      input.labels[0].innerHTML = schema.label;
     }
   },
 );
 ```
 
-## Utils
+## Working with the DOM
 
-LumeCMS provides a `utils.js` file with some utilities. The `push` function
-creates a new DOM element and append it to the element passed in the first
-argument. The example above can be improved in this way:
+LumeCMS comes with [the `dom` module](https://github.com/oscarotero/dom) to ease
+the work with the DOM. The example above can be simplified:
 
 ```js
 import { Component } from "lume_cms/components/component.js";
-import { push } from "lume_cms/components/utils.js";
+import dom from "dom";
 
 customElements.define(
   "percentage-field",
   class extends Component {
     init() {
       // Get the field info
-      const { schema, value, namePrefix } = this;
+      const { schema, value, namePrefix, isNew } = this;
 
       // Generate the name of the input and the id
       const name = `${namePrefix}.${schema.name}`;
       const id = `field_${name}`;
 
-      // Add the <label>
-      push(this, "label", { for: id }, schema.label);
+      // Append the <label> to this
+      dom("label", { for: id, html: schema.label }, this);
 
-      // Add the <input type="number">
-      push(this, "input", {
-        name,
-        value,
-        id,
+      // Append the <input> to this
+      // and save the element in this.input to reuse later.
+      this.input = dom("input", {
         type: "number",
+        name,
+        value: isNew ? value ?? schema.value : value,
+        id,
         min: 0,
         max: 100,
-      });
+      }, this);
+    }
+
+    // Return the current value of this field
+    get currentValue() {
+      return this.input.value;
+    }
+
+    // Update the field with a new state
+    update(schema, value) {
+      // Update the input value
+      this.input.value = value ?? null;
+
+      // Update the label value
+      // since it could be changed from backend
+      this.input.labels[0].innerHTML = schema.label;
     }
   },
 );
