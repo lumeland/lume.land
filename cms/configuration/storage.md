@@ -92,24 +92,39 @@ permission to edit the site data.
 ```ts
 import lumeCMS from "lume/cms/mod.ts";
 import GitHub from "lume/cms/storage/github.ts";
-import { Octokit } from "npm:octokit";
 
 const cms = lumeCMS();
+
+const token = "xxx"; // A personal access token
+cms.storage("gh", GitHub.create("username/repo", token));
+
+export default cms;
+```
+
+The `GitHub.create()` function creates a new instance of GitHub storage adapter.
+If your project is in a subdirectory of the proyect, you can set the
+subdirectory next to the repo name:
+
+```js
+cms.storage("gh", GitHub.create("username/repo/subdirectory", token));
+```
+
+For more advanced options, you can instantiate the `GitHub` class:
+
+```js
+import { Octokit } from "npm:octokit";
 
 const client = new Octokit({
   auth: "xxx", // A personal access token,
 });
 
-cms.storage(
-  "gh",
-  new GitHub({
-    client,
-    owner: "username",
-    repo: "example",
-  }),
-);
-
-export default cms;
+cms.storage("gh", new GitHub({
+   client,
+   owner: "username",
+   repo: "repo",
+   path: "subdirectory"
+   branch: "main"
+}));
 ```
 
 ### Generate a GitHub access token
@@ -125,3 +140,7 @@ export default cms;
 5. Open _Repository permissions_ and select **Read and write** access level in
    the **Contents** section.
 6. Press the **Generate token**.
+
+### Advance options
+
+If you need more
