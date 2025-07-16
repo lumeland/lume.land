@@ -179,7 +179,7 @@ If it's not specified, a default function is used to remove the extension,
 convert hyphens to spaces and apply other small tweaks. For example, the
 document name `/this-is-a-page.md` is converted to the label `This is a page`.
 
-### create, delete & rename
+### create & delete
 
 Useful if you don't want to create and/or delete items in the collection
 (because it has a fixed length).
@@ -192,14 +192,30 @@ cms.collection({
     "title: text",
     "content: markdown",
   ],
+  // Don't allow the user to create or delete countries
   create: false,
   delete: false,
 });
 ```
 
-The `rename` option prevents to change the file name of a collection's item. Set
-`false` to hide completely the text input with the filename. And if the
-`documentName` option is defined, it's hidden also in the document creation:
+### rename
+
+The `rename` option configures how to name and rename the documents in a
+collection. It accepts three values:
+
+- `true`: The default option. It shows an input in the UI to set a filename when
+  creating or editing a document.
+- `false`: There's no input in the UI to set a filename manually by the user.
+  This option requires the `documentName` option configured to generate the name
+  automatically.
+- `"auto"`: Similar to `false`, it hides the input in the UI. The only
+  difference is while `false` only generates the name when the document is
+  created, this option also updates the filename after editing the document. For
+  example, let's say the `documentName` is a function to generate the filename
+  using the `title` field. The option `rename: false` generates the filename
+  when the document is created, but this value won't change even if the value of
+  `title` does. On the other hand, `rename: "auto"` will update the filename
+  every time the title is changed.
 
 ```ts
 cms.collection({
@@ -213,7 +229,10 @@ cms.collection({
   documentName(data) {
     return `${data.title}-${data.author}.md`;
   },
-  rename: false, // hide the text input with the filename
+
+  // Don't allow the user to edit the document name
+  // and update it everytime the title or author changes.
+  rename: "auto",
 });
 ```
 
