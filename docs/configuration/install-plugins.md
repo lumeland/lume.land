@@ -1,5 +1,5 @@
 ---
-title: Plugins
+title: Install plugins
 description: How to import and use Lume plugins
 order: 5
 ---

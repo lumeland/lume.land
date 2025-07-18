@@ -322,7 +322,7 @@ configurable).
 >
 
 <!-- Lume 3 -->
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 ```
 
 ### Multilanguage

@@ -74,8 +74,8 @@ automatically by lume. See [URL docs](./urls.md)
 
 If it's not defined, Lume automatically uses the file creation date. This
 variable can be defined in the filename
-[See Page date](./page-files.md#page-date) or in the front matter. The accepted
-values are:
+[using the `extract_dates` plugins](../../plugins/extract_date.md) or in the
+front matter. The accepted values are:
 
 - Any `IS0 8601` compatible date, like `2021-01-01`, `2021-01-01 03:10:10`,
   `2021-01-01T03:10:10Z`, `2021-01-01Y03:10:10-0700`, etc.
