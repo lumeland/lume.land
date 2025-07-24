@@ -1,7 +1,6 @@
 ---
 title: Base path
 description: Automatically add a base path to all urls
-mod: plugins/base_path.ts
 tags:
   - urls
 ---

@@ -1,7 +1,6 @@
 ---
 title: JSON-LD
 description: Generate JSON-LD tags in the HTML pages.
-mod: plugins/json_ld.ts
 tags:
   - html
   - utils

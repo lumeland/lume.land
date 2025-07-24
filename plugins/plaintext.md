@@ -1,7 +1,6 @@
 ---
 title: Plain text
 description: Provide a helper to remove HTML and Markdown syntax in any text
-mod: plugins/plaintext.ts
 tags:
   - utils
 ---
