@@ -34,5 +34,5 @@ server.start();
 ### Local development
 
 It's not recommended to use this middleware in local development because the
-whole point of a local server is to don't cache resources and ensure to serve
-the most fresh version.
+whole point of a local server is to not cache resources and to ensure serving
+the most fresh version of your content.
