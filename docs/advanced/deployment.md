@@ -203,25 +203,6 @@ curl -fsSL https://deno.land/x/install/install.sh | sh && /vercel/.deno/bin/deno
 
 Remember also to configure the output directory to `_site`.
 
-## Fleek
-
-To deploy your Lume site with [Fleek](https://fleek.co/), create a `.fleek.json`
-file in your repository with the following code:
-
-<lume-code>
-
-```json {title=".fleek.json"}
-{
-  "build": {
-    "image": "denoland/deno",
-    "command": "deno task build",
-    "publicDir": "_site"
-  }
-}
-```
-
-</lume-code>
-
 ## Cloudflare Pages
 
 To deploy your Lume site with [Cloudflare Pages](https://pages.cloudflare.com/),
