@@ -221,7 +221,7 @@ const site = lume({
 Use this option to add middleware to the local web server. There are some
 middleware options for common needs at `lume/middlewares/*`, but you can create
 custom middleware easily. More info in the
-[Server documentation](../core/server.md#middlewares).
+[Server documentation](../core/server.md#middleware).
 
 ```ts
 import expires from "lume/middlewares/expires.ts";

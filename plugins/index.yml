@@ -11,6 +11,10 @@ community:
     Learn [how to create your own plugins](/docs/advanced/plugins/)
 
 plugins:
+  - title: djot.js
+    description: Use Djot as a template engine.
+    url: https://cdn.jsdelivr.net/gh/iacore/djot.js/
+
   - title: lume_cleancss
     description: Use CleanCSS to minify CSS with structural optimization.
     url: https://deno.land/x/lume_cleancss
