@@ -17,7 +17,7 @@ sites:
     img: /img/showcase/fbik.webp
     url: https://fbik.top
     description: Personal Blog of FBIK
-    code: https://github.com/FBIKdot/blog
+    code: https://github.com/FBIKdot/LumeProse
 
   - title: c0de.wtf
     img: /img/showcase/c0dewtf.webp
