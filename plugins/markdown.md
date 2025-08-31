@@ -121,7 +121,8 @@ const site = lume()
 export default site;
 ```
 Last, you will need to write the code to render the extracted footnotes in your template:
-```vto
+
+```vento
  {{ if footnotes.length }}
   <ul>
     {{ for note of footnotes }}
