@@ -62,7 +62,7 @@ export default class Carousel extends HTMLElement {
     }
 
     //Resize observer
-    if (window.ResizeObserver) {
+    if (globalThis.ResizeObserver) {
       if (!observer) {
         observer = new ResizeObserver((entries) => {
           for (const entry of entries) {

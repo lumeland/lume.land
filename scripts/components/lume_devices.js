@@ -2,7 +2,7 @@ export default class LumeDevices extends HTMLElement {
   connectedCallback() {
     const form = this.querySelector("form");
     const screens = this.querySelectorAll(".device");
-    const init = new URLSearchParams(window.location.search);
+    const init = new URLSearchParams(globalThis.location.search);
 
     for (const [key, value] of init.entries()) {
       const input = form[key];
