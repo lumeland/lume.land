@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Events
+    img: /img/showcase/events.webp
+    url: https://willcraft.software/events/
+    description: Curated conferences, meetups, hackathons, workshops, and other gatherings.
+    code: https://github.com/wewillcraft/wewillcraft.github.io/tree/main/events
+
   - title: LumeProse
     img: /img/showcase/fbik.webp
     url: https://fbik.top

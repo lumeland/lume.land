@@ -100,7 +100,8 @@ The repository
 [lume_markdown_plugins](https://deno.land/x/lume_markdown_plugins) contain a
 collection of plugins specially adapted to Lume, with useful features like
 extract the title from the markdown or generate a table of contents. To use
-these plugins, you might need to first add them to your imports map in `deno.json`:
+these plugins, you might need to first add them to your imports map in
+`deno.json`:
 
 ```json
 {
@@ -120,21 +121,27 @@ const site = lume()
 
 export default site;
 ```
-Last, you will need to write the code to render the extracted footnotes in your template:
+
+Last, you will need to write the code to render the extracted footnotes in your
+template:
 
 ```vento
- {{ if footnotes.length }}
-  <ul>
-    {{ for note of footnotes }}
-    <li id={{ note.id }}>
-      {{ note.content }}
-      <a href="#{{ note.refId }}" class="footnote-backref">↩</a>
-    </li>
-    {{ /for }}
-  </ul>
- {{ /if }}
+{{ if footnotes.length }}
+ <ul>
+   {{ for note of footnotes }}
+   <li id={{ note.id }}>
+     {{ note.content }}
+     <a href="#{{ note.refId }}" class="footnote-backref">↩</a>
+   </li>
+   {{ /for }}
+ </ul>
+{{ /if }}
 ```
-You can check out the full [demo](https://github.com/lumeland/markdown-plugins/tree/main/footnotes/demo)  for more details. In fact, each lume markdown plugin has a demo to illustrate its usage.
+
+You can check out the full
+[demo](https://github.com/lumeland/markdown-plugins/tree/main/footnotes/demo)
+for more details. In fact, each lume markdown plugin has a demo to illustrate
+its usage.
 
 ## Hooks
 
