@@ -295,11 +295,6 @@ support:
       img: /img/avatars/supporters/cvburgess.webp
       amount: 5
       recurrent: true
-    - name: Daniel Saunders
-      url: https://daniel-saunders.com/
-      img: /img/avatars/supporters/dsaunders.webp
-      amount: 1
-      recurrent: true
     - name: Miguel Pinto
       url: https://opencollective.com/miguelslp
       img: /img/avatars/supporters/miguelpinto.webp
@@ -385,6 +380,9 @@ support:
     - name: Noah Altunian
       url: https://altun.cc/
       img: /img/avatars/supporters/naltun.webp
+    - name: Daniel Saunders
+      url: https://daniel-saunders.com/
+      img: /img/avatars/supporters/dsaunders.webp
 
   contributors_title: And built by the following people
 
