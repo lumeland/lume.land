@@ -97,16 +97,41 @@ site.add("https://example.com/common-styles.css", "styles.css");
 
 In this example, the file will be downloaded and saved as `styles.css`.
 
-NPM is also supported:
+## Add NPM and GitHub files
+
+NPM and GitHub are also supported:
 
 ```js
+// NPM file
 site.add("npm:normalize.css", "/styles/normalize.css");
+
+// GitHub file
+site.add(
+  "gh:sindresorhus/modern-normalize/modern-normalize.css",
+  "/styles/normalize.css",
+);
 ```
 
 Internally, this uses jsDelivr to download the file. In this example,
 `npm:normalize.css` is transformed to
 `https://cdn.jsdelivr.net/npm/normalize.css`. Note that only one file is
 downloaded, not all package files.
+
+If you want to download all files of a NPM package or GitHub tag, use a glob
+pattern:
+
+```js
+// NPM package
+site.add("npm:normalize.css/**", "/styles/normalize");
+```
+
+This code downloads all files from the `normalize.css` package in the
+`/styles/normalize` directory. You can use semantic versions and more advanced
+patterns. For example, to download only the CSS files from the `^8.0` version:
+
+```js
+site.add("npm:normalize.css@^8.0/**/*.css", "/styles/normalize");
+```
 
 ## Customize the destination
 
@@ -131,7 +156,8 @@ processed. If you want to prevent a file to be processed, use the `site.copy()`
 function.
 
 The signature of `site.copy()` is exactly the same as `site.add()`. The only
-difference is the copied files won't be processed.
+difference is the copied files won't be processed. As `site.add()`, copying from
+NPM and GitHub is also supported.
 
 ```js
 site.use(postcss());
