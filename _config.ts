@@ -22,7 +22,7 @@ import analyze, {
   mergeDefaults,
 } from "https://deno.land/x/aldara@v0.2.1/mod.ts";
 import { alert } from "npm:@mdit/plugin-alert@0.8.0";
-import ventoLang from "https://deno.land/x/vento@v0.10.2/highlightjs-vento.js";
+import ventoLang from "https://deno.land/x/vento@v2.0.0/highlightjs-vento.js";
 
 const markdown = {
   plugins: [toc, alert],

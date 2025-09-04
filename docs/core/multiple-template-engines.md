@@ -38,3 +38,13 @@ templateEngine: [vto, md]
 
 In the example above, the page will be rendered using Vento first and then
 Markdown.
+
+[Preprocessors](./processors.md#preprocess) allow to use the same template
+engine configuration for a specific format. For example, to configure all
+markdown files to use Vento + Markdown engines:
+
+```ts
+site.preprocess([".md"], (pages) => {
+  pages.forEach((page) => page.data.templateEngine = ["vto", "md"]),
+});
+```

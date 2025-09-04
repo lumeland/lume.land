@@ -1,7 +1,7 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.5/",
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.11/jsx-runtime.ts"
+    "lume/": "https://deno.land/x/lume@v3.0.8/",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.12/jsx-runtime.ts"
   },
   "lock": false,
   "compilerOptions": {
@@ -26,7 +26,7 @@
       ]
     },
     "plugins": [
-      "https://deno.land/x/lume@v3.0.5/lint.ts"
+      "https://deno.land/x/lume@v3.0.8/lint.ts"
     ]
   },
   "fmt": {
