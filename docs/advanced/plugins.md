@@ -30,7 +30,7 @@ function addBanner(content: string): string {
 
 site.process([".css"], (pages) => {
   for (const page of pages) {
-    page.content = addBanner(page.content as string);
+    page.text = addBanner(page.text);
   }
 });
 
@@ -56,7 +56,7 @@ export default function (options: Options) {
   return (site: Site) => {
     site.process([".css"], (pages) => {
       for (const page of pages) {
-        page.content = addBanner(page.content as string);
+        page.text = addBanner(page.text);
       }
     });
   };
@@ -112,8 +112,10 @@ export default function (options: Options) {
       options.message = message;
     };
 
-    site.process([".css"], (page) => {
-      page.content = addBanner(page.content as string);
+    site.process([".css"], (pages) => {
+      for (const page of pages) {
+        page.text = addBanner(page.text);
+      }
     });
   };
 }
