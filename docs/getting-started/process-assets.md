@@ -35,7 +35,7 @@ function minifyCSS(css: string) {
 // Process all .css files with our minifyCSS function
 site.process([".css"], (files) => {
   for (const file of files) {
-    file.content = minifyCSS(file.content as string);
+    file.text = minifyCSS(file.text);
   }
 });
 
@@ -49,11 +49,11 @@ in the CSS code. This is a **basic function for illustration purposes**. There
 are many open-source packages that you can use that will do a better job. We
 wanted to keep this demo simple, so we created a simple function ourselves.
 
-Then, we use function `process()` to process the CSS files. The function accepts
-an array of extensions that we want to process and a callback that receives all
-files matching with these extensions in the first argument. We use the function
-`minifyCSS` to modify the variable `file.content`, which is where the content is
-stored.
+Then, we use the function `process()` to process the CSS files. The function
+accepts an array of extensions that we want to process and a callback that
+receives all files matching with these extensions in the first argument. We use
+the function `minifyCSS` to modify the variable `file.text`, which is where the
+content is stored.
 
 > [!tip]
 >
