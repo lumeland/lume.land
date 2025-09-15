@@ -44,6 +44,7 @@ Example with the default configuration:
 ```js
 import lume from "lume/mod.ts";
 import lightningCss, { version } from "lume/plugins/lightningcss.ts";
+import { version } from "lume/core/utils/browsers.ts";
 
 const site = lume();
 
@@ -55,14 +56,12 @@ site.use(lightningCss({
       customMedia: true,
     },
     targets: {
-      android: version(100),
-      chrome: version(100),
-      edge: version(100),
-      firefox: version(100),
-      ios_saf: version(16),
-      safari: version(16),
-      opera: version(100),
-      samsung: version(19),
+      android: version([100, 0]),
+      chrome: version([100, 0]),
+      edge: version([100, 0]),
+      firefox: version([100, 0]),
+      ios_saf: version([18, 4]),
+      safari: version([16, 0]),
     },
   },
 }));
