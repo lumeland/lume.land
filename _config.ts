@@ -9,7 +9,7 @@ import transformImages from "lume/plugins/transform_images.ts";
 import favicon from "lume/plugins/favicon.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import postcss from "lume/plugins/postcss.ts";
-import nesting from "npm:postcss-nesting";
+import nesting from "npm:postcss-nesting@13.0.2";
 import sitemap from "lume/plugins/sitemap.ts";
 import metas from "lume/plugins/metas.ts";
 import checkUrls from "lume/plugins/check_urls.ts";

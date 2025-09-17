@@ -52,8 +52,8 @@ export default site;
 
 ## Components
 
-In MDX you can use the Lume components from the `comp` global variable variable
-or import other components like in JavaScript (with `import ... from ...`):
+In MDX you can use the Lume components from the global variable `comp` or import
+other components like in JavaScript (with `import ... from ...`):
 
 ```html
 ---
