@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Columnas
+    img: /img/showcase/blook.webp
+    url: https://jlantunez.com/columnas/
+    description: The blog + book + newsletter by José Luis Antúnez.
+    code: https://github.com/jlantunez/Blook
+
   - title: Events
     img: /img/showcase/events.webp
     url: https://willcraft.software/events/
