@@ -143,6 +143,6 @@ site.use(googleFonts({
 ```
 
 Non CJK fonts will typically have subsets like "latin", "latin-ext", "cyrillic"
-or "vietnamese", whicle CJK fonts like the above-mentioned "Zen Maru Gothic"
+or "vietnamese", while CJK fonts like the above-mentioned "Zen Maru Gothic"
 Japanese font, have many subsets corresponding to the wide range of Unicode
 characters used in the contained syllabaries and kanji character sets.
