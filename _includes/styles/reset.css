@@ -57,3 +57,10 @@ td {
 :not(:defined) {
   visibility: hidden;
 }
+
+:root[data-theme="light"] .hide-light {
+  display: none;
+}
+:root[data-theme="dark"] .hide-dark {
+  display: none;
+}

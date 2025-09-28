@@ -84,7 +84,10 @@ export default (data: Lume.Data, helpers: Lume.Helpers) => (
 ```
 
 Note that this page uses the `layouts/main.vto` Vento layout to wrap the
-content. Apart from setting the page frontmatter via variables as above, you can use the flexible `_data.*` file or directory (see [Shared data](../docs/creating-pages/shared-data.md)) to that end. Also, you can mix different template languages like Nunjucks and JSX.
+content. Apart from setting the page frontmatter via variables as above, you can
+use the flexible `_data.*` file or directory (see
+[Shared data](../docs/creating-pages/shared-data.md)) to that end. Also, you can
+mix different template languages like Nunjucks and JSX.
 
 ## Creating layouts
 
