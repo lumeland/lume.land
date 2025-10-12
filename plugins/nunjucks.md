@@ -108,12 +108,6 @@ It's possible to pass additional properties:
 {% comp "button" type="submit" %}Click here{% endcomp %}
 ```
 
-## Hooks
-
-This plugin exposes the following hooks:
-
-- `addNunjucksPlugin(name, fn)` To add additional plugins.
-
 ## Configure VSCode
 
 You can use the

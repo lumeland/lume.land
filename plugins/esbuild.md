@@ -79,23 +79,3 @@ site.use(esbuild({
   denoConfig: "app/deno.json",
 }));
 ```
-
-## Hooks
-
-This plugin exposes the following hooks:
-
-- `addEsbuildPlugin(plugin)` To add additional plugins.
-
-```js
-import lume from "lume/mod.ts";
-import esbuild from "lume/plugins/esbuild.ts";
-import coffeescript from "npm:esbuild-coffeescript";
-
-const site = lume();
-
-site.use(esbuild());
-
-site.hooks.addEsbuildPlugin(coffeescript);
-
-export default site;
-```
