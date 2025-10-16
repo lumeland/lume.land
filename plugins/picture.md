@@ -178,3 +178,15 @@ want to keep clean.
   <img src="/flowers.jpg" transform-images="" />
 </div>
 ```
+
+## Crop images
+
+As of Lume 3.1, is possible to define the heigh of the image, so it will be
+cropped to this size. For example:
+
+```html
+<img src="/flowers.jpg" transform-images="avif webp jpg 300x150@2 600x300@2">
+```
+
+The image will be cropped to 300x150 and 600x300, with version for 2x
+resolutions.

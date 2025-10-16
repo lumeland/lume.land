@@ -49,8 +49,8 @@ export default site;
 ```
 
 The plugin will search all URLs in your HTML documents (elements with `href`,
-`src`, `srcset`, and `imagesrcset` attributes) and CSS files (like `url()`
-functions and `@import ...` at-rules) and invoke the callback for every URL
-found. The callback has two arguments: the URL and the `Page` instance where
-that URL was found. If the URL has found in a HTML document, the element
+`src`, `srcset`, `form[action]` and `imagesrcset` attributes) and CSS files
+(like `url()` functions and `@import ...` at-rules) and invoke the callback for
+every URL found. The callback has two arguments: the URL and the `Page` instance
+where that URL was found. If the URL has found in a HTML document, the element
 containing the URL (link, image, etc) is passed as the third argument.

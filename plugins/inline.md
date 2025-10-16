@@ -96,3 +96,22 @@ site.use(inline({
   copyAttributes: ["title", /^data-/], // Copy the "title" and all data-* attributes
 }));
 ```
+
+## Inline in CSS
+
+The plugin supports also CSS code. To inline a file in CSS, use the `?inline`
+query parameter in the URL. For example:
+
+```css
+.warning {
+  background-image: url("/icons/warning.svg?inline");
+}
+```
+
+is converted to:
+
+```css
+.warning {
+  background-image: url("data:image/svg+xml;utf8,<svg...</svg>");
+}
+```

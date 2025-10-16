@@ -55,7 +55,7 @@ to update both Lume and LumeCMS.
 
 ## Run in localhost
 
-Run `deno task lume cms` to run the CMS in localhost (or `lume cms` if you're on
-Lume CLI). Lume automatically detects the `_cms.ts` configuration, builds your
-site and connects it to the CMS. Now, you can edit the content in the CMS and
-preview the results in your site in real time.
+Run `deno task serve` to start a local web server. Lume automatically detects
+the `_cms.ts` configuration and start the CMS in the route `/admin`. Now, you
+can edit the content in the CMS and preview the results in your site in real
+time.

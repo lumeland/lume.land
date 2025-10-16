@@ -66,12 +66,11 @@ site.use(checkUrls({
 
 ## Output
 
-By default, the broken links found are shown in the console. Use the `output`
-option to export the list of broken links to a JSON file:
+The report is visible in the debug bar but you can use the `output` option to
+export the list of broken links to a JSON file:
 
 ```js
 site.use(checkUrls({
-  external: true,
   output: "_broken_links.json",
 }));
 ```
@@ -80,7 +79,6 @@ Or use a function for a custom output:
 
 ```js
 site.use(checkUrls({
-  external: true,
   output: (brokenLinks) => {
     console.log(`${brokenLinks.size} broken links found!`);
   },
