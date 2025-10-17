@@ -105,6 +105,17 @@ init
 view
 : A string with the name of the view. This is used to group fields by view name and show/hide fields with the same view.
 
+cssSelector
+: If you are editing a page with the preview, this option allows to highlight the element in the preview corresponding with the field. For example:
+
+```js
+{
+  type: "text",
+  name: "title",
+  cssSelector: "h1.title"
+}
+```
+
 transform
 : A custom function to transform a value before save or update it. For example:
 

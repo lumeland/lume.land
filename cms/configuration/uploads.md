@@ -79,3 +79,24 @@ cms.upload({
   listed: false, // Hide from the main menu.
 });
 ```
+
+### documentLabel
+
+This function customize the document's labels. The label is the visible name of
+every document that is used in the list of files. It works in the same way as [the same option of collections](./collections.md#documentlabel).
+
+### create, edit, rename & delete
+
+Useful if you don't want to create, edit and/or delete items in the uploads.
+
+```ts
+cms.upload({
+  name: "images",
+  store: "src:images",
+  // Don't allow the user to create, edit, rename or delete images
+  create: false,
+  delete: false,
+  edit: false,
+  rename: false,
+});
+```

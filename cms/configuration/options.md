@@ -34,7 +34,7 @@ this value to the `src` folder. It's used to file system storage
 
 ### basePath
 
-The public base path of the CMS. Lume adapter set this value to `/admin`.
+The public base path of the CMS. Lume automatically set this value to `/admin`.
 
 ## site
 
@@ -56,41 +56,11 @@ const cms = lumeCMS({
 });
 ```
 
-## auth
-
-It's an object to configure the authentication type. For now, only `basic`
-method is available:
-
-```js
-const cms = lumeCMS({
-  auth: {
-    method: "basic",
-    users: {
-      user1: "password1",
-      user2: "password2",
-    },
-  },
-});
-```
-
 ## data
 
 It's where you can pass arbitrary data to use later inside the fields. Lume
 automatically insert the `lume` instance. More info at
 [Fields configuration](../fields/index.md#the-init-function)
-
-## log
-
-To configure the method to store the logs. For now, there's only a property to
-define the filename to store the error logs. Useful for self-hosted CMS.
-
-```js
-const cms = lumeCMS({
-  log: {
-    filename: "errors.log",
-  },
-});
-```
 
 ## extraHead
 
@@ -106,5 +76,35 @@ const cms = lumeCMS({
   }
 </style>
   `,
+});
+```
+
+## previewURL
+
+A function to return the preview URL for a file. For example, if we know that the file `/posts/hello-world.md` produces the URL `/posts/hello-world/`, we can display this URL in the preview panel when the file is being edited.
+
+Lume set this option automatically but it can be useful if you're using the CMS without Lume.
+
+```js
+const cms = lumeCMS({
+  previewUrl(path: string) {
+    if (path === "/index.md") return "/";
+    if (path === "/about.md") return "/about/";
+  }
+});
+```
+
+## sourcePath
+
+It's the opposite to previewURL: return the source file for a specific URL. This allows to generate URLs like `/admin/?edit=/posts/hello-world/` and the CMS opens the form to edit the source file of the URL.
+
+Lume set this option automatically but it can be useful if you're using the CMS without Lume.
+
+```js
+const cms = lumeCMS({
+  sourcePath(url: string) {
+    if (url === "/") return "/index.md";
+    if (url === "/about/") return "/about.md";
+  }
 });
 ```

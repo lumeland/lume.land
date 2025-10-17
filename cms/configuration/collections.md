@@ -82,9 +82,9 @@ cms.collection({
 });
 ```
 
-### url
+### previewUrl
 
-The `url` option allows to set a preview URL of the collection. It's used for
+The `previewUrl` option allows to set a preview URL of the collection. It's used for
 collections in which every item doesn't generate a page, but all items generate
 a unique page.
 
@@ -101,7 +101,7 @@ cms.collection({
     "date: datetime",
     "content: markdown",
   ],
-  url: "/events/",
+  previewUrl: "/events/",
 });
 ```
 
@@ -179,9 +179,9 @@ If it's not specified, a default function is used to remove the extension,
 convert hyphens to spaces and apply other small tweaks. For example, the
 document name `/this-is-a-page.md` is converted to the label `This is a page`.
 
-### create & delete
+### create, edit & delete
 
-Useful if you don't want to create and/or delete items in the collection
+Useful if you don't want to create, edit and/or delete items in the collection
 (because it has a fixed length).
 
 ```ts
@@ -192,9 +192,10 @@ cms.collection({
     "title: text",
     "content: markdown",
   ],
-  // Don't allow the user to create or delete countries
+  // Don't allow the user to create, edit or delete countries
   create: false,
   delete: false,
+  edit: false,
 });
 ```
 
@@ -263,4 +264,102 @@ cms.collection({
   create: false,
   delete: false,
 });
+```
+
+### type
+
+Configure the type of document created in the collection. By default is `object`, which means that the root elements is an object. 
+
+Let's see an example:
+
+```js
+cms.collection({
+  name: "notes",
+  storage: "src:*.json",
+  type: "object", // default value, no need to specify
+  fields: [
+    "title: text",
+    "text: textarea",
+  ],
+});
+```
+
+This configuration generates files like the following. Note that the root element is an object:
+
+```json
+{
+  "title": "Note title",
+  "text": "This is the note"
+}
+```
+
+The `object-list` type allows to store an array of objects:
+
+```js
+cms.collection({
+  name: "notes",
+  storage: "src:*.json",
+  type: "object-list",
+  fields: [
+    "title: text",
+    "text: textarea",
+  ],
+});
+```
+
+```json
+[
+  {
+    "title": "First note",
+    "text": "Text of the first note"
+  },
+  {
+    "title": "Second note",
+    "text": "Text of the second note"
+  }
+]
+```
+
+The type `choose` allows to create different data structure for each document. For example, let's say you have different note types:
+
+```js
+cms.collection({
+  name: "notes",
+  storage: "src:*.json",
+  type: "choose",
+  fields: [
+    {
+      name: "text"
+      fields: [
+        "title: text",
+        "text: textarea",
+      ]
+    },
+    {
+      name: "image"
+      fields: [
+        "title: text",
+        "image: file",
+      ]
+    }
+  ],
+});
+```
+
+You collection can contain documents of type "text" or "image", and each document has a different structure. For example:
+
+```json
+{
+  "type": "text",
+  "title": "Note title",
+  "text": "This is the note"
+}
+```
+
+```json
+{
+  "type": "image",
+  "title": "My image",
+  "image": "/images/photo-1.jpg"
+}
 ```

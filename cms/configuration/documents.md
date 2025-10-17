@@ -85,13 +85,84 @@ cms.document({
 });
 ```
 
-### url
+### previewUrl
 
-The `url` option allows to set a preview URL of the document. It's used for
+The `previewUrl` option allows to set a preview URL of the document. It's used for
 documents that don't generate a page but their changes can affect to certain
 page that we want to preview.
+
+### edit
+
+Useful if you don't want to edit the document.
+
+```ts
+cms.document({
+  name: "landing-page",
+  store: "src:index.yml",
+  fields: [
+    "title: text",
+    "subtitle: text",
+    "content: markdown",
+  ],
+  edit: false,
+});
+```
 
 ### views
 
 An array of the views that are visible by default. It's possible to use a
 function to return the array dynamically.
+
+### type
+
+Configure the type of document. By default is `object`, which means that the root elements is an object. 
+
+Let's see an example:
+
+```js
+cms.document({
+  name: "notes",
+  storage: "src:notes.json",
+  type: "object", // default value, no need to specify
+  fields: [
+    "title: text",
+    "text: textarea",
+  ],
+});
+```
+
+This configuration generates the following file. Note that the root element is an object:
+
+```json
+{
+  "title": "Note title",
+  "text": "This is the note"
+}
+```
+
+The `object-list` type allows to store an array of objects:
+
+```js
+cms.document({
+  name: "notes",
+  storage: "src:notes.json",
+  type: "object-list",
+  fields: [
+    "title: text",
+    "text: textarea",
+  ],
+});
+```
+
+```json
+[
+  {
+    "title": "First note",
+    "text": "Text of the first note"
+  },
+  {
+    "title": "Second note",
+    "text": "Text of the second note"
+  }
+]
+```

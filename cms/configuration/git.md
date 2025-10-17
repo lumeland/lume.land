@@ -22,7 +22,7 @@ cms.git();
 The available values are:
 
 - **prodBranch**: The production branch. By default is `main`.
-- **prefix**: A prefix for the the branches of other versions. By default is
+- **branchPrefix**: A prefix for the branches created for other versions. By default is
   `lumecms/`. A version named `v2` is stored in the branch `lumecms/v2`.
 - **command**: The command to invoke git. By default is `git`.
 - **remote**: The name of the remote repository to push and pull changes. By
