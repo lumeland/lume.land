@@ -60,7 +60,8 @@
         "0.0.0.0",
         "jsr.io:443",
         "cdn.jsdelivr.net:443",
-        "lumeland.github.io:443"
+        "lumeland.github.io:443",
+        "fonts.googleapis.com:443"
       ],
       "env": true,
       "run": true,
