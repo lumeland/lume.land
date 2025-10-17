@@ -55,7 +55,10 @@
       "read": true,
       "write": true,
       "import": [
-        "cdn.sheetjs.com:443"
+        "cdn.jsdelivr.net:443",
+        "cdn.sheetjs.com:443",
+        "jsr.io:443",
+        "deno.land:443"
       ],
       "net": [
         "0.0.0.0",
