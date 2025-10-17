@@ -1,7 +1,7 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.11/",
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.12/jsx-runtime.ts"
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.0/",
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.12/jsx-runtime.ts"
   },
   "lock": false,
   "compilerOptions": {
@@ -38,7 +38,7 @@
       ]
     },
     "plugins": [
-      "https://deno.land/x/lume@v3.0.11/lint.ts"
+      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.0/lint.ts"
     ]
   },
   "fmt": {
@@ -58,10 +58,12 @@
         "0.0.0.0",
         "jsr.io:443",
         "cdn.jsdelivr.net:443",
-        "lumeland.github.io:443",
+        "data.jsdelivr.com:443",
         "fonts.googleapis.com:443",
         "fonts.gstatic.com:443",
-        "registry.npmjs.org:443"
+        "registry.npmjs.org:443",
+        "lumeland.github.io:443",
+        "cdn.sheetjs.com:443"
       ],
       "env": true,
       "run": true,
