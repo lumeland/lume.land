@@ -54,6 +54,9 @@
     "lume": {
       "read": true,
       "write": true,
+      "import": [
+        "cdn.sheetjs.com:443"
+      ],
       "net": [
         "0.0.0.0",
         "jsr.io:443",
@@ -62,8 +65,7 @@
         "fonts.googleapis.com:443",
         "fonts.gstatic.com:443",
         "registry.npmjs.org:443",
-        "lumeland.github.io:443",
-        "cdn.sheetjs.com:443"
+        "lumeland.github.io:443"
       ],
       "env": true,
       "run": true,
