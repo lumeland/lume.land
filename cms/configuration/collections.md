@@ -84,9 +84,9 @@ cms.collection({
 
 ### previewUrl
 
-The `previewUrl` option allows to set a preview URL of the collection. It's used for
-collections in which every item doesn't generate a page, but all items generate
-a unique page.
+The `previewUrl` option allows to set a preview URL of the collection. It's used
+for collections in which every item doesn't generate a page, but all items
+generate a unique page.
 
 For example, we can have a collection of events, but in the website all events
 are listed in a unique page. We can configure the CMS to preview this URL every
@@ -268,7 +268,8 @@ cms.collection({
 
 ### type
 
-Configure the type of document created in the collection. By default is `object`, which means that the root elements is an object. 
+Configure the type of document created in the collection. By default is
+`object`, which means that the root elements is an object.
 
 Let's see an example:
 
@@ -284,7 +285,8 @@ cms.collection({
 });
 ```
 
-This configuration generates files like the following. Note that the root element is an object:
+This configuration generates files like the following. Note that the root
+element is an object:
 
 ```json
 {
@@ -320,7 +322,8 @@ cms.collection({
 ]
 ```
 
-The type `choose` allows to create different data structure for each document. For example, let's say you have different note types:
+The type `choose` allows to create different data structure for each document.
+For example, let's say you have different note types:
 
 ```js
 cms.collection({
@@ -346,7 +349,8 @@ cms.collection({
 });
 ```
 
-You collection can contain documents of type "text" or "image", and each document has a different structure. For example:
+You collection can contain documents of type "text" or "image", and each
+document has a different structure. For example:
 
 ```json
 {

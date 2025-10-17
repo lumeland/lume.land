@@ -83,7 +83,8 @@ cms.upload({
 ### documentLabel
 
 This function customize the document's labels. The label is the visible name of
-every document that is used in the list of files. It works in the same way as [the same option of collections](./collections.md#documentlabel).
+every document that is used in the list of files. It works in the same way as
+[the same option of collections](./collections.md#documentlabel).
 
 ### create, edit, rename & delete
 

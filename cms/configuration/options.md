@@ -81,9 +81,12 @@ const cms = lumeCMS({
 
 ## previewURL
 
-A function to return the preview URL for a file. For example, if we know that the file `/posts/hello-world.md` produces the URL `/posts/hello-world/`, we can display this URL in the preview panel when the file is being edited.
+A function to return the preview URL for a file. For example, if we know that
+the file `/posts/hello-world.md` produces the URL `/posts/hello-world/`, we can
+display this URL in the preview panel when the file is being edited.
 
-Lume set this option automatically but it can be useful if you're using the CMS without Lume.
+Lume set this option automatically but it can be useful if you're using the CMS
+without Lume.
 
 ```js
 const cms = lumeCMS({
@@ -96,9 +99,12 @@ const cms = lumeCMS({
 
 ## sourcePath
 
-It's the opposite to previewURL: return the source file for a specific URL. This allows to generate URLs like `/admin/?edit=/posts/hello-world/` and the CMS opens the form to edit the source file of the URL.
+It's the opposite to previewURL: return the source file for a specific URL. This
+allows to generate URLs like `/admin/?edit=/posts/hello-world/` and the CMS
+opens the form to edit the source file of the URL.
 
-Lume set this option automatically but it can be useful if you're using the CMS without Lume.
+Lume set this option automatically but it can be useful if you're using the CMS
+without Lume.
 
 ```js
 const cms = lumeCMS({

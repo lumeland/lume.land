@@ -3,7 +3,8 @@ title: Relation
 description: Field to pick one document of an collection
 ---
 
-The field of type `relation` is used to create a relation to a document from a collection. It display a `<select>` in the UI.
+The field of type `relation` is used to create a relation to a document from a
+collection. It display a `<select>` in the UI.
 
 ## Example
 
@@ -28,7 +29,8 @@ The collection name used to fetch the options.
 
 ### option
 
-A function to run per document that returns the label and value used in the interface.
+A function to run per document that returns the label and value used in the
+interface.
 
 ## Demo
 
@@ -41,7 +43,8 @@ Let's say we have a collection of countries with the following files:
 /it-italy.json
 ```
 
-We can configure the collection to extract the name and store the code as a flag:
+We can configure the collection to extract the name and store the code as a
+flag:
 
 ```js
 cms.collection({
@@ -50,8 +53,8 @@ cms.collection({
     const [code, name] = filename.replace(".json", "").split("-");
     return {
       label: name,
-      flags: { code }
-    }
+      flags: { code },
+    };
   },
   // ...more options
 });

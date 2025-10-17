@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.10/",
+    "lume/": "https://deno.land/x/lume@v3.0.11/",
     "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.12/jsx-runtime.ts"
   },
   "lock": false,
@@ -12,9 +12,18 @@
     ]
   },
   "tasks": {
-    "build": "deno task lume",
-    "serve": "deno task lume -s",
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -"
+    "build": {
+      "description": "Build the site for production",
+      "command": "deno task lume"
+    },
+    "serve": {
+      "description": "Run and serve the site for development",
+      "command": "deno task lume -s"
+    },
+    "lume": {
+      "description": "Run Lume command",
+      "command": "deno run -P=lume lume/cli.ts"
+    }
   },
   "lint": {
     "exclude": [
@@ -29,7 +38,7 @@
       ]
     },
     "plugins": [
-      "https://deno.land/x/lume@v3.0.10/lint.ts"
+      "https://deno.land/x/lume@v3.0.11/lint.ts"
     ]
   },
   "fmt": {
@@ -40,5 +49,22 @@
   "unstable": [
     "temporal",
     "fmt-component"
-  ]
+  ],
+  "permissions": {
+    "lume": {
+      "read": true,
+      "write": [
+        "./"
+      ],
+      "net": [
+        "0.0.0.0",
+        "jsr.io:443",
+        "cdn.jsdelivr.net:443"
+      ],
+      "env": true,
+      "run": true,
+      "ffi": true,
+      "sys": true
+    }
+  }
 }

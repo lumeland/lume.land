@@ -3,7 +3,8 @@ title: Relation list
 description: Field to pick one or more document of an collection
 ---
 
-The field of type `relation-list` it's a version of [`relation`](./relation.md) that allows to select multiple values.
+The field of type `relation-list` it's a version of [`relation`](./relation.md)
+that allows to select multiple values.
 
 ## Example
 
@@ -28,4 +29,5 @@ The collection name used to fetch the options.
 
 ### option
 
-A function to run per document that returns the label and value used in the interface.
+A function to run per document that returns the label and value used in the
+interface.

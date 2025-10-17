@@ -87,8 +87,8 @@ cms.document({
 
 ### previewUrl
 
-The `previewUrl` option allows to set a preview URL of the document. It's used for
-documents that don't generate a page but their changes can affect to certain
+The `previewUrl` option allows to set a preview URL of the document. It's used
+for documents that don't generate a page but their changes can affect to certain
 page that we want to preview.
 
 ### edit
@@ -115,7 +115,8 @@ function to return the array dynamically.
 
 ### type
 
-Configure the type of document. By default is `object`, which means that the root elements is an object. 
+Configure the type of document. By default is `object`, which means that the
+root elements is an object.
 
 Let's see an example:
 
@@ -131,7 +132,8 @@ cms.document({
 });
 ```
 
-This configuration generates the following file. Note that the root element is an object:
+This configuration generates the following file. Note that the root element is
+an object:
 
 ```json
 {
