@@ -53,9 +53,7 @@
   "permissions": {
     "lume": {
       "read": true,
-      "write": [
-        "./"
-      ],
+      "write": true,
       "net": [
         "0.0.0.0",
         "jsr.io:443",
