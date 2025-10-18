@@ -13,6 +13,23 @@ as _data files, so you can use this data to render your pages.
 
 ## Installation
 
+If you're managing
+[Deno permissions](https://docs.deno.com/runtime/fundamentals/configuration/#permissions)
+in the `deno.json` file, make sure to add the following to
+`permissions.lume.import` to import the sheetjs library:
+
+```json
+{
+  "permissions": {
+    "lume": {
+      "import": [
+        "cdn.sheetjs.com:443"
+      ]
+    }
+  }
+}
+```
+
 Import this plugin in your `_config.ts` file to use it:
 
 ```js

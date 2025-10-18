@@ -19,6 +19,24 @@ not a good idea, not only for privacy and GDPR compliance, but also
 
 ## Installation
 
+If you're managing
+[Deno permissions](https://docs.deno.com/runtime/fundamentals/configuration/#permissions)
+in the `deno.json` file, make sure to add the following to
+`permissions.lume.net` to fetch the fonts from Google:
+
+```json
+{
+  "permissions": {
+    "lume": {
+      "net": [
+        "fonts.googleapis.com:443",
+        "fonts.gstatic.com:443"
+      ]
+    }
+  }
+}
+```
+
 Import this plugin in your `_config.ts` file, passing the sharing URL of your
 font selection. For example, let's say we want to use
 [Playfair Display](https://fonts.google.com/share?selection.family=Playfair+Display:ital,wght@0,400..900;1,400..900):

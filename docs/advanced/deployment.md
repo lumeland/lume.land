@@ -109,60 +109,9 @@ argument is not needed if you have defined the
 ## Deno Deploy
 
 [Deno Deploy](https://deno.com/deploy) is a distributed deploy system provided
-by Deno with support for static files. It requires having your repo on GitHub.
-
-- Sign up to Deno Deploy and create a new project.
-- Configure the Git integration to use the **GitHub Actions** deployment mode.
-- In your repository, you need an entrypoint file to serve the files. Create the
-  file `serve.ts` with the following code:
-
-```ts
-import Server from "lume/core/server.ts";
-
-const server = new Server({
-  port: 8000,
-  root: `${Deno.cwd()}/_site`,
-});
-
-server.start();
-
-console.log("Listening on http://localhost:8000");
-```
-
-- Create the following GitHub workflow, replacing `project-name` with the name
-  of your project in Deno Deploy.
-
-```yml
-name: Publish on Deno Deploy
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
-
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v4
-
-      - name: Setup Deno environment
-        uses: denoland/setup-deno@v2
-
-      - name: Build site
-        run: deno task build
-
-      - name: Deploy to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: project-name
-          import-map: "./deno.json"
-          entrypoint: serve.ts
-```
+by Deno that auto-detect Lume sites. You only have to connect your GitHub
+repository and that's all! (the build command is automatically configured to
+`deno task build`).
 
 ## Netlify
 
