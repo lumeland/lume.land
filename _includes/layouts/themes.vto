@@ -14,7 +14,7 @@ page_css: themes.css
         <figure class="site">
           <a href="{{ theme.url }}" class="site-image">
             <img
-              src="https://lumeland.github.io/themes{{ theme.screens[0]?.desktop }}"
+              src="{{ theme.baseUrl + theme.screens[0]?.desktop }}"
             >
           </a>
           <figcaption class="site-description">

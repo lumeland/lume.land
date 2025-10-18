@@ -100,28 +100,28 @@ page_css: theme.css
         <div class="device" data-device="desktop" data-theme="light">
           <img
             class=""
-            src="https://lumeland.github.io/themes{{ screen.desktop }}"
+            src="{{ baseUrl + screen.desktop }}"
           >
         </div>
 
         {{ if screen.desktop_dark }}
           <div class="device" data-device="desktop" data-theme="dark">
             <img
-              src="https://lumeland.github.io/themes{{ screen.desktop_dark }}"
+              src="{{ baseUrl + screen.desktop_dark }}"
             >
           </div>
         {{ /if }}
 
         {{ if screen.mobile }}
           <div class="device" data-device="mobile" data-theme="light">
-            <img src="https://lumeland.github.io/themes{{ screen.mobile }}">
+            <img src="{{ baseUrl + screen.mobile }}">
           </div>
         {{ /if }}
 
         {{ if screen.mobile_dark }}
           <div class="device" data-device="mobile" data-theme="dark">
             <img
-              src="https://lumeland.github.io/themes{{ screen.mobile_dark }}"
+              src="{{ baseUrl + screen.mobile_dark }}"
             >
           </div>
         {{ /if }}
