@@ -23,22 +23,40 @@ const site = lume(
     /** The default includes path, relative to the `src` folder */
     includes: "_includes",
 
+    /** The default css file */
+    cssFile: "/style.css";
+
+    /** The default js file */
+    jsFile: "/script.js";
+
+    /** The default folder for fonts */
+    fontsFolder: "/fonts";
+
     /** The site location (used to generate final urls) */
     location: new URL("http://localhost"),
 
     /** Set true to generate pretty urls (`/about-me/`) */
     prettyUrls: true,
 
+    /** To consider two urls the equal if the only difference is the case */
+    caseSensitiveUrls: true;
+
     /** Local server options(when using `lume --serve`) */
     server: {
       /** The port to listen on */
       port: 3000,
+
+      /** The hostname to listen on */
+      port: "localhost",
 
       /** Open the server in a browser after starting the server */
       open: false,
 
       /** The file to serve when getting a 404 error */
       page404: "/404.html",
+
+      /** Whether to use the debug bar or not */
+      debugBar: true;
 
       /** Optional middleware for the server */
       middlewares: [];
@@ -54,6 +72,9 @@ const site = lume(
 
       /** The interval in milliseconds to check for changes */
       debounce: 100,
+
+      /** Extra files and folders to watch (ouside the src folder) */
+      include: [];
     },
 
     /** Component options */
@@ -150,8 +171,9 @@ site.ignore(...paths);
 /** Configure independent scopes to optimize builds when source files update */
 site.scopedUpdates(...scopes);
 
-/** Define a remote file */
-site.remoteFile(filename, url);
+/** Define remote files */
+site.remote(filename, url);
+site.remote(baseLocal, baseUrl, globOrFilenames);
 ```
 
 ## Lume functions

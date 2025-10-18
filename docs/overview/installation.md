@@ -27,9 +27,7 @@ This command creates the following files:
 where you can customize the site build.
 
 `deno.json`
-: [Deno's configuration file](https://docs.deno.com/runtime/manual/getting_started/configuration_file/).
-It includes the import map and some tasks to run Lume. You can also configure
-other features of Deno like TypeScript, formatter, linter, etc.
+: [Deno's configuration file](https://docs.deno.com/runtime/manual/getting_started/configuration_file/) with some configuration required by Lume. [Learn more about this file](../advanced/deno-config.md).
 
 <!-- deno-fmt-ignore-end -->
 
@@ -47,16 +45,11 @@ export default site;
 
 ```json {title="deno.json"}
 {
-  "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
-    "build": "deno task lume",
-    "serve": "deno task lume -s"
-  },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.0/",
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.10/jsx-runtime.ts"
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.0/",
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.12/jsx-runtime.ts"
   },
-  "unstable": ["temporal"],
+  "lock": false,
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "lume",
@@ -64,10 +57,56 @@ export default site;
       "lume/types.ts"
     ]
   },
+  "tasks": {
+    "build": {
+      "description": "Build the site for production",
+      "command": "deno task lume"
+    },
+    "serve": {
+      "description": "Run and serve the site for development",
+      "command": "deno task lume -s"
+    },
+    "lume": {
+      "description": "Run Lume command",
+      "command": "deno run -P=lume lume/cli.ts"
+    }
+  },
   "lint": {
+    "rules": {
+      "exclude": [
+        "no-import-prefix"
+      ]
+    },
     "plugins": [
-      "https://deno.land/x/lume@v3.0.0/lint.ts"
+      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.0/lint.ts"
     ]
+  },
+  "unstable": [
+    "temporal",
+    "fmt-component"
+  ],
+  "permissions": {
+    "lume": {
+      "read": true,
+      "write": true,
+      "import": [
+        "cdn.jsdelivr.net:443",
+        "jsr.io:443",
+        "deno.land:443",
+        "esm.sh:443"
+      ],
+      "net": [
+        "0.0.0.0",
+        "jsr.io:443",
+        "cdn.jsdelivr.net:443",
+        "data.jsdelivr.com:443",
+        "registry.npmjs.org:443"
+      ],
+      "env": true,
+      "run": true,
+      "ffi": true,
+      "sys": true
+    }
   }
 }
 ```
