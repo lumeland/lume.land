@@ -63,9 +63,9 @@ The `tasks` property defines some commands (known as
   module (resolved to the URL defined in the imports).
 - `build`: It builds the site for production. The command simply runs `lume`
   task, but the idea is to have a more explicit name (`build` instead of the
-  generic `lume`) and having two tasks separated is easier to add extra flags to
-  the build process without modifying the base task (like a custom location,
-  environment variables, etc).
+  generic `lume`) and having two tasks separated makes it easier to add extra
+  flags to the build process without modifying the base task (like a custom
+  location, environment variables, etc).
 - `serve`: It runs the `lume` task but with the `-s` flag (to start a local
   development server). It's intended for local development.
 
