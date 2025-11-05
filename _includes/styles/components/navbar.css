@@ -20,19 +20,38 @@
   align-self: center;
   align-items: center;
   color: var(--color-foreground);
-  column-gap: 10px;
+  column-gap: 16px;
   text-decoration: none;
-  font: var(--text-body-bold);
-  letter-spacing: var(--text-title-spacing);
 
   & svg {
-    margin-bottom: 10px;
+    height: 65px;
+    width: auto;
   }
 
-  & span {
+  & .logo-letters {
+    font-size: 1.75rem;
+    line-height: 1;
+    font-weight: 600;
+
+    > span:nth-child(1) {
+      letter-spacing: -0.05em;
+    }
+    > span:nth-child(2) {
+      letter-spacing: -0.02em;
+    }
+    > span:nth-child(3),
+    > span:nth-child(4) {
+      letter-spacing: -0.04em;
+    }
     @media (max-width: 900px) {
       display: none;
     }
+  }
+  .logo-light {
+    transition: opacity 200ms;
+  }
+  &:hover .logo-light {
+    opacity: 1;
   }
 }
 .navbar-menu {
