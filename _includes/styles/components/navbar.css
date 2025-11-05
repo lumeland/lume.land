@@ -24,7 +24,7 @@
   text-decoration: none;
 
   & svg {
-    height: 65px;
+    height: 55px;
     width: auto;
   }
 
@@ -48,7 +48,7 @@
     }
   }
   .logo-light {
-    transition: opacity 200ms;
+    transition: opacity 500ms;
   }
   &:hover .logo-light {
     opacity: 1;
