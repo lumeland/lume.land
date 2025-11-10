@@ -13,7 +13,7 @@ community:
 plugins:
   - title: djot.js
     description: Use Djot as a template engine.
-    url: https://cdn.jsdelivr.net/gh/iacore/djot.js/
+    url: https://cdn.jsdelivr.net/gh/iacore/djot.js@0.3.2-lume/lume-djot-plugin.ts
 
   - title: lume_cleancss
     description: Use CleanCSS to minify CSS with structural optimization.
