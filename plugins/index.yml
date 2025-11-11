@@ -14,6 +14,11 @@ plugins:
   - title: djot.js
     description: Use Djot as a template engine.
     url: https://cdn.jsdelivr.net/gh/iacore/djot.js/lume-djot-plugin.ts
+    repo: https://git.sr.ht/~iacore/djot.js
+
+  - title: Experimental plugins
+    description: Some of these plugins are moved to the main Lume repo.
+    url: https://github.com/lumeland/experimental-plugins
 
   - title: lume_cleancss
     description: Use CleanCSS to minify CSS with structural optimization.
