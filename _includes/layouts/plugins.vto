@@ -71,6 +71,9 @@ page_css: plugins.css
             <strong class="plugin-name">{{ plugin.title }}</strong>
             {{ plugin.description |> md }}
           </a>
+          {{ if plugin.repo }}
+            <p><a class="button is-secondary is-small" href="{{ plugin.repo }}">Repo</a></p>
+          {{ /if }}
         </li>
       {{ /for }}
     </ul>
