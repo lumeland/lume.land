@@ -55,6 +55,7 @@ site
       vento: ventoLang,
     },
   }))
+  .use(ogImages())
   .use(metas())
   .use(nav())
   .use(icons())
@@ -76,7 +77,6 @@ site
       "/blog/",
     ],
   }))
-  .use(ogImages())
   .use(favicon())
   .use(transformImages())
   .use(inline())
