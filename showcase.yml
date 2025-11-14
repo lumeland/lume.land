@@ -13,6 +13,11 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: urwq.moe
+    img: /img/showcase/urwqmoe.webp
+    url: https://urwq.moe
+    description: Personal website
+
   - title: Columnas
     img: /img/showcase/blook.webp
     url: https://jlantunez.com/columnas/
@@ -30,11 +35,6 @@ sites:
     url: https://fbik.top
     description: Personal Blog of FBIK
     code: https://github.com/FBIKdot/LumeProse
-
-  - title: c0de.wtf
-    img: /img/showcase/c0dewtf.webp
-    url: https://c0de.wtf
-    description: Personal website from a developer
 
   - title: Tech It Easy
     img: /img/showcase/esolia.webp
