@@ -261,13 +261,11 @@ any directory. For example:
 
 ## Search files
 
-The function `files()` allows to search any file that will be copied to the
-`dest` folder and returns its URL. It accepts a regular expression or a string
-with a glob expression. For example, to search all CSS files:
+The function `files()` allows to search any file output file and returns its
+URL. It accepts a regular expression or a string with a glob expression. For
+example, to search all CSS files:
 
 ```vento
-This site uses the following CSS files:
-
 <ul>
   {{ for file of search.files("*.css") }}
   <a href="{{ file }}">
@@ -275,4 +273,12 @@ This site uses the following CSS files:
   </a>
   {{ /for }}
 </ul>
+```
+
+The function `file()` returns a single file:
+
+```vento
+{{ if search.file("/style.css") }}
+This site has a `/style.css` file.
+{{ /if }}
 ```

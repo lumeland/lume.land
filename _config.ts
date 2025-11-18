@@ -55,10 +55,6 @@ site
       vento: ventoLang,
     },
   }))
-  .use(ogImages())
-  .use(metas())
-  .use(nav())
-  .use(icons())
   .use(esbuild({
     extensions: [".js"],
   }))
@@ -70,6 +66,11 @@ site
   .use(postcss({
     plugins: [nesting()],
   }))
+  .use(ogImages())
+  .use(transformImages())
+  .use(metas())
+  .use(nav())
+  .use(icons())
   .use(resolveUrls())
   .use(checkUrls({
     external: false,
@@ -78,7 +79,6 @@ site
     ],
   }))
   .use(favicon())
-  .use(transformImages())
   .use(inline())
   .use(sitemap())
   .scopedUpdates(

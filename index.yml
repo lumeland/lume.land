@@ -205,11 +205,10 @@ usage:
       <lume-code>
 
       ```js { title="Scripts and events" }
-      // Create a script and run it after build
-      site.script("deploy", "rsync -r _site/ user@host.com:/site");
-      site.addEventListener("afterBuild", "deploy");
+      // Run a script after build
+      site.addEventListener("afterBuild", "rsync -r _site/ user@host.com:/site");
 
-      // Or run arbitrary code
+      // Or run JavaScript code
       site.addEventListener("afterBuild", () => console.log("site build"));
       ```
 

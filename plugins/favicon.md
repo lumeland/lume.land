@@ -44,3 +44,15 @@ site.use(favicon({
   input: "/my-custom-favicon.png",
 }));
 ```
+
+As of Lume 3.1.2, it's possible to configure different input files for different
+sizes:
+
+```ts
+site.use(favicon({
+  input: {
+    16: "favicon.svg",
+    180: "big-favicon.svg",
+  },
+}));
+```

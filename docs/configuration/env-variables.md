@@ -17,6 +17,10 @@ Lume has the following environment variables that you can use with
   LUME_DRAFTS=true deno task lume
   ```
 
+> [!note]
+>
+> In development mode (i.e. with `deno task serve`), the `LUME_DRAFTS` variable is true by default.
+
 `LUME_LOGS`
 : Lume uses the following log levels: `DEBUG`, `INFO`, `WARNING`,
   `ERROR` and `CRITICAL`. By default, it is `INFO`, but you can change it with this

@@ -135,16 +135,9 @@ site.addEventListener("afterStartServer", () => {
 ## Execute scripts with events
 
 In addition to functions, you can also execute [scripts](scripts.md) in events
-by passing a string with the script name.
+by passing a string with the command.
 
 ```js
-// Create the script
-site.script("compress", "gzip -r _site site.gz");
-
-// Execute it after build the site
-site.addEventListener("afterBuild", "compress").
-
-// Or you can run any script directly
 site.addEventListener("afterBuild", "gzip -r _site site.gz").
 ```
 

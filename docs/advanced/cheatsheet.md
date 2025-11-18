@@ -128,9 +128,6 @@ site.addEventListener(eventType, fn);
 /** Register a plugin */
 site.use(plugin);
 
-/** Register a script under a name */
-site.script(name, commandOrFunction);
-
 /** Register a data loader */
 site.loadData(extensions, loader);
 
@@ -192,9 +189,6 @@ site.dest(...subdirs);
 
 /** Dispatch an event */
 site.dispatchEvent(event);
-
-/** Run a script registered with `site.script()` */
-site.run(script);
 
 /** Clear the dest directory */
 site.clear();
