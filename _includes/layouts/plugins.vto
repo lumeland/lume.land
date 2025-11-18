@@ -72,7 +72,10 @@ page_css: plugins.css
             {{ plugin.description |> md }}
           </a>
           {{ if plugin.repo }}
-            <p><a class="button is-secondary is-small" href="{{ plugin.repo }}">Repo</a></p>
+            <p>
+              <a class="button is-secondary is-small" href="{{ plugin.repo }}"
+              >Repo</a>
+            </p>
           {{ /if }}
         </li>
       {{ /for }}

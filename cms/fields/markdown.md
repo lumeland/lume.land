@@ -17,7 +17,9 @@ The field of type `markdown` is used to store markdown code. It display a
 
 ## Available options
 
-This field only has [the common options](./index.md#common-field-options).
+In addition to the common options (see
+[fields documentation](./index.md#common-field-options) for more info), this
+field has the following options:
 
 ### upload
 

@@ -79,6 +79,29 @@ const cms = lumeCMS({
 });
 ```
 
+## staticFolders
+
+If you want to customize the CMS using the `extraHead` to load additional CSS or
+JavaScript files, use this option to serve these extra files from a folder. This
+option accepts an object whose keys are the prefixes and the values the folders
+where the files are stored.
+
+In the following example, we defined the static folder `custom` pointing to the
+folder `./my-custom-stuff`, so the file `/admin/custom/styles.css` is resolved
+to `./my-custom-stuff/styles.css`.
+
+```js
+const cms = lumeCMS({
+  extraHead: '<link rel="stylesheet" href="/admin/custom/styles.css">',
+  staticFolders: {
+    custom: "./my-custom-stuff",
+  },
+});
+```
+
+This option is also useful if you want to
+[register custom fields](../fields/custom_fields.md).
+
 ## previewURL
 
 A function to return the preview URL for a file. For example, if we know that

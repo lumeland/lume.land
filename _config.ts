@@ -45,7 +45,7 @@ site
   .add("static", ".")
   .add("_redirects")
   .use(redirects({
-    // output: "netlify",
+    output: "netlify",
   }))
   .add("img")
   .add("styles")
