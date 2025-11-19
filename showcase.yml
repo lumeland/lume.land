@@ -13,6 +13,11 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: RQP Skate Club
+    img: /img/showcase/rqp.webp
+    url: https://rqp-skateclub.fr/
+    description: Website of the Roule Qui Peut skate club.
+
   - title: urwq.moe
     img: /img/showcase/urwqmoe.webp
     url: https://urwq.moe
