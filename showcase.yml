@@ -109,7 +109,7 @@ sites:
     img: /img/showcase/hirefrank.webp
     url: https://hirefrank.com/
     description: Personal site of Frank Harris
-    code: https://github.com/hirefrank/www
+    code: https://github.com/hirefrank/lume-personal-site
 
   - title: Prisme Analytics
     img: /img/showcase/prismeanalytics.webp
