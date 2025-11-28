@@ -53,7 +53,7 @@
   "permissions": {
     "lume": {
       "read": true,
-      "write": true,
+      "write": ["./"],
       "import": [
         "cdn.jsdelivr.net:443",
         "cdn.sheetjs.com:443",
