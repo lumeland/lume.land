@@ -134,8 +134,8 @@ site.addEventListener("afterStartServer", () => {
 
 ## Execute scripts with events
 
-In addition to functions, you can also execute scripts in events
-by passing a string with the command.
+In addition to functions, you can also execute scripts in events by passing a
+string with the command.
 
 ```js
 site.addEventListener("afterBuild", "gzip -r _site site.gz").

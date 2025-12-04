@@ -22,12 +22,13 @@ For example, let's register a file system storage under the name "my_files",
 pointing to the `./files` folder:
 
 ```ts
-import lumeCMS, { Fs } from "lume/cms/mod.ts";
+import lumeCMS from "lume/cms/mod.ts";
+import Fs from "lume/cms/storage/fs.ts";
 
 const cms = lumeCMS();
-const root = Deno.cwd() + "/files";
+const storage = Fs.create(Deno.cwd() + "/files");
 
-cms.storage("my_files", new Fs({ root }));
+cms.storage("src", storage);
 
 export default cms;
 ```
@@ -41,7 +42,7 @@ import lumeCMS from "lume/cms/mod.ts";
 
 const cms = lumeCMS();
 
-cms.storage("my_files", "files");
+cms.storage("src", "files");
 
 export default cms;
 ```
@@ -63,9 +64,9 @@ import lumeCMS from "lume/cms/mod.ts";
 import Kv from "lume/cms/storage/kv.ts";
 
 const cms = lumeCMS();
-const kv = await Deno.openKv();
+const storage = await Kv.create();
 
-cms.storage("my_values", new Kv({ kv }));
+cms.storage("src", storage);
 
 export default cms;
 ```
@@ -96,35 +97,17 @@ import GitHub from "lume/cms/storage/github.ts";
 const cms = lumeCMS();
 
 const token = "xxx"; // A personal access token
-cms.storage("gh", GitHub.create("username/repo", token));
+const storage = GitHub.create("username/repo", token);
+
+cms.storage("src", storage);
 
 export default cms;
 ```
 
-The `GitHub.create()` function creates a new instance of GitHub storage adapter.
-If your project is in a subdirectory of the proyect, you can set the
-subdirectory next to the repo name:
+If you want to set a different root path:
 
 ```js
-cms.storage("gh", GitHub.create("username/repo/subdirectory", token));
-```
-
-For more advanced options, you can instantiate the `GitHub` class:
-
-```js
-import { Octokit } from "npm:octokit";
-
-const client = new Octokit({
-  auth: "xxx", // A personal access token,
-});
-
-cms.storage("gh", new GitHub({
-   client,
-   owner: "username",
-   repo: "repo",
-   path: "subdirectory"
-   branch: "main"
-}));
+GitHub.create("username/repo/path/to/root", token);
 ```
 
 ### Generate a GitHub access token
@@ -141,6 +124,37 @@ cms.storage("gh", new GitHub({
    the **Contents** section.
 6. Press the **Generate token**.
 
-### Advance options
+## GitLab
 
-If you need more
+It's similar to GitHub but for GitLab:
+
+```ts
+import lumeCMS from "lume/cms/mod.ts";
+import GitLab from "lume/cms/storage/gitlab.ts";
+
+const cms = lumeCMS();
+
+const token = "xxx"; // A personal access token
+const storage = GitLab.create("username/repo", token);
+
+cms.storage("src", storage);
+
+export default cms;
+```
+
+## Memory
+
+It creates an in-memory storage. Useful for testing purposes.
+
+```ts
+import lumeCMS from "lume/cms/mod.ts";
+import Memory from "lume/cms/storage/memory.ts";
+
+const cms = lumeCMS();
+
+const storage = Memory.create();
+
+cms.storage("src", storage);
+
+export default cms;
+```
