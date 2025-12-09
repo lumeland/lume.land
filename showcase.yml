@@ -107,7 +107,7 @@ sites:
 
   - title: Frank Harris
     img: /img/showcase/hirefrank.webp
-    url: https://hirefrank.com/
+    url: https://lume-personal-site.hirefrank.deno.net/
     description: Personal site of Frank Harris
     code: https://github.com/hirefrank/lume-personal-site
 
