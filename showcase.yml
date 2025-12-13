@@ -13,6 +13,11 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Artist Activist
+    img: /img/showcase/artact.webp
+    url: https://artact.io/
+    description: The site for this creative studio advocating for positive change.
+
   - title: RQP Skate Club
     img: /img/showcase/rqp.webp
     url: https://rqp-skateclub.fr/
