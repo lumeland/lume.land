@@ -17,6 +17,7 @@ sites:
     img: /img/showcase/artact.webp
     url: https://artact.io/
     description: The site for this creative studio advocating for positive change.
+    code: https://github.com/artistactivist/artact
 
   - title: RQP Skate Club
     img: /img/showcase/rqp.webp
