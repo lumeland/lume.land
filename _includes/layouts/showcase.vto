@@ -22,17 +22,15 @@ page_css: showcase.css
           </a>
           <figcaption class="site-description">
             <p>
-              {{ if site.code }}
-                <a class="button is-secondary is-small" href="{{ site.code }}"
-                >View code</a>
-              {{ /if }}
-
               <a href="{{ site.url }}" class="site-name">
                 {{ site.title }}
               </a>
             </p>
 
-            {{ site.description |> md }}
+            <p>
+              {{ site.description |> md(true) }}
+              {{ if site.code }}<a href="{{ site.code }}">(Code)</a>{{ /if }}
+            </p>
           </figcaption>
         </figure>
       </li>

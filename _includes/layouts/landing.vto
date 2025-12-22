@@ -119,7 +119,10 @@ page_css: landing.css
               </a>
             </p>
 
-            {{ site.description |> md }}
+            <p>
+              {{ site.description |> md(true) }}
+              {{ if site.code }}<a href="{{ site.code }}">(Code)</a>{{ /if }}
+            </p>
           </figcaption>
         </figure>
       {{ /for }}

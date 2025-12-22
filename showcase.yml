@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Victor Raton
+    img: /img/showcase/vraton.webp
+    url: https://artact.io/
+    description: Personal site of Victor Raton
+    code: https://github.com/victorfernandesraton/victorfernandesraton.github.io
+
   - title: Artist Activist
     img: /img/showcase/artact.webp
     url: https://artact.io/
