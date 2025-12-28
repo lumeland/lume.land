@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Ege Çelikçi
+    img: /img/showcase/egecelikci.webp
+    url: https://ege.celikci.me/
+    description: Personal site of Ege Çelikçi
+    code: https://codeberg.org/egecelikci/ege.celikci.me
+
   - title: Victor Raton
     img: /img/showcase/vraton.webp
     url: https://artact.io/
