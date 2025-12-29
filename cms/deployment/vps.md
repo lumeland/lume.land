@@ -32,15 +32,14 @@ In the repository [cms-deploy](https://github.com/lumeland/cms-deploy) there's a
 script to setup LumeCMS automatically. The script does not only install LumeCMS
 but also:
 
-- Install/update the required packages (Deno, Git, Caddy, etc).
-- Setup a HTTPS server with [Caddy](https://caddyserver.com/) and configures a
-  firewall with [ufw](https://en.wikipedia.org/wiki/Uncomplicated_Firewall).
-- Clone the Git repository of the website and configure LumeCMS to push/pull
-  changes to it.
-- Create services with `systemctl` to ensure the CMS is always live, restarting
-  it if something fails.
-- Configures a cron to restart the service if the CPU usage is above 95%
-  ([see this Deno issue](https://github.com/denoland/deno/issues/23033)).
+- Install/update the required packages (Deno, Git, etc).
+- Setup [Caddy-Lume](https://github.com/lumeland/caddy-lume), a HTTPS server to
+  run Lume and [Caddy](https://caddyserver.com/) securely.
+- Configures a firewall with
+  [ufw](https://en.wikipedia.org/wiki/Uncomplicated_Firewall).
+- Create services with `systemctl` to ensure the server is always live.
+- Clone and configure the GIT repository to ensure LumeCMS can pull and push
+  changes.
 
 To setup LumeCMS in your VPS, follow the instructions in the
 [README.md file of the repo](https://github.com/lumeland/cms-deploy/blob/main/README.md).
