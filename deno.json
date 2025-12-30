@@ -1,7 +1,7 @@
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.2/",
-    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.12/jsx-runtime.ts",
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/",
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts",
     "https://cdn.jsdelivr.net/gh/esbuild/deno-esbuild@0.27.0/mod.js": "npm:esbuild@0.27.0"
   },
   "lock": false,
@@ -39,7 +39,7 @@
       ]
     },
     "plugins": [
-      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.2/lint.ts"
+      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/lint.ts"
     ]
   },
   "fmt": {
@@ -54,7 +54,9 @@
   "permissions": {
     "lume": {
       "read": true,
-      "write": ["./"],
+      "write": [
+        "./"
+      ],
       "import": [
         "cdn.jsdelivr.net:443",
         "cdn.sheetjs.com:443",
