@@ -51,10 +51,10 @@ site
   .ignore("scripts")
   .use(replace({
     replacements: {
-      "@LUME_URL": `${lumePkg.at()}`,
-      "@SSX_URL": `${ssxPkg.at()}`,
-      "@CMS_URL": `${cmsPkg.at()}`,
-      "@MD_PLUGINS_URL": `${mdPluginsPkg.at()}`,
+      "@LUME_URL": lumePkg.at(),
+      "@SSX_URL": ssxPkg.at(),
+      "@CMS_URL": cmsPkg.at(),
+      "@MD_PLUGINS_URL": mdPluginsPkg.at(),
     }
   }))
   .add("static", ".")
