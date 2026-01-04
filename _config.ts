@@ -23,6 +23,13 @@ import analyze, {
 } from "https://cdn.jsdelivr.net/gh/oscarotero/aldara@0.2.2/mod.ts";
 import { alert } from "npm:@mdit/plugin-alert@0.8.0";
 import ventoLang from "https://cdn.jsdelivr.net/gh/ventojs/vento@2.3.0/highlightjs-vento.js";
+import replace from "https://cdn.jsdelivr.net/gh/lumeland/experimental-plugins@86c03d4308ee509a886b69f8136634c4361579f5/replace/mod.ts";
+import { JsDelivr } from "https://cdn.jsdelivr.net/gh/oscarotero/nudd@0.2.11/registry/jsdelivr.ts";
+
+const lumePkg = await JsDelivr.create("lumeland/lume");
+const ssxPkg = await JsDelivr.create("oscarotero/ssx");
+const cmsPkg = await JsDelivr.create("lumeland/cms");
+const mdPluginsPkg = await JsDelivr.create("lumeland/markdown-plugins");
 
 const markdown = {
   plugins: [alert],
@@ -42,6 +49,14 @@ site
   .ignore("CONTRIBUTING.md")
   .ignore("README.md")
   .ignore("scripts")
+  .use(replace({
+    replacements: {
+      "@LUME_URL": `${lumePkg.at()}`,
+      "@SSX_URL": `${ssxPkg.at()}`,
+      "@CMS_URL": `${cmsPkg.at()}`,
+      "@MD_PLUGINS_URL": `${mdPluginsPkg.at()}`,
+    }
+  }))
   .add("static", ".")
   .add("_redirects")
   .use(redirects({

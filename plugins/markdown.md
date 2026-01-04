@@ -104,7 +104,7 @@ these plugins, you might need to first add them to your imports map in
 ```json
 {
   "imports": {
-    "markdown-plugins/": "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.10.0/"
+    "markdown-plugins/": "@MD_PLUGINS_URL/"
   }
 }
 ```

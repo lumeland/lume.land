@@ -46,8 +46,8 @@ export default site;
 ```json {title="deno.json"}
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.0/",
-    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.12/jsx-runtime.ts"
+    "lume/": "@LUME_URL/",
+    "lume/jsx-runtime": "@SSX_URL/jsx-runtime.ts"
   },
   "lock": false,
   "compilerOptions": {
@@ -78,7 +78,7 @@ export default site;
       ]
     },
     "plugins": [
-      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.0/lint.ts"
+      "@LUME_URL/lint.ts"
     ]
   },
   "unstable": [
@@ -141,9 +141,8 @@ to define this variable:
 ```json
 {
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | DENO_DIR=_vendor deno run -A -",
-    "build": "deno task lume",
-    "serve": "deno task lume -s"
+    "lume": "DENO_DIR=_vendor deno run -P=lume lume/cli.ts",
+    //...
   }
 }
 ```

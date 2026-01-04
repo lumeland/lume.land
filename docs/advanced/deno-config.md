@@ -23,13 +23,13 @@ them:
 ```json
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.0/"
+    "lume/": "@LUME_URL/"
   }
 }
 ```
 
 In this example, we have the `lume/` entry mapped to the URL
-`https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.0/`. This allows for importing
+`@LUME_URL/`. This allows for importing
 Lume with:
 
 ```ts
@@ -37,7 +37,7 @@ import lume from "lume/mod.ts";
 ```
 
 and Deno automatically resolves the full URL
-(`https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.0/mod.ts`). This makes it pretty
+(`@LUME_URL/mod.ts`). This makes it pretty
 easy to change the version of Lume because you only need to change this URL.
 It's even possible to map Lume to a local folder, for debug purposes.
 

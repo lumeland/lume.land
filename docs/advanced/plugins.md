@@ -182,7 +182,7 @@ This is a list of recommendations:
   plugin uses the `merge` util. Instead of importing the full URL like this:
 
 ```js
-import { merge } from "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/core/utils/object.ts";
+import { merge } from "@LUME_URL/core/utils/object.ts";
 ```
 
 It's better to use the `lume/` specifier:

@@ -1,8 +1,7 @@
 {
   "imports": {
-    "lume/": "file:///Users/oscarotero/www/lumeland/lume/",
-    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts",
-    "https://cdn.jsdelivr.net/gh/esbuild/deno-esbuild@0.27.0/mod.js": "npm:esbuild@0.27.0"
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.4/",
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts"
   },
   "lock": false,
   "compilerOptions": {
@@ -39,7 +38,7 @@
       ]
     },
     "plugins": [
-      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/lint.ts"
+      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.4/lint.ts"
     ]
   },
   "fmt": {

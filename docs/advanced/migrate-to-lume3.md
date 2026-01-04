@@ -20,8 +20,8 @@ This script will update your `deno.json` file. You will see something like this:
 ```json
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/",
-    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts"
+    "lume/": "@LUME_URL/",
+    "lume/jsx-runtime": "@SSX_URL/jsx-runtime.ts"
   },
   "unstable": ["temporal"],
   "compilerOptions": {
@@ -38,7 +38,7 @@ This script will update your `deno.json` file. You will see something like this:
   },
   "lint": {
     "plugins": [
-      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/lint.ts"
+      "@LUME_URL/lint.ts"
     ]
   }
 }
@@ -246,7 +246,7 @@ of React to render the HTML. In your `deno.json` file, configure Deno to use
 ```jsonc
 {
   "imports": {
-    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts"
+    "lume/jsx-runtime": "@SSX_URL/jsx-runtime.ts"
   },
   "compilerOptions": {
     "jsx": "react-jsx",

@@ -24,8 +24,8 @@ To add LumeCMS to your site add the `lume/cms/` entry to your import map:
 ```json
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.14.5/"
+    "lume/": "@LUME_URL/",
+    "lume/cms/": "@CMS_URL/"
   }
 }
 ```

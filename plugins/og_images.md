@@ -63,7 +63,7 @@ so make sure you have SSX configured correctly in `deno.json`:
   // ...
   "imports": {
     //...
-    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts"
+    "lume/jsx-runtime": "@SSX_URL/jsx-runtime.ts"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
