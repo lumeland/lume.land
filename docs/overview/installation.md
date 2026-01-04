@@ -141,7 +141,7 @@ to define this variable:
 ```json
 {
   "tasks": {
-    "lume": "DENO_DIR=_vendor deno run -P=lume lume/cli.ts",
+    "lume": "DENO_DIR=_vendor deno run -P=lume lume/cli.ts"
     //...
   }
 }

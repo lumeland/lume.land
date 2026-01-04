@@ -28,18 +28,16 @@ them:
 }
 ```
 
-In this example, we have the `lume/` entry mapped to the URL
-`@LUME_URL/`. This allows for importing
-Lume with:
+In this example, we have the `lume/` entry mapped to the URL `@LUME_URL/`. This
+allows for importing Lume with:
 
 ```ts
 import lume from "lume/mod.ts";
 ```
 
-and Deno automatically resolves the full URL
-(`@LUME_URL/mod.ts`). This makes it pretty
-easy to change the version of Lume because you only need to change this URL.
-It's even possible to map Lume to a local folder, for debug purposes.
+and Deno automatically resolves the full URL (`@LUME_URL/mod.ts`). This makes it
+pretty easy to change the version of Lume because you only need to change this
+URL. It's even possible to map Lume to a local folder, for debug purposes.
 
 ```json
 {

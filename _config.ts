@@ -26,10 +26,12 @@ import ventoLang from "https://cdn.jsdelivr.net/gh/ventojs/vento@2.3.0/highlight
 import replace from "https://cdn.jsdelivr.net/gh/lumeland/experimental-plugins@86c03d4308ee509a886b69f8136634c4361579f5/replace/mod.ts";
 import { JsDelivr } from "https://cdn.jsdelivr.net/gh/oscarotero/nudd@0.2.11/registry/jsdelivr.ts";
 
-const lumePkg = await JsDelivr.create("lumeland/lume");
-const ssxPkg = await JsDelivr.create("oscarotero/ssx");
-const cmsPkg = await JsDelivr.create("lumeland/cms");
-const mdPluginsPkg = await JsDelivr.create("lumeland/markdown-plugins");
+const [lumePkg, ssxPkg, cmsPkg, mdPluginsPkg] = await Promise.all([
+  JsDelivr.create("lumeland/lume"),
+  JsDelivr.create("oscarotero/ssx"),
+  JsDelivr.create("lumeland/cms"),
+  JsDelivr.create("lumeland/markdown-plugins"),
+]);
 
 const markdown = {
   plugins: [alert],
@@ -55,7 +57,7 @@ site
       "@SSX_URL": ssxPkg.at(),
       "@CMS_URL": cmsPkg.at(),
       "@MD_PLUGINS_URL": mdPluginsPkg.at(),
-    }
+    },
   }))
   .add("static", ".")
   .add("_redirects")
