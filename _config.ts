@@ -17,15 +17,15 @@ import redirects from "lume/plugins/redirects.ts";
 import ogImages from "lume/plugins/og_images.ts";
 import nav from "lume/plugins/nav.ts";
 import { env } from "lume/core/utils/env.ts";
-import toc from "https://deno.land/x/lume_markdown_plugins@v0.6.0/toc/mod.ts";
+import toc from "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.10.0/toc.ts";
 import analyze, {
   mergeDefaults,
 } from "https://cdn.jsdelivr.net/gh/oscarotero/aldara@0.2.2/mod.ts";
 import { alert } from "npm:@mdit/plugin-alert@0.8.0";
-import ventoLang from "https://deno.land/x/vento@v2.0.0/highlightjs-vento.js";
+import ventoLang from "https://cdn.jsdelivr.net/gh/ventojs/vento@2.3.0/highlightjs-vento.js";
 
 const markdown = {
-  plugins: [toc, alert],
+  plugins: [alert],
   options: {
     linkify: true,
   },
@@ -50,6 +50,7 @@ site
   .add("img")
   .add("styles")
   .add("main.js")
+  .use(toc())
   .use(codeHighlight({
     languages: {
       vento: ventoLang,

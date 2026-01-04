@@ -6,7 +6,7 @@ order: 0
 
 **Lume** (pronounced `/lume/` [🔈](https://ilg.usc.es/pronuncia/mp3/l/1833.mp3))
 is the [Galician](https://en.wikipedia.org/wiki/Galician_language) word for
-_fire_ but also a static site generator for [Deno](https://deno.land/).
+_fire_ but also a static site generator for [Deno](https://deno.com/).
 
 It's inspired by other static site generators, such as
 [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/) or

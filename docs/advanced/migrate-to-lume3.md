@@ -20,8 +20,8 @@ This script will update your `deno.json` file. You will see something like this:
 ```json
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.1/",
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.10/jsx-runtime.ts"
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/",
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts"
   },
   "unstable": ["temporal"],
   "compilerOptions": {
@@ -38,14 +38,15 @@ This script will update your `deno.json` file. You will see something like this:
   },
   "lint": {
     "plugins": [
-      "https://deno.land/x/lume@v3.0.1/lint.ts"
+      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/lint.ts"
     ]
   }
 }
 ```
 
 If you're using a different value in the `compilerOptions.jsxImportSource`,
-change it to `lume` to use [`ssx`](https://deno.land/x/ssx), the JSX library
+change it to `lume` to use
+[`ssx`](https://www.jsdelivr.com/package/gh/oscarotero/ssx), the JSX library
 used by Lume plugins like `JSX`, `MDX` and `og_images`.
 
 ## Add files
@@ -245,7 +246,7 @@ of React to render the HTML. In your `deno.json` file, configure Deno to use
 ```jsonc
 {
   "imports": {
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.10/jsx-runtime.ts"
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts"
   },
   "compilerOptions": {
     "jsx": "react-jsx",

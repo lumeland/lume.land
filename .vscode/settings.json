@@ -2,9 +2,5 @@
   "editor.inlayHints.enabled": "off",
   "deno.enable": true,
   "deno.lint": true,
-  "deno.unstable": true,
-  "deno.suggest.imports.hosts": {
-    "https://deno.land": true
-  },
   "workbench.startupEditor": "readme"
 }

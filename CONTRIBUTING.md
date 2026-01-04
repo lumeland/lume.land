@@ -8,7 +8,8 @@ We welcome all contributions submitted as pull requests.
 
 Before creating a pull request, please read these instructions:
 
-- Make sure you have [Deno installed](https://deno.land/#installation).
+- Make sure you have
+  [Deno installed](https://docs.deno.com/runtime/getting_started/installation/).
 - One pull request per feature. If you want to do more than one thing, send
   multiple pull requests.
 - Ensure your code is working properly.

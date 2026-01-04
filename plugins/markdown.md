@@ -95,16 +95,16 @@ const site = lume({}, { markdown });
 ### Lume markdown plugins
 
 The repository
-[lume_markdown_plugins](https://deno.land/x/lume_markdown_plugins) contain a
-collection of plugins specially adapted to Lume, with useful features like
-extract the title from the markdown or generate a table of contents. To use
+[lumeland/markdown-plugins](https://www.jsdelivr.com/package/gh/lumeland/markdown-plugins)
+contain a collection of plugins specially adapted to Lume, with useful features
+like extract the title from the markdown or generate a table of contents. To use
 these plugins, you might need to first add them to your imports map in
 `deno.json`:
 
 ```json
 {
   "imports": {
-    "lume_markdown_plugins/": "https://deno.land/x/lume_markdown_plugins@v0.9.0/"
+    "markdown-plugins/": "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.10.0/"
   }
 }
 ```
@@ -112,7 +112,7 @@ these plugins, you might need to first add them to your imports map in
 Then in your site config file, apply them to the site:
 
 ```ts
-import footnotes from "lume_markdown_plugins/footnotes.ts";
+import footnotes from "markdown-plugins/footnotes.ts";
 
 const site = lume()
   .use(footnotes());

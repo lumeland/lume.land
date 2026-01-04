@@ -15,10 +15,10 @@ reads the content of a file and then returns
 [a data object](../advanced/the-data-model.md).
 
 Let's say you want to add support for the `toml` format, using the
-[toml Deno std module](https://deno.land/std/toml/mod.ts):
+[toml Deno std module](https://jsr.io/@std/toml):
 
 ```js
-import { parse } from "https://deno.land/std/encoding/toml.ts";
+import { parse } from "jsr:@std/toml";
 
 async function tomlLoader(path) {
   const content = await Deno.readTextFile(path);

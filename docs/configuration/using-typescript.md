@@ -12,7 +12,7 @@ Lume types using the `compilerOptions.types` array.
 ```json
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume/"
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/"
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
@@ -43,7 +43,7 @@ plugin and configure the `deno.json` file:
 ```jsonc
 {
   "imports": {
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.10/jsx-runtime.ts"
+    "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts"
   },
   "compilerOptions": {
     "jsx": "react-jsx",

@@ -182,7 +182,7 @@ This is a list of recommendations:
   plugin uses the `merge` util. Instead of importing the full URL like this:
 
 ```js
-import { merge } from "https://deno.land/x/lume@v2.2.0/core/utils/object.ts";
+import { merge } from "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.3/core/utils/object.ts";
 ```
 
 It's better to use the `lume/` specifier:
@@ -195,15 +195,17 @@ This avoids duplicated versions of Lume loaded by the project because the
 `lume/` specifier is configured in the import maps (remember to include this
 entry in your import maps).
 
-- Use an HTTP package registry, like `deno.land/x`. Alternatively, you can use
-  [jsDelivr](https://www.jsdelivr.com/) to serve files from GitHub repositories
-  and ensure reliability (they are permanently cached
+- Use an HTTP package registry. [jsDelivr](https://www.jsdelivr.com/) is
+  recommended to serve files from GitHub repositories and ensure reliability
+  (they are permanently cached
   [even if the GitHub repository is deleted](https://www.jsdelivr.com/github)).
+  Alternatively, you can use `deno.land/x` but it's not recommended because it's
+  deprecated by Deno.
 
 - [JSR](https://jsr.io/) is **not recommended** due to not supporting HTTP
   imports (it's not possible to import Lume types), buggy import maps behavior,
-  and code changes made automatically by the platform that can cause unexpected
-  bugs.
+  and their build step that makes automatic changes in the code that may cause
+  unexpected bugs.
 
 - Once your plugin is published, please let us know! You can create a PR to the
   [awesome-lume repository](https://github.com/lumeland/awesome-lume).

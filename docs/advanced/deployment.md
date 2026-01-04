@@ -149,7 +149,7 @@ Create a `netlify.toml` file in your repository with the following code:
 build command must install it.
 
 ```sh
-curl -fsSL https://deno.land/x/install/install.sh | sh && /vercel/.deno/bin/deno task build
+curl -fsSL https://deno.land/install.sh | sh | sh && /vercel/.deno/bin/deno task build
 ```
 
 Remember also to configure the output directory to `_site`.
@@ -160,7 +160,7 @@ To deploy your Lume site with [Cloudflare Pages](https://pages.cloudflare.com/),
 configure the build command as follows:
 
 ```sh
-curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno task build
+curl -fsSL https://deno.land/install.sh | sh | sh && /opt/buildhome/.deno/bin/deno task build
 ```
 
 Remember to configure the output directory to `_site`.
@@ -171,7 +171,7 @@ To deploy your Lume site with [Render](https://render.com/), create a new
 _Static Site_ project and configure the build command as follows:
 
 ```sh
-curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/render/.deno/bin/deno task build
+curl -fsSL https://deno.land/install.sh | sh | sh && /opt/render/.deno/bin/deno task build
 ```
 
 Configure the output directory to `_site`.
@@ -196,7 +196,7 @@ frontend:
   phases:
     build:
       commands:
-        - curl -fsSL https://deno.land/x/install/install.sh | sh
+        - curl -fsSL https://deno.land/install.sh | sh
         - /root/.deno/bin/deno task build
   artifacts:
     baseDirectory: /_site

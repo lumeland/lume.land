@@ -30,8 +30,8 @@ export default site;
 
 ## PostCSS Plugins
 
-PostCSS has [postcss_autoprefixer](https://deno.land/x/postcss_autoprefixer)
-plugin enabled by default to add automatically the vendor prefixes.
+PostCSS has [postcss_autoprefixer](https://autoprefixer.github.io/) plugin
+enabled by default to add automatically the vendor prefixes.
 
 Use the property `plugins` add more plugins. For example, to use the
 [postcss-nesting](https://www.npmjs.com/package/postcss-nesting) plugin:
@@ -47,8 +47,8 @@ site.use(postcss({
 
 ## Includes
 
-PostCSS plugin uses [postcss-import](https://deno.land/x/postcss_import), to
-inline the local `@imports` by looking in the `_includes` directory.
+PostCSS plugin uses [postcss-import](https://github.com/postcss/postcss-import),
+to inline the local `@imports` by looking in the `_includes` directory.
 
 ```css
 /* Import the CSS file from _includes/css/reset.css */
