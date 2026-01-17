@@ -122,11 +122,11 @@ GitHub.create("username/repo/path/to/root", token);
    the repository that you want to manage.
 5. Open _Repository permissions_ and select **Read and write** access level in
    the **Contents** section.
-6. Press the **Generate token**.
+6. Press **Generate token**.
 
 ## GitLab
 
-It's similar to GitHub but for GitLab:
+It's similar to GitHub but for [GitLab](https://gitlab.com/):
 
 ```ts
 import lumeCMS from "lume/cms/mod.ts";
@@ -141,6 +141,45 @@ cms.storage("src", storage);
 
 export default cms;
 ```
+
+### Generate a GitLab access token
+
+1. Log into [GitLab](https://gitlab.com) and make sure you have permissions to
+   manage the repository.
+2. Go to
+   [Personal access tokens](https://gitlab.com/-/user_settings/personal_access_tokens "Preferences > Personal access tokens")
+   and press **Add new token**.
+3. Set a name and expiration date for the token.
+4. In _Select scopes_ section, select `api`
+5. Press **Create token**.
+
+## Codeberg
+
+It's similar to GitHub but for GitLab:
+
+```ts
+import lumeCMS from "lume/cms/mod.ts";
+import Codeberg from "lume/cms/storage/codeberg.ts";
+
+const cms = lumeCMS();
+
+const token = "xxx"; // A personal access token
+const storage = Codeberg.create("username/repo", token);
+
+cms.storage("src", storage);
+
+export default cms;
+```
+
+### Generate a Codeberg access token
+
+1. Log into [Codeberg](https://codeberg.org) and make sure you have permissions to
+   manage the repository.
+2. Go to
+   [Access tokens](https://codeberg.org/user/settings/applications "Settings > Applications").
+3. Set a token name.
+4. Open _Select permissions_ and in the _repository_ selector, select "Read and write" 
+5. Press **Generate token**.
 
 ## Memory
 
