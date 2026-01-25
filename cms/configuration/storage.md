@@ -173,13 +173,46 @@ export default cms;
 
 ### Generate a Codeberg access token
 
-1. Log into [Codeberg](https://codeberg.org) and make sure you have permissions to
-   manage the repository.
+1. Log into [Codeberg](https://codeberg.org) and make sure you have permissions
+   to manage the repository.
 2. Go to
    [Access tokens](https://codeberg.org/user/settings/applications "Settings > Applications").
 3. Set a token name.
-4. Open _Select permissions_ and in the _repository_ selector, select "Read and write" 
+4. Open _Select permissions_ and in the _repository_ selector, select "Read and
+   write"
 5. Press **Generate token**.
+
+## Sqlite
+
+Use a Sqlite database which is natively supported by Deno. You can pass the
+`DatabaseSync` instance or a path to the sqlite file:
+
+```js
+import lumeCMS from "lume/cms/mod.ts";
+import Sqlite from "lume/cms/storage/sqlite.ts";
+
+const cms = lumeCMS();
+
+cms.storage("db", Sqlite.create("my-database.db"));
+
+export default cms;
+```
+
+All tables MUST have the `id` field used to identify the rows.
+
+To create a collection in Sqlite:
+
+```js
+cms.collection({
+  name: "posts",
+  store: "db:posts(title)",
+  fields: [...]
+});
+```
+
+The `store` must have the table name (posts) and the field name used to list the
+elements (in the example, we use the field `title`). If it's not specified, the
+`id` field is used.
 
 ## Memory
 

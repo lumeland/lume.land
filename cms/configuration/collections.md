@@ -179,6 +179,28 @@ If it's not specified, a default function is used to remove the extension,
 convert hyphens to spaces and apply other small tweaks. For example, the
 document name `/this-is-a-page.md` is converted to the label `This is a page`.
 
+### transform
+
+Allows to transform the values before saving:
+
+```js
+cms.collection({
+  name: "posts",
+  store: "src:posts/*.md",
+  fields: [
+    "title: text!",
+    "author: text!",
+    "content: markdown",
+  ],
+  transform(data, cmsContent, isNew) {
+    if (isNew) {
+      // Convert the title to uppercase when a document is created
+      data.title = data.title.toUpperCase();
+    }
+  },
+});
+```
+
 ### create, edit & delete
 
 Useful if you don't want to create, edit and/or delete items in the collection
