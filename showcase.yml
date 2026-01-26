@@ -21,7 +21,7 @@ sites:
 
   - title: Victor Raton
     img: /img/showcase/vraton.webp
-    url: https://artact.io/
+    url: https://vraton.dev
     description: Personal site of Victor Raton
     code: https://github.com/victorfernandesraton/victorfernandesraton.github.io
 
