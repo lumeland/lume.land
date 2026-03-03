@@ -67,3 +67,18 @@ the currently selected text.
   ]
 }
 ```
+
+### relativePath
+
+Use this option to store the links to uploaded files as a relative path to the
+document. This option only affects how the path is written in the actual source,
+end users will not notice it when editing the document.
+
+```js
+{
+  name: "content",
+  type: "markdown",
+  upload: "images",
+  relativePath: true
+}
+```

@@ -28,3 +28,18 @@ field has the following options:
 The name or array of names with the
 [upload entities](../configuration/uploads.md) used to upload files or get files
 from. By default it's disabled.
+
+### relativePath
+
+Use this option to store the links to uploaded files as a relative path to the
+document. This option only affects how the path is written in the actual source,
+end users will not notice it when editing the document.
+
+```js
+{
+  name: "content",
+  type: "rich-text",
+  upload: "images",
+  relativePath: true
+}
+```

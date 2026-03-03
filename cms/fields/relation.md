@@ -65,7 +65,7 @@ Now we can use the relation field in other documents or collections:
 ```js
 cms.collection({
   name: "users",
-  storage: "src:users/*.md",
+  store: "src:users/*.md",
   fields: [
     "name: text",
     {

@@ -123,7 +123,7 @@ Let's see an example:
 ```js
 cms.document({
   name: "notes",
-  storage: "src:notes.json",
+  store: "src:notes.json",
   type: "object", // default value, no need to specify
   fields: [
     "title: text",
@@ -147,7 +147,7 @@ The `object-list` type allows to store an array of objects:
 ```js
 cms.document({
   name: "notes",
-  storage: "src:notes.json",
+  store: "src:notes.json",
   type: "object-list",
   fields: [
     "title: text",

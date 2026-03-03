@@ -298,7 +298,7 @@ Let's see an example:
 ```js
 cms.collection({
   name: "notes",
-  storage: "src:*.json",
+  store: "src:*.json",
   type: "object", // default value, no need to specify
   fields: [
     "title: text",
@@ -322,7 +322,7 @@ The `object-list` type allows to store an array of objects:
 ```js
 cms.collection({
   name: "notes",
-  storage: "src:*.json",
+  store: "src:*.json",
   type: "object-list",
   fields: [
     "title: text",
@@ -350,7 +350,7 @@ For example, let's say you have different note types:
 ```js
 cms.collection({
   name: "notes",
-  storage: "src:*.json",
+  store: "src:*.json",
   type: "choose",
   fields: [
     {
