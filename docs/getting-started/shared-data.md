@@ -22,9 +22,9 @@ layout: layout.vto
 </lume-code>
 
 This is a special file containing data shared by all pages in the same directory
-or subdirectory. In this file we have defined the variable `layout` so all pages
-inherit this variable too. We not longer have to repeat it in the front matter
-of all pages, so we can remove it from there.
+and subdirectories. In this file we have defined the variable `layout` so all
+pages inherit this variable too. We not longer need to repeat the same value in
+the front matter of all pages, so we can remove it from there.
 
 <lume-code>
 

@@ -22,9 +22,12 @@ site.ignore("README.md", "CHANGELOG.md");
 
 The following paths are **always ignored**, so you don't need to configure them:
 
-- `node_modules`
-- `import_map.json`
-- `deno.json` / `deno.jsonc`
+- ./node_modules
+- ./import_map.json
+- ./deno.json
+- ./deno.jsonc
+- ./deno.lock
+- *.d.ts
 
 ## Ignore function
 

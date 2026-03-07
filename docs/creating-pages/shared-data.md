@@ -111,7 +111,7 @@ export default function ({ documents }) {
       <h2>Documents</h2>
 
       <ul>
-        {documents.map((doc) => <li>{doc.title}</li>)}
+        {Object.values(documents).map((doc) => <li>{doc.title}</li>)}
       </ul>
     </>
   );

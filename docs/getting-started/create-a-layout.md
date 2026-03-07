@@ -45,8 +45,8 @@ supported by default by Lume. Add the following code to the file:
 
 </lume-code>
 
-This layout has the `HTML` code needed to build the whole page. The
-`{{ content }}` code is a placeholder used to insert the rendered Markdown code.
+This layout has the HTML code needed to build the whole page. The code
+`{{ content }}` is a placeholder used to insert the rendered Markdown code.
 
 > [!note]
 >

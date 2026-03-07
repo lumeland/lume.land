@@ -6,8 +6,8 @@ order: 6
 
 Lume is built on top of Deno, so it has native support for
 [TypeScript](https://www.typescriptlang.org/) and comes with built-in types for
-core features and plugins. It will also create a `deno.json` file importing the
-Lume types using the `compilerOptions.types` array.
+core features and plugins. The file `deno.json` includes the Lume types in the
+`compilerOptions.types` array.
 
 ```json
 {
@@ -15,7 +15,7 @@ Lume types using the `compilerOptions.types` array.
     "lume/": "@LUME_URL/"
   },
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
+    "lume": "deno run lume/cli.ts",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   },
@@ -79,12 +79,12 @@ You can also extend the interface with your own types, for example:
 <lume-code>
 
 ```tsx {title="custom.tsx"}
-// Your own interface
-interface MyData {
+// Custom interface to extend Lume.Data
+interface MyData extends Lume.Data {
   description?: string;
 }
 
-export default (data: MyData & Lume.Data, filters: Lume.Helpers) => {
+export default (data: MyData, filters: Lume.Helpers) => {
   const { title, date, description } = data;
 
   return (

@@ -13,7 +13,7 @@ Plugins provide an extremely simple interface to configure Lume to perform
 operations like [transpile JavaScript](../../plugins/esbuild.md),
 [transform images](../../plugins/transform_images.md),
 [generate site maps](../../plugins/sitemap.md), etc. Plugins cover the common
-problems and tasks you have to do creating websites.
+problems and tasks you have to face creating websites.
 
 ## Minify CSS with a plugin
 

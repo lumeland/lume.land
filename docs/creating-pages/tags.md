@@ -19,9 +19,8 @@ tags:
 ---
 ```
 
-This post has two tags, one used to identify the type of page (post) and another
-with the topic (ssg). To collect all pages tagged as `post` in the layouts, use
-the `search` function:
+This post has two tags: `post` and `ssg`. To collect all pages tagged as `post`
+in the layouts, use the `search` function:
 
 ```vento
 <ul>
@@ -49,4 +48,5 @@ pages, the value is not overridden, but merged. In other words: the page will
 have all tags defined in `_data.*` **and** in the page. In the previous example,
 instead of assigning the "post" tag to all pages manually, you could define it
 in a `_data.*` file in the directory where all posts are stored and use the
-front matter to assign the other tags individually.
+front matter to assign the other tags individually. Learn more about
+[data merging strategies](../core/07.merged-keys.md).

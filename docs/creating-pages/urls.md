@@ -28,8 +28,8 @@ const site = lume({
 
 ## The `url` variable
 
-The variable `url` defined in a page allows customizing the output file
-individually. For example:
+The `url` variable is generated automatically by Lume, but we can define it
+manually to customize the output file of a page. For example:
 
 ```yml
 ---
@@ -80,6 +80,12 @@ source file is saved but adding `welcome` in the last part of the URL.
 /posts/my-first-post.md  =>  /posts/welcome/index.html
 ```
 
+Using `../welcome/` as URL will also remove the last directory.
+
+```txt
+/posts/my-first-post.md  =>  /welcome/index.html
+```
+
 The `basename` variable is another way to modify the last part of the URL that
 respects the pretty URLs configuration:
 
@@ -90,11 +96,12 @@ basename: welcome
 ---
 ```
 
-Using `../welcome/` as URL will also remove the last directory.
-
 ```txt
-/posts/my-first-post.md  =>  /welcome/index.html
+/posts/my-first-post.md  =>  /posts/welcome/index.html
 ```
+
+The `basename` variable can be used to change the output name of files and
+directories. [Learn more about basename](#basename).
 
 ## URLs as functions
 

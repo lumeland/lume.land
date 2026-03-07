@@ -13,11 +13,9 @@ It's inspired by other static site generators, such as
 [Eleventy](https://www.11ty.dev/), but easier to use and configure and much more
 flexible.
 
-- It supports **multiple file formats**, like `markdown`, `yaml`, `JavaScript`,
-  `typescript`, `jsx`, `vento` and `nunjucks`, and it's easy to extend with
-  more.
-- You can hook **processors** to manipulate `html` and assets, like `css` or
-  `js`.
+- It supports **multiple file formats**, like Markdown, YAML, JavaScript,
+  TypeScript, JSX, Vento and Nunjucks, and it's easy to extend with more.
+- You can hook **processors** to manipulate HTML and assets, like CSS or JS.
 - **It's Deno:** Forget about managing thousands of packages in `node_modules`
   or complex bundlers. Lume only downloads what you need. Clean, fast and
   secure.

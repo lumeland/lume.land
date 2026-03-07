@@ -9,7 +9,7 @@ order: 1
 After setup Lume ([see installation instructions](../overview/installation.md)
 if you don't have the `_config.ts` and `deno.json` files), create the file
 `index.md` and add some content in
-[markdown](https://en.wikipedia.org/wiki/Markdown) format, for example:
+[Markdown](https://en.wikipedia.org/wiki/Markdown) format, for example:
 
 <lume-code>
 

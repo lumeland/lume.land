@@ -4,11 +4,10 @@ description: How Lume generates your site based on the source file structure
 order: 1
 ---
 
-Pages are the files that are loaded, processed and saved in your site. You can
-create pages using different formats (`md`, `js`, `ts`, `jsx`, `tsx`, `yml`,
-etc), but the simplest way is by adding a Markdown file in the root directory
-with a suitable filename and `.md` as the extension. Lume will load these files
-and generate HTML pages with them:
+Pages are the files that are loaded, processed and exported. You can create
+pages using different formats, but the simplest way is by adding a Markdown file
+in the root directory with a suitable filename and `.md` as the extension. Lume
+will load these files and generate HTML pages with them:
 
 ```txt
 ├── index.md     => /index.html

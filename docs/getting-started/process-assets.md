@@ -52,9 +52,10 @@ There are many open-source packages that you can use that will do a better job.
 We wanted to keep this demo simple, so we created a simple function ourselves.
 
 Then, we use the function `process()` to process the CSS files. The function
-accepts an array of the file extensions that we want to process and a callback
+accepts an array with the file extensions that we want to process and a callback
 with all files matching with these extensions. We use the function `minifyCSS`
-to modify the variable `file.text`, which is where the content is stored.
+with each file to modify the variable `file.text`, which is where the content is
+stored.
 
 > [!tip]
 >

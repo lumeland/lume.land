@@ -154,6 +154,9 @@ Now all dependencies will be cached into the `_vendor` folder.
 If you use Visual Studio Code, it's highly recommended to install the
 [Deno extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).
 
+For VSCodium and similar, you can
+[install the extension from Open VSX](https://open-vsx.org/extension/denoland/vscode-deno).
+
 ## WebStorm configuration
 
 There's a [Deno plugin](https://plugins.jetbrains.com/plugin/14382-deno/) for

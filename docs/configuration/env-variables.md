@@ -23,8 +23,8 @@ Lume has the following environment variables that you can use with
 
 `LUME_LOGS`
 : Lume uses the following log levels: `DEBUG`, `INFO`, `WARNING`,
-  `ERROR` and `CRITICAL`. By default, it is `INFO`, but you can change it with this
-  environment variable to have more or less details of the build process. For
+  `ERROR` and `CRITICAL`. The default level is `INFO` and this
+  environment variable allows to change it to have more or less details of the build process. For
   example, to only show critical errors, hiding everything else:
 
   ```

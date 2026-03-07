@@ -68,7 +68,7 @@ There are some special variables that **Lume** understands:
 
 The `url` variable contains the public URL of the page, useful to create links
 and configure the output filename. If it doesn't exist, it's generated
-automatically by lume. See [URL docs](./urls.md)
+automatically by Lume. See [URL docs](./urls.md)
 
 ### date
 
@@ -86,8 +86,9 @@ front matter. The accepted values are:
 
 ### draft
 
-The draft variable marks this page as a draft, which means it will be ignored
-unless the environment variable `LUME_DRAFTS` is set to `"true"`.
+The draft variable marks this page as a draft, which means it will be ignored in
+the build proccess, unless the environment variable `LUME_DRAFTS` is set to
+`"true"`.
 
 ### layout
 

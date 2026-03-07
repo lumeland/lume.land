@@ -4,8 +4,8 @@ description: How to use the configuration file to customize Lume
 order: 1
 ---
 
-The configuration file is the `_config.ts` or `_config.js` file saved in the
-project's root directory. If you don't have it yet, see the installation
+The configuration file is the `_config.ts` or `_config.js` file in the project's
+root directory. If you don't have it yet, see the installation
 [documentation](../overview/installation.md) to learn how to create it.
 
 The minimal required code is:
@@ -98,11 +98,11 @@ const site = lume({
 > [!important]
 >
 > If this value is defined in the `_config.ts` file, it's ignored by the local
-> server (started with `lume --serve`), which always uses
+> server (started with `deno task lume --serve`), which always uses
 > `http://localhost:3000` (or the defined port if you change it).
 >
-> The only way to use a different location in the server mode is with the
-> `--location` option.<br> For example:
+> To configure a different location in the server mode, use the `--location`
+> option.<br> For example:
 > `deno task lume --serve --location=http://local.dev:3000`
 
 ### prettyUrls
@@ -152,12 +152,12 @@ const site = lume({
 
 ### caseSensitiveUrls
 
-Lume prevents saving two pages with the same URL. By default pages with the same
-name but different case are considered the same page, for example `/about-us/`
-and `/About-Us/`. This behavior matches Windows and MacOS' file systems, which
-are case insensitive. You can set this option to `true` to make it case
-sensitive, so both pages would be considered different. Note that this behavior
-is only compatible with Linux.
+Lume prevents saving two pages with the same URL. By default, pages with the
+same name but different case are considered the same page, for example
+`/about-us/` and `/About-Us/`. This behavior matches Windows and MacOS' file
+systems, which are case insensitive. You can set this option to `true` to make
+it case sensitive, so both pages would be considered different. Note that this
+behavior is only compatible with Linux.
 
 ### includes
 

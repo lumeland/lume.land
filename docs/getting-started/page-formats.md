@@ -46,18 +46,19 @@ links:
 
 </lume-code>
 
-This is an example of a page using Vento. Like markdown, it can contain the
-front matter to store the page data, which is used to render the Vento code.
-Note that it has the `layout` variable, so the result of rendering this page
-will be passed to the layout in the `content` variable (along with the other
-variables `title` and `links`).
+This is an example of a page using Vento. Like Markdown, it can have a front
+matter to store data, which is used to render the Vento code. Note that it has
+the `layout` variable, so the result of rendering this page will be passed to
+the layout in the `content` variable (along with the other variables `title` and
+`links`).
 
 ## Create pages with JavaScript
 
 JavaScript (or TypeScript) can be useful for complex pages requiring some logic
-before rendering. You can create page files with the extension `.page.js`. The
-`.page` sub-extension is required to distinguish JavaScript files that generate
-static pages from other JavaScript files destined to be run in the browser.
+before rendering. You can create page files with the extension `.page.js` and
+`.page.ts`. The `.page` sub-extension is required to distinguish JavaScript
+files that generate static pages from other JavaScript files destined to be run
+in the browser.
 
 The previous Vento example reimplemented in JavaScript:
 
@@ -78,6 +79,10 @@ export const links = [
 ];
 
 export default function ({ title, links }) {
+  const ulContent = links
+    .map((link) => `<li><a href="${link.url}">${link.text}</a></li>`)
+    .join("");
+
   return `
   <article>
     <header>
@@ -85,11 +90,7 @@ export default function ({ title, links }) {
     </header>
 
     <ul>
-      ${
-    links
-      .map((link) => `<li><a href="${link.url}">${link.text}</a></li>`)
-      .join("")
-  }
+      ${ulContent}
     </ul>
   </article>`;
 }

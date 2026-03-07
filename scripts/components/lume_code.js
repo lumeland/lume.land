@@ -94,7 +94,7 @@ export default class LumeCode extends HTMLElement {
     target.setAttribute("tabindex", 0);
     target.classList.add("is-active");
 
-    grandparent.parentNode.querySelectorAll('[role="tabpanel"]').forEach(
+    grandparent.querySelectorAll('[role="tabpanel"]').forEach(
       (p) => {
         if (p.id === current) {
           p.removeAttribute("hidden");
