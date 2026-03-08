@@ -9,7 +9,7 @@ tags:
 
 ## Description
 
-This plugin check your internal and optionally external links in your website
+This plugin check your internal (and optionally external) links in your website
 and warns when a broken link is found.
 
 ## Installation
@@ -66,8 +66,8 @@ site.use(checkUrls({
 
 ## Output
 
-The report is visible in the debug bar but you can use the `output` option to
-export the list of broken links to a JSON file:
+The report is visible in the [debug bar](../docs/core/12.debugbar.md) but you
+can use the `output` option to export the list of broken links to a JSON file:
 
 ```js
 site.use(checkUrls({

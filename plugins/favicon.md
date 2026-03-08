@@ -13,13 +13,18 @@ files:
 
 - `/favicon.ico`
 - `/apple-touch-icon.png`
-- In addition, if the input file is SVG, then it will also be included as a
-  favicon
+- If the input file is SVG, it's also exported
 
 It also add the `<link>` elements to all HTML pages to configure the favicons
 properly, following the
 [Definitive edition of "How to Favicon" in 2023](https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7)
 article to give priority to SVG format.
+
+```html
+<link href="/favicon.ico" rel="icon" sizes="32x32">
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/favicon.svg" rel="icon" sizes="any" type="image/svg+xml">
+```
 
 ## Installation
 

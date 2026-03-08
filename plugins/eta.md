@@ -32,9 +32,11 @@ export default site;
 Add a file with `.eta` extension in the `_includes` directory. Use the `layout`
 page variable to specify this layout.
 
-```html
---- title: Welcome to my page intro: This is my first post using lume, I hope
-you like it! ---
+```txt
+---
+title: Welcome to my page intro: This is my first post using lume, I hope
+you like it!
+---
 
 <html>
   <head>
@@ -50,7 +52,7 @@ you like it! ---
 ```
 
 Note that the paths passed to `includeFile()` function are always relative to
-`_includes` directory.
+the `_includes` directory.
 
 ## Creating pages
 

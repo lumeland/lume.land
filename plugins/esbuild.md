@@ -28,17 +28,6 @@ site.add("script.ts"); //Add the files to process
 export default site;
 ```
 
-## Configuration
-
-The available options are:
-
-- **extensions**: Array with the extensions of the files that this plugin will
-  handle. By default it is `[".js", ".ts", ".jsx", ".tsx"]`.
-- **options**: The options to pass to the esbuild library.
-  [See the esbuild documentation](https://esbuild.github.io/api/#simple-options).
-- **denoConfig**: Options to pass to Deno to resolve the NPM and JSR
-  dependencies.
-
 ## denoConfig
 
 If you need to specify an import map or compile JSX files, it's recomended to
@@ -58,23 +47,25 @@ For example, let's say your project has the following structure:
         └── header.tsx
 ```
 
-The root of your project has the files that you already know: `deno.json` to
-configure Deno and `_config.ts` to configure Lume. The `app` folder has the code
-that need to be processed by esbuild. But the Deno configuration may be
-different (you may want to place there an import map with all npm dependencies,
-or configure a different JSX library to frontend, like React or Preact). So we
-have another `deno.json` file there.
+In the root we have the files that you already know: `deno.json` to configure
+Deno and `_config.ts` to configure Lume. The `app` folder has the code that need
+to be processed by esbuild. Because the Deno configuration may be different (you
+may need a different import map with all npm dependencies, or use another JSX
+library in frontend, like React or Preact), we have another `deno.json` file in
+that folder.
 
-Now, you have to configure the plugin to load this deno config, that will be
-used to resolve the dependencies and compile the JSX files (The plugin uses the
-official [esbuild-deno-loader](https://jsr.io/@luca/esbuild-deno-loader) under
-the hood).
+Let's configure the plugin to load this deno config, that will be used to
+resolve the dependencies and compile the JSX files (The plugin uses the official
+[esbuild-deno-loader](https://jsr.io/@luca/esbuild-deno-loader) under the hood).
 
 Because we want to use `main.tsx` as the entry point, only this file needs to be
-added. The plugin can will resolve and include all imports.
+added.
 
 ```js
+// The entry point
 site.add("app/main.tsx");
+
+// Esbuild with a different deno.json configuration
 site.use(esbuild({
   denoConfig: "app/deno.json",
 }));

@@ -37,7 +37,7 @@ this file so you can use it in your templates. For example to use the
 <img src="{{ "fire" |> icon("bootstrap") }}">
 ```
 
-By default, the SVG files are downloaded to the `/icons` folder, creating a
+By default, the SVG files are exported into the `/icons` folder, creating a
 subfolder per collection. In the previous example, the icon would be saved to
 `/icons/bootstrap/fire.svg`. It's possible to configure a different folder with
 the `folder` option:
@@ -121,7 +121,7 @@ src (required)
 : The URL pattern used to download the SVG icon from a CDN. [JsDelivr](https://www.jsdelivr.com/) is highly recommended but you can use any domain. The pattern should contain the `{name}` and `{variant}` placeholders that are replaced with the name and variant to build the final URL.
 
 variants
-: If the catalog has different variants, they must be listed in this array. The variants can be a string or an object with the `id` and `path` properties. The first element of the array is considered the default variant.
+: If the catalog has different variants, they must be listed in this array. The variants can be a string or an object with the `id` and `path` properties. The first element of the array is used as default if it's not specified.
 
 name
 : If the path of the icon file does not correspond with the icon name, you can configure a function to return the final path.

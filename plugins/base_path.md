@@ -7,13 +7,14 @@ tags:
 
 ## Description
 
-The `base_path` plugin fixes all URLs in your HTML documents by prepending the
-path of the [location setting](../docs/configuration/config-file.md#location).
-It's useful if your site is hosted in a subdirectory.
+The `base_path` plugin fixes all absolute paths in the HTML and CSS files by
+prepending the pathname of the
+[location setting](../docs/configuration/config-file.md#location). It's useful
+if your site is hosted in a subdirectory.
 
-It will search for any element with the attribute `href`, `src`, `srcset` and
-`imagesrcset` in your html pages and automatically fix the URLs. Note that the
-plugin only works with HTML pages, it won't fix CSS or JavaScript files.
+The plugin searches for any element with the attribute `href`, `src`, `srcset`
+and `imagesrcset` in the HTML pages and automatically fix the URLs. For CSS
+files, it fixes all `@import` and `url()` with URLs to local files.
 
 ## Installation
 
@@ -53,8 +54,22 @@ This plugin will fix all absolute paths like this:
 <a href="/articles/my-second-article/">Go to the second article</a>
 ```
 
+or this CSS file:
+
+```css
+a {
+  background-image: url("/images/link.png");
+}
+```
+
 Prepending the `/blog/` prefix:
 
 ```html
 <a href="/blog/articles/my-second-article/">Go to the second article</a>
+```
+
+```css
+a {
+  background-image: url("/blog/images/link.png");
+}
 ```

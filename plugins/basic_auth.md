@@ -37,8 +37,8 @@ server.start();
 
 > [!important]
 >
-> For security, it's not recommended to have the users and passwords hardcoded
-> in your code. It's recommended to use environment variables, for example:
+> For security, it's not recommended to have the users and passwords hardcoded.
+> It's recommended to use environment variables, for example:
 >
 > ```js
 > const user = Deno.env.get("AUTH_USERNAME");
@@ -53,8 +53,8 @@ server.start();
 
 ### Local development
 
-You can configure Lume's development server to use this middleware in the
-`_config.ts` file:
+Configure Lume's development server to use this middleware in the `_config.ts`
+file:
 
 ```js
 import lume from "lume/mod.ts";

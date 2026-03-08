@@ -10,8 +10,7 @@ tags:
 ## Description
 
 The `lightningcss` plugin bundles your CSS files using the
-[Lightning CSS](https://github.com/parcel-bundler/lightningcss) processor
-(previously known as Parcel CSS).
+[Lightning CSS](https://github.com/parcel-bundler/lightningcss) processor.
 
 ## Installation
 
@@ -30,14 +29,6 @@ export default site;
 ```
 
 ## Configuration
-
-This plugin accepts a configuration object. The available options are:
-
-- `extensions`: Array with the extensions of the files that this plugin will
-  load. The default is `[".css"]`.
-- `options`: An object with the options for Lightning CSS.
-- `includes`: The directory to search for the `@import`ed files. The default is
-  `"_includes"`. Set it to `false` to disable it.
 
 Example with the default configuration:
 

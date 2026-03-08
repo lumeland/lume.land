@@ -87,9 +87,8 @@ Will become:
 </svg>
 ```
 
-By default, some attributes like `id` or `class` are copied from the original
-`img` to the new `svg` element. You can configure the plugin to copy more
-attributes using an array of strings or regular expressions:
+In addition to `id` and `class` attributes, you can configure the plugin to copy
+other attributes using an array of strings or regular expressions:
 
 ```js
 site.use(inline({

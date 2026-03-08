@@ -11,7 +11,7 @@ tags:
 [JSX](https://facebook.github.io/jsx/) (or the equivalent TSX for TypeScript) is
 a template language to create and render HTML code, very popular in some
 frameworks. This plugin adds support for `JSX / TSX` to create pages and
-layouts, using [`SSX`](https://github.com/oscarotero/ssx/) for rendering.
+layouts, using the library [SSX](https://github.com/oscarotero/ssx/) to render.
 
 Note that this plugin only provides JSX support to generate the pages at
 building time. This means that client-side properties like `onClick` won't work.
@@ -35,7 +35,7 @@ export default site;
 
 ### Configuration
 
-You might want to add the following `compilerOptions` to `deno.json` in order to
+Make sure you have the following `compilerOptions` to `deno.json` in order to
 configure the JSX transform:
 
 <lume-code>
@@ -84,18 +84,12 @@ export default (data: Lume.Data, helpers: Lume.Helpers) => (
 ```
 
 Note that this page uses the `layouts/main.vto` Vento layout to wrap the
-content. Apart from setting the page frontmatter via variables as above, you can
-use the flexible `_data.*` file or directory (see
-[Shared data](../docs/creating-pages/shared-data.md)) to that end. Also, you can
-mix different template languages like Nunjucks and JSX.
+content. Lume allows to mix different template languages like Vento and JSX.
 
 ## Creating layouts
 
 To create layouts in JSX, just add `.jsx` or `.tsx` files to the `_includes`
-directory. Note that we need to use the variable `children` to render the page
-content instead of `content`. The difference is that `content` is a string and
-cannot be easily used in JSX because it's escaped, and `children` is the JSX
-object un-rendered.
+directory.
 
 ```tsx
 export default ({ title, children }: Lume.Data, helpers: Lume.Helpers) => (

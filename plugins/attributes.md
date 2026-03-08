@@ -3,12 +3,13 @@ title: Attributes
 description: Provide helpers to manage attributes and class names of HTML elements
 tags:
   - utils
+  - html
 ---
 
 ## Description
 
-Use the `attributes` plugin to register two template filters to normalize the
-attributes of your HTML:
+Plugin with utils to work with HTML attributes in the templates. It register the
+following [filters](../docs/configuration/filters.md):
 
 ### attr
 
@@ -16,7 +17,7 @@ Provide a convenient way to work with HTML attributes.
 
 <lume-code>
 
-```yml { title=".vto" }
+```yml { title="example.vto" }
 ---
 link:
   title: Go to GitHub
@@ -31,7 +32,7 @@ link:
 <a {{ link |> attr }}>Hello</a>
 ```
 
-```js { title=".page.js" }
+```js { title="example.page.js" }
 const link = {
   title: "Go to GitHub"
   href: "https://github.com"
@@ -53,7 +54,7 @@ To work with HTML class names:
 
 <lume-code>
 
-```yml { title=".vto" }
+```yml { title="example.vto" }
 ---
 styles:
   - btn
@@ -63,7 +64,7 @@ styles:
 <a class="{{ styles |> class }}">Hello</a>
 ```
 
-```js { title=".page.js" }
+```js { title="example.page.js" }
 const styles = [
   "btn",
   "btn-primary",

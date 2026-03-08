@@ -10,11 +10,11 @@ tags:
 ## Description
 
 This plugin downloads the optimized font files from Google fonts automatically
-into the [`fontsFolder`](../docs/configuration/config-file.md#fontsfolder)
-directory and output the CSS code with the `@font-face` declarations to the
-[`cssFile`](../docs/configuration/config-file.md#cssfile) file. This allows to
-self host the webfonts instead of using directly the Google Fonts CDN, which is
-not a good idea, not only for privacy and GDPR compliance, but also
+into the [`/fonts`](../docs/configuration/config-file.md#fontsfolder) directory
+and output the CSS code with the `@font-face` declarations to the
+[`/style.css`](../docs/configuration/config-file.md#cssfile) file. This allows
+to self host the webfonts instead of using directly the Google Fonts CDN, which
+is not a good idea, not only for privacy and GDPR compliance, but also
 [for performance](https://github.com/HTTPArchive/almanac.httparchive.org/pull/607).
 
 ## Installation
@@ -128,39 +128,23 @@ declarations.
 
 ## Specifying Subsets
 
-By default, the plugin downloads all available subsets of the font. If you know
-you won't need certain subsets, you can specify which you _do_ need in your
-config. Google Fonts shows the subset names in the css it provides, such as
+By default, the plugin downloads all available subsets of the font. To avoid
+downloading certain subsets, you can specify which you _do_ need in your config.
+Sometimes, Google Fonts shows the subset names in the css it provides, such as
 [here](https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap)
-and
-[here](https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap),
-and you can specify an array of the subsets you want as follows (shortened for
-brevity):
+and you can specify an array of the subsets you want as follows:
 
 ```js
 site.use(googleFonts({
   subsets: [
     "latin",
     "latin-ext",
-    "[2]",
-    "[3]",
-    "[4]",
-    ..."[117]",
-    "[118]",
-    "[119]",
   ],
   fonts: {
     display:
       "https://fonts.google.com/share?selection.family=Alegreya+Sans+SC:wght@300",
     text:
       "https://fonts.google.com/share?selection.family=Alegreya:ital,wght@0,400..900;1,400..900",
-    textjp:
-      "https://fonts.google.com/share?selection.family=Zen+Maru+Gothic:wght@700&display=swap",
   },
 }));
 ```
-
-Non CJK fonts will typically have subsets like "latin", "latin-ext", "cyrillic"
-or "vietnamese", while CJK fonts like the above-mentioned "Zen Maru Gothic"
-Japanese font, have many subsets corresponding to the wide range of Unicode
-characters used in the contained syllabaries and kanji character sets.

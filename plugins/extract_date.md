@@ -10,9 +10,9 @@ tags:
 
 Some static site generators extract automatically the date of the pages from the
 path name. Lume 1 & 2 did that too, but as of version 3, this behavior has been
-moved to a this plugin.
+moved to a plugin.
 
-The plugin can detect and extract the dates from the name of the source file.
+This plugin can detect and extract the dates from the name of the source file.
 You have to prepend the date to the filename using the `yyyy-mm-dd` syntax
 followed by a hyphen `-` or an underscore `_` (or `yyyy-mm-dd-hh-ii-ss` if you
 also need the time). Note that this part is removed when generating the final

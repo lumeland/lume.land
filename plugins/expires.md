@@ -9,8 +9,7 @@ tags:
 
 ## Description
 
-It's a middleware to include the `Expires` header in the response for better
-caching.
+Middleware to set the `Expires` header in the response for better caching.
 
 ## Installation
 
