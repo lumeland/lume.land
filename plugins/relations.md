@@ -10,7 +10,9 @@ tags:
 
 This plugin is useful if you have different types of pages that are related. For
 example, let's say there are pages with articles and pages with authors. This
-plugin can relate the articles and authors pages automatically.
+plugin can relate the articles and authors pages automatically. It's useful when
+you need to migrate from a CMS using a relational database where all the content
+is stored in tables with ids and foreign keys.
 
 ## Installation
 

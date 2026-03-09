@@ -14,6 +14,7 @@ import sitemap from "lume/plugins/sitemap.ts";
 import metas from "lume/plugins/metas.ts";
 import checkUrls from "lume/plugins/check_urls.ts";
 import redirects from "lume/plugins/redirects.ts";
+import replace from "lume/plugins/replace.ts";
 import ogImages from "lume/plugins/og_images.ts";
 import nav from "lume/plugins/nav.ts";
 import extractOrder from "lume/plugins/extract_order.ts";
@@ -24,7 +25,6 @@ import analyze, {
 } from "https://cdn.jsdelivr.net/gh/oscarotero/aldara@0.2.2/mod.ts";
 import { alert } from "npm:@mdit/plugin-alert@0.8.0";
 import ventoLang from "https://cdn.jsdelivr.net/gh/ventojs/vento@2.3.0/highlightjs-vento.js";
-import replace from "https://cdn.jsdelivr.net/gh/lumeland/experimental-plugins@86c03d4308ee509a886b69f8136634c4361579f5/replace/mod.ts";
 import { JsDelivr } from "https://cdn.jsdelivr.net/gh/oscarotero/nudd@0.2.11/registry/jsdelivr.ts";
 
 const [lumePkg, ssxPkg, cmsPkg, mdPluginsPkg] = await Promise.all([

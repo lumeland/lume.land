@@ -10,7 +10,8 @@ tags:
 
 This plugin automatically creates images with the content of your pages. It
 works great combined with [metas](./metas.md) plugin to create Open Graph meta
-tags.
+tags since the `metas.image` value is automatically updated with the path of the
+generated image.
 
 [Satori](https://github.com/vercel/satori) is used to generate the SVG images
 (that are then converted to PNG with [Sharp](https://sharp.pixelplumbing.com/)).

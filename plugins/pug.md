@@ -31,21 +31,21 @@ export default site;
 Add a file with `.pug` extension in the `_includes` directory. Use the _front
 matter_ to set data for the template.
 
-```yml
+```txt
 ---
 title: Welcome to my page
 intro: This is my first post using Lume. I hope you like it!
 ---
 
 doctype html
-html
-head
-title= title
+  html
+    head
+      title= title
 
-body
-include partials/nav.pug
+    body
+      include partials/nav.pug
 
-p= title
+      p= title
 ```
 
 Note that the paths passed to `include` are relative to `_includes` directory.

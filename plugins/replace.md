@@ -38,20 +38,18 @@ Let's say you want to display always the last version of your library in a
 website:
 
 ```md
-Welcome to Libros 2.3.0, the library to read ebook. To getting started, run the
-following command:
+Welcome to MyLibrary 2.3.0. To getting started, run the following command:
 
-deno install --global https://deno.land/x/libros@2.3.0/mod.ts
+deno install --global https://deno.land/x/my_library@2.3.0/mod.ts
 ```
 
 Instead of harcoding the version number everywhere in your site (and remember to
 update it after a new version), this plugin allows to use a placeholder:
 
 ```md
-Welcome to Libros $VERSION, the library to read ebook. To getting started, run
-the following command:
+Welcome to MyLibrary $VERSION. To getting started, run the following command:
 
-deno install --global https://deno.land/x/libros@$VERSION/mod.ts
+deno install --global https://deno.land/x/my_library@$VERSION/mod.ts
 ```
 
 Now, configure the replacements in the plugin options:
