@@ -213,4 +213,7 @@ site.getContent(file, loader);
 
 /** Create pages dynamically */
 site.getOrCreatePage(url);
+
+/** Remove a page/file */
+site.removePage(url);
 ```

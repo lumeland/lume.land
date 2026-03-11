@@ -75,3 +75,24 @@ site.use(replace({
   },
 }));
 ```
+
+## Hooks
+
+The plugin expose the `replace` hook to edit or add additional replacements
+dynamically. For example:
+
+```js
+site.process([".css"], (files) => {
+  const firstFile = files[0];
+
+  // Replace the value dynamically
+  site.hook.replace({
+    "CSS_FILE": firstFile.data.url,
+  });
+});
+
+// Use the plugin with the default value
+site.use(replace({
+  "CSS_FILE": "style.css",
+}));
+```
