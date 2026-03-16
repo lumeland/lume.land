@@ -189,7 +189,7 @@ Use a Sqlite database which is natively supported by Deno. You can pass the
 
 ```js
 import lumeCMS from "lume/cms/mod.ts";
-import Sqlite from "lume/cms/storage/sqlite.ts";
+import { Sqlite } from "lume/cms/storage/sqlite.ts";
 
 const cms = lumeCMS();
 
