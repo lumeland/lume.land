@@ -4,7 +4,7 @@ description: Most frequent questions
 order: 10
 ---
 
-## Why Lume only works on Deno?
+## Why does Lume only work on Deno?
 
 Deno is a modern JavaScript runtime with some nice features that other runtimes
 don’t have, like support for some web standards and a great permissions system.
@@ -27,7 +27,7 @@ community that uses and supports it. If Deno
 port Lume to Node, since there wouldn’t be any reason or motivation to keep
 maintaining a Deno-only project.
 
-## What's your plans for Lume?
+## What are your plans for Lume?
 
 I created Lume as a tool to build websites. I’m using it actively in my personal
 projects and in my job. It’s not a product that I must monetize and I have no
