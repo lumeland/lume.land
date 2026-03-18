@@ -300,11 +300,6 @@ support:
       img: /img/avatars/supporters/miguelpinto.webp
       amount: 1
       recurrent: true
-    - name: eSolia
-      url: https://esolia.com/
-      img: /img/avatars/supporters/esolia.webp
-      amount: 10
-      recurrent: true
     - name: Kevin Tortolini
       url: https://opencollective.com/ktortolini
       img: /img/avatars/supporters/kevintortolini.webp
@@ -381,6 +376,9 @@ support:
     - name: Marcus Crane
       url: https://utf9k.net/
       img: /img/avatars/supporters/marcus-crane.webp
+    - name: eSolia
+      url: https://esolia.com/
+      img: /img/avatars/supporters/esolia.webp
 
   contributors_title: And built by the following people
 

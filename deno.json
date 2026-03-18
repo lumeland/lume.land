@@ -50,6 +50,11 @@
     "temporal",
     "fmt-component"
   ],
+  "allowScripts": {
+    "deny": [
+      "npm:sharp"
+    ]
+  },
   "permissions": {
     "lume": {
       "read": true,
