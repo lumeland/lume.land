@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Ilyes Hernandez
+    img: /img/showcase/ilyeshernandez.webp
+    url: https://ilyeshdz.github.io/personal
+    description: Personal site of Ilyes Hernandez
+    code: https://github.com/ilyeshdz/personal
+
   - title: CloudCannon documentation
     img: /img/showcase/cloudcannon.webp
     url: https://cloudcannon.com/documentation/
