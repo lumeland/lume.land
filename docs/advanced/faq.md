@@ -46,21 +46,25 @@ maintaining a Deno-only project.
 
 ## Why are HTTP imports better than JSR imports?
 
-JSR isn't a bad product, but it's not the solution that the JavaScript ecosystem
-needs. The principal problem of JSR is that it's a copy of NPM (a "superset of
-NPM" as it was advertised) and reproduces the same mistakes:
+[JSR](https://jsr.io/) is the package registry created by Deno to address some
+limitations of HTTP imports. I don't think it's a bad product, but definitely
+it's not the solution that the JavaScript ecosystem needs. The principal problem
+of JSR is that it's a copy of NPM (a _superset of NPM_ as it was advertised). It
+lacks most of the great features that HTTP imports provide, and reproduces the
+same mistakes of NPM:
 
-- It's **incompatible with Web standards and import maps**. You can't simply
-  import modules stored on disk or HTTP. This led Deno to create the property
-  `links` in the `deno.json` file only for this specific use case, but it's more
-  limited and less straightforward than import maps.
+- It's **incompatible with Web standards and import maps** due its opacity and
+  complex module resolution. You can't simply import modules stored on disk or
+  HTTP. This led Deno to create the property `links` in the `deno.json` file
+  only for this specific use case, but it's more limited and less
+  straightforward than import maps.
 - It's **centralized and vendor lock-in**. This means that if JSR stops working,
-  it's blocked in your country or becomes evil, there's no easy exit. We have
-  the experience of NPM being maintained by VC funding for years and acquired
-  then by Microsoft. JSR is not a company, but it's operated by one (Deno), and
-  the governance board consists of members from other companies. In the same way
-  that Deno deprecated `deno.land/x`, there is no guarantee that the same thing
-  won't happen to JSR.
+  it's blocked in your country or becomes evil, there's no easy exit. In the
+  same way that Deno deprecated `deno.land/x`, there is no guarantee that the
+  same thing won't happen to JSR. We have the experience of NPM being maintained
+  by VC funding for years and acquired then by Microsoft. JSR is not a company,
+  but it's operated by one (Deno), and the governance board consists of members
+  from other companies.
 - With HTTP imports it's easy to import a **stable version or a hash commit**,
   which is great because it allows us to test a new feature and provide feedback
   easily without the pressure of releasing a new version. This decentralized
@@ -93,14 +97,14 @@ NPM" as it was advertised) and reproduces the same mistakes:
 ## What are your plans for Lume?
 
 I created Lume as a tool to build websites. I’m using it actively in my personal
-projects and in my job. It’s not a product that I must monetize and I have no
-intention of doing so. I enjoy working on Lume a lot, writing the code by myself
-(not with AI), talking with the community, and helping them. I love when people
-donate money to the project without asking for anything in return, or contribute
-with a pull request, or just give feedback and ideas. I’m learning a lot on this
-journey, more than I expected when I started. Lume is 5 years old now, but my
-intention is to keep maintaining it for many years to come.
+projects and in my **job. It’s not a product that I must monetize** and I have
+no intention of doing so. I enjoy working on Lume a lot, writing the code by
+myself (not with AI), talking with the community, and helping them. I love when
+people donate money to the project without asking for anything in return, or
+contribute with a pull request, or just give feedback and ideas. I’m learning a
+lot on this journey, more than I expected when I started. Lume is 5 years old
+now, but my intention is to keep maintaining it for many years to come.
 
-All of Lume will stay open source and free to use, forever. There won’t be a
-Lume Pro version or anything like that. Never. If I decide at some point to
+All of Lume will stay open source and free to use, forever. **There won’t be a
+Lume Pro version** or anything like that. Never. If I decide at some point to
 create a company, it would be something separate, and won’t affect Lume at all.
