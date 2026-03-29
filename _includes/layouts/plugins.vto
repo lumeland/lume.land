@@ -25,7 +25,9 @@ page_css: plugins.css
 
     <ul class="plugins-list">
       {{
-        for page of search.pages("url^=/plugins/ url!=/plugins/", "title=asc-locale")
+        for 
+        page of search.pages("url^=/plugins/ url!=/plugins/", "title=asc-locale")
+
       }}
         <li
           class="plugin {{ if page.enabled }} is-enabled{{ /if }}"

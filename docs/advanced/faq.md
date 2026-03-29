@@ -69,14 +69,15 @@ same mistakes of NPM:
   which is great because it allows us to test a new feature and provide feedback
   easily without the pressure of releasing a new version. This decentralized
   nature that "simply works" is something impossible with JSR.
-- Under some circumstances, the command `deno install` **downloads all
-  dependencies**. Lume and all plugins are in a single package, which means that
-  all dependencies of all plugins would be downloaded, even if you don't need
-  them. To prevent that, Lume should be splitted into different packages: a core
-  package, one package per plugin (+50), and each package with different
-  versions and dependencies. This complicates the development and testing of
-  Lume, making the use of plugins by final users more cumbersome. Basically, JSR
-  encourages the creation of micropackages and dependency hell.
+- The command `deno install` **downloads all NPM dependencies** and, under some
+  circunstances, JSR dependencies. Lume and all plugins are in a single package,
+  which means that if it were a JSR package, all plugins and all their
+  dependencies would be installed, even if you don't need them. To prevent that,
+  Lume should be splitted into different packages: a core package, one package
+  per plugin (+50), and each package with different versions and dependencies.
+  This complicates the development and testing of Lume, making the use of
+  plugins by final users more cumbersome. Basically, JSR encourages the creation
+  of micropackages and dependency hell.
 - JSR is very picky about the code that you can publish. It's not fully
   compatible with JSX or some TypeScript features like declaring global
   namespaces. It doesn't allow importing modules from URLs or from the disk

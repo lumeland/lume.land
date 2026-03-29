@@ -2,9 +2,7 @@
   function printDef(def) {
     if (def.type === "array") {
       if (Array.isArray(def.children)) {
-        return `<em>[${
-          def.children.map((child) => child.type).join(", ")
-        }]</em>`;
+        return `<em>[${def.children.map((child) => child.type).join(", ")}]</em>`;
       }
       return `<em>${def.children.type}[]</em>`;
     } else {
@@ -33,7 +31,10 @@
         {{ /if }}
 
         {{
-          if info.default !== undefined && !["{}", "[]"].includes(JSON.stringify(info.default))
+          if 
+          info.default !== undefined &&
+          !["{}", "[]"].includes(JSON.stringify(info.default))
+
         }}
           <strong>Default:</strong>
           <pre>

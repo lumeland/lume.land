@@ -33,5 +33,7 @@ Add the `type="text/partytown"` attribute to all scripts that you want to run
 from the web worker:
 
 ```html
-<script type="text/partytown">...</script>
+<script type="text/partytown">
+...
+</script>
 ```
