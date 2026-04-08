@@ -38,18 +38,21 @@
       crossorigin="anonymous"
     >
 
-    <link rel="stylesheet" href="/styles/main.css">
+    {{# <link rel="stylesheet" href="/styles/main.css"> #}}
     <link rel="canonical" href="{{ url |> url(true) }}">
 
     {{ if it.page_css }}
-      <link rel="stylesheet" href="/styles/pages/{{ page_css }}">
+      {{# <link rel="stylesheet" href="/styles/pages/{{ page_css }}"> #}}
     {{ /if }}
 
     <script src="/main.js" type="module"></script>
 
-    <link rel="stylesheet" href="/docsearch/style.css">
+    {{# <link rel="stylesheet" href="/docsearch/style.css"> #}}
   </head>
   <body>
+    <p>
+     Today is the <a href="https://css-naked-day.org/">CSS Naked Day</a>. That's why this site looks so weird!
+    </p>
     {{ include "templates/navbar.vto" }}
 
     <div>
@@ -57,7 +60,7 @@
     </div>
     {{ include "templates/footer.vto" }}
 
-    <script type="module" type="text/javascript">
+    {{# <script type="module" type="text/javascript">
       import docsearch from "/docsearch/index.js";
 
       window.addEventListener("DOMContentLoaded", () => {
@@ -85,6 +88,6 @@
           debug: false,
         });
       }, false);
-    </script>
+    </script> #}}
   </body>
 </html>
