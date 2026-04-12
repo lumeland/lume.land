@@ -42,6 +42,8 @@ for (const page of paginate(posts, options)) {
   page.pagination.totalResults; // Total results
   page.pagination.previous;     // The URL of the previous page
   page.pagination.next;         // The URL of the next page
+  page.pagination.first;        // The URL of the first page
+  page.pagination.last;         // The URL of the last page
 
   yield page;
 }
@@ -67,7 +69,9 @@ If you want to change the default configuration, use the second argument of
 import lume from "lume/mod.ts";
 
 // Paginate plugin configuration
-const paginate = {/* your config here */};
+const paginate = {
+  /* your config here */
+};
 
 // Apply the plugin config
 const site = lume({}, { paginate });
