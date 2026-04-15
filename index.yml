@@ -325,6 +325,11 @@ support:
       img: /img/avatars/supporters/djradon.webp
       amount: 4
       recurrent: true
+    - name: Jamdesk
+      url: https://www.jamdesk.com/
+      img: /img/avatars/supporters/jamdesk.webp
+      amount: 2
+      recurrent: true
 
   past_title: Lovely past sponsors
   past_sponsors:
