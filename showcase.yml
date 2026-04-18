@@ -123,6 +123,12 @@ sites:
     description: Personal site of Andreas Nedbal
     code: https://github.com/pixeldesu/pixelde.su
 
+  - title: folliehiyuki
+    img: /img/showcase/folliehiyuki.webp
+    url: https://www.folliehiyuki.com
+    description: Personal site of Hoang Nguyen
+    code: https://gitlab.com/folliehiyuki/site
+
   - title: Segundo Fdez
     img: /img/showcase/segundofdez.webp
     url: https://segundofdez.com/
