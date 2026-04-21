@@ -12,6 +12,17 @@ sites:
     url: https://lume.land/
     description: This web site
     code: https://github.com/lumeland/lume.land
+  
+  - title: Cluber
+    img: /img/showcase/cluber.webp
+    url: https://cluber.com
+    description: Site for a SaaS product to manage sport clubs
+  
+  - title: folliehiyuki
+    img: /img/showcase/folliehiyuki.webp
+    url: https://www.folliehiyuki.com
+    description: Personal site of Hoang Nguyen
+    code: https://gitlab.com/folliehiyuki/site
 
   - title: Ilyes Hernandez
     img: /img/showcase/ilyeshernandez.webp
@@ -122,12 +133,6 @@ sites:
     url: https://pixelde.su
     description: Personal site of Andreas Nedbal
     code: https://github.com/pixeldesu/pixelde.su
-
-  - title: folliehiyuki
-    img: /img/showcase/folliehiyuki.webp
-    url: https://www.folliehiyuki.com
-    description: Personal site of Hoang Nguyen
-    code: https://gitlab.com/folliehiyuki/site
 
   - title: Segundo Fdez
     img: /img/showcase/segundofdez.webp
