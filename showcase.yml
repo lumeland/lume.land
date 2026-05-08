@@ -12,12 +12,12 @@ sites:
     url: https://lume.land/
     description: This web site
     code: https://github.com/lumeland/lume.land
-  
+
   - title: Cluber
     img: /img/showcase/cluber.webp
     url: https://cluber.com
     description: Site for a SaaS product to manage sport clubs
-  
+
   - title: folliehiyuki
     img: /img/showcase/folliehiyuki.webp
     url: https://www.folliehiyuki.com

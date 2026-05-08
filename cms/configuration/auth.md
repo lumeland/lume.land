@@ -71,7 +71,9 @@ cms.auth(
       const user = cookie.match(/session=([^;]+)/)?.[1];
       if (user && this.options.users.has(user)) return user;
 
-      const basePath = this.options.basePath === "/" ? "" : this.options.basePath;
+      const basePath = this.options.basePath === "/"
+        ? ""
+        : this.options.basePath;
       return new Response(
         `<form method="POST" action="${basePath}/auth/login">
           <input name="user" placeholder="Username" />
@@ -94,7 +96,8 @@ cms.auth(
             status: 302,
             headers: {
               location: this.options.basePath,
-              "set-cookie": `session=${user}; path=/; Secure; HttpOnly; SameSite=Strict`,
+              "set-cookie":
+                `session=${user}; path=/; Secure; HttpOnly; SameSite=Strict`,
             },
           });
         }

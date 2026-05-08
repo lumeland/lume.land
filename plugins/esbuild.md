@@ -56,7 +56,7 @@ that folder.
 
 Let's configure the plugin to load this deno config, that will be used to
 resolve the dependencies and compile the JSX files (The plugin uses the official
-[esbuild-deno-loader](https://jsr.io/@luca/esbuild-deno-loader) under the hood).
+[Deno loader](https://jsr.io/@deno/loader) under the hood).
 
 Because we want to use `main.tsx` as the entry point, only this file needs to be
 added.
@@ -69,4 +69,32 @@ site.add("app/main.tsx");
 site.use(esbuild({
   denoConfig: "app/deno.json",
 }));
+```
+
+## Dependencies
+
+It's recommended to register all NPM/JSR dependencies in the import map, in
+order to avoid issues in CI environments like Netlify.
+
+For example, the following import makes `esbuild` to download the package from
+NPM and can cause errors if the Deno's cache folder doesn't have writing
+permissions:
+
+```js
+import "npm:invokers-polyfill@1.0.3";
+```
+
+This issue is fixed by registering the dependency in the import map, so Deno can
+install it before the build process:
+
+```json
+{
+  "imports": {
+    "invokers-polyfill": "npm:invokers-polyfill@1.0.3"
+  }
+}
+```
+
+```js
+import "invokers-polyfill";
 ```
