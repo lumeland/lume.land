@@ -179,3 +179,14 @@ transformImages:
 This plugin saves the transformed images in the `_cache` folder to improve the
 build speed. If you don't want to use the cache, use the `LUME_NOCACHE=true`
 environment variable.
+
+## Concurrency
+
+This plugin processes the images concurrently with a limit of 10. You can
+configure this limit:
+
+```js
+site.use(transformImages({
+  concurrent: 5, // Don't process more than 5 images concurrently
+}));
+```

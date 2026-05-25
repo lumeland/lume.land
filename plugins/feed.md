@@ -58,6 +58,7 @@ site.use(feed({
     title: "My blog", // The feed title
     description: "Where I put my thoughts", // The feed subtitle
     published: new Date(), // The publishing date
+    self: "/posts.rss", // The self value (the output file by default)
     lang: "en", // The language of the feed
     hubs: undefined, // The WebSub hubs for the feed
     generator: true, // Set `true` to automatically generate the "Lume {version}"
@@ -70,6 +71,7 @@ site.use(feed({
     published: "=date", // The publishing date of every item
     updated: undefined, // The last update of every item
     content: "=children", // The content of every item
+    categories: "=tag", // The categories of every item
     lang: "=lang", // The language of every item
     image: "=cover", // The image of the item
     authorName: "=author.name", // The author of the article

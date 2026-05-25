@@ -38,3 +38,10 @@ Lume has the following environment variables that you can use with
   ```
   LUME_NOCACHE=true deno task lume
   ```
+
+`LUME_CONCURRENCY`
+: Some operations like page loading, rendering, saving, etc are executed concurrently. You can configure the limit of concurrent operations (by default 200)
+
+  ```
+  LUME_CONCURRENCY=75 deno task lume
+  ```

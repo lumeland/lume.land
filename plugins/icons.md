@@ -107,6 +107,7 @@ This is a list of all available libraries suported out of the box by the plugin:
 | [Tabler](https://tabler.io/icons)                                            | `tabler`                                                                                                       |
 | [Feather icons](https://feathericons.com/)                                   | `feather`                                                                                                      |
 | [Fontawesome](https://fontawesome.com/icons/) (only Free packs)              | `fontawesome`                                                                                                  |
+| [TheSVG](https://thesvg.org/)                                                | `thesvg`                                                                                                       |
 
 ### Use custom libraries
 
