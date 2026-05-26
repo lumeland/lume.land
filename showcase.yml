@@ -13,6 +13,11 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Volpeon
+    img: /img/showcase/volpeon.webp
+    url: https://volpeon.ink/
+    description: Personal website of Volpeon, a software developer and vector artist
+
   - title: Cluber
     img: /img/showcase/cluber.webp
     url: https://cluber.com
@@ -528,8 +533,3 @@ sites:
     url: https://en.neumann.tokyo
     description: The corporate website of GK Neumann in Japan
     code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
-
-  - title: Volpeon
-    img: /img/showcase/volpeon.webp
-    url: https://volpeon.ink/
-    description: Personal website of Volpeon, a software developer and vector artist
