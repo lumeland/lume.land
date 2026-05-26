@@ -13,6 +13,11 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Volpeon
+    img: /img/showcase/volpeon.webp
+    url: https://volpeon.ink/
+    description: Personal website of Volpeon, a software developer and vector artist
+
   - title: Cluber
     img: /img/showcase/cluber.webp
     url: https://cluber.com
