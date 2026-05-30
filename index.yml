@@ -330,6 +330,11 @@ support:
       img: /img/avatars/supporters/jamdesk.webp
       amount: 2
       recurrent: true
+    - name: LaunchFast
+      url: https://www.launchfa.st/
+      img: /img/avatars/supporters/launchfast.webp
+      amount: 1
+      recurrent: true
 
   past_title: Lovely past sponsors
   past_sponsors:
