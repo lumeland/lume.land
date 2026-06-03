@@ -83,3 +83,7 @@ plugins:
   - title: lume-mermaid
     description: A plugin for Lume to render Mermaid diagrams.
     url: https://github.com/wewillcraft/lume-mermaid
+
+  - title: Nueglow
+    description: Lume plugin that adds syntax highlighting with Nueglow
+    url: https://github.com/ethmarks/lume_nueglow
