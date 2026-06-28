@@ -155,7 +155,7 @@ export default cms;
 
 ## Codeberg
 
-It's similar to GitHub but for GitLab:
+It's similar to GitHub but for [Codeberg](https://codeberg.org):
 
 ```ts
 import lumeCMS from "lume/cms/mod.ts";
