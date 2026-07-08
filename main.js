@@ -6,6 +6,7 @@ import LumeDevices from "./scripts/components/lume_devices.js";
 import LumeShield from "./scripts/components/lume_shield.js";
 import LumeCopy from "./scripts/components/lume_copy.js";
 import LumeMenu from "./scripts/components/lume_menu.js";
+import LumeShuffle from "./scripts/components/lume_shuffle.js";
 
 customElements.define("lume-code", LumeCode);
 customElements.define("lume-carousel", LumeCarousel);
@@ -15,6 +16,7 @@ customElements.define("lume-devices", LumeDevices);
 customElements.define("lume-shield", LumeShield);
 customElements.define("lume-copy", LumeCopy);
 customElements.define("lume-menu", LumeMenu);
+customElements.define("lume-shuffle", LumeShuffle);
 
 // For testing purpose of CSP middleware
 const userAgentString = navigator.userAgent;
