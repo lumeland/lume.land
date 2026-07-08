@@ -1,6 +1,0 @@
-{
-  "editor.inlayHints.enabled": "off",
-  "deno.enable": true,
-  "deno.lint": true,
-  "workbench.startupEditor": "readme"
-}

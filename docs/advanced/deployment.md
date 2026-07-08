@@ -30,7 +30,9 @@ To deploy a Lume site using [GitHub Pages](https://pages.github.com/), go to
 Settings > Pages in your repo, configure the source to use GitHub Actions, then
 create the following workflow:
 
-```yml
+<lume-code>
+
+```yml {title=".github/workflows/deploy.yml"}
 name: Publish on GitHub Pages
 
 on:
@@ -71,6 +73,8 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
+</lume-code>
+
 ## GitLab Pages
 
 To deploy a Lume site using
@@ -101,6 +105,47 @@ argument is not needed if you have defined the
 
 </lume-code>
 
+## Codeberg Pages
+
+To deploy a Lume site using
+[Codeberg Pages](https://docs.codeberg.org/codeberg-pages/), go to Settings >
+Units > Overview in your repo and enable Forgejo Actions. Then, create an action
+file with the following code:
+
+<lume-code>
+
+```yml {title=".forgejo/workflows/deploy.yml"}
+name: Publish on Codeberg Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to Codeberg Pages
+    runs-on: codeberg-small
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v5
+
+      - name: Setup Deno environment
+        uses: https://github.com/denoland/setup-deno@v2
+        with:
+          cache: true
+
+      - name: Build site
+        run: deno task build
+      - uses: https://codeberg.org/git-pages/action@v2
+        with:
+          site: "https://${{ forge.repository_owner }}.codeberg.page/repo-name"
+          token: ${{ forge.token }}
+          source: _site/
+```
+
+</lume-code>
+
 ## Deno Deploy
 
 [Deno Deploy](https://deno.com/deploy) is a distributed deploy system provided
@@ -113,9 +158,9 @@ repository and that's all! (the build command is automatically configured to
 According to the
 ["Available software at build time"](https://docs.netlify.com/configure-builds/available-software-at-build-time/#tools)
 page at Netlify's documentation website, Deno is one of several supported
-runtimes when building. In order to build your project, you'll need to tell
-Netlify which command to run at build time, which is `deno task build` in this
-case.
+runtimes when building. But at the moment of writing this, only Deno v1 is
+supported. In order to build your project, you'll need to tell Netlify which
+command to run at build time, which is `deno task build` in this case.
 
 Create a `netlify.toml` file in your repository with the following code:
 
