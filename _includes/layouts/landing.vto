@@ -102,7 +102,7 @@ page_css: landing.css
       id="examples"
     >
       {{ set showcase = search.page("url=/showcase/") }}
-      {{ for site of showcase.sites.filter((site) => site.img).slice(0, 8) }}
+      {{ for site of showcase.sites.filter((site) => site.img).slice(0, 1) }}
         <figure class="site">
           <a href="{{ site.url }}" class="site-image">
             <img
@@ -130,7 +130,42 @@ page_css: landing.css
         examples.more.text
       }}</a>
     </lume-carousel>
-    <lume-shuffle target=".landing-examples-sites" keep-first="1" keep-last="1"></lume-shuffle>
+
+    <script type="application/json" id="showcase-data">{{
+      showcase.sites |> json
+    }}</script>
+
+    <script>
+    {
+      const data = JSON.parse(
+        document.getElementById("showcase-data").textContent,
+      );
+      const sites = data.filter(
+        (site) => site.img && site.url !== "https://lume.land/",
+      );
+
+      for (let i = sites.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [sites[i], sites[j]] = [sites[j], sites[i]];
+      }
+
+      const picked = sites.slice(0, 7);
+      const carousel = document.getElementById("examples");
+      const cta = carousel.querySelector(".landing-examples-cta");
+
+      for (const site of picked) {
+        const figure = document.createElement("figure");
+        figure.className = "site";
+        figure.innerHTML =
+          `<a href="${site.url}" class="site-image"><img src="${site.img}" alt="Screenshot of the site" width="300" height="200"></a>
+          <figcaption class="site-description">
+            <p><a href="${site.url}" class="site-name">${site.title}</a></p>
+            <p>${site.description}${site.code ? ` <a href="${site.code}">(Code)</a>` : ""}</p>
+          </figcaption>`;
+        carousel.insertBefore(figure, cta);
+      }
+    }
+    </script>
   </section>
 
   <section class="landing-testimonials" id="testimonials">
