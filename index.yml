@@ -395,7 +395,7 @@ support:
   contribute:
     title: How to contribute?
     description: |
-      - Star the [repo on GitHub](https://github.com/lumeland/lume) or vote on [Product Hunt](https://www.producthunt.com/posts/lume-2).
+      - Star the [repo on GitHub](https://github.com/lumeland/lume), [Codeberg](https://codeberg.org/lume/lume) or vote on [Product Hunt](https://www.producthunt.com/posts/lume-2).
       - Support this project by [sponsoring its creator](https://github.com/sponsors/oscarotero) or [the project](https://opencollective.com/lume).
       - Fork the repo and [contribute](https://github.com/lumeland/lume/graphs/contributors) fixing bugs or adding new features.
       - Help us [improve the docs](https://github.com/lumeland/lume.land).
