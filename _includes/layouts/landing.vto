@@ -135,8 +135,7 @@ page_css: landing.css
       JSON.stringify(showcase.sites)
     }}</script>
 
-    <script>
-    {
+    <script type="module">
       const data = JSON.parse(
         document.getElementById("showcase-data").textContent,
       );
@@ -164,7 +163,6 @@ page_css: landing.css
           </figcaption>`;
         carousel.insertBefore(figure, cta);
       }
-    }
     </script>
   </section>
 
