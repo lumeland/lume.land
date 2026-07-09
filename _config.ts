@@ -105,7 +105,6 @@ site
     (path) => path.endsWith(".png") || path.endsWith(".jpg"),
   )
   .filter("slice", (arr, length) => arr.slice(0, length))
-  .filter("json", (value) => JSON.stringify(value))
   .use(minifyHTML({
     options: {
       minify_css: false, // https://github.com/wilsonzlin/minify-html/issues/173

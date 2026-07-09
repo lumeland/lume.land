@@ -132,7 +132,7 @@ page_css: landing.css
     </lume-carousel>
 
     <script type="application/json" id="showcase-data">{{
-      showcase.sites |> json
+      JSON.stringify(showcase.sites)
     }}</script>
 
     <script>
