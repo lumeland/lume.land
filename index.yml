@@ -320,11 +320,6 @@ support:
       img: /img/avatars/supporters/famebot.webp
       amount: 10
       recurrent: true
-    - name: Dave Richardson
-      url: https://github.com/djradon
-      img: /img/avatars/supporters/djradon.webp
-      amount: 4
-      recurrent: true
     - name: Jamdesk
       url: https://www.jamdesk.com/
       img: /img/avatars/supporters/jamdesk.webp
@@ -389,6 +384,9 @@ support:
     - name: eSolia
       url: https://esolia.com/
       img: /img/avatars/supporters/esolia.webp
+    - name: Dave Richardson
+      url: https://github.com/djradon
+      img: /img/avatars/supporters/djradon.webp
 
   contributors_title: And built by the following people
 
