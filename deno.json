@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.6/",
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@4ff5f1a45657d08fc4f67a1f6883f0f5ce2e52c2/",
     "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.15/jsx-runtime.ts"
   },
   "lock": false,
@@ -23,6 +23,10 @@
     "lume": {
       "description": "Run Lume command",
       "command": "deno run -P=lume lume/cli.ts"
+    },
+    "new": {
+      "description": "Create new content or code using artifacts",
+      "command": "deno task lume new"
     }
   },
   "lint": {
@@ -38,7 +42,7 @@
       ]
     },
     "plugins": [
-      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.5/lint.ts"
+      "https://cdn.jsdelivr.net/gh/lumeland/lume@4ff5f1a45657d08fc4f67a1f6883f0f5ce2e52c2/lint.ts"
     ]
   },
   "fmt": {
@@ -52,7 +56,8 @@
   ],
   "allowScripts": {
     "deny": [
-      "npm:sharp"
+      "npm:sharp",
+      "npm:@parcel/watcher"
     ]
   },
   "permissions": {

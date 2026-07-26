@@ -16,10 +16,10 @@ page_css: docs.css
       </h1>
       {{ description |> md }}
 
-      {{ include "templates/toc.vto" }}
+      <nav class="toc" toc="content"></nav>
     </header>
 
-    <div class="doc-body">
+    <div class="doc-body" id="content">
       {{ if it.mod }}
         <h2>Options</h2>
 

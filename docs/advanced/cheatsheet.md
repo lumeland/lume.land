@@ -177,6 +177,10 @@ site.scopedUpdates(...scopes);
 /** Define remote files */
 site.remote(filename, url);
 site.remote(baseLocal, baseUrl, globOrFilenames);
+
+/** Register archetypes */
+site.archetype(name, url);
+site.archetype(name, fn);
 ```
 
 ## Lume functions

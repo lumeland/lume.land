@@ -19,7 +19,7 @@ import ogImages from "lume/plugins/og_images.ts";
 import nav from "lume/plugins/nav.ts";
 import extractOrder from "lume/plugins/extract_order.ts";
 import { env } from "lume/core/utils/env.ts";
-import toc from "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.10.0/toc.ts";
+import toc, {headerLink} from "lume/plugins/toc.ts";
 import analyze, {
   mergeDefaults,
 } from "https://cdn.jsdelivr.net/gh/oscarotero/aldara@0.3.0/mod.ts";
@@ -68,7 +68,11 @@ site
   .add("img")
   .add("styles")
   .add("main.js")
-  .use(toc())
+  .use(toc({
+    anchor: headerLink({
+      class: "header-anchor"
+    })
+  }))
   .use(codeHighlight({
     languages: {
       vento: ventoLang,
