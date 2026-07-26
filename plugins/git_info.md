@@ -19,13 +19,13 @@ variable. This variable is an object with the following properties:
 This info can be used in your templates for multiple purposes. For example, to
 show the latest version:
 
-```html
+```vto
 Version {{ gitInfo.tag || gitInfo.hash }}
 ```
 
 Or to prevent caching issues:
 
-```html
+```vto
 <link rel="stylesheet" href="/styles.css?v={{ gitInfo.hash }}">
 ```
 

@@ -24,7 +24,6 @@ import analyze, {
   mergeDefaults,
 } from "https://cdn.jsdelivr.net/gh/oscarotero/aldara@0.3.0/mod.ts";
 import { alert } from "npm:@mdit/plugin-alert@0.8.0";
-import ventoLang from "https://cdn.jsdelivr.net/gh/ventojs/vento@2.3.0/highlightjs-vento.js";
 import { JsDelivr } from "https://cdn.jsdelivr.net/gh/oscarotero/nudd@0.2.11/registry/jsdelivr.ts";
 
 const [lumePkg, ssxPkg, cmsPkg, mdPluginsPkg] = await Promise.all([
@@ -73,11 +72,7 @@ site
       class: "header-anchor"
     })
   }))
-  .use(codeHighlight({
-    languages: {
-      vento: ventoLang,
-    },
-  }))
+  .use(codeHighlight())
   .use(esbuild({
     extensions: [".js"],
   }))
