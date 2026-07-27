@@ -74,17 +74,18 @@ export default (data: Lume.Data, filters: Lume.Helpers) => {
 
 </lume-code>
 
-You can also extend the interface with your own types, for example:
+You can also extend the interface with additional types, for example:
 
 <lume-code>
 
 ```tsx {title="custom.tsx"}
 // Custom interface to extend Lume.Data
-interface MyData extends Lume.Data {
+interface Post {
+  title: string;
   description?: string;
 }
 
-export default (data: MyData, filters: Lume.Helpers) => {
+export default (data: Lume.Data<Post>, filters: Lume.Helpers) => {
   const { title, date, description } = data;
 
   return (
@@ -98,3 +99,75 @@ export default (data: MyData, filters: Lume.Helpers) => {
 ```
 
 </lume-code>
+
+## Global data
+
+Extend the `Lume.GlobalData` interface to provide types for all pages. For example, add the following code to your `_config.ts`:
+
+<lume-code>
+
+```ts {title="_config.ts"}
+declare global {
+  namespace Lume {
+    export interface GlobalData {
+      title: string;
+      author: {
+        name: string;
+        email: string;
+      }
+    }
+  }
+}
+```
+
+</lume-code>
+
+Now, `Lume.Data` will have the `title` and `author` types everywhere:
+
+<lume-code>
+
+```tsx {title="article.tsx"}
+export default (data: Lume.Data, filters: Lume.Helpers) => {
+  const { title, author } = data;
+
+  return (
+    <header>
+      <h1>{title}</h1>
+      <p>By { author.name } ({author.email})</p>
+    </header>
+  );
+};
+```
+
+</lume-code>
+
+## Strict types
+
+By default, any undeclared property of `Lume.Data` has the `any` type:
+
+```ts
+export default (data: Lume.Data, filters: Lume.Helpers) => {
+  data.foo // any
+};
+```
+
+You can configure Lume to use strict types and apply `unknown` to all unknown properties. Just add the `strict: true` property to the `Lume.TypeConfig` interface:
+
+<lume-code>
+
+```ts {title="_config.ts"}
+declare global {
+  namespace Lume {
+    export interface TypeConfig {
+      strict: true
+    }
+  }
+}
+```
+
+</lume-code>
+
+```ts
+export default (data: Lume.Data, filters: Lume.Helpers) => {
+  data.foo // unknown
+};
