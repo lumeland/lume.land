@@ -13,6 +13,12 @@ sites:
     description: This web site
     code: https://github.com/lumeland/lume.land
 
+  - title: Waxlimbs
+    img: /img/showcase/waxlimbs.webp
+    url: https://waxlimbs.com
+    description: The official website of the band Waxlimbs
+    code: https://github.com/lexfeathers/waxlimbs
+
   - title: Volpeon
     img: /img/showcase/volpeon.webp
     url: https://volpeon.ink/
@@ -533,9 +539,4 @@ sites:
     url: https://en.neumann.tokyo
     description: The corporate website of GK Neumann in Japan
     code: https://github.com/neumann-tokyo/en-neuman-tokyo-website
-    
-  - title: Waxlimbs
-    img: /img/showcase/waxlimbs.webp
-    url: https://waxlimbs.com
-    description: The official website of the band Waxlimbs
-    code: https://github.com/lexfeathers/waxlimbs
+
