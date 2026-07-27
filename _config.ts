@@ -20,6 +20,7 @@ import nav from "lume/plugins/nav.ts";
 import extractOrder from "lume/plugins/extract_order.ts";
 import { env } from "lume/core/utils/env.ts";
 import toc, {headerLink} from "lume/plugins/toc.ts";
+import wellKnown from "lume/plugins/well_known.ts";
 import analyze, {
   mergeDefaults,
 } from "https://cdn.jsdelivr.net/gh/oscarotero/aldara@0.3.0/mod.ts";
@@ -96,6 +97,9 @@ site
     ignore: [
       "/blog/",
     ],
+  }))
+  .use(wellKnown({
+    atProto: "did:plc:lqbfqodxim3n27heuou7do3g",
   }))
   .use(favicon())
   .use(inline())

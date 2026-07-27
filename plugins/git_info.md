@@ -1,7 +1,6 @@
 ---
 title: Git info
 description: Extract the current branch, commit hash and tag from Git.
-mod: plugins/git_info.ts
 tags: 
   - utils
 ---
