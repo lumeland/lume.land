@@ -2,8 +2,7 @@
 title: Sheets
 description: Add support for Spreadsheets to store data.
 mod: plugins/sheets.ts
-tags:
-  - data_format
+category: data
 ---
 
 ## Description

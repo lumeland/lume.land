@@ -1,8 +1,7 @@
 ---
 title: Git info
 description: Extract the current branch, commit hash and tag from Git.
-tags: 
-  - utils
+category: extract
 ---
 
 ## Description

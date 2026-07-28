@@ -2,8 +2,7 @@
 title: JSX
 description: Create pages and layouts with JSX.
 mod: plugins/jsx.ts
-tags:
-  - template_engine
+category: template
 ---
 
 ## Description

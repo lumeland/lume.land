@@ -2,9 +2,7 @@
 title: Precompress
 description: Middleware to serve precompressed files (in Brotli or Gzip).
 mod: middlewares/precompress.ts
-tags:
-  - middleware
-  - optimization
+category: middleware
 ---
 
 ## Description

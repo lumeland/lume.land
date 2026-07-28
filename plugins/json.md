@@ -2,9 +2,7 @@
 title: JSON
 description: Add support for JSON or JSONC to store data and create pages.
 mod: plugins/json.ts
-enabled: true
-tags:
-  - data_format
+category: installed
 ---
 
 ## Description

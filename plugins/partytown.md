@@ -2,8 +2,7 @@
 title: Partytown
 description: Use the Partytown to run third-party scripts from a web worker
 mod: plugins/partytown.ts
-tags:
-  - optimization
+category: dev
 ---
 
 ## Description

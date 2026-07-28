@@ -2,8 +2,7 @@
 title: Basic Auth
 description: Implements HTTP Basic Authentication
 mod: middlewares/basic_auth.ts
-tags:
-  - middleware
+category: middleware
 ---
 
 ## Description

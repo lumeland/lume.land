@@ -2,9 +2,7 @@
 title: Google Fonts
 description: Self host Google fonts
 mod: plugins/google_fonts.ts
-tags:
-  - styles
-  - optimization
+category: fonts
 ---
 
 ## Description

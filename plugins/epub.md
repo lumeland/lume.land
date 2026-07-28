@@ -2,8 +2,7 @@
 title: ePUB
 description: Output a .epub file with the site
 mod: plugins/epub.ts
-tags:
-  - utils
+category: compress
 ---
 
 ## Description

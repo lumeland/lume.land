@@ -2,8 +2,7 @@
 title: Redirects (middleware)
 description: Middleware to returns redirections for some URLs.
 mod: middlewares/redirects.ts
-tags:
-  - middleware
+category: middleware
 ---
 
 ## Description

@@ -2,8 +2,7 @@
 title: TOC
 description: Generate automatically the table of contents
 mod: plugins/toc.ts
-tags:
-  - nav
+category: navigation
 ---
 
 ## Description

@@ -2,9 +2,7 @@
 title: PurgeCSS
 description: Use PurgeCSS to remove unused CSS code.
 mod: plugins/purgecss.ts
-tags:
-  - styles
-  - optimization
+category: css
 ---
 
 ## Description

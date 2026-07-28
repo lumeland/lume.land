@@ -2,8 +2,7 @@
 title: Router
 description: Middleware to provide a simple server-side router.
 mod: middlewares/router.ts
-tags:
-  - middleware
+category: middleware
 ---
 
 ## Description

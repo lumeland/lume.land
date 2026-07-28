@@ -2,8 +2,7 @@
 title: Multilanguage
 description: Create multiple language versions of the same page
 mod: plugins/multilanguage.ts
-tags:
-  - nav
+category: i18n
 ---
 
 ## Description

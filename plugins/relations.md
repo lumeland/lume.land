@@ -2,8 +2,7 @@
 title: Relations
 description: Create automatic relations between pages
 mod: plugins/relations.ts
-tags:
-  - nav
+category: navigation
 ---
 
 ## Description

@@ -2,8 +2,7 @@
 title: Not found
 description: Middleware to show a custom page on 404 errors.
 mod: middlewares/not_found.ts
-tags:
-  - middleware
+category: middleware
 ---
 
 ## Description

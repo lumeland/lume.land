@@ -2,8 +2,7 @@
 title: SEO
 description: Automatically check SEO basic issues
 mod: plugins/seo.ts
-tags:
-  - optimization
+category: seo
 ---
 
 ## Description

@@ -1,8 +1,7 @@
 ---
 title: No cache
 description: Middleware to disable the browser cache
-tags:
-  - middleware
+category: middleware
 ---
 
 ## Description

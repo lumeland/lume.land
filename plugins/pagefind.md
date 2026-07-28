@@ -2,8 +2,7 @@
 title: Pagefind
 description: A static search engine in your site
 mod: plugins/pagefind.ts
-tags:
-  - nav
+category: navigation
 ---
 
 ## Description

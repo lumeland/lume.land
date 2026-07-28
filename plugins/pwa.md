@@ -2,8 +2,7 @@
 title: PWA
 description: Generate the manifest.json file to create a Progressive Web Application.
 mod: plugins/pwa.ts
-tags:
-  - utils
+category: standard
 ---
 
 ## Description

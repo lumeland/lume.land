@@ -2,8 +2,7 @@
 title: Modify URLs
 description: Modify all URLs of HTML files with a custom function.
 mod: plugins/modify_urls.ts
-tags:
-  - urls
+category: url
 ---
 
 ## Description

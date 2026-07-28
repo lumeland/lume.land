@@ -2,9 +2,7 @@
 title: TOML
 description: Add support for TOML to store data and create pages.
 mod: plugins/toml.ts
-enabled: false
-tags:
-  - data_format
+category: data
 ---
 
 ## Description

@@ -2,8 +2,7 @@
 title: KaTeX
 description: TeX math rendering in HTML
 mod: plugins/katex.ts
-tags:
-  - html
+category: html
 ---
 
 ## Description

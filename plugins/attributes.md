@@ -1,9 +1,7 @@
 ---
 title: Attributes
 description: Provide helpers to manage attributes and class names of HTML elements
-tags:
-  - utils
-  - html
+category: html
 ---
 
 ## Description

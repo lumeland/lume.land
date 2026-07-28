@@ -2,8 +2,7 @@
 title: Gzip
 description: Compress the files using gzip algorithm
 mod: plugins/gzip.ts
-tags:
-  - optimization
+category: compress
 ---
 
 Gzip is a file format that can be used by web servers and CDNs to compress the

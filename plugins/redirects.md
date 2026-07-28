@@ -2,9 +2,7 @@
 title: Redirects
 description: To create redirections from one page to another
 mod: plugins/redirects.ts
-tags:
-  - utils
-  - urls
+category: seo
 ---
 
 ## Description

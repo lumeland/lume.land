@@ -1,8 +1,7 @@
 ---
 title: Plain text
 description: Provide a helper to remove HTML and Markdown syntax in any text
-tags:
-  - utils
+category: html
 ---
 
 ## Description

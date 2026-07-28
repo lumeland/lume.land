@@ -2,9 +2,7 @@
 title: Markdown
 description: Create pages in Markdown format
 mod: plugins/markdown.ts
-enabled: true
-tags:
-  - template_engine
+category: installed
 ---
 
 ## Description

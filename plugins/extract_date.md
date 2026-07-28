@@ -2,8 +2,7 @@
 title: Extract date
 description: Extract dates from the filenames
 mod: plugins/extract_date.ts
-tags:
-  - utils
+category: extract
 ---
 
 ## Description

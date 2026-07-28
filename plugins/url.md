@@ -1,9 +1,7 @@
 ---
 title: URL
 description: Provide the `url` filter to fix and resolve URLs.
-enabled: true
-tags:
-  - urls
+category: installed
 ---
 
 ## Description

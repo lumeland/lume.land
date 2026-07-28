@@ -2,8 +2,7 @@
 title: Well known
 description: Generate some `.well-known` urls
 mod: plugins/well_known.ts
-tags: 
- - utils
+category: standard
 ---
 
 ## Description

@@ -2,9 +2,7 @@
 title: Sitemap
 description: Generate a sitemap automatically for your site
 mod: plugins/sitemap.ts
-tags:
-  - nav
-  - optimization
+category: seo
 ---
 
 ## Description

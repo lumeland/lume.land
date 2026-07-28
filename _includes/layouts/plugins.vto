@@ -8,81 +8,41 @@ page_css: plugins.css
     <h1>{{ title }}</h1> {{ description |> md }}
   </header>
 
-  <lume-filter>
-    <form class="plugins-filter">
-      <select name="status" class="selector">
-        <option value="all">All plugins</option>
-        <option value="enabled">Installed by default</option>
-        <option value="disabled">Not installed by default</option>
-      </select>
+  <div class="plugins-list">
+    {{ for id, {title, description, external} of categories }}
+    <section class="plugin-section">
+      <header>
+        <h2>{{ title }}</h2>
+        {{ description |> md }}
+      </header>
 
-      {{ for id, info of tags_info }}
-        <label class="button is-secondary is-color-{{ info.color }}">
-          <input type="checkbox" name="{{ id }}"> {{ info.name }}
-        </label>
-      {{ /for }}
-    </form>
-
-    <ul class="plugins-list">
-      {{
-        for 
-        page of search.pages("url^=/plugins/ url!=/plugins/", "title=asc-locale")
-
-      }}
-        <li
-          class="plugin {{ if page.enabled }} is-enabled{{ /if }}"
-          data-tags="{{ page.tags }}"
-        >
-          <a href="{{ page.url }}" class="plugin-info">
-            <strong class="plugin-name">
-              {{ page.title }}
-              {{ if page.enabled }}
-                <span class="tag is-small">Installed</span>
-              {{ /if }}
-            </strong>
-
-            {{ page.description |> md }}
-          </a>
-
-          <nav class="plugin-tags">
-            {{ for tag of page.tags }}
-              <a
-                href="?{{ tag }}=on"
-                class="button is-secondary is-small is-color-{{ tags_info[tag].color }}"
-              >
-                {{ tags_info[tag].name }}
-              </a>
-            {{ /for }}
-          </nav>
-        </li>
-      {{ /for }}
-    </ul>
-
-    <footer class="plugins-empty" hidden>
-      <p>No plugins with these filters.</p>
-    </footer>
-  </lume-filter>
-
-  <section class="plugins-more">
-    <header>
-      <h2>{{ community.title }}</h2> {{ community.description |> md }}
-    </header>
-
-    <ul>
-      {{ for plugin of plugins }}
-        <li>
+      <ul>
+      {{ for plugin of search.pages(`category=${id}`, "title=asc") }}
+        <li class="plugin">
           <a href="{{ plugin.url }}" class="plugin-info">
-            <strong class="plugin-name">{{ plugin.title }}</strong>
+            <h3 class="plugin-name">{{ plugin.title }}</h3>
             {{ plugin.description |> md }}
           </a>
-          {{ if plugin.repo }}
-            <p>
-              <a class="button is-secondary is-small" href="{{ plugin.repo }}"
-              >Repo</a>
-            </p>
-          {{ /if }}
         </li>
       {{ /for }}
-    </ul>
-  </section>
+
+      {{ if external }}
+        <li class="plugin-external">
+          <h3>From the community:</h3>
+          <ul>
+            {{ for item of external }}
+            <li>
+              <a href="{{ item.url }}" class="class="plugin-name"">
+                {{ item.name }}
+              </a>
+              {{ item.description |> md }}
+            </li>
+            {{ /for }}
+          </ul>
+        </li>
+      {{ /if }}
+      </ul>
+    </section>
+    {{ /for }}
+  </div>
 </main>

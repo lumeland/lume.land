@@ -2,8 +2,7 @@
 title: Redirect Activity Streams 2.0
 description: Middleware to create redirections to any AS2 bridge
 mod: middlewares/redirect_as2.ts
-tags:
-  - middleware
+category: middleware
 ---
 
 ## Description

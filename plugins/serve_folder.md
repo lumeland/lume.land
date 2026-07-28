@@ -2,8 +2,7 @@
 title: Serve folder
 description: Middleware to add additional folders to the server.
 mod: middlewares/serve_folder.ts
-tags:
-  - middleware
+category: middleware
 ---
 
 ## Description

@@ -2,9 +2,7 @@
 title: Cache Busting
 description: Implements server side cache busting
 mod: middlewares/cache_busting.ts
-tags:
-  - middleware
-  - optimization
+category: middleware
 ---
 
 ## Description

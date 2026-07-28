@@ -2,8 +2,7 @@
 title: MDX
 description: Use MDX to create pages.
 mod: plugins/mdx.ts
-tags:
-  - template_engine
+category: template
 ---
 
 ## Description

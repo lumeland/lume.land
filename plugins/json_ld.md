@@ -1,9 +1,7 @@
 ---
 title: JSON-LD
 description: Generate JSON-LD tags in the HTML pages.
-tags:
-  - html
-  - utils
+category: seo
 ---
 
 ## Description

@@ -1,36 +1,99 @@
 layout: layouts/plugin.vto
 main_menu: plugins
-tags_info:
-  data_format:
-    name: Data format
-    color: lemonchiffon
+
+categories:
+  installed:
+    title: Installed by default
+    description: The following plugins are installed by default.
+  compress:
+    title: Compressors
+    description: Utilities to compress the ouput to other formats.
+  css:
+    title: CSS
+    description: Generate, transform and optimize the styles of your site.
+  cms:
+    title: CMS
+    description: Integration with other CMS different to LumeCMS.
+  data:
+    title: Data loaders
+    description: Support for other formats to load data.
+    external:
+      - name: CSV
+        description: Highly opinionated loader of CSV files
+        url: https://github.com/open-innovations/oi-lume-utils/tree/main/loaders
+      - name: lume-duck
+        description: Helpers for working with DuckDB data in the Lume SSG
+        url: https://jsr.io/@dringtech/lume-duck
+  extract:
+    title: Data extractors
+    description: To extract data automatically that you can use in your pages.
+  viz:
+    title: Data Viz
+    description: Plugins to generate charts for data visualization
+    external:
+      - name: OI Lume Viz
+        description: Lume Plugin that enables charting
+        url: https://open-innovations.github.io/oi-lume-viz/
+      - name: Serea
+        description: Charts, diagrams and graphs for markdown
+        url: https://github.com/idris-maps/serea
+      - name: Lume Plugin MapLibre
+        description: A Lume plugin that renders interactive MapLibre GL JS maps from frontmatter
+        url: https://github.com/ajzeigert/lume-plugin-maplibre
+  dev:
+    title: Develop
+    description: Utilities for developers.
+    external:
+      - name: Lume Readme
+        description: A Lume plugin that uses `README.md` or specified page as homepage of the website.
+        url: https://github.com/weakish/lume-readme
+  fonts:
+    title: Fonts
+    description: Plugins to work with fonts.
   html:
-    name: HTML
-    color: tomato
-  template_engine:
-    name: Template engine
-    color: lightgreen
+    title: HTML
+    description: HTML utils and optimization.
+  icons:
+    title: Icons
+    description: Plugins to handle icons.
   images:
-    name: Images
-    color: violet
-  javascript:
-    name: JavaScript
-    color: gold
-  styles:
-    name: Styles
-    color: rebeccapurple
-  optimization:
-    name: Optimization
-    color: mediumseagreen
-  urls:
-    name: URLs
-    color: pink
+    title: Image processing
+    description: Transform, manipulate and optimize images.
+  i18n:
+    title: Inter&shy;nationalization
+    description: Utils to create multilanguage sites.
+  js:
+    title: JavaScript
+    description: Compile, bundle and optimize your JavaScript.
   middleware:
-    name: Middleware
-    color: lightskyblue
-  nav:
-    name: Navigation
-    color: mediumpurple
-  utils:
-    name: Utils
-    color: lightgray
+    title: Middleware
+    description: HTTP middleware for the Lume's server
+  navigation:
+    title: Navigation
+    description: Plugins to create menus and other navigation utilities.
+  seo:
+    title: SEO
+    description: Improve the SEO of your site.
+  standard:
+    title: Standards
+    description: Integrate standards and good practices.
+  syntax:
+    title: Code syntax
+    description: Plugins to apply code syntas highlight.
+    external:
+      - name: Lume Shiki
+        description: Plugin to use [Shiki](https://shiki.style/) library.
+        url: https://github.com/FuriouZz/lume_shiki
+      - name: Lume Nueglow
+        description: Lume plugin that adds syntax highlighting with Nueglow
+        url: https://github.com/ethmarks/lume_nueglow
+  template:
+    title: Template engines
+    description: Integration with other template engines.
+    external:
+      - name: djot.js
+        description: Use Djot as a template engine ([repo](https://git.sr.ht/~iacore/djot.js)).
+        url: https://cdn.jsdelivr.net/gh/iacore/djot.js/lume-djot-plugin.ts
+  url:
+    title: URLs
+    description: Transform and optimize URLs.

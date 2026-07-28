@@ -1,8 +1,7 @@
 ---
 title: Logger
 description: Log HTTP request/responses in the console
-tags:
-  - middleware
+category: middleware
 ---
 
 ## Description

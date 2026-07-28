@@ -2,8 +2,7 @@
 title: Extract order
 description: Extract order values from the filenames
 mod: plugins/extract_order.ts
-tags:
-  - utils
+category: extract
 ---
 
 ## Description

@@ -2,8 +2,7 @@
 title: Git date
 description: Extract the last modification time of all pages from the Git history.
 mod: plugins/git_date.ts
-tags: 
-  - utils
+category: extract
 ---
 
 ## Description
