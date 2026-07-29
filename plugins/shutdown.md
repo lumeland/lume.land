@@ -2,8 +2,7 @@
 title: Shutdown
 description: Middleware to show a shutdown page.
 mod: middlewares/shutdown.ts
-tags:
-  - middleware
+category: middleware
 ---
 
 ## Description

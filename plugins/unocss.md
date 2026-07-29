@@ -2,8 +2,7 @@
 title: UnoCSS
 description: Use the UnoCSS framework to create the CSS styles.
 mod: plugins/unocss.ts
-tags:
-  - styles
+category: css
 ---
 
 ## Description

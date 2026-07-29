@@ -2,8 +2,7 @@
 title: Replace
 description: Create placeholders to replace with final values
 mod: plugins/replace.ts
-tags:
-  - utils
+category: dev
 ---
 
 ## Description

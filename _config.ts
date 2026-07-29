@@ -19,12 +19,12 @@ import ogImages from "lume/plugins/og_images.ts";
 import nav from "lume/plugins/nav.ts";
 import extractOrder from "lume/plugins/extract_order.ts";
 import { env } from "lume/core/utils/env.ts";
-import toc from "https://cdn.jsdelivr.net/gh/lumeland/markdown-plugins@0.10.0/toc.ts";
+import toc, {headerLink} from "lume/plugins/toc.ts";
+import wellKnown from "lume/plugins/well_known.ts";
 import analyze, {
   mergeDefaults,
 } from "https://cdn.jsdelivr.net/gh/oscarotero/aldara@0.3.0/mod.ts";
 import { alert } from "npm:@mdit/plugin-alert@0.8.0";
-import ventoLang from "https://cdn.jsdelivr.net/gh/ventojs/vento@2.3.0/highlightjs-vento.js";
 import { JsDelivr } from "https://cdn.jsdelivr.net/gh/oscarotero/nudd@0.2.11/registry/jsdelivr.ts";
 
 const [lumePkg, ssxPkg, cmsPkg, mdPluginsPkg] = await Promise.all([
@@ -68,12 +68,12 @@ site
   .add("img")
   .add("styles")
   .add("main.js")
-  .use(toc())
-  .use(codeHighlight({
-    languages: {
-      vento: ventoLang,
-    },
+  .use(toc({
+    anchor: headerLink({
+      class: "header-anchor"
+    })
   }))
+  .use(codeHighlight())
   .use(esbuild({
     extensions: [".js"],
   }))
@@ -97,6 +97,9 @@ site
     ignore: [
       "/blog/",
     ],
+  }))
+  .use(wellKnown({
+    atProto: "did:plc:lqbfqodxim3n27heuou7do3g",
   }))
   .use(favicon())
   .use(inline())

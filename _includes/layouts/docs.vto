@@ -11,15 +11,15 @@ page_css: docs.css
       <h1>{{ title }}</h1>
       {{ description |> md }}
 
-      {{ include "templates/toc.vto" }}
+      <nav class="toc" toc="content"></nav>
     </header>
 
-    <div class="doc-body">
+    <div class="doc-body" id="content">
       {{ content }}
 
       {{ if related }}
         <nav class="doc-related" label="Related content">
-          <h2>Related to this</h2>
+          <h2 no-toc>Related to this</h2>
           <ul>
             {{ for item of related }}
               <li>

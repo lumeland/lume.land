@@ -78,6 +78,23 @@ To watch changes without starting a local server, use the `--watch` argument:
 deno task lume --watch
 ```
 
+## Debug
+
+Use the `--inspect, -i` flag to start an
+[inspect server](https://docs.deno.com/runtime/fundamentals/debugging/). Then,
+you can open the `chrome://inspect` URL in any Chromium-based browser and add
+breakpoints to debug your code:
+
+```sh
+deno task serve --inspect
+```
+
+The flag `--dry-run` build the site without writting the output in the disk and return an error if the build generated any error, which is useful for CI testing:
+
+```sh
+deno task build --dry-run
+```
+
 ## Help
 
 Run `deno task lume -h` to show all available commands and options.

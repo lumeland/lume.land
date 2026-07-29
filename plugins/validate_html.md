@@ -2,8 +2,7 @@
 title: Validate HTML
 description: Automatically check the HTML code from your pages
 mod: plugins/validate_html.ts
-tags:
-  - optimization
+category: standard
 ---
 
 ## Description

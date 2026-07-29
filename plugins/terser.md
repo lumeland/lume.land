@@ -2,9 +2,7 @@
 title: Terser
 description: Minify JavaScript files with Terser.
 mod: plugins/terser.ts
-tags:
-  - javascript
-  - optimization
+category: js
 ---
 
 ## Description

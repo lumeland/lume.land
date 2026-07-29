@@ -2,9 +2,7 @@
 title: Feed
 description: Generate a RSS or JSON Feed automatically for your site
 mod: plugins/feed.ts
-tags:
-  - nav
-  - utils
+category: standard
 ---
 
 ## Description
@@ -75,6 +73,7 @@ site.use(feed({
     lang: "=lang", // The language of every item
     image: "=cover", // The image of the item
     authorName: "=author.name", // The author of the article
+    authorAvatar: "=author.icon", // The image of the author
     authorUrl: "=author.url", // The URL of the author
   },
 }));

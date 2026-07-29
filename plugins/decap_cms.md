@@ -2,8 +2,7 @@
 title: Decap CMS
 description: Run Decap CMS to update the site content
 mod: plugins/decap_cms.ts
-tags:
-  - utils
+category: cms
 ---
 
 ## Description

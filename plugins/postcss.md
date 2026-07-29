@@ -2,9 +2,7 @@
 title: PostCSS
 description: Transform your CSS code with PostCSS.
 mod: plugins/postcss.ts
-tags:
-  - styles
-  - optimization
+category: css
 ---
 
 ## Description

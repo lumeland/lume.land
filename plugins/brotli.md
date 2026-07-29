@@ -2,8 +2,7 @@
 title: Brotli
 description: Compress the files using Brotli algorithm
 mod: plugins/brotli.ts
-tags:
-  - optimization
+category: compress
 ---
 
 Brotli is a lossless data compression algorithm developed by Google and

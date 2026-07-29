@@ -2,8 +2,7 @@
 title: Filter pages
 description: To filter pages under a specific condition
 mod: plugins/filter_pages.ts
-tags:
-  - utils
+category: dev
 ---
 
 ## Description

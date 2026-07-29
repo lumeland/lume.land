@@ -3,11 +3,19 @@
   color: var(--color-foreground-1);
   margin: 0;
 
-  & ol,
-  & ul {
+  & ol {
     padding-left: 1.5em;
   }
   & a {
     color: currentColor;
+  }
+
+  &.is-columned ol {
+    column-width: 12em;
+    margin-top: 3em;
+
+    > li {
+      break-inside: avoid;
+    }
   }
 }

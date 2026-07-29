@@ -2,8 +2,7 @@
 title: WWW
 description: Middleware to redirect from/to www subdomain.
 mod: middlewares/www.ts
-tags:
-  - middleware
+category: middleware
 ---
 
 ## Description

@@ -2,9 +2,7 @@
 title: Expires
 description: Middleware to add the Expires header to HTTP responses
 mod: middlewares/expires.ts
-tags:
-  - middleware
-  - optimization
+category: middleware
 ---
 
 ## Description

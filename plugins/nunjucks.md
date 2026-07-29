@@ -3,8 +3,7 @@ title: Nunjucks
 description: Use the Nunjucks template engine to create pages and layouts.
 mod: plugins/nunjucks.ts
 enabled: false
-tags:
-  - template_engine
+category: template
 ---
 
 ## Description

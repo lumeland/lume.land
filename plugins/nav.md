@@ -3,8 +3,7 @@ title: Nav
 description: Provide a helper to build menus and breadcrumbs.
 mod: plugins/nav.ts
 enabled: false
-tags:
-  - nav
+category: navigation
 ---
 
 ## Description

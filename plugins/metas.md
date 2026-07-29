@@ -1,8 +1,7 @@
 ---
 title: Metas
 description: Automatically add `<meta>` tags for SEO and social networks.
-tags:
-  - html
+category: seo
 ---
 
 ## Description

@@ -2,8 +2,7 @@
 title: Transform Images
 description: Image manipulation plugin using Sharp
 mod: plugins/transform_images.ts
-tags:
-  - images
+category: images
 ---
 
 ## Description

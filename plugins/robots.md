@@ -2,9 +2,7 @@
 title: Robots
 description: Plugin to create the robots.txt file automatically
 mod: plugins/robots.ts
-tags:
-  - utils
-  - optimization
+category: seo
 ---
 
 ## Description

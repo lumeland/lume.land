@@ -1,8 +1,7 @@
 ---
 title: Image size
 description: Generate automatically the width and height attributes of images
-tags:
-  - images
+category: html
 ---
 
 ## Description

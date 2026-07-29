@@ -2,9 +2,7 @@
 title: Paginate
 description: Provide a helper to paginate results.
 mod: plugins/paginate.ts
-enabled: true
-tags:
-  - nav
+category: installed
 ---
 
 ## Description

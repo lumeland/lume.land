@@ -1,9 +1,7 @@
 ---
 title: Search
 description: Provide a helper to search pages from other pages.
-enabled: true
-tags:
-  - nav
+category: installed
 ---
 
 ## Description
