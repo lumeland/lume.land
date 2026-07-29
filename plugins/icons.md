@@ -148,5 +148,5 @@ site.use(icons({
 To use this library:
 
 ```html
-<img src="{{ iconName |> icon("my-library", "filled") }}">
+<img src="{{ iconName |> icon(" my-library", "filled") }}">
 ```

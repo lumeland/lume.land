@@ -7,7 +7,8 @@ category: navigation
 
 ## Description
 
-Plugin to generate the table of contents. It's agnostic of the template engine because it uses the DOM API to generate the toc using the `toc` attribute:
+Plugin to generate the table of contents. It's agnostic of the template engine
+because it uses the DOM API to generate the toc using the `toc` attribute:
 
 ```html
 <nav toc="content">
@@ -21,7 +22,9 @@ Plugin to generate the table of contents. It's agnostic of the template engine b
 </div>
 ```
 
-The `toc` attribute is defined in the element that will contain the table of contents. The value of this attribute must be the id of the element with the text. The plugin automatically generates the following HTML code:
+The `toc` attribute is defined in the element that will contain the table of
+contents. The value of this attribute must be the id of the element with the
+text. The plugin automatically generates the following HTML code:
 
 ```html
 <nav toc="content">
@@ -43,7 +46,8 @@ The `toc` attribute is defined in the element that will contain the table of con
 </div>
 ```
 
-Note that the plugin not only generates the table of contents, but also the ids of the headers (if needed) and the anchors.
+Note that the plugin not only generates the table of contents, but also the ids
+of the headers (if needed) and the anchors.
 
 ## Installation
 
@@ -62,19 +66,22 @@ export default site;
 
 ## Anchor
 
-By default, the plugin generates the anchor link in all headers. For example, the header:
+By default, the plugin generates the anchor link in all headers. For example,
+the header:
 
 ```html
 <h2>First title</h2>
 ```
 
-is converted to 
+is converted to
 
 ```html
 <h2 tabindex="-1" id="first-title"><a href="#first-title">First title</a></h2>
 ```
 
-Use the `anchor` option to pass function to generate the anchor in a different way. The plugin has two predefined functions: `headerLink` (the default function) and `linkInsideHeader`. To use it:
+Use the `anchor` option to pass function to generate the anchor in a different
+way. The plugin has two predefined functions: `headerLink` (the default
+function) and `linkInsideHeader`. To use it:
 
 ```js
 import lume from "lume/mod.ts";
@@ -84,7 +91,7 @@ const site = lume();
 
 site.use(toc({
   anchor: linkInsideHeader({
-    content: "§"
+    content: "§",
   }),
 }));
 

@@ -109,7 +109,8 @@
     opacity: 0;
     transform: translate(50%);
   }
-  20%, 80% {
+  20%,
+  80% {
     opacity: 1;
     transform: translate(0);
   }

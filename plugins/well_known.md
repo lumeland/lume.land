@@ -16,15 +16,16 @@ this first version, the implemented standards are:
 - [atProto handle](https://atproto.com/specs/handle#https-well-known-method)
 - [security.txt](https://securitytxt.org/)
 - [trust.txt](https://journallist.net/reference-document-for-trust-txt-specifications)
-- [webfinger](https://webfinger.net/), (it only supports a single fixed
-  subject, not dynamic `?resource=` lookups)
+- [webfinger](https://webfinger.net/), (it only supports a single fixed subject,
+  not dynamic `?resource=` lookups)
 - [gpc](https://w3c.github.io/gpc/)
 - [PWA origin migration](https://developer.chrome.com/blog/seamless-pwa-origin-migration)
 - [matrix](https://spec.matrix.org/v1.19/client-server-api/#well-known-uris)
 
 ## Installation
 
-Import this plugin in your `_config.ts` file to use it and pass the desired data:
+Import this plugin in your `_config.ts` file to use it and pass the desired
+data:
 
 ```js
 import lume from "lume/mod.ts";

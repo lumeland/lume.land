@@ -126,14 +126,10 @@ page_css: landing.css
           </figcaption>
         </figure>
       {{ /for }}
-      <a href="{{ examples.more.href }}" class="landing-examples-cta">{{
-        examples.more.text
-      }}</a>
+      <a href="{{ examples.more.href }}" class="landing-examples-cta">{{ examples.more.text }}</a>
     </lume-carousel>
 
-    <script type="application/json" id="showcase-data">{{
-      JSON.stringify(showcase.sites)
-    }}</script>
+    <script type="application/json" id="showcase-data">{{ JSON.stringify(showcase.sites) }}</script>
 
     <script type="module">
       const data = JSON.parse(

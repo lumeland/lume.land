@@ -89,7 +89,9 @@ breakpoints to debug your code:
 deno task serve --inspect
 ```
 
-The flag `--dry-run` build the site without writting the output in the disk and return an error if the build generated any error, which is useful for CI testing:
+The flag `--dry-run` build the site without writting the output in the disk and
+return an error if the build generated any error, which is useful for CI
+testing:
 
 ```sh
 deno task build --dry-run

@@ -19,7 +19,7 @@ import ogImages from "lume/plugins/og_images.ts";
 import nav from "lume/plugins/nav.ts";
 import extractOrder from "lume/plugins/extract_order.ts";
 import { env } from "lume/core/utils/env.ts";
-import toc, {headerLink} from "lume/plugins/toc.ts";
+import toc, { headerLink } from "lume/plugins/toc.ts";
 import wellKnown from "lume/plugins/well_known.ts";
 import analyze, {
   mergeDefaults,
@@ -70,8 +70,8 @@ site
   .add("main.js")
   .use(toc({
     anchor: headerLink({
-      class: "header-anchor"
-    })
+      class: "header-anchor",
+    }),
   }))
   .use(codeHighlight())
   .use(esbuild({

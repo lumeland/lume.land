@@ -23,7 +23,8 @@ a {
   }
 }
 
-pre, code {
+pre,
+code {
   font: var(--text-code);
   letter-spacing: 0;
   margin: 0;

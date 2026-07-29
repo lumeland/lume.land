@@ -4,7 +4,7 @@
   Based on the "github" and "github-dark" themes for Highlight.js
   - https://github.com/highlightjs/highlight.js/blob/main/src/styles/github.css
   - https://github.com/highlightjs/highlight.js/blob/main/src/styles/github-dark.css
-  
+
   Modified by Lume authors & contributors
 */
 
@@ -79,16 +79,24 @@
 .hljs-variable {
   color: var(--color-3);
 }
-.hljs-meta .hljs-string, .hljs-regexp, .hljs-string {
+.hljs-meta .hljs-string,
+.hljs-regexp,
+.hljs-string {
   color: var(--color-4);
 }
-.hljs-built_in, .hljs-symbol {
+.hljs-built_in,
+.hljs-symbol {
   color: var(--color-5);
 }
-.hljs-code, .hljs-comment, .hljs-formula {
+.hljs-code,
+.hljs-comment,
+.hljs-formula {
   color: var(--color-6);
 }
-.hljs-name, .hljs-quote, .hljs-selector-pseudo, .hljs-selector-tag {
+.hljs-name,
+.hljs-quote,
+.hljs-selector-pseudo,
+.hljs-selector-tag {
   color: var(--color-7);
 }
 .hljs-subst {

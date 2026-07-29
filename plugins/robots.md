@@ -67,7 +67,9 @@ site.use(robots({
 }));
 ```
 
-## More info
+## Block AI bots
 
-You can see a
-[complete list of bots at Dark Visitors](https://darkvisitors.com/agents).
+If you want to disallow the access of AI agents and robots, use the `disallowAI`
+option. The list of user agents are extracted from the
+[ai-robots-txt/ai.robots.txt](https://github.com/ai-robots-txt/ai.robots.txt)
+repository.

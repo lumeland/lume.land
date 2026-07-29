@@ -179,7 +179,8 @@
       margin-top: 0;
     }
   }
-  h2, h3 {
+  h2,
+  h3 {
     a::before {
       content: "¶";
       color: transparent;

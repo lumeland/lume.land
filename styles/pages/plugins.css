@@ -120,7 +120,6 @@
   flex: 1 1 auto;
   transition: background-color var(--animation-duration);
 
-
   &:hover {
     background-color: var(--color-background-2);
     .plugin-name {

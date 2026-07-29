@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
   <script type="text/javascript">
-    const root = document.firstElementChild;
-    const mediaQuery = "(prefers-color-scheme: dark)";
-    const mediaMatch = window.matchMedia;
-    const currentMode = mediaMatch(mediaQuery).matches;
+  const root = document.firstElementChild;
+  const mediaQuery = "(prefers-color-scheme: dark)";
+  const mediaMatch = window.matchMedia;
+  const currentMode = mediaMatch(mediaQuery).matches;
 
-    const storeTheme = (targetTheme) => {
-      if ("boolean" === typeof targetTheme) {
-        targetTheme = targetTheme ? "dark" : "light";
-      }
-      root.setAttribute("data-theme", targetTheme);
-      localStorage.setItem("data-theme", targetTheme);
-    };
+  const storeTheme = (targetTheme) => {
+    if ("boolean" === typeof targetTheme) {
+      targetTheme = targetTheme ? "dark" : "light";
+    }
+    root.setAttribute("data-theme", targetTheme);
+    localStorage.setItem("data-theme", targetTheme);
+  };
 
-    const storedTheme = ("data-theme" in localStorage)
-      ? localStorage.getItem("data-theme")
-      : currentMode;
+  const storedTheme = ("data-theme" in localStorage)
+    ? localStorage.getItem("data-theme")
+    : currentMode;
 
-    storedTheme && storeTheme(storedTheme);
+  storedTheme && storeTheme(storedTheme);
   </script>
   <head>
     <meta charset="utf-8">

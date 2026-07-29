@@ -29,8 +29,8 @@ export default site;
 
 ## Usage
 
-Create the `app` variable in the page that you want to use as
-the entry point (typically the homepage). Let's see an example.
+Create the `app` variable in the page that you want to use as the entry point
+(typically the homepage). Let's see an example.
 
 ```yml
 ---
@@ -54,9 +54,10 @@ app:
 Page content
 ```
 
-Just like with other plugins like [metas](./metas.md) or [feed](./feed.md), it's possible to use aliases to other variables (i.e. `app.name`
-is an alias to `title`). The plugin will generate the manifest file and the
-icons in different sizes using the `favicon.svg` file as the input image.
+Just like with other plugins like [metas](./metas.md) or [feed](./feed.md), it's
+possible to use aliases to other variables (i.e. `app.name` is an alias to
+`title`). The plugin will generate the manifest file and the icons in different
+sizes using the `favicon.svg` file as the input image.
 
 PWA can have shortcuts (additional pages shown in a submenu). Use the `shortcut`
 variable in other pages to add shortcuts to your application:

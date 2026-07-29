@@ -102,7 +102,8 @@ export default (data: Lume.Data<Post>, filters: Lume.Helpers) => {
 
 ## Global data
 
-Extend the `Lume.GlobalData` interface to provide types for all pages. For example, add the following code to your `_config.ts`:
+Extend the `Lume.GlobalData` interface to provide types for all pages. For
+example, add the following code to your `_config.ts`:
 
 <lume-code>
 
@@ -114,7 +115,7 @@ declare global {
       author: {
         name: string;
         email: string;
-      }
+      };
     }
   }
 }
@@ -133,7 +134,7 @@ export default (data: Lume.Data, filters: Lume.Helpers) => {
   return (
     <header>
       <h1>{title}</h1>
-      <p>By { author.name } ({author.email})</p>
+      <p>By {author.name} ({author.email})</p>
     </header>
   );
 };
@@ -147,11 +148,13 @@ By default, any undeclared property of `Lume.Data` has the `any` type:
 
 ```ts
 export default (data: Lume.Data, filters: Lume.Helpers) => {
-  data.foo // any
+  data.foo; // any
 };
 ```
 
-You can configure Lume to use strict types and apply `unknown` to all unknown properties. Just add the `strict: true` property to the `Lume.TypeConfig` interface:
+You can configure Lume to use strict types and apply `unknown` to all unknown
+properties. Just add the `strict: true` property to the `Lume.TypeConfig`
+interface:
 
 <lume-code>
 
@@ -159,7 +162,7 @@ You can configure Lume to use strict types and apply `unknown` to all unknown pr
 declare global {
   namespace Lume {
     export interface TypeConfig {
-      strict: true
+      strict: true;
     }
   }
 }
@@ -169,5 +172,6 @@ declare global {
 
 ```ts
 export default (data: Lume.Data, filters: Lume.Helpers) => {
-  data.foo // unknown
+  data.foo; // unknown
 };
+```

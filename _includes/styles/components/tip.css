@@ -7,7 +7,8 @@
   font: var(--text-caption);
   background-color: color-mix(in srgb, var(--color), transparent 95%);
 
-  pre, code {
+  pre,
+  code {
     font-size: 14px;
   }
 }

@@ -7,9 +7,9 @@ category: extract
 
 ## Description
 
-Plugin to extract the last modification time of all pages from the Git history and save it in the `date` variable. This process
-is very fast because it only runs a single git command to return the modified date
-for all files.
+Plugin to extract the last modification time of all pages from the Git history
+and save it in the `date` variable. This process is very fast because it only
+runs a single git command to return the modified date for all files.
 
 ## Installation
 

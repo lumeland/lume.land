@@ -1,7 +1,7 @@
 import { log } from "lume/core/utils/log.ts";
 
 export default (function (name?: string) {
-  name ??= prompt("Name:") ?? undefined
+  name ??= prompt("Name:") ?? undefined;
 
   if (!name) {
     log.error("Missing arguments. Run 'deno task new plugin {name}");
@@ -32,7 +32,7 @@ site.use(${name}(/* Options */));
 
 export default site;
 \`\`\`
-`
+`,
     },
   };
 }) satisfies Lume.Archetype;

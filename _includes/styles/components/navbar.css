@@ -40,7 +40,7 @@
       letter-spacing: -0.02em;
     }
     > span:nth-child(3),
-    > span:nth-child(4) {
+     > span:nth-child(4) {
       letter-spacing: -0.04em;
     }
     @media (max-width: 900px) {

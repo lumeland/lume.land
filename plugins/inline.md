@@ -25,11 +25,11 @@ included in the HTML. For example:
 
 ```html {title="Output"}
 <style>
-  /* Content of /css/my-styles.css */
+/* Content of /css/my-styles.css */
 </style>
 
 <script>
-  // Content of /js/my-scripts.js
+// Content of /js/my-scripts.js
 </script>
 
 <img src="data:image/png;base64,..." />
