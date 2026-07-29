@@ -13,7 +13,7 @@ export default class LumeShield extends HTMLElement {
 }
 
 async function getData(name) {
-  const url = `https://nudd.deno.dev/${name}`;
+  const url = `https://nudd.oscarotero.deno.net/${name}`;
   const response = await fetch(url);
   if (response.ok) {
     return await response.json();
