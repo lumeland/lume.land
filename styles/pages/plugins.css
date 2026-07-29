@@ -57,6 +57,11 @@
     position: sticky;
     background-color: var(--color-background);
     top: 70px;
+
+    p {
+      margin-block: .5em;
+      font: var(--text-caption);
+    }
   }
 
   h2 {
@@ -65,6 +70,11 @@
     letter-spacing: var(--text-title-spacing);
     word-break: break-word;
     hyphens: manual;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 
   > ul {

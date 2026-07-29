@@ -5,10 +5,13 @@ page_css: plugins.css
 
 <main class="plugins">
   <header class="plugins-header">
-    <h1>{{ title }}</h1> {{ description |> md }}
+    <h1>{{ title }}</h1>
+    {{ description |> md }}
+
+    <nav class="toc is-columned" toc="content"></nav>
   </header>
 
-  <div class="plugins-list">
+  <div class="plugins-list" id="content">
     {{ for id, {title, description, external} of categories }}
     <section class="plugin-section">
       <header>
@@ -20,7 +23,7 @@ page_css: plugins.css
       {{ for plugin of search.pages(`category=${id}`, "title=asc") }}
         <li class="plugin">
           <a href="{{ plugin.url }}" class="plugin-info">
-            <h3 class="plugin-name">{{ plugin.title }}</h3>
+            <h3 no-toc class="plugin-name">{{ plugin.title }}</h3>
             {{ plugin.description |> md }}
           </a>
         </li>
@@ -28,7 +31,7 @@ page_css: plugins.css
 
       {{ if external }}
         <li class="plugin-external">
-          <h3>From the community:</h3>
+          <h3 no-toc>From the community:</h3>
           <ul>
             {{ for item of external }}
             <li>
