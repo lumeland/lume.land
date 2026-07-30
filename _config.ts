@@ -26,6 +26,7 @@ import analyze, {
 } from "https://cdn.jsdelivr.net/gh/oscarotero/aldara@0.3.0/mod.ts";
 import { alert } from "npm:@mdit/plugin-alert@0.8.0";
 import { JsDelivr } from "https://cdn.jsdelivr.net/gh/oscarotero/nudd@0.2.11/registry/jsdelivr.ts";
+import plainText from "lume/plugins/plaintext.ts"
 
 const [lumePkg, ssxPkg, cmsPkg, mdPluginsPkg] = await Promise.all([
   JsDelivr.create("lumeland/lume"),
@@ -92,6 +93,7 @@ site
   .use(nav())
   .use(icons())
   .use(resolveUrls())
+  .use(plainText())
   .use(checkUrls({
     external: false,
     ignore: [
@@ -150,3 +152,12 @@ site.data("scheme", async (mod: string) => {
 });
 
 export default site;
+
+declare global {
+  namespace Lume {
+    export interface GlobalData {
+      title: string;
+      description: string;
+    }
+  }
+}

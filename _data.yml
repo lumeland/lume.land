@@ -1,4 +1,4 @@
-openGraphLayout: /layouts/og.jsx
+openGraphLayout: /layouts/og.tsx
 metas:
   title: =title
   description: =description

@@ -1,4 +1,4 @@
-export default function ({ title, description }) {
+export default function ({ title, description }: Lume.Data, { plaintext }: Lume.Helpers) {
   return (
     <div
       style={{
@@ -84,7 +84,7 @@ export default function ({ title, description }) {
           letterSpacing: "-1.5px",
         }}
       >
-        {title}
+        {plaintext(title)}
       </div>
       <div
         style={{
@@ -95,7 +95,7 @@ export default function ({ title, description }) {
           lineHeight: 1.4,
         }}
       >
-        {description}
+        {plaintext(description)}
       </div>
     </div>
   );
