@@ -2,16 +2,17 @@
 title: Deploy on Deno Deploy
 description: How to setup LumeCMS to use it on Deno Deploy
 order: 1
+url: false
 ---
 
 [Deno Deploy](https://deno.com/deploy) is a distributed deploy system provided
 by Deno that allows to run Deno code on the cloud. **LumeCMS** can run on Deno
 Deploy but keep in mind the following limitations:
 
-- In Deno Deploy it's not possible to write in the file system so you have to
-  configure a GitHub repository to commit the changes to.
+- In Deno Deploy it's not possible to write in the local git repository so you have to
+  configure a remote git repository to commit the changes to.
 - For the very same reason, it's not possible to live preview the changes. All
-  the changes are inmediately commited to the GitHub repository.
+  the changes are inmediately commited to the remote git repository.
 
 If you want to preview the changes before commit, it's recommended to use a VPS.
 [See instructions here](./vps.md).
@@ -30,17 +31,12 @@ filesystem:
 ```js
 import lumeCMS from "lume/cms/mod.ts";
 import GitHub from "lume/cms/storage/github.ts";
-import { Octokit } from "npm:octokit";
 
 const cms = lumeCMS();
 
 cms.storage(
   "src",
-  new GitHub({
-    client: new Octokit({ auth: Deno.env.get("GITHUB_TOKEN") }),
-    owner: "username",
-    repo: "example",
-  }),
+  GitHub.create("username/repo", Deno.env.get("GITHUB_TOKEN")),
 );
 
 // Rest of the configuration....
