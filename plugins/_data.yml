@@ -94,6 +94,10 @@ categories:
       - name: djot.js
         description: Use Djot as a template engine ([repo](https://git.sr.ht/~iacore/djot.js)).
         url: https://cdn.jsdelivr.net/gh/iacore/djot.js/lume-djot-plugin.ts
+      - name: Lume webc
+        description: |
+          [WebC](github.com/11ty/webc) components plugin for Lume.
+        url: https://codeberg.org/mash-graz/lume-webc
   url:
     title: URLs
     description: Transform and optimize URLs.
