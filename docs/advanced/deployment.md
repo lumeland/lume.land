@@ -149,7 +149,7 @@ jobs:
 ## Deno Deploy
 
 [Deno Deploy](https://deno.com/deploy) is a distributed deploy system provided
-by Deno that auto-detect Lume sites. You only have to connect your GitHub
+by Deno that auto-detects Lume sites. You only have to connect your GitHub
 repository and that's all! (the build command is automatically configured to
 `deno task build`).
 
