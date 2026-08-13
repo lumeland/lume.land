@@ -24,6 +24,11 @@ sites:
     url: https://volpeon.ink/
     description: Personal website of Volpeon, a software developer and vector artist
 
+  - title: Evie On-Line
+    img: /img/showcase/evie-online.webp
+    url: https://ewie.online/
+    description: Personal blog of Evie Finch, a designer/developer
+
   - title: Cluber
     img: /img/showcase/cluber.webp
     url: https://cluber.com
