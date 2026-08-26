@@ -116,6 +116,9 @@
   --color-background-1: var(--color-black-970);
   --color-background-2: var(--color-black-930);
   --color-background-3: var(--color-black-860);
+
+  /* Overwrite @docsearch modal dark colors */
+  --docsearch-muted-color: #48566e;
 }
 
 /* Theme dark mode */
