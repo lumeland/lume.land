@@ -8,7 +8,7 @@ category: css
 ## Description
 
 The `SASS` plugin loads and transforms your `.scss` files using the
-[Deno SASS](https://github.com/binyamin/deno-sass) library.
+[Dart SASS](https://github.com/sass/dart-sass) library.
 
 ## Installation
 
