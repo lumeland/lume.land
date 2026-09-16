@@ -113,8 +113,7 @@ export default ({ title, content }: Lume.Data, helpers: Lume.Helpers) =>
 
 ## Components
 
-You can create [Lume components](../docs/core/09.components.md) in JS or TS
-creating files in the `_components` folder. For example:
+Create a reusable JavaScript or TypeScript component in its own file:
 
 <lume-code>
 
@@ -130,7 +129,30 @@ export default function ({ content }) {
 
 </lume-code>
 
-To render the component in your templates use the `comp` variable:
+Import it in your page and pass the data it needs:
+
+<lume-code>
+
+```ts{title="index.page.ts"}
+import button from "./_components/button.ts";
+
+export default async function () {
+  return await button({ content: "Click me!" });
+}
+```
+
+</lume-code>
+
+Since Lume 3.3.0 (requires Deno 2.9.0 or later), directly imported local modules
+inside your `src` folder are automatically reloaded in `--serve` or `--watch`
+mode. Older versions require restarting the server after changes.
+
+### Lume-managed components
+
+[Lume-managed components](../docs/core/09.components.md#lume-managed-components)
+provide automatic CSS and JavaScript collection and inherited directory data. To
+use these features, render the component through the `comp` variable instead of
+importing it:
 
 <lume-code>
 
@@ -141,11 +163,3 @@ export default async function ({ comp }) {
 ```
 
 </lume-code>
-
-> [!important]
->
-> Importing a component with `import Button from "./_components/button.ts"`
-> doesn't work for live-reloading due a limitation of Deno that
-> [cannot update any imported module](https://github.com/denoland/deno/issues/8327)
-> without restarting the entire process. So it's highly recomendable to use the
-> `comp` variable to consume components and mitigate this limitation.
