@@ -85,6 +85,23 @@ cms.document({
 });
 ```
 
+### icon
+
+A custom [Phosphor icon](https://phosphoricons.com/):
+
+```ts
+cms.document({
+  name: "landing-page",
+  icon: "note",
+  store: "src:index.yml",
+  fields: [
+    "title: text",
+    "subtitle: text",
+    "content: markdown",
+  ],
+});
+```
+
 ### previewUrl
 
 The `previewUrl` option allows to set a preview URL of the document. It's used

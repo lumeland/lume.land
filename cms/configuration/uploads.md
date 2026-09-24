@@ -51,6 +51,20 @@ cms.upload({
 });
 ```
 
+### icon
+
+A custom [Phosphor icon](https://phosphoricons.com/):
+
+```ts
+cms.upload({
+  name: "images",
+  label: "Posts' images",
+  icon: "images",
+  description: "Here you can manage all images of your posts",
+  store: "src:images",
+});
+```
+
 ### publicPath
 
 Used if the public path of the image (once the site is built) is not the same as

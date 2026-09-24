@@ -29,6 +29,8 @@ For example:
 </script>
 ```
 
+You can see more examples at [jsonld.com](https://jsonld.com/).
+
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:
@@ -122,6 +124,26 @@ jsonLd:
   author:
     "@type": Person
     name: =header.title
+```
+
+## Multiple script elements
+
+It's possible to generate multiple script elements using an array instead of an object:
+
+```yml
+jsonLd:
+  - "@type": WebSite
+    url: /
+    ...
+  - "@type": Person
+    url: /
+    ...
+```
+
+Use [`site.mergeKeys`](../docs/core/07.merged-keys.md) in the _config file to combine entries from parent levels. For example, you may want to have an entry in all pages and other specific entry per page:
+
+```ts
+site.mergeKey("jsonLd", "array")
 ```
 
 ## TypeScript

@@ -82,6 +82,22 @@ cms.collection({
 });
 ```
 
+### icon
+
+A custom [Phosphor icon](https://phosphoricons.com/):
+
+```ts
+cms.collection({
+  name: "posts",
+  icon: "note",
+  store: "src:posts/*.md",
+  fields: [
+    "title: text",
+    "content: markdown",
+  ],
+});
+```
+
 ### previewUrl
 
 The `previewUrl` option allows to set a preview URL of the collection. It's used
