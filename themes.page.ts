@@ -11,9 +11,6 @@ const themes = await fetch(`${baseUrl}/themes.json`).then((res) => res.json());
 
 export default async function* () {
   for (const theme of themes) {
-    if (theme.lume_version < 3) {
-      continue;
-    }
     yield {
       url: `/theme/${theme.id}/`,
       title: theme.name,
