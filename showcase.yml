@@ -121,12 +121,6 @@ sites:
     url: https://www.petulia.pt
     description: Portuguese pastry shop website with online store
 
-  - title: Masashi Kawafuji
-    img: /img/showcase/masashikawafuji.webp
-    url: https://kawafuji.dev/
-    description: The personal blog of Masashi Kawafuji
-    code: https://github.com/m-kawafuji/kawafuji.dev
-
   - title: Rubén Prol
     img: /img/showcase/rubenprol.webp
     url: https://rubenprol.gal/
