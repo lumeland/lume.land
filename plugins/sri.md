@@ -11,7 +11,7 @@ category: html
 site and your users from compromised code loaded from an external CDN. It
 verifies the code loaded by the browser is exactly the same code that you got
 during the build process, without unexpected manipulations. You can
-[learn more about SRI in the MDN article](https://developer.mozilla.org/en-US/blog/securing-cdn-using-sri-why-how/).
+[learn more about SRI in this MDN article](https://developer.mozilla.org/en-US/blog/securing-cdn-using-sri-why-how/).
 
 The plugin searches for `<script>` and `<link rel="stylesheet">` elements in
 your pages that load resources from other domains and add the `integrity` and
