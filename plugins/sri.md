@@ -1,6 +1,6 @@
 ---
 title: SRI
-description: Use SRI to load securely assets loaded from an external CDN.
+description: Use SRI to securely load assets fetched from external CDNs.
 mod: plugins/sri.ts
 category: html
 ---
@@ -8,13 +8,13 @@ category: html
 ## Description
 
 <abbr>SRI</abbr> (Subresource Integrity) is a browser feature to protect your
-site and your users from compromised code loaded from external CDN. It verifies
-the code loaded by the browser is exactly the same code that you got during the
-build process, without unexpected manipulations. You can
-[learn more about SRI in the MDN article](https://developer.mozilla.org/en-US/blog/securing-cdn-using-sri-why-how/).
+site and your users from compromised code loaded from an external CDN. It
+verifies the code loaded by the browser is exactly the same code that you got
+during the build process, without unexpected manipulations. You can
+[learn more about SRI in this MDN article](https://developer.mozilla.org/en-US/blog/securing-cdn-using-sri-why-how/).
 
 The plugin searches for `<script>` and `<link rel="stylesheet">` elements in
-your pages that load resources from other domains and add the `integrity` and
+your pages that load resources from other domains and adds the `integrity` and
 `crossorigin` attributes automatically. For example, if you have this code:
 
 ```html
