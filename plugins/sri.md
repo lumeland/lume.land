@@ -1,6 +1,6 @@
 ---
 title: SRI
-description: Use SRI to load securely assets loaded from an external CDN.
+description: Use SRI to securely load assets fetched from external CDNs.
 mod: plugins/sri.ts
 category: html
 ---
