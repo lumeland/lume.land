@@ -89,55 +89,6 @@ const markdown = {
 const site = lume({}, { markdown });
 ```
 
-### Lume markdown plugins
-
-The repository
-[lumeland/markdown-plugins](https://www.jsdelivr.com/package/gh/lumeland/markdown-plugins)
-contain a collection of plugins specially adapted to Lume, with useful features
-like extract the title from the markdown or generate a table of contents. To use
-these plugins, you might need to first add them to your imports map in
-`deno.json`:
-
-```json
-{
-  "imports": {
-    "markdown-plugins/": "@MD_PLUGINS_URL/"
-  }
-}
-```
-
-Then in your site config file, apply them to the site:
-
-```ts
-import footnotes from "markdown-plugins/footnotes.ts";
-
-const site = lume()
-  .use(footnotes());
-
-export default site;
-```
-
-Last, you will need to write the code to render the extracted footnotes in your
-template:
-
-```vento
-{{ if footnotes.length }}
- <ul>
-   {{ for note of footnotes }}
-   <li id={{ note.id }}>
-     {{ note.content }}
-     <a href="#{{ note.refId }}" class="footnote-backref">↩</a>
-   </li>
-   {{ /for }}
- </ul>
-{{ /if }}
-```
-
-You can check out the full
-[demo](https://github.com/lumeland/markdown-plugins/tree/main/footnotes/demo)
-for more details. In fact, each lume markdown plugin has a demo to illustrate
-its usage.
-
 ## Creating pages in Markdown
 
 To create a page using _Markdown_, just add a file with `.md` extension to your

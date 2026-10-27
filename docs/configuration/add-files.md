@@ -37,18 +37,6 @@ site.add("static-files/favicons/favicon.ico", "favicon.ico");
 site.add("assets", ".");
 ```
 
-> [!note]
->
-> It is not possible to copy files outside the `src` directory. For example
-> `site.add("../folder");` is not allowed. There are some reasons for this:
->
-> - It makes the watcher more complicated because it has to watch different
->   folders.
-> - It's insecure, because it reads files outside of the current directory.
-> - It can break the build, because the `src` folder can be changed at any time
->   (`deno task build --src=other-folder`) which could change the resolution of
->   this folder.
-
 ## Ignored files
 
 Note that the ignore settings explained in [Ignore files](./ignore-files.md) are
@@ -142,6 +130,16 @@ const normalizeUrl = import.meta.resolve("normalize.css");
 // Add the file to your site
 site.add(normalizeUrl, "/styles/normalize");
 ```
+
+### NPM packages installed localy
+
+To add files from NPM packages installed locally, use the `file:` url:
+
+```js
+site.add(import.meta.resolve("normalize.css"), "/styles/styles.css");
+```
+
+In this example, `import.meta.resolve()` returns the full path of the `normalize.css` package inside the `node_modules` folder.
 
 ## Customize the destination
 

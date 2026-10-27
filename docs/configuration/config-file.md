@@ -41,7 +41,7 @@ const site = lume({
 >
 > You can override this value from the CLI with `--src`, which is useful if you
 > have different sites in the same directory. For example:
-> `deno task lume --src=./src`
+> `npm run build -- --src=src`
 
 ### dest
 
@@ -58,7 +58,7 @@ const site = lume({
 >
 > You can override the value from the CLI with `--dest`, which is useful if you
 > want to generate the site without overriding the previous one. For
-> example:`deno task lume --dest=./dist`
+> example: `npm run build -- --dest=dist`
 
 ### emptyDest
 
@@ -93,7 +93,7 @@ const site = lume({
 >
 > You can override the value from the CLI with `--location`, which is useful if
 > you want to build and deploy the site to different locations. For example:
-> `deno task lume --location=https://my-site.com/blog/`
+> `npm run build -- --location=https://my-site.com/blog/`
 
 > [!important]
 >
@@ -103,7 +103,7 @@ const site = lume({
 >
 > To configure a different location in the server mode, use the `--location`
 > option.<br> For example:
-> `deno task lume --serve --location=http://local.dev:3000`
+> `npm run serve -- --location=http://local.dev:3000`
 
 ### prettyUrls
 
@@ -198,7 +198,7 @@ const site = lume({
 > [!tip]
 >
 > This value can be overridden from CLI with the `--port` option. For example:
-> `deno task lume --serve --port=8888`
+> `npm run serve -- --port=8888`
 
 ### page404
 
@@ -222,7 +222,7 @@ const site = lume({
 > [!tip]
 >
 > This value can be set from CLI with the `--open` or `-o` options. For example:
-> `deno task lume --serve --open`
+> `npm run serve -- --open`
 
 ### middlewares
 
@@ -259,7 +259,7 @@ const site = lume({
 ## Watcher options
 
 The `watcher` key contains an object to configure the file watcher, used to
-watch file changes with `lume --serve` and `lume --watch`.
+watch file changes.
 
 - **debounce:** The debounce interval (in milliseconds). By default is `100`.
 - **ignore:** An array of strings or functions to filter paths ignored by the
