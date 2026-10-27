@@ -1,7 +1,6 @@
 ---
 title: Pagefind
 description: A static search engine in your site
-mod: plugins/pagefind.ts
 category: navigation
 ---
 
@@ -21,8 +20,8 @@ The process is divided in two steps:
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import pagefind from "lume/plugins/pagefind.ts";
+import lume from "@lumeland/lume";
+import pagefind from "@lumeland/plugin-pagefind";
 
 const site = lume();
 
@@ -49,8 +48,8 @@ JavaScript and CSS styles in any page containing this element.
 The plugin has the `ui` key with some configuration options. The default values:
 
 ```js
-import lume from "lume/mod.ts";
-import pagefind from "lume/plugins/pagefind.ts";
+import lume from "@lumeland/lume";
+import pagefind from "@lumeland/plugin-pagefind";
 
 const site = lume();
 
@@ -98,8 +97,8 @@ If you want to use a custom search component, you can disable the automatic
 insertion of the generic UI component in the plugin configuration:
 
 ```js
-import lume from "lume/mod.ts";
-import pagefind from "lume/plugins/pagefind.ts";
+import lume from "@lumeland/lume";
+import pagefind from "@lumeland/plugin-pagefind";
 
 const site = lume();
 
@@ -115,8 +114,8 @@ export default site;
 The `indexing` key allows to customize the indexing process. The default values:
 
 ```js
-import lume from "lume/mod.ts";
-import pagefind from "lume/plugins/pagefind.ts";
+import lume from "@lumeland/lume";
+import pagefind from "@lumeland/plugin-pagefind";
 
 const site = lume();
 

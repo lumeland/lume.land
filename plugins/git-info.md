@@ -2,6 +2,7 @@
 title: Git info
 description: Extract the current branch, commit hash and tag from Git.
 category: extract
+oldUrl: /plugins/git_info/
 ---
 
 ## Description
@@ -32,8 +33,8 @@ Or to prevent caching issues:
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import gitInfo from "lume/plugins/git_info.ts";
+import lume from "@lumeland/lume";
+import gitInfo from "@lumeland/plugin-git-info";
 
 const site = lume();
 

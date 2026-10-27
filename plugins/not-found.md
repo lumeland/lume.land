@@ -1,8 +1,8 @@
 ---
 title: Not found
 description: Middleware to show a custom page on 404 errors.
-mod: middlewares/not_found.ts
 category: middleware
+oldUrl: /plugins/not_found/
 ---
 
 ## Description
@@ -19,7 +19,7 @@ need a host running a Deno server, like [Deno Deploy](https://deno.com/deploy).
 Create an entry point file (for example, `serve.ts`) with the following code:
 
 ```ts
-import Server from "lume/core/server.ts";
+import Server from "@lumeland/core/server.ts";
 import notFound from "lume/middlewares/not_found.ts";
 
 const server = new Server();

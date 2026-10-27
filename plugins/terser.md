@@ -1,7 +1,6 @@
 ---
 title: Terser
 description: Minify JavaScript files with Terser.
-mod: plugins/terser.ts
 category: js
 ---
 
@@ -18,8 +17,8 @@ browser version.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import terser from "lume/plugins/terser.ts";
+import lume from "@lumeland/lume";
+import terser from "@lumeland/plugin-terser";
 
 const site = lume();
 
@@ -37,7 +36,7 @@ option, as well as the `compress` and `mangle` options, are by default set to
 options in an `options` object in the `use` function:
 
 ```js
-import terser from "lume/plugins/terser.ts";
+import terser from "@lumeland/plugin-terser";
 
 site.use(terser({
   options: {

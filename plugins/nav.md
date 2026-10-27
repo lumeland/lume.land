@@ -1,7 +1,6 @@
 ---
 title: Nav
 description: Provide a helper to build menus and breadcrumbs.
-mod: plugins/nav.ts
 enabled: false
 category: navigation
 ---
@@ -16,8 +15,8 @@ breadcrumbs in your pages.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import nav from "lume/plugins/nav.ts";
+import lume from "@lumeland/lume";
+import nav from "@lumeland/plugin-nav";
 
 const site = lume();
 

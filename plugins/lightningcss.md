@@ -1,7 +1,6 @@
 ---
 title: Lightning CSS
 description: Transform and minify your CSS files with Lightning CSS.
-mod: plugins/lightningcss.ts
 category: css
 ---
 
@@ -15,8 +14,8 @@ The `lightningcss` plugin bundles your CSS files using the
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import lightningCss from "lume/plugins/lightningcss.ts";
+import lume from "@lumeland/lume";
+import lightningCss from "@lumeland/plugin-lightningcss";
 
 const site = lume();
 
@@ -31,9 +30,9 @@ export default site;
 Example with the default configuration:
 
 ```js
-import lume from "lume/mod.ts";
-import lightningCss, { version } from "lume/plugins/lightningcss.ts";
-import { version } from "lume/core/utils/browsers.ts";
+import lume from "@lumeland/lume";
+import lightningCss, { version } from "@lumeland/plugin-lightningcss";
+import { version } from "@lumeland/core/utils/browsers.ts";
 
 const site = lume();
 

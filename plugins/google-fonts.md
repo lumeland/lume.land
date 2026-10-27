@@ -1,8 +1,8 @@
 ---
 title: Google Fonts
 description: Self host Google fonts
-mod: plugins/google_fonts.ts
 category: fonts
+oldUrl: /plugins/google_fonts/
 ---
 
 ## Description
@@ -40,8 +40,8 @@ font selection. For example, let's say we want to use
 [Playfair Display](https://fonts.google.com/share?selection.family=Playfair+Display:ital,wght@0,400..900;1,400..900):
 
 ```js
-import lume from "lume/mod.ts";
-import googleFonts from "lume/plugins/google_fonts.ts";
+import lume from "@lumeland/lume";
+import googleFonts from "@lumeland/plugin-google-fonts";
 
 const site = lume();
 

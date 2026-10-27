@@ -1,7 +1,6 @@
 ---
 title: Tailwind CSS
 description: Use Tailwind CSS to create the CSS styles.
-mod: plugins/tailwindcss.ts
 category: css
 ---
 
@@ -18,8 +17,8 @@ generating the CSS code needed.
 Import this plugin in your `_config.ts` file to use it:.
 
 ```js
-import lume from "lume/mod.ts";
-import tailwindcss from "lume/plugins/tailwindcss.ts";
+import lume from "@lumeland/lume";
+import tailwindcss from "@lumeland/plugin-tailwindcss";
 
 const site = lume();
 

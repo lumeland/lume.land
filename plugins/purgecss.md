@@ -1,7 +1,6 @@
 ---
 title: PurgeCSS
 description: Use PurgeCSS to remove unused CSS code.
-mod: plugins/purgecss.ts
 category: css
 ---
 
@@ -15,8 +14,8 @@ unused CSS code, making your CSS files smaller to improve the site performance.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import purgecss from "lume/plugins/purgecss.ts";
+import lume from "@lumeland/lume";
+import purgecss from "@lumeland/plugin-purgecss";
 
 const site = lume();
 site.use(purgecss());

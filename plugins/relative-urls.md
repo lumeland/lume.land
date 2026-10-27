@@ -2,6 +2,7 @@
 title: Relative URLs
 description: Convert all URLs to relative.
 category: url
+oldUrl: /plugins/relative_urls/
 ---
 
 ## Description
@@ -16,8 +17,8 @@ under `file://`).
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import relativeUrls from "lume/plugins/relative_urls.ts";
+import lume from "@lumeland/lume";
+import relativeUrls from "@lumeland/plugin-relative-urls";
 
 const site = lume();
 

@@ -1,8 +1,8 @@
 ---
 title: Well known
 description: Generate some `.well-known` urls
-mod: plugins/well_known.ts
 category: standard
+oldUrl: /plugins/well_known/
 ---
 
 ## Description
@@ -28,8 +28,8 @@ Import this plugin in your `_config.ts` file to use it and pass the desired
 data:
 
 ```js
-import lume from "lume/mod.ts";
-import wellKnown from "lume/plugins/well_known.ts";
+import lume from "@lumeland/lume";
+import wellKnown from "@lumeland/plugin-well-known";
 
 const site = lume();
 

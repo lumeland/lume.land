@@ -2,6 +2,7 @@
 title: JSON-LD
 description: Generate JSON-LD tags in the HTML pages.
 category: seo
+oldUrl: /plugins/json_ld/
 ---
 
 ## Description
@@ -36,8 +37,8 @@ You can see more examples at [jsonld.com](https://jsonld.com/).
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import jsonLd from "lume/plugins/json_ld.ts";
+import lume from "@lumeland/lume";
+import jsonLd from "@lumeland/plugin-json-ld";
 
 const site = lume();
 

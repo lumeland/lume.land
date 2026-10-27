@@ -1,39 +1,26 @@
-import lume from "lume/mod.ts";
-import codeHighlight from "lume/plugins/code_highlight.ts";
-import icons from "lume/plugins/icons.ts";
-import googleFonts from "lume/plugins/google_fonts.ts";
-import inline from "lume/plugins/inline.ts";
-import resolveUrls from "lume/plugins/resolve_urls.ts";
-import esbuild from "lume/plugins/esbuild.ts";
-import transformImages from "lume/plugins/transform_images.ts";
-import favicon from "lume/plugins/favicon.ts";
-import minifyHTML from "lume/plugins/minify_html.ts";
-import postcss from "lume/plugins/postcss.ts";
-import nesting from "npm:postcss-nesting@13.0.2";
-import sitemap from "lume/plugins/sitemap.ts";
-import metas from "lume/plugins/metas.ts";
-import checkUrls from "lume/plugins/check_urls.ts";
-import redirects from "lume/plugins/redirects.ts";
-import replace from "lume/plugins/replace.ts";
-import ogImages from "lume/plugins/og_images.ts";
-import nav from "lume/plugins/nav.ts";
-import extractOrder from "lume/plugins/extract_order.ts";
-import { env } from "lume/core/utils/env.ts";
-import toc, { headerLink } from "lume/plugins/toc.ts";
-import wellKnown from "lume/plugins/well_known.ts";
-import analyze, {
-  mergeDefaults,
-} from "https://cdn.jsdelivr.net/gh/oscarotero/aldara@0.3.0/mod.ts";
-import { alert } from "npm:@mdit/plugin-alert@0.8.0";
-import { JsDelivr } from "https://cdn.jsdelivr.net/gh/oscarotero/nudd@0.2.11/registry/jsdelivr.ts";
-import plainText from "lume/plugins/plaintext.ts"
-
-const [lumePkg, ssxPkg, cmsPkg, mdPluginsPkg] = await Promise.all([
-  JsDelivr.create("lumeland/lume"),
-  JsDelivr.create("oscarotero/ssx"),
-  JsDelivr.create("lumeland/cms"),
-  JsDelivr.create("lumeland/markdown-plugins"),
-]);
+import lume from "@lumeland/lume";
+import codeHighlight from "@lumeland/plugin-code-highlight";
+import icons from "@lumeland/plugin-icons";
+import googleFonts from "@lumeland/plugin-google-fonts";
+import inline from "@lumeland/plugin-inline";
+import resolveUrls from "@lumeland/plugin-resolve-urls";
+import esbuild from "@lumeland/plugin-esbuild";
+import transformImages from "@lumeland/plugin-transform-images";
+import favicon from "@lumeland/plugin-favicon";
+import minifyHTML from "@lumeland/plugin-minify-html";
+import postcss from "@lumeland/plugin-postcss";
+import nesting from "postcss-nesting";
+import sitemap from "@lumeland/plugin-sitemap";
+import metas from "@lumeland/plugin-metas";
+import checkUrls from "@lumeland/plugin-check-urls";
+import redirects from "@lumeland/plugin-redirects";
+import ogImages from "@lumeland/plugin-og-images";
+import nav from "@lumeland/plugin-nav";
+import extractOrder from "@lumeland/plugin-extract-order";
+import toc, { headerLink } from "@lumeland/plugin-toc";
+import wellKnown from "@lumeland/plugin-well-known";
+import plainText from "@lumeland/plugin-plaintext"
+import { alert } from "@mdit/plugin-alert";
 
 const markdown = {
   plugins: [alert],
@@ -53,14 +40,6 @@ site
   .ignore("CONTRIBUTING.md")
   .ignore("README.md")
   .ignore("scripts")
-  .use(replace({
-    replacements: {
-      "@LUME_URL": lumePkg.at(),
-      "@SSX_URL": ssxPkg.at(),
-      "@CMS_URL": cmsPkg.at(),
-      "@MD_PLUGINS_URL": mdPluginsPkg.at(),
-    },
-  }))
   .add("static", ".")
   .add("_redirects")
   .use(redirects({
@@ -131,25 +110,6 @@ site
     "img/contrib.svg",
     "https://contrib.rocks/image?repo=lumeland/lume",
   );
-
-site.data("scheme", async (mod: string) => {
-  if (env("LUME_LIVE_RELOAD")) {
-    return [];
-  }
-
-  try {
-    const url = import.meta.resolve(`lume/${mod}`);
-    const imported = await import(url);
-    const { Options } = await analyze(url, { maxDepth: 2, private: false });
-
-    mergeDefaults(Options, imported.defaults ?? {});
-    return Options.children;
-  } catch (error) {
-    console.log(`Error generating the documentation for ${mod}`);
-    console.log(error);
-    return [];
-  }
-});
 
 export default site;
 

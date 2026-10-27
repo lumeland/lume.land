@@ -1,8 +1,8 @@
 ---
 title: Validate HTML
 description: Automatically check the HTML code from your pages
-mod: plugins/validate_html.ts
 category: standard
+oldUrl: /plugins/validate_html/
 ---
 
 ## Description
@@ -16,8 +16,8 @@ the HTML code and create a new tab in the
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import validateHtml from "lume/plugins/validate_html.ts";
+import lume from "@lumeland/lume";
+import validateHtml from "@lumeland/plugin-validate-html";
 
 const site = lume();
 

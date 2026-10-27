@@ -1,7 +1,6 @@
 ---
 title: ESbuild
 description: Bundle JavaScript, TypeScript and JSX files using esbuild library.
-mod: plugins/esbuild.ts
 category: js
 ---
 
@@ -15,8 +14,8 @@ The plugin `esbuild` processes your JavaScript and TypeScript files using
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import esbuild from "lume/plugins/esbuild.ts";
+import lume from "@lumeland/lume";
+import esbuild from "@lumeland/plugin-esbuild";
 
 const site = lume();
 

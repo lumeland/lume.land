@@ -1,7 +1,6 @@
 ---
 title: SVGO
 description: Optimize SVG files with SVGO
-mod: plugins/svgo.ts
 category: images
 ---
 
@@ -15,8 +14,8 @@ This plugin loads all `.svg` files and optimizes them using
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import svgo from "lume/plugins/svgo.ts";
+import lume from "@lumeland/lume";
+import svgo from "@lumeland/plugin-svgo";
 
 const site = lume();
 

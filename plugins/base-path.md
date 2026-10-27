@@ -2,6 +2,7 @@
 title: Base path
 description: Automatically add a base path to all urls
 category: url
+oldUrl: /plugins/base_path/
 ---
 
 ## Description
@@ -20,8 +21,8 @@ files, it fixes all `@import` and `url()` with URLs to local files.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import basePath from "lume/plugins/base_path.ts";
+import lume from "@lumeland/lume";
+import basePath from "@lumeland/plugin-base-path";
 
 const site = lume();
 
@@ -37,8 +38,8 @@ Let's say we have configured the location of the website to
 `/blog/` directory.
 
 ```js
-import lume from "lume/mod.ts";
-import basePath from "lume/plugins/base_path.ts";
+import lume from "@lumeland/lume";
+import basePath from "@lumeland/plugin-base-path";
 
 const site = lume({
   location: new URL("https://my-site.com/blog/"), // ← Note the path /blog/

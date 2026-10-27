@@ -124,7 +124,7 @@ returns the title of the page as a relative URL, for example ,`./My first post/`
 
 Because the URL is relative, the current directory is appended automatically (it
 will be resolved to `/post/My first post/`). And if you are using the
-[`slugify_urls` plugin](../../plugins/slugify_urls.md), all output paths are
+[`slugify_urls` plugin](../../plugins/slugify-urls.md), all output paths are
 slugified automatically, so the final URL would be `/post/my-first-post/`.
 
 Using functions as URLs gives a lot of flexibility to generate URLs exactly the

@@ -1,7 +1,6 @@
 ---
 title: Partytown
 description: Use the Partytown to run third-party scripts from a web worker
-mod: plugins/partytown.ts
 category: dev
 ---
 
@@ -18,8 +17,8 @@ secure.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import partytown from "lume/plugins/partytown.ts";
+import lume from "@lumeland/lume";
+import partytown from "@lumeland/plugin-partytown";
 
 const site = lume();
 

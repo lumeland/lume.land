@@ -1,7 +1,6 @@
 ---
 title: Pug
 description: Use the Pug template engine to create pages and layouts
-mod: plugins/pug.ts
 category: template
 ---
 
@@ -15,8 +14,8 @@ plugin allows you to use it to create pages and layouts.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import pug from "lume/plugins/pug.ts";
+import lume from "@lumeland/lume";
+import pug from "@lumeland/plugin-pug";
 
 const site = lume();
 

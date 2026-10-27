@@ -1,7 +1,6 @@
 ---
 title: Reload
 description: Middleware for live-reload in the browser
-mod: middlewares/reload.ts
 category: middleware
 ---
 

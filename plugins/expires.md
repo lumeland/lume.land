@@ -1,7 +1,6 @@
 ---
 title: Expires
 description: Middleware to add the Expires header to HTTP responses
-mod: middlewares/expires.ts
 category: middleware
 ---
 
@@ -18,7 +17,7 @@ need a host running a Deno server, like [Deno Deploy](https://deno.com/deploy).
 Create an entry point file (for example, `serve.ts`) with the following code:
 
 ```ts
-import Server from "lume/core/server.ts";
+import Server from "@lumeland/core/server.ts";
 import expires from "lume/middlewares/expires.ts";
 
 const server = new Server();

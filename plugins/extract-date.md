@@ -1,8 +1,8 @@
 ---
 title: Extract date
 description: Extract dates from the filenames
-mod: plugins/extract_date.ts
 category: extract
+oldUrl: /plugins/extract_date/
 ---
 
 ## Description
@@ -40,8 +40,8 @@ Dates can be defined in folders, so it's shared by all pages inside:
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import extractDate from "lume/plugins/extract_date.ts";
+import lume from "@lumeland/lume";
+import extractDate from "@lumeland/plugin-extract-date";
 
 const site = lume();
 

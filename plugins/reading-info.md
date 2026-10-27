@@ -1,8 +1,8 @@
 ---
 title: Reading info
 description: Provide some information about the page content
-mod: plugins/reading_info.ts
 category: extract
+oldUrl: /plugins/reading_info/
 ---
 
 ## Description
@@ -16,8 +16,8 @@ pages.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import readingInfo from "lume/plugins/reading_info.ts";
+import lume from "@lumeland/lume";
+import readingInfo from "@lumeland/plugin-reading-info";
 
 const site = lume();
 

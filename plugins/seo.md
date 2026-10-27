@@ -1,7 +1,6 @@
 ---
 title: SEO
 description: Automatically check SEO basic issues
-mod: plugins/seo.ts
 category: seo
 ---
 
@@ -16,8 +15,8 @@ tab in the [debug bar](../docs/core/12.debugbar.md) with the detected issues.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import seo from "lume/plugins/seo.ts";
+import lume from "@lumeland/lume";
+import seo from "@lumeland/plugin-seo";
 
 const site = lume();
 

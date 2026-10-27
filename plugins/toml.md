@@ -1,7 +1,6 @@
 ---
 title: TOML
 description: Add support for TOML to store data and create pages.
-mod: plugins/toml.ts
 category: data
 ---
 
@@ -15,8 +14,8 @@ This plugin allows you to create pages and store data using the
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import toml from "lume/plugins/toml.ts";
+import lume from "@lumeland/lume";
+import toml from "@lumeland/plugin-toml";
 
 const site = lume();
 

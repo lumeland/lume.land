@@ -1,7 +1,6 @@
 ---
 title: Feed
 description: Generate a RSS or JSON Feed automatically for your site
-mod: plugins/feed.ts
 category: standard
 ---
 
@@ -15,8 +14,8 @@ This plugin generates RSS or JSON feeds automatically with any page collection
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import feed from "lume/plugins/feed.ts";
+import lume from "@lumeland/lume";
+import feed from "@lumeland/plugin-feed";
 
 const site = lume();
 
