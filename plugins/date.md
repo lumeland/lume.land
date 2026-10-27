@@ -1,7 +1,6 @@
 ---
 title: Date
 description: To manipulate date & time values in different locales
-mod: plugins/date.ts
 category: i18n
 ---
 
@@ -20,8 +19,8 @@ formatting a datetime value in different locales. It uses the
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import date from "lume/plugins/date.ts";
+import lume from "@lumeland/lume";
+import date from "@lumeland/plugin-date";
 
 const site = lume();
 
@@ -84,9 +83,9 @@ site.use(date({
 You can configure them in `_config.ts` by importing them from npm:
 
 ```js
-import date from "lume/plugins/date.ts";
-import { gl } from "npm:date-fns/locale/gl";
-import { es } from "npm:date-fns/locale/es";
+import date from "@lumeland/plugin-date";
+import { gl } from "date-fns/locale/gl";
+import { es } from "date-fns/locale/es";
 
 site.use(date({
   locales: { gl, es },

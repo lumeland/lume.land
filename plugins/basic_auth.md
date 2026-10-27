@@ -1,7 +1,6 @@
 ---
 title: Basic Auth
 description: Implements HTTP Basic Authentication
-mod: middlewares/basic_auth.ts
 category: middleware
 ---
 
@@ -19,7 +18,7 @@ need a host running a Deno server, like [Deno Deploy](https://deno.com/deploy).
 Create an entry point file (for example, `serve.ts`) with the following code:
 
 ```ts
-import Server from "lume/core/server.ts";
+import Server from "@lumeland/core/server.ts";
 import basicAuth from "lume/middlewares/basic_auth.ts";
 
 const server = new Server();
@@ -56,7 +55,7 @@ Configure Lume's development server to use this middleware in the `_config.ts`
 file:
 
 ```js
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 import basicAuth from "lume/middlewares/basic_auth.ts";
 
 const site = lume({

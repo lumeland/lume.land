@@ -1,7 +1,6 @@
 ---
 title: Prism
 description: Code syntax highlighting using Prism
-mod: plugins/prism.ts
 category: syntax
 ---
 
@@ -15,8 +14,8 @@ highlight the code of any `<pre><code>` element.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import prism from "lume/plugins/prism.ts";
+import lume from "@lumeland/lume";
+import prism from "@lumeland/plugin-prism";
 
 const site = lume();
 
@@ -32,8 +31,8 @@ Prism by default load the default languages `markup`, `css`, `clike` and
 [more languages](https://prismjs.com/#supported-languages) in this way:
 
 ```ts
-import lume from "lume/mod.ts";
-import prism from "lume/plugins/prism.ts";
+import lume from "@lumeland/lume";
+import prism from "@lumeland/plugin-prism";
 
 // Additional prism languages
 import "npm:prismjs@1.29.0/components/prism-less.js";
@@ -53,8 +52,8 @@ Prism classes. Prism provides some
 can download automatically with the `theme` option:
 
 ```ts
-import lume from "lume/mod.ts";
-import prism from "lume/plugins/prism.ts";
+import lume from "@lumeland/lume";
+import prism from "@lumeland/plugin-prism";
 
 const site = lume();
 
@@ -73,8 +72,8 @@ If you want to use different themes (for example for dark and light mode), you
 can provide an array of themes:
 
 ```ts{title="_config.ts"}
-import lume from "lume/mod.ts";
-import prism from "lume/plugins/prism.ts";
+import lume from "@lumeland/lume";
+import prism from "@lumeland/plugin-prism";
 
 const site = lume();
 

@@ -1,7 +1,6 @@
 ---
 title: Markdown
 description: Create pages in Markdown format
-mod: plugins/markdown.ts
 category: installed
 ---
 
@@ -21,7 +20,7 @@ If you want to change the default configuration, use the second argument of
 `lume()` function in your `_config.ts` file.
 
 ```js
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 
 // Markdown plugin configuration
 const markdown = {};
@@ -62,7 +61,7 @@ you can use with the `plugins` option. For example, to add the
 [markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji) plugin:
 
 ```ts
-import emoji from "npm:markdown-it-emoji";
+import emoji from "markdown-it-emoji";
 
 // Set the markdown plugins
 const markdown = {
@@ -76,8 +75,8 @@ You can pass options to your markdown-it plugins using an array with
 `[plugin, options]` signature. Example:
 
 ```ts
-import anchor from "npm:markdown-it-anchor";
-import footnote from "npm:markdown-it-footnote";
+import anchor from "markdown-it-anchor";
+import footnote from "markdown-it-footnote";
 
 // Pass options to markdown-it plugins
 const markdown = {

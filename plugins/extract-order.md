@@ -1,8 +1,8 @@
 ---
 title: Extract order
 description: Extract order values from the filenames
-mod: plugins/extract_order.ts
 category: extract
+oldUrl: /plugins/extract_order/
 ---
 
 ## Description
@@ -37,8 +37,8 @@ The order can be defined in folders too, which is works great combined with the
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import extractOrder from "lume/plugins/extract_order.ts";
+import lume from "@lumeland/lume";
+import extractOrder from "@lumeland/plugin-extract-order";
 
 const site = lume();
 

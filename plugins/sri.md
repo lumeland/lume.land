@@ -1,7 +1,6 @@
 ---
 title: SRI
 description: Use SRI to securely load assets fetched from external CDNs.
-mod: plugins/sri.ts
 category: html
 ---
 
@@ -36,8 +35,8 @@ The plugin outputs the following:
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import sri from "lume/plugins/sri.ts";
+import lume from "@lumeland/lume";
+import sri from "@lumeland/plugin-sri";
 
 const site = lume();
 

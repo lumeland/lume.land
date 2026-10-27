@@ -22,8 +22,8 @@ the hood.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import plaintext from "lume/plugins/plaintext.ts";
+import lume from "@lumeland/lume";
+import plaintext from "@lumeland/plugin-plaintext";
 
 const site = lume();
 

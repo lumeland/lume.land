@@ -1,7 +1,6 @@
 ---
 title: Inline
 description: Inline CSS, JavaScript, SVG, and images in the HTML.
-mod: plugins/inline.ts
 category: html
 ---
 
@@ -49,8 +48,8 @@ included in the HTML. For example:
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import inline from "lume/plugins/inline.ts";
+import lume from "@lumeland/lume";
+import inline from "@lumeland/plugin-inline";
 
 const site = lume();
 

@@ -1,7 +1,6 @@
 ---
 title: UnoCSS
 description: Use the UnoCSS framework to create the CSS styles.
-mod: plugins/unocss.ts
 category: css
 ---
 
@@ -47,8 +46,8 @@ set `false` to inline the code in the HTML pages using `<style>` elements.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import unocss from "lume/plugins/unocss.ts";
+import lume from "@lumeland/lume";
+import unocss from "@lumeland/plugin-unocss";
 
 const site = lume();
 

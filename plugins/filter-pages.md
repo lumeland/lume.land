@@ -1,8 +1,8 @@
 ---
 title: Filter pages
 description: To filter pages under a specific condition
-mod: plugins/filter_pages.ts
 category: dev
+oldUrl: /plugins/filter_pages/
 ---
 
 ## Description
@@ -16,8 +16,8 @@ argument and must return a boolean. If it returns `false`, the page will be
 discarded. For example, to remove all pages with the property `ignored=true`:
 
 ```js
-import lume from "lume/mod.ts";
-import filterPages from "lume/plugins/filter_pages.ts";
+import lume from "@lumeland/lume";
+import filterPages from "@lumeland/plugin-filter-pages";
 
 const site = lume();
 

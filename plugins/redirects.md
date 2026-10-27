@@ -1,8 +1,8 @@
 ---
 title: Redirects
 description: To create redirections from one page to another
-mod: plugins/redirects.ts
 category: seo
+oldUrl: /plugins/redirects-middleware/
 ---
 
 ## Description
@@ -16,8 +16,8 @@ output Netlify and Vercel config files, JSON and HTML pages with
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import redirects from "lume/plugins/redirects.ts";
+import lume from "@lumeland/lume";
+import redirects from "@lumeland/plugin-redirects";
 
 const site = lume();
 
@@ -67,7 +67,7 @@ the new one. There are 4 different output methods:
   doesn't require any server configuration. The generated pages have the
   variable `unlisted=true`.
 - **json:** To create the `_redirects.json` JSON file with all redirects,
-  compatible with the [redirects](../plugins/redirects-middleware.md) middleware
+  compatible with the [redirects middleware](#the-middleware)
   which works on Deno Deploy.
 - **netlify:** To create (or update) the `_redirects` file,
   [compatible with Netlify](https://docs.netlify.com/routing/redirects/).
@@ -80,4 +80,33 @@ Example:
 site.use(redirects({
   output: "netlify",
 }));
+```
+
+## The middleware
+
+This package also contains a middleware compatible with the JSON output method.
+
+This middeware must be used with the
+[Lume's HTTP Server](../docs/core/16.server.md):
+
+```js
+import Server from "@lumeland/core/server.ts";
+import redirects from "@lumeland/plugin-redirects/middleware.ts";
+
+const server = new Server();
+
+server.use(redirects({
+  redirects: {
+    "/from/": "/to/",
+    "/from2/": "/to2/",
+
+    // Use an object to configure the status code. (301 by default)
+    "/from3/": {
+      to: "/to2/",
+      code: 302,
+    },
+  },
+}));
+
+server.start();
 ```

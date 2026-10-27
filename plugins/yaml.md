@@ -1,7 +1,6 @@
 ---
 title: YAML
 description: Add support for YAML to store data and create pages.
-mod: plugins/yaml.ts
 category: installed
 ---
 
@@ -21,7 +20,7 @@ If you want to change the default configuration, use the second argument of
 `lume()` function in your `_config.ts` file.
 
 ```js
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 
 // YAML plugin configuration
 const yaml = {/* your config here */};

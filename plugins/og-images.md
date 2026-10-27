@@ -1,8 +1,8 @@
 ---
 title: OG images
 description: Plugin to create Open Graph images automatically
-mod: plugins/og_images.ts
 category: seo
+oldUrl: /plugins/og_images/
 ---
 
 ## Description
@@ -22,9 +22,9 @@ detected by `metas` plugin (that must be added after `og_images`).
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import ogImages from "lume/plugins/og_images.ts";
-import metas from "lume/plugins/metas.ts";
+import lume from "@lumeland/lume";
+import ogImages from "@lumeland/plugin-og-images";
+import metas from "@lumeland/plugin-metas";
 
 const site = lume();
 
@@ -126,7 +126,7 @@ want to use custom fonts, you have to configure Satori to load them. For
 example:
 
 ```js
-import { read } from "lume/core/utils/read.ts";
+import { read } from "@lumeland/core/utils/read.ts";
 
 /** Example with the default values */
 site.use(openGraphImages({

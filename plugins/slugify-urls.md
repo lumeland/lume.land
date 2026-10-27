@@ -1,8 +1,8 @@
 ---
 title: Slugify URLs
 description: Slugify all page URLs to remove potentially conflicting characters
-mod: plugins/slugify_urls.ts
 category: url
+oldUrl: /plugins/slugify_urls/
 ---
 
 ## Description
@@ -23,8 +23,8 @@ replaced with `-`, characters like `ñ` or `á` are replaced by ASCII equivalent
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import slugifyUrls from "lume/plugins/slugify_urls.ts";
+import lume from "@lumeland/lume";
+import slugifyUrls from "@lumeland/plugin-slugify-urls";
 
 const site = lume();
 
@@ -82,8 +82,8 @@ You can configure transliteration libraries to convert characteres from
 languages like Chinesse, Japanesse, Korean, etc to ASCII:
 
 ```js
-import unidecode from "npm:unidecode@1.1.0";
-import jaconv from "npm:jaconv@1.0.4";
+import unidecode from "unidecode";
+import jaconv from "jaconv";
 
 site.use(slugifyUrls({
   transliterate: {

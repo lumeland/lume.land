@@ -1,7 +1,6 @@
 ---
 title: Modules
 description: Use ESM and TypeScript modules to create pages, layouts, and store data.
-mod: plugins/modules.ts
 category: installed
 ---
 

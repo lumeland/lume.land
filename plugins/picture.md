@@ -1,7 +1,6 @@
 ---
 title: Picture
 description: Create responsive images using the Transform Images plugin
-mod: plugins/picture.ts
 category: images
 ---
 
@@ -11,18 +10,18 @@ The Picture plugin creates `<picture>` elements, adding all `<source>` as needed
 or generates the
 [`srcset` property](https://developer.mozilla.org/docs/Web/API/HTMLImageElement/srcset)
 to provide versions in different formats and resolutions for the same image. It
-uses the [`transform_images` plugin](./transform_images.md) under the hood to
+uses the [`transform_images` plugin](./transform-images.md) under the hood to
 make the transformations.
 
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it and make sure to register
-it **exactly** above `transform_images`:
+it **exactly** above `transform-images`:
 
 ```js
-import lume from "lume/mod.ts";
-import picture from "lume/plugins/picture.ts";
-import transformImages from "lume/plugins/transform_images.ts";
+import lume from "@lumeland/lume";
+import picture from "@lumeland/plugin-picture";
+import transformImages from "@lumeland/plugin-transform-images";
 
 const site = lume();
 

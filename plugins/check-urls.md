@@ -1,8 +1,8 @@
 ---
 title: Check URLs
 description: Automatically check the URLs of your site to detect broken links
-mod: plugins/check_urls.ts
 category: url
+oldUrl: /plugins/check_urls/
 ---
 
 ## Description
@@ -15,8 +15,8 @@ and warns when a broken link is found.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import checkUrls from "lume/plugins/check_urls.ts";
+import lume from "@lumeland/lume";
+import checkUrls from "@lumeland/plugin-check-urls";
 
 const site = lume();
 

@@ -34,8 +34,8 @@ keyword of every page and the supported values are:
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import metas from "lume/plugins/metas.ts";
+import lume from "@lumeland/lume";
+import metas from "@lumeland/plugin-metas";
 
 const site = lume();
 

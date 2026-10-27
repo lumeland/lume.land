@@ -2,6 +2,7 @@
 title: Resolve URLs
 description: Resolve all URLs pointing to source files.
 category: url
+oldUrl: /plugins/resolve_urls/
 ---
 
 ## Description
@@ -41,8 +42,8 @@ they change to the final urls.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import resolveUrls from "lume/plugins/resolve_urls.ts";
+import lume from "@lumeland/lume";
+import resolveUrls from "@lumeland/plugin-resolve-urls";
 
 const site = lume();
 

@@ -1,7 +1,6 @@
 ---
 title: Remark
 description: Use Remark to render the markdown content.
-mod: plugins/remark.ts
 category: template
 ---
 
@@ -16,8 +15,8 @@ plugins. By default it uses the _GitHub-flavored markdown_.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import remark from "lume/plugins/remark.ts";
+import lume from "@lumeland/lume";
+import remark from "@lumeland/plugin-remark";
 
 const site = lume();
 
@@ -31,10 +30,10 @@ export default site;
 Use the `remarkPlugins` and `rehypePlugins` to configure additional plugins:
 
 ```js
-import lume from "lume/mod.ts";
-import remark from "lume/plugins/remark.ts";
-import a11yEmoji from "npm:@fec/remark-a11y-emoji";
-import rehypeRemoveComments from "npm:rehype-remove-comments@5";
+import lume from "@lumeland/lume";
+import remark from "@lumeland/plugin-remark";
+import a11yEmoji from "@fec/remark-a11y-emoji";
+import rehypeRemoveComments from "rehype-remove-comments";
 
 const site = lume();
 

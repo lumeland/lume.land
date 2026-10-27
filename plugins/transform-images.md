@@ -1,8 +1,8 @@
 ---
 title: Transform Images
 description: Image manipulation plugin using Sharp
-mod: plugins/transform_images.ts
 category: images
+oldUrl: /plugins/transform_images/
 ---
 
 ## Description
@@ -26,8 +26,8 @@ The plugin reads the data assigned to the image files (specifically the
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import transformImages from "lume/plugins/transform_images.ts";
+import lume from "@lumeland/lume";
+import transformImages from "@lumeland/plugin-transform-images";
 
 const site = lume();
 
@@ -148,8 +148,8 @@ By default, the following functions are available:
 You can add more custom functions in the `_config` file. For example:
 
 ```js
-import lume from "lume/mod.ts";
-import transformImages from "lume/plugins/transform_images.ts";
+import lume from "@lumeland/lume";
+import transformImages from "@lumeland/plugin-transform-images";
 
 const site = lume();
 

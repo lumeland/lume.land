@@ -1,7 +1,6 @@
 ---
 title: PWA
 description: Generate the manifest.json file to create a Progressive Web Application.
-mod: plugins/pwa.ts
 category: standard
 ---
 
@@ -17,8 +16,8 @@ file and the minimal icons required by all platforms.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import pwa from "lume/plugins/pwa.ts";
+import lume from "@lumeland/lume";
+import pwa from "@lumeland/plugin-pwa";
 
 const site = lume();
 

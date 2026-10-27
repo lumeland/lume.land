@@ -1,8 +1,8 @@
 ---
 title: Source Maps
 description: Generate source maps files for your CSS and JS.
-mod: plugins/source_maps.ts
 category: dev
+oldUrl: /plugins/source_maps/
 ---
 
 ## Description
@@ -18,11 +18,11 @@ browser's development tools.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import sass from "lume/plugins/sass.ts";
-import postcss from "lume/plugins/postcss.ts";
-import esbuild from "lume/plugins/esbuild.ts";
-import sourceMaps from "lume/plugins/source_maps.ts";
+import lume from "@lumeland/lume";
+import sass from "@lumeland/plugin-sass";
+import postcss from "@lumeland/plugin-postcss";
+import esbuild from "@lumeland/plugin-esbuild";
+import sourceMaps from "@lumeland/plugin-source-maps";
 
 const site = lume();
 

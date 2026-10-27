@@ -12,9 +12,9 @@ are several functions for different purposes. In our example, we want to be able
 to edit a single file, so we have to use the `document()` function.
 
 ```ts
-import lumeCMS from "lume/cms/mod.ts";
+import createCMS from "@lumeland/cms";
 
-const cms = lumeCMS();
+const cms = createCMS();
 
 // Use the cms instance to configure LumeCMS
 
@@ -48,9 +48,9 @@ content of any file with front matter is always `content`). So, we need to
 create a new document in our CMS with these four values:
 
 ```js
-import lumeCMS from "lume/cms/mod.ts";
+import createCMS from "@lumeland/cms";
 
-const cms = lumeCMS();
+const cms = createCMS();
 
 cms.document("Homepage", "src:index.md", [
   "layout: hidden",

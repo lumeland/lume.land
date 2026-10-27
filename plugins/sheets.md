@@ -1,7 +1,6 @@
 ---
 title: Sheets
 description: Add support for Spreadsheets to store data.
-mod: plugins/sheets.ts
 category: data
 ---
 
@@ -32,8 +31,8 @@ in the `deno.json` file, make sure to add the following to
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import sheets from "lume/plugins/sheets.ts";
+import lume from "@lumeland/lume";
+import sheets from "@lumeland/plugin-sheets";
 
 const site = lume();
 
@@ -50,8 +49,8 @@ extension supported by SheetJS. See the
 for more info.
 
 ```js
-import lume from "lume/mod.ts";
-import sheets from "lume/plugins/sheets.ts";
+import lume from "@lumeland/lume";
+import sheets from "@lumeland/plugin-sheets";
 
 const site = lume();
 
@@ -124,8 +123,8 @@ data by the name. In this case **it works exactly as the "first" mode.**
 The default mode is `auto`, to change it to `first`:
 
 ```js
-import lume from "lume/mod.ts";
-import sheets from "lume/plugins/sheets.ts";
+import lume from "@lumeland/lume";
+import sheets from "@lumeland/plugin-sheets";
 
 const site = lume();
 

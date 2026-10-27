@@ -1,7 +1,6 @@
 ---
 title: Replace
 description: Create placeholders to replace with final values
-mod: plugins/replace.ts
 category: dev
 ---
 
@@ -17,8 +16,8 @@ for the replacements.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import replace from "lume/plugins/replace.ts";
+import lume from "@lumeland/lume";
+import replace from "@lumeland/plugin-replace";
 
 const site = lume();
 

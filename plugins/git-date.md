@@ -1,8 +1,8 @@
 ---
 title: Git date
 description: Extract the last modification time of all pages from the Git history.
-mod: plugins/git_date.ts
 category: extract
+oldUrl: /plugins/git_date/
 ---
 
 ## Description
@@ -16,8 +16,8 @@ runs a single git command to return the modified date for all files.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import gitDate from "lume/plugins/git_date.ts";
+import lume from "@lumeland/lume";
+import gitDate from "@lumeland/plugin-git-date";
 
 const site = lume();
 

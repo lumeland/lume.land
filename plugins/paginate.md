@@ -1,7 +1,6 @@
 ---
 title: Paginate
 description: Provide a helper to paginate results.
-mod: plugins/paginate.ts
 category: installed
 ---
 
@@ -64,7 +63,7 @@ If you want to change the default configuration, use the second argument of
 `lume()` function in your `_config.ts` file.
 
 ```ts
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 
 // Paginate plugin configuration
 const paginate = {

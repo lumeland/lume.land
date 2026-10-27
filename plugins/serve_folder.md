@@ -1,7 +1,6 @@
 ---
 title: Serve folder
 description: Middleware to add additional folders to the server.
-mod: middlewares/serve_folder.ts
 category: middleware
 ---
 
@@ -19,7 +18,7 @@ need a host running a Deno server, like [Deno Deploy](https://deno.com/deploy).
 Create an entry point file (for example, `serve.ts`) with the following code:
 
 ```js
-import Server from "lume/core/server.ts";
+import Server from "@lumeland/core/server.ts";
 import serve_folder from "lume/middlewares/serve_folder.ts";
 
 const server = new Server();
@@ -43,7 +42,7 @@ You can configure Lume's development server to use this middleware in the
 `_config.ts` file.
 
 ```js
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 import serve_folder from "lume/middlewares/serve_folder.ts";
 
 const site = lume({

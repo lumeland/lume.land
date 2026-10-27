@@ -1,7 +1,6 @@
 ---
 title: ePUB
 description: Output a .epub file with the site
-mod: plugins/epub.ts
 category: compress
 ---
 
@@ -24,8 +23,8 @@ Import this plugin in your `_config.ts` file to use it. The plugin needs the
 the `content.opf` manifest file:
 
 ```js
-import lume from "lume/mod.ts";
-import epub from "lume/plugins/epub.ts";
+import lume from "@lumeland/lume";
+import epub from "@lumeland/plugin-epub";
 
 const site = lume({
   prettyUrls: false, // prettyUrls don't make sense for ebooks

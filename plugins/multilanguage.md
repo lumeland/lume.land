@@ -1,7 +1,6 @@
 ---
 title: Multilanguage
 description: Create multiple language versions of the same page
-mod: plugins/multilanguage.ts
 category: i18n
 ---
 
@@ -15,8 +14,8 @@ sites.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import multilanguage from "lume/plugins/multilanguage.ts";
+import lume from "@lumeland/lume";
+import multilanguage from "@lumeland/plugin-multilanguage";
 
 const site = lume();
 
@@ -30,12 +29,12 @@ export default site;
 > [!important]
 >
 > To work properly, this plugin must be registered after other plugins that
-> modify the URLs of the pages (for example, [`basePath`](./base_path.md):
+> modify the URLs of the pages (for example, [`basePath`](./base-path.md):
 >
 > ```js
-> import lume from "lume/mod.ts";
-> import basePath from "lume/plugins/base_path.ts";
-> import multilanguage from "lume/plugins/multilanguage.ts";
+> import lume from "@lumeland/lume";
+> import basePath from "@lumeland/plugin-base-path";
+> import multilanguage from "@lumeland/plugin-multilanguage";
 >
 > site.use(basePath()); // modify url must be before
 > site.use(multilanguage({

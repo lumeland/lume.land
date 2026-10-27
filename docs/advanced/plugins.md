@@ -16,7 +16,7 @@ to all CSS pages:
 ```ts
 // _config.ts
 
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 
 const site = lume();
 
@@ -55,7 +55,7 @@ export default function (options: Options) {
 And now, we can use it in the `_config.ts` file like this:
 
 ```ts
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 import cssBanner from "./my-plugins/css_banner.ts";
 
 const site = lume();
@@ -111,7 +111,7 @@ export default function (options: Options) {
 Now the message can be changed after the plugin initialization:
 
 ```ts
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 import cssBanner from "./my-plugins/css_banner.ts";
 
 const site = lume();
@@ -142,7 +142,7 @@ export default function () {
 ```
 
 ```ts
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 import cssBanner from "./my-plugins/css_banner.ts";
 import openSource from "./my-plugins/open_source.ts";
 
@@ -175,7 +175,7 @@ import { merge } from "@LUME_URL/core/utils/object.ts";
 It's better to use the `lume/` specifier:
 
 ```js
-import { merge } from "lume/core/utils/object.ts";
+import { merge } from "@lumeland/core/utils/object.ts";
 ```
 
 This avoids duplicated versions of Lume loaded by the project because the

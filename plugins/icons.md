@@ -1,7 +1,6 @@
 ---
 title: Icons
 description: Import icons from the most popular icon libraries
-mod: plugins/icons.ts
 category: icons
 ---
 
@@ -15,8 +14,8 @@ icon libraries on demand.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import icons from "lume/plugins/icons.ts";
+import lume from "@lumeland/lume";
+import icons from "@lumeland/plugin-icons";
 
 const site = lume();
 

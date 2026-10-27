@@ -1,7 +1,6 @@
 ---
 title: TOC
 description: Generate automatically the table of contents
-mod: plugins/toc.ts
 category: navigation
 ---
 
@@ -54,8 +53,8 @@ of the headers (if needed) and the anchors.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import toc from "lume/plugins/toc.ts";
+import lume from "@lumeland/lume";
+import toc from "@lumeland/plugin-toc";
 
 const site = lume();
 
@@ -84,8 +83,8 @@ way. The plugin has two predefined functions: `headerLink` (the default
 function) and `linkInsideHeader`. To use it:
 
 ```js
-import lume from "lume/mod.ts";
-import toc, { linkInsideHeader } from "lume/plugins/toc.ts";
+import lume from "@lumeland/lume";
+import toc, { linkInsideHeader } from "@lumeland/plugin-toc";
 
 const site = lume();
 

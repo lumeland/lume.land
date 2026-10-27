@@ -1,7 +1,6 @@
 ---
 title: Redirect Activity Streams 2.0
 description: Middleware to create redirections to any AS2 bridge
-mod: middlewares/redirect_as2.ts
 category: middleware
 ---
 
@@ -22,7 +21,7 @@ for the redirection. The middleware has two helpers: `bridgyFed` and `hatsu`.
 Create an entry point file (for example, `serve.ts`) with the following code:
 
 ```ts
-import Server from "lume/core/server.ts";
+import Server from "@lumeland/core/server.ts";
 import redirectAS2, { bridgyFed } from "lume/middlewares/redirect_as2.ts";
 
 const server = new Server();

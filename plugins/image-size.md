@@ -2,6 +2,7 @@
 title: Image size
 description: Generate automatically the width and height attributes of images
 category: html
+oldUrl: /plugins/image_size/
 ---
 
 ## Description
@@ -14,8 +15,8 @@ recommended to prevent layout shift.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import imageSize from "lume/plugins/image_size.ts";
+import lume from "@lumeland/lume";
+import imageSize from "@lumeland/plugin-image-size";
 
 const site = lume();
 

@@ -1,8 +1,8 @@
 ---
 title: Minify HTML
 description: Minify the HTML code of your pages.
-mod: plugins/minify_html.ts
 category: html
+oldUrl: /plugins/minify_html/
 ---
 
 ## Description
@@ -16,8 +16,8 @@ minify CSS and JavaScript code.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import minifyHTML from "lume/plugins/minify_html.ts";
+import lume from "@lumeland/lume";
+import minifyHTML from "@lumeland/plugin-minify-html";
 
 const site = lume();
 

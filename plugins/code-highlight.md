@@ -1,8 +1,8 @@
 ---
 title: Code Highlight
 description: Code syntax highlighting using highlight.js
-mod: plugins/code_highlight.ts
 category: syntax
+oldUrl: /plugins/code_highlight/
 ---
 
 ## Description
@@ -15,8 +15,8 @@ and highlight the code syntax in any `<pre><code>` element.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import codeHighlight from "lume/plugins/code_highlight.ts";
+import lume from "@lumeland/lume";
+import codeHighlight from "@lumeland/plugin-code-highlight";
 
 const site = lume();
 
@@ -33,12 +33,12 @@ You can (and probably should) use the `languages` option key to register only
 the languages you need:
 
 ```js
-import lume from "lume/mod.ts";
-import codeHighlight from "lume/plugins/code_highlight.ts";
+import lume from "@lumeland/lume";
+import codeHighlight from "@lumeland/plugin-code-highlight";
 
 // import your preferred language
-import lang_javascript from "npm:highlight.js/lib/languages/javascript";
-import lang_bash from "npm:highlight.js/lib/languages/bash";
+import lang_javascript from "highlight.js/lib/languages/javascript";
+import lang_bash from "highlight.js/lib/languages/bash";
 
 const site = lume();
 
@@ -62,8 +62,8 @@ Highlight.js classes. This library provides some
 automatically using the `theme` option:
 
 ```ts
-import lume from "lume/mod.ts";
-import highlight from "lume/plugins/code_highlight.ts";
+import lume from "@lumeland/lume";
+import codeHighlight from "@lumeland/plugin-code-highlight";
 
 const site = lume();
 
@@ -82,8 +82,8 @@ If you want to use multiple themes (for example for dark and light mode), you
 can provide an array of themes:
 
 ```ts{title="_config.ts"}
-import lume from "lume/mod.ts";
-import codeHighlight from "lume/plugins/code_highlight.ts";
+import lume from "@lumeland/lume";
+import codeHighlight from "@lumeland/plugin-code-highlight";
 
 const site = lume();
 

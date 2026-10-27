@@ -29,7 +29,7 @@ want to generate absolute URLs.
 > [!tip]
 >
 > If you don't want to use this filter everywhere, you may be interested in the
-> [Base path plugin](./base_path.md).
+> [Base path plugin](./base-path.md).
 
 ### URLs from source files
 

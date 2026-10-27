@@ -1,7 +1,6 @@
 ---
 title: Cache Busting
 description: Implements server side cache busting
-mod: middlewares/cache_busting.ts
 category: middleware
 ---
 
@@ -25,7 +24,7 @@ need a host running a Deno server, like [Deno Deploy](https://deno.com/deploy).
 Create an entry point file (for example, `serve.ts`) with the following code:
 
 ```ts
-import Server from "lume/core/server.ts";
+import Server from "@lumeland/core/server.ts";
 import cacheBusting from "lume/middlewares/cache_busting.ts";
 
 const server = new Server();
@@ -41,7 +40,7 @@ You can configure Lume's development server to use this middleware in the
 `_config.ts` file:
 
 ```js
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 import cacheBusting from "lume/middlewares/cache_busting.ts";
 
 const site = lume({

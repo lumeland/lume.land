@@ -1,7 +1,6 @@
 ---
 title: JSON
 description: Add support for JSON or JSONC to store data and create pages.
-mod: plugins/json.ts
 category: installed
 ---
 
@@ -20,7 +19,7 @@ If you want to change the default configuration, use the second argument of
 `lume()` function in your `_config.ts` file.
 
 ```js
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 
 // JSON plugin configuration
 const json = {

@@ -16,7 +16,7 @@ This middeware must be used with the
 example, `serve.ts`) with the following code:
 
 ```ts
-import Server from "lume/core/server.ts";
+import Server from "@lumeland/core/server.ts";
 import noCache from "lume/middlewares/no_cache.ts";
 
 const server = new Server();

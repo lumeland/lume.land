@@ -22,10 +22,10 @@ For example, let's register a file system storage under the name "my_files",
 pointing to the `./files` folder:
 
 ```ts
-import lumeCMS from "lume/cms/mod.ts";
-import Fs from "lume/cms/storage/fs.ts";
+import createCMS from "@lumeland/cms";
+import Fs from "@lumeland/cms/storage/fs.ts";
 
-const cms = lumeCMS();
+const cms = createCMS();
 const storage = Fs.create(Deno.cwd() + "/files");
 
 cms.storage("src", storage);
@@ -38,9 +38,9 @@ Because the file system is the most common way to read and write data, the
 example above can be simplified as following:
 
 ```ts
-import lumeCMS from "lume/cms/mod.ts";
+import createCMS from "@lumeland/cms";
 
-const cms = lumeCMS();
+const cms = createCMS();
 
 cms.storage("src", "files");
 
@@ -60,10 +60,10 @@ directly into the Deno runtime. LumeCMS can use a `Kv` instance to store
 content. For example:
 
 ```ts
-import lumeCMS from "lume/cms/mod.ts";
-import Kv from "lume/cms/storage/kv.ts";
+import createCMS from "@lumeland/cms";
+import Kv from "@lumeland/cms/storage/kv.ts";
 
-const cms = lumeCMS();
+const cms = createCMS();
 const storage = await Kv.create();
 
 cms.storage("src", storage);
@@ -91,10 +91,10 @@ GitHub API. It's useful if you want to allow people without GitHub accounts or
 permission to edit the site data.
 
 ```ts
-import lumeCMS from "lume/cms/mod.ts";
-import GitHub from "lume/cms/storage/github.ts";
+import createCMS from "@lumeland/cms";
+import GitHub from "@lumeland/cms/storage/github.ts";
 
-const cms = lumeCMS();
+const cms = createCMS();
 
 const token = "xxx"; // A personal access token
 const storage = GitHub.create("username/repo", token);
@@ -129,10 +129,10 @@ GitHub.create("username/repo/path/to/root", token);
 It's similar to GitHub but for [GitLab](https://gitlab.com/):
 
 ```ts
-import lumeCMS from "lume/cms/mod.ts";
-import GitLab from "lume/cms/storage/gitlab.ts";
+import createCMS from "@lumeland/cms";
+import GitLab from "@lumeland/cms/storage/gitlab.ts";
 
-const cms = lumeCMS();
+const cms = createCMS();
 
 const token = "xxx"; // A personal access token
 const storage = GitLab.create("username/repo", token);
@@ -158,10 +158,10 @@ export default cms;
 It's similar to GitHub but for [Codeberg](https://codeberg.org):
 
 ```ts
-import lumeCMS from "lume/cms/mod.ts";
-import Codeberg from "lume/cms/storage/codeberg.ts";
+import createCMS from "@lumeland/cms";
+import Codeberg from "@lumeland/cms/storage/codeberg.ts";
 
-const cms = lumeCMS();
+const cms = createCMS();
 
 const token = "xxx"; // A personal access token
 const storage = Codeberg.create("username/repo", token);
@@ -188,10 +188,10 @@ Use a Sqlite database which is natively supported by Deno. You can pass the
 `DatabaseSync` instance or a path to the sqlite file:
 
 ```js
-import lumeCMS from "lume/cms/mod.ts";
-import { Sqlite } from "lume/cms/storage/sqlite.ts";
+import createCMS from "@lumeland/cms";
+import { Sqlite } from "@lumeland/cms/storage/sqlite.ts";
 
-const cms = lumeCMS();
+const cms = createCMS();
 
 cms.storage("db", Sqlite.create("my-database.db"));
 
@@ -219,10 +219,10 @@ elements (in the example, we use the field `title`). If it's not specified, the
 It creates an in-memory storage. Useful for testing purposes.
 
 ```ts
-import lumeCMS from "lume/cms/mod.ts";
-import Memory from "lume/cms/storage/memory.ts";
+import createCMS from "@lumeland/cms";
+import Memory from "@lumeland/cms/storage/memory.ts";
 
-const cms = lumeCMS();
+const cms = createCMS();
 
 const storage = Memory.create();
 
