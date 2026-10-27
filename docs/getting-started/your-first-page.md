@@ -7,25 +7,23 @@ order: 1
 ## The page file
 
 After setup Lume ([see installation instructions](../overview/installation.md)
-if you don't have the `_config.ts` and `deno.json` files), create the file
-`index.md` and add some content in
+if you don't have the `_config.ts`), the installer automatically creates the
+`index.md` file with some content in
 [Markdown](https://en.wikipedia.org/wiki/Markdown) format, for example:
 
 <lume-code>
 
 ```md {title="index.md"}
-# Welcome to my website
+# Hello world
 
-This is my first page using **Lume,** a static site generator for Deno.
-
-I hope you enjoy it.
+[Go to Lume documentation](https://lume.land)
 ```
 
 </lume-code>
 
 ## Build and open the page
 
-Run `deno task serve` in your terminal. This task does two things:
+Run `npm run serve` in your terminal. This task does two things:
 
 - It builds your site. The `index.md` file is compiled and exported as
   `index.html` in the folder `_site`.

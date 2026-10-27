@@ -11,7 +11,7 @@ root directory. If you don't have it yet, see the installation
 The minimal required code is:
 
 ```js
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 
 const site = lume();
 
@@ -301,7 +301,7 @@ The `components` object allows to configure the output files of
   css or js code.
 
 ```js
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 
 const site = lume({
   components: {
