@@ -66,7 +66,7 @@ Lume, create a site instance, and export that instance:
 <lume-code>
 
 ```js {title="_config.ts"}
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 
 const site = lume();
 
@@ -82,7 +82,7 @@ functions is `add()` which allows us to define the files we want to add.
 <lume-code>
 
 ```js {title="_config.ts"}
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 
 const site = lume();
 

@@ -1,12 +1,12 @@
 layout: layouts/landing.vto
-title: Lume, the static site generator for Deno
+title: Lume, the fast and flexible static site generator
 description: Support for multiple file formats like Markdown, YAML, JavaScript, TypeScript, JSX, Nunjucks etc.
 header:
-  title: The <span>fast & flexible</span> static site generator for Deno
+  title: The <span>fast & flexible</span> static site generator
 
 install:
   title: "Run the following to [setup Lume](./docs/overview/installation.md):"
-  code: deno run -A https://lume.land/init.ts
+  code: npm create lume
   url: /docs/getting-started/your-first-page/
 
 companies:
@@ -184,12 +184,12 @@ usage:
       <lume-code>
 
       ```ts { title="_config.ts" }
-      import lume from "lume/mod.ts";
+      import lume from "@lumeland/lume";
 
-      import lightningcss from "lume/plugins/lightningcss.ts";
-      import esbuild from "lume/plugins/esbuild.ts";
-      import svgo from "lume/plugins/svgo.ts";
-      import jsx from "lume/plugins/jsx.ts";
+      import lightningcss from "@lumeland/plugin-lightningcss";
+      import esbuild from "@lumeland/plugin-esbuild";
+      import svgo from "@lumeland/plugin-svgo";
+      import jsx from "@lumeland/plugin-jsx";
 
       const site = lume();
 
@@ -248,10 +248,6 @@ usage:
       </lume-code>
 
 features:
-  - title: HTTPS imports
-    img: /img/http-imports.svg
-    description: Forget about a node_modules folder with thousands of dependencies. Lume is built with [Deno](https://deno.com/) and HTTPS imports to download only what you use. Clean, fast and secure.
-
   - title: Zero runtime overhead
     img: /img/zero-runtime.svg
     description: Lume only exports your code. It doesn't generate any extra client-side JavaScript code.

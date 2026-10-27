@@ -17,7 +17,7 @@ step. We can do it with the following code:
 <lume-code>
 
 ```js {title="_config.ts"}
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 
 const site = lume();
 

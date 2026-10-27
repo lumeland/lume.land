@@ -133,6 +133,16 @@ patterns. For example, to download only the CSS files from the `^8.0` version:
 site.add("npm:normalize.css@^8.0/**/*.css", "/styles/normalize");
 ```
 
+If your files are from an NPM package installed locally, you can use the file URL (note that you don't need the `npm:` prefix):
+
+```js
+// Get the file:// url of the package
+const normalizeUrl = import.meta.resolve("normalize.css");
+
+// Add the file to your site
+site.add(normalizeUrl, "/styles/normalize");
+```
+
 ## Customize the destination
 
 For more fine-tuning of the file destination, you can provide a function in the

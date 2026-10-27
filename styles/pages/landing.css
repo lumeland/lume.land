@@ -113,9 +113,10 @@
   .terminal {
     margin: 5px 0;
   }
-
+  
   .terminal pre {
-    max-width: 400px;
+    flex: 1 1 auto;
+    max-width: 300px;
   }
 }
 

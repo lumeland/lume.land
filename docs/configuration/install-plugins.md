@@ -11,8 +11,8 @@ files), but there are other plugins that you can enable. For example, to add the
 import the plugin and enable it with `use()` in the config file:
 
 ```js
-import lume from "lume/mod.ts";
-import svgo from "lume/plugins/svgo.ts";
+import lume from "@lumeland/lume";
+import svgo from "@lumeland/plugin-svgo";
 
 const site = lume();
 
