@@ -24,6 +24,8 @@ core features and plugins. The file `tsconfig.json` is similar to this.
 
 - The `jsxImportSource` entry configures `@lumeland/ssx` as the library to compile JSX, TSX and MDX files. It's a library created specially for static sites.
 - `allowImportingTsExtensions` allows to import files using their extensions, which is more standard and adds compatibility with sites build with Deno that requires the extension.
+- `rewriteRelativeImportExtensions` is required by TypeScript when `allowImportingTsExtensions` is enabled.
+- `erasableSyntaxOnly` configures TypeScript to only allow syntax not requiring runtime semantics, which is the mode supported natively by Node.
 
 ## TypeScript in Templates
 

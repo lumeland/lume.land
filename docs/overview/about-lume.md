@@ -6,7 +6,7 @@ order: 0
 
 **Lume** (pronounced `/lume/` [🔈](https://ilg.usc.es/pronuncia/mp3/l/1833.mp3))
 is the [Galician](https://en.wikipedia.org/wiki/Galician_language) word for
-_fire_ but also a static site generator. Originally, it was created for [Deno](https://deno.com/) but in the version 4.0 it was ported to [Node](https://nodejs.org/).
+_fire_ but also a static site generator. It was created originally for [Deno](https://deno.com/) but in the version 4.0 it was ported to [Node](https://nodejs.org/).
 
 It's inspired by other static site generators, such as
 [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/) or
@@ -16,10 +16,6 @@ flexible.
 - It supports **multiple file formats**, like Markdown, YAML, JavaScript,
   TypeScript, JSX, Vento and Nunjucks, and it's easy to extend with more.
 - You can hook **processors** to manipulate HTML and assets, like CSS or JS.
-- **It's Deno:** Forget about managing thousands of packages in `node_modules`
-  or complex bundlers. Lume only downloads what you need. Clean, fast and
-  secure.
-
-## Launch fast with Lume Themes
-
-Want to skip the setup? Try [Lume Themes](/themes) and go live in seconds.
+- There are many [plugins](/plugins/index.yml) for common use cases.
+- A [CMS](/cms/index.md) to edit the content easily.
+- And [themes](/themes.yml) to go live in seconds.

@@ -14,12 +14,9 @@ define a variable with the name `title`:
 layout: layout.vto
 title: This is my website
 ---
-# Welcome to my website
+# Hello world
 
-This if my first page using **Lume,**
-a static site generator for Deno.
-
-I hope you enjoy it.
+[Go to Lume documentation](https://lume.land)
 ```
 
 </lume-code>
