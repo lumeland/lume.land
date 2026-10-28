@@ -25,14 +25,11 @@ router.get("/search/:id", ({ id, request }) => {
 ## Installation
 
 This middeware must be used with the
-[Lume's HTTP Server](../docs/core/16.server.md). To use it in production, you
-need a host running a Deno server, like [Deno Deploy](https://deno.com/deploy).
-
-Create an entry point file (for example, `serve.ts`) with the following code:
+[Lume's HTTP Server](../docs/core/16.server.md):
 
 ```js
 import Server from "@lumeland/core/server.ts";
-import Router from "lume/middlewares/router.ts";
+import Router from "@lumeland/plugin-router";
 
 // Create the router
 const router = new Router();
