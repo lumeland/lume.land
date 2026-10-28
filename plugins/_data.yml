@@ -53,6 +53,10 @@ categories:
   html:
     title: HTML
     description: HTML utils and optimization.
+    external:
+      - name: Privatus Analytics
+        description: Adds the cookieless [Privatus Analytics](https://privatusanalytics.com) script to every page.
+        url: https://github.com/Privatus-Analytics/lume
   icons:
     title: Icons
     description: Plugins to handle icons.
