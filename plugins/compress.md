@@ -54,11 +54,11 @@ or frameworks like
 [Fastify](https://github.com/fastify/fastify-static?tab=readme-ov-file#precompressed),
 or [Koa](https://github.com/koajs/static?tab=readme-ov-file#options).
 
-This plugin also provides the `precompress` middleware that you can use to serve files with Lume's server:
+This plugin also provides a middleware that you can use to serve files with Lume's server:
 
 ```ts
 import Server from "@lumeland/core/server.ts";
-import precompress from "lume/middlewares/precompress.ts";
+import precompress from "@lumeland/plugin-compress/middleware.ts";
 
 const server = new Server();
 
