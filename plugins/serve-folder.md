@@ -2,6 +2,7 @@
 title: Serve folder
 description: Middleware to add additional folders to the server.
 category: middleware
+oldUrl: /plugins/serve_folder/
 ---
 
 ## Description
@@ -12,14 +13,11 @@ files stored in a different place.
 ## Installation
 
 This middeware must be used with the
-[Lume's HTTP Server](../docs/core/16.server.md). To use it in production, you
-need a host running a Deno server, like [Deno Deploy](https://deno.com/deploy).
-
-Create an entry point file (for example, `serve.ts`) with the following code:
+[Lume's HTTP Server](../docs/core/16.server.md):
 
 ```js
 import Server from "@lumeland/core/server.ts";
-import serve_folder from "lume/middlewares/serve_folder.ts";
+import serve_folder from "@lumeland/plugin-serve-folder";
 
 const server = new Server();
 
@@ -43,7 +41,7 @@ You can configure Lume's development server to use this middleware in the
 
 ```js
 import lume from "@lumeland/lume";
-import serve_folder from "lume/middlewares/serve_folder.ts";
+import serve_folder from "@lumeland/plugin-serve-folder";
 
 const site = lume({
   server: {
