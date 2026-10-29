@@ -288,3 +288,20 @@ the `_dest` directory, run `surge` to login/register and upload the site.
 Service that allows to host Lume projects among other popular frameworks.
 [Follow the instructions](https://www.clever-cloud.com/developers/guides/lume-deno/)
 in the documentation site.
+
+## deed.page
+
+[deed.page](https://deed.page) is a static site host that doesn't need an
+account. Build the site, pack the `_site` folder and upload it with one HTTP
+`PUT`:
+
+```sh
+deno task build
+tar -C _site -czf site.tar.gz .
+curl -T site.tar.gz "https://deed.page/v1/sites?slug=my-lume-site"
+```
+
+The response contains the live `https://my-lume-site.deed.page/` URL and a
+token. Send the token as `Authorization: Bearer <token>` to publish updates to
+the same slug. See the [deed.page docs](https://deed.page/docs) for limits and
+larger uploads.
