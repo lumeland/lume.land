@@ -578,7 +578,7 @@ testimonials:
       avatar: /img/avatars/testimonials/dragonwocky.webp
       date: May 31, 2022
       text: |
-        Deno is awesome. If you use it right, you&#39;ll never want to go back to Node - and Lume (<a href="https://t.co/EIFgNe07Sc">https://t.co/EIFgNe07Sc</a>) does it right: powerful, developer-friendly, super simple, and extremely flexible static site generation.
+        Lume (<a href="https://lume.land/">https://lume.land/</a>) does it right: powerful, developer-friendly, super simple, and extremely flexible static site generation.
 
     - url: https://twitter.com/bradenthehair/status/1531357349356654592
       author: Braden East (@bradenthehair)
