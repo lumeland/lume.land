@@ -305,3 +305,19 @@ The response contains the live `https://my-lume-site.deed.page/` URL and a
 token. Send the token as `Authorization: Bearer <token>` to publish updates to
 the same slug. See the [deed.page docs](https://deed.page/docs) for limits and
 larger uploads.
+
+## Getwebup
+
+[Getwebup](https://www.getwebup.in/web-hosting) cPanel hosting serves a Lume
+site as static files with LiteSpeed. Build the site, then zip the contents of
+the `_site` folder (not the folder itself). In cPanel's File Manager, upload the
+zip to `public_html`, extract it there and delete the zip.
+
+To serve the `404.html` page that Lume builds for missing pages, add this line
+to `public_html/.htaccess` (create the file if it doesn't exist):
+
+```apache
+ErrorDocument 404 /404.html
+```
+
+Lume's pretty URLs (`/about/` is `about/index.html`) work without rewrite rules.
