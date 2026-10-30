@@ -254,7 +254,7 @@ features:
 
   - title: Deploy anywhere
     img: /img/deploy.svg
-    description: Static sites can be hosted (for free) anywhere. GitHub/GitLab Pages, Deno Deploy, Vercel, Netlify… [Explore ways to deploy](/docs/advanced/deployment.md)
+    description: Static sites can be hosted (for free) anywhere. GitHub/GitLab/Codeberg Pages (git-pages), Netlify, Vercel, any VPS… [Explore ways to deploy](/docs/advanced/deployment.md)
 
   - title: Easy to extend
     img: /img/extend.svg
@@ -405,8 +405,7 @@ testimonials:
       date: March 21, 2025
       text: |
         Just ported my personal website (muens.io) from Astro to <a href="https://bsky.app/profile/lume.land">@lume.land</a> and boy what a delightful experience that was.<br><br>
-        So if you haven't checked lume.land already, then I highly encourage you to do so!<br><br>
-        Also Deno is an absolutely amazing JavaScript Runtime you should take a look at as well.
+        So if you haven't checked lume.land already, then I highly encourage you to do so!
 
     - url: https://x.com/kamilogorek/status/1881632439388532799
       author: Kamil Ogórek (@kamilogorek)
