@@ -8,11 +8,12 @@ We welcome all contributions submitted as pull requests.
 
 Before creating a pull request, please read these instructions:
 
-- Make sure you have
-  [Deno installed](https://docs.deno.com/runtime/getting_started/installation/).
+- Make sure you have [Node installed](https://nodejs.org/en/download).
 - One pull request per feature. If you want to do more than one thing, send
   multiple pull requests.
 - Ensure your code is working properly.
 - Document any change in your PR description.
-- Run `deno fmt` to fix the code format before committing.
-- Run `deno lint` to check linting before committing.
+- For now, the next two steps are only necessary when working on Lume core, we
+  have not added `fmt` or `lint` steps for this v4 `lume.land` repo yet:
+  - Run `pnpm run fmt` to format the code with `oxfmt` before committing.
+  - Run `pnpm run lint` to lint the code with `oxlint` before committing.
