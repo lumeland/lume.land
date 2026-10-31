@@ -7,9 +7,9 @@ order: 0
 LumeCMS instantation accepts an object with some configuration options:
 
 ```js
-import lumeCMS from "lume/cms/mod.ts";
+import createCMS from "@lumeland/cms";
 
-const cms = lumeCMS({
+const cms = createCMS({
   /* Options */
 });
 ```
@@ -42,9 +42,9 @@ This is an object to configure the CMS website. You can assign a name, a
 description, URL and a body, that will be visible in the homepage:
 
 ```js
-import lumeCMS from "lume/cms/mod.ts";
+import createCMS from "@lumeland/cms";
 
-const cms = lumeCMS({
+const cms = createCMS({
   site: {
     name: "My blog CMS",
     description: "Here I can edit the content of my blog",
@@ -68,7 +68,7 @@ A string that you can use to include extra HTML code in the CMS. Useful to
 customize the appearance:
 
 ```js
-const cms = lumeCMS({
+const cms = createCMS({
   extraHead: `
 <style>
   body {
@@ -91,7 +91,7 @@ folder `./my-custom-stuff`, so the file `/admin/custom/styles.css` is resolved
 to `./my-custom-stuff/styles.css`.
 
 ```js
-const cms = lumeCMS({
+const cms = createCMS({
   extraHead: '<link rel="stylesheet" href="/admin/custom/styles.css">',
   staticFolders: {
     custom: "./my-custom-stuff",
@@ -112,7 +112,7 @@ Lume set this option automatically but it can be useful if you're using the CMS
 without Lume.
 
 ```js
-const cms = lumeCMS({
+const cms = createCMS({
   previewUrl(path: string) {
     if (path === "/index.md") return "/";
     if (path === "/about.md") return "/about/";
@@ -130,7 +130,7 @@ Lume set this option automatically but it can be useful if you're using the CMS
 without Lume.
 
 ```js
-const cms = lumeCMS({
+const cms = createCMS({
   sourcePath(url: string) {
     if (url === "/") return "/index.md";
     if (url === "/about/") return "/about.md";

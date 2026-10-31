@@ -1,7 +1,6 @@
 ---
 title: PostCSS
 description: Transform your CSS code with PostCSS.
-mod: plugins/postcss.ts
 category: css
 ---
 
@@ -15,8 +14,8 @@ The `PostCSS` plugin loads and transforms your CSS files using the
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import postcss from "lume/plugins/postcss.ts";
+import lume from "@lumeland/lume";
+import postcss from "@lumeland/plugin-postcss";
 
 const site = lume();
 
@@ -35,8 +34,8 @@ Use the property `plugins` add more plugins. For example, to use the
 [postcss-nesting](https://www.npmjs.com/package/postcss-nesting) plugin:
 
 ```js
-import postcss from "lume/plugins/postcss.ts";
-import nesting from "npm:postcss-nesting";
+import postcss from "@lumeland/plugin-postcss";
+import nesting from "postcss-nesting";
 
 site.use(postcss({
   plugins: [nesting()],

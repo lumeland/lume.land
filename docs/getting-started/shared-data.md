@@ -36,12 +36,9 @@ layout: layout.vto
 ---
 title: This is my website
 ---
-# Welcome to my website
+# Hello world
 
-This is my first page using **Lume,**
-a static site generator for Deno.
-
-I hope you enjoy it.
+[Go to Lume documentation](https://lume.land)
 ```
 
 ```yml { title="second-page.md" }

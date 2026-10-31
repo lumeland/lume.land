@@ -1,7 +1,6 @@
 ---
 title: Router
 description: Middleware to provide a simple server-side router.
-mod: middlewares/router.ts
 category: middleware
 ---
 
@@ -26,14 +25,11 @@ router.get("/search/:id", ({ id, request }) => {
 ## Installation
 
 This middeware must be used with the
-[Lume's HTTP Server](../docs/core/16.server.md). To use it in production, you
-need a host running a Deno server, like [Deno Deploy](https://deno.com/deploy).
-
-Create an entry point file (for example, `serve.ts`) with the following code:
+[Lume's HTTP Server](../docs/core/16.server.md):
 
 ```js
-import Server from "lume/core/server.ts";
-import Router from "lume/middlewares/router.ts";
+import Server from "@lumeland/core/server.ts";
+import Router from "@lumeland/plugin-router";
 
 // Create the router
 const router = new Router();
@@ -56,7 +52,7 @@ You can configure Lume's development server to use this middleware in the
 `Router` instance:
 
 ```js
-import lume from "lume/mod.ts";
+import lume from "@lumeland/lume";
 import myRouter from "./my-router.ts";
 
 const site = lume({

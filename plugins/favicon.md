@@ -1,7 +1,6 @@
 ---
 title: Favicon
 description: Create all favicons needed automatically using a svg file as the source
-mod: plugins/favicon.ts
 category: images
 ---
 
@@ -30,8 +29,8 @@ article to give priority to SVG format.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import favicon from "lume/plugins/favicon.ts";
+import lume from "@lumeland/lume";
+import favicon from "@lumeland/plugin-favicon";
 
 const site = lume();
 

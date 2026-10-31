@@ -1,7 +1,6 @@
 ---
 title: JSX
 description: Create pages and layouts with JSX.
-mod: plugins/jsx.ts
 category: template
 ---
 
@@ -22,8 +21,8 @@ the browser (like SPAs), use the [ESbuild](./esbuild.md) plugin.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import jsx from "lume/plugins/jsx.ts";
+import lume from "@lumeland/lume";
+import jsx from "@lumeland/plugin-jsx";
 
 const site = lume();
 

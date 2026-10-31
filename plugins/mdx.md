@@ -1,7 +1,6 @@
 ---
 title: MDX
 description: Use MDX to create pages.
-mod: plugins/mdx.ts
 category: template
 ---
 
@@ -17,8 +16,8 @@ extension.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import mdx from "lume/plugins/mdx.ts";
+import lume from "@lumeland/lume";
+import mdx from "@lumeland/plugin-mdx";
 
 const site = lume();
 
@@ -34,8 +33,8 @@ default it uses the _GitHub-flavored markdown_, but you can use the
 `remarkPlugins`, `recmaPlugins` and `rehypePlugins` options to add more:
 
 ```js
-import lume from "lume/mod.ts";
-import mdx from "lume/plugins/mdx.ts";
+import lume from "@lumeland/lume";
+import mdx from "@lumeland/plugin-mdx";
 import a11yEmoji from 'npm:@fec/remark-a11y-emoji';
 import rehypeRemoveComments from 'npm:rehype-remove-comments@5';
 
@@ -80,8 +79,8 @@ You can use the `components` option to overwrite or add additional components.
 For example, to convert all `h1` to `h2`:
 
 ```js
-import lume from "lume/mod.ts";
-import mdx from "lume/plugins/mdx.ts";
+import lume from "@lumeland/lume";
+import mdx from "@lumeland/plugin-mdx";
 
 const site = lume();
 

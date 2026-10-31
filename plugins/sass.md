@@ -1,7 +1,6 @@
 ---
 title: SASS
 description: Compile SCSS files to CSS.
-mod: plugins/sass.ts
 category: css
 ---
 
@@ -15,8 +14,8 @@ The `SASS` plugin loads and transforms your `.scss` files using the
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import sass from "lume/plugins/sass.ts";
+import lume from "@lumeland/lume";
+import sass from "@lumeland/plugin-sass";
 
 const site = lume();
 

@@ -162,8 +162,7 @@ are plenty of CMS for static sites, and here are some recommendations:
 - [LumeCMS](../../cms/index.md) can be a good solution, especially if your site
   is built with Lume (although it can work with any static site).
 - [DecapCMS](https://decapcms.org/) is an open-source CMS that can be used with
-  any static site generator. Lume [has a plugin](../../plugins/decap_cms.md) to
-  use it easier.
+  any static site generator.
 - [CloudCannon](https://cloudcannon.com/) is a CMS as a service for static
   sites. It's ideal if you need advanced features for publishers.
   [It supports Lume,](https://cloudcannon.com/lume-cms/) among many other static

@@ -4,53 +4,28 @@ description: How to use Lume with TypeScript
 order: 6
 ---
 
-Lume is built on top of Deno, so it has native support for
+Lume is built on top of Node v24, so it has native support for
 [TypeScript](https://www.typescriptlang.org/) and comes with built-in types for
-core features and plugins. The file `deno.json` includes the Lume types in the
-`compilerOptions.types` array.
+core features and plugins. The file `tsconfig.json` is similar to this.
 
 ```json
 {
-  "imports": {
-    "lume/": "@LUME_URL/"
-  },
-  "tasks": {
-    "lume": "deno run lume/cli.ts",
-    "build": "deno task lume",
-    "serve": "deno task lume -s"
-  },
   "compilerOptions": {
-    "types": [
-      "lume/types.ts"
-    ]
-  }
-}
-```
-
-The `lume/types.ts` file exposes the global namespace `Lume` that you can use in
-your TypeScript files.
-
-> [!note]
->
-> [Go to Overview of TypeScript in Deno](https://docs.deno.com/runtime/manual/advanced/typescript/overview)
-> for more info.
-
-### TSX pages
-
-To create pages and layouts with TSX, you can use the Lume [JSX](/plugins/jsx/)
-plugin and configure the `deno.json` file:
-
-```jsonc
-{
-  "imports": {
-    "lume/jsx-runtime": "@SSX_URL/jsx-runtime.ts"
-  },
-  "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
     "jsx": "react-jsx",
-    "jsxImportSource": "lume"
-  }
+    "jsxImportSource": "@lumeland/ssx",
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "erasableSyntaxOnly": true,
+  },
 }
 ```
+
+- The `jsxImportSource` entry configures `@lumeland/ssx` as the library to compile JSX, TSX and MDX files. It's a library created specially for static sites.
+- `allowImportingTsExtensions` allows to import files using their extensions, which is more standard and adds compatibility with sites build with Deno that requires the extension.
+- `rewriteRelativeImportExtensions` is required by TypeScript when `allowImportingTsExtensions` is enabled.
+- `erasableSyntaxOnly` configures TypeScript to only allow syntax not requiring runtime semantics, which is the mode supported natively by Node.
 
 ## TypeScript in Templates
 

@@ -1,7 +1,6 @@
 ---
 title: Sitemap
 description: Generate a sitemap automatically for your site
-mod: plugins/sitemap.ts
 category: seo
 ---
 
@@ -22,8 +21,8 @@ it's easier to discover for the search engines.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import sitemap from "lume/plugins/sitemap.ts";
+import lume from "@lumeland/lume";
+import sitemap from "@lumeland/plugin-sitemap";
 
 const site = lume();
 
@@ -92,7 +91,7 @@ site.use(sitemap({
 > use [Git Last Updated](../docs/creating-pages/page-data.md#date) value:
 >
 > ```js
-> import { getGitDate } from "lume/core/utils/date.ts";
+> import { getGitDate } from "@lumeland/core/utils/date.ts";
 > site.preprocess([".html"], (pages) => {
 >   for (const page of pages) {
 >     const { entry } = page.src;
@@ -114,9 +113,9 @@ It's possible generate sitemaps for sites with multiple languages using the
 [multilanguage](./multilanguage.md) plugin:
 
 ```js
-import lume from "lume/mod.ts";
-import multilanguage from "lume/plugins/multilanguage.ts";
-import sitemap from "lume/plugins/sitemap.ts";
+import lume from "@lumeland/lume";
+import multilanguage from "@lumeland/plugin-multilanguage";
+import sitemap from "@lumeland/plugin-sitemap";
 
 const site = lume();
 

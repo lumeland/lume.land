@@ -1,0 +1,64 @@
+---
+title: Relative URLs
+description: Convert all URLs to relative.
+category: url
+oldUrl: /plugins/relative_urls/
+---
+
+## Description
+
+The `relative_urls` plugin converts all URLs in your HTML and CSS files to
+relative, so you can publish the same site under different domains,
+subdirectories, or even protocols (like opening the site from the filesystem
+under `file://`).
+
+## Installation
+
+Import this plugin in your `_config.ts` file to use it:
+
+```js
+import lume from "@lumeland/lume";
+import relativeUrls from "@lumeland/plugin-relative-urls";
+
+const site = lume();
+
+site.use(relativeUrls());
+
+export default site;
+```
+
+## Example
+
+The plugin converts all internal URLs of your site to relative URLs. For
+example:
+
+<lume-code>
+
+```html {title="Input"}
+<!-- /articles/my-first-article/ -->
+<a href="/articles/my-second-article/">Go to the second article</a>
+```
+
+```html {title="Output"}
+<!-- /articles/my-first-article/ -->
+<a href="../my-second-article/">Go to the second article</a>
+```
+
+</lume-code>
+
+This plugin changes not only the `<a>` elements, but any element with the `href`
+attribute (`link`, `area`) or `src` (`img`, `video`, `audio`, etc). It also
+detect `@import` and `url()` functions in CSS files.
+
+## `relativeUrl` helper
+
+The plugin also register the `relativeUrl`, useful to manually generate relative
+urls:
+
+```vento
+Relative from this page:
+{{ "/articles/my-second-article/" |> relativeUrl }}
+
+Relative from other page:
+{{ "/articles/my-second-article/" |> relativeUrl("/from/page/") }}
+```

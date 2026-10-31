@@ -1,0 +1,54 @@
+---
+title: Basic Auth
+description: Implements HTTP Basic Authentication
+category: middleware
+oldUrl: /plugins/basic_auth/
+---
+
+## Description
+
+Middleware to protect the access to the site with
+[basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication).
+
+## Installation
+
+This middeware must be used with the
+[Lume's HTTP Server](../docs/core/16.server.md):
+
+```ts
+import Server from "@lumeland/core/server.ts";
+import basicAuth from "@lumeland/plugin-basic-auth.ts";
+
+const server = new Server();
+
+server.use(basicAuth({
+  users: {
+    user1: "password1",
+    user2: "password2",
+  },
+}));
+
+server.start();
+```
+
+### Local development
+
+Configure Lume's development server to use this middleware in the `_config.ts`
+file:
+
+```js
+import lume from "@lumeland/lume";
+import basicAuth from "@lumeland/plugin-basic-auth.ts";
+
+const site = lume({
+  server: {
+    middlewares: [
+      basicAuth({
+        users: { demo: "1234" },
+      }),
+    ],
+  },
+});
+
+export default site;
+```

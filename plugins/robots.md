@@ -1,7 +1,6 @@
 ---
 title: Robots
 description: Plugin to create the robots.txt file automatically
-mod: plugins/robots.ts
 category: seo
 ---
 
@@ -16,8 +15,8 @@ data scrappers) have access to the website.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import robots from "lume/plugins/robots.ts";
+import lume from "@lumeland/lume";
+import robots from "@lumeland/plugin-robots";
 
 const site = lume();
 

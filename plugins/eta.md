@@ -1,7 +1,6 @@
 ---
 title: Eta
 description: Use the template engine Eta to build pages.
-mod: plugins/eta.ts
 category: template
 ---
 
@@ -16,8 +15,8 @@ and layouts.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import eta from "lume/plugins/eta.ts";
+import lume from "@lumeland/lume";
+import eta from "@lumeland/plugin-eta";
 
 const site = lume();
 

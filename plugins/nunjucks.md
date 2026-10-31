@@ -1,7 +1,6 @@
 ---
 title: Nunjucks
 description: Use the Nunjucks template engine to create pages and layouts.
-mod: plugins/nunjucks.ts
 enabled: false
 category: template
 ---
@@ -17,8 +16,8 @@ to create pages and layouts.
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import nunjucks from "lume/plugins/nunjucks.ts";
+import lume from "@lumeland/lume";
+import nunjucks from "@lumeland/plugin-nunjucks";
 
 const site = lume();
 

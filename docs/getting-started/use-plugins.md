@@ -11,7 +11,7 @@ of [plugins](/plugins/).
 
 Plugins provide an extremely simple interface to configure Lume to perform
 operations like [transpile JavaScript](../../plugins/esbuild.md),
-[transform images](../../plugins/transform_images.md),
+[transform images](../../plugins/transform-images.md),
 [generate site maps](../../plugins/sitemap.md), etc. Plugins cover the common
 problems and tasks you have to face creating websites.
 
@@ -28,8 +28,8 @@ To use this plugin in Lume, import it in the `_config.ts` file and enable it
 with the `use()` function:
 
 ```js
-import lume from "lume/mod.ts";
-import lightningCSS from "lume/plugins/lightningcss.ts";
+import lume from "@lumeland/lume";
+import lightningCSS from "@lumeland/plugin-lightningcss";
 
 const site = lume();
 

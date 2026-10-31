@@ -1,7 +1,6 @@
 ---
 title: KaTeX
 description: TeX math rendering in HTML
-mod: plugins/katex.ts
 category: html
 ---
 
@@ -33,8 +32,8 @@ Or adding the `language-math` directly to the HTML element containing the code:
 Import this plugin in your `_config.ts` file to use it:
 
 ```js
-import lume from "lume/mod.ts";
-import katex from "lume/plugins/katex.ts";
+import lume from "@lumeland/lume";
+import katex from "@lumeland/plugin-katex";
 
 const site = lume();
 

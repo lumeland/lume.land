@@ -52,7 +52,7 @@ radar).
 
 Image
 : There's the
-[Transform_images plugin](../../plugins/transform_images.md) for that.
+[Transform_images plugin](../../plugins/transform-images.md) for that.
 
 Cache assets
 : There isn't a plugin for that.
