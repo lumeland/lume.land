@@ -73,9 +73,8 @@ site.use(esbuild({
 It's recommended to register all NPM/JSR dependencies in the import map, in
 order to avoid issues in CI environments like Netlify.
 
-For example, the following import makes `esbuild` to download the package from
-NPM and can cause errors if the Deno's cache folder doesn't have writing
-permissions:
+For example, the following import makes `esbuild` download the package from NPM
+and can cause errors if Node's cache folder doesn't have write permissions:
 
 ```js
 import "npm:invokers-polyfill@1.0.3";
