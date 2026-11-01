@@ -4,10 +4,6 @@ description: Using the command line interface of Lume
 order: 2
 ---
 
-## Setup Lume CLI on your computer
-
-Lume registers the `lume` binary in your project and the `build` and `serve` scripts.
-
 ## Build the site
 
 Run the following to build your website:
@@ -99,12 +95,27 @@ Use the `--inspect, -i` flag to start an
 you can open the `chrome://inspect` URL in any Chromium-based browser and add
 breakpoints to debug your code:
 
-```sh
-npx lume build --inspect
+<lume-code>
+
+```sh {title="npm"}
+npm run build -- --inspect
 ```
 
-The flag `--dry-run` build the site without writting the output in the disk and
-return an error if the build generated any error, which is useful for CI
+```sh {title="pnpm"}
+pnpm build --inspect
+```
+
+```sh {title="yarn"}
+yarn build --inspect
+```
+
+> [!note]
+>
+> Use the keyword [`debugger`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) to create a breakpoint.
+
+</lume-code>
+
+The flag `--dry-run` build the site without writting the output in the disk returning an error if the build generated any error, which is useful for CI
 testing:
 
 <lume-code>

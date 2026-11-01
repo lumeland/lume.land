@@ -160,7 +160,8 @@
 
 /** Points */
 .landing-features {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -168,7 +169,12 @@
   color: var(--color-foreground-1);
   row-gap: var(--row-gap-1);
   column-gap: var(--column-gap-2);
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-around;
+  text-align: center;
+
+  > * {
+    max-width: 300px;
+  }
 
   & h3 {
     font: var(--text-title);
@@ -178,7 +184,7 @@
   }
   & svg {
     display: block;
-    margin: 0 0 1em;
+    margin: 0 auto 1em;
     width: 150px;
     height: 150px;
     opacity: 0.9;
