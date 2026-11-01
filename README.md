@@ -3,7 +3,8 @@
 [![Lume version](https://img.shields.io/github/v/release/lumeland/lume?logo=github&label=Lume)](https://github.com/lumeland/lume/releases)
 
 This is the documentation site for [Lume](https://lume.land/), static site
-generator for [Deno](https://deno.com/) 🦕.
+generator for [Node](https://nodejs.org/). Previous Lume versions were available
+for Deno.
 
 ## Contributing
 
