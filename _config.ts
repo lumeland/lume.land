@@ -94,19 +94,19 @@ site
       minify_css: false, // https://github.com/wilsonzlin/minify-html/issues/173
     },
   }))
-  .remoteFile(
+  .remote(
     "scripts/components/lume_menu.js",
     "https://cdn.jsdelivr.net/npm/@oom/horizontal-menu@0.1.0/src/menu.js",
   )
-  .remoteFile(
+  .remote(
     "static/docsearch/index.js",
     "https://cdn.jsdelivr.net/npm/@docsearch/js@3.8.2/dist/umd/index.js",
   )
-  .remoteFile(
+  .remote(
     "static/docsearch/style.css",
     "https://cdn.jsdelivr.net/npm/@docsearch/css@3.8.2/dist/style.css",
   );
-  // .remoteFile(
+  // .remote(
   //   "img/contrib.svg",
   //   "https://contrib.rocks/image?repo=lumeland/lume",
   // );
