@@ -1,3 +1,17 @@
+.navbar-banner {
+  background-color: var(--color-red-500);
+  margin-inline: calc(var(--margin) * -1);
+  padding: 1rem var(--margin);
+  text-align: center;
+  color: white;
+
+  p {
+    margin: 0;
+  }
+  a {
+    color: inherit;
+  }
+}
 .navbar-container {
   background-color: var(--color-background-a);
   position: sticky;
