@@ -26,7 +26,7 @@ import createCMS from "@lumeland/cms";
 import Fs from "@lumeland/cms/storage/fs.ts";
 
 const cms = createCMS();
-const storage = Fs.create(Deno.cwd() + "/files");
+const storage = Fs.create(process.cwd() + "/files");
 
 cms.storage("src", storage);
 
@@ -49,40 +49,9 @@ export default cms;
 
 As you can see, if you define a string as the storage, LumeCMS assume it's a
 folder name, so the file system storage is used automatically. Note also that
-you don't need to prepend `Deno.cwd()` to the folder name, because the value of
-[root option](./options.md#root) (which by default is `Deno.cwd()`) is used as
+you don't need to prepend `process.cwd()` to the folder name, because the value of
+[root option](./options.md#root) (which by default is `process.cwd()`) is used as
 the base path.
-
-## KV
-
-[Deno Kv](https://docs.deno.com/deploy/kv/manual) is a key-value database built
-directly into the Deno runtime. LumeCMS can use a `Kv` instance to store
-content. For example:
-
-```ts
-import createCMS from "@lumeland/cms";
-import Kv from "@lumeland/cms/storage/kv.ts";
-
-const cms = createCMS();
-const storage = await Kv.create();
-
-cms.storage("src", storage);
-
-export default cms;
-```
-
-> [!note]
->
-> If you run into `TypeError: Deno.openKv is not a function`, it means
-> `Deno.openKv() is currently an unstable API`. You need to add the unstable key
-> in deno.json
-> ([info](https://docs.deno.com/runtime/reference/cli/unstable_flags/#configuring-flags-in-deno.json)):
->
-> ```
-> {
->   "unstable": ["kv"]
-> }
-> ```
 
 ## GitHub
 
@@ -92,7 +61,7 @@ permission to edit the site data.
 
 ```ts
 import createCMS from "@lumeland/cms";
-import GitHub from "@lumeland/cms/storage/github.ts";
+import GitHub from "@lumeland/cms-github-storage";
 
 const cms = createCMS();
 

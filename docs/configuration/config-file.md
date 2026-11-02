@@ -98,7 +98,7 @@ const site = lume({
 > [!important]
 >
 > If this value is defined in the `_config.ts` file, it's ignored by the local
-> server (started with `deno task lume --serve`), which always uses
+> server (started with `npm run serve`), which always uses
 > `http://localhost:3000` (or the defined port if you change it).
 >
 > To configure a different location in the server mode, use the `--location`

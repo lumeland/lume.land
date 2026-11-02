@@ -7,21 +7,21 @@ description: How to deploy a site built with Lume.
 
 This is the simplest way to deploy a site: just build the site and upload it to
 your server with [rsync](https://en.wikipedia.org/wiki/Rsync). An easy way is by
-creating a deno task in the `deno.json` file:
+creating a deno task in the `package.json` file:
 
 ```json
 {
-  "tasks": {
-    "deploy": "deno task build && rsync -r _site/ user@my-site.com:~/www"
+  "scripts": {
+    "deploy": "lume build && rsync -r _site/ user@my-site.com:~/www"
   }
 }
 ```
 
-The task **deploy** task executes two commands: It builds the site and uploads
+The script **deploy** executes two commands: It builds the site and uploads
 it to the server. Now, to build and deploy your site, just run:
 
 ```sh
-deno task deploy
+npm run deploy
 ```
 
 ## GitHub Pages
@@ -52,13 +52,11 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v4
 
-      - name: Setup Deno environment
-        uses: denoland/setup-deno@v2
-        with:
-          cache: true
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
 
       - name: Build site
-        run: deno task build
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -84,14 +82,14 @@ configuration with the following code:
 <lume-code>
 
 ```yml {title=".gitlab-ci.yml"}
-image: denoland/deno
+image: node:lts
 
 stages:
   - pages
 
 pages:
   stage: pages
-  script: deno task build --dest=public
+  script: npm run build -- --dest=public
 
   artifacts:
     paths:
@@ -130,13 +128,11 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v5
 
-      - name: Setup Deno environment
-        uses: https://github.com/denoland/setup-deno@v2
-        with:
-          cache: true
+      - name: Setup Node.js
+        uses: https://github.com/actions/setup-node@v7
 
       - name: Build site
-        run: deno task build
+        run: npm run build
       - uses: https://codeberg.org/git-pages/action@v2
         with:
           site: "https://${{ forge.repository_owner }}.codeberg.page/repo-name"
@@ -146,21 +142,7 @@ jobs:
 
 </lume-code>
 
-## Deno Deploy
-
-[Deno Deploy](https://deno.com/deploy) is a distributed deploy system provided
-by Deno that auto-detects Lume sites. You only have to connect your GitHub
-repository and that's all! (the build command is automatically configured to
-`deno task build`).
-
 ## Netlify
-
-According to the
-["Available software at build time"](https://docs.netlify.com/configure-builds/available-software-at-build-time/#tools)
-page at Netlify's documentation website, Deno is one of several supported
-runtimes when building. But at the moment of writing this, only Deno v1 is
-supported. In order to build your project, you'll need to tell Netlify which
-command to run at build time, which is `deno task build` in this case.
 
 Create a `netlify.toml` file in your repository with the following code:
 
@@ -169,27 +151,17 @@ Create a `netlify.toml` file in your repository with the following code:
 ```toml {title="netlify.toml"}
 [build]
   publish = "_site"
-  command = "deno task build"
-```
-
-```toml {title="Latest version of Deno"}
-[build]
-  publish = "_site"
-  command = """
-  curl -fsSL https://deno.land/install.sh | sh && \
-  /opt/buildhome/.deno/bin/deno task build \
-"""
+  command = "npm run build"
 ```
 
 </lume-code>
 
 ## Vercel
 
-[Vercel](https://vercel.com/), doesn't have Deno available by default, so the
-build command must install it.
+Set the following build command:
 
 ```sh
-curl -fsSL https://deno.land/install.sh | sh && /vercel/.deno/bin/deno task build
+npm run build
 ```
 
 Remember also to configure the output directory to `_site`.
@@ -200,7 +172,7 @@ To deploy your Lume site with [Cloudflare Pages](https://pages.cloudflare.com/),
 configure the build command as follows:
 
 ```sh
-curl -fsSL https://deno.land/install.sh | sh && /opt/buildhome/.deno/bin/deno task build
+npm run build
 ```
 
 Remember to configure the output directory to `_site`.
@@ -211,7 +183,7 @@ To deploy your Lume site with [Render](https://render.com/), create a new
 _Static Site_ project and configure the build command as follows:
 
 ```sh
-curl -fsSL https://deno.land/install.sh | sh && /opt/render/.deno/bin/deno task build
+npm run build
 ```
 
 Configure the output directory to `_site`.
@@ -220,8 +192,8 @@ Configure the output directory to `_site`.
 
 [Statichost](https://www.statichost.eu/) is an European static site hosting with
 Privacy and GDPR-compliancy from the ground up. To upload your site on
-statichost, configure the Docker image to `denoland/deno`, the build command
-`deno task build` and the publish directory to `_site`.
+statichost, configure the Docker image to `node:lts`, the build command
+`npm run build` and the publish directory to `_site`.
 
 ## AWS Amplify
 
@@ -236,7 +208,7 @@ frontend:
   phases:
     build:
       commands:
-        - curl -fsSL https://deno.land/install.sh | sh /root/.deno/bin/deno task build
+        - npm run build
   artifacts:
     baseDirectory: /_site
     files:
@@ -255,25 +227,9 @@ AWS control panel.
 
 [Kinsta](https://kinsta.com/) is a hosting service that allows hosting
 [up to 100 static sites for free](https://kinsta.com/static-site-hosting/).
-Because Kinsta only has support for NodeJS, to host a Lume site you need to
-create the following `package.json` file:
-
-```json
-{
-  "scripts": {
-    "build": "deno task lume"
-  },
-  "devDependencies": {
-    "deno": "^2.6.8"
-  }
-}
-```
 
 In the project settings, set the build command to `npm run build` and the
 publish directory to `_site`.
-
-Kinsta provides [this nice template](https://github.com/kinsta/hello-world-lume)
-that you can use.
 
 ## Surge
 
@@ -296,7 +252,7 @@ account. Build the site, pack the `_site` folder and upload it with one HTTP
 `PUT`:
 
 ```sh
-deno task build
+npm run build
 tar -C _site -czf site.tar.gz .
 curl -T site.tar.gz "https://deed.page/v1/sites?slug=my-lume-site"
 ```

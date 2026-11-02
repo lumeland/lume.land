@@ -53,6 +53,3 @@ Because the location is not a single file, but a collection of files, we can use
 a glob. `src:posts/*.md` means that our collection is stored in the `posts`
 folder inside the `src` directory, in files with the `.md` extension. Any file
 with a different extension is not part of our collection.
-
-Now run `deno task cms` to see the new "Posts" section in the main menu. You can
-create new documents (posts) and remove or edit the existing ones!

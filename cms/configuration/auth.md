@@ -19,8 +19,8 @@ If you don't want to have the passwords visible in the configuration file, you
 can use environment variables:
 
 ```js
-const user = Deno.env.get("CMS_USERNAME");
-const password = Deno.env.get("CMS_PASSWORD");
+const user = process.env.CMS_USERNAME;
+const password = process.env.CMS_PASSWORD;
 
 cms.auth({
   [user]: password,
