@@ -49,9 +49,8 @@ site.use(
 
 Many other web servers have the option to serve precompressed files, for example
 [Caddy](https://caddyserver.com/docs/caddyfile/directives/file_server#precompressed),
-or frameworks like
-[Hono](https://hono.dev/docs/getting-started/deno#precompressed),
-[Fastify](https://github.com/fastify/fastify-static?tab=readme-ov-file#precompressed),
+or frameworks like,
+[Fastify](https://github.com/fastify/fastify-static?tab=readme-ov-file#precompressed)
 or [Koa](https://github.com/koajs/static?tab=readme-ov-file#options).
 
 This plugin also provides a middleware that you can use to serve files with Lume's server:

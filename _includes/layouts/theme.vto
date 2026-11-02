@@ -12,13 +12,13 @@ page_css: theme.css
       <h1 class="theme-title">
         {{ title }}
 
-        {{ if it.module.cms }}
+        {{ if it.cms }}
           <span class="tag is-small">Has CMS</span>
         {{ /if }}
       </h1>
 
       <p class="theme-author">
-        By <a href="{{ author.url }}">{{ author.name }}</a>
+        By {{ author }}
       </p>
 
       <div class="theme-description">
@@ -29,7 +29,7 @@ page_css: theme.css
     <div class="theme-install">
       <p>Create project with this theme:</p>
       <div class="terminal">
-        {{ set code = `deno run -A https://lume.land/init.ts --theme=${id}` }}
+        {{ set code = `npm create lume -- --theme=${specifier}` }}
         <pre><code>{{ code }}</code><lume-copy class="terminal-copy"><button aria-label="Copy code" data-text="{{ code }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"></path></svg></button></lume-copy></pre>
       </div>
     </div>
@@ -69,7 +69,7 @@ page_css: theme.css
         </label>
       </div>
 
-      {{ if screens.some((s) => s.desktop_dark || s.mobile_dark) }}
+      {{ if screens.desktop_dark || screens.mobile_dark }}
         <div class="theme-preview-toggle">
           <label>
             <input type="radio" checked name="theme" value="light">
@@ -95,37 +95,35 @@ page_css: theme.css
       {{ /if }}
     </form>
 
-    {{ for screen of screens }}
-      <figure>
-        <div class="device" data-device="desktop" data-theme="light">
+    <figure>
+      <div class="device" data-device="desktop" data-theme="light">
+        <img
+          class=""
+          src="{{ screens.desktop }}"
+        >
+      </div>
+
+      {{ if screens.desktop_dark }}
+        <div class="device" data-device="desktop" data-theme="dark">
           <img
-            class=""
-            src="{{ baseUrl + screen.desktop }}"
+            src="{{ screens.desktop_dark }}"
           >
         </div>
+      {{ /if }}
 
-        {{ if screen.desktop_dark }}
-          <div class="device" data-device="desktop" data-theme="dark">
-            <img
-              src="{{ baseUrl + screen.desktop_dark }}"
-            >
-          </div>
-        {{ /if }}
+      {{ if screens.mobile }}
+        <div class="device" data-device="mobile" data-theme="light">
+          <img src="{{ screens.mobile }}">
+        </div>
+      {{ /if }}
 
-        {{ if screen.mobile }}
-          <div class="device" data-device="mobile" data-theme="light">
-            <img src="{{ baseUrl + screen.mobile }}">
-          </div>
-        {{ /if }}
-
-        {{ if screen.mobile_dark }}
-          <div class="device" data-device="mobile" data-theme="dark">
-            <img
-              src="{{ baseUrl + screen.mobile_dark }}"
-            >
-          </div>
-        {{ /if }}
-      </figure>
-    {{ /for }}
+      {{ if screens.mobile_dark }}
+        <div class="device" data-device="mobile" data-theme="dark">
+          <img
+            src="{{ screens.mobile_dark }}"
+          >
+        </div>
+      {{ /if }}
+    </figure>
   </lume-devices>
 </main>

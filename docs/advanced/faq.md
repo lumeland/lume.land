@@ -21,79 +21,15 @@ mascot that was related to fire. In Galician, they are called "vagalumes"
 (wander fires). You can learn more about the logo design
 [in this post](https://lume.land/blog/posts/new-logo/).
 
-## Why does Lume only work on Deno?
+## Wasn't Lume a static site generator for Deno
 
-Deno is a modern JavaScript runtime with some nice features that other runtimes
-don’t have, like support for some web standards and a great permissions system.
-But the most important feature is **HTTP imports**. With Deno you only need to
-import a single URL and you can inmediately use Lume and all its plugins. For
-Lume we believe HTTP imports is a cleaner, faster and more straightforward
-system compared to Node or Bun, where you need to install every plugin
-individually and manage a `node_modules` folder with thousands of dependencies.
-If other JS runtimes implemented HTTP imports, Lume would support them.
+Yes. Lume was originally created for Deno. But in October 2026, Deno joined Cloudflare [they announced](https://deno.com/blog/cloudflare):
 
-## But Deno is a company. What happens if it disappears?
+> We will support the Deno runtime for another year with monthly releases containing bug fixes and security updates. After that year we will end our development of the Deno runtime.
 
-**I’m sure this won’t happen**. But if it did, the open source Deno runtime
-would probably be maintained by the community. As a last resort, Lume would be
-ported to Node. We would lose HTTP imports but at least we could keep using
-Lume. This is a long-term project, not tied to the Deno company. It doesn’t
-depend on VC funding, and does not need to be a viable business. It’s just an
-tool with a community that uses and supports it. If Deno
-[removed support for HTTP imports](https://deno.com/blog/http-imports), we would
-port Lume to Node, since there wouldn’t be any reason or motivation to keep
-maintaining a Deno-only project.
+So we decided to migrate Lume to Node. We was prepared for that, in the previous version of the FAQ we claimed:
 
-## Why are HTTP imports better than JSR imports?
-
-[JSR](https://jsr.io/) is the package registry created by Deno to address some
-limitations of HTTP imports. I don't think it's a bad product, but definitely
-it's not the solution that the JavaScript ecosystem needs. The principal problem
-of JSR is that it's a copy of NPM (a _superset of NPM_ as it was advertised). It
-lacks most of the great features that HTTP imports provide, and reproduces the
-same mistakes of NPM:
-
-- It's **incompatible with Web standards and import maps** due its opacity and
-  complex module resolution. You can't simply import modules stored on disk or
-  HTTP. This led Deno to create the property `links` in the `deno.json` file
-  only for this specific use case, but it's more limited and less
-  straightforward than import maps.
-- It's **centralized and vendor lock-in**. This means that if JSR stops working,
-  it's blocked in your country or becomes evil, there's no easy exit. In the
-  same way that Deno deprecated `deno.land/x`, there is no guarantee that the
-  same thing won't happen to JSR. We have the experience of NPM being maintained
-  by VC funding for years and acquired then by Microsoft. JSR is not a company,
-  but it's operated by one (Deno), and the governance board consists of members
-  from other companies.
-- With HTTP imports it's easy to import a **stable version or a hash commit**,
-  which is great because it allows us to test a new feature and provide feedback
-  easily without the pressure of releasing a new version. This decentralized
-  nature that "simply works" is something impossible with JSR.
-- The command `deno install` **downloads all NPM dependencies** and, under some
-  circunstances, JSR dependencies. Lume and all plugins are in a single package,
-  which means that if it were a JSR package, all plugins and their dependencies
-  would be installed, even those that you don't need. To prevent that, Lume
-  should be divided into different packages: a core package, one package per
-  plugin (+50), and each package with different versions and dependencies. This
-  complicates the development and testing of Lume, making the use of plugins by
-  final users more cumbersome. Basically, JSR encourages the creation of
-  micropackages and dependency hell.
-- JSR is very picky about the code that you can publish. It's not fully
-  compatible with JSX or some TypeScript features like declaring global
-  namespaces. It doesn't allow importing modules from URLs or from the disk
-  (like your `_config.ts` file or other JavaScript/TypeScript files in your
-  source folder that Lume needs to load).
-- JSR by default uses semantic version ranges (like `^1.0`). This means that
-  depending on when you install the package, the dependencies installed are
-  different. This has advantages (automatic updates), but also drawbacks like
-  **security threats** (hijacked packages) and **instability** (semantic
-  versioning is great in theory, but is an act of faith in practice, since
-  packages may introduce breaking changes in minor or patch versions). You have
-  to use a lock file to pin all versions to avoid this problem, but this doesn't
-  work when you create a new project from scratch, because the lock file hasn't
-  been created yet. HTTP imports do the opposite: **they're stable and secure by
-  default**, because they use fixed versions, there are no moving parts, and the
-  update action must be intentional and conscious.
+> As a last resort, Lume would be ported to Node. We would lose HTTP imports but at least we could keep using Lume. This is a long-term project, not tied to the Deno company. It doesn’t depend on VC funding, and does not need to be a viable business. It’s just an tool with a community that uses and supports it.
 
 ## What are your plans for Lume?
 

@@ -129,8 +129,6 @@ transform
   }
   ```
 
-<!-- deno-fmt-ignore-end -->
-
 ## Example
 
 This is an example of fields with some extra options:

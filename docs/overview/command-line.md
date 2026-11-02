@@ -91,7 +91,7 @@ yarn build --watch
 ## Debug
 
 Use the `--inspect, -i` flag to start an
-[inspect server](https://docs.deno.com/runtime/fundamentals/debugging/). Then,
+[inspector server](https://nodejs.org/api/inspector.html). Then,
 you can open the `chrome://inspect` URL in any Chromium-based browser and add
 breakpoints to debug your code:
 

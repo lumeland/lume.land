@@ -315,7 +315,6 @@ understands (See
 and other variables considered good practices or common conventions. This is a
 list with all of them:
 
-<!-- deno-fmt-ignore-start -->
 [url](../creating-pages/urls.md) `string`
 : Created by Lume automatically if it's missing.
 

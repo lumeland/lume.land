@@ -90,7 +90,4 @@ variable `description` uses `textarea` because the text can be a bit longer and
 can even include line breaks. And finally, the `content` variable contains
 Markdown code, so we use the `markdown` field.
 
-If we run the CMS with `deno task cms`, we can see the Homepage document in the
-menu. Entering the section, we will see the form to edit the content.
-
 Congratulations, you have configured your first document in LumeCMS!

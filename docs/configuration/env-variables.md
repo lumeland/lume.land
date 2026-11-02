@@ -17,7 +17,7 @@ Lume has the following environment variables:
 
 > [!note]
 >
-> In development mode (i.e. with `deno task serve`), the `LUME_DRAFTS` variable is true by default.
+> In development mode (i.e. with `npm run serve`), the `LUME_DRAFTS` variable is true by default.
 
 `LUME_LOGS`
 : Lume uses the following log levels: `DEBUG`, `INFO`, `WARNING`,
