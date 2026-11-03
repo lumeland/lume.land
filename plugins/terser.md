@@ -9,9 +9,6 @@ category: js
 The Terser plugin minifies `.js` files using the
 [Terser minifier](https://terser.org/).
 
-To get around compatibility issues of using NodeJS software in Deno, it uses the
-browser version.
-
 ## Installation
 
 Import this plugin in your `_config.ts` file to use it:

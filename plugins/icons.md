@@ -112,7 +112,6 @@ This is a list of all available libraries suported out of the box by the plugin:
 The `catalogs` option allows configure custom icons catalogs. Each catalog is an
 object with the following properties:
 
-<!-- deno-fmt-ignore-start -->
 id (required)
 : The catalog Id used in the filter
 
@@ -124,8 +123,6 @@ variants
 
 name
 : If the path of the icon file does not correspond with the icon name, you can configure a function to return the final path.
-
-<!-- deno-fmt-ignore-end -->
 
 #### Example
 

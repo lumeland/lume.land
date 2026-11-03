@@ -54,21 +54,15 @@ different layouts per directory.
 
 **Satori** is the library used to generate the images and
 [only accepts JSX elements](https://github.com/vercel/satori?tab=readme-ov-file#jsx),
-so make sure you have SSX configured correctly in `deno.json`:
+so make sure you have SSX configured correctly in `tsconfig.json`:
 
 <lume-code>
 
-```json {title="deno.json"}
+```json {title="tsconfig.json"}
 {
-  // ...
-  "imports": {
-    //...
-    "lume/jsx-runtime": "@SSX_URL/jsx-runtime.ts"
-  },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "lume"
-    //...
+    "jsxImportSource": "@lumeland/ssx"
   }
 }
 ```

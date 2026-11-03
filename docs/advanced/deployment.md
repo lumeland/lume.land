@@ -7,7 +7,7 @@ description: How to deploy a site built with Lume.
 
 This is the simplest way to deploy a site: just build the site and upload it to
 your server with [rsync](https://en.wikipedia.org/wiki/Rsync). An easy way is by
-creating a deno task in the `package.json` file:
+creating a NPM script in the `package.json` file:
 
 ```json
 {

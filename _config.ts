@@ -105,11 +105,11 @@ site
   .remote(
     "static/docsearch/style.css",
     "https://cdn.jsdelivr.net/npm/@docsearch/css@3.8.2/dist/style.css",
+  )
+  .remote(
+    "img/contrib.svg",
+    "https://contrib.rocks/image?repo=lumeland/lume",
   );
-  // .remote(
-  //   "img/contrib.svg",
-  //   "https://contrib.rocks/image?repo=lumeland/lume",
-  // );
 
 export default site;
 

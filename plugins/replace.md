@@ -38,7 +38,7 @@ website:
 ```md
 Welcome to MyLibrary 2.3.0. To getting started, run the following command:
 
-deno install --global https://deno.land/x/my_library@2.3.0/mod.ts
+npm install --global my_library@2.3.0
 ```
 
 Instead of harcoding the version number everywhere in your site (and remember to
@@ -47,7 +47,7 @@ update it after a new version), this plugin allows to use a placeholder:
 ```md
 Welcome to MyLibrary $VERSION. To getting started, run the following command:
 
-deno install --global https://deno.land/x/my_library@$VERSION/mod.ts
+npm install --global my_library@$VERSION
 ```
 
 Now, configure the replacements in the plugin options:

@@ -21,13 +21,13 @@ mascot that was related to fire. In Galician, they are called "vagalumes"
 (wander fires). You can learn more about the logo design
 [in this post](https://lume.land/blog/posts/new-logo/).
 
-## Wasn't Lume a static site generator for Deno
+## Wasn't Lume a static site generator for Deno?
 
-Yes. Lume was originally created for Deno. But in October 2026, Deno joined Cloudflare [they announced](https://deno.com/blog/cloudflare):
+Yes. Lume was originally created for Deno. But in October 2026, Deno joined Cloudflare and [they announced](https://deno.com/blog/cloudflare):
 
 > We will support the Deno runtime for another year with monthly releases containing bug fixes and security updates. After that year we will end our development of the Deno runtime.
 
-So we decided to migrate Lume to Node. We was prepared for that, in the previous version of the FAQ we claimed:
+So we decided to migrate Lume to Node. We was prepared for that, as we said in the previous version of the FAQ:
 
 > As a last resort, Lume would be ported to Node. We would lose HTTP imports but at least we could keep using Lume. This is a long-term project, not tied to the Deno company. It doesn’t depend on VC funding, and does not need to be a viable business. It’s just an tool with a community that uses and supports it.
 

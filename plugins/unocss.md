@@ -61,8 +61,6 @@ export default site;
 
 This plugin accepts a configuration object with the available options:
 
-<!-- deno-fmt-ignore-start -->
-
 `options` : Configuration object for UnoCSS to define themes, shortcuts, etc.
 See the [UnoCSS docs for more info](https://unocss.dev/guide/config-file)
 

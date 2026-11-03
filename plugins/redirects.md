@@ -67,8 +67,7 @@ the new one. There are 4 different output methods:
   doesn't require any server configuration. The generated pages have the
   variable `unlisted=true`.
 - **json:** To create the `_redirects.json` JSON file with all redirects,
-  compatible with the [redirects middleware](#the-middleware)
-  which works on Deno Deploy.
+  compatible with the [redirects middleware](#the-middleware).
 - **netlify:** To create (or update) the `_redirects` file,
   [compatible with Netlify](https://docs.netlify.com/routing/redirects/).
 - **vercel:** To create (or update) the
