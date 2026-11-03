@@ -3,13 +3,12 @@ title: Migrate to Lume 4
 description: Guide to migrate your project from Lume 3 to Lume 4
 ---
 
-Lume 4 runs on Node, so make sure you have installed the version 24 or newer in your computer. See [Node documentation](https://nodejs.org/en/download) for more info.
+Lume 4 runs on Node, so make sure you have installed the version 24 LTS or newer in your computer. See [Node documentation](https://nodejs.org/en/download) for more info.
 
 The code is published on NPM under the [`@lumeland` organization](https://www.npmjs.com/org/lumeland):
 
 - The main package is [`@lumeland/lume`](https://www.npmjs.com/package/@lumeland/lume).
-- Plugins have the name format `@lumeland/plugin-*` (for example [@lumeland/plugin-esbuild](https://www.npmjs.com/package/@lumeland/plugin-esbuild)).
-- The standalone CMS is [`@lumeland/cms`](https://www.npmjs.com/package/@lumeland/cms), and to use it with Lume you need the plugin [`@lumeland/plugin-cms`](https://www.npmjs.com/package/@lumeland/plugin-cms).
+- Plugins have the name format `@lumeland/plugin-*` (for example [@lumeland/plugin-esbuild](https://www.npmjs.com/package/@lumeland/plugin-esbuild)) and must be installed independently.
 
 For example, the typical `_config.ts` file in Lume 3:
 
@@ -64,7 +63,9 @@ Note that this migration may not be complete. Depending on your site and configu
 
 ## LumeCMS
 
-LumeCMS is no longer detected automatically. You must install the plugin in your `_config.ts` file:
+To setup LumeCMS, you need to install two packages: the standalone CMS is [`@lumeland/cms`](https://www.npmjs.com/package/@lumeland/cms), and to use it with Lume you need the plugin [`@lumeland/plugin-cms`](https://www.npmjs.com/package/@lumeland/plugin-cms).
+
+LumeCMS is no longer detected automatically. You must include the plugin in your `_config.ts` file:
 
 ```ts
 // _config.ts
@@ -88,10 +89,10 @@ cms.storage("src", GitHub.create("org/repo", "token"));
 
 ## Plugin changes
 
-- The plugins `brotli`, `gzip` were merged in the `compress` plugin, which includes also the middleware `precompress`.
-- The `redirects` plugin includes also the `redirects` middleware, and the option `strict` was removed (it doesn't make sense).
-- The `remark` plugin no longer overrides the `md` filter but registers `mdRemark`.
-- The plugin `pagefind` replaces the old UI with the [new one based on web components](https://pagefind.app/docs/search-ui/).
+- The plugins `brotli`, `gzip` and the middleware `precompress` were merged in the [`compress`](../../plugins/compress.md) plugin.
+- The [`redirects`](../../plugins/redirects.md) plugin includes also the `redirects` middleware, and the option `strict` was removed.
+- The [`remark`](../../plugins/remark.md) plugin no longer overrides the `md` filter but registers `mdRemark`.
+- The plugin [`pagefind`](../../plugins/pagefind.md) replaces the old UI with the [new one based on web components](https://pagefind.app/docs/search-ui/).
 - The option `includes` has been removed in all plugins supporting it.
   - In the `postcss` and `lightningcss` plugins this option enabled or disabled the bundle. It was replaced by the new boolean option `bundle`.
 - The middlewares `reload` and `no-cache` were merged into `dev`, a new plugin containing everything needed for development (watch or serve mode). This plugin is used internally by Lume you don't need to import it.

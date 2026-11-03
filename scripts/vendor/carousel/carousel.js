@@ -88,7 +88,6 @@ export default class Carousel extends HTMLElement {
     }
   }
 
-  // deno-lint-ignore no-unused-vars
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === "index") {
       this.index = parseInt(newValue);
@@ -160,7 +159,6 @@ export default class Carousel extends HTMLElement {
         behavior: this.scrollBehavior,
       });
 
-      // deno-lint-ignore no-unused-vars
     } catch (err) {
       this.scrollLeft = scroll;
     }

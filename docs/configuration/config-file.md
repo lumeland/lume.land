@@ -232,7 +232,7 @@ middlewares easily. More info in the
 [Server documentation](../core/16.server.md#middleware).
 
 ```ts
-import expires from "lume/middlewares/expires.ts";
+import expires from "@lumeland/plugin-expires";
 
 const site = lume({
   server: {

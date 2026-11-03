@@ -80,7 +80,6 @@ cms.document("happy-2024", "src:happy-2024.yml", [
 Fields can have other options to validate or customize some aspects. The
 following options are available in all fields:
 
-<!-- deno-fmt-ignore-start -->
 name (required)
 : Used for the variable name where the value is stored.
 

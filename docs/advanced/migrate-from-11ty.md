@@ -3,7 +3,6 @@ title: Migrate from Eleventy
 description: How to migrate your project from Eleventy to Lume.
 url: false
 ---
-<!-- deno-fmt-ignore-file -->
 
 [Eleventy](https://www.11ty.dev/) is a great SSG with a big community. It inspired Lume, so if you have an Eleventy project and want to migrate to Lume
 (maybe it's not a good idea) or simply are familiar with Eleventy and want to

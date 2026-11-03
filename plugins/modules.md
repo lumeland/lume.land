@@ -6,8 +6,7 @@ category: installed
 
 ## Description
 
-Lume is built on top of Deno, so it has native support for JavaScript and
-TypeScript modules. This plugin allows you to use JavaScript and TypeScript to
+This plugin allows you to use JavaScript and TypeScript to
 create pages, layouts, and data files.
 
 ## Installation
@@ -141,10 +140,6 @@ export default async function () {
 ```
 
 </lume-code>
-
-Since Lume 3.3.0 (requires Deno 2.9.0 or later), directly imported local modules
-inside your `src` folder are automatically reloaded in `--serve` or `--watch`
-mode. Older versions require restarting the server after changes.
 
 ### Lume-managed components
 

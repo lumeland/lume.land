@@ -13,14 +13,13 @@ a `directoryIndex` for folders.
 ## Installation
 
 This middleware must be used with
-[Lume's HTTP Server](../docs/core/16.server.md). To use it in production, you
-need a host running a Deno server, like [Deno Deploy](https://deno.com/deploy).
+[Lume's HTTP Server](../docs/core/16.server.md).
 
 Create an entry point file (for example, `serve.ts`) with the following code:
 
 ```ts
 import Server from "@lumeland/core/server.ts";
-import notFound from "lume/middlewares/not_found.ts";
+import notFound from "@lumeland/plugin-not-found";
 
 const server = new Server();
 

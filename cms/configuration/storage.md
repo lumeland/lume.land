@@ -153,7 +153,7 @@ export default cms;
 
 ## Sqlite
 
-Use a Sqlite database which is natively supported by Deno. You can pass the
+Use a Sqlite database which is natively supported by Node. You can pass the
 `DatabaseSync` instance or a path to the sqlite file:
 
 ```js

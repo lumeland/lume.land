@@ -32,20 +32,21 @@ export default site;
 
 ## UI Component
 
-To add the search component in your site, just create an element with the
-`search` id. The plugin automatically generate the HTML code to import the
-JavaScript and CSS styles in any page containing this element.
+The plugin automatically outputs the CSS and JavaScript code to use the web components in the `/style.css` and `/script.js` files (or the values configured globally in [`cssFile`](../docs/configuration/config-file.md#cssfile) and [`jsFile`](../docs/configuration/config-file.md#jsfile)). Make sure to import these files in your layout.
 
 ```html
 <h1>Welcome to my site</h1>
 
-<!-- Insert the search component here: -->
-<div id="search"></div>
+<pagefind-modal-trigger></pagefind-modal-trigger>
+<pagefind-modal></pagefind-modal>
 ```
 
-### UI configuration
+> [!note]
+>
+> See the [Pagefind UI docs](https://pagefind.app/docs/search-ui/) for more
+> info.
 
-The plugin has the `ui` key with some configuration options. The default values:
+Use the `componentUI` configuration key to change the css and js files:
 
 ```js
 import lume from "@lumeland/lume";
@@ -54,59 +55,21 @@ import pagefind from "@lumeland/plugin-pagefind";
 const site = lume();
 
 site.use(pagefind({
-  ui: {
-    containerId: "search",
-    showImages: false,
-    showEmptyFilters: true,
-    resetStyles: true,
+  componentUI: {
+    cssFile: "search-style.css",
+    jsFile: "search-scripts.js",
   },
 }));
 
 export default site;
 ```
 
-### Customising the styles
+Set to `false` to don't output the code. Useful if you want to implement a different UI:
 
-The generic UI component comes with some CSS custom properties that you can edit
-in your CSS files:
-
-```css
-:root {
-  --pagefind-ui-scale: 1;
-  --pagefind-ui-primary: #034ad8;
-  --pagefind-ui-text: #393939;
-  --pagefind-ui-background: #ffffff;
-  --pagefind-ui-border: #eeeeee;
-  --pagefind-ui-tag: #eeeeee;
-  --pagefind-ui-border-width: 2px;
-  --pagefind-ui-border-radius: 8px;
-  --pagefind-ui-image-border-radius: 8px;
-  --pagefind-ui-image-box-ratio: 3 / 2;
-  --pagefind-ui-font: sans-serif;
-}
-```
-
-> [!note]
->
-> See the [Pagefind UI docs](https://pagefind.app/docs/ui/) for more
-> customization options.
-
-### Disable the UI component
-
-If you want to use a custom search component, you can disable the automatic
-insertion of the generic UI component in the plugin configuration:
-
-```js
-import lume from "@lumeland/lume";
-import pagefind from "@lumeland/plugin-pagefind";
-
-const site = lume();
-
+```ts
 site.use(pagefind({
-  ui: false, // Don't insert the UI component
-}));
-
-export default site;
+  componentUI: false
+}))
 ```
 
 ## Indexing
