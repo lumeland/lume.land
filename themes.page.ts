@@ -7,7 +7,6 @@ interface Theme {
   description: string;
   author: string;
   specifier: string;
-  cms: boolean;
   repo: string;
   screens: {
     desktop: string;
@@ -24,9 +23,8 @@ const themes: Theme[] = [
     name: "Simple Blog",
     id: "simple-blog",
     description: "Lume theme to create a blog.",
-    author: "Òscar Otero",
+    author: "Óscar Otero",
     specifier: "@lumeland/theme-simple-blog",
-    cms: true,
     repo: "https://github.com/lumeland/theme-simple-blog/",
     screens: {
       desktop: `${baseUrl}/themes/simple-blog/desktop.png`,
@@ -39,9 +37,8 @@ const themes: Theme[] = [
     name: "Simple Me",
     id: "simple-me",
     description: "Lume theme to create a Linktree alternative.",
-    author: "Òscar Otero",
+    author: "Óscar Otero",
     specifier: "@lumeland/theme-simple-me",
-    cms: true,
     repo: "https://github.com/lumeland/theme-simple-me/",
     screens: {
       desktop: `${baseUrl}/themes/simple-me/desktop.png`,
@@ -54,9 +51,9 @@ const themes: Theme[] = [
     name: "Simple Wiki",
     id: "simple-wiki",
     description: "Lume theme to create a wiki.",
-    author: "Òscar Otero",
+    author: "Óscar Otero",
     specifier: "@lumeland/theme-simple-wiki",
-    cms: true,
+    
     repo: "https://github.com/lumeland/theme-simple-wiki/",
     screens: {
       desktop: `${baseUrl}/themes/simple_wiki/desktop.png`,
@@ -69,9 +66,8 @@ const themes: Theme[] = [
     name: "Tech CV",
     id: "tech-cv",
     description: "Lume theme to create a tech CV online.",
-    author: "Òscar Otero",
+    author: "Óscar Otero",
     specifier: "@lumeland/theme-tech-cv",
-    cms: true,
     repo: "https://github.com/lumeland/theme-tech-cv/",
     screens: {
       desktop: `${baseUrl}/themes/tech-cv/desktop.png`,

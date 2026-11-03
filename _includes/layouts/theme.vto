@@ -11,13 +11,10 @@ page_css: theme.css
     <header class="theme-header">
       <h1 class="theme-title">
         {{ title }}
-
-        {{ if it.cms }}
-          <span class="tag is-small">Has CMS</span>
-        {{ /if }}
       </h1>
 
       <p class="theme-author">
+        <img src="https://img.shields.io/npm/dm/%40lumeland%2Ftheme-{{ basename}}?style=flat-square" />
         By {{ author }}
       </p>
 

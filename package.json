@@ -12,7 +12,7 @@
     "build": "lume build"
   },
   "dependencies": {
-    "@lumeland/lume": "^4.0.0",
+    "@lumeland/lume": "^4.0.1",
     "@lumeland/plugin-check-urls": "^1.0.0",
     "@lumeland/plugin-code-highlight": "^1.0.0",
     "@lumeland/plugin-esbuild": "^1.0.0",
@@ -34,7 +34,7 @@
     "@lumeland/plugin-transform-images": "^1.0.0",
     "@lumeland/plugin-well-known": "^1.0.0",
     "@lumeland/ssx": "^0.1.16",
-    "@mdit/plugin-alert": "^2.0.3",
+    "@mdit/plugin-alert": "^2.1.0",
     "postcss-nesting": "^14.0.3"
   }
 }

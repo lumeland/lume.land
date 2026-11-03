@@ -10,9 +10,7 @@ page_css: docs.css
     <header class="doc-header">
       <h1>
         {{ title }}
-        {{ if it.enabled }}
-          <span class="tag is-small">Installed</span>
-        {{ /if }}
+        <img src="https://img.shields.io/npm/dm/%40lumeland%2Fplugin-{{ basename}}?style=flat-square" />
       </h1>
       {{ description |> md }}
 
