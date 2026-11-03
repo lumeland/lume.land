@@ -11,7 +11,7 @@ to it.
 ## Simple plugin example
 
 Let's say we have this code in our `_config.ts` file to add a copyright banner
-to all CSS pages:
+to all CSS files:
 
 ```ts
 // _config.ts
@@ -20,9 +20,9 @@ import lume from "@lumeland/lume";
 
 const site = lume();
 
-site.process([".css"], (pages) => {
-  for (const page of pages) {
-    page.text = `/* © This code belongs to ACME inc. */\n${page.text}`;
+site.process([".css"], (files) => {
+  for (const file of files) {
+    file.text = `/* © This code belongs to ACME inc. */\n${file.text}`;
   }
 });
 
@@ -41,11 +41,11 @@ interface Options {
 
 export default function (options: Options) {
   return (site: Site) => {
-    site.process([".css"], (pages) => {
+    site.process([".css"], (files) => {
       const { message } = options;
 
-      for (const page of pages) {
-        page.text = `/* ${message} */\n${page.text}`;
+      for (const file of files) {
+        file.text = `/* ${message} */\n${file.text}`;
       }
     });
   };
@@ -56,7 +56,7 @@ And now, we can use it in the `_config.ts` file like this:
 
 ```ts
 import lume from "@lumeland/lume";
-import cssBanner from "./my-plugins/css_banner.ts";
+import cssBanner from "./_plugins/css-banner.ts";
 
 const site = lume();
 
@@ -80,10 +80,10 @@ for more advanced examples.
 Some plugins expose _hooks_ that can be invoked by other plugins or in the
 `_config.ts` file. A hook is a function that can do arbitrary things, like
 changing a configuration of a plugin. Hooks are stored in `site.hooks`. Let's
-create a hook in our `css_banner` plugin to change the message:
+create a hook in our `css-banner` plugin to change the message:
 
 ```ts
-// my-plugins/css_banner.ts
+// _plugins/css-banner.ts
 
 interface Options {
   message: string;
@@ -97,11 +97,11 @@ export default function (options: Options) {
     };
 
     // Process the CSS files
-    site.process([".css"], (pages) => {
+    site.process([".css"], (files) => {
       const { message } = options;
 
-      for (const page of pages) {
-        page.text = `/* ${message} */\n${page.text}`;
+      for (const file of files) {
+        file.text = `/* ${message} */\n${file.text}`;
       }
     });
   };
@@ -128,7 +128,7 @@ export default site;
 Or we can invoke this hook from other plugin:
 
 ```ts
-// my-plugins/open_source.ts
+// _plugins/open-source.ts
 
 export default function () {
   return (site: Site) => {
@@ -143,8 +143,8 @@ export default function () {
 
 ```ts
 import lume from "@lumeland/lume";
-import cssBanner from "./my-plugins/css_banner.ts";
-import openSource from "./my-plugins/open_source.ts";
+import cssBanner from "./_plugins/css-banner.ts";
+import openSource from "./_plugins/open-source.ts";
 
 const site = lume();
 

@@ -3,4 +3,4 @@ title: Themes
 main_menu: themes
 description: |
   Themes allow you to create a site in seconds, using premade templates.
-  Do you want to create a theme? [Use this template](https://github.com/lumeland/theme-boilerplate).
+  Do you want to create a theme? [See the documentation](/docs/advanced/themes.md).

@@ -1,6 +1,7 @@
 ---
 title: Cheat sheet
 description: All configuration options in a simple page
+order: 1
 ---
 
 ## Lume instantiation

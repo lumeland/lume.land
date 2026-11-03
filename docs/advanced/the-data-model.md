@@ -1,6 +1,7 @@
 ---
 title: The data model
 description: Understanding the Lume data model for pages
+order: 2
 ---
 
 ## The content
