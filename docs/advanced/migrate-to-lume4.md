@@ -3,7 +3,7 @@ title: Migrate to Lume 4
 description: Guide to migrate your project from Lume 3 to Lume 4
 ---
 
-Lume 4 runs on Node, so make sure you have installed the version 24 LTS or newer in your computer. See [Node documentation](https://nodejs.org/en/download) for more info.
+**Lume 4 runs on Node,** so make sure you have installed the version 24 LTS or newer in your computer. See [Node documentation](https://nodejs.org/en/download) for more info.
 
 The code is published on NPM under the [`@lumeland` organization](https://www.npmjs.com/org/lumeland):
 

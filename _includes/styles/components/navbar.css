@@ -1,9 +1,14 @@
 .navbar-banner {
-  background-color: var(--color-red-500);
+  background-color: var(--color-foreground);
   margin-inline: calc(var(--margin) * -1);
   padding: 1rem var(--margin);
   text-align: center;
-  color: white;
+  color: var(--color-background);
+  text-wrap: balance;
+
+  strong {
+    font-weight: 600;
+  }
 
   p {
     margin: 0;
