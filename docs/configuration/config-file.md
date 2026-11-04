@@ -159,16 +159,6 @@ systems, which are case insensitive. You can set this option to `true` to make
 it case sensitive, so both pages would be considered different. Note that this
 behavior is only compatible with Linux.
 
-### includes
-
-It's a special folder used by default by the template engines and some plugins
-(like sass or postcss) to look for the included files. By default it's
-`_includes` and this path is relative to the `src` folder.
-
-As an example, if the `src` folder is `./src` and the includes folder is
-configured to `_includes`, Lume will look for the included files inside
-`./src/_includes/`.
-
 ## Server options
 
 The `server` key contains the configuration for the local server. It has the

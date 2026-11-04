@@ -21,9 +21,6 @@ const site = lume(
     /** Whether the destination folder (defined in `dest`) should be emptied before the build */
     emptyDest: true,
 
-    /** The default includes path, relative to the `src` folder */
-    includes: "_includes",
-
     /** The default css file */
     cssFile: "/style.css";
 

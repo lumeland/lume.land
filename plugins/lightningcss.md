@@ -37,7 +37,6 @@ import { version } from "@lumeland/core/utils/browsers.ts";
 const site = lume();
 
 site.use(lightningCss({
-  includes: "_includes",
   options: {
     minify: true,
     drafts: {

@@ -55,20 +55,11 @@ to inline the local `@imports` by looking in the `_includes` directory.
 @import "./variables.css";
 ```
 
-You can change the `_includes` directory or disable it completely with the
-`includes` option:
+Set `bundle` to `false` to disable this behavior and don't inline the local imports:
 
 ```ts
-// Change the includes folder of CSS to _styles
 site.use(postcss({
-  includes: "_styles",
-}));
-```
-
-```ts
-// Disable the includes (the local @import's won't be inlined)
-site.use(postcss({
-  includes: false,
+  bundle: false,
 }));
 ```
 
