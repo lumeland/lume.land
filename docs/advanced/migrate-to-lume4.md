@@ -100,7 +100,6 @@ cms.storage("src", GitHub.create("org/repo", "token"));
 - The following plugins were not ported to Node (for now). If you really need them, please open an issue explaining your use case.
   - attributes
   - fff
-  - relations
   - decap-cms
   - middleware redirect as2
   - middleware logger
