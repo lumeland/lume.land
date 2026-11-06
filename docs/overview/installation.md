@@ -17,15 +17,15 @@ To create a Lume project faster, run the following command:
 <lume-code>
 
 ```sh {title="npm"}
-npm create lume
+npm create lume@latest
 ```
 
 ```sh {title="pnpm"}
-pnpm create lume
+pnpm create lume@latest
 ```
 
 ```sh {title="yarn"}
-yarn create lume
+yarn create lume@latest
 ```
 
 </lume-code>

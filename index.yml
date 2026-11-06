@@ -6,7 +6,7 @@ header:
 
 install:
   title: "Run the following to [setup Lume](./docs/overview/installation.md):"
-  code: npm create lume
+  code: npm create lume@latest
   url: /docs/getting-started/your-first-page/
 
 companies:
