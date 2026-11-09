@@ -55,6 +55,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
 
+      - name: Install Lume
+        run: npm ci
+
       - name: Build site
         run: npm run build
 
@@ -89,7 +92,7 @@ stages:
 
 pages:
   stage: pages
-  script: npm run build -- --dest=public
+  script: npm ci && npm run build -- --dest=public
 
   artifacts:
     paths:
@@ -131,8 +134,12 @@ jobs:
       - name: Setup Node.js
         uses: https://github.com/actions/setup-node@v7
 
+      - name: Install Lume
+        run: npm ci
+
       - name: Build site
         run: npm run build
+
       - uses: https://codeberg.org/git-pages/action@v2
         with:
           site: "https://${{ forge.repository_owner }}.codeberg.page/repo-name"

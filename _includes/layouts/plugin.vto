@@ -10,7 +10,10 @@ page_css: docs.css
     <header class="doc-header">
       <h1>
         {{ title }}
-        <img src="https://img.shields.io/npm/dm/%40lumeland%2Fplugin-{{ basename}}?style=flat-square" />
+        &nbsp;
+        <a href="https://npmx.dev/package/@lumeland/plugin-{{ basename }}">
+          <img height="20" src="https://img.shields.io/npm/dm/%40lumeland%2Fplugin-{{ basename}}?style=flat">
+        </a>
       </h1>
       {{ description |> md }}
 
