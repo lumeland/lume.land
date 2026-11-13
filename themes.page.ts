@@ -8,6 +8,7 @@ interface Theme {
   author: string;
   specifier: string;
   repo: string;
+  demo?: string;
   screens: {
     desktop: string;
     desktop_dark?: string;
@@ -26,6 +27,7 @@ const themes: Theme[] = [
     author: "Óscar Otero",
     specifier: "@lumeland/theme-simple-blog",
     repo: "https://github.com/lumeland/theme-simple-blog/",
+    demo: "https://lumeland.github.io/theme-simple-blog/",
     screens: {
       desktop: `${baseUrl}/themes/simple-blog/desktop.png`,
       desktop_dark: `${baseUrl}/themes/simple-blog/desktop_dark.png`,
