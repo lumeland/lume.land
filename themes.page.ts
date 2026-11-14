@@ -55,8 +55,8 @@ const themes: Theme[] = [
     description: "Lume theme to create a wiki.",
     author: "Óscar Otero",
     specifier: "@lumeland/theme-simple-wiki",
-    
     repo: "https://github.com/lumeland/theme-simple-wiki/",
+    demo: "https://lumeland.github.io/theme-simple-wiki/",
     screens: {
       desktop: `${baseUrl}/themes/simple_wiki/desktop.png`,
       desktop_dark: `${baseUrl}/themes/simple_wiki/desktop_dark.png`,
