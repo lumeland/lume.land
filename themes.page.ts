@@ -42,6 +42,7 @@ const themes: Theme[] = [
     author: "Óscar Otero",
     specifier: "@lumeland/theme-simple-me",
     repo: "https://github.com/lumeland/theme-simple-me/",
+    demo: "https://lumeland.github.io/theme-simple-me/",
     screens: {
       desktop: `${baseUrl}/themes/simple-me/desktop.png`,
       desktop_dark: `${baseUrl}/themes/simple-me/desktop_dark.png`,
@@ -71,6 +72,7 @@ const themes: Theme[] = [
     author: "Óscar Otero",
     specifier: "@lumeland/theme-tech-cv",
     repo: "https://github.com/lumeland/theme-tech-cv/",
+    demo: "https://lume.codeberg.page/theme-tech-cv/",
     screens: {
       desktop: `${baseUrl}/themes/tech-cv/desktop.png`,
       desktop_dark: `${baseUrl}/themes/tech-cv/desktop_dark.png`,
