@@ -1,0 +1,32 @@
+themes:
+  - name: Simple Blog
+    id: simple-blog
+    description: Lume theme to create a blog.
+    author: Óscar Otero
+    specifier: "@lumeland/theme-simple-blog"
+    repo: "https://github.com/lumeland/theme-simple-blog/"
+    demo: "https://lumeland.github.io/theme-simple-blog/"
+
+  - name: Simple Me
+    id: simple-me
+    description: Lume theme to create a Linktree alternative.
+    author: Óscar Otero
+    specifier: "@lumeland/theme-simple-me"
+    repo: "https://github.com/lumeland/theme-simple-me/"
+    demo: "https://lumeland.github.io/theme-simple-me/"
+
+  - name: Simple Wiki
+    id: simple-wiki
+    description: Lume theme to create a wiki.
+    author: Óscar Otero
+    specifier: "@lumeland/theme-simple-wiki"
+    repo: "https://github.com/lumeland/theme-simple-wiki/"
+    demo: "https://lumeland.github.io/theme-simple-wiki/"
+
+  - name: Tech CV
+    id: tech-cv
+    description: Lume theme to create a tech CV online.
+    author: Óscar Otero
+    specifier: "@lumeland/theme-tech-cv"
+    repo: "https://github.com/lumeland/theme-tech-cv/"
+    demo: "https://lume.codeberg.page/theme-tech-cv/"

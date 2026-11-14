@@ -35,6 +35,11 @@
     "@lumeland/plugin-well-known": "^1.0.0",
     "@lumeland/ssx": "^0.1.16",
     "@mdit/plugin-alert": "^2.1.0",
+    "deno-std": "^1.6.0",
+    "playwright": "^1.65.0",
     "postcss-nesting": "^14.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6"
   }
 }
