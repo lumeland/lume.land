@@ -20,4 +20,4 @@ flexible.
 - You can hook **processors** to manipulate HTML and assets, like CSS or JS.
 - There are many [plugins](/plugins/index.yml) for common use cases.
 - A [CMS](/cms/index.md) to edit the content easily.
-- And [themes](/themes.yml) to go live in seconds.
+- And [themes](/themes/index.yml) to go live in seconds.

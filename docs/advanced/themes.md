@@ -149,4 +149,4 @@ If everything is correct, the theme should be installed. Check if the `setup` ar
 
 You can use [this repository](https://github.com/lumeland/theme-boilerplate) as boilerplate which provides a basic configuration and use PNPM.
 
-If you create a theme and want to see it in the [themes section](../../themes.yml), please let me know!
+If you create a theme and want to see it in the [themes section](../../themes/index.yml), please let me know!

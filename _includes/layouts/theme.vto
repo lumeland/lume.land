@@ -68,61 +68,44 @@ page_css: theme.css
         </label>
       </div>
 
-      {{ if screens.desktop_dark || screens.mobile_dark }}
-        <div class="theme-preview-toggle">
-          <label>
-            <input type="radio" checked name="theme" value="light">
-            <img
-              src='{{ "sun-dim" |> icon("phosphor") }}'
-              alt="Light theme"
-              width="24"
-              inline
-            >
-          </label>
-          <label>
-            <input type="radio" name="theme" value="dark">
-            <img
-              src='{{ "moon" |> icon("phosphor") }}'
-              alt="Dark theme"
-              width="24"
-              inline
-            >
-          </label>
-        </div>
-      {{ else }}
-        <input type="hidden" name="theme" value="light">
-      {{ /if }}
+      <div class="theme-preview-toggle">
+        <label>
+          <input type="radio" checked name="theme" value="light">
+          <img
+            src='{{ "sun-dim" |> icon("phosphor") }}'
+            alt="Light theme"
+            width="24"
+            inline
+          >
+        </label>
+        <label>
+          <input type="radio" name="theme" value="dark">
+          <img
+            src='{{ "moon" |> icon("phosphor") }}'
+            alt="Dark theme"
+            width="24"
+            inline
+          >
+        </label>
+      </div>
     </form>
 
     <figure>
       <div class="device" data-device="desktop" data-theme="light">
-        <img
-          class=""
-          src="{{ screens.desktop }}"
-        >
+        <img src="/img/screenshots/{{ basename }}/desktop-light.webp">
       </div>
 
-      {{ if screens.desktop_dark }}
-        <div class="device" data-device="desktop" data-theme="dark">
-          <img
-            src="{{ screens.desktop_dark }}"
-          >
-        </div>
-      {{ /if }}
+      <div class="device" data-device="desktop" data-theme="dark">
+        <img src="/img/screenshots/{{ basename }}/desktop-dark.webp">
+      </div>
 
-      {{ if screens.mobile }}
-        <div class="device" data-device="mobile" data-theme="light">
-          <img src="{{ screens.mobile }}">
-        </div>
-      {{ /if }}
+      <div class="device" data-device="mobile" data-theme="light">
+        <img src="/img/screenshots/{{ basename }}/mobile-light.webp">
+      </div>
 
-      {{ if screens.mobile_dark }}
-        <div class="device" data-device="mobile" data-theme="dark">
-          <img
-            src="{{ screens.mobile_dark }}"
-          >
-        </div>
-      {{ /if }}
+      <div class="device" data-device="mobile" data-theme="dark">
+        <img src="/img/screenshots/{{ basename }}/mobile-dark.webp">
+      </div>
     </figure>
   </lume-devices>
 </main>
