@@ -21,7 +21,7 @@ Import this plugin in your `_config.ts` file to use it:
 
 ```js
 import lume from "@lumeland/lume";
-import compress from "@lumeland/compress";
+import compress from "@lumeland/plugin-compress";
 
 const site = lume();
 
