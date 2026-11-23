@@ -13,16 +13,16 @@ page_css: theme.css
         {{ title }}
       </h1>
 
-      <p class="theme-author">
-        By {{ author }}<br>
-        <a href="https://npmx.dev/package/@lumeland/theme-{{ basename }}">
-          <img height="20" src="https://img.shields.io/npm/dm/%40lumeland%2Ftheme-{{ basename}}?style=flat">
-        </a>
-      </p>
-
       <div class="theme-description">
         {{ description |> md }}
       </div>
+
+      <p class="theme-author">
+        By {{ author }}<br>
+        <a href="https://npmx.dev/package/{{ specifier }}">
+          <img height="20" src="https://img.shields.io/npm/dm/{{ specifier }}?style=flat">
+        </a>
+      </p>
     </header>
 
     <div class="theme-install">
