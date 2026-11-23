@@ -33,7 +33,7 @@ themes:
 
   - name: Emergency site
     id: emergency-site
-    description: theme for emergency information websites.
+    description: Lume theme for emergency information websites.
     author: Max Böck, ported by Óscar Otero
     specifier: "lume-theme-emergency-site"
     repo: "https://github.com/oscarotero/emergency-site/"
