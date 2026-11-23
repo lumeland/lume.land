@@ -30,3 +30,11 @@ themes:
     specifier: "@lumeland/theme-tech-cv"
     repo: "https://github.com/lumeland/theme-tech-cv/"
     demo: "https://lume.codeberg.page/theme-tech-cv/"
+
+  - name: Emergency site
+    id: emergency-site
+    description: theme for emergency information websites.
+    author: Max Böck, ported by Óscar Otero
+    specifier: "lume-theme-emergency-site"
+    repo: "https://github.com/oscarotero/emergency-site/"
+    demo: "https://oscarotero.github.io/emergency-site/"
