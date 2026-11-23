@@ -86,7 +86,7 @@ The `site.remote()` function has three arguments:
 
 The other files (`index.md` and `_data.yml`) can't be added as remote files because we want to make them editable by the users, so these files must exist in the folder in which this theme is being used. To do that, we can create an [archetype](../core/14.archetypes.md).
 
-When Lume installs a theme, it looks automatically for a exported function called `setup`. If found, it's run as an archetype after installing the theme with `npm create lume`:
+When Lume installs a theme, it looks automatically for a exported function called `setup`. If found, it's run as an archetype after installing the theme with `npm create lume@latest`:
 
 ```ts
 import basePath from "@lumeland/plugin-base-path";

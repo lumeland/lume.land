@@ -55,7 +55,7 @@ Now you can run `npm run serve` and `npm run build` to server and build the site
 
 ## Automatic migration
 
-The way to setup Lume 3 for new projects is using the init script `deno run -A https://lume.land/init.ts`. The equivalent script in Lume 4 is `npm create lume`. You can specify the project folder in the first argument. For example `npm create lume .` will create a new project in the current folder.
+The way to setup Lume 3 for new projects is using the init script `deno run -A https://lume.land/init.ts`. The equivalent script in Lume 4 is `npm create lume@latest` (the `@latest` prefix is optional but recommended to ensure to use the latest version). You can specify the project folder in the first argument. For example `npm create lume@latest .` will create a new project in the current folder.
 
 The script detects if the folder already contains a Lume project and will ask you to migrate it to Node. If you confirm this action, it will create the files `package.json` and `tsconfig.json` and will install all dependencies detected in the `deno.json` and `_config.ts` files.
 
