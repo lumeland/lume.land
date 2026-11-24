@@ -3,7 +3,9 @@ title: Order of operations
 description: What does Lume do to build your site?
 ---
 
-```{.pele}
+<div>
+
+<div class="pele">
 flowchart LR
   subgraph Loading
     Scan[Scan directory]
@@ -45,7 +47,9 @@ flowchart LR
   NormalPage --> Process
   Process --> Save
   StaticFiles --> Save
-```
+</div>
+
+</div>
 
 This is a high-level description of how Lume builds your site. When you run
 `lume`, the following operations are executed in this order:
