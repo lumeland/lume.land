@@ -9,13 +9,15 @@ Themes are pre-made websites that you can use with your data. Technically, a the
 
 Let say we have a simple site with the following file structure:
 
-```txt
+```{.pele}
+treeView-beta
+my-site/
 ├── _config.ts
-└── src
+└── src/
     └── _data.yml
     └── index.md
     └── style.css
-    └── _includes
+    └── _includes/
         └── layout.vto
 ```
 

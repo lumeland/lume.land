@@ -31,12 +31,14 @@ The function `nav.menu()` returns a tree object with the complete site structure
 using the pages' URLs to define the hierarchy. For example, let's say our site
 exports the following pages:
 
-```txt
-/
-/articles/
-/articles/first-article/
-/articles/second-article/chapter-1/
-/articles/second-article/chapter-2/
+```{.pele}
+treeView-beta
+src/
+  articles/
+    first-article
+    second-article/
+      chapter-1
+      chapter-2
 ```
 
 The object returned by `nav.menu()` would be like this:
@@ -148,13 +150,14 @@ and previous page of the menu relative to the current page.
 For example, let's say we have the following tree structure created with
 `nav.menu()`:
 
-```txt
-docs
-  ├── getting-started
-  │   ├── installation
-  │   └── configuration
-  └── plugins
-      └── prettier
+```{.pele}
+treeView-beta
+src/
+  getting-started/
+    installation
+    configuration
+  plugins/
+    prettier
 ```
 
 The function `nav.nextPage()` returns the next page relative to the provided

@@ -26,6 +26,7 @@
     "@lumeland/plugin-minify-html": "^1.0.0",
     "@lumeland/plugin-nav": "^1.0.0",
     "@lumeland/plugin-og-images": "^1.0.0",
+    "@lumeland/plugin-pele": "1.0.0-beta.1",
     "@lumeland/plugin-plaintext": "^1.0.0",
     "@lumeland/plugin-postcss": "^1.0.0",
     "@lumeland/plugin-redirects": "^1.0.0",
@@ -39,8 +40,8 @@
     "postcss-nesting": "^14.0.3"
   },
   "devDependencies": {
+    "@types/node": "^26.6.6",
     "deno-std": "^1.6.0",
-    "playwright": "^1.65.0",
-    "@types/node": "^26.6.6"
+    "playwright": "^1.65.0"
   }
 }

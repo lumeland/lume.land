@@ -17,22 +17,25 @@ followed by a hyphen `-` or an underscore `_` (or `yyyy-mm-dd-hh-ii-ss` if you
 also need the time). Note that this part is removed when generating the final
 url:
 
-```txt
-├── index.md                          => /index.html
-└── posts
-    └── 2020-06-21_hello-world.md     => /posts/hello-world/index.html
-    └── 2020-06-22_my-second-post.md  => /posts/my-second-post/index.html
+```{.pele}
+treeView-beta
+src/
+  index.md                        ## /index.html
+  posts/
+    2020-06-21_hello-world.md     ## /posts/hello-world/index.html
+    2020-06-22_my-second-post.md  ## /posts/my-second-post/index.html
 ```
 
 Dates can be defined in folders, so it's shared by all pages inside:
 
-```txt
-.
-├── index.md                          => /index.html
-└── posts
+```{.pele}
+treeView-beta
+src/
+├── index.md                          ## /index.html
+└── posts/
     └── 2020-06-21_hello-world/
-        └── index.md     => /posts/hello-world/index.html
-        └── other.md     => /posts/hello-world/other/index.html
+        └── index.md     ## /posts/hello-world/index.html
+        └── other.md     ## /posts/hello-world/other/index.html
 ```
 
 ## Installation

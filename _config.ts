@@ -21,6 +21,7 @@ import toc, { headerLink } from "@lumeland/plugin-toc";
 import wellKnown from "@lumeland/plugin-well-known";
 import plainText from "@lumeland/plugin-plaintext"
 import { alert } from "@mdit/plugin-alert";
+import pele from "@lumeland/plugin-pele";
 
 const markdown = {
   plugins: [alert],
@@ -72,11 +73,15 @@ site
   .use(nav())
   .use(icons())
   .use(resolveUrls())
+  .use(pele({
+    monospace: true,
+  }))
   .use(plainText())
   .use(checkUrls({
     external: false,
     ignore: [
       "/blog/",
+      "/blog/posts/lume-4/",
     ],
   }))
   .use(wellKnown({

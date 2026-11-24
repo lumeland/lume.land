@@ -53,15 +53,17 @@ export { people };
 Any file named `_data.*` is loaded and its content is accessible by all pages in
 the same directory or subdirectory.
 
-```txt
-├── _data.yaml      # Data shared with all pages
+```{.pele}
+treeView-beta
+src/
+├── _data.yaml :::highlight      ## -> Data shared with all pages
 ├── index.md
-└── documentation
-    └── _data.json  # Shared with pages in this directory and subdirectories
+└── documentation/
+    └── _data.json :::highlight  ## -> Shared with pages in this folder and nested
     └── doc1.md
     └── doc2.md
-    └── examples
-        └── _data.json  # Shared with pages in this directory and subdirectories
+    └── examples/
+        └── _data.json :::highlight  ## -> Shared with pages in this folder and nested
         └── example1.md
         └── example2.md
 ```
@@ -77,13 +79,14 @@ file, the data is stored in several files inside that directory. The _basename_
 of each file determines the variable name used to access the data. Let's see an
 example:
 
-```txt
-└── _data
-    └── users.json
-    └── documents
-        └── one.js
-        └── two.js
-        └── three.js
+```{.pele}
+treeView-beta
+_data/
+    └── users.json ## -> users
+    └── documents/
+        └── one.js ## -> documents.one
+        └── two.js ## -> documents.two
+        └── three.js ## -> documents.three
 ```
 
 In this example, the data stored in the file `_data/users.json` can be accessed

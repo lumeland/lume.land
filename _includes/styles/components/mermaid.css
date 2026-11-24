@@ -1,0 +1,17 @@
+pre:has(.pele) {
+  background: var(--color-background-1);
+  padding: 0 0.3em;
+  border-radius: var(--border-radius-small);
+  border: solid 1px var(--color-background-2);
+  margin: 0 0.2em;
+  padding: 1rem;
+  color: var(--color-foreground-1);
+}
+.pele {
+  display: block;
+
+  --pele-font: var(--font-code);
+  --pele-fg: var(--color-foreground);
+  --pele-muted: var(--color-foreground-2);
+  --pele-line: var(--color-background-3);
+}

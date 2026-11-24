@@ -14,22 +14,26 @@ The plugin can detect and extract the order from the name of the source file.
 You have to prepend the number to the filename followed by a dot. Note that this
 order is removed when generating the final url:
 
-```txt
-└── articles
-    └── 1.hello-world.md        => /posts/hello-world/index.html
-    └── 2.my-second-article.md  => /posts/my-second-article/index.html
+```{.pele}
+treeView-beta
+src/
+  articles/
+    1.hello-world.md        ## /articles/hello-world/index.html
+    2.my-second-article.md  ## /articles/my-second-article/index.html
 ```
 
 The order can be defined in folders too, which is works great combined with the
 [`nav` plugin](./nav.md).
 
-```txt
-└── 1.articles
-|   └── 1.hello-world.md        => /posts/hello-world/index.html
-|   └── 2.my-second-article.md  => /posts/my-second-article/index.html
-└── 2.notes
-    └── 1.note-one.md           => /notes/note-one/index.html
-    └── 2.note-two.md           => /notes/note-two/index.html
+```{.pele}
+treeView-beta
+src/
+  1.articles/
+    1.hello-world.md        ## /articles/hello-world/index.html
+    2.my-second-article.md  ## /articles/my-second-article/index.html
+  2.notes/
+    1.note-one.md           ## /notes/note-one/index.html
+    2.note-two.md           ## /notes/note-two/index.html
 ```
 
 ## Installation
@@ -53,10 +57,12 @@ By default, the plugin uses the closest value. For example, in the following
 structure, the final order of the page is `1` because it's the value assigned to
 its filename:
 
-```txt
-└── 2.articles
-    └── 4.design-and-css
-        └── 1.what-is-css.md
+```{.pele}
+treeView-beta
+src/
+  2.articles/
+    4.design-and-css/
+      1.what-is-css.md
 ```
 
 With the option `cascade` the final order is a combination of all previous order

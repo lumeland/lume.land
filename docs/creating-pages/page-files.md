@@ -9,20 +9,24 @@ pages using different formats, but the simplest way is by adding a Markdown file
 in the root directory with a suitable filename and `.md` as the extension. Lume
 will load these files and generate HTML pages with them:
 
-```txt
-├── index.md     => /index.html
-├── about.md     => /about/index.html
-└── contact.md   => /contact/index.html
+```{.pele}
+treeView-beta
+src/
+├── index.md       ## -> index.html
+├── about.md       ## -> about/index.html
+└── contact.md     ## -> contact/index.html
 ```
 
 You can organize the pages into subdirectories, and this structure will be used
 in the output of the site build:
 
-```txt
-├── index.md        => /index.html
-└── documentation
-    └── doc1.md     => /documentation/doc1/index.html
-    └── doc2.md     => /documentation/doc2/index.html
+```{.pele}
+treeView-beta
+src/
+├── index.md        ## -> index.html
+└── documentation/
+    └── doc1.md     ## -> documentation/doc1/index.html
+    └── doc2.md     ## -> documentation/doc2/index.html
 ```
 
 ## Pretty URLs
@@ -36,12 +40,13 @@ If you want to disable it, set `prettyUrls` to `false` in the
 [config file](../configuration/config-file.md#prettyurls), so you will have
 something like this:
 
-```txt
-.
-├── index.md        => /index.html
-└── documentation
-    └── doc1.md     => /documentation/doc1.html
-    └── doc2.md     => /documentation/doc2.html
+```{.pele}
+treeView-beta
+src/
+├── index.md        ## -> index.html
+└── documentation/
+    └── doc1.md     ## -> documentation/doc1.html
+    └── doc2.md     ## -> documentation/doc2.html
 ```
 
 ### 404.html
