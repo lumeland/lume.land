@@ -6,12 +6,20 @@ pre:has(.pele) {
   margin: 0 0.2em;
   padding: 1rem;
   color: var(--color-foreground-1);
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-foreground-1) var(--color-background);
 }
 .pele {
   display: block;
+  max-width: none !important;
 
   --pele-font: var(--font-code);
+  --pele-bg: var(--color-background);
   --pele-fg: var(--color-foreground);
   --pele-muted: var(--color-foreground-2);
-  --pele-line: var(--color-background-3);
+  --pele-line: var(--color-primary);
+  --pele-surface: var(--color-background-3);
+  --pele-surface-alt: var(--color-background);
+  --pele-border: var(--color-background-3);
 }

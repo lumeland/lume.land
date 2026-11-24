@@ -3,6 +3,50 @@ title: Order of operations
 description: What does Lume do to build your site?
 ---
 
+```{.pele}
+flowchart LR
+  subgraph Loading
+    Scan[Scan directory]
+    LoadPages[Load page files]
+    LoadFiles[Load other files to process]
+    LoadData[Load _data files]
+    LoadComponents[Load _components files]
+    StaticFiles[Get static files to copy]
+  end
+  subgraph Preprocessing
+    Preprocess[Preprocess pages and files]
+  end
+  subgraph Render
+    RenderPages[Render pages]
+    GeneratorPage[Is a generator]
+    NormalPage[Is a regular page]
+    GeneratePages[Render generated pages]
+  end
+  subgraph Processing
+    Process[Process pages and files]
+  end
+  subgraph Output
+    Save[Save files in dest]
+  end
+  Scan --> LoadPages
+  Scan --> LoadFiles
+  Scan --> LoadData
+  Scan --> LoadComponents
+  Scan --> StaticFiles
+  LoadPages --> Preprocess
+  LoadFiles --> Preprocess
+  Preprocess --> RenderPages
+  LoadData --> RenderPages
+  LoadComponents --> RenderPages
+  RenderPages --> GeneratorPage
+  RenderPages --> NormalPage
+  GeneratorPage --> GeneratePages
+  GeneratePages --> Process
+  NormalPage --> Process
+  Process --> Save
+  StaticFiles --> Save
+```
+
 This is a high-level description of how Lume builds your site. When you run
 `lume`, the following operations are executed in this order:
 
